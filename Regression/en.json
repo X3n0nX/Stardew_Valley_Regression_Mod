@@ -61,11 +61,11 @@
 	"Bladder_Continence_Yellow": [ "You seem to be getting worse at holding your pee." ],
 	"Bladder_Continence_Orange": [ "You're getting pretty bad at holding your pee." ],
 	"Bladder_Continence_Red": [ "You're getting close to being unable to hold your pee." ],
-	"Bladder_Continence_Min": [ "You're almost totally unable to hold your pee." ],
+	"Bladder_Continence_Min": [ "You don't think you can hold your pee anymore." ],
 	"Bowel_Continence_Yellow": [ "You seem to be getting worse at holding your poop." ],
 	"Bowel_Continence_Orange": [ "You're getting pretty bad at holding your poop." ],
 	"Bowel_Continence_Red": [ "You're getting close to being unable to hold your poop." ],
-	"Bowel_Continence_Min": [ "You're almost totally unable to hold your poop." ],
+	"Bowel_Continence_Min": [ "You don't think you could hold your poop anymore." ],
 	"Pee_Voluntary": [
 		"You drop your $UNDERWEAR_NAME$ and pee on the ground.",
 		"Moving your $UNDERWEAR_NAME$, you take a deep breath and empty your bladder.",
@@ -89,7 +89,7 @@
 		"You barely make it to the toilet. Any longer and you might have wet yourself!",
 		"You wee in the toilet. Good thing you were able to hold it until then!",
 		"You proudly pee in the toilet. Now you won't need a diaper!",
-		"You tinkle in the toilet. Your Mommy would be proud!",
+		"You tinkle in the toilet. Your mommy would be proud!",
 		"You undress and go number one in the toilet like a good <boy/girl>."
 	],
 	"Poop_Toilet": [
@@ -99,7 +99,7 @@
 		"You poop in the toilet. Maybe now you won't mess yourself today!",
 		"You slide your $PANTS_NAME$ to your knees and poop in the toilet.",
 		"You proudly poop in the toilet. Now you won't need a diaper!",
-		"You poop in the toilet. Your Mommy would be proud!",
+		"You poop in the toilet. Your mommy would be proud!",
 		"You undress and go number two in the toilet like a good <boy/girl>."
 	],
 	"Pee_Toilet_Attempt": [
@@ -166,7 +166,7 @@
 		"You can't help but relax and let your pee spurt into your $UNDERWEAR_NAME$",
 		"Oopsies! You're wetting yourself!",
 		"You're wetting your $UNDERWEAR_NAME$! Oh well.",
-		"You notice a growing warmth before glancing down and realizing you're peeing in your $UNDERWEAR_NAME$!",
+		"You notice a growing warmth befor glancing down and relaizing you're peeing in your $UNDERWEAR_NAME$!",
 		"Your $UNDERWEAR_NAME$ <sags#sag> as you wet yourself. Your cheeks flush as you realize you're just a little <boy/girl>."
 	],
 	"Mess_Accident": [
@@ -250,67 +250,112 @@
 	"Debuff_Wet_Pants": [
 		"Your pants are wet!",
 		"You wet your pants!",
-		"You peed your pants!",
+		"You peed your pants!"
 	],
 	"Debuff_Messy_Pants": [
 		"Your pants are messy!",
 		"Your pants are poopy!",
-		"You messed your pants!",
+		"You messed your pants!"
 	],
 	"Villager_Reactions": {
 		"adult": {
 			"soiled_verynice": [
 				"Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?",
-				"I think little $FARMERNAME$ needs <his/her> diaper changed!",
-				"I know a little farmer who needs <his/her> diaper changed!$1",
+				"I think little $NICKNAME$ needs <his/her> diaper changed!",
+				"I know a little farmer who needs <his/her> diaper changed!$1"
 			],
 			"soiled_nice": [
 				"You poor thing! Did you just <wet&mess> yourself?",
-				"Does someone need a diaper change?",
+				"Does someone need a diaper change?"
 			],
 			"soiled_mean": [
 				"You <&really >might want to go change your pants."
 			],
+			"check_verynice_dry": [
+				"%Their diaper is bone dry. It looks like theyve been practicing very hard!#$b#See? All dry! Told ya!",
+				"%Their diaper looks like it was recently taped on.#$b#I don't think ive gone potty yet..."
+			],
+			"check_verynice_wet": [
+				"%Their diaper is drenched in pee.#$b#So what if im wet? That's what the diaper's for!"
+			],
+			"check_verynice_soiled": [
+				"%Their diaper is absolutely full. Its like they were waiting on you.#$b#Heh, I just really had to go!"
+			],
+			"check_nice_dry": [
+				"%Their diaper is spotless.#$b#Oh? Thanks."
+			],
+			"check_nice_wet": [
+				"%Their diaper is wet and swollen, but could probably hold a little more.#$b#I just had too much to drink."
+			],
+			"check_nice_soiled": [
+				"%Their diaper is quite messy, you knew it right away but they seem too used to the smell to notice.#$b#Oh, my diapers full? Thanks, I'll go get changed"
+			],
+			"check_mean": [
+				"H-HEY! What the hell are you doing?!"
+			],
 			"ground": [
 				"$FARMERNAME$! Living in the country doesn't make us barbarians!$3",
-				"That's not okay! Use a toilet!$3",
+				"That's not okay! Use a toilet!$3"
 			],
 			"ground_attempt": [
-				"$FARMERNAME$! What are you doing!$3",
-			],
+				"$FARMERNAME$! What are you doing!$3"
+			]
 		},
 		"teen": {
 			"soiled_verynice": [
 				"Awww, you're so cute when you're embarrassed!$1",
-				"Where's your Mommy $FARMERNAME$? I think you need a change.",
+				"Where's your mommy $NICKNAME$? I think you need a change."
 			],
 			"soiled_nice": [
 				"Did you just <wet&mess> yourself $FARMERNAME$?",
-				"Just letting you know $FARMERNAME$, you should probably change your diaper soon.",
+				"Just letting you know $FARMERNAME$, you should probably change your diaper soon."
 			],
 			"soiled_mean": [
 				"...$5",
-				"...Did you just...$2",
+				"...Did you just...$2"
+			],
+			"check_verynice_dry": [
+				"%Their diaper is bone dry. It looks like theyve been practicing very hard!#$b#See? All dry! Told ya!",
+				"%Their diaper looks like it was recently taped on.#$b#I don't think ive gone potty yet..."
+			],
+			"check_verynice_wet": [
+				"%Their diaper is drenched in pee.#$b#So what if im wet? That's what the diaper's for!"
+			],
+			"check_verynice_soiled": [
+				"%Their diaper is absolutely full. Its like they were waiting on you.#$b#Heh, I just really had to go!"
+			],
+			"check_nice_dry": [
+				"%Their diaper is spotless.#$b#Oh? Thanks."
+			],
+			"check_nice_wet": [
+				"%Their diaper is wet and swollen, but could probably hold a little more.#$b#I just had too much to drink."
+			],
+			"check_nice_soiled": [
+				"%Their diaper is quite messy, you knew it right away but they seem too used to the smell to notice.#$b#Oh, my diapers full? Thanks, I'll go get changed"
+			],
+			"check_mean": [
+				"H-HEY! What the hell are you doing?!"
 			],
 			"ground": [
 				"Eww. Is that normal in the city?$5",
-				"What... Ugh!$5", "Did you just <pee&poop> on the ground? Gross!$5",
+				"What... Ugh!$5",
+				"Did you just <pee&poop> on the ground? Gross!$5"
 			],
 			"ground_attempt": [
-				"What... Put your pants back on!$5",
-			],
+				"What... Put your pants back on!$5"
+			]
 		},
 		"animal": {
 			"soiled_nice": [
 				"...",
-				"???",
+				"???"
 			],
 			"ground": [
-				"<...&!!!>",
+				"<...&!!!>"
 			],
 			"ground_attempt": [
-				"<...&???>",
-			],
+				"<...&???>"
+			]
 		},
 		"abigail": {
 			"soiled_verynice": [
@@ -336,6 +381,26 @@
 				"I thought only babies <wet&messed> their pants! Grow up!",
 				"Did you just <pee&poop> your pants? You need diapers!"
 			],
+			"check_verynice_dry": [
+				"Very nice dry"
+			],
+			"check_verynice_wet": [
+				"Very nice wet"
+			],
+			"check_verynice_soiled": [
+				"Very nice soiled"
+			],
+			"check_nice_dry": [
+				"nice dry"
+			],
+			"check_nice_wet": [
+				"nice wet"
+			],
+			"check_nice_soiled": [
+				"nice soiled"
+			],
+			"check_mean": [
+			]
 		},
 		"haley": {
 			"soiled_verynice": [
@@ -352,28 +417,49 @@
 				"$uLike, eww. Why is everyone in this town so gross?!",
 				"$uI was gonna tell you to change your clothes because of how unstylish they are, but it looks like you need your diaper changed more, you big baby!"
 			],
+			"check_verynice_dry": [
+				"Very nice dry"
+			],
+			"check_verynice_wet": [
+				"Very nice wet"
+			],
+			"check_verynice_soiled": [
+				"Very nice soiled"
+			],
+			"check_nice_dry": [
+				"nice dry"
+			],
+			"check_nice_wet": [
+				"nice wet"
+			],
+			"check_nice_soiled": [
+				"nice soiled"
+			],
+			"check_mean": [
+			]
 		},
 		"jodi": {
 			"soiled_verynice": [
-				"%Jodi leans down to put a comforting hand on your back.#$b#You can tell me if you had a little accident $FARMERNAME$. It's nothing to be ashamed of.",
+				"%Jodi leans down to put a comforting hand on your back.#$b#You can tell me if you had a little accident $NICKNAME$$. It's nothing to be ashamed of.",
 				"You don't need to rush potty training if you're not ready yet.",
 				"It can be hard for little <boys/girls> to remember to go potty sometimes. It's okay.",
 				"Oh goodness!$1",
 				"Awww, you're so cute when you're embarrassed!$1",
+				"#$p 112#Oh dear, looks like a little someone went potty.|Oh dear, Did my little $NICKNAME$ go <tinkle&poopy> in <his/her> diaper?#$b#%Jodi leans down and checks the heft of your diaper. Giving it a few pats when she deems it good for a few more <wettings&messes>."
 			],
 			"soiled_nice": [
 				"$FARMERNAME$, I  think you might need to go change.",
-				"You poor thing! Did you just <wet&mess> yourself?",
+				"You poor thing! Did you just <wet&mess> yourself?"
 			],
 			"soiled_mean": [
-				"You might need to tap into those supplies I left you$4",
-			],
+				"You might need to tap into those supplies I left you$4"
+			]
 		},
 		"sam": {
 			"soiled_verynice": [
 				"#$p 102#Oh man, that was pretty hard to miss!$1|Man, you're just like Vincent.$1",
 				"Are you okay buddy?#$b#$y 'Do you want some help with that?_Yes please._Alright, go get a change and lie down for me. I'll clean you right up$3_Not yet!_Looks like the little <boy/girl> wants to stay <wet&messy> a bit longer!$1'",
-				"It's okay $FARMERNAME$. Accidents are nothing to be ashamed of.",
+				"It's okay $NICKNAME$. Accidents are nothing to be ashamed of.",
 				"Awwww, look at you go! That must have felt good.$4",
 				"Oh man, that was pretty hard to miss!$1",
 				"Good one!$1",
@@ -381,21 +467,45 @@
 				"Awww, did the little farmer have a little accident?",
 				"I bet I could get Mommy to go change you.$3#$b#I'm kidding I'm kidding!$1",
 				"Man, it looks like you really need diapers, don't you.",
-				"Oh wow, you really <wet&messed> yourself!#$b#$y 'Can I feel it?_Yes._%Sam blushes as he presses his hand into your squishy diaper._No thank you._Okay, I won't.'",
+				"Oh wow, you really <wet&messed> yourself!#$b#$y 'Can I feel it?_Yes._%Sam blushes as he presses his hand into your squishy diaper._No thank you._Okay, I won't.'"
 			],
 			"soiled_nice": [
 				"You might wanna change. Just incase someone else says something.$7",
 				"A-are you okay?$8",
 				"%Sam just blushes a as you <wet&mess> yourself. You take note of how closely he watches the whole scene.",
-				"Oh man, I'm sorry. That can't feel good.",
+				"Oh man, I'm sorry. That can't feel good."
 			],
 			"soiled_mean": [
 				"I'm just..nevermind.$5",
 				"This is pretty awkward.$2",
 				"...Oh$2",
 				"You might want to take care of that...",
-				"#$p 102#You might want to take care of that...|Great, more potty issues to be witness to. Thanks.$5",
+				"#$p 102#You might want to take care of that...|Great, more potty issues to be witness to. Thanks.$5"
 			],
+			"check_verynice_dry": [
+				"H-hey! My diaper is nice and dry!",
+				"%Sams diaper is dry to your surprise. You wonder how long that'll last"
+			],
+			"check_verynice_wet": [
+				"%You pull back Sam's leak guards to find his diaper sodden and squishy.#$b#Sorry! I had too many juice boxes and the potty was just too far away!$10"
+			],
+			"check_verynice_soiled": [
+				"%You pull back at Sam's waistband. Yeesh! The little tyke sure had to go, if he messed anymore you'd worry youd have some teary eyes on your hands.",
+				"#$y#You can see Sam's full diaper peeking below his snapped onesie from a mile away._Looks like a certain someone went poopy_I... I didn't even notice i went potty...$8_I know a little stinker who needs a change_H-huh?!$8#$b#%You lay Sam down and untape his full diaper, wipe him down, and tape him up in his favorite racecar diaper.",
+				"I was hoping you wouldn't notice.$10#$b#%Sam blows a raspberry at you"
+			],
+			"check_nice_dry": [
+				"Told you im dry! Im not a potty pants like you!$1"
+			],
+			"check_nice_wet": [
+				"I-I just had too much to drink thats all!"
+			],
+			"check_nice_soiled": [
+				"#$p 102#Sorry... I hope you don't mind the smell, I just really didn't feel like changing.$10|Sorry... Vincent had a messy accident and I filled my diaper so he wouldn't feel so left out.$9#$b#Psst... don't tell him I was just jealous$4"
+			],
+			"check_mean": [
+				"H-HEY! What the hell are you doing?!"
+			]
 		},
 		"penny": {
 			"soiled_verynice": [
@@ -406,20 +516,20 @@
 				"Did you have an accident in your $UNDERWEAR_NAME$ $FARMERNAME$?#$b#You have to tell me as soon as your body says you have to go potty, okay?$3",
 				"#$p 102#Did you have an accident in your $UNDERWEAR_NAME$ $FARMERNAME$?|You have the same potty face as Vincent.$1#$b#Do you need help getting changed like him too?#$b#%Penny tickles your tummy teasingly.",
 				"I saw that.$3#$b#$y 'Was that REALLY an accident?_Uh huh, I tried to hold it._Oh $FARMERNAME$, I know it's hard for you. I'm very proud of you for trying._I didn't wanna use the potty._$FARMERNAME$, I know it's hard for you, but you still have to try, okay?$3'",
-				"We're supposed to do that on the potty $FARMERNAME$. What happened?$3#$b#It's okay, I'm not angry. You're trying really hard. It's okay if you still have accidents sometimes.#$b#<Boys/Girls> are easy to clean!$1",
+				"We're supposed to do that on the potty $NICKNAME$. What happened?$3#$b#It's okay, I'm not angry. You're trying really hard. It's okay if you still have accidents sometimes.#$b#<Boys/Girls> are easy to clean!$1"
 			],
 			"soiled_nice": [
 				"You might wanna change. Just incase someone else says something.",
 				"A-are you okay?$3",
 				"Do you need help making it to the potty?",
-				"I'm sorry. That can't feel good.$3",
+				"I'm sorry. That can't feel good.$3"
 			],
 			"soiled_mean": [
 				"...$5",
 				"Uhmm...$2",
 				"...Oh$2",
-				"#$p 102#D-did you...|You too?$5",
-			],
+				"#$p 102#D-did you...|You too?$5"
+			]
 		},
 		"gus": {
 			"soiled_verynice": [
@@ -431,18 +541,18 @@
 				"Wow, you were really <satisfied&pushing> with that one.$1",
 				"Well, at least it feels good to take a load off...#$b#Even if it’s in your pants, yeah?$1",
 				"You makin’ your own fertilizer there $FARMERNAME$?",
-				"You got any clean diapers? I always keep some spare in back for ya, just in case, pal.$1#$b#Well, you and anyone else who happens to need one.",
+				"You got any clean diapers? I always keep some spare in back for ya, just in case, pal.$1#$b#Well, you and anyone else who happens to need one."
 			],
 			"soiled_nice": [
 				"You mind takin' care of that please?#$b#Thanks$1",
 				"When you gotta go I guess!$1",
 				"Couldn’t quite make it? That's alright, go get cleaned up. The Saloon will still be here when you get back.",
-				"I hope that smell’s a dirty diaper and not some rotting food in back…",
+				"I hope that smell’s a dirty diaper and not some rotting food in back…"
 			],
 			"soiled_mean": [
 				"You mind takin' care of that before it bothers anyone else buddy?$2",
-				"I have enough to clean up.$3",
-			],
+				"I have enough to clean up.$3"
+			]
 		},
 		"vincent": {
 			"soiled_verynice": [
@@ -450,12 +560,12 @@
 				"#$p 102#%Vincent doesn't seem to notice what happened.|%Vincent watches you <wet&mess> yourself and giggles.#$b#Good one!$1",
 				"#$p 102#%Vincent doesn't seem to notice what happened.|%You notice Vincent watching as you <wet&mess> yourself.#$b#All better?",
 				"#$p 102#%Vincent doesn't seem to notice what happened.|%Vincent watches the whole scene curiously and giggles when you look over. #$b# You <peed&pooped>!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|If you want I could ask my Mommy to change you.#$b#No?#$b#That's okay, I like being <wet&messy> too!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|$FARMERNAME$'s <wet&messy> and I'm still dry!$1#$b#...#$b#Wait...$2",
+				"#$p 102#%Vincent doesn't seem to notice what happened.|If you want I could ask my mommy to change you.#$b#No?#$b#That's okay, I like being <wet&messy> too!$1",
+				"#$p 102#%Vincent doesn't seem to notice what happened.|$NICKNAME$'s <wet&messy> and I'm still dry!$1#$b#...#$b#Wait...$2"
 			],
 			"soiled_nice": [
 				"#$p 102#%Vincent doesn't seem to notice what happened.|Don't cry, Mommy says it's okay to have accidents sometimes.",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Don't worry $FARMERNAME$, I still do that too!",
+				"#$p 102#%Vincent doesn't seem to notice what happened.|Don't worry $NICKNAME$, I still do that too!",
 				"#$p 102#%Vincent doesn't seem to notice what happened.|Feel all better?",
 				"#$p 102#%Vincent doesn't seem to notice what happened.|It smells like you need a diaper change!"
 			],
@@ -464,43 +574,88 @@
 				"#$p 102#%Vincent doesn't seem to notice what happened.|Was that an accident?",
 				"#$p 102#%Vincent doesn't seem to notice what happened.|Ha! Gross!$1",
 				"#$p 102#%Vincent doesn't seem to notice what happened.|$FARMERNAME$ just <peed&pooped> <himself/herself>!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Hah! I just watched you <pee&poop> yourself!$1",
+				"#$p 102#%Vincent doesn't seem to notice what happened.|Hah! I just watched you <pee&poop> yourself!$1"
+			],
+			"check_verynice_dry": [
+				"Very nice dry"
+			],
+			"check_verynice_wet": [
+				"Very nice wet"
+			],
+			"check_verynice_soiled": [
+				"Very nice soiled"
+			],
+			"check_nice_dry": [
+				"nice dry"
+			],
+			"check_nice_wet": [
+				"nice wet"
+			],
+			"check_nice_soiled": [
+				"nice soiled"
+			],
+			"check_mean": [
 			],
 			"ground": [
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Ewww!$3", "Ewww! Don't <pee&poop> there!$3",
+				"#$p 102#%Vincent doesn't seem to notice what happened.|Ewww!$3",
+				"Ewww! Don't <pee&poop> there!$3",
 				"#$p 102#%Vincent doesn't seem to notice what happened.|Hey everyone! $FARMERNAME$ just <peed&pooped> on the ground!$1"
 			],
 			"ground_attempt": [
 				"#$p 102#%Vincent doesn't seem to notice what happened.|Eww! Why are you trying to <pee&poop> on on the ground?$3"
-			],
+			]
 		},
 		"jas": {
 			"soiled_verynice": [
 				"#$p 102#%Jas doesn't seem to notice what happened.|Don't cry, it's okay for little <boy/girl>s to have accidents sometimes.",
 				"#$p 102#%Jas doesn't seem to notice what happened.|Oh no, did you have an accident? That's okay, you can try again next time.",
 				"#$p 102#%Jas doesn't seem to notice what happened.|It's okay, I won't tell anyone you had an accident $FARMERNAME$",
-				"#$p 102#%Jas doesn't seem to notice what happened.|It's okay $FARMERNAME$, I still have accidents too.$1",
+				"#$p 102#%Jas doesn't seem to notice what happened.|It's okay $NICKNAME$, I still have accidents too.$1",
 				"#$p 102#%Jas doesn't seem to notice what happened.|I can see you waddling!$4",
-				"#$p 102#%Jas doesn't seem to notice what happened.|Did you have an accident? It's okay, once you're all clean you'll feel all better.",
+				"#$p 102#%Jas doesn't seem to notice what happened.|Did you have an accident? It's okay, once you're all clean you'll feel all better."
 			],
 			"soiled_nice": [
 				"#$p 102#%Jas doesn't seem to notice what happened.|*Giggles* Uh oh!$1",
 				"#$p 102#%Jas doesn't seem to notice what happened.|You're supposed to do that on the potty you know.$4",
-				"#$p 102#%Jas doesn't seem to notice what happened.|Do you need me to get Aunt Marnie? She always helps me when I have an accident.$3",
+				"#$p 102#%Jas doesn't seem to notice what happened.|Do you need me to get Aunt Marnie? She always helps me when I have an accident.$3"
 			],
 			"soiled_mean": [
 				"#$p 102#%Jas doesn't seem to notice what happened.|Oh... gross...$3",
 				"#$p 102#%Jas doesn't seem to notice what happened.|Ewww$3",
-				"#$p 102#%Jas doesn't seem to notice what happened.|...$2",
+				"#$p 102#%Jas doesn't seem to notice what happened.|...$2"
+			],
+			"check_verynice_dry": [
+				"Very nice dry"
+			],
+			"check_verynice_wet": [
+				"Very nice wet"
+			],
+			"check_verynice_soiled": [
+				"Very nice soiled"
+			],
+			"check_nice_dry": [
+				"nice dry"
+			],
+			"check_nice_wet": [
+				"nice wet"
+			],
+			"check_nice_soiled": [
+				"nice soiled"
+			],
+			"check_mean": [
 			],
 			"ground": [
-				"#$p 102#%Jas doesn't seem to notice what happened.|Ewww!$3", "Ewww! Don't <pee&poop> there!$3",
-				"#$p 102#%Jas doesn't seem to notice what happened.|...$2",
+				"#$p 102#%Jas doesn't seem to notice what happened.|Ewww!$3",
+				"Ewww! Don't <pee&poop> there!$3",
+				"#$p 102#%Jas doesn't seem to notice what happened.|...$2"
 			],
 			"ground_attempt": [
 				"#$p 102#%Jas doesn't seem to notice what happened.|Eww! Why are you trying to <pee&poop> on on the ground?$3"
 			],
-		},
+			"check_cooldown_fail": [
+				"%You don't think their diaper has changed any since last time."
+			]
+		}
 	},
 
 	"Change": [
@@ -534,900 +689,1210 @@
 		"$UNDERWEAR_DESC$ with poop squishing out"
 	],
 	"Consumables": {
-	//
-	//Working on creating entries for every consumable.
-	//Water values are arbitrary, but should be accurate to each other relatively. Poisons mean vomitting, indigestion, and other issues, therefore poisonous items cause a loss to calories and water.
-		//
-		//Crops
-		//With a lot of these, I looked up the calorie count for an average size or average amount for small items like berries, then rounded out the numbers. For balance, some really small numbers are unnaturally high. For grains, I went with half a cup of grains. All items are assumed to undergo basic cooking if necesary to make edible, such as with potatoes.
-			//
-			//Veggies
-			//
-		"Amaranth": {
-			"name": "Amaranth",
-			"waterContent": 000,
-			"calorieContent": 350 //Half cup Amaranth, made as simple bread or cooked directly like rice
-		},
-		"Artichoke": {
-			"name": "Artichoke",
-			"waterContent": 200,
-			"calorieContent": 150 //Two large artichokes, raw
-		},
-		"Beet": {
-			"name": "Beet",
-			"waterContent": 25,
-			"calorieContent": 140 //Four beets, raw
-		},
-		"Bok Choy": {
-			"name": "Bok Choy",
-			"waterContent": 75,
-			"calorieContent": 110 //One head of bok choy, raw
-		},
-		"Corn": {
-			"name": "Corn",
-			"waterContent": 25,
-			"calorieContent": 190 //One large ear of sweet corn, simply cooked
-		},
-		"Eggplant": {
-			"name": "Eggplant",
-			"waterContent": 50,
-			"calorieContent": 150 //One large Eggplant, simply cooked
-		},
-		"Fiddlehead Fern": {
-			"name": "Fiddlehead Fern",
-			"waterContent": 25,
-			"calorieContent": 140 //Four fiddleheads, raw
-		},
-		"Garlic": {
-			"name": "Garlic",
-			"waterContent": 25,
-			"calorieContent": 50 //One large head of garlic, raw
-		},
-		"Green Bean": {
-			"name": "Green Bean",
-			"waterContent": 25,
-			"calorieContent": 160 //Four large greenbeans, raw or simply cooked
-		},
-		"Hops": {
-			"name": "Hops",
-			"waterContent": 25,
-			"calorieContent": 350 //Half cup of hops, can't find a calorie count since people don't actually eat hops, so just using Amaranth's
-		},
-		"Kale": {
-			"name": "Kale",
-			"waterContent": 25,
-			"calorieContent": 100 //Enough kale leaves to match a head of lettuce, raw
-		},
-		"Parsnip": {
-			"name": "Parsnip",
-			"waterContent": 25,
-			"calorieContent": 150 //Two parsnips, raw
-		},
-		"Potato": {
-			"name": "Potato",
-			"waterContent": 25,
-			"calorieContent": 180 //One large potato, 'baked'
-		},
-		"Radish": {
-			"name": "Radish",
-			"waterContent": 25,
-			"calorieContent": 100 //20 radishes at 5calories each, raw. According to every source I can find, a one inch wide radish only contains 1.9 calories. This doesn't seem right, so I bumped it up.
-		},
-		"Red Cabbage": {
-			"name": "Red Cabbage",
-			"waterContent": 75,
-			"calorieContent": 350 //One large head of red cabbage, raw
-		},
-		"Taro Root": {
-			"name": "Taro Root",
-			"waterContent": 50,
-			"calorieContent": 500 //One small taro root (1pound), cooked simply. IRL, Normal taro root, harvested after 8-10 months, is 2-4 pounds. 
-		},
-		"Tomato": {
-			"name": "Tomato",
-			"waterContent": 100,
-			"calorieContent": 140 //Four large tomatoes, raw
-		},
-		"Unmill Rice": {
-			"name": "Unmill Rice",
-			"waterContent": 25,
-			"calorieContent": 350 //Half cup, cooked simply
-		},
-		"Yam": {
-			"name": "Yam",
-			"waterContent": 25,
-			"calorieContent": 180 //One Large yam, cooked simply
-		},
-			//
-			//Fruit
-			//
-		"Apple": {
-			"name": "Apple",
-			"waterContent": 100,
-			"calorieContent": 120 //One large apple, raw
-		},
-		"Apricot": {
-			"name": "Apricot",
-			"waterContent": 100,
-			"calorieContent": 100 //Four apricots, raw
-		},
-		"Banana": {
-			"name": "Banana",
-			"waterContent": 50,
-			"calorieContent": 130 //One large banana, raw
-		},
-		"Blackberry": {
-			"name": "Blackberry",
-			"waterContent": 50,
-			"calorieContent": 140 //Two cups of blackberries, raw
-		},
-		"Blueberry": {
-			"name": "Blueberry",
-			"waterContent": 50,
-			"calorieContent": 170 //Two cups of blueberries, raw
-		},
-		"Cactus Fruit": {
-			"name": "Cactus Fruit",
-			"waterContent": 100,
-			"calorieContent": 120 //Two large fruits, raw
-		},
-		"Cherry": {
-			"name": "Cherry",
-			"waterContent": 50,
-			"calorieContent": 150 //Two cups of cherries, raw
-		},
-		"Cranberries": {
-			"name": "Cranberries",
-			"waterContent": 50,
-			"calorieContent": 100 //Two cups of cranberries, raw
-		},
-		"Crystal Fruit": {
-			"name": "Crystal Fruit",
-			"waterContent": 150,
-			"calorieContent": 350 //One large crystal fruit. Fantasy item, so I get to dictate it. >:3
-		},
-		"Grape": {
-			"name": "Grape",
-			"waterContent": 100,
-			"calorieContent": 220 //Two cups of grapes, raw
-		},
-		"Hot Pepper": {
-			"name": "Hot Pepper",
-			"waterContent": -500,
-			"calorieContent": 100 //Four cups of Jalapenos to barely make it to 100. Have some water ready.
-		},
-		"Mango": {
-			"name": "Mango",
-			"waterContent": 100,
-			"calorieContent": 135 //One Mango, raw
-		},
-		"Melon": {
-			"name": "Melon",
-			"waterContent": 125,
-			"calorieContent": 500 //One large honeydew melon as reference for the stardew melon, raw
-		},
-		"Orange": {
-			"name": "Orange",
-			"waterContent": 100,
-			"calorieContent": 100 //One large orange, raw
-		},
-		"Peach": {
-			"name": "Peach",
-			"waterContent": 100,
-			"calorieContent": 130 //Two peaches, raw
-		},
-		"Pineapple": {
-			"name": "Pineapple",
-			"waterContent": 125,
-			"calorieContent": 300 //One large pineapple, raw. Your mouth is gonna tingle after eating this.
-		},
-		"Pomegranate": {
-			"name": "Pomegranate",
-			"waterContent": 50,
-			"calorieContent": 130 //One large pomegranate, raw
-		},
-		"Qi Fruit": {
-			"name": "Qi Fruit",
-			"waterContent": 500,
-			"calorieContent": 1000 //Qi Fruit? We get to cultivate now? Well, in the cultivator novels, Qi Fruit tends to be able to 'sustain the martial artist for a week' and such.
-		},
-		"Salmonberry": {
-			"name": "Salmonberry",
-			"waterContent": 25,
-			"calorieContent": 150 //Two cups of salmonberries, raw
-		},
-		"Spice Berry": {
-			"name": "Spice Berry",
-			"waterContent": -25,
-			"calorieContent": 180 //Two cups of spice berries, raw
-		},
-		"Starfruit": {
-			"name": "Starfruit",
-			"waterContent": 125,
-			"calorieContent": 400 //RL starfruits are about 40 calories each; this fruit seems to be quite different from those, though
-		},
-		"Strawberry": {
-			"name": "Strawberry",
-			"waterContent": 50,
-			"calorieContent": 100 //Two cups of strawberries, raw
-		},
-		"Wild Plum": {
-			"name": "Wild Plum",
-			"waterContent": 50,
-			"calorieContent": 120 //Four plums, raw
-		},
-			//
-			//Flower
-			//
-		"Blue Jazz": {
-			"name": "Blue Jazz",
-			"waterContent": 25,
-			"calorieContent": 50
-		},
-		"Crocus": {
-			"name": "Crocus",
-			"waterContent": 25,
-			"calorieContent": 50
-		},
-		"Fairy Rose": {
-			"name": "Fairy Rose",
-			"waterContent": 25,
-			"calorieContent": 50
-		},
-		"Poppy": {
-			"name": "Poppy",
-			"waterContent": 25,
-			"calorieContent": 50
-		},
-		"Summer Spangle": {
-			"name": "Summer Spangle",
-			"waterContent": 25,
-			"calorieContent": 50
-		},
-		"Sunflower": {
-			"name": "Sunflower",
-			"waterContent": 25,
-			"calorieContent": 200 //Sunflower seeds are boosting this over other flowers
-		},
-		"Sweet Pea": {
-			"name": "Sweet Pea",
-			"waterContent": 25,
-			"calorieContent": 50
-		},
-		"Tulip": {
-			"name": "Tulip",
-			"waterContent": 25,
-			"calorieContent": 50
-		},
-			//
-			//Forage
-			//
-		"Cave Carrot": {
-			"name": "Cave Carrot",
-			"waterContent": 25,
-			"calorieContent": 120 //Four large carrots, raw
-		},
-		"Chanterelle": {
-			"name": "Chanterelle",
-			"waterContent": 25,
-			"calorieContent": 50 //Two cups of chanterelle. These things are worse than kale for calories...
-		},
-		"Common Mushroom": {
-			"name": "Common Mushroom",
-			"waterContent": 25,
-			"calorieContent": 100 //Two cups of Shiitake, raw
-		},
-		"Daffodil": {
-			"name": "Daffodil",
-			"waterContent": 25,
-			"calorieContent": 50
-		},
-		"Dandelion": {
-			"name": "Dandelion",
-			"waterContent": 25,
-			"calorieContent": 60
-		},
-		"Ginger": {
-			"name": "Ginger",
-			"waterContent": -250, //IIRC, straight ginger root causes burning sensations on mucous membranes, like the throat, so let's up the demand for water a little....
-			"calorieContent": 80 //One cup ginger root, raw
-		},
-		"Hazelnut": {
-			"name": "Hazelnut",
-			"waterContent": 000,
-			"calorieContent": 425 //Half cup of Hazelnuts. They're also called filberts, lol.
-		},
-		"Holly": {
-			"name": "Holly", //Don't eat Holly, it's poisonous.
-			"waterContent": -1500,
-			"calorieContent": -1250
-		},
-		"Leek": {
-			"name": "Leek", //Must... Not... Spin...
-			"waterContent": 25,
-			"calorieContent": 110 //Two leeks, raw
-		},
-		"Magma Cap": {
-			"name": "Magma Cap",
-			"waterContent": -1500,
-			"calorieContent": 1500 //With all the energy it's absorbed, there's plenty for you to use... Assuming you can quench your newfound thirst.
-		},
-		"Morel": {
-			"name": "Morel",
-			"waterContent": 25,
-			"calorieContent": 40 //Two cups of morels. And I thought the chanterelles were bad...
-		},
-		"Purple Mushroom": {
-			"name": "Purple Mushroom",
-			"waterContent": 25,
-			"calorieContent": 750 //Half of magmacap
-		},
-		"Red Mushroom": {
-			"name": "Red Mushroom", //Don't eat this toadstool, unless you want to turn into a tanuki!
-			"waterContent": -500,
-			"calorieContent": -1000
-		},
-		"Sap": {
-			"name": "Sap", //....Why can we eat this? Why would we want to eat this? At least the mushrooms and holly make since, because 'mistaken identity'. What edible thing are you mistaking tree sap as?
-			"waterContent": -200,
-			"calorieContent": -100
-		},
-		"Snow Yam": {
-			"name": "Snow Yam",
-			"waterContent": 25,
-			"calorieContent": 180 //One Large yam, cooked simply
-		},
-		"Spring Onion": {
-			"name": "Spring Onion",
-			"waterContent": 25,
-			"calorieContent": 800 //One hundred large scallions, only because this is the "starter" food
-		},
-		"Wild Horseradish": {
-			"name": "Wild Horseradish",
-			"waterContent": -2500, //This is wasabi's crappy tasting cousin, but the spice is still there.
-			"calorieContent": 115 //One cup of raw horseradish, about the size of a normal prepared root.
-		},
-		"Winter Root": {
-			"name": "Winter Root",
-			"waterContent": 25,
-			"calorieContent": 300 //Since Winter Root is a tuber, I just picked a random one. Winged bean tuber it is! Half cup sized tubers.
-		},
-		//
-		//Animal Drops
-		//
-		"Duck Egg": {
-			"name": "Duck Egg",
-			"waterContent": 50,
-			"calorieContent": 80 //One 'USDA medium' egg
-		},
-		"Egg": {
-			"name": "Egg",
-			"waterContent": 50,
-			"calorieContent": 80 //One 'USDA medium' egg
-		},
-		"Goat Milk": {
-			"name": "Goat Milk",
-			"waterContent": 470, //16oz ~ 490mL. Did rounding because the numbers don't have to be perfectly accurate.
-			"calorieContent": 340 //16oz of goat milk
-		},
-		"Golden Egg": {
-			"name": "Golden Egg",
-			"waterContent": 50,
-			"calorieContent": 360 //One 'USDA medium' gold flake lined egg
-		},
-		"L. Goat Milk": {
-			"name": "L. Goat Milk",
-			"waterContent": 3785, //Description is a gallon of milk; 1 gallon = 3785mL
-			"calorieContent": 2700 //It's a gallon of milk, lots of calories.... Plus side, the babs can actually live off milk.
-		},
-		"Large Egg": {
-			"name": "Large Egg",
-			"waterContent": 75,
-			"calorieContent": 130 //One 'USDA extra-large' egg
-		},
-		"Large Milk": {
-			"name": "Large Milk",
-			"waterContent": 3785,
-			"calorieContent": 2400
-		},
-		"Milk": {
-			"name": "Milk",
-			"waterContent": 470,
-			"calorieContent": 300
-		},
-		"Ostrich Egg": {
-			"name": "Ostrich Egg",
-			"waterContent": 200,
-			"calorieContent": 2000
-		},
-		"Truffle": {
-			"name": "Truffle",
-			"waterContent": 25,
-			"calorieContent": 70 //One whole, raw truffle. I feel sorry for the poor soul eating this...
-		},
-		"Void Egg": {
-			"name": "Void Egg",
-			"waterContent": 50,
-			"calorieContent": 360 // One 'USDA jumbo' void egg
-		},
-		//
-		//Cooking
-		//Will try looking up calorie counts for similar items. The rest will be done by adding ingredient calories and see how it looks. 
-		"Algae Soup": {
-			"name": "Algae Soup",
-			"waterContent": 660,
-			"calorieContent": 760 
-		},
-		"Artichoke Dip": {
-			"name": "Artichoke Dip",
-			"waterContent": 200, 
-			"calorieContent": 900 //2cups
-		},
-		"Autumn's Bounty": {
-			"name": "Autumn's Bounty", //1 whole extra large pumpkin makes about 36cups of cooked pumpkin. 1 cup is about 100 calories. Assuming not oversized pumpkins, 24 cups of cooked pumpkin seems fine.
-			"waterContent": 000,
-			"calorieContent": 2580
-		},
-		"Baked Fish": {
-			"name": "Baked Fish",
-			"waterContent": 000,
-			"calorieContent": 660
-		},
-		"Banana Pudding": {
-			"name": "Banana Pudding",
-			"waterContent": 590,
-			"calorieContent": 1000 //2cups
-		},
-		"Bean Hotpot": {
-			"name": "Bean Hotpot",
-			"waterContent": 000,
-			"calorieContent": 600 //4cups
-		},
-		"Blackberry Cobbler": {
-			"name": "Blackberry Cobbler",
-			"waterContent": 000,
-			"calorieContent": 2500 //About 4cups filling and one cup crust
-		},
-		"Blueberry Tart": {
-			"name": "Blueberry Tart",
-			"waterContent": 000,
-			"calorieContent": 520 //About 2cups in volume
-		},
-		"Bread": {
-			"name": "Bread",
-			"waterContent": 000,
-			"calorieContent": 900 //Calories in standard baguette
-		},
-		"Bruschetta": {
-			"name": "Bruschetta",
-			"waterContent": 000,
-			"calorieContent": 1200 //Big piece, but it uses an entire loaf of bread, so...
-		},
-		"Cheese Cauliflower": {
-			"name": "Cheese Cauliflower",
-			"waterContent": 000,
-			"calorieContent": 540 //4 cups
-		},
-		"Chocolate Cake": {
-			"name": "Chocolate Cake",
-			"waterContent": 250,
-			"calorieContent": 28800 //A three tier cake with icing would be about 18 pounds(288oz), according to a baker's website. Have fun filling your pamps.
-		},
-		"Chowder": {
-			"name": "Chowder",
-			"waterContent": 150,
-			"calorieContent": 640 //4 cups
-		},
-		"Coleslaw": {
-			"name": "Coleslaw",
-			"waterContent": 25,
-			"calorieContent": 1000 //4 cups
-		},
-		"Complete Breakfast": {
-			"name": "Complete Breakfast",
-			"waterContent": 25,
-			"calorieContent": 1700
-		},
-		"Cookie": {
-			"name": "Cookie",
-			"waterContent": 25,
-			"calorieContent": 850 //A dozen cookies, because they're so delicious.
-		},
-		"Crab Cakes": {
-			"name": "Crab Cakes",
-			"waterContent": 25,
-			"calorieContent": 880 //8 2in wide 3/4inch tall crab cakes.
-		},
-		"Cranberry Candy": {
-			"name": "Cranberry Candy", //This item's sprite looks like juice, and is made with apples, so just using cranberry apple juice as reference
-			"waterContent": 470,
-			"calorieContent": 320 //16oz
-		},
-		"Cranberry Sauce": {
-			"name": "Cranberry Sauce", 
-			"waterContent": 25,
-			"calorieContent": 880 //2 cups
-		},
-		"Crispy Bass": {
-			"name": "Crispy Bass", //An average bass weighs about five pounds. Roughly 1/3 of the weight of a large fish is good for typical fish meat. That's still a lot of meat to eat in one sitting.
-			"waterContent": 25,
-			"calorieContent": 1800 //six fillets on each side, about 150calories per bass fillet at that size
-		},
-		"Dish O' The Sea": {
-			"name": "Dish O' The Sea", //Canned or not, sardines are still super salty. Eating a pile of straight sardines sounds painful. At least the hashbrowns don't need any extra salt.
-			"waterContent": -750,
-			"calorieContent": 750
-		},
-		"Eggplant Parmesan": {
-			"name": "Eggplant Parmesan",
-			"waterContent": 75,
-			"calorieContent": 1240 //4 cups
-		},
-		"Escargot": {
-			"name": "Escargot",
-			"waterContent": 125,
-			"calorieContent": 520 //16 normal sized escargot snails; just pretending SDV snails are bigger because magic and meteors. lol.
-		},
-		"Farmer's Lunch": {
-			"name": "Farmer's Lunch",
-			"waterContent": 75,
-			"calorieContent": 1500
-		},
-		"Fiddlehead Risotto": {
-			"name": "Fiddlehead Risotto",
-			"waterContent": 120,
-			"calorieContent": 1360 //2 cups
-		},
-		"Fish Stew": {
-			"name": "Fish Stew", //Wait... Fish stew literally contains no fish, only only arthropods and mollusks o.o
-			"waterContent": 280,
-			"calorieContent": 840 //4 cups
-		},
-		"Fish Taco": {
-			"name": "Fish Taco",
-			"waterContent": 120,
-			"calorieContent": 1600 //One face sized taco, just to make sure calorie count is greater than ingredient sum
-		},
-		"Fried Calamari": {
-			"name": "Fried Calamari",
-			"waterContent": 50,
-			"calorieContent": 800 //"4 cups", I assume not packed
-		},
-		"Fried Eel": {
-			"name": "Fried Eel",
-			"waterContent": 150,
-			"calorieContent": 1300 //4 cups
-		},
-		"Fried Egg": {
-			"name": "Fried Egg",
-			"waterContent": 25,
-			"calorieContent": 160 //Double eggs, because incetivizing processing
-		},
-		"Fried Mushroom": {
-			"name": "Fried Mushroom",
-			"waterContent": 50,
-			"calorieContent": 500 //6cups
-		},
-		"Fruit Salad": {
-			"name": "Fruit Salad",
-			"waterContent": 100,
-			"calorieContent": 880 //8 cups fruit salad; indgredient sum is 770
-		},
-		"Ginger Ale": {
-			"name": "Ginger Ale",
-			"waterContent": 470,
-			"calorieContent": 160 //16oz
-		},
-		"Glazed Yams": {
-			"name": "Glazed Yams",
-			"waterContent": 50,
-			"calorieContent": 400 //4cups
-		},
-		"Hashbrowns": {
-			"name": "Hashbrowns",
-			"waterContent": 50,
-			"calorieContent": 350 //4cups
-		},
-		"Ice Cream": {
-			"name": "Ice Cream",
-			"waterContent": 125,
-			"calorieContent": 350 //One cone, double scoop
-		},
-		"Life Elixir": {
-			"name": "Life Elixir", //"Restores health to full." ....Then why do some foods restore more health than this?
-			"waterContent": 235, //8oz
-			"calorieContent": 2000 //Delicious, Nutritious, magic world health potions!
-		},
-		"Lobster Bisque": {
-			"name": "Lobster Bisque",
-			"waterContent": 250,
-			"calorieContent": 1100 //4 cup
-		},
-		"Lucky Lunch": {
-			"name": "Lucky Lunch", //ngl, this recipe is a little off putting to me... Sea cucumber is really slimy, cooked or not, unless it's way overcooked and tastes terrible.
-			"waterContent": 100,
-			"calorieContent": 1000 //1 slimy sea cucumber taco
-		},
-		"Magic Rock Candy": {
-			"name": "Magic Rock Candy",
-			"waterContent": 000,
-			"calorieContent": 2500 //Pure, unadulterated magic rainbow sugar crystals.
-		},
-		"Maki Roll": {
-			"name": "Maki Roll",
-			"waterContent": 000,
-			"calorieContent": 800 //4 rolls.
-		},
-		"Mango Sticky Rice": {
-			"name": "Mango Sticky Rice",
-			"waterContent": 000,
-			"calorieContent": 920 //4 cups
-		},
-		"Maple Bar": {
-			"name": "Maple Bar", //Weird name for a maple donut, but okay.
-			"waterContent": 000,
-			"calorieContent": 600 //One doughnut, apparently
-		},
-		"Miner's Treat": {
-			"name": "Miner's Treat",
-			"waterContent": 000,
-			"calorieContent": 1000 //Extra large lollipop, just to stay higher than sum of ingredients
-		},
-		"Oil": {
-			"name": "Oil",
-			"waterContent": 000,
-			"calorieContent": 120 //1 tablespoon. Seriously.
-		},
-		"Oil of Garlic": {
-			"name": "Oil of Garlic",
-			"waterContent": 000,
-			"calorieContent": 125 //1 tablespoon
-		},
-		"Omelet": {
-			"name": "Omelet", //Can it really be called an omelette without cheese?
-			"waterContent": 000,
-			"calorieContent": 450 //4 medium egg omelette
-		},
-		"Pale Broth": {
-			"name": "Pale Broth",
-			"waterContent": 660,
-			"calorieContent": 760 //copy of algae soup
-		},
-		"Pancakes": {
-			"name": "Pancakes",
-			"waterContent": 000,
-			"calorieContent": 400 //4 4inch pancakes
-		},
-		"Parsnip Soup": {
-			"name": "Parsnip Soup",
-			"waterContent": 500,
-			"calorieContent": 640 //4 cups of parsnip cream soup
-		},
-		"Pepper Poppers": {
-			"name": "Pepper Poppers",
-			"waterContent": 000,
-			"calorieContent": 800 //12 poppers
-		},
-		"Piña Colada": {
-			"name": "Piña Colada",
-			"waterContent": 235,
-			"calorieContent": 420 //8oz
-		},
-		"Pink Cake": {
-			"name": "Pink Cake",
-			"waterContent": 000,
-			"calorieContent": 1900 //An entire cake. Fewer calories than I expected, tbh.
-		},
-		"Pizza": {
-			"name": "Pizza",
-			"waterContent": 000,
-			"calorieContent": 1840 //A 12" cheese pizza
-		},
-		"Plum Pudding": {
-			"name": "Plum Pudding",
-			"waterContent": 000,
-			"calorieContent": 1000 //Apparently Plum Puddings are measured in loafs?
-		},
-		"Poi": {
-			"name": "Poi",
-			"waterContent": 300,
-			"calorieContent": 1080 //4 cups
-		},
-		"Poppyseed Muffin": {
-			"name": "Poppyseed Muffin",
-			"waterContent": 25,
-			"calorieContent": 670 //1 muffin
-		},
-		"Pumpkin Pie": {
-			"name": "Pumpkin Pie",
-			"waterContent": 50,
-			"calorieContent": 2500 //1 pie
-		},
-		"Pumpkin Soup": {
-			"name": "Pumpkin Soup",
-			"waterContent": 1250,
-			"calorieContent": 870 //8 cups
-		},
-		"Radish Salad": {
-			"name": "Radish Salad",
-			"waterContent": 50,
-			"calorieContent": 600
-		},
-		"Red Plate": {
-			"name": "Red Plate",
-			"waterContent": 150,
-			"calorieContent": 600
-		},
-		"Rhubarb Pie": {
-			"name": "Rhubarb Pie",
-			"waterContent": 150,
-			"calorieContent": 3530 //1 pie. Why is it so much worse than other pies?
-		},
-		"Rice": {
-			"name": "Rice",
-			"waterContent": 50,
-			"calorieContent": 400 //2 cups cooked white rice
-		},
-		"Rice Pudding": {
-			"name": "Rice Pudding",
-			"waterContent": 100,
-			"calorieContent": 1200 //4 cups
-		},
-		"Roasted Hazelnuts": {
-			"name": "Roasted Hazelnuts",
-			"waterContent": 50,
-			"calorieContent": 1440 //1 cup of roasted hazelnuts
-		},
-		"Roots Platter": {
-			"name": "Roots Platter",
-			"waterContent": 50,
-			"calorieContent": 750 
-		},
-		"Salad": {
-			"name": "Salad",
-			"waterContent": 50,
-			"calorieContent": 600
-		},
-		"Salmon Dinner": {
-			"name": "Salmon Dinner",
-			"waterContent": 100,
-			"calorieContent": 1400
-		},
-		"Sashimi": {
-			"name": "Sashimi",
-			"waterContent": 75,
-			"calorieContent": 800
-		},
-		"Seafoam Pudding": {
-			"name": "Seafoam Pudding", //pudding made from fish and squid ink? I love seafood, but even this seems too much...
-			"waterContent": 150,
-			"calorieContent": 1160 //4 cups of generic pudding 
-		},
-		"Shrimp Cocktail": {
-			"name": "Shrimp Cocktail",
-			"waterContent": 150,
-			"calorieContent": 550 //Boosted to exceed ingredient sum
-		},
-		"Spaghetti": {
-			"name": "Spaghetti",
-			"waterContent": 100,
-			"calorieContent": 1200 //4 cups
-		},
-		"Spicy Eel": {
-			"name": "Spicy Eel",
-			"waterContent": -250,
-			"calorieContent": 1300 //fried eel copy
-		},
-		"Squid Ink Ravioli": {
-			"name": "Squid Ink Ravioli",
-			"waterContent": 100,
-			"calorieContent": 1200 //4 cups
-		},
-		"Stir Fry": {
-			"name": "Stir Fry",
-			"waterContent": 50,
-			"calorieContent": 800 //4 cups stirfry veggies on rice
-		},
-		"Strange Bun": {
-			"name": "Strange Bun", //Sea slug and burnt hair mayonaise.... Yum....
-			"waterContent": 50,
-			"calorieContent": 800
-		},
-		"Stuffing": {
-			"name": "Stuffing",
-			"waterContent": 50,
-			"calorieContent": 1400 //4 cups
-		},
-		"Sugar": {
-			"name": "Sugar", //Beets UOM is 4 beets per item to get calorie. 1 beet has about 6g sugar, 20 24g per 1 item. Therefore, 8g of sugar per 1 sugar item.
-			"waterContent": 000,
-			"calorieContent": 35
-		},
-		"Super Meal": {
-			"name": "Super Meal",
-			"waterContent": 100,
-			"calorieContent": 560 //4 cups 'super foods salad'
-		},
-		"Survivor Burger": {
-			"name": "Survivor Burger",
-			"waterContent": 50,
-			"calorieContent": 1400 //4 veggie burgers
-		},
-		"Tom Kha Soup": {
-			"name": "Tom Kha Soup",
-			"waterContent": 250,
-			"calorieContent": 1040 //8 cups
-		},
-		"Tortilla": {
-			"name": "Tortilla",
-			"waterContent": 25,
-			"calorieContent": 150 //1 large tortilla, what can be made from 1 large ear of corn
+		"Joja Cola": {
+			"name": "Joja Cola",
+			"waterContent": 4000,
+			"calorieContent": 100
 		},
 		"Triple Shot Espresso": {
 			"name": "Triple Shot Espresso",
-			"waterContent": 115, //4 oz
-			"calorieContent": 000
-		},
-		"Tropical Curry": {
-			"name": "Tropical Curry",
-			"waterContent": 240,
-			"calorieContent": 960 //4 cups coconut pineapple thai curry
-		},
-		"Trout Soup": {
-			"name": "Trout Soup",
-			"waterContent": 240,
-			"calorieContent": 800 //4 cups
-		},
-		"Vegetable Medley": {
-			"name": "Vegetable Medley",
-			"waterContent": 75,
-			"calorieContent": 550
-		},
-		"Wheat Flour": {
-			"name": "Wheat Flour",
-			"waterContent": 000,
-			"calorieContent": 400 //half cup
-		},
-		"Cola": {
-			"name": "Cola",
-			"waterContent": 240,
-			"calorieContent": 100
-		},
-		"Espresso": {
-			"name": "Espresso",
-			"waterContent": 44,
-			"calorieContent": 3
+			"waterContent": 3000,
+			"calorieContent": 200
 		},
 		"Coffee": {
 			"name": "Coffee",
-			"waterContent": 240,
-			"calorieContent": 1
+			"waterContent": 3000,
+			"calorieContent": 200
 		},
 		"Wine": {
 			"name": "Wine",
-			"waterContent": 148,
-			"calorieContent": 123
+			"waterContent": 4000,
+			"calorieContent": 200
 		},
 		"Beer": {
 			"name": "Beer",
-			"waterContent": 355,
-			"calorieContent": 154
+			"waterContent": 3000,
+			"calorieContent": 200
 		},
 		"Milk": {
 			"name": "Milk",
-			"waterContent": 240,
-			"calorieContent": 148
+			"waterContent": 4000,
+			"calorieContent": 200
+		},
+		"Large Milk": {
+			"name": "Large Milk",
+			"waterContent": 6000,
+			"calorieContent": 437
+		},
+		"Goat Milk": {
+			"name": "Goat Milk",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Large Goat Milk": {
+			"name": "Large Goat Milk",
+			"waterContent": 7000,
+			"calorieContent": 437
 		},
 		"Tea": {
 			"name": "Tea",
-			"waterContent": 240,
-			"calorieContent": 2
+			"waterContent": 4000,
+			"calorieContent": 437
 		},
 		"Juice": {
 			"name": "Juice",
-			"waterContent": 240,
-			"calorieContent": 114
+			"waterContent": 4000,
+			"calorieContent": 200
+		},
+		"Fried Egg": {
+			"name": "Fried Egg",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Omelet": {
+			"name": "Omelet",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Salad": {
+			"name": "Salad",
+			"waterContent": 1000,
+			"calorieContent": 875
+		},
+		"Cheese Cauliflower": {
+			"name": "Cheese Cauliflower",
+			"waterContent": 700,
+			"calorieContent": 1312
+		},
+		"Baked Fish": {
+			"name": "Baked Fish",
+			"waterContent": 1000,
+			"calorieContent": 1750
+		},
+		"Parsnip Soup": {
+			"name": "Parsnip Soup",
+			"waterContent": 2500,
+			"calorieContent": 1750
+		},
+		"Vegetable Medley": {
+			"name": "Vegetable Medley",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Complete Breakfast": {
+			"name": "Complete Breakfast",
+			"waterContent": 3000,
+			"calorieContent": 2625
+		},
+		"Fried Calamari": {
+			"name": "Fried Calamari",
+			"waterContent": 750,
+			"calorieContent": 1312
+		},
+		"Strange Bun": {
+			"name": "Strange Bun",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Lucky Lunch": {
+			"name": "Lucky Lunch",
+			"waterContent": 1500,
+			"calorieContent": 1750
+		},
+		"Fried Mushroom": {
+			"name": "Fried Mushroom",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Pizza": {
+			"name": "Pizza",
+			"waterContent": 1000,
+			"calorieContent": 1750
+		},
+		"Bean Hotpot": {
+			"name": "Bean Hotpot",
+			"waterContent": 3000,
+			"calorieContent": 1312
+		},
+		"Glazed Yams": {
+			"name": "Glazed Yams",
+			"waterContent": 750,
+			"calorieContent": 875
+		},
+		"Carp Surprise": {
+			"name": "Carp Surprise",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Hashbrowns": {
+			"name": "Hashbrowns",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Pancakes": {
+			"name": "Pancakes",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Salmon Dinner": {
+			"name": "Salmon Dinner",
+			"waterContent": 1000,
+			"calorieContent": 2187
+		},
+		"Crispy Bass": {
+			"name": "Crispy Bass",
+			"waterContent": 1000,
+			"calorieContent": 2187
+		},
+		"Pepper Poppers": {
+			"name": "Pepper Poppers",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Bread": {
+			"name": "Bread",
+			"waterContent": 200,
+			"calorieContent": 875
+		},
+		"Tom Kha Soup": {
+			"name": "Tom Kha Soup",
+			"waterContent": 3000,
+			"calorieContent": 1312
+		},
+		"Trout Soup": {
+			"name": "Trout Soup",
+			"waterContent": 3000,
+			"calorieContent": 1750
+		},
+		"Chocolate Cake": {
+			"name": "Chocolate Cake",
+			"waterContent": 500,
+			"calorieContent": 2625
+		},
+		"Pink Cake": {
+			"name": "Pink Cake",
+			"waterContent": 500,
+			"calorieContent": 2625
+		},
+		"Rhubarb Pie": {
+			"name": "Rhubarb Pie",
+			"waterContent": 750,
+			"calorieContent": 875
+		},
+		"Cookie": {
+			"name": "Cookie",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Spaghetti": {
+			"name": "Spaghetti",
+			"waterContent": 15000,
+			"calorieContent": 1312
+		},
+		"Fried Eel": {
+			"name": "Fried Eel",
+			"waterContent": 15000,
+			"calorieContent": 1312
+		},
+		"Spicy Eel": {
+			"name": "Spicy Eel",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Sashimi": {
+			"name": "Sashimi",
+			"waterContent": 1000,
+			"calorieContent": 875
+		},
+		"Maki Roll": {
+			"name": "Maki Roll",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Tortilla": {
+			"name": "Tortilla",
+			"waterContent": 100,
+			"calorieContent": 200
+		},
+		"Red Plate": {
+			"name": "Red Plate",
+			"waterContent": 1000,
+			"calorieContent": 875
+		},
+		"Eggplant Parmesean": {
+			"name": "Eggplant Parmesean",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Rice Pudding": {
+			"name": "Rice Pudding",
+			"waterContent": 1000,
+			"calorieContent": 437
+		},
+		"Ice Cream": {
+			"name": "Ice Cream",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Blueberry Tart": {
+			"name": "Blueberry Tart",
+			"waterContent": 750,
+			"calorieContent": 437
+		},
+		"Autumn's Bounty": {
+			"name": "Autumn's Bounty",
+			"waterContent": 5000,
+			"calorieContent": 1750
+		},
+		"Pumpkin Soup": {
+			"name": "Pumpkin Soup",
+			"waterContent": 3000,
+			"calorieContent": 1750
+		},
+		"Super Meal": {
+			"name": "Super Meal",
+			"waterContent": 500,
+			"calorieContent": 1750
+		},
+		"Cranberry Sauce": {
+			"name": "Cranberries Sauce",
+			"waterContent": 15000,
+			"calorieContent": 437
+		},
+		"Stuffing": {
+			"name": "Stuffing",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Farmer's Lunch": {
+			"name": "Farmer's Lunch",
+			"waterContent": 5000,
+			"calorieContent": 1312
+		},
+		"Survival Burger": {
+			"name": "Survival Burger",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Dish O' The Sea": {
+			"name": "Dish O' The Sea",
+			"waterContent": 2000,
+			"calorieContent": 1750
+		},
+		"Miner's Treat": {
+			"name": "Miner's Treat",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Roots Platter": {
+			"name": "Roots Platter",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Seafoam Pudding": {
+			"name": "Seafoam Pudding",
+			"waterContent": 2000,
+			"calorieContent": 875
+		},
+		"Algae Soup": {
+			"name": "Algae Soup",
+			"waterContent": 3000,
+			"calorieContent": 875
+		},
+		"Pale Broth": {
+			"name": "Pale Broth",
+			"waterContent": 3000,
+			"calorieContent": 875
+		},
+		"Plum Pudding": {
+			"name": "Plum Pudding",
+			"waterContent": 1000,
+			"calorieContent": 875
+		},
+		"Artichoke Dip": {
+			"name": "Artichoke Dip",
+			"waterContent": 10000,
+			"calorieContent": 875
+		},
+		"Stir Fry": {
+			"name": "Stir Fry",
+			"waterContent": 1000,
+			"calorieContent": 1750
+		},
+		"Roasted Hazelnuts": {
+			"name": "Roasted Hazelnuts",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Pumpkin Pie": {
+			"name": "Pumpkin Pie",
+			"waterContent": 15000,
+			"calorieContent": 1312
+		},
+		"Radish Salad": {
+			"name": "Radish Salad",
+			"waterContent": 15000,
+			"calorieContent": 875
+		},
+		"Fruit Salad": {
+			"name": "Fruit Salad",
+			"waterContent": 2000,
+			"calorieContent": 875
+		},
+		"Blackberry Cobbler": {
+			"name": "Blackberry Cobbler",
+			"waterContent": 15000,
+			"calorieContent": 875
+		},
+		"Cranberry Candy": {
+			"name": "Cranberries Candy",
+			"waterContent": 1000,
+			"calorieContent": 437
+		},
+		"Bruschetta": {
+			"name": "Bruschetta",
+			"waterContent": 1000,
+			"calorieContent": 437
+		},
+		"Coleslaw": {
+			"name": "Coleslaw",
+			"waterContent": 2000,
+			"calorieContent": 875
+		},
+		"Fiddlehead Risotto": {
+			"name": "Fiddlehead Risotto",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Poppyseed Muffin": {
+			"name": "Poppyseed Muffin",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Chowder": {
+			"name": "Chowder",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Fish Stew": {
+			"name": "Fish Stew",
+			"waterContent": 2500,
+			"calorieContent": 1750
+		},
+		"Escargot": {
+			"name": "Escargot",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Lobster Bisque": {
+			"name": "Lobster Bisque",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Maple Bar": {
+			"name": "Maple Bar",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Crab Cakes": {
+			"name": "Crab Cakes",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Shrimp Cocktail": {
+			"name": "Shrimp Cocktail",
+			"waterContent": 2000,
+			"calorieContent": 437
+		},
+		"Ginger Ale": {
+			"name": "Ginger Ale",
+			"waterContent": 3000,
+			"calorieContent": 200
+		},
+		"Banana Pudding": {
+			"name": "Banana Pudding",
+			"waterContent": 1000,
+			"calorieContent": 875
+		},
+		"Mango Sticky Rice": {
+			"name": "Mango Sticky Rice",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Poi": {
+			"name": "Poi",
+			"waterContent": 3000,
+			"calorieContent": 1312
+		},
+		"Tropical Curry": {
+			"name": "Tropical Curry",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Squid Ink Ravioli": {
+			"name": "Squid Ink Ravioli",
+			"waterContent": 1500,
+			"calorieContent": 1312
+		},
+		"Blue Jazz": {
+			"name": "Blue Jazz",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Cauliflower": {
+			"name": "Cauliflower",
+			"waterContent": 500,
+			"calorieContent": 700
+		},
+		"Garlic": {
+			"name": "Garlic",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Green Bean": {
+			"name": "Green Bean",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Kale": {
+			"name": "Kale",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Parsnip": {
+			"name": "Parsnip",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Potato": {
+			"name": "Potato",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Strawberry": {
+			"name": "Strawberry",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Tulip": {
+			"name": "Tulip",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Unmilled Rice": {
+			"name": "Unmilled Rice",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Blueberry": {
+			"name": "Blueberry",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Corn": {
+			"name": "Corn",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Hops": {
+			"name": "Hops",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Hot Pepper": {
+			"name": "Hot Pepper",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Melon": {
+			"name": "Melon",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Poppy": {
+			"name": "Poppy",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Radish": {
+			"name": "Radish",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Red Cabbage": {
+			"name": "Red Cabbage",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Starfruit": {
+			"name": "Starfruit",
+			"waterContent": 1500,
+			"calorieContent": 875
+		},
+		"Summer Spangle": {
+			"name": "Summer Spangle",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Sunflower": {
+			"name": "Sunflower",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Tomato": {
+			"name": "Tomato",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Amaranth": {
+			"name": "Amaranth",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Artichoke": {
+			"name": "Artichoke",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Beet": {
+			"name": "Beet",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Bok Choy": {
+			"name": "Bok Choy",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Cranberries": {
+			"name": "Cranberries",
+			"waterContent": 1000,
+			"calorieContent": 200
+		},
+		"Eggplant": {
+			"name": "Eggplant",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Fairy Rose": {
+			"name": "Fairy Rose",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Grape": {
+			"name": "Grape",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Yam": {
+			"name": "Yam",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Cactus Fruit": {
+			"name": "Cactus Fruit",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Pineapple": {
+			"name": "Pineapple",
+			"waterContent": 1000,
+			"calorieContent": 1312
+		},
+		"Taro Root": {
+			"name": "Taro Root",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Apricot": {
+			"name": "Apricot",
+			"waterContent": 500,
+			"calorieContent": 150
+		},
+		"Cherry": {
+			"name": "Cherry",
+			"waterContent": 500,
+			"calorieContent": 150
+		},
+		"Banana": {
+			"name": "Banana",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Mango": {
+			"name": "Mango",
+			"waterContent": 750,
+			"calorieContent": 437
+		},
+		"Orange": {
+			"name": "Orange",
+			"waterContent": 750,
+			"calorieContent": 437
+		},
+		"Peach": {
+			"name": "Peach",
+			"waterContent": 750,
+			"calorieContent": 437
+		},
+		"Apple": {
+			"name": "Apple",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Pomegranate": {
+			"name": "Pomegranate",
+			"waterContent": 750,
+			"calorieContent": 437
+		},
+		"Sap": {
+			"name": "Sap",
+			"waterContent": 0,
+			"calorieContent": 100
+		},
+		"Wild Horseradish": {
+			"name": "Wild Horseradish",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Daffodil": {
+			"name": "Daffodil",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Leek": {
+			"name": "Leek",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Dandelion": {
+			"name": "Dandelion",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Spring Onion": {
+			"name": "Spring Onion",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Morel": {
+			"name": "Morel",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Common Mushroom": {
+			"name": "Common Mushroom",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Salmonberry": {
+			"name": "Salmonberry",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Spice Berry": {
+			"name": "Spice Berry",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Sweet Pea": {
+			"name": "Sweet Pea",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Red Mushroom": {
+			"name": "Red Mushroom",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Fiddlehead Fern": {
+			"name": "Fiddlehead Fern",
+			"waterContent": 500,
+			"calorieContent": 150
+		},
+		"Wild Plum": {
+			"name": "Wild Plum",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Hazelnut": {
+			"name": "Hazelnut",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Blackberry": {
+			"name": "Blackberry",
+			"waterContent": 500,
+			"calorieContent": 200
+		},
+		"Chantrelle": {
+			"name": "Chantrelle",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Purple Mushroom": {
+			"name": "Purple Mushroom",
+			"waterContent": 500,
+			"calorieContent": 837
+		},
+		"Winter Root": {
+			"name": "Winter Root",
+			"waterContent": 500,
+			"calorieContent": 150
+		},
+		"Crystal Fruit": {
+			"name": "Crystal Fruit",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Snow Yam": {
+			"name": "Snow Yam",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Crocus": {
+			"name": "Crocus",
+			"waterContent": 500,
+			"calorieContent": 150
+		},
+		"Holly": {
+			"name": "Holly",
+			"waterContent": 500,
+			"calorieContent": 150
+		},
+		"Cave Carrot": {
+			"name": "Cave Carrot",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Ginger": {
+			"name": "Ginger",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Magma Cap": {
+			"name": "Magma Cap",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Pufferfish": {
+			"name": "Pufferfish",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Anchovy": {
+			"name": "Anchovy",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Tuna": {
+			"name": "Tuna",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Sardine": {
+			"name": "Sardine",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Bream": {
+			"name": "Bream",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Largemouth Bass": {
+			"name": "Largemouth Bass",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Smallmouth Bass": {
+			"name": "Smallmouth Bass",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Rainbow Trout": {
+			"name": "Rainbow Trout",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Salmon": {
+			"name": "Salmon",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Walleye": {
+			"name": "Walleye",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Perch": {
+			"name": "Perch",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Carp": {
+			"name": "Carp",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Catfish": {
+			"name": "Catfish",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Pike": {
+			"name": "Pike",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Sunfish": {
+			"name": "Sunfish",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Red Mullet": {
+			"name": "Red Mullet",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Herring": {
+			"name": "Herring",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Eel": {
+			"name": "Eel",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Octopus": {
+			"name": "Octopus",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Red Snapper": {
+			"name": "Red Snapper",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Squid": {
+			"name": "Squid",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Sea Cucumber": {
+			"name": "Sea Cucumber",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Super Cucumber": {
+			"name": "Super Cucumber",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Ghostfish": {
+			"name": "Ghostfish",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Ice Pip": {
+			"name": "Ice Pip",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Lava Eel": {
+			"name": "Lava Eel",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Sandfish": {
+			"name": "Sandfish",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Scorpion Carp": {
+			"name": "Scorpion Carp",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Flounder": {
+			"name": "Flounder",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Midnight Carp": {
+			"name": "Midnight Carp",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Sturgeon": {
+			"name": "Sturgeon",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Tiger Trout": {
+			"name": "Tiger Trout",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Bullhead": {
+			"name": "Bullhead",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Tilapia": {
+			"name": "Tilapia",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Chub": {
+			"name": "Chub",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Dorado": {
+			"name": "Dorado",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Albacore": {
+			"name": "Albacore",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Shad": {
+			"name": "Shad",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Lingcod": {
+			"name": "Lingcod",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Halibut": {
+			"name": "Halibut",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Woodskip": {
+			"name": "Woodskip",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Void Salmon": {
+			"name": "Void Salmon",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Slimejack": {
+			"name": "Slimejack",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Lionfish": {
+			"name": "Lionfish",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Blue Discus": {
+			"name": "Blue Discus",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Stingray": {
+			"name": "Stingray",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Midnight Squid": {
+			"name": "Midnight Squid",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Spook Fish": {
+			"name": "Spook Fish",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Blobfish": {
+			"name": "Blobfish",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Crimsonfish": {
+			"name": "Crimsonfish",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Angler": {
+			"name": "Angler",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Legend": {
+			"name": "Legend",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Glacierfish": {
+			"name": "Glacierfish",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Mutant Carp": {
+			"name": "Mutant Carp",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Son of Crimsonfish": {
+			"name": "Son of Crimsonfish",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Ms. Angler": {
+			"name": "Ms. Angler",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Legend II": {
+			"name": "Legend II",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Glacierfish Jr.": {
+			"name": "Glacierfish Jr.",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Radioactive Carp": {
+			"name": "Radioactive Carp",
+			"waterContent": 8000,
+			"calorieContent": 3500
+		},
+		"Seaweed": {
+			"name": "Seaweed",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Green Algae": {
+			"name": "Green Algae",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"White Algae": {
+			"name": "White Algae",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Field Snack": {
+			"name": "Field Snack",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Life Elixir": {
+			"name": "Life Elixir",
+			"waterContent": 4000,
+			"calorieContent": 150
+		},
+		"Oil of Garlic": {
+			"name": "Oil of Garlic",
+			"waterContent": 3000,
+			"calorieContent": 150
+		},
+		"Bug Steak": {
+			"name": "Bug Steak",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Rice": {
+			"name": "Rice",
+			"waterContent": 500,
+			"calorieContent": 300
+		},
+		"Sugar": {
+			"name": "Sugar",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Wheat Flour": {
+			"name": "Wheat Flour",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Oil": {
+			"name": "Oil",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Vinegar": {
+			"name": "Vinegar",
+			"waterContent": 500,
+			"calorieContent": 100
+		},
+		"Energy Tonic": {
+			"name": "Energy Tonic",
+			"waterContent": 3000,
+			"calorieContent": 100
+		},
+		"Muscle Remedy": {
+			"name": "Muscle Remedy",
+			"waterContent": 3000,
+			"calorieContent": 100
+		},
+		"Egg": {
+			"name": "Egg",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Large Egg": {
+			"name": "Large Egg",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Void Egg": {
+			"name": "Void Egg",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Golden Egg": {
+			"name": "Golden Egg",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Duck Egg": {
+			"name": "Duck Egg",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Ostrich Egg": {
+			"name": "Ostrich Egg",
+			"waterContent": 500,
+			"calorieContent": 1312
+		},
+		"Cheese": {
+			"name": "Cheese",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Goat Cheese": {
+			"name": "Goat Cheese",
+			"waterContent": 500,
+			"calorieContent": 875
+		},
+		"Truffle": {
+			"name": "Truffle",
+			"waterContent": 500,
+			"calorieContent": 437
+		},
+		"Truffle Oil": {
+			"name": "Truffle Oil",
+			"waterContent": 500,
+			"calorieContent": 100
 		}
+
+
+
+
 	},
 	"Underwear_Options": {
 		"bed": {
@@ -1449,7 +1914,7 @@
 			"absorbency": 300.0,
 			"containment": 60.0,
 			"spriteIndex": -1,
-			"price": 2000,
+			"price": 1000,
 			"washable": true,
 			"plural": true,
 			"dryingTime": 600,
@@ -1537,7 +2002,7 @@
 		"Joja diaper": {
 			"name": "Joja diaper",
 			"description": "thin white plastic diaper from JojaMart",
-			"absorbency": 1200.0,
+			"absorbency": 1100.0,
 			"containment": 300.0,
 			"spriteIndex": 6,
 			"price": 50,
@@ -1551,7 +2016,7 @@
 			"name": "baby print diaper",
 			"description": "little soft and crinkly fresh-scented baby print diaper. Its a bit small, but you can fit",
 			"absorbency": 1500.0,
-			"containment": 1000.0,
+			"containment": 450.0,
 			"spriteIndex": 7,
 			"price": 75,
 			"washable": false,
@@ -1563,8 +2028,8 @@
 		"cloth diaper": {
 			"name": "cloth diaper",
 			"description": "thick and soft white cloth diaper",
-			"absorbency": 2000.0,
-			"containment": 1500.0,
+			"absorbency": 1000.0,
+			"containment": 900.0,
 			"spriteIndex": 8,
 			"price": 500,
 			"washable": true,
@@ -1577,7 +2042,7 @@
 			"name": "space diaper",
 			"description": "very thick and soft blue plastic diaper with spaceship designs",
 			"absorbency": 2700.0,
-			"containment": 2700.0,
+			"containment": 900.0,
 			"spriteIndex": 9,
 			"price": 100,
 			"washable": false,
@@ -1590,7 +2055,7 @@
 			"name": "pawprint diaper",
 			"description": "puffy plastic diaper with cute animal prints and fade-when-wet little paws",
 			"absorbency": 2700.0,
-			"containment": 2700.0,
+			"containment": 900.0,
 			"spriteIndex": 10,
 			"price": 100,
 			"washable": false,
@@ -1603,7 +2068,7 @@
 			"name": "heart diaper",
 			"description": "very thick and soft pink plastic diaper with a large fade-when-wet heart on the front",
 			"absorbency": 3000.0,
-			"containment": 3000.0,
+			"containment": 900.0,
 			"spriteIndex": 11,
 			"price": 120,
 			"washable": false,

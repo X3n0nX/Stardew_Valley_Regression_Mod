@@ -5,11 +5,12 @@ using System.Text.RegularExpressions;
 
 namespace PrimevalTitmouse
 {
-    //Lots of Regex functions to handle variability in our strings.
+    //Lots of Regex functions to handle variability in our strings. 
   public static class Strings
   {
     private static Data t = Regression.t;
     private static Farmer who = Game1.player;
+    
 
     public static string DescribeUnderwear(Container u, string baseDescription = null)
     {
@@ -51,7 +52,7 @@ namespace PrimevalTitmouse
       }
       return u.GetPrefix() + " " + newValue;
         }
-
+       
 
         public static string InsertVariables(string msg, Body b, Container c = null)
     {
@@ -62,7 +63,11 @@ namespace PrimevalTitmouse
         str = Strings.ReplaceOr(str.Replace("$UNDERWEAR_NAME$", c.name).Replace("$UNDERWEAR_PREFIX$", c.GetPrefix()).Replace("$UNDERWEAR_DESC$", c.description).Replace("$INSPECT_UNDERWEAR_NAME$", Strings.DescribeUnderwear(c, c.name)).Replace("$INSPECT_UNDERWEAR_DESC$", Strings.DescribeUnderwear(c, c.description)), !c.plural, "#");
       if (b != null)
         str = str.Replace("$PANTS_NAME$", b.pants.name).Replace("$PANTS_PREFIX$", b.pants.GetPrefix()).Replace("$PANTS_DESC$", b.pants.description).Replace("$BEDDING_DRYTIME$", Game1.getTimeOfDayString(b.bed.timeWhenDoneDrying.time));
-      return Strings.ReplaceOr(str, Strings.who.IsMale, "/").Replace("$FARMERNAME$", Strings.who.Name);
+        if(Regression.config.babyNickname != "")
+                return Strings.ReplaceOr(str, Strings.who.IsMale, "/").Replace("$FARMERNAME$", Strings.who.Name).Replace("$NICKNAME$", Regression.config.babyNickname);
+        else
+                return Strings.ReplaceOr(str, Strings.who.IsMale, "/").Replace("$FARMERNAME$", Strings.who.Name).Replace("$NICKNAME$", Strings.who.Name);
+
     }
 
     public static string InsertVariable(string inputString, string variableName, string variableValue)

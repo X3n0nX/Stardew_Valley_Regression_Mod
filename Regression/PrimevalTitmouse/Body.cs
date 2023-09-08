@@ -8,15 +8,15 @@ using System.Collections.Generic;
 
 namespace PrimevalTitmouse
 {
-    //<TODO> A lot of bladder and bowel stuff is processed similarly. Consider refactor with arrays and Function pointers.
+    //<TODO> Alot of bladder and bowel stuff is processed similarly. Consider refactor with arrays and Function pointers.
     public class Body
     {
         //Lets think of Food in Calories, and water in mL
         //For a day Laborer (like a farmer) that should be ~3500 Cal, and 14000 mL
-        //Of course this is dependent on amount of work, but let's go one step at a time
+        //Of course this is dependant on amount of work, but let's go one step at a time
         private static readonly float requiredCaloriesPerDay = 3500f;
         private static readonly float requiredWaterPerDay = 8000f; //8oz glasses: every 20min for 8 hours + every 40 min for 8 hour
-        //private static readonly float maxWaterInCan = 4000f; //How much water does the watering can hold? Max is 40, so *100
+        //private static readonly float maxWaterInCan = 4000f; //How much water does the wattering can hold? Max is 40, so *100
 
         //Average # of Pees per day is ~3
         public static readonly float maxBladderCapacity = 600; //about 600mL
@@ -72,6 +72,8 @@ namespace PrimevalTitmouse
             underwear = new("dinosaur undies");
     }
 
+
+
         public float GetBladderTrainingThreshold()
         {
             return bladderCapacity * 0.5f;
@@ -87,12 +89,12 @@ namespace PrimevalTitmouse
         {
             return bladderCapacity * 0.1f;
         }
-
+       
         public float GetBowelAttemptThreshold()
         {
                 return bowelCapacity * 0.1f;
         }
-
+       
         public float GetHungerPercent()
         {
             return (requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
@@ -181,6 +183,7 @@ namespace PrimevalTitmouse
             //How full are we?
             float oldPercent = (requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
             hunger -= amount;
+            
             float newPercent = (requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
 
             //Convert food lost into poo at half rate
@@ -191,7 +194,7 @@ namespace PrimevalTitmouse
             if (hunger < 0)
             {
                 AddBowel(hunger * -0.5f * conversionRatio * foodToBowelConversion);
-                hunger = 0f;
+                hunger = 0f; 
                 newPercent =(requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
             }
 
@@ -204,7 +207,7 @@ namespace PrimevalTitmouse
             //If we're starving and not eating, take a stamina hit
             if (hunger > requiredCaloriesPerDay && amount < 0)
             {
-                //Take percentage off stamina equal to percentage above max hunger
+                //Take percentage off stamina equal to precentage above max hunger
                 Game1.player.stamina += newPercent * Game1.player.MaxStamina;
                 hunger = requiredCaloriesPerDay;
                 newPercent = 1;
@@ -241,7 +244,7 @@ namespace PrimevalTitmouse
             //If we're starving and not eating, take a stamina hit
             if (thirst > requiredWaterPerDay && amount < 0)
             {
-                //Take percentage off health equal to percentage above max thirst
+                //Take percentage off health equal to precentage above max thirst
                 float lostHealth = newPercent * (float)Game1.player.maxHealth;
                 Game1.player.health = Game1.player.health + (int)lostHealth;
                 thirst = requiredWaterPerDay;
@@ -257,16 +260,16 @@ namespace PrimevalTitmouse
         {
             float previousContinence = bladderContinence;
 
-            //Modify the continence factor (inversely proportional to rate at which the bladder fills)
+            //Modify the continence factor (inversly proportional to rate at which the bladder fills)
             bladderContinence -= percent;
 
-            //Put a ceiling at 100%, and  a floor at 5%
+            //Put a ceilling at 100%, and  a floor at 5%
             bladderContinence = Math.Max(Math.Min(bladderContinence, 1f), 0.05f);
 
             //Decrease our maximum capacity (bladder shrinks as we become incontinent)
             bladderCapacity = bladderContinence * maxBladderCapacity;
 
-            //Ceiling at base value and floor at 25% base value
+            //Ceilling at base value and floor at 25% base value
             bladderCapacity = Math.Max(bladderCapacity, minBladderCapacity);
 
             //If we're increasing, no need to warn. (maybe we should tell people that they're regaining?)
@@ -282,16 +285,16 @@ namespace PrimevalTitmouse
         {
             float previousContinence = bowelContinence;
 
-            //Modify the continence factor (inversely proportional to rate at which the bowels fills)
+            //Modify the continence factor (inversly proportional to rate at which the bowels fills)
             bowelContinence -= percent;
 
-            //Put a ceiling at 100%, and  a floor at 5%
+            //Put a ceilling at 100%, and  a floor at 5%
             bowelContinence = Math.Max(Math.Min(bowelContinence, 1f), 0.05f);
 
             //Decrease our maximum capacity (bowel shrinks as we become incontinent)
             bowelCapacity = bowelContinence * maxBowelCapacity;
 
-            //Ceiling at base value and floor at 25% base value
+            //Ceilling at base value and floor at 25% base value
             bowelCapacity = Math.Max(bowelCapacity, minBowelCapacity);
 
             //If we're increasing, no need to warn. (maybe we should tell people that they're regaining?)
@@ -428,7 +431,7 @@ namespace PrimevalTitmouse
                     {
                         numPotty++;
                         bowelFullness -= amountToLose;
-                        if (!underwear.removable) //Certain underwear can't be taken off to use the toilet (ie diapers)
+                        if (!underwear.removable) //Certian underwear can't be taken off to use the toilet (ie diapers)
                         {
                             _ = this.bed.AddPoop(this.pants.AddPoop(this.underwear.AddPoop(amountToLose)));
                             numAccidents++;
@@ -470,24 +473,31 @@ namespace PrimevalTitmouse
             if (bowelFullness < GetBowelAttemptThreshold())
             {
                 Animations.AnimatePoopAttempt(this, inUnderwear);
+
+                if (!this.InToilet(inUnderwear) && Regression.config.Debug)
+                    _ = Animations.HandleVillager(this, true, inUnderwear, pants.messiness > 0.0, false, 20, 3);
             }
             else
             {
 
                 //If we have an accident (not voluntary), decrease continence
                 //If we use the potty before we REALLY have to go (we go before we reach some threshold), increase continence
-                //Otherwise, if it is voluntary but waited until we almost had an accident (fullness above some threshold) don't change anything
+                //Otherwise, if it is volinary but waited until we almost had an accident (fullness above some threshold) don't change anything
                 if (!voluntary)
                     this.ChangeBowelContinence(0.01f * Regression.config.BowelLossContinenceRate);
                 else if (bowelFullness < GetBowelTrainingThreshold())
                     this.ChangeBowelContinence(-0.01f * Regression.config.BowelGainContinenceRate);
 
                 Animations.AnimateMessingStart(this, voluntary, inUnderwear);
+
+                if (!this.InToilet(inUnderwear))
+                    _ = Animations.HandleVillager(this, true, inUnderwear, pants.messiness > 0.0, false, 20, 3);
+
             }
 
             Animations.AnimateMessingEnd(this);
-            if (!this.InToilet(inUnderwear))
-                _ = Animations.HandleVillager(this, true, inUnderwear, pants.messiness > 0.0, false, 20, 3);
+            //if we arent using the toilet, handle villager reactions.
+            
             if (pants.messiness <= 0.0 || !inUnderwear)
                 return;
             HandlePoopOverflow();
@@ -498,7 +508,7 @@ namespace PrimevalTitmouse
             if (isSleeping)
                 return;
 
-            Animations.Write(Regression.t.Poop_Overflow, this, Animations.poopAnimationTime);
+            
             float howMessy = pants.messiness / pants.containment;
             int speedReduction = howMessy >= 0.5 ? (howMessy > 1.0 ? -3 : -2) : -1;
             Buff buff = new Buff(0, 0, 0, 0, 0, 0, 0, 0, 0, speedReduction, 0, 0, 15, "", "")
@@ -511,6 +521,7 @@ namespace PrimevalTitmouse
             };
             if (Game1.buffsDisplay.hasBuff(MESSY_DEBUFF))
                 this.RemoveBuff(MESSY_DEBUFF);
+            else Animations.Write(Regression.t.Poop_Overflow, this, Animations.poopAnimationTime);
             Game1.buffsDisplay.addOtherBuff(buff);
         }
 
@@ -520,22 +531,29 @@ namespace PrimevalTitmouse
             if ((double)bladderFullness < GetBladderAttemptThreshold())
             {
                 Animations.AnimatePeeAttempt(this, inUnderwear);
+
+                if (!this.InToilet(inUnderwear) && Regression.config.Debug)
+                    _ = Animations.HandleVillager(this, false, inUnderwear, pants.wetness > 0.0, false, 20, 3);
             }
             else
             {
                 //If we have an accident (not voluntary), decrease continence
                 //If we use the potty before we REALLY have to go (we go before we reach some threshold), increase continence
-                //Otherwise, if it is voluntary but waited until we almost had an accident (fullness above some threshold) don't change anything
+                //Otherwise, if it is volinary but waited until we almost had an accident (fullness above some threshold) don't change anything
                 if (!voluntary)
                     this.ChangeBladderContinence(0.01f * Regression.config.BladderLossContinenceRate);
                 else if(bladderFullness < GetBladderTrainingThreshold())
                     this.ChangeBladderContinence(-0.01f * Regression.config.BladderGainContinenceRate);
                 Animations.AnimateWettingStart(this, voluntary, inUnderwear);
+
+                if (!this.InToilet(inUnderwear))
+                    _ = Animations.HandleVillager(this, false, inUnderwear, pants.wetness > 0.0, false, 20, 3);
+
             }
 
             Animations.AnimateWettingEnd(this);
-            if (!this.InToilet(inUnderwear))
-                _ = Animations.HandleVillager(this, false, inUnderwear, pants.wetness > 0.0, false, 20, 3);
+            //if we arent using the toilet, handle villager reactions.
+            
             if ((pants.wetness <= 0.0 || !inUnderwear))
                 return;
             HandlePeeOverflow();
@@ -545,7 +563,7 @@ namespace PrimevalTitmouse
             if (isSleeping)
                 return;
 
-            Animations.Write(Regression.t.Pee_Overflow, this, Animations.peeAnimationTime);
+            
 
             int defenseReduction = -Math.Max(Math.Min((int)(pants.wetness / pants.absorbency * 10.0), 10), 1);
             Buff buff = new Buff(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, defenseReduction, 0, 15, "", "")
@@ -558,6 +576,7 @@ namespace PrimevalTitmouse
             buff.which = WET_DEBUFF;
             if (Game1.buffsDisplay.hasBuff(WET_DEBUFF))
                 this.RemoveBuff(WET_DEBUFF);
+            else Animations.Write(Regression.t.Pee_Overflow, this, Animations.peeAnimationTime);
             Game1.buffsDisplay.addOtherBuff(buff);
         }
 
@@ -601,7 +620,7 @@ namespace PrimevalTitmouse
                     {
                         numPotty++;
                         bladderFullness -= amountToLose;
-                        if (!underwear.removable) //Certain underwear can't be taken off to use the toilet (ie diapers)
+                        if (!underwear.removable) //Certian underwear can't be taken off to use the toilet (ie diapers)
                         {
                             _ = this.bed.AddPee(this.pants.AddPee(this.underwear.AddPee(amountToLose)));
                             numAccidents++;
@@ -678,7 +697,7 @@ namespace PrimevalTitmouse
             const int timeInDay = 2400;
             const int wakeUpTime = timeInDay + 600;
             const float sleepRate = 3.0f; //Let's say body functions change @ 1/3 speed while sleeping. Arbitrary.
-            int timeSlept = wakeUpTime - bedtime; //Bedtime will never exceed passout-time of 2:00AM (2600)
+            int timeSlept = wakeUpTime - bedtime; //Bedtime will never exceed passout-time of 2:00AM (2600) 
             HandleTime(timeSlept / 100.0f / sleepRate);
         }
 
@@ -745,18 +764,19 @@ namespace PrimevalTitmouse
             }
         }
 
-        //<TODO> Expand Consumables to add food. But we'd need a lot more info. For now, treat all food the same.
+        //If the item is registered in en.json, use their values, else deafult to 400 and 10.
         public void Consume(string itemName)
         {
             Consumable item;
             if(Animations.GetData().Consumables.TryGetValue(itemName, out item))
             {
-                this.AddFood(item.calorieContent);
-                this.AddWater(item.waterContent);
+                this.AddFood(item.calorieContent * Regression.config.foodAmtMult);
+                this.AddWater(item.waterContent * Regression.config.drinkAmtMult);
+                
             } else
             {
-                this.AddFood(400);
-                this.AddWater(10);
+                this.AddFood(400 * Regression.config.foodAmtMult);
+                this.AddWater(10 * Regression.config.drinkAmtMult);
             }
         }
     }

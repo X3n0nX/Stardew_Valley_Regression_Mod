@@ -24,6 +24,7 @@ namespace PrimevalTitmouse
         Drying
     }
 
+
     internal static class Animations
     {
         //<FIXME> Adding Leo here as a quick fix to a softlock issue due to not having ABDL dialogue written
@@ -31,13 +32,13 @@ namespace PrimevalTitmouse
         public static readonly int poopAnimationTime = 2000; //ms
         public static readonly int peeAnimationTime = 2000; //ms
         //Magic Constants
-        public const string SPRITES = "Assets/sprites.png";
         public const int PAUSE_TIME = 20000;
         public const float DRINK_ANIMATION_INTERVAL = 80f;
         public const int DRINK_ANIMATION_FRAMES = 8;
         public const int LARGE_SPRITE_DIM = 64;
         public const int SMALL_SPRITE_DIM = 16;
         public const int DIAPER_HUD_DIM   = 64;
+
         enum FaceDirection : int
         {
             Down  = 2,
@@ -57,9 +58,17 @@ namespace PrimevalTitmouse
             return t;
         }
         public static Texture2D GetSprites()
-        {
-            sprites ??= Regression.help.Content.Load<Texture2D>(SPRITES, StardewModdingAPI.ContentSource.ModFolder);
-            return sprites;
+        { 
+
+            if (File.Exists(Regression.help.DirectoryPath+ "\\Assets\\sprites" + Regression.config.SpriteSheet + ".png"))
+            {
+                sprites ??= Regression.help.Content.Load<Texture2D>("Assets/sprites" + Regression.config.SpriteSheet + ".png", StardewModdingAPI.ContentSource.ModFolder);
+            }
+            else
+            {
+                sprites ??= Regression.help.Content.Load<Texture2D>("Assets/sprites1.png", StardewModdingAPI.ContentSource.ModFolder);
+            }
+                return sprites;
         }
 
         public static Farmer GetWho()
@@ -78,7 +87,7 @@ namespace PrimevalTitmouse
             //If we aren't facing downward, turn
             if (Animations.GetWho().getFacingDirection() != (int)FaceDirection.Down)
                 Animations.GetWho().faceDirection((int)FaceDirection.Down);
-
+            
             //Stop doing anything that would prevent us from moving
             //Essentially take control of the variable
             Animations.GetWho().forceCanMove();
@@ -115,7 +124,8 @@ namespace PrimevalTitmouse
             if (b.underwear.removable || inUnderwear)
                 Game1.playSound("slosh");
 
-            if (b.isSleeping || !voluntary && !Regression.config.AlwaysNoticeAccidents && (double)b.bowelContinence + 0.449999988079071 <= Regression.rnd.NextDouble())
+            //When continence dips below .5, have a slowly diminishing chance of noticing accidents to a minimum of 10%
+            if (b.isSleeping || (!voluntary && !Regression.config.AlwaysNoticeAccidents && ((double)b.bowelContinence * 2) <= Regression.rnd.NextDouble()) || Game1.currentLocation.ToString() == "StardewValley.Locations.MineShaft")
                 return;
 
             if (!(b.underwear.removable || inUnderwear))
@@ -140,7 +150,7 @@ namespace PrimevalTitmouse
             //Animations.GetWho().completelyStopAnimatingOrDoingAction();
             Animations.GetWho().jitterStrength = 1.0f;
             Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.GetWho().position - new Vector2(((Character)Animations.GetWho()).facingDirection == 1 ? 0.0f : (float)-Game1.tileSize, (float)(Game1.tileSize * 2)), false, ((Character)Animations.GetWho()).facingDirection == 1, (float)((Character)Animations.GetWho()).getStandingY() / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
-
+         
             Animations.GetWho().freezePause = poopAnimationTime;
             Animations.GetWho().canMove = false;
             Animations.GetWho().doEmote(12, false);
@@ -157,10 +167,12 @@ namespace PrimevalTitmouse
         {
             if (b.IsFishing()) return;
 
-            if(b.underwear.removable || inUnderwear)
+
+            if (b.underwear.removable || inUnderwear)
               Game1.playSound("wateringCan");
 
-            if (b.isSleeping || !voluntary && !Regression.config.AlwaysNoticeAccidents && (double)b.bladderContinence + 0.200000002980232 <= Regression.rnd.NextDouble())
+
+            if (b.isSleeping || (!voluntary && !Regression.config.AlwaysNoticeAccidents && ((double)b.bladderContinence * 2) <= Regression.rnd.NextDouble()) || Game1.currentLocation.ToString() == "StardewValley.Locations.MineShaft")
                 return;
 
             if (!(b.underwear.removable || inUnderwear))
@@ -174,7 +186,7 @@ namespace PrimevalTitmouse
                 if (b.InToilet(inUnderwear))
                     Animations.Say(Animations.GetData().Pee_Toilet, b);
                 else
-                    Animations.Say(Animations.GetData().Pee_Voluntary, b);
+                    Animations.Say(Animations.GetData().Pee_Voluntary + " STANDARD", b);
 
                 ((List<TemporaryAnimatedSprite>)((GameLocation)Animations.GetWho().currentLocation).temporarySprites).Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
                 HoeDirt terrainFeature;
@@ -183,7 +195,7 @@ namespace PrimevalTitmouse
             }
             else if (voluntary)
                 Animations.Say(Animations.GetData().Wet_Voluntary, b);
-            else
+            else 
                 Animations.Say(Animations.GetData().Wet_Accident, b);
 
             //Animations.GetWho().forceCanMove();
@@ -323,7 +335,7 @@ namespace PrimevalTitmouse
         }
 
         public static void DrawUnderwearIcon(Container c, int x, int y)
-        {
+        {   
             Microsoft.Xna.Framework.Color defaultColor = Microsoft.Xna.Framework.Color.White;
 
             Texture2D underwearSprites = Animations.GetSprites();
@@ -338,7 +350,7 @@ namespace PrimevalTitmouse
                     string str = source.First<char>().ToString().ToUpper() + source.Substring(1);
                     int num = Game1.tileSize * 6 + Game1.tileSize / 6;
                     IClickableMenu.drawHoverText((SpriteBatch)Game1.spriteBatch, Game1.parseText(str, (SpriteFont)Game1.tinyFont, num), (SpriteFont)Game1.smallFont, 0, 0, -1, (string)null, -1, (string[])null, (Item)null, 0, -1, -1, -1, -1, 1f, (CraftingRecipe)null);
-                }
+                }            
         }
 
         private static void EndDrinking(Farmer who)
@@ -359,7 +371,7 @@ namespace PrimevalTitmouse
             bool someoneNoticed = true;
             int actualLoss = -(baseFriendshipLoss / 20);
 
-            //If we are messing, increase the radius of noticeability (stinky)
+            //If we are messing, increase the radius of noticability (stinky)
             //Double how much friendship we lose (mess is gross)
             if (mess)
             {
@@ -367,8 +379,8 @@ namespace PrimevalTitmouse
                 actualLoss *= 2;
             }
 
-            //If we pulled down our pants, quadruple the radius (not contained and visible!)
-            //Double loss since you're just going in front of people (how uncouth)
+            //If we pulled down our pants, quadrupal the radius (not contained and visible!)
+            //Double loss since you're just going infront of people (how uncouth)
             if (!inUnderwear)
             {
                 radius *= 4;
@@ -379,7 +391,7 @@ namespace PrimevalTitmouse
             if (attempt)
                 actualLoss /= 2;
 
-            //Double noticeability is we had a blow-out/leak (people can see)
+            //Double noticability is we had a blow-out/leak (people can see)
             if (overflow)
                 radius *= 2;
 
@@ -391,12 +403,15 @@ namespace PrimevalTitmouse
             //Reduce the loss if the person likes you (more forgiving)
             int heartLevelForNpc = Animations.GetWho().getFriendshipHeartLevelForNPC(npc.getName());
 
-            //Does this leave the possibility of friendship gain if we have enough hearts already? Maybe because they find the vulnerability endearing?
+            //Does this leave the possiblity of friendship gain if we have enough hearts already? Maybe because they find the vulnerability endearing?
             int friendshipLoss = actualLoss + (heartLevelForNpc - 2) / 2 * baseFriendshipLoss;
 
             //Make a list based on who saw us.
             List<string> npcType = new List<string>();
             string npcName = "";
+
+            if (npc.ToString().Contains("StardewValley.Monsters")) return false;
+
             if (npc is Horse || npc is Cat || npc is Dog)
             {
                 npcType.Add("animal");
@@ -432,7 +447,7 @@ namespace PrimevalTitmouse
                 //Otherwise, we are soiling ourselves
                 responseKey += "soiled";
 
-                //Animals only have a "nice" response
+                //Animals only have a "nice" reponse
                 if (npcType.Contains("animal"))
                 {
                     responseKey += "_nice";
@@ -448,8 +463,8 @@ namespace PrimevalTitmouse
                     //Otherwise they'll be mean or nice depending on how much friendship we're losing
                     responseKey = friendshipLoss < 0 ? responseKey + "_mean" : responseKey + "_nice";
 
-                //Why are Abigail and Jodi special?
-                if (npc.getName() == "Abigail" || npc.getName() == "Jodi")
+                //Abigail, Jodi, Vincent, Jas, Penny, and Sam recieve no penalty because they are diaper or CG related characters and are predisposed to it.
+                if (npc.getName() == "Abigail" || npc.getName() == "Jodi" || npc.getName() == "Vincent" || npc.getName() == "Jas" || npc.getName() == "Sam" || npc.getName() == "Penny")
                     friendshipLoss = 0;
             }
 
@@ -473,6 +488,163 @@ namespace PrimevalTitmouse
 
             //Construct and say Statement
             string npcStatement = npcName + Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
+            npc.setNewDialogue(npcStatement, true, true);
+            Game1.drawDialogue(npc);
+            return someoneNoticed;
+        }
+
+        public static bool HandleCheck(Body b, int baseFriendshipLoss = 20, int radius = 3)
+        {
+            bool someoneNoticed = true;
+            int actualLoss = -(baseFriendshipLoss / 20);
+
+            
+
+            //Get NPC in radius
+            //<TODO> This needs to be reworked to get a list of NPCs
+            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).getTileLocation(), radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
+                return false;
+
+            //Reduce the loss if the person likes you (more forgiving)
+            int heartLevelForNpc = Animations.GetWho().getFriendshipHeartLevelForNPC(npc.getName());
+
+            //Does this leave the possiblity of friendship gain if we have enough hearts already? Maybe because they find the vulnerability endearing?
+            int friendshipLoss = actualLoss + (heartLevelForNpc - 2) / 2 * baseFriendshipLoss;
+
+            //Make a list based on who saw us.
+            List<string> npcType = new List<string>();
+            string npcName = "";
+
+            if (npc.ToString().Contains("StardewValley.Monsters")) return false;
+
+            if (npc is Horse || npc is Cat || npc is Dog)
+            {
+                npcType.Add("animal");
+                npcName += string.Format("{0}: ", npc.Name);
+            }
+            else
+            {
+                switch (npc.Age)
+                {
+                    case 0:
+                        npcType.Add("adult");
+                        break;
+                    case 1:
+                        npcType.Add("teen");
+                        break;
+                    case 2:
+                        npcType.Add("kid");
+                        break;
+                }
+                npcType.Add(npc.getName().ToLower());
+            }
+
+            //What did we do? Use to figure out the response.
+            string responseKey = "";
+
+                //Otherwise, we are soiling ourselves
+                responseKey += "check";
+
+            //Animals only have a "nice" reponse
+            if (npcType.Contains("animal"))
+            {
+                responseKey += "_nice";
+                friendshipLoss = 0;
+            }
+            //If we have a really high relationship with the NPC, they're very nice about our accident
+
+
+            //Abigail, Jodi, Vincent, Jas, Penny, and Sam recieve no penalty because they are diaper or CG related characters and are predisposed to it.
+
+            if (!Regression.config.Debug)
+            {
+                if (npc.getName() == "Abigail" && Regression.checkCooldown[0] != 0) return false;
+                if (npc.getName() == "Sam" && Regression.checkCooldown[1] != 0) return false;
+                if (npc.getName() == "Haley" && Regression.checkCooldown[2] != 0) return false;
+                if (npc.getName() == "Vincent" && Regression.checkCooldown[3] != 0) return false;
+                if (npc.getName() == "Jas" && Regression.checkCooldown[4] != 0) return false;
+            }
+
+                if (heartLevelForNpc >= 8)
+                {
+                    var niceRand = Regression.rnd.NextDouble(); //allows a small chance for the nice line to be chosen instead for variety.
+
+                    if (niceRand > 0.3f)
+                        responseKey += "_verynice";
+                    else
+                        responseKey += "_nice";
+
+                    var rand = Regression.rnd.NextDouble();
+
+                    if (rand < 0.3f)
+                        responseKey += "_soiled";
+                    else if (rand < 0.6f)
+                        responseKey += "_wet";
+                    else responseKey += "_dry";
+
+                    friendshipLoss = 0;
+                }
+                else if (heartLevelForNpc >= 6)
+                {
+                    responseKey += "_nice";
+
+                    var rand = Regression.rnd.NextDouble();
+
+                    if (rand > 0.3f)
+                        responseKey += "_soiled";
+                    else if (rand > 0.6f)
+                        responseKey += "_wet";
+                    else responseKey += "_dry";
+                }
+                else responseKey += "_mean";
+
+
+                switch (npc.getName())
+                {
+                    case "Abigail":
+                        Regression.checkCooldown[0] = 24;
+                        break;
+                    case "Sam":
+                        Regression.checkCooldown[1] = 24;
+                        break;
+                    case "Haley":
+                        Regression.checkCooldown[2] = 24;
+                        break;
+                    case "Vincent":
+                        Regression.checkCooldown[3] = 24;
+                        break;
+                    case "Jas":
+                        Regression.checkCooldown[4] = 24;
+                        break;
+                    default:
+                        return false;
+
+
+                }
+            if (npc.getName() != "Abigail" && npc.getName() != "Sam" && npc.getName() != "Haley" && npc.getName() != "Vincent" && npc.getName() != "Jas") responseKey += "_mean";
+
+
+
+                //If we're in debug mode, notify how the relationship was effected
+                if (Regression.config.Debug)
+                Animations.Say(string.Format("{0} ({1}) changed friendship from {2} by {3}.", npc.Name, npc.Age, heartLevelForNpc, friendshipLoss), (Body)null);
+
+            //If we didn't lose any friendship, or we disabled friendship penalties, then don't adjust the value
+            if (friendshipLoss < 0 && !Regression.config.NoFriendshipPenalty)
+                Animations.GetWho().changeFriendship(friendshipLoss, npc);
+
+
+            List<string> stringList3 = new List<string>();
+            foreach (string key2 in npcType)
+            {
+                Dictionary<string, string[]> dictionary;
+                string[] strArray;
+                if (Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
+                    stringList3.AddRange((IEnumerable<string>)strArray);
+            }
+
+            //Construct and say Statement
+            string npcStatement = npcName + Strings.InsertVariables((Strings.RandString(stringList3.ToArray())), b, (Container)null);
             npc.setNewDialogue(npcStatement, true, true);
             Game1.drawDialogue(npc);
             return someoneNoticed;
@@ -541,24 +713,24 @@ namespace PrimevalTitmouse
                 {
                     if ((double)c.messiness <= .0f)
                     {
-                        if ((double)c.wetness <= .0f)
-                            num = 0;
-                        else
-                            num = LARGE_SPRITE_DIM;
+                        if ((double)c.wetness <= .0f)                        
+                            num = 0;                        
+                        else                        
+                            num = LARGE_SPRITE_DIM;                        
                     }
                     else
                     {
-                        if ((double)c.wetness <= .0f)
-                            num = LARGE_SPRITE_DIM * 2;
-                        else
-                            num = LARGE_SPRITE_DIM * 3;
+                        if ((double)c.wetness <= .0f)                        
+                            num = LARGE_SPRITE_DIM * 2;                        
+                        else                        
+                            num = LARGE_SPRITE_DIM * 3;                        
                     }
                 }
                 else
                 {
                     num = LARGE_SPRITE_DIM * 4;
-                }
-            }
+                }                
+            }            
             return new Microsoft.Xna.Framework.Rectangle(c.spriteIndex * LARGE_SPRITE_DIM, num + (LARGE_SPRITE_DIM - height), LARGE_SPRITE_DIM, height);
         }
 

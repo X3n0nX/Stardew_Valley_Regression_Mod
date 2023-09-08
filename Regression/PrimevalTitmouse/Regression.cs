@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Regression;
+using GenericModConfigMenu;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
@@ -19,31 +20,212 @@ namespace PrimevalTitmouse
         public static Random rnd = new Random();
         public static bool started = false;
         public Body body;
-        public static Config config;
+        public static ModConfig config;
         public static IModHelper help;
         public static IMonitor monitor;
         public bool shiftHeld;
         public static Data t;
         public static Farmer who;
-        private float tickCD1 = 0;
-        private float tickCD2 = 0;
+        public static int stillSoilCD = 0;
+        public static bool alreadyAte = false;
+
+        public static int[] checkCooldown = new int[5];
 
         const float timeInTick = (1f/43f); //One second realtime ~= 1/43 hours in game
+
+
+
+
         public override void Entry(IModHelper h)
         {
             help = h;
             monitor = Monitor;
-            config = Helper.ReadConfig<Config>();
+            config = Helper.ReadConfig<ModConfig>();
             t = Helper.Data.ReadJsonFile<Data>(string.Format("{0}.json", (object)config.Lang)) ?? Helper.Data.ReadJsonFile<Data>("en.json");
+            h.Events.GameLoop.GameLaunched += new EventHandler<GameLaunchedEventArgs>(this.OnGameLaunched);
             h.Events.GameLoop.Saving += new EventHandler<SavingEventArgs>(this.BeforeSave);
             h.Events.GameLoop.DayStarted += new EventHandler<DayStartedEventArgs>(ReceiveAfterDayStarted);
             h.Events.GameLoop.OneSecondUpdateTicking += new EventHandler<OneSecondUpdateTickingEventArgs>(ReceiveUpdateTick);
             h.Events.GameLoop.TimeChanged += new EventHandler<TimeChangedEventArgs>(ReceiveTimeOfDayChanged);
-            h.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(ReceiveKeyPress);
+            h.Events.Input.ButtonsChanged += new EventHandler<ButtonsChangedEventArgs>(OnButtonsChanged);
             h.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(ReceiveMouseChanged);
             h.Events.Display.MenuChanged += new EventHandler<MenuChangedEventArgs>(ReceiveMenuChanged);
             h.Events.Display.RenderingHud += new EventHandler<RenderingHudEventArgs>(ReceivePreRenderHudEvent);
         }
+
+        public void OnGameLaunched(object sender, GameLaunchedEventArgs e)
+        {
+
+            var configMenu = help.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (configMenu is null)
+            {
+                this.Monitor.Log($"Config Menu is Null", LogLevel.Error);
+                return;
+            }
+
+
+            this.Monitor.Log($"Successfully hooked into GMCM", LogLevel.Debug);
+
+            // register mod
+            configMenu.Register(
+                mod: ModManifest,
+                reset: () => config = new ModConfig(),
+                save: () => Helper.WriteConfig(config)
+            );
+
+            
+            configMenu.AddTextOption(
+                mod:ModManifest,
+                name: () => "Regressed Nickname",
+                tooltip: () => "Sets a nickname villagers will sometimes refer to you as if they see you as little.",
+                getValue: () => config.babyNickname,
+                setValue: value => config.babyNickname = value
+
+            );
+
+            
+
+            configMenu.AddBoolOption(
+                mod: ModManifest,
+                name: () => "Enable Messing",
+                tooltip: () => "Allows you to mess (poop) your underwear.",
+                getValue: () => config.Messing,
+                setValue: value => config.Messing = value
+            );
+
+            configMenu.AddBoolOption(
+                mod: ModManifest,
+                name: () => "Enable Wetting",
+                tooltip: () => "Allows you to wet (pee) your underwear.",
+                getValue: () => config.Wetting,
+                setValue: value => config.Wetting = value
+            );
+
+      
+
+            configMenu.AddBoolOption(
+                 mod: ModManifest,
+                 name: () => "Always Notice Accidents",
+                 tooltip: () => "Makes continence have no effect on wether you notice accidents.",
+                 getValue: () => config.AlwaysNoticeAccidents,
+                 setValue: value => config.AlwaysNoticeAccidents = value
+                );
+
+            configMenu.AddBoolOption(
+                 mod: ModManifest,
+                 name: () => "Easy Mode",
+                 getValue: () => config.Easymode,
+                 setValue: value => config.Easymode = value
+                );
+
+            configMenu.AddBoolOption(
+                mod: ModManifest,
+                name: () => "No Friendship Penalty",
+                tooltip: () => "Disables the small penalty to friendship for those who witness you going to the bathroom who aren't ABDL oriented.",
+                getValue: () => config.NoFriendshipPenalty,
+                setValue: value => config.NoFriendshipPenalty = value
+            );
+
+            configMenu.AddBoolOption(
+                  mod: ModManifest,
+                  name: () => "Disable Hunger and Thirst",
+                  tooltip: () => "Disables the mods Hunger and Thirst system.",
+                  getValue: () => config.NoHungerAndThirst,
+                  setValue: value => config.NoHungerAndThirst = value
+              );
+
+            
+
+            configMenu.AddNumberOption(
+                  mod: ModManifest,
+                  name: () => "Food Nourishment Multiplier",
+                  tooltip: () => "Multiplies the value that every food satiates you by.",
+                  getValue: () => config.foodAmtMult,
+                  setValue: value => config.foodAmtMult = value
+
+              ) ;
+
+            configMenu.AddNumberOption(
+                  mod: ModManifest,
+                  name: () => "Drink Nourishment Multiplier",
+                  tooltip: () => "Multiplies the value that every drink satiates you by.",
+                  getValue: () => config.drinkAmtMult,
+                  setValue: value => config.drinkAmtMult = value
+
+
+              );
+            
+
+            configMenu.AddKeybindList(
+                  mod: ModManifest,
+                  name: () => "Wet",
+                  getValue: () => config.WetBind,
+                  setValue: value => config.WetBind = value
+
+              );
+
+            configMenu.AddKeybindList(
+                              mod: ModManifest,
+                              name: () => "Mess",
+                              getValue: () => config.MessBind,
+                              setValue: value => config.MessBind = value
+
+                          );
+
+            configMenu.AddKeybindList(
+                              mod: ModManifest,
+                              name: () => "Pull Down Pants",
+                              tooltip: () => "Modifier key that changes wetting and messing to going on the ground.",
+                              getValue: () => config.PullDownPantsBind,
+                              setValue: value => config.PullDownPantsBind = value
+
+                          );
+
+            configMenu.AddKeybindList(
+                              mod: ModManifest,
+                              name: () => "Check Undies",
+                              getValue: () => config.CheckUndiesBind,
+                              setValue: value => config.CheckUndiesBind = value
+
+                          );
+
+            configMenu.AddKeybindList(
+                              mod: ModManifest,
+                              name: () => "Check Pants",
+                              getValue: () => config.CheckPantsBind,
+                              setValue: value => config.CheckPantsBind = value
+
+                          );
+
+            configMenu.AddKeybindList(
+                  mod: ModManifest,
+                  name: () => "Check Villager Diaper",
+                  getValue: () => config.CheckVillagerDiaperBind,
+                  setValue: value => config.CheckVillagerDiaperBind = value
+
+              );
+
+            configMenu.AddNumberOption(
+                  mod: ModManifest,
+                  name: () => "*Diaper Spritesheet Index",
+                  tooltip: () => "Changes the spritesheet that diapers use. *Requires restart",
+                  getValue: () => config.SpriteSheet,
+                  setValue: value => config.SpriteSheet = value
+
+
+              );
+
+            configMenu.AddBoolOption(
+                  mod: ModManifest,
+                  name: () => "Debug Mode",
+                  getValue: () => config.Debug,
+                  setValue: value => config.Debug = value
+              );
+
+        }
+
+
+
 
         public void DrawStatusBars()
         {
@@ -100,6 +282,7 @@ namespace PrimevalTitmouse
             who = Game1.player;
             Animations.AnimateNight(body);
             HandleMorning(sender, e);
+            checkCooldown[0] = 0; checkCooldown[1] = 0; checkCooldown[2] = 0; checkCooldown[3] = 0; checkCooldown[4] = 0;
         }
 
         private void HandleMorning(object Sender, DayStartedEventArgs e)
@@ -111,6 +294,8 @@ namespace PrimevalTitmouse
         private void BeforeSave(object Sender, SavingEventArgs e)
         {
             body.bedtime = lastTimeOfDay;
+
+
             if (Game1.dayOfMonth != 1 || Game1.currentSeason != "spring" || Game1.year != 1)
                 body.HandleNight();
             if (string.IsNullOrWhiteSpace(Constants.SaveFolderName))
@@ -119,40 +304,31 @@ namespace PrimevalTitmouse
             Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName), body);
         }
 
-
-
         private void ReceiveUpdateTick(object sender, OneSecondUpdateTickingEventArgs e)
         {
 
-                //Ignore everything until we've started the day
-                if (!started)
-                    return;
+            //Ignore everything until we've started the day
+            if (!started)
+                return;
 
 
-                //If time is moving, update our body state (Hunger, thirst, etc.)
-                if (ShouldTimePass())
-                {
-                    this.body.HandleTime(timeInTick);
-                    if (tickCD1 != 0) //Former Bug: When consuming items, they would give 2-3 goes at the "Handle eating and drinking." if statement below. Cause: This function would trigger multiple times while the if statement below was still true, causing it to fire multiple times.
-                    {
-                        tickCD2 += 1; //This should trigger multiple times during the eating animation.
-                    }
-                    if (tickCD2 >= 2) //Setting this to 2 should be able to balance preventing double triggers and ensuring no loss in intentional triggers.
-                    {
-                        tickCD1 = 0;
-                        tickCD2 = 0;
-                    }
-                    
-                }
+            //If time is moving, update our body state (Hunger, thirst, etc.)
+            if (ShouldTimePass())
+                this.body.HandleTime(timeInTick);
 
-                //Handle eating and drinking.
-                if (Game1.player.isEating && Game1.activeClickableMenu == null && tickCD1 == 0)
-                {
-                    body.Consume(who.itemToEat.Name);
-                    tickCD1 += 1;
-                }
+            //If we arent eating, reset already ate bool, placed before Consume call and used in conjunction with RecieveMouseUpdate or else theres a chance Consume will be skipped if you eat too fast on certain tick timings.
+            if (Game1.player.isEating == false)
+                alreadyAte = false;
+
+            //Handle eating and drinking. Bool alreadyAte ensures the consume function triggers once, instead of every tick during the animation.
+            if (Game1.player.isEating && Game1.activeClickableMenu == null && !alreadyAte)
+            {
+                body.Consume(who.itemToEat.Name);
+                alreadyAte = true;
+            }
+
+
         }
-
         //Determine if we need to handle time passing (not the same as Game time passing)
         private static bool ShouldTimePass()
         {
@@ -160,81 +336,59 @@ namespace PrimevalTitmouse
         }
 
         //Interprete key-presses
-        private void ReceiveKeyPress(object sender, ButtonPressedEventArgs e)
+        private void OnButtonsChanged(object sender, ButtonsChangedEventArgs e)
         {
             //If we haven't started the day, ignore the key presses
             if (!started)
                 return;
 
             //Interpret buttons differently if holding Left Alt & Debug is enabled
-            if (e.IsDown(SButton.LeftAlt) && config.Debug)
+            if (config.Debug)
             {
-                switch (e.Button)
-                {
-                    case SButton.F1: //
-                        body.DecreaseEverything();
-                        break;
-                    case SButton.F2: //
-                        body.IncreaseEverything();
-                        break;
-                    case SButton.F3://
-                        GiveUnderwear();
-                        break;
-                    case SButton.F5://Alt F4 is reserved to close
-                        TimeMagic.doMagic();
-                        break;
-                    case SButton.F6:
-                        config.Wetting = !config.Wetting;
-                        break;
-                    case SButton.F7:
-                        config.Messing = !config.Messing;
-                        break;
-                    case SButton.F8:
-                        config.Easymode = !config.Easymode;
-                        break;
-                    case SButton.S:
-                        if (e.IsDown(SButton.LeftShift))
-                        {
-                            body.ChangeBowelContinence(0.1f);
-                        }
-                        else
-                        {
-                            body.ChangeBladderContinence(0.1f);
-                        }
-                        break;
-                    case SButton.W:
-                        if (e.IsDown(SButton.LeftShift))
-                        {
-                            body.ChangeBowelContinence(-0.1f);
-                        }
-                        else
-                        {
-                            body.ChangeBladderContinence(-0.1f);
-                        }
-                        break;
-                }
+
+                if (config.DecEverythingBind.JustPressed()) body.DecreaseEverything();
+
+                if (config.IncEverythingBind.JustPressed()) body.IncreaseEverything();
+
+                if (config.UndiesMenuBind.JustPressed()) GiveUnderwear();
+
+                if (config.TimeMagicBind.JustPressed()) TimeMagic.doMagic();
             }
-            else
-            {
-                switch (e.Button)
-                {
-                    case SButton.F1:
-                            body.Wet(true, !e.IsDown(SButton.LeftShift));
-                            break;
-                    case SButton.F2:
-                            body.Mess(true, !e.IsDown(SButton.LeftShift));
-                            break;
-                    case SButton.F5:
-                        Animations.CheckUnderwear(body);
-                        break;
-                    case SButton.F6: /*F4 is reserved for screenshot mode*/
-                        Animations.CheckPants(body);
-                        break;
-                    case SButton.F9:
-                        config.Debug = !config.Debug;
-                        break;
-                }
+
+            if (config.WetBind.JustPressed()) body.Wet(true, !config.PullDownPantsBind.IsDown());
+
+            if (config.MessBind.JustPressed()) body.Mess(true, !config.PullDownPantsBind.IsDown());
+
+            if (config.CheckUndiesBind.JustPressed()) Animations.CheckUnderwear(body);
+
+            if (config.CheckPantsBind.JustPressed()) Animations.CheckPants(body);
+
+            if (config.CheckVillagerDiaperBind.JustPressed()) Animations.HandleCheck(body, 20, 3);
+
+
+            /*
+                case SButton.S:
+                    if (e.IsDown(SButton.LeftShift))
+                    {
+                        body.ChangeBowelContinence(0.1f);
+                    }
+                    else
+                    {
+                        body.ChangeBladderContinence(0.1f);
+                    }
+                    break;
+                case SButton.W:
+                    if (e.IsDown(SButton.LeftShift))
+                    {
+                        body.ChangeBowelContinence(-0.1f);
+                    }
+                    else
+                    {
+                        body.ChangeBladderContinence(-0.1f);
+                    }
+                    break;
             }
+            */
         }
 
         //A menu has been opened, figure out if we need to modify it
@@ -277,17 +431,33 @@ namespace PrimevalTitmouse
                 List<string> allUnderwear = Strings.ValidUnderwearTypes();
                 List<string> availableUnderwear = allUnderwear;
                 bool underwearAvailableAtShop = false;
-                if(Game1.currentLocation is SeedShop)
+                if (Game1.currentLocation is SeedShop)
                 {
-                    //The seed shop does not sell the Joja diaper
+                    //The seed shop does not sell the Joja diaper and adult diapers
                     availableUnderwear.Remove("Joja diaper");
+                    availableUnderwear.Remove("Space diaper");
+                    availableUnderwear.Remove("Pawprint diaper");
+                    availableUnderwear.Remove("Heart diaper");
                     underwearAvailableAtShop = true;
-                } else if(Game1.currentLocation is JojaMart)
+                }
+                else if (Game1.currentLocation is JojaMart)
                 {
                     //Joja shop ONLY sels the Joja diaper and a cloth diaper
                     availableUnderwear.Clear();
                     availableUnderwear.Add("Joja diaper");
                     availableUnderwear.Add("Cloth diaper");
+                    underwearAvailableAtShop = true;
+                }
+                else if (Game1.currentLocation.Name == "Hospital")
+                {
+
+                    //Hospital sells both baby and adult diapers, but not undies.
+                    availableUnderwear.Remove("Joja diaper");
+                    availableUnderwear.Remove("Cloth diaper");
+                    availableUnderwear.Remove("Black Thong");
+                    availableUnderwear.Remove("Polka Dot Panties");
+                    availableUnderwear.Remove("Big Kid Undies");
+                    availableUnderwear.Remove("Dinosaur Undies");
                     underwearAvailableAtShop = true;
                 }
 
@@ -389,7 +559,16 @@ namespace PrimevalTitmouse
                 if ((AtWaterSource()|| AtWell()) && e.IsDown(SButton.LeftShift))
                   this.body.DrinkWaterSource();
             }
-                
+
+            //if we're free to move, and hit right click, set already ate to false as a precaution.
+            //This is to prevent a rare issue where if you ate repetedly, too quickly, on certain tick timings, youd eat the next fruit before alreadyAte could be reset, causing the Consume function to whif.
+            //<TODO> Very scuffed solution, could use a much better workaround, but it works for now. Don't recommend removing this until Consume is handled by a closed loop of instantaneous functions, or is at least taken off tick timing.
+            if (e.Button == SButton.MouseRight && Game1.player.canMove)
+            {
+                alreadyAte = false;
+            }
+
+
         }
 
         //If approppriate, draw bars for Hunger, thirst, bladder and bowels
@@ -403,16 +582,32 @@ namespace PrimevalTitmouse
         private void ReceiveTimeOfDayChanged(object sender, TimeChangedEventArgs e)
         {
             lastTimeOfDay = Game1.timeOfDay;
+            if(stillSoilCD > 0) stillSoilCD--;
+
+            for (int i = 0; i < checkCooldown.Length; i++)
+            {
+                if(checkCooldown[i] > 0) checkCooldown[i]--;
+                if(config.Debug)this.Monitor.Log($"Cooldown {i} is {checkCooldown[i]}", LogLevel.Debug);
+            }
 
             //If its 6:10AM, handle delivering mail
             if (Game1.timeOfDay == 610)
                 Mail.CheckMail();
 
-            //If its earlier than 6:30, we aren't wet/messy don't notice that we're still soiled (or don't notice with ~5% chance even if soiled)
-            if (rnd.NextDouble() >= 0.0555555559694767 || body.underwear.wetness + (double)body.underwear.messiness <= 0.0 || Game1.timeOfDay < 630)
+            //If its earlier than 6:30, we aren't wet/messy don't notice that we're still soiled (or do notice with ~5% chance even if soiled)
+            if (rnd.NextDouble() >= 0.055555559694767 || body.underwear.wetness + (double)body.underwear.messiness <= 0.0 || Game1.timeOfDay < 630)
                 return;
-            Animations.AnimateStillSoiled(this.body);
+            //if the stillSoiled message is off cooldown, activate the message and roll a new random cooldown between 3 and 5 in game hours (to prevent spam).
+            if (stillSoilCD == 0)
+            {
+                Animations.AnimateStillSoiled(this.body);
+                stillSoilCD = rnd.Next(18, 30);
+            }
+
+
         }
+
+
 
         public Regression()
         {
