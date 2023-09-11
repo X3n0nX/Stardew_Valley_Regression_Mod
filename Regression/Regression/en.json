@@ -347,60 +347,27 @@
 				"...$5",
 				"...Did you just...$2"
 			],
-			"dry_verynice_check": [
+			"check_verynice_dry": [
 				"%Their diaper is bone dry. It looks like theyve been practicing very hard!#$b#See? All dry! Told ya!",
 				"%Their diaper looks like it was recently taped on.#$b#I don't think ive gone potty yet..."
 			],
-			"wet_verynice_check": [
+			"check_verynice_wet": [
 				"%Their diaper is drenched in pee.#$b#So what if im wet? That's what the diaper's for!"
 			],
-			"soiled_verynice_check": [
+			"check_verynice_soiled": [
 				"%Their diaper is absolutely full. Its like they were waiting on you.#$b#Heh, I just really had to go!"
 			],
-			"dry_nice_check": [
+			"check_nice_dry": [
 				"%Their diaper is spotless.#$b#Oh? Thanks."
 			],
-			"wet_nice_check": [
+			"check_nice_wet": [
 				"%Their diaper is wet and swollen, but could probably hold a little more.#$b#I just had too much to drink."
 			],
-			"soiled_nice_check": [
+			"check_nice_soiled": [
 				"%Their diaper is quite messy, you knew it right away but they seem too used to the smell to notice.#$b#Oh, my diapers full? Thanks, I'll go get changed"
 			],
-			"dry_mean_check": [
-				"dry mean check"
-			],
-			"wet_mean_check": [
-				"wet mean check"
-			],
-			"soiled_mean_check": [
-				"soiled mean check"
-			],
-			"verynice_check": [
-				"verynice check"
-			],
-			"nice_check": [
-				"nice check"
-			],
-			"mean_check": [
-				"mean check"
-			],
-			"dry_verynice_change": [
-				"That diaper looks just fine to me silly. Did you just want my attention?"
-			],
-			"soiled_verynice_change": [
-				"soiled very nice change",
-			],
-			"dry_nice_change": [
-				"dry nice change"
-			],
-			"soiled_nice_change": [
-				"soiled nice change"
-			],
-			"dry_mean_change": [
-				"What? Your diaper? It looks fine to me, go bother someone else."
-			],
-			"soiled_mean_change": [
-				"Yuck! I can smell that thing from here! Get it away from me!"
+			"check_mean": [
+				"H-HEY! What the hell are you doing?!"
 			],
 			"ground": [
 				"Eww. Is that normal in the city?$5",

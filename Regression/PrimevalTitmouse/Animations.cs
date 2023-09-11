@@ -39,6 +39,9 @@ namespace PrimevalTitmouse
         public const int SMALL_SPRITE_DIM = 16;
         public const int DIAPER_HUD_DIM   = 64;
 
+
+
+
         enum FaceDirection : int
         {
             Down  = 2,
@@ -57,6 +60,11 @@ namespace PrimevalTitmouse
             t ??= Regression.t;
             return t;
         }
+
+
+
+
+
         public static Texture2D GetSprites()
         { 
 
@@ -519,8 +527,7 @@ namespace PrimevalTitmouse
 
             if (npc is Horse || npc is Cat || npc is Dog)
             {
-                npcType.Add("animal");
-                npcName += string.Format("{0}: ", npc.Name);
+                return false;
             }
             else
             {
@@ -543,14 +550,9 @@ namespace PrimevalTitmouse
             string responseKey = "";
 
                 //Otherwise, we are soiling ourselves
-                responseKey += "check";
 
             //Animals only have a "nice" reponse
-            if (npcType.Contains("animal"))
-            {
-                responseKey += "_nice";
-                friendshipLoss = 0;
-            }
+
             //If we have a really high relationship with the NPC, they're very nice about our accident
 
 
@@ -565,38 +567,42 @@ namespace PrimevalTitmouse
                 if (npc.getName() == "Jas" && Regression.checkCooldown[4] != 0) return false;
             }
 
-                if (heartLevelForNpc >= 8)
+
+            var rand = Regression.rnd.NextDouble();
+
+            if (IsDiapered(npc))
+            {
+                if (rand < 0.3f)
+                    responseKey += "soiled_";
+                else if (rand < 0.6f)
+                    responseKey += "wet_";
+                else responseKey += "dry_";
+            }
+
+            if (npcType.Contains("animal"))
+            {
+                responseKey += "nice";
+                friendshipLoss = 0;
+            }
+
+            if (heartLevelForNpc >= 8)
                 {
                     var niceRand = Regression.rnd.NextDouble(); //allows a small chance for the nice line to be chosen instead for variety.
 
                     if (niceRand > 0.3f)
-                        responseKey += "_verynice";
+                        responseKey += "verynice";
                     else
-                        responseKey += "_nice";
-
-                    var rand = Regression.rnd.NextDouble();
-
-                    if (rand < 0.3f)
-                        responseKey += "_soiled";
-                    else if (rand < 0.6f)
-                        responseKey += "_wet";
-                    else responseKey += "_dry";
+                        responseKey += "nice";
 
                     friendshipLoss = 0;
                 }
                 else if (heartLevelForNpc >= 6)
                 {
-                    responseKey += "_nice";
-
-                    var rand = Regression.rnd.NextDouble();
-
-                    if (rand > 0.3f)
-                        responseKey += "_soiled";
-                    else if (rand > 0.6f)
-                        responseKey += "_wet";
-                    else responseKey += "_dry";
+                    responseKey += "nice";
                 }
-                else responseKey += "_mean";
+                else responseKey += "mean";
+
+                responseKey += "_check";
 
 
                 switch (npc.getName())
@@ -621,7 +627,6 @@ namespace PrimevalTitmouse
 
 
                 }
-            if (npc.getName() != "Abigail" && npc.getName() != "Sam" && npc.getName() != "Haley" && npc.getName() != "Vincent" && npc.getName() != "Jas") responseKey += "_mean";
 
 
 
@@ -646,6 +651,120 @@ namespace PrimevalTitmouse
             //Construct and say Statement
             string npcStatement = npcName + Strings.InsertVariables((Strings.RandString(stringList3.ToArray())), b, (Container)null);
             npc.setNewDialogue(npcStatement, true, true);
+            Game1.drawDialogue(npc);
+            return someoneNoticed;
+        }
+
+        public static bool HandleAskChange(Body b, int baseFriendshipLoss = 20, int radius = 3)
+        {
+            bool someoneNoticed = true;
+            int actualLoss = -(baseFriendshipLoss / 20);
+
+
+
+            //Get NPC in radius
+            //<TODO> This needs to be reworked to get a list of NPCs
+            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).getTileLocation(), radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
+                return false;
+
+            //Reduce the loss if the person likes you (more forgiving)
+            int heartLevelForNpc = Animations.GetWho().getFriendshipHeartLevelForNPC(npc.getName());
+
+            //Does this leave the possiblity of friendship gain if we have enough hearts already? Maybe because they find the vulnerability endearing?
+            int friendshipLoss = actualLoss + (heartLevelForNpc - 2) / 2 * baseFriendshipLoss;
+
+            //Make a list based on who saw us.
+            List<string> npcType = new List<string>();
+            string npcName = "";
+
+            if (npc.ToString().Contains("StardewValley.Monsters")) return false;
+
+            if (npc is Horse || npc is Cat || npc is Dog)
+            {
+                return false;
+            }
+            else
+            {
+                switch (npc.Age)
+                {
+                    case 0:
+                        npcType.Add("adult");
+                        break;
+                    case 1:
+                        npcType.Add("teen");
+                        break;
+                    case 2:
+                        npcType.Add("kid");
+                        break;
+                }
+                npcType.Add(npc.getName().ToLower());
+            }
+
+            //What did we do? Use to figure out the response.
+            string responseKey = "";
+
+            //Otherwise, we are soiling ourselves
+            if (b.underwear.messiness > 0 || b.underwear.wetness > 0) responseKey += "soiled";
+            else responseKey += "dry";
+
+            //Animals only have a "nice" reponse
+            if (npcType.Contains("animal"))
+            {
+                responseKey += "_nice";
+                friendshipLoss = 0;
+            }
+            //If we have a really high relationship with the NPC, they're very nice about our accident
+
+
+            //Abigail, Jodi, Vincent, Jas, Penny, and Sam recieve no penalty because they are diaper or CG related characters and are predisposed to it.
+
+            if (heartLevelForNpc >= 8)
+            {
+                var niceRand = Regression.rnd.NextDouble(); //allows a small chance for the nice line to be chosen instead for variety.
+
+                if (niceRand > 0.3f)
+                    responseKey += "_verynice";
+                else
+                    responseKey += "_nice";
+
+
+                friendshipLoss = 0;
+            }
+            else if (heartLevelForNpc >= 6)
+            {
+                responseKey += "_nice";
+
+
+            }
+            else responseKey += "_mean";
+
+            responseKey += "_change";
+
+
+            //If we're in debug mode, notify how the relationship was effected
+            if (Regression.config.Debug)
+                Animations.Say(string.Format("{0} ({1}) changed friendship from {2} by {3}.", npc.Name, npc.Age, heartLevelForNpc, friendshipLoss), (Body)null);
+
+            //If we didn't lose any friendship, or we disabled friendship penalties, then don't adjust the value
+            if (friendshipLoss < 0 && !Regression.config.NoFriendshipPenalty)
+                Animations.GetWho().changeFriendship(friendshipLoss, npc);
+
+
+            List<string> stringList3 = new List<string>();
+            foreach (string key2 in npcType)
+            {
+                Dictionary<string, string[]> dictionary;
+                string[] strArray;
+                if (Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
+                    stringList3.AddRange((IEnumerable<string>)strArray);
+            }
+
+            //Construct and say Statement
+            string rndString = Strings.RandString(stringList3.ToArray());
+            Dialogue npcDiag = new Dialogue(rndString, npc);
+            Regression.monitor.Log(rndString, StardewModdingAPI.LogLevel.Warn);
+            npc.CurrentDialogue.Clear();
+            npc.CurrentDialogue.Push(npcDiag);
             Game1.drawDialogue(npc);
             return someoneNoticed;
         }
@@ -732,6 +851,25 @@ namespace PrimevalTitmouse
                 }                
             }            
             return new Microsoft.Xna.Framework.Rectangle(c.spriteIndex * LARGE_SPRITE_DIM, num + (LARGE_SPRITE_DIM - height), LARGE_SPRITE_DIM, height);
+        }
+
+        public static bool IsDiapered(NPC npc)
+        {
+            string name = npc.getName();
+            switch (name)
+            {
+                case "Sam":
+                    return true;
+                case "Abigail":
+                    return true;
+                case "Vincent":
+                    return true;
+                case "Jas":
+                    return true;
+                default:
+                    return false;
+            }
+                
         }
 
         public static void Warn(string msg, Body b = null)

@@ -1,0 +1,377 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Regression/1.0.0": {
+        "dependencies": {
+          "MonoGame.Framework.DesktopGL": "3.8.0.1641",
+          "Pathoschild.Stardew.ModBuildConfig": "4.1.0",
+          "Platonymous.PyTK": "1.12.40",
+          "System.Drawing.Common": "5.0.2"
+        },
+        "runtime": {
+          "Regression.dll": {}
+        }
+      },
+      "DotNetZip/1.13.6": {
+        "dependencies": {
+          "System.Security.Permissions": "4.5.0",
+          "System.Text.Encoding.CodePages": "4.5.0",
+          "System.Text.Encoding.Extensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DotNetZip.dll": {
+            "assemblyVersion": "1.13.6.0",
+            "fileVersion": "1.13.6.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/5.0.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.Win32.SystemEvents/5.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "MonoGame.Framework.DesktopGL/3.8.0.1641": {
+        "runtime": {
+          "lib/netstandard2.0/MonoGame.Framework.dll": {
+            "assemblyVersion": "3.8.0.1641",
+            "fileVersion": "3.8.0.1641"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libSDL2-2.0.so.0": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libopenal.so.1": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx/native/libSDL2-2.0.0.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx/native/libopenal.1.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/SDL2.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2.0.12.0"
+          },
+          "runtimes/win-x64/native/soft_oal.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/SDL2.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "2.0.12.0"
+          },
+          "runtimes/win-x86/native/soft_oal.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "MoonSharp/2.0.0": {
+        "runtime": {
+          "lib/netstandard1.6/MoonSharp.Interpreter.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "ncalc/1.3.8": {
+        "runtime": {
+          "lib/NCalc.dll": {
+            "assemblyVersion": "1.3.8.0",
+            "fileVersion": "1.3.8.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "Pathoschild.Stardew.ModBuildConfig/4.1.0": {},
+      "Platonymous.PyTK/1.12.40": {
+        "dependencies": {
+          "DotNetZip": "1.13.6",
+          "MoonSharp": "2.0.0",
+          "Newtonsoft.Json": "12.0.3",
+          "Pathoschild.Stardew.ModBuildConfig": "4.1.0",
+          "Platonymous.TMXTile": "1.0.2",
+          "ncalc": "1.3.8"
+        },
+        "runtime": {
+          "lib/net452/PyTK.dll": {
+            "assemblyVersion": "1.12.40.0",
+            "fileVersion": "1.12.40.0"
+          }
+        }
+      },
+      "Platonymous.TMXTile/1.0.2": {
+        "runtime": {
+          "lib/net45/TMXTile.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
+        }
+      },
+      "System.Drawing.Common/5.0.2": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "5.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "5.0.0.2",
+            "fileVersion": "5.0.421.11614"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.2",
+            "fileVersion": "5.0.421.11614"
+          },
+          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.2",
+            "fileVersion": "5.0.421.11614"
+          }
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {},
+      "System.Security.AccessControl/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0"
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        }
+      },
+      "System.Text.Encoding.Extensions/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Regression/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DotNetZip/1.13.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+m2UJFaU3wrRVe+s/Ae05nCH3OlAOp0uqEydp+xydCMCoeQHzXYAKp/MMSREZljrFwAzD54C9H1FGhHDvR4fng==",
+      "path": "dotnetzip/1.13.6",
+      "hashPath": "dotnetzip.1.13.6.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+      "path": "microsoft.netcore.platforms/5.0.0",
+      "hashPath": "microsoft.netcore.platforms.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bh6blKG8VAKvXiLe2L+sEsn62nc1Ij34MrNxepD2OCrS5cpCwQa9MeLyhVQPQ/R4Wlzwuy6wMK8hLb11QPDRsQ==",
+      "path": "microsoft.win32.systemevents/5.0.0",
+      "hashPath": "microsoft.win32.systemevents.5.0.0.nupkg.sha512"
+    },
+    "MonoGame.Framework.DesktopGL/3.8.0.1641": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rJQlrlHQbnOECYV6EcQ8GlGRQ2lzPTroXQcyyOZ0ki+BQRSJEN2zVBm9skqLiXya348aGAfTSSGTaSKjAy9NaA==",
+      "path": "monogame.framework.desktopgl/3.8.0.1641",
+      "hashPath": "monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+    },
+    "MoonSharp/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uiAcRh7d+53k3xW9pFDJfAFVw4RnjHVCJG05M3oPAVEVwPtFavhg1H/IpC6So4X1j9kJlzuLlA3OghhPcIvc5A==",
+      "path": "moonsharp/2.0.0",
+      "hashPath": "moonsharp.2.0.0.nupkg.sha512"
+    },
+    "ncalc/1.3.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T3kt6mWc70x3Ex5PxOmuILy563CGAdoAnyknXX7Du2/SXs2T94hNwc5CVwZcwCu5/A2ZBZhnHnc5dpcqCRGQ0A==",
+      "path": "ncalc/1.3.8",
+      "hashPath": "ncalc.1.3.8.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "Pathoschild.Stardew.ModBuildConfig/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2NlsRts2YuK85Cgxl+Q7hnUhRVmsnvvUmqDlMFD9VUNmAQWSdjt0A+BO4se7IfDWMU3nQszN1mBJkWEhOB5ybA==",
+      "path": "pathoschild.stardew.modbuildconfig/4.1.0",
+      "hashPath": "pathoschild.stardew.modbuildconfig.4.1.0.nupkg.sha512"
+    },
+    "Platonymous.PyTK/1.12.40": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B2Ciy7Grt3UfJaa6Myo/pkzUUc/oKDVEhp12a5A3NxtmbYcave6z16AvD8n13Z+vTXyDPG68987vTd6BYwRZJQ==",
+      "path": "platonymous.pytk/1.12.40",
+      "hashPath": "platonymous.pytk.1.12.40.nupkg.sha512"
+    },
+    "Platonymous.TMXTile/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h7oIi+A0OPgChmWLMR+eKwfMOwKro4EM47UHLGuRlMIPydazeo2SjFfWbxpkhY95VnTWPOYXcS3L0QtjUzoVyw==",
+      "path": "platonymous.tmxtile/1.0.2",
+      "hashPath": "platonymous.tmxtile.1.0.2.nupkg.sha512"
+    },
+    "System.Drawing.Common/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rvr/M1WPf24ljpvvrVd74+NdjRUJu1bBkspkZcnzSZnmAUQWSvanlQ0k/hVHk+cHufZbZfu7vOh/vYc0q5Uu/A==",
+      "path": "system.drawing.common/5.0.2",
+      "hashPath": "system.drawing.common.5.0.2.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YrzNWduCDHhUaSRBxHxL11UkM2fD6y8hITHis4/LbQZ6vj3vdRjoH3IoPWWC9uDXK2wHIqn+b5gv1Np/VKyM1g==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
+    },
+    "System.Security.AccessControl/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vW8Eoq0TMyz5vAG/6ce483x/CP83fgm4SJe5P8Tb1tZaobcvPrbMEL7rhH1DRdrYbbb6F0vq3OlzmK0Pkwks5A==",
+      "path": "system.security.accesscontrol/4.5.0",
+      "hashPath": "system.security.accesscontrol.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+      "path": "system.security.permissions/4.5.0",
+      "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+      "path": "system.security.principal.windows/4.5.0",
+      "hashPath": "system.security.principal.windows.4.5.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S0wEUiKcLvRlkFUXca8uio1UQ5bYQzYgOmOKtCqaBQC3GR9AJjh43otcM32IGsAyvadFTaAMw9Irm6dS4Evfng==",
+      "path": "system.text.encoding.codepages/4.5.0",
+      "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.Extensions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YVMK0Bt/A43RmwizJoZ22ei2nmrhobgeiYwFzC4YAN+nue8RF6djXDMog0UCn+brerQoYVyaS+ghy9P/MUVcmw==",
+      "path": "system.text.encoding.extensions/4.3.0",
+      "hashPath": "system.text.encoding.extensions.4.3.0.nupkg.sha512"
+    }
+  }
+}

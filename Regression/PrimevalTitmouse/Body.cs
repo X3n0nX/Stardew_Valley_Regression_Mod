@@ -306,33 +306,33 @@ namespace PrimevalTitmouse
         }
 
         //Put on underwear and clean pants
-        private Container ChangeUnderwear(Container container)
+        private Container ChangeUnderwear(Container container, bool prompt)
         {
             Container oldUnderwear = this.underwear;
             Container newPants;
-            if (!oldUnderwear.removable)
+            if (!oldUnderwear.removable && prompt)
                 Animations.Warn(Regression.t.Change_Destroyed, this);
             this.underwear = container;
             Regression.t.Underwear_Options.TryGetValue("blue jeans", out newPants);
             pants = new Container(newPants);
             CleanPants();
-            Animations.Say(Regression.t.Change, this);
+            if(prompt) Animations.Say(Regression.t.Change, this);
             return oldUnderwear;
         }
 
-        public Container ChangeUnderwear(Underwear uw)
+        public Container ChangeUnderwear(Underwear uw, bool prompt)
         {
-            return ChangeUnderwear(new Container(uw.container.name, uw.container.wetness, uw.container.messiness, uw.container.durability));
+            return ChangeUnderwear(new Container(uw.container.name, uw.container.wetness, uw.container.messiness, uw.container.durability), prompt);
         }
 
-        public Container ChangeUnderwear(string type)
+        public Container ChangeUnderwear(string type, bool prompt)
         {
             Container newPants, refPants;
             Regression.t.Underwear_Options.TryGetValue("type", out refPants);
             newPants = new Container(refPants);
             newPants.messiness = 0;
             newPants.wetness = 0;
-            return ChangeUnderwear(newPants);
+            return ChangeUnderwear(newPants, prompt);
         }
 
         //If we put on our pants, remove wet/messy debuffs

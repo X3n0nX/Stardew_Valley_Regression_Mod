@@ -35,6 +35,8 @@ namespace PrimevalTitmouse
 
         public KeybindList CheckVillagerDiaperBind { get; set; } = KeybindList.ForSingle(SButton.F3);
 
+        public KeybindList AskVillagerChangeBind { get; set; } = KeybindList.ForSingle(SButton.F4);
+
         public KeybindList DecEverythingBind { get; set; } = KeybindList.Parse("LeftAlt + F1");
         public KeybindList IncEverythingBind { get; set; } = KeybindList.Parse("LeftAlt + F2");
 

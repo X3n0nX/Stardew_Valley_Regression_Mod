@@ -9,6 +9,7 @@ using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Tools;
 using System;
+using System.IO;
 using System.Collections.Generic;
 
 namespace PrimevalTitmouse
@@ -28,6 +29,8 @@ namespace PrimevalTitmouse
         public static Farmer who;
         public static int stillSoilCD = 0;
         public static bool alreadyAte = false;
+        public Dictionary<string, string> diag = new Dictionary<string, string>();
+        public List<string> sourcelist = new List<string>();
 
         public static int[] checkCooldown = new int[5];
 
@@ -40,6 +43,7 @@ namespace PrimevalTitmouse
         {
             help = h;
             monitor = Monitor;
+            InitializeDialogueList();
             config = Helper.ReadConfig<ModConfig>();
             t = Helper.Data.ReadJsonFile<Data>(string.Format("{0}.json", (object)config.Lang)) ?? Helper.Data.ReadJsonFile<Data>("en.json");
             h.Events.GameLoop.GameLaunched += new EventHandler<GameLaunchedEventArgs>(this.OnGameLaunched);
@@ -51,6 +55,7 @@ namespace PrimevalTitmouse
             h.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(ReceiveMouseChanged);
             h.Events.Display.MenuChanged += new EventHandler<MenuChangedEventArgs>(ReceiveMenuChanged);
             h.Events.Display.RenderingHud += new EventHandler<RenderingHudEventArgs>(ReceivePreRenderHudEvent);
+
         }
 
         public void OnGameLaunched(object sender, GameLaunchedEventArgs e)
@@ -205,6 +210,14 @@ namespace PrimevalTitmouse
 
               );
 
+            configMenu.AddKeybindList(
+                mod: ModManifest,
+                name: () => "Ask a Villager for a change.",
+                getValue: () => config.AskVillagerChangeBind,
+                setValue: value => config.AskVillagerChangeBind = value
+
+              );
+
             configMenu.AddNumberOption(
                   mod: ModManifest,
                   name: () => "*Diaper Spritesheet Index",
@@ -277,6 +290,7 @@ namespace PrimevalTitmouse
 
         private void ReceiveAfterDayStarted(object sender, DayStartedEventArgs e)
         {
+            t = Helper.Data.ReadJsonFile<Data>(string.Format("{0}.json", (object)config.Lang)) ?? Helper.Data.ReadJsonFile<Data>("en.json");
             body = Helper.Data.ReadJsonFile<Body>(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName)) ?? new Body();
             started = true;
             who = Game1.player;
@@ -365,6 +379,14 @@ namespace PrimevalTitmouse
 
             if (config.CheckVillagerDiaperBind.JustPressed()) Animations.HandleCheck(body, 20, 3);
 
+            if (config.AskVillagerChangeBind.JustPressed()) Animations.HandleAskChange(body, 20, 3);
+
+            CheckForDialogueCommands();
+
+
+            //dialogue sent via animations doesnt trigger MenuChanged for whatever reason, so it has to check when you advance the dialogue via inputs.
+
+
 
             /*
                 case SButton.S:
@@ -401,6 +423,10 @@ namespace PrimevalTitmouse
             DialogueBox attemptToSleepMenu;
             ShopMenu currentShopMenu;
 
+
+
+
+
             //If we try to sleep, check if the bed is done drying (only matters in Hard Mode)
             if (Game1.currentLocation is FarmHouse && (attemptToSleepMenu = e.NewMenu as DialogueBox) != null && Game1.currentLocation.lastQuestionKey == "Sleep" && !config.Easymode)
             {
@@ -435,9 +461,10 @@ namespace PrimevalTitmouse
                 {
                     //The seed shop does not sell the Joja diaper and adult diapers
                     availableUnderwear.Remove("Joja diaper");
-                    availableUnderwear.Remove("Space diaper");
-                    availableUnderwear.Remove("Pawprint diaper");
-                    availableUnderwear.Remove("Heart diaper");
+                    availableUnderwear.Remove("space diaper");
+                    availableUnderwear.Remove("pawprint diaper");
+                    availableUnderwear.Remove("heart diaper");
+                    availableUnderwear.Remove("Jodi's diapers");
                     underwearAvailableAtShop = true;
                 }
                 else if (Game1.currentLocation is JojaMart)
@@ -445,7 +472,7 @@ namespace PrimevalTitmouse
                     //Joja shop ONLY sels the Joja diaper and a cloth diaper
                     availableUnderwear.Clear();
                     availableUnderwear.Add("Joja diaper");
-                    availableUnderwear.Add("Cloth diaper");
+                    availableUnderwear.Add("cloth diaper");
                     underwearAvailableAtShop = true;
                 }
                 else if (Game1.currentLocation.Name == "Hospital")
@@ -453,11 +480,12 @@ namespace PrimevalTitmouse
 
                     //Hospital sells both baby and adult diapers, but not undies.
                     availableUnderwear.Remove("Joja diaper");
-                    availableUnderwear.Remove("Cloth diaper");
-                    availableUnderwear.Remove("Black Thong");
-                    availableUnderwear.Remove("Polka Dot Panties");
-                    availableUnderwear.Remove("Big Kid Undies");
-                    availableUnderwear.Remove("Dinosaur Undies");
+                    availableUnderwear.Remove("cloth diaper");
+                    availableUnderwear.Remove("black thong");
+                    availableUnderwear.Remove("polka dot panties");
+                    availableUnderwear.Remove("big kid undies");
+                    availableUnderwear.Remove("dinosaur undies");
+                    availableUnderwear.Remove("Jodi's diapers");
                     underwearAvailableAtShop = true;
                 }
 
@@ -528,7 +556,7 @@ namespace PrimevalTitmouse
                     if ((double)activeObject.container.wetness + (double)activeObject.container.messiness == 0.0 && !activeObject.container.IsDrying())
                     {
                         who.reduceActiveItemByOne(); //Take it out of inventory
-                        Container container = body.ChangeUnderwear(activeObject); //Put on the new underwear and return the old
+                        Container container = body.ChangeUnderwear(activeObject, true); //Put on the new underwear and return the old
                         Underwear underwear = new Underwear(container.name, container.wetness, container.messiness, 1);
 
                         //If the underwear returned is not removable, destroy it
@@ -581,6 +609,7 @@ namespace PrimevalTitmouse
 
         private void ReceiveTimeOfDayChanged(object sender, TimeChangedEventArgs e)
         {
+
             lastTimeOfDay = Game1.timeOfDay;
             if(stillSoilCD > 0) stillSoilCD--;
 
@@ -605,6 +634,108 @@ namespace PrimevalTitmouse
             }
 
 
+        }
+        
+        public string ReturnCurrentDialogue()
+        {
+            if (Game1.dialogueUp && Game1.currentSpeaker != null)
+            {
+                NPC npc = Game1.currentSpeaker;
+                Dialogue dialogue;
+                npc.CurrentDialogue.TryPeek(out dialogue);
+                string text = dialogue.dialogues[dialogue.currentDialogueIndex];
+
+                return text;
+            }
+
+            return null;
+        }
+
+        public void CheckForDialogueCommands()
+        {
+            if (Game1.dialogueUp && Game1.currentSpeaker != null)
+            {
+                NPC npc = Game1.currentSpeaker;
+                Dialogue dialogue;
+
+                npc.CurrentDialogue.TryPeek(out dialogue);
+                string text = dialogue.dialogues[dialogue.currentDialogueIndex];
+
+
+
+
+                if (text != null && text.Contains("::"))
+                {
+
+                    string[] parsedString = text.Split("::");
+                    parsedString = parsedString[1].Split(':');
+
+                    string id = parsedString[0];
+                    string command = parsedString[1];
+                    string item = parsedString[2];
+                    int amount = Int32.Parse(parsedString[3]);
+                    string raw = "";
+
+                    diag.TryGetValue(id, out raw);
+
+                    string diaper = item;
+
+                    if (command == "change")
+                    {
+                        if (diaper != "") body.ChangeUnderwear(new Underwear(diaper, 0, 0, amount), false);
+                    }
+
+
+                    if (command == "give")
+                    {
+                        Underwear underwear = new Underwear(diaper, 0, 0, amount);
+                        who.addItemToInventoryBool(underwear);
+                    }
+
+
+
+
+
+
+                    dialogue = new Dialogue(raw, npc);
+
+
+                    npc.CurrentDialogue.Clear();
+                    npc.CurrentDialogue.Push(dialogue);
+                    Game1.drawDialogue(npc);
+                }
+            }
+
+        }
+
+
+        public void InitializeDialogueList()
+        {
+
+            string path = Regression.help.DirectoryPath.ToString();
+            string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
+            DirectoryInfo d = new DirectoryInfo(newPath + "\\Regression Dialogue\\Dialogue\\NPCs\\");
+
+
+                var lines = File.ReadLines(d.ToString() + "trigger.txt");
+
+                foreach (var line in lines)
+                {
+                    List<string> strings = new List<string>();
+                    string[] stringArray = line.Split("||");
+
+                for (int i = 0; i < stringArray.Length; i++) strings.Add(stringArray[i]);
+                   
+
+
+                    string id = strings[0];
+                    this.Monitor.Log(line, LogLevel.Warn);
+
+                    diag.Add(id, strings[1]);
+            }
+
+
+            
         }
 
 

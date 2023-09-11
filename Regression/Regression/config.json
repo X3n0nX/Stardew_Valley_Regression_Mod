@@ -1,0 +1,16 @@
+//Thanks to contributors: u/BabyKunoichi, u/abdlnikki, u/FurryDestiny
+//Thanks to alpha testers: u/zombiekarasu, u/dr_daddy, u/errycupid, u/rosebush413, u/mrnogee, u/crinklycuddles, u/vulpix77
+{
+	"Wetting": true,
+	"Messing": true,
+	"Easymode": false,
+	"NoFriendshipPenalty": false,
+	"NoHungerAndThirst": false,
+	"AlwaysNoticeAccidents": true,
+	"Debug": false,
+	"BladderLossContinenceRate": 1, //in 1% increments. i.e. 5 = 5% loss per accident
+	"BowelLossContinenceRate": 1, //in 1% increments. i.e. 5 = 5% loss per accident
+	"BladderGainContinenceRate": 1, //in 1% increments. i.e. 5 = 5% gain per success
+	"BowelGainContinenceRate": 1, //in 1% increments. i.e. 5 = 5% gain per success
+	"Lang": "en"
+}
