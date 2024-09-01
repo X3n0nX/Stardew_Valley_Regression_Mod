@@ -1,0 +1,94 @@
+{
+	"Changes":[
+		{
+			"LogName":"Robin",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Robin",
+			"Entries":{	
+			
+  "Introduction": "Have you met everyone in town yet? That sounds exhausting.",
+  "Resort": "Wow, look at these structures!$h#$b#I can tell they were made by a master builder. I'm really impressed!",
+  "Resort_Leaving": "That was fun!$h",
+  "Resort_Shore": "Hey, look! I can see another island from here.",
+  "Resort_Chair": "Hey @. You know, I was just thinking about how far the town has come since you first moved here.#$b#You should really be proud of all you've done!$h",
+  "Resort_Bar": "This is so relaxing...",
+  "reject_865": "Veggie salt? Sounds good, but I don't need it.",
+  "reject_866": "Hmm... when I think of flowers, I think of Evelyn. Maybe show this to her?",
+  "pamHouseUpgrade": "Our little plan worked out well, don't you think? Pam and Penny seem really happy.",
+  "pamHouseUpgradeAnonymous": "Our little plan worked out well, don't you think? Pam and Penny seem really happy.",
+  "MovieInvitation": "Ooh... Two tickets for tonight's show, huh? Sounds good! I'll meet you there.$h",
+  "cc_Bridge": "Hey! I heard some weird noises last night, and woke up this morning to find the quarry bridge completely repaired!#$b#It's a miracle of woodworking!",
+  "cc_Complete": "I knew it from the moment you stepped off that bus, @... you were destined to be a town hero!$h",
+  "cc_Begin": "Hey! I heard that Lewis showed you around the Community Center... It'd be great if you could fix that place up. It used to be a really nice building!",
+  "event_wood1": "Great, then this blueprint should be a piece of cake for you!$h",
+  "event_wood2": "Well, then I have the perfect blueprint to get you started!",
+
+
+  "Mon": "Have I told you that I built our house from the ground up?#$e#It's definitely been the highlight of my career so far.",
+"Mon2":"Hey there farmer. Here, I got a snack for you.#$b#%Robin hands you a nice, fresh apple.[613].",
+"Mon6":"Hey there kiddo. Here, I got a snack for you.#$b#%Robin hands you a nice, fresh apple.[613].#$b#There you go, that should keep you playing.$1",
+
+  "Tue": "Hey, if you need any materials or blueprints, my shop is the place you're looking for!#$e#Plus, your business supports the local economy.$h",
+"Tue4":"I've always wanted to sell wooden toys in the shop, but there was never a market for it.$2",
+"Tue8":"I've always wanted to sell wooden toys in the shop, but there was never a market for it.#$b#Maybe there will be now that there's a new kiddo at the farm.$1",
+
+  "Wed": "Hey there, @.#$e#I was just daydreaming about some new carpentry projects.#$e#Are you doing OK at your place? How's the woodwork in your cottage holding up?",
+"Wed6":"I have an idea for a toy set, but the little details are giving me trouble.$2#$b#Oh don't worry, I'll figure it out.$4",
+"Wed10":"Hey, @, could you help me out real quick? I made a new toy set, but I don't know if it's as fun as I imagine it is. Could you try it out for me?#$b#%It's a dollhouse with a lot of very simple little characters that fit into their places very easily. You can swap them around and each piece has a very distinct characteristics.#$b#%You play with the toy set and very quickly get engrossed in everything it has. You found it extremely easy to give them little voices and personalities.#$e#%Robin has taken extensive notes.",
+
+  "Thu": "You're always welcome to visit us, even if you aren't shopping, you know.$h#$e#It can get pretty lonely up here in the mountains.",
+"Thu4":"You're always welcome to visit us, even if you aren't shopping, you know.#$e#I've missed having little kids running about$1",
+
+  "Fri": "You've met my son Sebastian, right? He lives downstairs.#$e#He's a little shy, but I'm sure he'll warm up to you if you're nice to him.",
+  "Fri_inlaw_Sebastian": "I miss my Sebby... he was always a little misunderstood, but I believed in him.",
+  "Fri4": "#$1 RobinSeb#I found an ashtray in Sebastian's room, and it smelled really weird. Should I be worried about this?#$e#Sometimes I worry about Sebastian... he doesn't have many friends and doesn't really seem to care about his future very much...#$e#I would talk to him about it but he never opens up to me.",
+  "Fri4_inlaw_Sebastian": "Sebastian told me he's trying to quit smoking! I'm really proud of him.",
+
+  "Sat": "Our house is in such a beautiful area, don't you think?#$e#I love the fresh air of the mountains.",
+"Sat4":"Hey, @, come here a second.#$b#%Robin looks around conspiratorially before handing you some cookies.[223]#$b#I won't tell if you don't.$1",
+
+  "Sun": "I hope Demetrius doesn't blow the house up with those science experiments of his.#$e#I'm not even sure what he's working on. I think it has something to do with plants.",
+  "Sun2": "#$1 RobinDem#My husband almost set the house on fire last night with his science experiment. One of his beakers exploded and sent a fireball into the rafters! Thank Yoba I used fire-resistant lacquer when I built the place.$u#$e#Sorry if it smells weird in here, @. It's my husband's bizarre science project...",
+"Sun6": "Hi @! It's good to see you.#$e#You're a regular member of the community now, don't you think?#$b#%Robin pinches your cheeks affectionately.",
+
+
+"summer_Mon":"It's too dang hot outside$3",
+"summer_Mon6":"I bet it's hard to play like you normally do while it's this hot out.$5#$b#Here, this usually cools me off.$1[612]",
+
+  "summer_Tue": "If you need any buildings on your farm upgraded, just ask me!#$e#You'll need to provide enough lumber and stone for the project. And it costs money, too.#$e#But I'm sure you'll be pleased with the results!$h",
+"summer_Tue2":"So what have you been working on?#$b#%You start telling Robin all your plans for the farm and slowly get more and more excited until you're bouncing in place.#$b#That's quite a lot! Don't let me stop you.",
+"summer_Tue6":"So what have you been working on?#$b#%You start telling Robin all your plans for the farm and slowly get more and more excited until you're bouncing in place.#$b#Oh wow, you're such a clever little farmer!$1",
+
+  "summer_Fri": "We're pretty insulated from the rest of the world here in Stardew Valley.#$e#It has its pros and cons.",
+"summer_Fri4":"Hey @, can you keep a secret?#$b#%Robin hands you an ice cream cone with a wink.[233]#$b#I won't tell anyone if you won't.$1",
+
+
+  "fall_Mon": "#$1 RobinMaru#Maru likes gems. She uses them in her inventions.#$e#So how are you and Maru getting along?",
+"fall_Mon2":"Fall has my favorite treat. You want some?#$b#%Robin pores a handful of nuts into your hands.[607]",
+"fall_Mon4":"Fall has my favorite treat. You want some?#$b#%You eagerly hold out your hands so Robin can fill them.#$b#I thought so, here you go!$1[607]",
+  "fall_Thu": "You're always welcome to visit us, even if you aren't in the market for a building upgrade!$h#$e#It can get pretty lonely up here in the mountains.",
+"fall_Thu4": "You're always welcome to visit us, even if you aren't in the market for a building upgrade!$h#$e#I've missed having little kids running about$1",
+
+  "fall_Fri": "Have you met the wild man that lives behind our house?$s#$e#I guess I don't really mind, as long as he doesn't bother us.",
+"fall_Fri6":"You know, I've always wondered where Linus goes to the bathroom.#$b#Though, I try not to think about it too hard...$6",
+
+"fall_Sat4":"Hey, @, come here a second.#$b#%Robin looks around conspiratorially before handing you some pumpkin pie.[608]#$b#I won't tell if you don't$1",
+
+"winter_Mon": "Winter is the best! I'm so excited!$4",
+
+  "winter_Fri": "My parents were bewildered when I told them I wanted to be a carpenter.#$e#They were pretty old-fashioned.",
+  "winter_Fri_inlaw_Sebastian": "I think the farm life is really healthy for Sebby.",
+  
+  "winter_Sat": "Our house is in such a beautiful area, don't you think?#$e#Everything looks still after a fresh snow.",
+"winter_Sat2":"Everything looks still after a fresh snow.#$b#You might want to break out the sled.$1",
+"winter_Sat4":"Everything looks still after a fresh snow.#$b#You look bundled up enough to be the first to leave your mark!$1",
+"winter_Sat10":"Everything looks still after a fresh snow.#$b#You know kiddo, you look bundled up enough to be the first to leave your mark on the powder!$1#$e#I don't mind. Go play.",
+
+"winter_1":"Winter is finally here, I'm so excited!$4",
+"winter_18":"Did you get your secret friend in the mail? Who is it?!$!#$b#No no, don't tell me, the surprise is better.$2#$b#Is it me?#$b#Ahh, don't tell me!$4",
+"winter_24":"It's tomorrow! I can hardly wait!$4",
+"winter_26":"Only one more year to go until the next Feast of the Winter Star. That should be enough time to prepare.",
+			},
+		},
+	]
+}

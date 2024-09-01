@@ -4,40 +4,40 @@
 			"LogName":"Penny",
 			"Action":"EditData",
 			"Target":"Characters/Dialogue/Penny",
-			"Entries":{	
-//Penny's repsonse Ids are 130-139
+			"Entries":{
+//Penny's response Ids are 580-599
 
 
 "spring_Mon8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
-#$q 134/135 Adult_Followup#I have a hard time thinking of you like you're an adult...
-#$r 134 0 Adult_Little#Honestly, I don't really feel like one.
-#$r 134 0 Adult_Little#Good! Cause I don't wanna be one.
-#$r 135 0 Adult_Big#Not fair! I'm a big kid!
+#$q 584/585 Adult_Followup#I have a hard time thinking of you like you're an adult...
+#$r 584 0 Adult_Little#Honestly, I don't really feel like one.
+#$r 584 0 Adult_Little#Good! Cause I don't wanna be one.
+#$r 585 0 Adult_Big#Not fair! I'm a big kid!
 ",
-"Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4", 
-"Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1", 
-"Adult_Followup":"#$p 135#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
+"Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
+"Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1",
+"Adult_Followup":"#$p 585#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
 
 "spring_Tue6":"I've always felt comfortable around little kids. I feel more confident.#$e#I feel that way around you too.#$b#I like that.$1",
 "spring_Wed4":"Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
 "spring_Thu4":"$p 102#We're very lucky to have a library in such a small town.|It doesn't seem like Vincent is going to get out of diapers any time soon...$3#$e#It's pretty clear he's not even trying.",
 
-"spring_Fri2":"Hello. Ummm... That old farm must be really distracting$3#$e#...$2 
-#$q 130/131 Potty_Followup#Are you having a hard time making it to the potty @?
-#$r 130 0 Potty_Trouble#Uh huh. It's too hard. I don't like it.
-#$r 130 5 Potty_Trouble#Y-yeah, but I'm trying my best, honest!
-#$r 131 -5 Potty_Easy#Ummm... No?
-#$r 131 -30 Potty_Easy#That's a really awkward question. 
+"spring_Fri2":"Hello. Ummm... That old farm must be really distracting$3#$e#...$2
+#$q 580/581 Potty_Followup#Are you having a hard time making it to the potty @?
+#$r 580 0 Potty_Trouble#Uh huh. It's too hard. I don't like it.
+#$r 580 5 Potty_Trouble#Y-yeah, but I'm trying my best, honest!
+#$r 581 -5 Potty_Easy#Ummm... No?
+#$r 581 -30 Potty_Easy#That's a really awkward question.
 ",
-"Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2", 
-"Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2", 
-"Potty_Followup":"#$p 131#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
+"Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2",
+"Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2",
+"Potty_Followup":"#$p 581#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
 
-"spring_Sat6":"Oh hello @.#$q 132/133 Show_Followup#Oh, do you want to show me something?
-#$r 132 0 Show_Nice#Show her the pretty flower you picked.
-#$r 132 0 Show_Nice#Show her the cool rock you found in the mines.
-#$r 132 0 Show_Nice#Show her your favorite plushie.
-#$r 133 0 Show_Diaper#Show her your diaper.",
+"spring_Sat6":"Oh hello @.#$q 582/583 Show_Followup#Oh, do you want to show me something?
+#$r 582 0 Show_Nice#Show her the pretty flower you picked.
+#$r 582 0 Show_Nice#Show her the cool rock you found in the mines.
+#$r 582 0 Show_Nice#Show her your favorite plushie.
+#$r 583 0 Show_Diaper#Show her your diaper.",
 "Show_Nice": "Oh wow @, that is very lovely! Thank you for showing me.#$b#You look so pleased! You're just like a little kid at show and tell.$1",
 "Show_Diaper": "Oh goodness @. That doesn't look like you're trying very hard to make it to the potty.$3",
 "Show_Followup":"Well don't you look excited!$1#$e#%Penny pats your head fondly.",
@@ -47,108 +47,108 @@
 "summer_Tue2":"#$p 102#I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.",
 "summer_Tue6":"#$p 102#I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.$1#$b#She's still not great at keeping them clean...$3",
 
-"summer_Wed6":"Oh hello @.#$q 132/133 Show_Followup#Oh, do you want to show me something?
-#$r 132 0 Show_Nice#Show her the pretty flower you picked.
-#$r 132 0 Show_Nice#Show her the cool rock you found in the mines.
-#$r 132 0 Show_Nice#Show her your favorite plushie.
-#$r 133 0 Show_Diaper#Show her your diaper.",
+"summer_Wed6":"Oh hello @.#$q 582/583 Show_Followup#Oh, do you want to show me something?
+#$r 582 0 Show_Nice#Show her the pretty flower you picked.
+#$r 582 0 Show_Nice#Show her the cool rock you found in the mines.
+#$r 582 0 Show_Nice#Show her your favorite plushie.
+#$r 583 0 Show_Diaper#Show her your diaper.",
 "Show_Nice": "Oh wow @, that is very lovely! Thank you for showing me.#$b#You look so pleased! You're just like a little kid at show and tell.$1",
 "Show_Diaper": "Oh goodness @. That doesn't look like you're trying very hard to make it to the potty.$3",
 "Show_Followup":"Well don't you look excited!$1#$e#%Penny pats your head fondly.",
 
 "summer_Fri8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
-#$q 134/135 Adult_Followup#I have a hard time thinking of you like you're an adult...
-#$r 134 0 Adult_Little#Honestly, I don't really feel like one.
-#$r 134 0 Adult_Little#Good! Cause I don't wanna be one.
-#$r 135 0 Adult_Big#Not fair! I'm a big kid!
+#$q 584/585 Adult_Followup#I have a hard time thinking of you like you're an adult...
+#$r 584 0 Adult_Little#Honestly, I don't really feel like one.
+#$r 584 0 Adult_Little#Good! Cause I don't wanna be one.
+#$r 585 0 Adult_Big#Not fair! I'm a big kid!
 ",
-"Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4", 
-"Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1", 
-"Adult_Followup":"#$p 135#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
+"Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
+"Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1",
+"Adult_Followup":"#$p 585#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
 
 "summer_Sat4": "I wish I could treat my mom like the toddler she acts like all the time.$3#$e#It would probably be good for her...$2",
-"summer_Sun2":"Hello. Ummm... That old farm must be really distracting$3#$e#...$2 
-#$q 130/131 Potty_Followup#Are you having a hard time making it to the potty @?
-#$r 130 0 Potty_Trouble#Uh huh. It's too hard. I don't like it.
-#$r 130 5 Potty_Trouble#Y-yeah, but I'm trying my best, honest!
-#$r 131 -5 Potty_Easy#Ummm... No?
-#$r 131 -30 Potty_Easy#That's a really awkward question. 
+"summer_Sun2":"Hello. Ummm... That old farm must be really distracting$3#$e#...$2
+#$q 580/581 Potty_Followup#Are you having a hard time making it to the potty @?
+#$r 580 0 Potty_Trouble#Uh huh. It's too hard. I don't like it.
+#$r 580 5 Potty_Trouble#Y-yeah, but I'm trying my best, honest!
+#$r 581 -5 Potty_Easy#Ummm... No?
+#$r 581 -30 Potty_Easy#That's a really awkward question.
 ",
-"Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2", 
-"Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2", 
-"Potty_Followup":"#$p 131#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
+"Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2",
+"Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2",
+"Potty_Followup":"#$p 581#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
 
 
 "fall_Mon4": "$p 102#We're very lucky to have a library in such a small town.|It doesn't seem like Vincent is going to get out of diapers any time soon...$3#$e#It's pretty clear he's not even trying.",
 "fall_Mon8":"I've always felt comfortable around little kids. I feel more confident.#$e#I feel that way around you too.#$b#I like that.$1",
 "fall_Tue4":"Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
 
-"fall_Wed6":"Oh hello @.#$q 132/133 Show_Followup#Oh, do you want to show me something?
-#$r 132 0 Show_Nice#Show her the pretty flower you picked.
-#$r 132 0 Show_Nice#Show her the cool rock you found in the mines.
-#$r 132 0 Show_Nice#Show her your favorite plushie.
-#$r 133 0 Show_Diaper#Show her your diaper.",
+"fall_Wed6":"Oh hello @.#$q 582/583 Show_Followup#Oh, do you want to show me something?
+#$r 582 0 Show_Nice#Show her the pretty flower you picked.
+#$r 582 0 Show_Nice#Show her the cool rock you found in the mines.
+#$r 582 0 Show_Nice#Show her your favorite plushie.
+#$r 583 0 Show_Diaper#Show her your diaper.",
 "Show_Nice": "Oh wow @, that is very lovely! Thank you for showing me.#$b#You look so pleased! You're just like a little kid at show and tell.$1",
 "Show_Diaper": "Oh goodness @. That doesn't look like you're trying very hard to make it to the potty.$3",
 "Show_Followup":"Well don't you look excited!$1#$e#%Penny pats your head fondly.",
-  
-"fall_Sun8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
-#$q 134/135 Adult_Followup#I have a hard time thinking of you like you're an adult...
-#$r 134 0 Adult_Little#Honestly, I don't really feel like one.
-#$r 134 0 Adult_Little#Good! Cause I don't wanna be one.
-#$r 135 0 Adult_Big#Not fair! I'm a big kid!
-",
-"Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4", 
-"Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1", 
-"Adult_Followup":"#$p 135#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
 
-"fall_Sat2":"Hello. Ummm... That old farm must be really distracting$3#$e#...$2 
-#$q 130/131 Potty_Followup#Are you having a hard time making it to the potty @?
-#$r 130 0 Potty_Trouble#Uh huh. It's too hard. I don't like it.
-#$r 130 5 Potty_Trouble#Y-yeah, but I'm trying my best, honest!
-#$r 131 -5 Potty_Easy#Ummm... No?
-#$r 131 -30 Potty_Easy#That's a really awkward question. 
+"fall_Sun8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
+#$q 584/585 Adult_Followup#I have a hard time thinking of you like you're an adult...
+#$r 584 0 Adult_Little#Honestly, I don't really feel like one.
+#$r 584 0 Adult_Little#Good! Cause I don't wanna be one.
+#$r 585 0 Adult_Big#Not fair! I'm a big kid!
 ",
-"Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2", 
-"Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2", 
-"Potty_Followup":"#$p 131#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
+"Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
+"Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1",
+"Adult_Followup":"#$p 585#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
+
+"fall_Sat2":"Hello. Ummm... That old farm must be really distracting$3#$e#...$2
+#$q 580/581 Potty_Followup#Are you having a hard time making it to the potty @?
+#$r 580 0 Potty_Trouble#Uh huh. It's too hard. I don't like it.
+#$r 580 5 Potty_Trouble#Y-yeah, but I'm trying my best, honest!
+#$r 581 -5 Potty_Easy#Ummm... No?
+#$r 581 -30 Potty_Easy#That's a really awkward question.
+",
+"Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2",
+"Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2",
+"Potty_Followup":"#$p 581#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
 
 
 "winter_Tue6":"I wish I could treat my mom like the toddler she acts like all the time.$3#$e#It would probably be good for her...$2",
 
-"winter_Wed6":"Oh hello @.#$q 132/133 Show_Followup#Oh, do you want to show me something?
-#$r 132 0 Show_Nice#Show her the pretty flower you picked.
-#$r 132 0 Show_Nice#Show her the cool rock you found in the mines.
-#$r 132 0 Show_Nice#Show her your favorite plushie.
-#$r 133 0 Show_Diaper#Show her your diaper.",
+"winter_Wed6":"Oh hello @.#$q 582/583 Show_Followup#Oh, do you want to show me something?
+#$r 582 0 Show_Nice#Show her the pretty flower you picked.
+#$r 582 0 Show_Nice#Show her the cool rock you found in the mines.
+#$r 582 0 Show_Nice#Show her your favorite plushie.
+#$r 583 0 Show_Diaper#Show her your diaper.",
 "Show_Nice": "Oh wow @, that is very lovely! Thank you for showing me.#$b#You look so pleased! You're just like a little kid at show and tell.$1",
 "Show_Diaper": "Oh goodness @. That doesn't look like you're trying very hard to make it to the potty.$3",
 "Show_Followup":"Well don't you look excited!$1#$e#%Penny pats your head fondly.",
 
-"winter_Thu2":"Hello. Ummm... That old farm must be really distracting$3#$e#...$2 
-#$q 130/131 Potty_Followup#Are you having a hard time making it to the potty @?
-#$r 130 0 Potty_Trouble#Uh huh. It's too hard. I don't like it.
-#$r 130 5 Potty_Trouble#Y-yeah, but I'm trying my best, honest!
-#$r 131 -5 Potty_Easy#Ummm... No?
-#$r 131 -30 Potty_Easy#That's a really awkward question. 
+"winter_Thu2":"Hello. Ummm... That old farm must be really distracting$3#$e#...$2
+#$q 580/581 Potty_Followup#Are you having a hard time making it to the potty @?
+#$r 580 0 Potty_Trouble#Uh huh. It's too hard. I don't like it.
+#$r 580 5 Potty_Trouble#Y-yeah, but I'm trying my best, honest!
+#$r 581 -5 Potty_Easy#Ummm... No?
+#$r 581 -30 Potty_Easy#That's a really awkward question.
 ",
-"Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2", 
-"Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2", 
-"Potty_Followup":"#$p 131#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
+"Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2",
+"Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2",
+"Potty_Followup":"#$p 581#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
 
 "winter_Fri2":"#$p 102#I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.",
 "winter_Fri6":"#$p 102#I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.$1#$b#She's still not great at keeping them clean...$3",
 "winter_Sat4":"Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
 
 "winter_Sun8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
-#$q 134/135 Adult_Followup#I have a hard time thinking of you like you're an adult...
-#$r 134 0 Adult_Little#Honestly, I don't really feel like one.
-#$r 134 0 Adult_Little#Good! Cause I don't wanna be one.
-#$r 135 0 Adult_Big#Not fair! I'm a big kid!
+#$q 584/585 Adult_Followup#I have a hard time thinking of you like you're an adult...
+#$r 584 0 Adult_Little#Honestly, I don't really feel like one.
+#$r 584 0 Adult_Little#Good! Cause I don't wanna be one.
+#$r 585 0 Adult_Big#Not fair! I'm a big kid!
 ",
-"Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4", 
-"Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1", 
-"Adult_Followup":"#$p 135#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
+"Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
+"Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1",
+"Adult_Followup":"#$p 585#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
 
 			},
 		},
@@ -157,44 +157,44 @@
 			"LogName":"Penny Marriage",
 			"Action":"EditData",
 			"Target":"Characters/Dialogue/MarriageDialoguePenny",
-			"Entries":{		
-			
-"Rainy_Day_0": "On rainy days my thoughts always drift toward cinnamon and cookies.#$b#Maybe they'd make for good motivation as a reward for making it to the potty on time.$1#$e#I think I'll go make some.",
-"Rainy_Day_1": "It's pretty damp outside.#$e#Maybe we don't have to try so hard to get to the potty today.#$b#Just for today, okay?$4",
-"Rainy_Day_2": "Hi, honey! I did some shopping this morning and got this for you.[186 180 770 535]#$e#I picked up some more supplies, just in case.$11",
-  "Rainy_Day_3": "I was just thinking about that night we met in the bathhouse.$l#$e#I'll never forget that night...$l",
+			"Entries":{
+
+"Rainy_Day_0": "On rainy days my thoughts always drift toward cinnamon and cookies.#$b#Maybe they'd make for good motivation as a reward for making it to the potty on time. Speaking of which.$1#$b#::585:change:training pants:1::",
+"Rainy_Day_1": "It's pretty damp outside.#$e#Maybe we don't have to try so hard to get to the potty today.#$b#Just for today, okay?$4#$b#::590:change:baby print diaper:1::",
+"Rainy_Day_2": "Hi, honey! I did some shopping this morning and got this for you.[186 180 770 535]#$e#I picked up some more \"supplies too\", just in case. Let's get on on you now.$11#$b#::587:change:training pants:1::",
+"Rainy_Day_3": "I was just thinking about that night we met in the bathhouse.$l#$e#I'll never forget that night...$l#$b#Let's get you ready for this day.#$b#::591:change:training pants:1::",
 "Rainy_Day_4": "On days like this, I love to curl up with a good book.#$e#Do you want to sit with me?#$b#I could read to you, would you like that?$11",
 
-  "patio_Penny": "This is a lot more peaceful than my old spot in town. I'm very happy here.",
+"patio_Penny": "This is a lot more peaceful than my old spot in town. I'm very happy here.",
 
-"Rainy_Night_0": "Hello there @. Have you been making it to the potty today?#$b#$y 'Can you try to go potty for me right now please?_Try using the potty._%Penny watches while you tinkle into the potty. She looks very proud of you._Go right were you stand._Goodness, that sure didn't look like you were trying very hard @.$4'",
-"Rainy_Night_1": "Oh goodness @, your cloths are soaked! Have you been playing in the rain all day?$1#$e#You seem to be very pleased for such a muddy little boy.^You seem to be very pleased for such a muddy little girl.",
+"Rainy_Night_0": "Hello there @. Have you been making it to the potty today?#$b#$y 'Can you try to go potty for me right now please?_Try using the potty._%Penny watches while you tinkle into the potty. She looks very proud of you._*Go right were you stand*._Goodness, that sure didn't look like you were trying very hard @.$4'",
+"Rainy_Night_1": "Oh goodness @, your cloths are soaked! Have you been playing in the rain all day?$1#$e#You seem to be very pleased for such a muddy little boy.^You seem to be very pleased for such a muddy little girl.#$b#::592:change:baby print diaper:1::",
 "Rainy_Night_2": "%Penny puts a comforting hand on your shoulder.#$b#@, I know how the rain can make getting to the potty harder. I won't be upset at any accidents tonight, I promise.#$b#In fact, I'm never upset about your accidents.$1#$b#They just make you look even more precious.$11",
-"Rainy_Night_3": "The sound of rain used to bother me, when I lived in that old metal trailer.$2#$b#But it's quite soothing here.#$e#If you're done with chores for the day we could sit on the porch together and just listen to the rain.#$b#Common, let's get your bed time diaper on early. We don't have to worry about that until tomorrow.$11",
+"Rainy_Night_3": "The sound of rain used to bother me, when I lived in that old metal trailer.$2#$b#But it's quite soothing here.#$e#If you're done with chores for the day we could sit on the porch together and just listen to the rain.#$b#Common, let's get your bed time diaper on early. We don't have to worry about potty training until tomorrow.$11#$b#::581:change:baby print diaper:1::",
 "Rainy_Night_4": "I felt like making a nice dinner. I hope you like it. [212 214 225 209 200]$h#$e#You don't need me to feed it to you, do you?$1",
 
-"Indoor_Day_0": "It's so peaceful here. I used to have the most horrific nightmares, but now I sleep like a baby.#$e#Well, not quite as much of a baby as you.$1#$b#Are you ready to change out of your night time diaper?",
-"Indoor_Day_1": "Good morning, @! I made you a hot breakfast.[195 210 211]#$e#It's important to me that you leave here with a full belly.$h#$e#Don't forget to use the potty before you go out @.#$b#You don't want that full tummy turning into full pants now, do you?$1",
+"Indoor_Day_0": "It's so peaceful here. I used to have the most horrific nightmares, but now I sleep like a baby.#$e#Well, not quite as much of a baby as you.$1#$b#Are you ready to change out of your night time diaper?#$b#::585:change:lavender pullup:1::",
+"Indoor_Day_1": "Good morning, @! I made you a hot breakfast.[195 210 211]#$e#It's important to me that you leave here with a full belly.$h#$e#Don't forget to use the potty before you go out @.#$b#You don't want that full tummy turning into full pants now, do you?$1::587:change:lavender pullup:1::",
 "Indoor_Day_2": "You know, I think I'll read a book today. I picked up something new from the library last time I was there.#$e#I also picked up some picture books if you'd like me to read to you tonight.$4",
-  "Indoor_Day_3": "I love to hear about all the artifacts you've found. Archaeology is fascinating!#$e#To think... there may have been farmers at this very spot 10,000 years ago.",
-"Indoor_Day_4": "Was I shy when we first met? It's funny to think about.#$b#It's hard to feel shy around someone when you've changed their pants so many times!$1#$e#How about we don't worry about the potty today. How's that sound @?#$b#Would you want to be a little boy, just for today?#$11#^Would you want to be a little girl, just for today?#$11#",
+"Indoor_Day_3": "I love to hear about all the artifacts you've found. Archaeology is fascinating!#$b#To think... there may have been farmers at this very spot 10,000 years ago.#$e#I wonder if they needed help getting to the potty too. Speaking of which.$4#$b#::585:change:lavender pullup:1::",
+"Indoor_Day_4": "Was I shy when we first met? It's funny to think about.#$b#It's hard to feel shy around someone when you've changed their pants so many times!$1#$e#How about we don't worry about the potty today. How's that sound @?#$b#Would you want to be a little boy, just for today?$11^Would you want to be a little girl, just for today?$11#$b#::590:change:baby print diaper:1::",
 
-"Indoor_Night_0": "Good evening, honey. Did you do a good job making it to the potty today?$3#$e#If not, that's okay. We've got all the time in the world!",
-"Indoor_Night_1": "Hello there @. I would like to hear all about your day.#$b#$y 'But first, can you try to go potty for me right now please?_Try using the potty._Look at you! Using the potty like a big kid. Good job!$!._Go right were you stand._%Penny sighs and rolls her eyes, but she doesn't hide her little grin at your antics.'",
-"Indoor_Night_2": "@, I'm proud of you for trying to use the potty, even though it's hard.#$e#How about, just for tonight, we get your night time diaper on early and you don't have to worry about it until tomorrow.$4#$b#We can just curl up together and I can read you some stories. How's that sound?$11",
-"Indoor_Night_3": "You're my special boy, did you know that?^You're my special girl, did you know that?$%e$%Penny pull you in for a hug and gently rubs your back.",
-"Indoor_Night_4": "Ready to tuck in? I made the bed and everything...#$b#Let's get your night time diaper on first though.$11",
+"Indoor_Night_0": "Good evening, honey. Did you do a good job making it to the potty today?$3#$e#If not, that's okay. We've got all the time in the world!#$b#For now, let's get you ready for bed.::593:change:baby print diaper:1::",
+"Indoor_Night_1": "Hello there @. I would like to hear all about your day.#$b#$y 'But first, can you try to go potty for me right now please?_Try using the potty._Look at you! Using the potty like a big kid. Good job!$!._*go right were you stand*._%Penny sighs and rolls her eyes, but she doesn't hide her little grin at your antics.'",
+"Indoor_Night_2": "@, I'm proud of you for trying to use the potty, even though it's hard.#$e#How about, just for tonight, we get your night time diaper on early and you don't have to worry about it until tomorrow.$4#$b#We can just curl up together and I can read you some stories. How's that sound?$11#$b#::581:change:baby print diaper:1::",
+"Indoor_Night_3": "You're my special boy, did you know that?^You're my special girl, did you know that?$%b$%Penny pull you in for a hug and gently rubs your back.#$e$Let's get you ready for bed.#$b#::593:change:baby print diaper:1::",
+"Indoor_Night_4": "Ready to tuck in? I made the bed and everything...#$b#Let's get your night time diaper on first though.$11#$b#::593:change:baby print diaper:1::",
 
-"Outdoor_0": "It's so peaceful here. I used to have the most horrific nightmares, but now I sleep like a baby.#$e#Well, not quite as much of a baby as you.$1#$b#Are you ready to change out of your night time diaper?",
-"Outdoor_1": "I would've been so happy growing up on a farm.#$b#I guess I can see why you're so hesitant to grow up.$1",
+"Outdoor_0": "It's so peaceful here. I used to have the most horrific nightmares, but now I sleep like a baby.#$e#Well, not quite as much of a baby as you.$1#$b#Are you ready to change out of your night time diaper?#$b#::587:change:lavender pullup:1::",
+"Outdoor_1": "I would've been so happy growing up on a farm.#$b#I guess I can see why you're so hesitant to grow up.$1#$b#I want you to try your hardest to at least be big enough to make it to the potty, okay?#$b#::585:change:lavender pullup:1::",
 "Outdoor_2": "Hi, honey! I'll watch for a bit if you want to go play.#$b#%Penny ruffles your hair affectionately.",
-"Outdoor_3": "Now @, I know the farm can be very distracting. I mean, just look at it!$1#$b#Try and listen to your body though, okay? If it says you need the potty then come in right away.",
+"Outdoor_3": "Now @, I know the farm can be very distracting. I mean, just look at it!$1#$b#Try and listen to your body though, okay? If it says you need the potty then come in right away.#$b#::587:change:lavender pullup:1::",
 "Outdoor_4":"It's really nice outside. I think I'll read a book on the porch today. I picked up something new from the library last time I was there.#$e#I also picked up some picture books if you'd like me to read to you tonight.$4",
 
 
 "OneKid_0": "Have you had any time to play with %kid1 today?#$b#You're already so good at playing, it must be pretty easy for you!$1",
   "OneKid_1": "Little %kid1 is going to have such a great childhood here.",
-"OneKid_3": "I feel a lot older now that we have a child. Maybe it's just this new responsibility weighing on me.#$e#It's not bad! I've wanted this for a long time.$11#$b#And I've already had some good practice changing diapers.$4",
+"OneKid_3": "I feel a lot older now that we have a child. Maybe it's just this new responsibility weighing on me.#$e#It's not bad! I've wanted this for a long time.$11#$b#And I've already had some good practice changing diapers. Speaking of which.$4#$b#::587:change:lavender pullup:1::",
 "TwoKids_0": "I already gave %kid1 and %kid2 their food. They're such hungry children!#$b#That's certainly ONE of the reasons the diaper budget is so high.$1",
   "TwoKids_1": "We have to make sure and give %kid1 a lot of attention now that we have %kid2. We don't want any jealousy between them.",
   "TwoKids_2": "I've had this dream that %kid2 grew wings and flew into the night sky. What does it mean?",
@@ -207,38 +207,69 @@
 "Good_4": "This place is really starting to feel like home.#$b#It probably helps that it already smelled like a nursery!$1",
 "Good_6": "You look so precious in your night time diapers!$1#$e#Did you know you sometimes suck your thumb at night?#$b#You were so cute I couldn't stand it.$11",
 
-"jobLeave_Penny":"I have to go into town today.#$b#$c .5#Make sure you try your best to make it to the potty, okay? I love you.#$e#Do you need help changing out of your night time diaper before I go?$4",
-"jobReturn_Penny":"#$c .6#Good evening. My day was fine, thanks! How was yours?$h#$e#Jas and Vincent weren't behaving very well today. I'm still all wound up...",
+"jobLeave_Penny":"I have to go into town today. Make sure you try your best to make it to the potty, okay?#$e#Do you need help changing out of your night time diaper before I go?$4#$b#%You blush and nod. Penny gently lies you down to clean you up, and with her own blush, tosses away your night time diaper.#$b#Okay, show me how you pull up your pull ups!$4#$b#::580:change:lavender pullup:1::",
+"jobReturn_Penny":"It's good to be home.#$b#Jas and Vincent weren't behaving very well today. I'm still all wound up...$3#$b#I'm sure you'll be a good little baby for me, right? Common, let's get you ready for bed.$1#$b#::581:change:baby print diaper:1::",
 
-  "funLeave_Penny": "I'm going to head into town today, just for fun. I'll be back in a while!",
-  "funReturn_Penny": "I had a nice time... It's good to stay in contact with everyone. Tell me about your day.",
+"funLeave_Penny": "I'm going to head into town today, just for fun. I'll be back in a while!#$b#Let's get you all ready for the day first.$1#$b#::585:change:lavender pullup:1::",
+"funReturn_Penny": "I had a nice time... It's good to stay in contact with everyone. Why don't you tell me about your day wile I get you ready for bed.#$b#::584:change:baby print diaper:1::",
 
-  "spring_8": "Spring is probably my favorite season. There's a certain freshness in the air that fills me with hope.",
-  "spring_1": "We've got a long, warm year to look forward to. Let's make it a productive one.",
-  "spring_15": "Ah, the 'spring cleaning'... I'm actually going to enjoy this.",
-"spring_3":"#$p 102#I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Jas is trying to use the potty. She really is. She's still not that great at it...$3#$e#I almost wanted to put her back in diapers yesterday just so it'd be easier to deal with.$1#$e#I'd never do that to her though, she tries so hard to earn her pull ups.",
+//Penny works Tuesday 2 9 16 23, Wednesday 3 10 17 24, Friday 5 12 19 26
+
+"spring_1": "We've got a long, warm year to look forward to. Let's make it a productive one.#$b#And that includes potty training! Let's get you ready for the day.$1#$b#::587:change:training pants:1::",
+"spring_3":"#$p 102#I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Jas is trying to use the potty. She really is. She's still not that great at it...$3#$e#I almost wanted to put her back in diapers yesterday just so it'd be easier to deal with.$1#$b#I'd never do that to her though, she tries so hard to earn her pull ups.",
+"spring_8": "Spring is probably my favorite season. There's a certain freshness in the air that fills me with hope.#$b#Well, there will be once I get you out of your bedtime diaper.$1#$b#::587:change:training pants:1::",
 "spring_12":"#$p 102#Are you excited for the Egg Festival tomorrow?|Vincent and Jas are really excited for the Egg Festival tomorrow.#$b#Jas got so excited talking about it that she had an accident.$3#$b#Vincent probably did too, but he was already wet, so I'd have no way of knowing!$1",
+"spring_15": "Ah, the 'spring cleaning'... I'm actually going to enjoy this.#$b#And the first task is my little farmer and their little bedtime diaper!$1#$b#::587:change:training pants:1::",
 "spring_16":"#$p 102#Hmm... maybe I should experiment with a new recipe. You liked the last recipe I made, didn't you, honey?|Tutoring Vincent and Jas can be a handful, especially with their potty issues.$3#$b#It doesn't bother me though, it's just another skill I can help them work on.#$e#At least, if I could get Vincent to work on it at all...$2",
+"spring_24":"It's the flower festival today! This is one of my favorites, I love dancing.$1#$b#Awww, are you scared about having an accident? Well, tell you what, how about I get you in a diaper so you don't have to worry about it?#$b#Well don't you look excited! It's just for today, okay?#$b#::589:change:baby print diaper:1::",
 
-  "summer_16": "*phew*... I need to eat more melon to combat this heat!",
-  "summer_1": "Summer may be searing hot, but the humidity feels great on the skin.",
-  "summer_2": "In summer, the ants become very active. I could watch them for hours... they have a pretty complex civilization from the looks of it!",
+"summer_1":"Summer may be searing hot, but the humidity feels great on the skin.#$b#I hope your skin isn't getting too hot in those night time diapers. Let's get them off you.#$b#::586:change:training pants:1::",
+"summer_2":"I'm leaving to tutor Vincent and Jas soon. Let me take care of you first.#$b#::586:change:training pants:1::",
+"summer_3":"I'm leaving to tutor Vincent and Jas soon. Let me take care of you first.#$b#::586:change:training pants:1::",
+"summer_5":"I'm leaving to tutor Vincent and Jas soon. Let me take care of you first.#$b#::586:change:training pants:1::",
+"summer_9":"I'm leaving to tutor Vincent and Jas soon. Let me take care of you first.#$b#::586:change:training pants:1::",
 "summer_10":"#$p 102#I'm excited to tutor Vincent and Jas today.|*Sigh* Vincent convinced Jas to use her pull up yesterday...$5#$e#It's hard to get him to take the potty seriously, but Jas has been trying really hard.$3#$b#Though, I don't think she would have made it this time anyway. She ended up making quite the mess.$2#$b#She seemed more relieved than embarrassed, so I guess it's okay.",
+"summer_12":"The Luau was a lot of fun yesterday, there was so much good food! You might have to go potty more today because of it, just keep that in mind, okay little @?$4.#$b#::586:change:training pants:1::",
+"summer_16": "I'm leaving to tutor Vincent and Jas soon. Let me take care of you first.#$b#::586:change:training pants:1::",
+"summer_17":"I'm leaving to tutor Vincent and Jas soon. Let me take care of you first.#$b#::586:change:training pants:1::",
+"summer_19":"I'm leaving to tutor Vincent and Jas soon. Let me take care of you first.#$b#::586:change:training pants:1::",
+"summer_23":"I can tell you're getting sick of this heat. I am too, but summer's almost over.#$b#::586:change:training pants:1::",
 "summer_24":"#$p 102#I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Vincent used his diapers yesterday as usual.$3#$e#I know he can tell when he does it, but he never tells me when he's wet or messy.$5#$b#I swear that boy prefers to sit around in his used diapers.$1",
+"summer_26":"I'm leaving to tutor Vincent and Jas soon. Let me take care of you first.#$b#::586:change:training pants:1::",
+"summer_28":"It's the dance of the moonlight jellies tonight. It's such a great way to close out the summer. Now remember, they're for looking, not for touching$1#$b#::586:change:training pants:1::",
 
-  "fall_5": "The smell of fall reminds me of the smell of books... weird, isn't it?",
-  "fall_1": "Fall... It makes me think of colored paper and glue. Maybe I'm spending too much time with the children.$h",
-  "fall_2": "Will you grow any giant pumpkins this year?$11#$e#I'd consider planting them now a great birthday present!$1",
+"fall_1": "Fall... It makes me think of colored paper and glue. Maybe I'm spending too much time with the children.#$b#*giggles* I didn't mean you silly, but I guess it still fits. Let's get you ready for the day.$1#$b#::587:change:lavender pullup:1::",
+"fall_2": "Will you grow any giant pumpkins this year?$11#$e#I'd consider planting them now, they make a great birthday present!$1#$b$Wait, I didn't mean right right now, I still have to get you changed!$1#$b#::587:change:lavender pullup:1::",
+"fall_3":"This cooler weather is such a relief. I swear some of your bedtime diapers were just wet from sweat!#$b#%Penny leans in conspiratorially.#$b#I know it's been frustrating that your night diapers aren't as comfie in the summer, so I'm going to let you stay in this one until you're ready to change.$4#$b#Well don't you look excited!$1",
+"fall_5":"Friday is a tutor day for me. I'll be home for dinner, I promise. Let's get you ready before I go.#$b#::587:change:lavender pullup:1::",
+"fall_9":"Tuesday is a tutor day for me. I'll be home for dinner, I promise. Let's get you ready before I go.#$b#::587:change:lavender pullup:1::",
+"fall_10":"#$p 102#I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Vincent used his diapers yesterday as usual.$3#$e#I know he can tell when he does it, but he never tells me when he's wet or messy.$5#$b#I swear that boy prefers to sit around in his used diapers.$1",
 "fall_11":"#$p 102#I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Jas is trying to use the potty. She really is. She's still not that great at it...$3#$e#I almost wanted to put her back in diapers yesterday just so it'd be easier to deal with.$1#$e#I'd never do that to her though, she tries so hard to earn her pull ups.",
+"fall_12":"Friday is a tutor day for me. I'll be home for dinner, I promise. Let's get you ready before I go.#$b#::587:change:lavender pullup:1::",
+"fall_16":"Tuesday is a tutor day for me. I'll be home for dinner, I promise. Let's get you ready before I go.#$b#::587:change:lavender pullup:1::",
+"fall_17":"It's the county fair tomorrow, and I want you to make the best impression possible!#$b#And because I want you to focus so much on that, I'm going to put you in diapers today. Don't worry about the potty, just for today, okay?$4#$b#::590:change:baby print diaper:1::",
+"fall_19":"Friday is a tutor day for me. I'll be home for dinner, I promise. Let's get you ready before I go.#$b#::587:change:lavender pullup:1::",
 "fall_23":"#$p 102#Hmm... maybe I should experiment with a new recipe. You liked the last recipe I made, didn't you, honey?|Tutoring Vincent and Jas can be a handful, especially with their potty issues.$3#$b#It doesn't bother me though, it's just another skill I can help them work on.#$e#At least, if I could get Vincent to work on it at all...$2",
+"fall_24":"Wednesday is a tutor day for me. I'll be home for dinner, I promise. Let's get you ready before I go.#$b#::587:change:lavender pullup:1::",
+"fall_26":"Friday is a tutor day for me. I'll be home for dinner, I promise. Let's get you ready before I go.#$b#::587:change:lavender pullup:1::",
+"fall_27":"I don't know if you should go in that scary maze, it's not really meant for little kids. Well, if you hold my hand I think it will be okay. Now common, let's get you ready.$1#$b#::587:change:lavender pullup:1::",
 
-  "winter_1": "Winter's a good time to unwind a bit. You deserve it after the long year!",
-  "winter_6": "The falling snow reminds me of grandma, rocking by the fire. I have this vivid memory of her shadow, flickering against the orange wood... That was long ago.",
+"winter_1": "Winter's a good time to unwind a bit. You deserve it after the long year!#$b#Let's start it strong and make it to the potty every time, okay?#$b#::588:change:training pants:1::",
+"winter_2":"Good morning sleepy head. That cozy bed is getting harder to escape now that it's cold, isn't it. Common, let's brave the cold once more and get you cleaned up.#$b#::588:change:training pants:1::",
 "winter_3": "If you're having lots of fun playing in the snow, I'd understand if you had a little accident.$4",
+"winter_5":"Good morning sleepy head. That cozy bed is getting harder to escape now that it's cold, isn't it. Common, let's brave the cold once more and get you cleaned up.#$b#::588:change:training pants:1::",
+"winter_6": "The falling snow reminds me of grandma, rocking by the fire. I have this vivid memory of her shadow, flickering against the orange wood...#$b#That was long ago. Now I'm making new memories. And new routines. Let's get you ready for the day.::588:change:training pants:1::",
+"winter_7":"Today I want you to color me a picture of a snowman, and tomorrow we can build it! How does that sound?#$b#You're so precious when you're excited, okay, let's get you ready.$1#$b#::588:change:training pants:1::",
+"winter_9":"Good morning sleepy head. That cozy bed is getting harder to escape now that it's cold, isn't it. Common, let's brave the cold once more and get you cleaned up.#$b#::588:change:training pants:1::",
 "winter_10":"#$p 102#I'm excited to tutor Vincent and Jas today.|*Sigh* Vincent convinced Jas to use her pull up yesterday...$5#$e#It's hard to get him to take the potty seriously, but Jas has been trying really hard.$3#$b#Though, I don't think she would have made it this time anyway. She ended up making quite the mess.$2#$b#She seemed more relieved than embarrassed, so I guess it's okay.",
+"winter_12":"Good morning sleepy head. That cozy bed is getting harder to escape now that it's cold, isn't it. Common, let's brave the cold once more and get you cleaned up.#$b#::588:change:training pants:1::",
+"winter_17":"Good morning sleepy head. That cozy bed is getting harder to escape now that it's cold, isn't it. Common, let's brave the cold once more and get you cleaned up.#$b#::588:change:training pants:1::",
+"winter_19":"Good morning sleepy head. That cozy bed is getting harder to escape now that it's cold, isn't it. Common, let's brave the cold once more and get you cleaned up.#$b#::588:change:training pants:1::",
+"winter_23":"I can tell you're getting sick of the cold. Don't worry, winter is almost over.#$b#Let's get you all clean, okay?$4#$b#::586:change:training pants:1::",
 "winter_24":"#$p 102#I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Vincent used his diapers yesterday as usual.$3#$e#I know he can tell when he does it, but he never tells me when he's wet or messy.$5#$b#I swear that boy prefers to sit around in his used diapers.$1",
-						
+"winter_26":"Good morning sleepy head. That cozy bed is getting harder to escape now that it's cold, isn't it. Common, let's brave the cold once more and get you cleaned up.#$b#::588:change:training pants:1::",
+
 			}
-		}	
+		}
 	]
-}			
+}

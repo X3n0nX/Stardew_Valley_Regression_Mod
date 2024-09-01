@@ -13,8 +13,6 @@ namespace PrimevalTitmouse
         public bool NoFriendshipPenalty { get; set; } = true;
         public bool NoHungerAndThirst { get; set; } = false;
         public bool Wetting { get; set; } = true;
-
-        public int SpriteSheet { get; set; } = 1;
         public int BladderLossContinenceRate { get; set; } = 1;
         public int BowelLossContinenceRate { get; set; } = 1;
         public int BladderGainContinenceRate { get; set; } = 1;

@@ -8,9 +8,5 @@
   "ContentPackFor": {
   "UniqueID": "Pathoschild.ContentPatcher"
 	},
-	"Dependencies": [
-   {
-      "UniqueID": "Zippity21.Regression",
-   }
-]
+  "Dependencies": []
 }

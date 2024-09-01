@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Regression;
 using GenericModConfigMenu;
 using StardewModdingAPI;
@@ -7,10 +6,13 @@ using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Locations;
 using StardewValley.Menus;
+using StardewValley.Objects;
 using StardewValley.Tools;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
+using xTile.Dimensions;
 
 namespace PrimevalTitmouse
 {
@@ -218,16 +220,6 @@ namespace PrimevalTitmouse
 
               );
 
-            configMenu.AddNumberOption(
-                  mod: ModManifest,
-                  name: () => "*Diaper Spritesheet Index",
-                  tooltip: () => "Changes the spritesheet that diapers use. *Requires restart",
-                  getValue: () => config.SpriteSheet,
-                  setValue: value => config.SpriteSheet = value
-
-
-              );
-
             configMenu.AddBoolOption(
                   mod: ModManifest,
                   name: () => "Debug Mode",
@@ -243,8 +235,8 @@ namespace PrimevalTitmouse
         public void DrawStatusBars()
         {
 
-            int x1 = Game1.graphics.GraphicsDevice.Viewport.GetTitleSafeArea().Right - (65 + (int)((StatusBars.barWidth)));
-            int y1 = Game1.graphics.GraphicsDevice.Viewport.GetTitleSafeArea().Bottom - (25 + (int)((StatusBars.barHeight)));
+            int x1 = Game1.graphics.GraphicsDevice.Viewport.TitleSafeArea.Right - (65 + (int)((StatusBars.barWidth)));
+            int y1 = Game1.graphics.GraphicsDevice.Viewport.TitleSafeArea.Bottom - (25 + (int)((StatusBars.barHeight)));
 
             if (Game1.currentLocation is MineShaft || Game1.currentLocation is Woods || Game1.currentLocation is SlimeHutch || Game1.currentLocation is VolcanoDungeon || who.health < who.maxHealth)
                 x1 -= 58;
@@ -275,7 +267,7 @@ namespace PrimevalTitmouse
             if (!config.Wetting && !config.Messing)
                 return;
             int y2 = (Game1.player.questLog).Count == 0 ? 250 : 310;
-            Animations.DrawUnderwearIcon(body.underwear, Game1.graphics.GraphicsDevice.Viewport.GetTitleSafeArea().Right - 94, y2);
+            Animations.DrawUnderwearIcon(body.underwear, Game1.graphics.GraphicsDevice.Viewport.TitleSafeArea.Right - 94, y2);
         }
 
         private void GiveUnderwear()
@@ -283,10 +275,22 @@ namespace PrimevalTitmouse
             List<Item> objList = new List<Item>();
             foreach (string validUnderwearType in Strings.ValidUnderwearTypes())
                 objList.Add(new Underwear(validUnderwearType, 0.0f, 0.0f, 20));
-            objList.Add(new StardewValley.Object(399, 99, false, -1, 0));
-            objList.Add(new StardewValley.Object(348, 99, false, -1, 0));
+            objList.Add(new StardewValley.Object("399", 99, false, -1, 0));
+            objList.Add(new StardewValley.Object("348", 99, false, -1, 0));
             Game1.activeClickableMenu = new ItemGrabMenu(objList);
         }
+
+        private static void restoreItems(StardewValley.Inventories.Inventory items, Dictionary<int, Dictionary<string, string>> invReplacement)
+        {
+            foreach (KeyValuePair<int, Dictionary<string, string>> entry in invReplacement)
+            {
+                var underwear = new Underwear();
+                underwear.rebuild(entry.Value, items[entry.Key]);
+                items[entry.Key] = underwear;
+            }
+        }
+
+
 
         private void ReceiveAfterDayStarted(object sender, DayStartedEventArgs e)
         {
@@ -294,6 +298,34 @@ namespace PrimevalTitmouse
             body = Helper.Data.ReadJsonFile<Body>(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName)) ?? new Body();
             started = true;
             who = Game1.player;
+
+            var invReplacement = Helper.Data.ReadJsonFile<Dictionary<int, Dictionary<string, string>>>(string.Format("{0}/RegressionSaveInv.json", Constants.SaveFolderName));
+            if (invReplacement != null)
+            {
+                restoreItems(Game1.player.Items, invReplacement);
+            }
+
+            var chestReplacement = Helper.Data.ReadJsonFile<Dictionary<string, Dictionary<int, Dictionary<string, string>>>>(string.Format("{0}/RegressionSaveChest.json", Constants.SaveFolderName));
+            if (chestReplacement != null)
+            {
+                int locId = 0;
+                foreach (var location in Game1.locations)
+                {
+                    foreach (var obj in location.Objects.Values)
+                    {
+                        var id = string.Format("{0}-{1}-{2}", locId, obj.TileLocation.X, obj.TileLocation.Y);
+                        if (obj is Chest chest && chestReplacement.ContainsKey(id))
+                        {
+                            restoreItems(chest.Items, chestReplacement[id]);
+                        }
+                    }
+                    locId++;
+                }
+                restoreItems(Game1.player.Items, invReplacement);
+            }
+
+
+
             Animations.AnimateNight(body);
             HandleMorning(sender, e);
             checkCooldown[0] = 0; checkCooldown[1] = 0; checkCooldown[2] = 0; checkCooldown[3] = 0; checkCooldown[4] = 0;
@@ -303,6 +335,25 @@ namespace PrimevalTitmouse
         {
             body.HandleMorning();
         }
+
+        private static Dictionary<int, Dictionary<string, string>> replaceItems(StardewValley.Inventories.Inventory items)
+        {
+            var replacements = new Dictionary<int, Dictionary<string, string>>();
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i] is Underwear)
+                {
+                    var underwear = (items[i] as Underwear);
+                    items[i] = underwear.getReplacement();
+                    replacements.Add(i, underwear.getAdditionalSaveData());
+                }
+            }
+
+            return replacements;
+        }
+
+
 
         //Save Mod related variables in separate JSON. Also trigger night handling if not on the very first day.
         private void BeforeSave(object Sender, SavingEventArgs e)
@@ -315,7 +366,32 @@ namespace PrimevalTitmouse
             if (string.IsNullOrWhiteSpace(Constants.SaveFolderName))
                 return;
 
+            var chestReplacements = new Dictionary<string, Dictionary<int, Dictionary<string, string>>>();
+
+            int locId = 0;
+            foreach (var location in Game1.locations)
+            {
+                foreach (var obj in location.Objects.Values)
+                {
+                    if (obj is Chest chest)
+                    {
+                        var id = string.Format("{0}-{1}-{2}", locId, obj.TileLocation.X, obj.TileLocation.Y);
+                        chestReplacements.Add(id, replaceItems(chest.Items));
+                    }
+                }
+
+                foreach (var furn in location.furniture.OfType<StorageFurniture>())
+                {
+                    Monitor.Log(string.Format("Found storage furniture {0}", furn.DisplayName), LogLevel.Info);
+                }
+                locId++;
+            }
+
+            var invReplacements = replaceItems(Game1.player.Items);
+
             Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName), body);
+            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSaveInv.json", Constants.SaveFolderName), invReplacements);
+            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSaveChest.json", Constants.SaveFolderName), chestReplacements);
         }
 
         private void ReceiveUpdateTick(object sender, OneSecondUpdateTickingEventArgs e)
@@ -346,7 +422,7 @@ namespace PrimevalTitmouse
         //Determine if we need to handle time passing (not the same as Game time passing)
         private static bool ShouldTimePass()
         {
-            return ((Game1.game1.IsActive || Game1.options.pauseWhenOutOfFocus == false) && (Game1.paused == false && Game1.dialogueUp == false) && (Game1.currentMinigame == null && Game1.eventUp == false && (Game1.activeClickableMenu == null && Game1.menuUp == false)) && Game1.fadeToBlack == false);
+            return ((Game1.game1.IsActive || Game1.options.pauseWhenOutOfFocus == false) && (Game1.paused == false && Game1.dialogueUp == false) && (Game1.currentMinigame == null && Game1.eventUp == false && Game1.activeClickableMenu == null) && Game1.fadeToBlack == false);
         }
 
         //Interprete key-presses
@@ -427,14 +503,16 @@ namespace PrimevalTitmouse
 
 
 
+
+
             //If we try to sleep, check if the bed is done drying (only matters in Hard Mode)
             if (Game1.currentLocation is FarmHouse && (attemptToSleepMenu = e.NewMenu as DialogueBox) != null && Game1.currentLocation.lastQuestionKey == "Sleep" && !config.Easymode)
             {
                 //If enough time has passed, the bed has dried
                 if (body.bed.IsDrying())
                 {
-                    List<Response> sleepAttemptResponses = attemptToSleepMenu.responses;
-                    if (sleepAttemptResponses.Count == 2)
+                    Response[] sleepAttemptResponses = attemptToSleepMenu.responses;
+                    if (sleepAttemptResponses.Length == 2)
                     {
                         Response response = sleepAttemptResponses[1];
                         Game1.currentLocation.answerDialogue(response);
@@ -494,9 +572,8 @@ namespace PrimevalTitmouse
                     foreach(string type in availableUnderwear)
                     {
                         Underwear underwear = new Underwear(type, 0.0f, 0.0f, 1);
-                        int[] priceAndQty = new int[2] {underwear.container.price, 999};
                         currentShopMenu.forSale.Add(underwear);
-                        currentShopMenu.itemPriceAndStock.Add(underwear, priceAndQty);
+                        currentShopMenu.itemPriceAndStock.Add(underwear, new ItemStockInformation(underwear.container.price, 999));
                     }
                 }
             }
@@ -520,8 +597,7 @@ namespace PrimevalTitmouse
             int x = (int)toolLocation.X;
             int y = (int)toolLocation.Y;
             Vector2 vector2 = new Vector2((float)(x / Game1.tileSize), y / Game1.tileSize);
-            return currentLocation is BuildableGameLocation && (currentLocation as BuildableGameLocation).getBuildingAt(vector2) != null && ((currentLocation as BuildableGameLocation).getBuildingAt(vector2).buildingType.Value.Equals("Well") && (currentLocation as BuildableGameLocation).getBuildingAt(vector2).daysOfConstructionLeft.Value <= 0);
-
+            return currentLocation.IsBuildableLocation() && currentLocation.getBuildingAt(vector2) != null && (currentLocation.getBuildingAt(vector2).buildingType.Value.Equals("Well") && currentLocation.getBuildingAt(vector2).daysOfConstructionLeft.Value <= 0);
         }
 
         //Handle Mouse Clicks/Movement
@@ -537,8 +613,7 @@ namespace PrimevalTitmouse
             if (e.Button == SButton.MouseLeft)
             {
                 //If Left click is already being interpreted by another event (or we otherwise wouldn't process such an event. Ignore it.
-                if ((Game1.dialogueUp || Game1.currentMinigame != null || (Game1.eventUp || Game1.activeClickableMenu != null) || Game1.menuUp || Game1.fadeToBlack) || (who.isRidingHorse() || !who.canMove || (Game1.player.isEating || who.canOnlyWalk) || who.FarmerSprite.pauseForSingleAnimation))
-                    return;
+                if ((Game1.dialogueUp || Game1.currentMinigame != null || (Game1.eventUp || Game1.activeClickableMenu != null) || Game1.fadeToBlack) || (who.isRidingHorse() || !who.canMove || (Game1.player.isEating || who.canOnlyWalk) || who.FarmerSprite.pauseForSingleAnimation)) return;
 
                 ////If we're holding the watering can, attempt to drink from it.
                 /////This is the highest priority (apparently?)
@@ -616,7 +691,7 @@ namespace PrimevalTitmouse
             for (int i = 0; i < checkCooldown.Length; i++)
             {
                 if(checkCooldown[i] > 0) checkCooldown[i]--;
-                if(config.Debug)this.Monitor.Log($"Cooldown {i} is {checkCooldown[i]}", LogLevel.Debug);
+                //if(config.Debug)this.Monitor.Log($"Cooldown {i} is {checkCooldown[i]}", LogLevel.Debug);
             }
 
             //If its 6:10AM, handle delivering mail
@@ -643,9 +718,15 @@ namespace PrimevalTitmouse
                 NPC npc = Game1.currentSpeaker;
                 Dialogue dialogue;
                 npc.CurrentDialogue.TryPeek(out dialogue);
-                string text = dialogue.dialogues[dialogue.currentDialogueIndex];
 
-                return text;
+                if (dialogue.currentDialogueIndex > dialogue.dialogues.Count - 1) return null;
+
+
+                if (dialogue.dialogues[dialogue.currentDialogueIndex].Text != null)
+                {
+                    string line = dialogue.dialogues[dialogue.currentDialogueIndex].Text;
+                    return line;
+                }
             }
 
             return null;
@@ -653,18 +734,15 @@ namespace PrimevalTitmouse
 
         public void CheckForDialogueCommands()
         {
-            if (Game1.dialogueUp && Game1.currentSpeaker != null)
-            {
-                NPC npc = Game1.currentSpeaker;
-                Dialogue dialogue;
-
-                npc.CurrentDialogue.TryPeek(out dialogue);
-                string text = dialogue.dialogues[dialogue.currentDialogueIndex];
+            if (ReturnCurrentDialogue == null) return;
+            string text = ReturnCurrentDialogue();
 
 
+            NPC npc = Game1.currentSpeaker;
+            Dialogue dialogue;
 
 
-                if (text != null && text.Contains("::"))
+            if (text != null && text.Contains("::"))
                 {
 
                     string[] parsedString = text.Split("::");
@@ -677,6 +755,8 @@ namespace PrimevalTitmouse
                     string raw = "";
 
                     diag.TryGetValue(id, out raw);
+
+                    this.Monitor.Log("Raw dialogue: " + raw, LogLevel.Debug);
 
                     string diaper = item;
 
@@ -697,14 +777,13 @@ namespace PrimevalTitmouse
 
 
 
-                    dialogue = new Dialogue(raw, npc);
+                    dialogue = new Dialogue(npc, null, Strings.InsertVariables(Strings.ReplaceAndOr(raw, body.underwear.messiness == 0, body.underwear.messiness > 0, "&"),body,(Container)null));
 
 
                     npc.CurrentDialogue.Clear();
                     npc.CurrentDialogue.Push(dialogue);
                     Game1.drawDialogue(npc);
                 }
-            }
 
         }
 
@@ -716,12 +795,14 @@ namespace PrimevalTitmouse
             string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
             DirectoryInfo d = new DirectoryInfo(newPath + "\\Regression Dialogue\\Dialogue\\NPCs\\");
 
+            this.Monitor.Log("Initialize 1", LogLevel.Debug);
 
-                var lines = File.ReadLines(d.ToString() + "trigger.txt");
+            var lines = File.ReadLines(d.ToString() + "trigger.txt");
 
                 foreach (var line in lines)
                 {
-                    List<string> strings = new List<string>();
+                    if (!line.Contains("||")) continue;
+                List<string> strings = new List<string>();
                     string[] stringArray = line.Split("||");
 
                 for (int i = 0; i < stringArray.Length; i++) strings.Add(stringArray[i]);

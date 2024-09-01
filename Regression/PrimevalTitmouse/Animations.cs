@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Characters;
 using StardewValley.Menus;
@@ -10,6 +11,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace PrimevalTitmouse
 {
@@ -32,6 +34,7 @@ namespace PrimevalTitmouse
         public static readonly int poopAnimationTime = 2000; //ms
         public static readonly int peeAnimationTime = 2000; //ms
         //Magic Constants
+        public const string SPRITES = "Assets/sprites.png";
         public const int PAUSE_TIME = 20000;
         public const float DRINK_ANIMATION_INTERVAL = 80f;
         public const int DRINK_ANIMATION_FRAMES = 8;
@@ -66,17 +69,10 @@ namespace PrimevalTitmouse
 
 
         public static Texture2D GetSprites()
-        { 
+        {
 
-            if (File.Exists(Regression.help.DirectoryPath+ "\\Assets\\sprites" + Regression.config.SpriteSheet + ".png"))
-            {
-                sprites ??= Regression.help.Content.Load<Texture2D>("Assets/sprites" + Regression.config.SpriteSheet + ".png", StardewModdingAPI.ContentSource.ModFolder);
-            }
-            else
-            {
-                sprites ??= Regression.help.Content.Load<Texture2D>("Assets/sprites1.png", StardewModdingAPI.ContentSource.ModFolder);
-            }
-                return sprites;
+            sprites ??= Regression.help.ModContent.Load<Texture2D>(SPRITES);
+            return sprites;
         }
 
         public static Farmer GetWho()
@@ -127,7 +123,7 @@ namespace PrimevalTitmouse
         public static void AnimateMessingStart(Body b, bool voluntary, bool inUnderwear)
         {
 
-            if (b.IsFishing()) return;
+            if (b.IsFishing() || !Animations.GetWho().canMove) return;
 
             if (b.underwear.removable || inUnderwear)
                 Game1.playSound("slosh");
@@ -157,8 +153,7 @@ namespace PrimevalTitmouse
             //Animations.GetWho().forceCanMove();
             //Animations.GetWho().completelyStopAnimatingOrDoingAction();
             Animations.GetWho().jitterStrength = 1.0f;
-            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.GetWho().position - new Vector2(((Character)Animations.GetWho()).facingDirection == 1 ? 0.0f : (float)-Game1.tileSize, (float)(Game1.tileSize * 2)), false, ((Character)Animations.GetWho()).facingDirection == 1, (float)((Character)Animations.GetWho()).getStandingY() / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
-         
+            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.GetWho().position.Value - new Vector2(((Character)Animations.GetWho()).facingDirection.Value == 1 ? 0.0f : (float)-Game1.tileSize, (float)(Game1.tileSize * 2)), false, ((Character)Animations.GetWho()).facingDirection.Value == 1, (float)((Character)Animations.GetWho()).StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
             Animations.GetWho().freezePause = poopAnimationTime;
             Animations.GetWho().canMove = false;
             Animations.GetWho().doEmote(12, false);
@@ -168,12 +163,12 @@ namespace PrimevalTitmouse
 
             if (b.IsFishing()) return;
             Game1.playSound("coin");
-            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.GetWho().position - new Vector2(Animations.GetWho().facingDirection == 1 ? 0.0f : -Game1.tileSize, Game1.tileSize * 2), false, Animations.GetWho().facingDirection == 1, Animations.GetWho().getStandingY() / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
+            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.GetWho().position.Value - new Vector2(Animations.GetWho().facingDirection.Value == 1 ? 0.0f : -Game1.tileSize, Game1.tileSize * 2), false, Animations.GetWho().facingDirection.Value == 1, Animations.GetWho().StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
         }
 
         public static void AnimateWettingStart(Body b, bool voluntary, bool inUnderwear)
         {
-            if (b.IsFishing()) return;
+            if (b.IsFishing() || !Animations.GetWho().canMove) return;
 
 
             if (b.underwear.removable || inUnderwear)
@@ -196,10 +191,8 @@ namespace PrimevalTitmouse
                 else
                     Animations.Say(Animations.GetData().Pee_Voluntary + " STANDARD", b);
 
-                ((List<TemporaryAnimatedSprite>)((GameLocation)Animations.GetWho().currentLocation).temporarySprites).Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
-                HoeDirt terrainFeature;
-                if (Animations.GetWho().currentLocation.terrainFeatures.ContainsKey(((Character)Animations.GetWho()).getTileLocation()) && (terrainFeature = Animations.GetWho().currentLocation.terrainFeatures[((Character)Animations.GetWho()).getTileLocation()] as HoeDirt) != null)
-                    terrainFeature.state.Value = 1;
+                ((GameLocation)Animations.GetWho().currentLocation).temporarySprites.Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position.Value, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0)); HoeDirt terrainFeature;
+                if (Animations.GetWho().currentLocation.terrainFeatures.ContainsKey(((Character)Animations.GetWho()).Tile) && (terrainFeature = Animations.GetWho().currentLocation.terrainFeatures[((Character)Animations.GetWho()).Tile] as HoeDirt) != null) terrainFeature.state.Value = 1;
             }
             else if (voluntary)
                 Animations.Say(Animations.GetData().Wet_Voluntary, b);
@@ -219,10 +212,8 @@ namespace PrimevalTitmouse
             if (b.IsFishing()) return;
             if ((double)b.pants.wetness > (double)b.pants.absorbency)
             {
-                ((List<TemporaryAnimatedSprite>)((GameLocation)Animations.GetWho().currentLocation).temporarySprites).Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
-                HoeDirt terrainFeature;
-                if (Animations.GetWho().currentLocation.terrainFeatures.ContainsKey(((Character)Animations.GetWho()).getTileLocation()) && (terrainFeature = Animations.GetWho().currentLocation.terrainFeatures[((Character)Animations.GetWho()).getTileLocation()] as HoeDirt) != null)
-                    terrainFeature.state.Value = 1;
+                ((GameLocation)Animations.GetWho().currentLocation).temporarySprites.Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position.Value, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0)); HoeDirt terrainFeature;
+                if (Animations.GetWho().currentLocation.terrainFeatures.ContainsKey(((Character)Animations.GetWho()).Tile) && (terrainFeature = Animations.GetWho().currentLocation.terrainFeatures[((Character)Animations.GetWho()).Tile] as HoeDirt) != null) terrainFeature.state.Value = 1;
             }
         }
 
@@ -319,15 +310,6 @@ namespace PrimevalTitmouse
             }
         }
 
-
-        public static Texture2D Bitmap2Texture(Bitmap bmp)
-        {
-            MemoryStream memoryStream = new MemoryStream();
-            bmp.Save((Stream)memoryStream, ImageFormat.Png);
-            memoryStream.Seek(0L, SeekOrigin.Begin);
-            return Texture2D.FromStream(((GraphicsDeviceManager)Game1.graphics).GraphicsDevice, (Stream)memoryStream);
-        }
-
         public static void CheckPants(Body b)
         {
             StardewValley.Objects.Clothing pants = (StardewValley.Objects.Clothing)Animations.GetWho().pantsItem.Value;
@@ -357,8 +339,8 @@ namespace PrimevalTitmouse
                     string source = Strings.DescribeUnderwear(c, (string)null);
                     string str = source.First<char>().ToString().ToUpper() + source.Substring(1);
                     int num = Game1.tileSize * 6 + Game1.tileSize / 6;
-                    IClickableMenu.drawHoverText((SpriteBatch)Game1.spriteBatch, Game1.parseText(str, (SpriteFont)Game1.tinyFont, num), (SpriteFont)Game1.smallFont, 0, 0, -1, (string)null, -1, (string[])null, (Item)null, 0, -1, -1, -1, -1, 1f, (CraftingRecipe)null);
-                }            
+                IClickableMenu.drawHoverText((SpriteBatch)Game1.spriteBatch, Game1.parseText(str, (SpriteFont)Game1.tinyFont, num), (SpriteFont)Game1.smallFont, 0, 0, -1, (string)null, -1, (string[])null, (Item)null, 0, null, -1, -1, -1, 1f, (CraftingRecipe)null);
+            }            
         }
 
         private static void EndDrinking(Farmer who)
@@ -369,9 +351,8 @@ namespace PrimevalTitmouse
 
         public static void HandlePasserby()
         {
-            if (Utility.isThereAFarmerOrCharacterWithinDistance(Animations.GetWho().getTileLocation(), 3, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
-                return;
-            npc.CurrentDialogue.Push(new Dialogue("Oh wow, your diaper is all wet!", npc));
+            if (Utility.isThereAFarmerOrCharacterWithinDistance(Animations.GetWho().Tile, 3, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name)) return;
+            npc.CurrentDialogue.Push(new Dialogue(npc, null, "Oh wow, your diaper is all wet!"));
         }
 
         public static bool HandleVillager(Body b, bool mess, bool inUnderwear, bool overflow, bool attempt = false, int baseFriendshipLoss = 20, int radius = 3)
@@ -405,8 +386,7 @@ namespace PrimevalTitmouse
 
             //Get NPC in radius
             //<TODO> This needs to be reworked to get a list of NPCs
-            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).getTileLocation(), radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
-                return false;
+            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).Tile, radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name)) return false;
 
             //Reduce the loss if the person likes you (more forgiving)
             int heartLevelForNpc = Animations.GetWho().getFriendshipHeartLevelForNPC(npc.getName());
@@ -420,7 +400,7 @@ namespace PrimevalTitmouse
 
             if (npc.ToString().Contains("StardewValley.Monsters")) return false;
 
-            if (npc is Horse || npc is Cat || npc is Dog)
+            if (npc is Horse || npc is Pet)
             {
                 npcType.Add("animal");
                 npcName += string.Format("{0}: ", npc.Name);
@@ -496,7 +476,7 @@ namespace PrimevalTitmouse
 
             //Construct and say Statement
             string npcStatement = npcName + Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
-            npc.setNewDialogue(npcStatement, true, true);
+            npc.setNewDialogue(new Dialogue(npc, null, npcStatement), true, true);
             Game1.drawDialogue(npc);
             return someoneNoticed;
         }
@@ -506,12 +486,11 @@ namespace PrimevalTitmouse
             bool someoneNoticed = true;
             int actualLoss = -(baseFriendshipLoss / 20);
 
-            
+
 
             //Get NPC in radius
             //<TODO> This needs to be reworked to get a list of NPCs
-            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).getTileLocation(), radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
-                return false;
+            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).Tile, radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name)) return false;
 
             //Reduce the loss if the person likes you (more forgiving)
             int heartLevelForNpc = Animations.GetWho().getFriendshipHeartLevelForNPC(npc.getName());
@@ -525,7 +504,7 @@ namespace PrimevalTitmouse
 
             if (npc.ToString().Contains("StardewValley.Monsters")) return false;
 
-            if (npc is Horse || npc is Cat || npc is Dog)
+            if (npc is Horse || npc is Pet)
             {
                 return false;
             }
@@ -558,26 +537,13 @@ namespace PrimevalTitmouse
 
             //Abigail, Jodi, Vincent, Jas, Penny, and Sam recieve no penalty because they are diaper or CG related characters and are predisposed to it.
 
-            if (!Regression.config.Debug)
-            {
-                if (npc.getName() == "Abigail" && Regression.checkCooldown[0] != 0) return false;
-                if (npc.getName() == "Sam" && Regression.checkCooldown[1] != 0) return false;
-                if (npc.getName() == "Haley" && Regression.checkCooldown[2] != 0) return false;
-                if (npc.getName() == "Vincent" && Regression.checkCooldown[3] != 0) return false;
-                if (npc.getName() == "Jas" && Regression.checkCooldown[4] != 0) return false;
-            }
+            
 
 
             var rand = Regression.rnd.NextDouble();
 
-            if (IsDiapered(npc))
-            {
-                if (rand < 0.3f)
-                    responseKey += "soiled_";
-                else if (rand < 0.6f)
-                    responseKey += "wet_";
-                else responseKey += "dry_";
-            }
+
+            responseKey += "check_";
 
             if (npcType.Contains("animal"))
             {
@@ -602,10 +568,17 @@ namespace PrimevalTitmouse
                 }
                 else responseKey += "mean";
 
-                responseKey += "_check";
 
+            if (!Regression.config.Debug)
+            {
+                if (npc.getName() == "Abigail" && Regression.checkCooldown[0] != 0) responseKey = "cooldown_check";
+                if (npc.getName() == "Sam" && Regression.checkCooldown[1] != 0) responseKey = "cooldown_check";
+                if (npc.getName() == "Haley" && Regression.checkCooldown[2] != 0) responseKey = "cooldown_check";
+                if (npc.getName() == "Vincent" && Regression.checkCooldown[3] != 0) responseKey = "cooldown_check";
+                if (npc.getName() == "Jas" && Regression.checkCooldown[4] != 0) responseKey = "cooldown_check";
+            }
 
-                switch (npc.getName())
+            switch (npc.getName())
                 {
                     case "Abigail":
                         Regression.checkCooldown[0] = 24;
@@ -622,8 +595,6 @@ namespace PrimevalTitmouse
                     case "Jas":
                         Regression.checkCooldown[4] = 24;
                         break;
-                    default:
-                        return false;
 
 
                 }
@@ -649,8 +620,10 @@ namespace PrimevalTitmouse
             }
 
             //Construct and say Statement
+            
             string npcStatement = npcName + Strings.InsertVariables((Strings.RandString(stringList3.ToArray())), b, (Container)null);
-            npc.setNewDialogue(npcStatement, true, true);
+            if (Regression.config.Debug) Regression.monitor.Log(npcStatement, LogLevel.Debug);
+            npc.setNewDialogue(new Dialogue(npc, null, npcStatement), true, true);
             Game1.drawDialogue(npc);
             return someoneNoticed;
         }
@@ -664,8 +637,7 @@ namespace PrimevalTitmouse
 
             //Get NPC in radius
             //<TODO> This needs to be reworked to get a list of NPCs
-            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).getTileLocation(), radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
-                return false;
+            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).Tile, radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name)) return false;
 
             //Reduce the loss if the person likes you (more forgiving)
             int heartLevelForNpc = Animations.GetWho().getFriendshipHeartLevelForNPC(npc.getName());
@@ -679,7 +651,7 @@ namespace PrimevalTitmouse
 
             if (npc.ToString().Contains("StardewValley.Monsters")) return false;
 
-            if (npc is Horse || npc is Cat || npc is Dog)
+            if (npc is Horse || npc is Pet)
             {
                 return false;
             }
@@ -704,8 +676,9 @@ namespace PrimevalTitmouse
             string responseKey = "";
 
             //Otherwise, we are soiling ourselves
-            if (b.underwear.messiness > 0 || b.underwear.wetness > 0) responseKey += "soiled";
-            else responseKey += "dry";
+            if (b.underwear.messiness > 0 || b.underwear.wetness > 0) responseKey += "soiled_";
+
+            responseKey += "change";
 
             //Animals only have a "nice" reponse
             if (npcType.Contains("animal"))
@@ -738,7 +711,7 @@ namespace PrimevalTitmouse
             }
             else responseKey += "_mean";
 
-            responseKey += "_change";
+            
 
 
             //If we're in debug mode, notify how the relationship was effected
@@ -755,23 +728,25 @@ namespace PrimevalTitmouse
             {
                 Dictionary<string, string[]> dictionary;
                 string[] strArray;
+                Regression.monitor.Log(key2, LogLevel.Warn);
+                Regression.monitor.Log(responseKey, LogLevel.Warn);
                 if (Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
                     stringList3.AddRange((IEnumerable<string>)strArray);
             }
 
+            Regression.monitor.Log(stringList3.Count.ToString(), LogLevel.Warn);
+
             //Construct and say Statement
-            string rndString = Strings.RandString(stringList3.ToArray());
-            Dialogue npcDiag = new Dialogue(rndString, npc);
-            Regression.monitor.Log(rndString, StardewModdingAPI.LogLevel.Warn);
-            npc.CurrentDialogue.Clear();
-            npc.CurrentDialogue.Push(npcDiag);
+            string npcStatement = npcName + Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), b.underwear.messiness == 0, b.underwear.messiness > 0, "&"), b, (Container)null);
+            if (Regression.config.Debug) Regression.monitor.Log(npcStatement, LogLevel.Debug);
+            npc.setNewDialogue(new Dialogue(npc, null, npcStatement), true, true);
             Game1.drawDialogue(npc);
             return someoneNoticed;
         }
 
         public static Texture2D LoadTexture(string file)
         {
-            return Animations.Bitmap2Texture(new Bitmap(Image.FromFile(Path.Combine(Regression.help.DirectoryPath, "Assets", file))));
+            return Regression.help.ModContent.Load<Texture2D>(Path.Combine("Assets", file));
         }
 
         public static void Say(string msg, Body b = null)

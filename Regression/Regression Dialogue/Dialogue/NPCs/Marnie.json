@@ -1,0 +1,70 @@
+{
+	"Changes":[
+		{
+			"LogName":"Marnie",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Marnie",
+			"Entries":{				
+  "Introduction": "Ah, Mayor Lewis told me you just arrived. I'm Marnie!#$e#I sell livestock and animal care products at my ranch. You should swing by some time.$h",
+  "Resort": "Hehe... finally a chance to show off all my hard work at aerobics club.$h",
+  "Resort_Leaving": "I feel warm.",
+  "Resort_Shore": "Hee hee... It's interesting to see everyone in their bathing suits.",
+  "Resort_Chair": "Ew... the chair's wet.",
+  "Resort_Bar": "Phew... It's hot!$s",
+  "reject_789": "Gah!$4#$b#...Um... What? Heh.. I don't know what that is...$3",
+
+  "Mon": "I love animals, Mr. @. If you treat yours well I'm sure we'll become good friends!^I just love animals, Ms. @. Treat them kindly and we'll become friends, I'm sure!",
+  "Mon4": "Animals are so innocent, so sweet. And If I don't look after them, who will?$s#$e#I just hope my chickens aren't too upset when I take their eggs.$s",
+"Mon8":"Hold on, you got a bat in the cave.$3#$b#%Marnie holds a handkerchief up to your nose quicker than you can react.#$b#Blow.#$e#Good boy!$1^Good girl!$1",
+
+  "Tue": "My nephew Shane has been staying at my place the last few months.#$e#He helps me out with the chickens, so I'm not complaining.",
+"Tue2":"It's great seeing a young, fresh face around town!$1#$b#Things have gotten fairly stale around here, if I'm being honest...$2",
+"Tue6":"#$p 102#Well aren't you looking bubbly today.$1|I think Vincent is a bad influence. How is Jas supposed to use the bathroom when her only peer refuses to...$2",
+
+  "Wed": "You can use a scythe to cut feed from grass.#$e#Or you can buy it from me, of course!$h#$e#I could use the cash...$u#$e#Adios.",
+"Wed4":"Hello @, I have a question for you.#$b#$y 'Have you been having more trouble making it to the bathroom?_Yeah..._I know it can be hard, but you have to keep trying. I know you can do it._N-No!_Now don't you lie to me. Don't forget I live close enough to see what you hang on the cloths line.$3'",
+
+  "Thu_2":"Hello, @, going out to town?#$b#Buying \"supplies\", eh?#$b#Have fun!$1",
+"Thu":"Hello, @, going out to town?#$b#Buying supplies, eh?#$e#Have fun!$1",
+"Thu2":"Hello, @, headin' out to town?#$b#%The two of you chat, until you feel a familiar pain in your bladder.#$b#Oh! Are you in a rush? Don't mind me then, git going!$1",
+
+  "Fri": "You can catch me at the saloon most nights.#$e#Animals are great company, but I need to spend time with people, too.",
+  "Fri4": "#$1 marnieLike#I think someone in town has taken a liking to me. *teehee*$k$h#$e#I would be so lonely if Shane ever moved out.",
+  "Fri6": "I wonder if Mr. Lewis gets lonely in that big house of his... $s#$e#It seems so empty in there, doesn't it?",
+"Fri10":"#$p 102#I wonder if Mr. Lewis gets lonely in that big house of his... $s|Jas just isn't getting potty training.$3#$b#*sigh* Why am I bringing this up to you, it's not like you're any farther along.$2#$e#Well, I'm not giving up. One way or another I'll figure you both out!#$b#Maybe I could make it a race.$1",
+
+  "Sat": "Have you been to that strange tower west of my house?#$e#One time I heard this terrible, otherworldly noise coming from there.$s#$e#I would avoid that place if I were you...",
+"Sat4":"Hey @, do you need to use the bathroom?$3#$e#You know what, why don't you rush home and try.#$b#Common, don't give me that look, I know it's not that far.$1",
+"Sat8":"Hey @, do you need to use the potty?$3#$e#You know what, why don't you rush home and try.#$b#Common, don't give me that look, I know it's not that far.$1",
+
+  "Sun": "Hey there, it's good to see ya!#$e#Feel free to visit us any time you please.",
+"Sun2":"How's your farm coming along?#$b#%You get exited talking about all your big plans.#$b#That sure sounds exciting!$1",
+"Sun6":"How's your farm coming along?#$b#%You excitedly gush about all the big projects you're going to do.#$b#Oh wow, better hop to it!$1",
+"Sun8": "How's your farm coming along?#$b#%You excitedly gush about all the big projects you've done and even more about the ones you're going to do.#$b#Oh wow what a busy beaver you've been! Good job kiddo.$1",
+
+  "Saloon": "Now that I'm here I can finally relax and socialize a bit.",
+  "Saloon_Tue": "There aren't very many people here today...$s",
+  "Saloon_Wed": "#$1 marnieAnimalSal#I spilled a whole bucket of milk on the floor today, it was horrible. And such a waste of my poor Belinda's hard work.$k$s#$e#It's nice of you to show up! It's a little more lively now.",
+  "Saloon_Thu": "Phew! It sure feels good to kick back after a hard day's work.",
+  "Saloon_Fri": "%Marnie doesn't seem to notice that you're there...",
+  "Saloon_Sun": "*sigh*... I wasn't very productive today.",
+  "Saloon_Sat": "I always see Clint here but he won't talk to anyone. He just glances over his shoulder now and then.$s",
+
+"summer_Mon2":"Jodi told me she made you a care package when you first arrived. That was very nice of her!",
+"summer_Mon2_2":"I finally learned about what was in Jodi's care package. I can't believe how many diapers she sent compared to pull ups.$3#$b#It's almost like she wanted you to fail...$2",
+"summer_Wed4":"#$p 102#How's your potty training coming along? Still sticking to it?|Jas and I got a little bit too distracted playing house yesterday...$3#$b#Well, there goes all of our potty-training progress...$2",
+"summer_Sun":"I can't wait to take a dip at the beach!$1",
+"summer_Sun6":"I can't wait to take a dip at the beach! Do you ever go out swimming, @?$1#$e#Huh? You can't swim?#$b#Guess you need floaties then, hehe!$1#$e#What? I'm just teasing!$1",
+
+"fall_Tue":"Fall is a great time for foraging. I know I've spotted you poking around out there before.$1",
+"fall_Tue2":"Fall is a great time for foraging. I know I've spotted you poking around out there before.$1#$b#I hate to ask, but have you had any problems with making it to the toilet? It's quite a long walk on the way back...$3#$e$Should I have not said that?$2",
+"fall_Tue4":"Fall is a great time for foraging. I know I've spotted you poking around out there before.$1#$b#Have you had any problems with making it to the toilet? It's quite a long walk on the way back.",
+"fall_Tue8":"Fall is a great time for foraging. I know I've spotted you poking around out there before.$1#$b#Have you had any problems with making it to the potty? It's quite a long walk on the way back.#$e#Why don't you head on back to your farm and try right now, just in case.",
+
+"winter_Fri":"%Marnie pauses, as if looking for something.#$b#Huh, what's that crinkling? Is it my jacket or...$2#$b#Oh, I didn't see you there!$1",
+"winter_Sat6":"#$p 102#Good to see you all bundled up!$1|Jas was doing so much better with potty training before it got cold out.$3#$b#Hard to blame her... Brrrrr.$2",
+
+			},
+		},
+	]
+}

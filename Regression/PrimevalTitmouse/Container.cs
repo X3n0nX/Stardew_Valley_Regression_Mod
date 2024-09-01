@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using StardewValley;
+using static StardewValley.Minigames.MineCart.Whale;
 
 namespace PrimevalTitmouse
 {
@@ -51,8 +53,34 @@ namespace PrimevalTitmouse
         public Container(Container c)
         {
             Initialize(c, c.wetness, c.messiness, c.durability);
+
         }
-    
+
+        public void parseDryingDate(string date)
+        {
+            if (date == "")
+            {
+                drying = false;
+                return;
+            }
+
+            string[] splitted = date.Split("-");
+            drying = true;
+
+            timeWhenDoneDrying.time = int.Parse(splitted[0]);
+            timeWhenDoneDrying.day = int.Parse(splitted[1]);
+            timeWhenDoneDrying.season = int.Parse(splitted[2]);
+            timeWhenDoneDrying.year = int.Parse(splitted[3]);
+        }
+        public string serializeDryingDate()
+        {
+            if (!drying)
+            {
+                return "";
+            }
+            return string.Format("{0}-{1}-{2}-{3}", timeWhenDoneDrying.time, timeWhenDoneDrying.day, timeWhenDoneDrying.season, timeWhenDoneDrying.year);
+        }
+
 
         public Container(string type, float wetness, float messiness, int durability)
         {

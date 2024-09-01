@@ -1,0 +1,106 @@
+{
+	"Changes":[
+		{
+			"LogName":"Evelyn",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Evelyn",
+			"Entries":{	
+			
+  "Introduction": "Why, hello and welcome to our little community, dear! #$b#You can call me 'Granny' if you like.$h",
+  "reject_867": "Oh, I'm sure George would be interested in that!",
+  "reject_866": "That's a very pretty rose, dear. Have you shown it to Emily? It makes me think of her.",
+  "pamHouseUpgrade": "Oh, sweetie... that was so nice of you to put Pam up in a beautiful new house!$h#$e#It warms my heart when people take care of each other like that...",
+  "pamHouseUpgradeAnonymous": "Call me a silly old fool... but I think I have an idea who paid for Pam's new house... *wink*",
+  "MovieInvitation": "Oh my! That's so kind of you, dear. Why yes... I'd love to go to the movies!$h#$b#You go on ahead, and I'll meet you at the theater.",
+  "Event_cookies1": "Thank you!$h",
+  "Event_cookies2": "What was that, dear? I could've sworn you said 'hockey puck'. *sigh* My ears aren't what they used to be.$s",
+
+
+  "Mon": "Oh my! What a lovely day.$u",
+"Mon4":"Oh my! What a lovely day.$u#$e#Are you going to go on a little adventure? Well, go on, don't let me stop you.$1",
+
+  "Tue": "Don't mind my husband, George. He isn't very friendly to strangers.#$e#If you get to know him better he'll warm up to you.#$e#I'm sure you two could become good friends one day!$h#$e#Since you're so interested in my husband I'll let you in on a little secret: he really likes leeks! You can find them in the mountains this time of year.",
+"Tue6": "It's so nice of you to take the time to visit George and I.#$e#Without little kids running around, we'd age much faster.$h#$b#%Evelyn pinches your cheeks affectionately.",
+
+  "Wed": "#$1 evelynGarden1#I saw the most beautiful family of butterflies sunning themselves in the town garden yesterday.$k#$e#The good Mayor put me in charge of the town's public gardens.#$e#I've been working on the town flower beds for weeks, so don't step on them!",
+"Wed2":"You can play, but don't go playing on the flower beds.#$b#The mayor put me in charge of the public gardens you know! So I have to make sure little kids like you don't trample all over them.",
+
+  "Thu": "I'll be baking cookies today. I like to make flower shapes in the spring.$h#$e#Maybe I'll tell you my recipe one of these days.",
+"Thu4":"I baked cookies today. I like to make flower shapes in the spring.#$e#Oh how could I say no to that eager face, here!$1[223]",
+
+  "Fri": "George spends the whole day in front of that darned television set.#$e#I wish he'd go outside more. Some fresh air would do him good.",
+"Fri8":"If you're feeling brave, you can play in the living room by George.#$b#He'll probably fuss, but having a little tot in the room is good for him!$1",
+
+  "Sat": "I used to love looking at the clouds, but I have trouble seeing them these days.#$e# My eyes just don't work as well as they used to.$s",
+"Sat4":"I used to love looking at the clouds, but I have trouble seeing them these days. I guess you'll have to be my eyes.#$b#$y 'What do you see?_A fluffy bunny!_Awww, how cute.$1_A dragon breathing smoke!_Oh wow how exciting!$1'",
+
+  "Sun": "It's nice to be so close to the ocean. The sound of the sea makes going to sleep a lot easier.#$e#As kids we hunted for seashells after the tide went out. Those were the days...",
+
+"spring_12":"You're going to find a whole basket of eggs tomorrow, aren't you!$1",
+
+
+
+  "summer_Mon": "I feel more energetic in this wonderful weather.$u",
+  "summer_Mon_inlaw_Alex": "How's my grandson doing? I imagine he's quite happy living on the farm.#$e#He deserves to be happy... he's a good boy.",
+"summer_Mon2": "I feel more energetic in this wonderful weather.#$b#I bet you do too! Don't let me slow you down, go on an play.$1",
+
+  "summer_Tue": "George is always a little less grumpy in the summer. The warm weather softens his bones.#$e#You might not be able to tell, but I can. I've known him for sixty years!",
+
+  "summer_Wed": "The good Mayor put me in charge of the town's public gardens.#$e#I've been working on the town flower beds for months, so don't step on them!",
+"summer_Wed4":"The good Mayor put me in charge of the town's public gardens.#$e#Want to hear a secret?#$b#One time, I saw a little fairy playing in the petals.#$b#If you're very quiet and patient around the flowers, I bet you'll see it too!",
+
+  "summer_Thu": "I'm going to bake cookies today. They're coconut wonders shaped like little palm trees! Heehee.$h#$e#Maybe I'll tell you my recipe one of these days.",
+"summer_Thu4":"I baked cookies today. They're coconut wonders shaped like little palm trees! Heehee.#$e#Oh how could I say no to that eager face, here!$1[223]",
+
+
+  "summer_Sat": "Be careful out there, dear. You could get sunburnt!",
+"summer_Sat4": "Be careful out there while you're playing, dear. You could get sunburnt!",
+
+  "summer_Sun": "Sweet peas are in bloom right now.#$e#They've got such a wonderful fragrance, haven't they?",
+
+
+
+
+
+  "fall_Mon": "With every year I appreciate the seasons more and more. For young people it's easy to let them slip by.",
+"fall_Mon4": "With every year I appreciate the seasons more and more. For young people it's easy to let them slip by.#$b#I bet you're too busy playing to even notice the temperature!$1",
+
+  "fall_Tue": "I've been putting raisins in George's oatmeal... but he hasn't said a word. I wonder if he even notices these things?",
+"fall_Tue6": "It's so nice of you to take the time to visit George and I.#$e#Without little kids running around, we'd age much faster.$h#$b#%Evelyn pinches your cheeks affectionately.",
+
+  "fall_Wed": "The good Mayor put me in charge of the town's public gardens.#$e#The fall flowers are delicate, so don't go stomping on them! I know how you kids like to do.",
+
+  "fall_Thu": "Today I'm baking cookies. They're shaped like little pumpkins.$h#$e#Maybe I'll tell you my recipe one of these days.",
+"fall_Thu4":"I baked cookies today. They're shaped like little pumpkins.#$e#Oh how could I say no to that eager face, here!$1[223]",
+
+  "fall_Sat": "Are you friends with Alex?#$e#Sometime he worries me sick.$2",
+  "fall_Sat_inlaw_Alex": "Oh, hello my dear. I think of you as my own grandson now.$h^Oh, hello my dear. I think of you as my own grand-daughter now.$h",
+"fall_Sat6": "Are you friends with Alex?#$e#Maybe I could set up a little play date for you two!$1",
+
+  "fall_Sun": "My eyesight may be poor, but my nose hasn't failed me yet!#$e#I can smell fallen leaves and mushrooms. It reminds me of the forests I used to play in as a girl.",
+"fall_Sun4": "My eyesight may be poor, but my nose hasn't failed me yet!#$e#I can smell fallen leaves and mushrooms. It reminds me of the forests I used to play in as a girl.#$e#I bet you can spend all day playing the same games I did!",  
+
+
+
+
+  "winter_Mon": "Be careful you don't slip on the ice, dear.",
+"winter_Mon2": "Be careful you don't slip on the ice while you're playing.",  
+"winter_Mon6": "Be careful you don't slip on the ice little one.",
+
+  "winter_Tue": "Aren't you cold? You should wear a thicker jacket, my dear!#$e#This weather isn't good for my joints...$s",
+"winter_Tue8": "Aren't you cold? You should wear a thicker jacket.$2#$e#Now where's your Mommy at? I'll get a whole winter shopping list ready for her.",
+
+  "winter_Wed": "I usually tend to the gardens, but they're covered in snow.#$e#I still like to check up on them now and then.",
+"winter_Wed4": "I usually tend to the gardens, but they're covered in snow.#$e#Have you made a snow angel yet? I love seeing the little one's art all over the fresh snow.",
+
+  "winter_Sat": "We've lived here for over 30 years.#$e#We've seen a lot of people come and go. Your grandfather, for one. Bless him... *sigh*",
+  "winter_Sat6": "Oh... my dear. You have your grandfather's eyes...$s#$e#Yes... yes... I knew him very well.",
+  "winter_Sat8": "@, have I told you that George and I have lived in our house for 30 years?#$e#I hope you stay here for a while.$h",
+
+  "winter_Sun": "You should make some hot soup to stay warm.#$e#And make sure you wear a jacket!",
+
+"Winter_24":"Are you excited for your presents tomorrow?#$b#I think you've been very good, so you should be getting lots from Santa!$1",
+			},
+		},
+	]
+}

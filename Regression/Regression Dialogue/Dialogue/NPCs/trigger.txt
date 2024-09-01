@@ -1,4 +1,84 @@
-300||%Sam changes you into a nice, dry lil swabbies.
-301||Geez! Looks like you sure had fun, we oughta change you before you stink up the place.
-302||%Sam changes you into one of Vincent's lil swabbies. You hope neither him or Jodi will mind...
-303||%Despite Sam's plan, the smell lingers in the air. Well, at least you're dry now...
+//Neutral change
+100||%He tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1
+101||%She tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1
+102||%Without another word, he takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1
+103||%Without another word, she takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1
+//Neutral gift
+110||%He discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1
+111||%She discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1
+//Abigail
+120||%Abigail hands you a diaper.#$b#...I bet you'll need it more than me, hehehe!$1
+121||%Abigail slips a pair of clean undies onto you instead of a diaper.#$b#Aw, worried you're gonna make a mess? *smirk*
+122||%She gives you a condescending little head-pat when she's done.#$b#Good <boy/girl>.
+123||%Abigail tapes you up in a soft, puffy purple diaper.
+124||...Don't worry if you ruin them, I get a family discount. *giggle*$1
+125||Oh, yeah - take a couple spare changes with you...#$b#Just in case you have a bit too much fun on your little adventure.$1
+126||...No promises though! *giggle*$1
+//Demetrius
+200||%Demetrius hands you a Joja diaper from a pack under his workbench. Next to the pack is a diaper that's been slashed and gutted.
+//Evelyn
+280||%She pulls out a diaper from her supply and tapes it on nice and snug.#$b#There we go, all better.
+281||%She untapes your diaper and cleans you up, distracting you whenever you fuss by pinching your cheeks. Before you know it, you're in a new diaper.#$b#Looks like my diapers fit you just fine! Funny, I thought for sure they'd be too big for you.$1
+282||%She untapes your diaper and cleans you up, distracting you whenever you fuss by pinching your cheeks. Before you know it, you're in a new diaper.#$b#There we go. You've been a very good little <boy/girl>, so how about I give you a treat.[223]
+//Harvey
+360||%Without another word, he takes you aside and diligently changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1
+361||%Harvey changes you nice dry diaper, making sure the leg gathers are settled nicely between your legs.#$b#There we go, that should keep until morning.
+362||%Harvey takes extra care making sure you're all clean and cozy, all the while listening to all the things you did today.#$b#Wow, you had quite the day!
+363||%Harvey changes you in a nice fresh diaper before he finishes getting ready for work.#$b#These are from the clinic, so they should hold up just fine.
+364||%After, he dries you off in a big, fluffy towel before taping you nice and snug in a baby diaper.#$b#There we go, all clean and dry. You can play with your toys until bedtime, and then I'll read you a story.
+//Jas
+380||Here, this should help!$1
+//Jodi
+400||Yeah, you certainly need a change. Try this on, I think it'll fit just fine.
+401||Here, try this one. I get these for Vincent, but I think they'll fit you alright.
+402||%Jodi smiles warmly at you while she lies you down and cleans you up. She tapes you up nice and snug in a fresh diaper and lifts you to your feet, giving you tight hug.#$b#There we go, all better.
+403||%Jodi lies you down for a change, tickling your tummy between each wipe. She giggles along with every little giggle you make.#$b#All done! Go on and play.$1
+404||%Jodi hums a soft tune as she sets about the chore of cleaning you up. She lifts you to your feet before you even realize you're all clean and dry.#$b#I think I know a little farmer who needs a nap.$1
+405||%Without a word she lies you down for a change. She coos softly at you throughout the change, and pulls you right back into the hug when she's done.
+//Leah
+460||%Leah quickly wipes your <front&butt> down with a wet wipe, and puts you into a fresh diaper with a heaping helping of baby powder.#$b#%When you're all wrapped up, she gives it a playful pat, making a big cloud puff out.#$b#*giggle* All done!!$1
+461||%Leah lies you down and takes your soiled diaper off, taping it into a ball before quickly swaddling you up into a nice, fresh pawprint diaper.#$b#%Once she's all done, she takes the old one and gives it a final squish before enthusiastically slam-dunking it into the trash.#$b#That was fun!$1
+462||%She meticulously goes through the steps of a diaper change, but frets with lining up the tape positions perfectly for a long, LONG time. You have to help her out.#$b#S-Sorry, I get a little bit too caught up in the details, haha...$1#$b#Um, so... do you feel better now?$4
+463||%You keep distracting her with lots of silly questions so she doesn't have to get back to her work so quickly.#$b#%By the time she finally manages to get your tapes on, you both feel a lot fresher.#$b#Haha, thanks @... I really, really needed that break.$1
+464||%But finally she retrieves a clean white diaper, and handily changes you into it.#$b#%...You didn't really mind waiting, though. The conversation was fun!
+465||%Leah pushes a diaper into your hands, trying to hide her increasingly-flushed face from view.#$b#%...It looks like Big Leah might just need a bit more time than Little Leah did. That's okay!
+466||%Leah changes you into a pull-up... but she tries to look VERY stern while she does it.#$b#%...You actually feel embarassed with Little Leah judging you like this... She seems to sense your shame, and puffs up with pride, but then she relaxes a little.#$b#And, um... It's okay if you still go potty in your little-kid undies...$7#$b#But you gotta TRY to make it to the potty first!! Ok? Pretty please, $NICKNAME$?$1
+//Marnie
+520||%Marnie tsks disapprovingly as she cleans you up before helping you into a fresh new pull up.#$b#That certainly smells better. Now, you be a good <boy/girl> and hop to the loo when you have to go.
+521||%Without hesitation, Marnie sets to the chore of cleaning you up and helping you in a clean pull up.#$b#Now you have to promise me too at least TRY to go to the bathroom, okay?
+522||*sigh* Here, take this and get cleaned up. you can use my room if you need to.$3
+523||%Marnie diligently wipes you clean. You hold onto her shoulders as she helps you step into a fresh pull up.#$b#Alright, show me how you pull it up.#$b#Good job! Doesn't that make you feel like a big <boy/girl>?$1
+//Maru
+540||%Maru lies you down in a private spot and cleans you up smoothly and efficiently.#$b#There we go! All clean!$1
+541||%Maru lies you down in a private spot and cleans you up smoothly and efficiently.#$b#There we go! Feel free to get distracted again.$1#$b#There's nothing to worry about.$4
+542||%She gently covers you in lotion and powder before taping a new diaper on nice and snug.#$b#There we go. Now, let's cuddle by the window. I want to look at the stars with you.$4
+543||%Then she tapes you nice and snug in a fresh, dry diaper.#$b#Alright, that's all done. Let's snuggle by the fireplace.$4
+//Penny
+580||What a good <boy/girl>!$11
+581||%Penny gently changes you into a clean baby diaper, cooing at you all the while.#$b#There we go, all cosy.$4
+582||%Penny tries to look stern and disappointed as she cleans you up, but you can spot her excited blush anyway.#$b#There we go. Let's try extra hard to keep this one clean, okay?$4
+583||%Penny tsks softly as she wipes you clean. After, she helps you step into a new pull up.#$b#There we go, all fixed up and ready to play. Let me know if you have to potty, okay?
+584||%You excitedly tell Penny all about your day, and before you know it, she has you all ready for bed.#$b#Wow, what an exciting day!$1",
+585||%Penny coos at how cute you look as she takes off your bedtime diaper. Then she helps you into your new pull up.#$b#Now you be good and listen to your body when it tells you to potty, okay?
+586||%Penny changes you out of your bedtime diaper. Each cool wipe feels like a relief in the summer heat, and after she helps you step into your new training pants.#$b#I think these will be a little cooler. You be good while I'm at work, okay $FARMERNAME$?
+587||%Penny hums happily as she goes about her regular chore of cleaning you up out of your bedtime diaper and helping you into a new pull up.#$b#There we go, all ready to play!$1
+588||%You're thankful Penny decides to warm up the wipes between her palms before setting about cleaning you up and helping you into a new pull up.#$b#%After, she bundles you up in so much snow gear that only your eyes are exposed.#$b#All ready to play!$1
+589||%Penny gently changes you into a clean baby diaper, cooing at you all the while.#$b#There we go, all ready for the big day.$4
+590||%Penny gently changes you into a clean baby diaper, cooing at you all the while.#$b#There we go, baby diapers for the baby <boy/girl>.$11
+591||%Penny is still flush from her memory while she gets you ready for the day.#$b#There we go, all ready to play!$11
+592||%Penny gets you in a bath, helping you get nice and clean before taping you up nice and snug in a clean baby diaper.#$b#All warm and ready for bed.$1
+593||%Penny gently changes you into a clean baby diaper, cooing at you all the while.#$b#You go play, I'll let you know when it's time for bed.
+//Sam
+640||%Sam changes you into a dry, cushy white baby diaper.
+641||%Sam leads you to a private spot and cleans you up, tickling your tummy and giggling with you all the while. Eventually, he tapes you up nice and snug in a new diaper.
+642||%Sam changes you into one of Vincent's lil swabbies. It fits you surprisingly well, which makes a certain amount of sense. You are a little <boy/girl> after all.
+643||%Despite Sam's plan, the smell still lingers in the air. Well, at least you're dry now...
+644||Speaking of which, I managed to snag a few of his! For old time's sake.$10
+645||%Sam gives you a diaper you haven't seen at any store.#$b#You can change in my room if you need privacy.
+646||%Sam giggles at you and gets a change while you lie down for him, and he cleans you right up.
+647||Lemme just...
+648||Let's get you all wrapped up again!$1
+//Vincent
+720||%He pulls a diaper he got from Jodi out of his bag.#$b#I have this just in case, but I think you need it right now more.
+//Willy
+740||%Willy leads you to a quiet spot and changes you into an ocean-themed diaper.#$b#So long as you do yer part in keeping my shop afloat, I'll try keepin' yer $PANTS_NAME$ from meetin' a watery grave too! *chuckle*$1

@@ -19,12 +19,12 @@
   "dumped_Guys": "I'm busy with my work. I can't speak to you.$s",
   "secondChance_Guys": "I want you back in my life, @. I'm willing to forget what happened.$s",
 
-  //Harvey Codes are 140-149
+  //Harvey Codes are 360-379
   
   //spring
   
 "Mon_1": "I was looking over your medical record recently. I think we should schedule an appointment about your overactive bladder symptoms.$6#$e#I feel it's my duty as your doctor to make sure you have all the tools you need to handle it with dignity.",
-"Mon4": "Thank you for opening up to me about your little situation.#$b#It must have been embarassing, but it means a lot to me that you'll let me help.$1#$e#How's the whole potty situation going? Are you able to get the diapers you need to manage your little situation?",
+"Mon4": "Thank you for opening up to me about your little situation.#$b#It must have been embarrassing, but it means a lot to me that you'll let me help.$1#$e#How's the whole potty situation going? Are you able to get the diapers you need to manage your little situation?",
 "Mon6": "I'd like to stay in Stardew Valley for a while. I'm finally starting to feel involved in the community.#$b#Or at the very least one very specific little farmer who needs extra special care.",
 "Mon8": "It's a lot of work, being a doctor. I don't eat as well as I should.$2#$e#If I didn't live alone I think it would be easier knowing I had a little one I'd have to keep fed to grow up big and strong.$1#$b#%Harvey pokes your sides as he says that last bit, making you giggle.",
 "Mon10": "It's a lot of work, being a doctor. I don't eat as well as I should.$2#$e#If I didn't live alone I think it would be easier knowing I had a little one I'd have to keep fed to grow up big and strong.$1#$b#%Harvey pokes your sides as he says that last bit, making you giggle.",
@@ -35,16 +35,16 @@
   
 "Wed2": "Well aren't you bubbly today.",
 "Wed4":"Oh what's that, you have a question for me?
-#$q 140/141 CG_Followup#You dig your heels in the ground as you work up the courage to ask.
-#$r 140 0 CG_shy#U-uhmmm...
-#$r 140 0 CG_shy#*Keep digging your heels in the dirt*
-#$r 141 0 CG_bold#W-will you take care of me as MORE than a doctor?
+#$q 360/361 CG_Followup#You dig your heels in the ground as you work up the courage to ask.
+#$r 360 0 CG_shy#U-uhmmm...
+#$r 360 0 CG_shy#*Keep digging your heels in the dirt*
+#$r 361 0 CG_bold#W-will you take care of me as MORE than a doctor?
 ",
-"CG_shy": "Awwww, little @, don't be shy, you can tell me.#$b#%Your cheeks flush and you give him a hug.#$b#%After a moment of surprse he hugs you back.#$e#Well, I think I can guess what that means.$1", 
+"CG_shy": "Awwww, little @, don't be shy, you can tell me.#$b#%Your cheeks flush and you give him a hug.#$b#%After a moment of surprise he hugs you back.#$e#Well, I think I can guess what that means.$1", 
 "CG_bold": "O-Oh!$4#$b#W-well...$2#$b#Yeah, I can do that. I think I'd like that.#$e#Wow.$1", 
-"CG_Followup":"#$p 140#%You're too shy to ask anything. Harvey doesn't mind and just gives you a soft hug.|Why yes I would like to see your drawing. Is that you and me by the founain? Awww, that's so sweet. Thank you.", 
+"CG_Followup":"#$p 360#%You're too shy to ask anything. Harvey doesn't mind and just gives you a soft hug.|Why yes I would like to see your drawing. Is that you and me by the fountain? Awww, that's so sweet. Thank you.", 
 "Wed6": "If you want to hang out in my apartment, that's okay with me. I live above the clinic. I have plenty of snacks and you can bring some toys to play with.",
-"Wed8": "A While ago you asked if I could take care of you as more than just your doctor.#$b#It turns out it's really easy to see the appeal.$1#$e#%Havery pinches your cheek playfully.",
+"Wed8": "A While ago you asked if I could take care of you as more than just your doctor.#$b#It turns out it's really easy to see the appeal.$1#$e#%Harvey pinches your cheek playfully.",
 
 "Thu2": "Let me know if you get any bumps or bruises. I'll patch you right up.",
 "Thu6": "@, when I give you a direction, I expect you to follow it.#$b#$y 'Can you do that for me?_*Nod eagerly*_That's what I like to hear! Thank you._Y-yes..._Awwww, I believe you're going to try your hardest.$1'",
@@ -58,7 +58,7 @@
 "Sat4": "Nutrition is important, so make sure and eat well. Try to increase your vegetable intake!#$e#Now don't you turn your nose up at your greens. They can be delicious if you cook them right.$1#$b#I promise.","Sat6": "Look, @, as your doctor, I know we've talked about options, and I've let you pick what you felt has worked best for you.#$b#That's going to change. I want you in diapers full time. Doctor's orders.$6",
 "Sat8": "Are you being good? Show me.#$e#% Your cheeks flush as you show Harvey your \"protection.\"#$b#Good job, thank you.$1",
  
-"Sun4": "I'd like to get to know you better, @. Let's put aside our doctor-patient relationship.#$e#Sure I already know your embarassing little secret, but I don't mind one bit. I promise.$1",
+"Sun4": "I'd like to get to know you better, @. Let's put aside our doctor-patient relationship.#$e#Sure I already know your embarrassing little secret, but I don't mind one bit. I promise.$1",
 "Sun6": "It's nice to have a little baby boy in town I get to check in with.$1^It's nice to have a little baby girl in town I get to check in with.$1",
 "Sun8": "I feel responsible for the health of this whole community... it's kind of stressful.$2#$e#It's a pretty small community, and I'm fortunate to be able to build a good relationship with my patients.#$b#And a very special relationship with one specifically.$1#$b#%Harvey gives you a wink and pats your bottom playfully.",
   
@@ -69,14 +69,14 @@
 "summer_Mon8": "It's okay to get a moderate amount of sunlight. Just don't get burnt.#$b#$y 'Do you need help putting on your sunscreen_Yes please._Awwww, I thought so. Let me take care of that for you._*Blush and wiggle*_Oh goodness, are you so little you can't even ask for help? Well, then I guess I'm going to just have to take charge myself aren't I.$3'",
 
 "summer_Tue4": "Oh what's that, you have a question for me?
-#$q 140/141 CG_Followup#You dig your heels in the ground as you work up the courage to ask.
-#$r 140 0 CG_shy#U-uhmmm...
-#$r 140 0 CG_shy#*Keep digging your heels in the dirt*
-#$r 141 0 CG_bold#W-will you take care of me as MORE than a doctor?
+#$q 360/361 CG_Followup#You dig your heels in the ground as you work up the courage to ask.
+#$r 360 0 CG_shy#U-uhmmm...
+#$r 360 0 CG_shy#*Keep digging your heels in the dirt*
+#$r 361 0 CG_bold#W-will you take care of me as MORE than a doctor?
 ",
-"CG_shy": "Awwww, little @, don't be shy, you can tell me.#$b#%Your cheeks flush and you give him a hug.#$b#%After a moment of surprse he hugs you back.#$e#Well, I think I can guess what that means.$1", 
+"CG_shy": "Awwww, little @, don't be shy, you can tell me.#$b#%Your cheeks flush and you give him a hug.#$b#%After a moment of surprise he hugs you back.#$e#Well, I think I can guess what that means.$1", 
 "CG_bold": "O-Oh!$4#$b#W-well...$2#$b#Yeah, I can do that. I think I'd like that.#$e#Wow.$1", 
-"CG_Followup":"#$p 140#%You're too shy to ask anything. Harvey doesn't mind and just gives you a soft hug.|Why yes I would like to see your drawing. Is that you and me by the founain? Awww, that's so sweet. Thank you.", 
+"CG_Followup":"#$p 360#%You're too shy to ask anything. Harvey doesn't mind and just gives you a soft hug.|Why yes I would like to see your drawing. Is that you and me by the fountain? Awww, that's so sweet. Thank you.", 
 "summer_Tue8":"Hold up @, I have to check if you're following 'doctor's orders'.$3#$b#%Harvey pulls back your waistband to check.#$b#Look what a good listener you are!$1",
 
 "summer_Wed2": "If you have any questions about your symptoms, just let me know.#$e#There are plenty of options available, and I'm willing to answer any questions you have.",
@@ -90,25 +90,25 @@
 
 "summer_Sat4": "By the way, I'll need your parent or guardian present at your next appointment.#$b#Don't make that face I'm just kidding!$1",
 
-"summer_Sun4": "I've decided to perscribe you one coloring session. Doctor's orders!",
-"summer_Sun8": "*Sigh*... I'm starting to feel kind of old...$6#$e#The older you get the more memories you're burdened with. It can be overwhelming.$2#$e#Though, I don't think you'll ever have to worry about that given that you're never making it out of the baby phaze.$h",
+"summer_Sun4": "I've decided to prescribe you one coloring session. Doctor's orders!",
+"summer_Sun8": "*Sigh*... I'm starting to feel kind of old...$6#$e#The older you get the more memories you're burdened with. It can be overwhelming.$2#$e#Though, I don't think you'll ever have to worry about that given that you're never making it out of the baby phase.$h",
 
-  //fall
+  //fall 
   
 "fall_Mon4": "Oh what's that, you have a question for me?
-#$q 140/141 CG_Followup#You dig your heels in the ground as you work up the courage to ask.
-#$r 140 0 CG_shy#U-uhmmm...
-#$r 140 0 CG_shy#*Keep digging your heels in the dirt*
-#$r 141 0 CG_bold#W-will you take care of me as MORE than a doctor?
+#$q 360/361 CG_Followup#You dig your heels in the ground as you work up the courage to ask.
+#$r 360 0 CG_shy#U-uhmmm...
+#$r 360 0 CG_shy#*Keep digging your heels in the dirt*
+#$r 361 0 CG_bold#W-will you take care of me as MORE than a doctor?
 ",
-"CG_shy": "Awwww, little @, don't be shy, you can tell me.#$b#%Your cheeks flush and you give him a hug.#$b#%After a moment of surprse he hugs you back.#$e#Well, I think I can guess what that means.$1", 
+"CG_shy": "Awwww, little @, don't be shy, you can tell me.#$b#%Your cheeks flush and you give him a hug.#$b#%After a moment of surprise he hugs you back.#$e#Well, I think I can guess what that means.$1", 
 "CG_bold": "O-Oh!$4#$b#W-well...$2#$b#Yeah, I can do that. I think I'd like that.#$e#Wow.$1", 
-"CG_Followup":"#$p 140#%You're too shy to ask anything. Harvey doesn't mind and just gives you a soft hug.|Why yes I would like to see your drawing. Is that you and me by the founain? Awww, that's so sweet. Thank you.", 
+"CG_Followup":"#$p 360#%You're too shy to ask anything. Harvey doesn't mind and just gives you a soft hug.|Why yes I would like to see your drawing. Is that you and me by the fountain? Awww, that's so sweet. Thank you.", 
 "fall_Mon8": "It's a lot of work, being a doctor. I don't eat as well as I should.$2#$e#If I didn't live alone I think it would be easier knowing I had a little one I'd have to keep fed to grow up big and strong.$1#$b#%Harvey pokes your sides as he says that last bit, making you giggle.",
 
-"fall_Tue8": "Don't overwork yourself, @. I mean it.$6#$e#You know what, I've decided to perscribe you one coloring session.$1#$b#Doctor's orders!$3",
+"fall_Tue8": "Don't overwork yourself, @. I mean it.$6#$e#You know what, I've decided to prescribe you one coloring session.$1#$b#Doctor's orders!$3",
 
-"fall_Wed4": "I'd like to get to know you better, @. Let's put aside our doctor-patient relationship.#$e#Sure I already know your embarassing little secret, but I don't mind one bit. I promise.$1",
+"fall_Wed4": "I'd like to get to know you better, @. Let's put aside our doctor-patient relationship.#$e#Sure I already know your embarrassing little secret, but I don't mind one bit. I promise.$1",
 "fall_Wed6": "It's nice to have a little baby boy in town I get to check in with.$1^It's nice to have a little baby girl in town I get to check in with.$1",
 
 "fall_Thu6": "@, when I give you a direction, I expect you to follow it.#$b#$y 'Can you do that for me?_*Nod eagerly*_That's what I like to hear! Thank you._Y-yes..._Awwww, I believe you're going to try your hardest.$1'",
@@ -135,21 +135,21 @@
 "winter_Wed4": "It's flu season, so you'd better be extra careful.#$e#Make sure to wash your hands often.#$b#Right now sounds like as good a time as any. Hop to it!$1",
 
 "winter_Thu4": "Oh what's that, you have a question for me?
-#$q 140/141 CG_Followup#You dig your heels in the ground as you work up the courage to ask.
-#$r 140 0 CG_shy#U-uhmmm...
-#$r 140 0 CG_shy#*Keep digging your heels in the dirt*
-#$r 141 0 CG_bold#W-will you take care of me as MORE than a doctor?
+#$q 360/361 CG_Followup#You dig your heels in the ground as you work up the courage to ask.
+#$r 360 0 CG_shy#U-uhmmm...
+#$r 360 0 CG_shy#*Keep digging your heels in the dirt*
+#$r 361 0 CG_bold#W-will you take care of me as MORE than a doctor?
 ",
-"CG_shy": "Awwww, little @, don't be shy, you can tell me.#$b#%Your cheeks flush and you give him a hug.#$b#%After a moment of surprse he hugs you back.#$e#Well, I think I can guess what that means.$1", 
+"CG_shy": "Awwww, little @, don't be shy, you can tell me.#$b#%Your cheeks flush and you give him a hug.#$b#%After a moment of surprise he hugs you back.#$e#Well, I think I can guess what that means.$1", 
 "CG_bold": "O-Oh!$4#$b#W-well...$2#$b#Yeah, I can do that. I think I'd like that.#$e#Wow.$1", 
-"CG_Followup":"#$p 140#%You're too shy to ask anything. Harvey doesn't mind and just gives you a soft hug.|Why yes I would like to see your drawing. Is that you and me by the founain? Awww, that's so sweet. Thank you.", 
+"CG_Followup":"#$p 360#%You're too shy to ask anything. Harvey doesn't mind and just gives you a soft hug.|Why yes I would like to see your drawing. Is that you and me by the fountain? Awww, that's so sweet. Thank you.", 
 "winter_Thu8": "Hold up @, I have to check if you're following \"doctor's orders\".$3#$b#%Harvey pulls back your waistband to check.#$b#Look what a good listener you are!$1",
 
 "winter_Fri2": "Make sure you're listing to your body, okay?#$e#I-I meant about the cold, not your...$4#$b#N-Never mind.$7",
 "winter_Fri6": "You be a good boy and make sure and listen to your body when it's too cold, okay?^You be a good girl and make sure and listen to your body when it's too cold, okay?",
 
-"winter_Sat4": "I've decided to perscribe you one coloring session. Doctor's orders!",
-"winter_Sat8": "*Sigh*... I'm starting to feel kind of old...$6#$e#The older you get the more memories you're burdened with. It can be overwhelming.$2#$e#Though, I don't think you'll ever have to worry about that given that you're never making it out of the baby phaze.$h",
+"winter_Sat4": "I've decided to prescribe you one coloring session. Doctor's orders!",
+"winter_Sat8": "*Sigh*... I'm starting to feel kind of old...$6#$e#The older you get the more memories you're burdened with. It can be overwhelming.$2#$e#Though, I don't think you'll ever have to worry about that given that you're never making it out of the baby phase.$h",
 
 "winter_Sun4": "If you want to hang out in my apartment, that's okay with me. I live above the clinic. I have plenty of snacks and you can bring some toys to play with.",
 
@@ -171,15 +171,15 @@
 "Rainy_Night_1": "You look a little soggy there little guy. Now how much of that is from the rain, hmmmm?^You look a little soggy there little girl. Now how much of that is from the rain, hmmmm?",
 "Rainy_Night_2": "That's it, I declare this a cozy night. Doctor's orders.#$b#%Harvey takes off your damp cloths from the rain and wraps you up in a big, comfy blanket.#$b#%He sets you in his lap in front of the fire, one hand over your diaper to hold you snug in his lap, and the other gently petting your hair.",
 "Rainy_Night_3": "%Harvey is enjoying a glass of wine and a romantic novel. He smiles warmly when he sees you and pats his lap.#$b#%You snuggle in eagerly and he casually rubs your back while continuing to enjoy his novel.",
-"Rainy_Night_4": "Oh my gosh, you're soaked head to toe!$1#$b#Common, let's get you in the bath and then we'll get you in a nice, fresh diapee. Okay?",
+"Rainy_Night_4": "Oh my gosh, you're soaked head to toe!$1#$b#Common, let's get you in the bath and then we'll get you in a nice, fresh diapee. Okay?#$b#%Harvey sets you in the warm bath and scrubs you nice and clean, giving you just enough time to play with your bath toys before the water gets cold.#$b#::364:change:baby print diaper:1::",
   
 "Indoor_Day_0": "Good morning sweety! I made you some breakfast. [195 194 201]#$e#$y 'Do you think you can eat it all up by yourself?_*Shake your head*_%Harvey smiles and treats every bite like an airplane, doing very realistic radio dialogue between the pilot and control tower the whole time._Yeah! *Dig in*_Oh goodness! Slow down, aim for your mouth at least!$1'",
 "Indoor_Day_1": "I woke up early, but I didn't want to disturb you.#$b#You looked so cute with your little thumb barely in your mouth!$1#$e#Is that a blush? Are you still shy after all this time?#$b#%Harvey tickles your sides until you're a giggling mess.",
 "Indoor_Day_2": "%You hold up your favorite plushy, pointing out a little rip with tears in your eyes.#$b#Oh no! Get the wagon quickly, we've gotta rush her to the ER, stat!$8#$b#%You rush over to get the little wagon, just her size, and he helps you wheel her into his room.#$e#You hang in there and we'll patch you right up.#$b#Needle and thread, scissors...#$b#%Harvey expertly patches the little rip like it was never there.",
 "Indoor_Day_3": "%Harvey is still drinking his coffee, but he holds his free arm out for a hug.#$b#%He holds you for a quiet moment, rocking gently, before breaking the hug and patting your bottom to send you off.",
 "Indoor_Day_4": "Did you know that playing every day is very important for being the happy and healthy baby I want you to be?#$b#It sure is! So go out and play all day for me. And when you get back, tell me ALL your adventures!$1#$e#Doctors orders.$3",
-  
-"Indoor_Night_0": "If you're enjoying life, who cares if it's a little repetitive?#$b#That's what I say every time I have to change your yucky diapees and your icky stinky mucky butt#$b#%Harvey pinches his nose and waves his hand dramatically over his face.",
+
+"Indoor_Night_0": "If you're enjoying life, who cares if it's a little repetitive?#$b#That's what I say every time I have to change your yucky diapees and clean your icky stinky mucky butt#$b#%Harvey pinches his nose and waves his hand dramatically over his face.",
 "Indoor_Night_1": "%You go up to Harvey with tears in your eyes and hold up a little cut you got on your finger while playing today.#$b#Oh no, did you get a boo boo?$8#$b#Calm down, it's okay, I'll take care of you#$b#Alright, this will sting a little bit. Can you be brave for me?#$b#%You nod as he gently wipes your cut with antiseptic, and you only cry a little bit at the pain.#$b#There we go, all done, good job!$1",
 "Indoor_Night_2": "There's the little one. I've got some dinner for you.[196 609 200 230]#$e#$y 'Now, are you going to be good and eat all your veggies?_*Turn up your nose and push the plate away*_Now now, don't give me that. I'm not going to fight you because you're going to be good and eat your veggies, right?$6_*Wince dramatically at each bite of veggies*_Oh goodness now that's a big face. Well, I'll take it as a win anyway.$1'",
 "Indoor_Night_3": "%Harvey is enjoying a glass of wine and a romantic novel. He smiles warmly when he sees you and holds opens his arms a bit to invite you to snuggle.#$b#%He sets his book down and holds you gently, humming in your ear with occasional pauses to take another sip of his wine.#$b#%After a long while, his hand finds its way to your diaper for a quick check.#$b#%He doesn't make any moves. He just smiles and holds you a bit tighter.#$b#%There's no rush to change after all. That's what diapers are for.",
@@ -191,7 +191,7 @@
 "Outdoor_3": "Don't go wandering too far now. We still have to change your diaper before I can let you head out.",
 "Outdoor_4": "Good morning @. Here, I have something for you, just hold still.#$b#%Harvey starts relentlessly kissing your face.#$b#Oh, is my mustache tickling you? Hmmmm. I think this needs more testing.#$b#%You squeal as Harvey goes back to his kisses.",
     
-"patio_Harvey": "You know, this 'journal of tendon dynamics' is actually bearable when I'm reading out here.#$e#Though, I don't think I'll be too dissapointed if a cute little baby playing in the yard is too distracting for me.$1",
+"patio_Harvey": "You know, this 'journal of tendon dynamics' is actually bearable when I'm reading out here.#$e#Though, I don't think I'll be too disappointed if a cute little baby playing in the yard is too distracting for me.$1",
   
 "OneKid_0": "It's a good thing I got so much practice with diapers before having %kid1.#$b#I'm basically a pro!$1",
 "OneKid_1": "Oh, are you asking for a change?#$b#Well get in line, I gotta get %kid1 first!$1",
@@ -209,16 +209,12 @@
 "Good_6": "Hold up, I have to check something really quick.#$b#%Harvey gropes the front of your diaper for a moment before peeking in the back.#$b#Hmmmm. I think this will keep for now.",
   
 "funLeave_Harvey": "I think I'll take a little walk today.#$b#Why don't you go on an adventure too, and then when we get home you can tell me all about it!$1",
-"funReturn_Harvey": "I had a nice day. It's refreshing to spend some time alone now and then.#$b#Awww, what are those tears for? Did you think I meant I don't want to take care of you?#$b#I'm sorry, I didn't mean that. Sometimes I just need to recharge so I can take care of my little, wiggly baby.#$b#%Harvey tickles and kisses until you can't help but smile.#$b#There we go. Now lets get you in a fresh diaper and you can tell me all about your adventure today.",
+"funReturn_Harvey": "I had a nice day. It's refreshing to spend some time alone now and then.#$b#Awww, what are those tears for? Did you think I meant I don't want to take care of you?#$b#I'm sorry, I didn't mean that. Sometimes I just need to recharge so I can take care of my little, wiggly baby.#$b#%Harvey tickles and kisses until you can't help but smile.#$b#There we go. Now lets get you in a fresh diaper and you can tell me all about your adventure today.#$b#::362:change:space diaper:1::",
   
-"jobLeave_Harvey": "I'm going to work, so you be a good boy for me okay?^I'm going to work, so you be a good girl for me okay?",
-"jobReturn_Harvey": "You know, now that I have a little baby to take care of, I'm a lot more eager to be done with the day.#$b#I think you've done enough too. Let's get you ready for bed early and snuggle until bedtime.",
+"jobLeave_Harvey": "I'm going to work, so you be a good boy for me okay?^I'm going to work, so you be a good girl for me okay?#$b#Let's make sure you're all set.::363:change:space diaper:1::",
+"jobReturn_Harvey": "You know, now that I have a little baby to take care of, I'm a lot more eager to be done with the day.#$b#I think you've done enough too. Let's get you ready for bed early and snuggle until bedtime.#$b#::361:change:heart diaper:1::",
 //other month job days. Mon 1,8,15,22, Tue2,9,16,23, and Thurs 4,11,18,25.
 
-
-
-	//Harvey works Mon 1,8,15,22, Tue2,9,16,23, and Thurs 4,11,18,25.
-  
 "spring_1": "It's wonderful to see all the plants return to life. The greenery is refreshing after a monochrome winter.#$e#Some days it felt like the only color I saw was yellow and brown!$1",
 "spring_12": "Oh, it's a festival tomorrow, isn't it?#$b#Are you going to play with all your little friends and find all the eggs?$1",
   "spring_23": "W...Will you dance with me at the festival tomorrow?$4#$e#It's always a little embarrassing.$7",
@@ -243,22 +239,22 @@
 "fall_15": "Tomorrow's the fair. The food is very rich and salty.#$b#But I guess it's okay to spoil my little baby every once in a while.$1#$b#Harvey chuckles as you squeal in delight.",
 "fall_26": "Oh @, it's the Spirit's Eve Festival tomorrow! Are you going to be a brave little boy this year?^Oh @, it's the Spirit's Eve Festival tomorrow! Are you going to be a brave little girl this year?",
 
-"fall_8": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_22": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_2": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_9": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_16": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_23": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_4": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_11": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_18": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
-"fall_25": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.",
+"fall_8": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:pawprint diaper:1::",
+"fall_22": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:space diaper:1::",
+"fall_2": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:heart diaper:1::",
+"fall_9": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:space diaper:1::",
+"fall_16": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:pawprint diaper:1::",
+"fall_23": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:pawprint diaper:1::",
+"fall_4": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:space diaper:1::",
+"fall_11": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:heart diaper:1::",
+"fall_18": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:space diaper:1::",
+"fall_25": "It's a work day for me, so let's make sure you're in a clean diaper so you'll last until I get home.#$b#::363:change:heart diaper:1::",
   
 "winter_1": "It's finally getting cold.#$b#Maybe I should double up your diapers just to keep you warm!$1#$b#%Harvey pats your crinkly bottom to emphasize his point.",
 "winter_7": "Are we going to stop by the ice festival tomorrow? I bet Robin is going to make a little igloo you could play in!#$b#Doesn't that sound exciting?$1",
 "winter_28": "Well, here's to a fantastic year. I have complete confidence that next year will be even better!$1#$b#It'll probably smell the same though.#$b#%Harvey chuckles at your blush and pats your bottom affectionately.",
 
-"winter_8": "I'm leaving for work today, so let me make sure you're all bundled up.#$b#%Harvey helps you into all you winter cloths, zipping up your jacket for you and wrapping your scarf nice and snug.#$b#There we go, all ready to play.",
+"winter_8": "I'm leaving for work today, so let me make sure you're all bundled up.#$b#%::360:change:baby print diaper:1::Harvey helps you into all you winter cloths, zipping up your jacket for you and wrapping your scarf nice and snug.#$b#There we go, all ready to play.",
 "winter_15": "I'm leaving for work today, so let me make sure you're all bundled up.#$b#%Harvey helps you into all you winter cloths, zipping up your jacket for you and wrapping your scarf nice and snug.#$b#There we go, all ready to play.",
 "winter_22": "I'm leaving for work today, so let me make sure you're all bundled up.#$b#%Harvey helps you into all you winter cloths, zipping up your jacket for you and wrapping your scarf nice and snug.#$b#There we go, all ready to play.",
 "winter_2": "I'm leaving for work today, so let me make sure you're all bundled up.#$b#%Harvey helps you into all you winter cloths, zipping up your jacket for you and wrapping your scarf nice and snug.#$b#There we go, all ready to play.",
@@ -272,5 +268,16 @@
 
 			},
 		},
+				{
+			"LogName":"Harvey cutscene",
+			"Action":"EditData",
+			"Target":"Data/Events/Hospital",
+			"Entries":{
+
+  "57/f Harvey 1000/p Harvey": "sweet/-100 -100/farmer 10 19 0 Harvey 9 14 3/skippable/doAction 10 13/viewport 10 14/move farmer 0 -2 0/pause 300/faceDirection Harvey 2/speak Harvey \"Ah, @! I was just about to write you a letter.\"/faceDirection farmer 0/emote farmer 8/speak Harvey \"You see, my records indicate that you're due for your annual checkup!\"/emote farmer 28/speak Harvey \"Now, now... There's no need to worry. It'll be quick and painless. Please follow me.\"/pause 600/advancedMove Harvey false 1 0 0 -4 -5 0/move farmer 0 -7 0 false/move farmer -4 0 3 true/viewport move -1 -2 4500/proceedPosition Harvey 5 10/doAction 5 9/move Harvey 0 -5 2 false/move farmer -1 0 0 false/move farmer 0 -4 0 false/pause 500/speak Harvey \"Hmm... Okay. Hold still, please.\"/pause 2000/speak Harvey \"Say 'ahhh...'\"/pause 500/speak Harvey \"Okay, you can stop.\"/pause 600/move Harvey -1 0 0/pause 1000/showFrame Harvey 19/playSound openBox/pause 1000/showFrame Harvey 8/move Harvey 0 1 1/faceDirection farmer 3/speak Harvey \"I just need to check your vitals.\"/pause 800/animate Harvey false true 100 4 5 6 7/positionOffset Harvey 2 0/pause 50/positionOffset Harvey 2 0/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/stopAnimation Harvey/showFrame Harvey 20/pause 150/showFrame Harvey 21/pause 1500/speak Harvey \"$q 86 null#Hmm... Your pulse is high.$u#$r 86 20 event_heart1#I'm a little nervous...#$r 86 20 event_heart2#I'm out of breath from working on the farm.#$r 86 -50 event_heart3#Are you really a doctor? My pulse is fine!\"/pause 800/showFrame Harvey 20/pause 150/showFrame Harvey 4/animate Harvey false true 100 7 6 5 4/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/stopAnimation Harvey/pause 1300/speak Harvey \"Well, then! You seem very healthy, @.#$b#Now I just have a couple questions about your medical history.\"/emote farmer 60/speak Harvey \"Now now, there's nothing to be embarrassed about.$1#$b#It says here you've had a history of enuresis.$6#$b#I just want you to know that this is perfectly manageable here in Stardew Valley. There are plenty of products available.#$b#You can pick whichever product suites your needs best.\"/emote farmer 32/pause 800/move farmer 0 1 2 true/faceDirection Harvey 2 true/move farmer 0 1 2/speak Harvey \"Thanks for stopping in.$h\"/faceDirection farmer 0 true/end",
+
+
+			},
+		},	
 	]
 }
