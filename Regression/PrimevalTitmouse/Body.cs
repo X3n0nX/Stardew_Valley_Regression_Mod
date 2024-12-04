@@ -3,9 +3,11 @@ using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Buffs;
 using StardewValley.Locations;
+using StardewValley.Minigames;
 using StardewValley.Tools;
 using System;
 using System.Reflection;
+using static PrimevalTitmouse.Container;
 
 namespace PrimevalTitmouse
 {
@@ -13,30 +15,33 @@ namespace PrimevalTitmouse
     public class Body
     {
         //Lets think of Food in Calories, and water in mL
-        //For a day Laborer (like a farmer) that should be ~3500 Cal, and 14000 mL
+        //For a day Laborer (like a farmer) that should be ~3500 Cal, and 14000 mL - NOTE: (Floximo) you mean 1400 mL probably. Up to 3000 mL is considered healthy
         //Of course this is dependent on amount of work, but let's go one step at a time
-        private static readonly float requiredCaloriesPerDay = 3500f;
+        private static readonly float requiredCaloriesPerDay = 3000f; // I adjusted it from 3500 to 3000, because the farmer still eats half the farm every day
         private static readonly float requiredWaterPerDay = 8000f; //8oz glasses: every 20min for 8 hours + every 40 min for 8 hour
-        //private static readonly float maxWaterInCan = 4000f; //How much water does the watering can hold? Max is 40, so *100
 
         //Average # of Pees per day is ~3
-        public static readonly float maxBladderCapacity = 600; //about 600mL
-        private static readonly float minBladderCapacity = maxBladderCapacity * 0.20f;
-        private static readonly float waterToBladderConversion = 0.225f;//Only ~1/4 water becomes pee, rest is sweat etc.
+        private static readonly float maxBladderCapacity = Regression.config.MaxBladderCapacity; //about 600mL => changed to 800mL as player will start with lower bladder by default
+        private static readonly float minBladderContinence = 0.3f; // Also describes capacity as changes are linear
+        private static readonly float waterToBladderConversion = 0.2f;//Only ~1/4 (0.225f) water becomes pee, rest is sweat etc. => changed to 0.2f (1/5) for game balance reasons (too intrusive)
 
         //Average # of poops per day varies wildly. Let's say about 1.5 per day.
         private static readonly float foodToBowelConversion = 0.67f;
-        private static readonly float maxBowelCapacity = (requiredCaloriesPerDay*foodToBowelConversion) / 2f;
-        private static readonly float minBowelCapacity = maxBowelCapacity * 0.20f;
+        private static readonly float maxBowelCapacity = (requiredCaloriesPerDay*foodToBowelConversion) / 2f / 1200f * Regression.config.MaxBowelCapacity; // The last 2 numbers usually end up as / 1200 * 1200 (cancle eachother out) to make configuration easier to understand 
+        private static readonly float minBowelContinence = 0.3f; // Also describes capacity as changes are linear
 
         //Setup Thresholds and messages
-        private static readonly float[] WETTING_THRESHOLDS = { 0.15f, 0.4f, 0.6f };
-        private static readonly string[][] WETTING_MESSAGES = { Regression.t.Bladder_Red, Regression.t.Bladder_Orange, Regression.t.Bladder_Yellow };
-        private static readonly float[] MESSING_THRESHOLDS = { 0.15f, 0.4f, 0.6f };
-        private static readonly string[][] MESSING_MESSAGES = { Regression.t.Bowels_Red, Regression.t.Bowels_Orange, Regression.t.Bowels_Yellow };
-        public static readonly float[] BLADDER_CONTINENCE_THRESHOLDS = { 0.2f, 0.5f, 0.6f, 0.8f, 1.0f };
+        private static readonly float trainingThreshold = 0.5f; // we set a threshold that allowes for potty training, so that should also be the warning level, for the player to understand whats going on
+        private static readonly float lastWarningThreshold = 0.8f; // with a minimum continence of 0.3, 0.8 is still warned about, as it would warn up to 0.7, while 0.69 is out of range (means only 1 warning)
+        public static readonly float[] WETTING_THRESHOLDS = { trainingThreshold + 0.05f, 0.69f, lastWarningThreshold }; 
+        public static readonly string[][] WETTING_MESSAGES = { Regression.t.Bladder_Yellow, Regression.t.Bladder_Orange, Regression.t.Bladder_Red};
+        public static readonly string[] WETTING_MESSAGE_GREEN = Regression.t.Bladder_Green;
+        public static readonly float[] MESSING_THRESHOLDS = { trainingThreshold + 0.05f, 0.69f, lastWarningThreshold };
+        public static readonly string[][] MESSING_MESSAGES = { Regression.t.Bowels_Yellow, Regression.t.Bowels_Orange, Regression.t.Bowels_Red};
+        public static readonly string[] MESSING_MESSAGE_GREEN = Regression.t.Bowels_Green;
+        public static readonly float[] BLADDER_CONTINENCE_THRESHOLDS = { minBladderContinence, 0.5f, 0.65f, 0.8f, 1.0f };
         public static readonly string[][] BLADDER_CONTINENCE_MESSAGES = { Regression.t.Bladder_Continence_Min, Regression.t.Bladder_Continence_Red, Regression.t.Bladder_Continence_Orange, Regression.t.Bladder_Continence_Yellow, Regression.t.Bladder_Continence_Green};
-        public static readonly float[] BOWEL_CONTINENCE_THRESHOLDS = { 0.2f, 0.5f, 0.6f, 0.8f, 1.0f };
+        public static readonly float[] BOWEL_CONTINENCE_THRESHOLDS = { minBowelContinence, 0.5f, 0.65f, 0.8f, 1.0f };
         public static readonly string[][] BOWEL_CONTINENCE_MESSAGES = { Regression.t.Bowel_Continence_Min, Regression.t.Bowel_Continence_Red, Regression.t.Bowel_Continence_Orange, Regression.t.Bowel_Continence_Yellow, Regression.t.Bowel_Continence_Green };
         private static readonly float[] HUNGER_THRESHOLDS = { 0.0f, 0.25f };
         private static readonly string[][] HUNGER_MESSAGES = { Regression.t.Food_None, Regression.t.Food_Low };
@@ -48,11 +53,9 @@ namespace PrimevalTitmouse
 
         //Things that describe an individual
         public int bedtime = 0;
-        public float bladderCapacity = maxBladderCapacity;
-        public float bladderContinence = 1f;
+        public float bladderContinence = Math.Min(1f, Math.Max(minBowelContinence, Regression.config.StartBladderContinence / 100f));
         public float bladderFullness = 0f;
-        public float bowelCapacity = maxBowelCapacity;
-        public float bowelContinence = 1f;
+        public float bowelContinence = Math.Min(1f, Math.Max(minBowelContinence, Regression.config.StartBowelContinence / 100f));
         public float bowelFullness = 0f;
         public float hunger = 0f;
         public float thirst = 0f;
@@ -66,34 +69,170 @@ namespace PrimevalTitmouse
         public int numAccidentPeeAtNight = 0;
         private float lastStamina = 0;
 
+        public float bladderCapacity
+        { 
+            get
+            {
+                //Decrease our maximum capacity (bladder shrinks as we become incontinent)
+                return bladderContinence * maxBladderCapacity;
+
+                //Ceiling at base value and floor at 25% base value
+                //return Math.Max(bladderCapacity, maxBladderCapacity * minBladderContinence);
+            }
+        }
+
+        public float bowelCapacity
+        {
+            get
+            {
+                //Decrease our maximum capacity (bowel shrinks as we become incontinent)
+                return bowelContinence * maxBowelCapacity;
+
+                //Ceiling at base value and floor at 25% base value
+                //return Math.Max(bowelCapacity, minBowelCapacity * minBowelContinence);
+            }
+        }
+
         public Body()
         {
             bed = new("bed");
             pants = CreateNewPants();
             underwear = new("dinosaur undies");
-    }
+        }
+
+        public bool IsAllowedResource(IncidentType type)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    return Regression.config.Wetting;
+                case IncidentType.POOP:
+                    return Regression.config.Messing;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
 
         public float GetBladderTrainingThreshold()
         {
-            return bladderCapacity * 0.5f;
+            return bladderCapacity * trainingThreshold;
          }
 
         public float GetBowelTrainingThreshold()
         {
 
-            return bowelCapacity * 0.5f;
+            return bowelCapacity * trainingThreshold;
         }
-
+        public float GetTrainingThreshold(IncidentType type)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    return GetBladderTrainingThreshold();
+                case IncidentType.POOP:
+                    return GetBowelTrainingThreshold();
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        public float GetAttemptThreshold(IncidentType type)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    return GetBladderAttemptThreshold();
+                case IncidentType.POOP:
+                    return GetBowelAttemptThreshold();
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
         public float GetBladderAttemptThreshold()
         {
-            return bladderCapacity * 0.1f;
+            return bladderCapacity * 0.15f;
         }
 
         public float GetBowelAttemptThreshold()
         {
-                return bowelCapacity * 0.1f;
+                return bowelCapacity * 0.15f;
         }
-
+        public float GetFullness(IncidentType type)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    return bladderFullness;
+                case IncidentType.POOP:
+                    return bowelFullness;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        public void SetFullness(IncidentType type, float value)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    bladderFullness = Math.Max(0f, value);
+                    return;
+                case IncidentType.POOP:
+                    bowelFullness = Math.Max(0f, value);
+                    return;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        public float GetMaxCapacity(IncidentType type)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    return maxBladderCapacity;
+                case IncidentType.POOP:
+                    return maxBowelCapacity;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        public float GetCapacity(IncidentType type)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    return bladderCapacity;
+                case IncidentType.POOP:
+                    return bowelCapacity;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        public float GetContinence(IncidentType type)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    return bladderContinence;
+                case IncidentType.POOP:
+                    return bowelContinence;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        // This function sets, it doesn't substract, be aware to use a calculation that is aware of that, like GetContinence(type) + change
+        public void SetContinence(IncidentType type, float value)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    bladderContinence = Math.Max(minBladderContinence,Math.Min(1f, value));
+                    return;
+                case IncidentType.POOP:
+                    bowelContinence = Math.Max(minBowelContinence, Math.Min(1f, value));
+                    return;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
         public float GetHungerPercent()
         {
             return (requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
@@ -114,61 +253,44 @@ namespace PrimevalTitmouse
             return bladderFullness / bladderCapacity;
         }
 
-        //Change current bladder value and handle warning messages
-        public void AddBladder(float amount)
+        public void AddResource(IncidentType type, float amount)
         {
-            //If Wetting is disabled, don't do anything
-            if (!Regression.config.Wetting)
+            //If Resource (poop/pee) is disabled, don't do anything
+            if (!IsAllowedResource(type))
                 return;
 
+            var fullness = GetFullness(type);
+            var capacity = GetCapacity(type);
             //Increment the current amount
             //We allow bladder to go over-full, to simulate the possibility of multiple night wettings
             //This is determined by the amount of water you have in your system when you go to bed
-            float oldFullness = bladderFullness / maxBladderCapacity;
-            bladderFullness += amount;
-            float newFullness = bladderFullness / maxBladderCapacity;
+            float oldFullnessPercent = fullness / capacity;
 
+            SetFullness(type, fullness + amount);
+
+            fullness = GetFullness(type);
             //Did we go over? Then have an accident.
-            if (bladderFullness >= bladderCapacity)
+            if (fullness >= capacity)
             {
-                Wet(voluntary: false, inUnderwear: true);
-                newFullness = bladderFullness / maxBladderCapacity;
-                //Otherwise, calculate the new value
-            } else
-            {
-                //If we have no room left, or randomly based on our current continence level warn about how badly we need to pee
-                if ((newFullness <= 0.0 ? 1.0 : bladderContinence / (4f * newFullness)) > Regression.rnd.NextDouble())
+                if (!isSleeping)
                 {
-                    Warn(1-oldFullness, 1-newFullness, WETTING_THRESHOLDS, WETTING_MESSAGES, false);
+                    if (MinorAccident(type)) return;
                 }
-            }
-        }
-
-        //Change current bowels value and handle warning messages
-        public void AddBowel(float amount)
-        {
-            //If Wetting is disabled, don't do anything
-            if (!Regression.config.Messing)
-                return;
-
-            //Increment the current amount
-            //We allow bowels to go over-full, to simulate the possibility of multiple night messes
-            //This is determined by the amount of ffod you have in your system when you go to bed
-            float oldFullness = bowelFullness / maxBowelCapacity;
-            bowelFullness += amount;
-            float newFullness = bowelFullness / maxBowelCapacity;
-
-            //Did we go over? Then have an accident.
-            if (bowelFullness >= bowelCapacity)
-            {
-                Mess(voluntary: false, inUnderwear: true);
+                Accident(type, voluntary: false, inUnderwear: true);
             }
             else
             {
                 //If we have no room left, or randomly based on our current continence level warn about how badly we need to pee
-                if ((newFullness <= 0.0 ? 1.0 : bowelContinence / (4f * newFullness)) > Regression.rnd.NextDouble())
+                /*if ((newFullness <= 0.0 ? 1.0 : bladderContinence / (4f * newFullness)) > Regression.rnd.NextDouble())
                 {
-                    Warn(1-oldFullness, 1-newFullness, MESSING_THRESHOLDS, MESSING_MESSAGES, false);
+                    Warn(1-oldFullness, 1-newFullness, WETTING_THRESHOLDS, WETTING_MESSAGES, false);
+                }*/
+                float newFullnessPercent = fullness / capacity;
+                // No randomness in this. We get warned later and it is more urgent immediatly, giving less time, but reliable.
+                if (newFullnessPercent > (1 - GetContinence(type)))
+                {
+                    // old and new is inverted, because we expect a rising, not falling trend
+                    Warn(newFullnessPercent, oldFullnessPercent, type == IncidentType.POOP ? MESSING_THRESHOLDS : WETTING_THRESHOLDS, type == IncidentType.POOP ? MESSING_MESSAGES : WETTING_MESSAGES, false);
                 }
             }
         }
@@ -185,12 +307,12 @@ namespace PrimevalTitmouse
 
             //Convert food lost into poo at half rate
             if (amount < 0 && hunger < requiredCaloriesPerDay)
-                AddBowel(amount * -1f * conversionRatio * foodToBowelConversion);
+                AddResource(IncidentType.POOP, amount * -1f * conversionRatio * foodToBowelConversion);
 
             //If we go over full, add additional to bowels at half rate
             if (hunger < 0)
             {
-                AddBowel(hunger * -0.5f * conversionRatio * foodToBowelConversion);
+                AddResource(IncidentType.POOP, hunger * -0.5f * conversionRatio * foodToBowelConversion);
                 hunger = 0f;
                 newPercent =(requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
             }
@@ -222,12 +344,12 @@ namespace PrimevalTitmouse
 
             //Convert water lost into pee at half rate
             if (amount < 0 && thirst < requiredWaterPerDay)
-                AddBladder(amount * -1f * conversionRatio * waterToBladderConversion);
+                AddResource(IncidentType.PEE, amount * -1f * conversionRatio * waterToBladderConversion);
 
             //Also if we go over full, add additional to Bladder at half rate
             if (thirst < 0)
             {
-                AddBladder((thirst * -0.5f * conversionRatio * waterToBladderConversion));
+                AddResource(IncidentType.PEE, (thirst * -0.5f * conversionRatio * waterToBladderConversion));
                 thirst = 0f;
                 newPercent = (requiredWaterPerDay - thirst) / requiredWaterPerDay;
             }
@@ -251,77 +373,48 @@ namespace PrimevalTitmouse
             Warn(oldPercent, newPercent, THIRST_THRESHOLDS, THIRST_MESSAGES, false);
         }
 
-        //Apply changes to the Maximum capacity of the bladder, and the rate at which it fills.
-        //Note that Positive percent is a LOSS of continence
-        public void ChangeBladderContinence(float percent = 0.01f)
+        //Note that a NEGATIVE percent is a LOSS of continence
+        public void ChangeContinence(IncidentType type, float percent = 0.01f)
         {
-            float previousContinence = bladderContinence;
-
-            //Modify the continence factor (inversely proportional to rate at which the bladder fills)
-            bladderContinence -= percent;
-
-            //Put a ceiling at 100%, and  a floor at 5%
-            bladderContinence = Math.Max(Math.Min(bladderContinence, 1f), 0.05f);
-
-            //Decrease our maximum capacity (bladder shrinks as we become incontinent)
-            bladderCapacity = bladderContinence * maxBladderCapacity;
-
-            //Ceiling at base value and floor at 25% base value
-            bladderCapacity = Math.Max(bladderCapacity, minBladderCapacity);
-
             //OLD: If we're increasing, no need to warn. (maybe we should tell people that they're regaining?)
             // We now only return if something has changed. Otherwise we can handle changes now in both directions (new)
             if (percent == 0f)
                 return;
+            float previousContinence = GetContinence(type);
+            SetContinence(type, previousContinence + percent);
+
+            //Change of bladder capacity is no longer nessesary. Handled by getter.
 
             if (Regression.config.Debug)
-                Animations.Say(string.Format("Bladder continence changed from {0} to {1}, bladder capacity now {2}", previousContinence, bladderContinence, bladderCapacity), (Body)null);
+                Animations.Say(string.Format("{0} continence changed by {1} to {2}, {0} capacity now {3}", type == IncidentType.POOP ? "Bowel": "Bladder", previousContinence, GetContinence(type), GetCapacity(type)), (Body)null);
 
             //Warn that we may be losing control
-            Warn(previousContinence, bladderContinence, BLADDER_CONTINENCE_THRESHOLDS, BLADDER_CONTINENCE_MESSAGES, true);
-        }
-
-        //Apply changes to the Maximum capacity of the bowels, and the rate at which they fill.
-        public void ChangeBowelContinence(float percent = 0.01f)
-        {
-            float previousContinence = bowelContinence;
-
-            //Modify the continence factor (inversely proportional to rate at which the bowels fills)
-            bowelContinence -= percent;
-
-            //Put a ceiling at 100%, and  a floor at 5%
-            bowelContinence = Math.Max(Math.Min(bowelContinence, 1f), 0.05f);
-
-            //Decrease our maximum capacity (bowel shrinks as we become incontinent)
-            bowelCapacity = bowelContinence * maxBowelCapacity;
-
-            //Ceiling at base value and floor at 25% base value
-            bowelCapacity = Math.Max(bowelCapacity, minBowelCapacity);
-
-            //OLD: If we're increasing, no need to warn. (maybe we should tell people that they're regaining?)
-            // We now only return if something was changed. Otherwise we can handle changes now in both directions (new)
-            if (percent == 0f)
-                return;
-
-            if (Regression.config.Debug)
-                Animations.Say(string.Format("Bowel continence changed from {0} to {1}, bowel capacity now {2}", previousContinence, bowelContinence, bowelCapacity), (Body)null);
-
-            //Inform about major changes
-            Warn(previousContinence, bowelContinence, BOWEL_CONTINENCE_THRESHOLDS, BOWEL_CONTINENCE_MESSAGES, true);
+            if(type == IncidentType.POOP)
+            {
+                Warn(previousContinence, bowelContinence, BOWEL_CONTINENCE_THRESHOLDS, BOWEL_CONTINENCE_MESSAGES, true);
+            }
+            else
+            {
+                Warn(previousContinence, bladderContinence, BLADDER_CONTINENCE_THRESHOLDS, BLADDER_CONTINENCE_MESSAGES, true);
+            }
         }
 
         //Put on underwear and clean pants
         private Container ChangeUnderwear(Container container)
         {
             Container oldUnderwear = this.underwear;
-            if (!oldUnderwear.removable)
+            if (!oldUnderwear.removable && !oldUnderwear.washable)
                 Animations.Warn(Regression.t.Change_Destroyed, this);
             this.underwear = container;
 
-            pants = CreateNewPants();
-            CleanPants();
+            ChangePants();
             Animations.Say(Regression.t.Change, this);
             return oldUnderwear;
+        }
+        public void ChangePants()
+        {
+            pants = CreateNewPants();
+            CleanPants();
         }
 
         public StardewValley.Objects.Clothing GetPantsStardew()
@@ -336,17 +429,13 @@ namespace PrimevalTitmouse
         {
             var myPants = GetPantsStardew();
             Container newPants;
-            Regression.t.Underwear_Options.TryGetValue("blue jeans", out newPants);
+            Regression.t.Underwear_Options.TryGetValue(myPants == null ? "legs" : "blue jeans", out newPants);
             var newObject = new Container(newPants);
+
             if (myPants != null)
             {
-                newObject.name = myPants.displayName;
-                newObject.description = myPants.description;
-            }
-            else
-            {
-                newObject.name = "Legs";
-                newObject.description = "Your two Legs";
+                newObject.name = myPants.displayName.ToLower();
+                newObject.description = myPants.description.ToLower();
             }
             return newObject;
         }
@@ -382,16 +471,16 @@ namespace PrimevalTitmouse
         {
             AddWater(requiredWaterPerDay * -0.1f, 0f);
             AddFood(requiredCaloriesPerDay * -0.1f, 0f);
-            AddBladder(maxBladderCapacity * -0.1f);
-            AddBowel(maxBladderCapacity * -0.1f);
+            AddResource(IncidentType.PEE, maxBladderCapacity * -0.1f);
+            AddResource(IncidentType.POOP, maxBladderCapacity * -0.1f);
         }
 
         public void IncreaseEverything()
         {
             AddWater(requiredWaterPerDay * 0.1f, 0f);
             AddFood(requiredCaloriesPerDay * 0.1f, 0f);
-            AddBladder(maxBladderCapacity * 0.1f);
-            AddBowel(maxBladderCapacity * 0.1f);
+            AddResource(IncidentType.PEE, maxBladderCapacity * 0.1f);
+            AddResource(IncidentType.POOP, maxBladderCapacity * 0.1f);
         }
 
         public void DrinkWateringCan()
@@ -432,40 +521,151 @@ namespace PrimevalTitmouse
         {
             return Game1.currentLocation is FarmHouse;
         }
-
-        public void Mess(bool voluntary = false, bool inUnderwear = true)
+        public bool IsTryingToHoldIt(IncidentType type, float vsAmount)
         {
-            numPottyPooAtNight = 0;
-            numAccidentPooAtNight = 0;
+            float capacity;
+            float used;
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    capacity = underwear.absorbency;
+                    used = underwear.wetness;
+                    break;
+                case IncidentType.POOP:
+                    capacity = underwear.containment;
+                    used = underwear.messiness;
+                    break;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+
+            if (!underwear.removable) return false; // If we don't have pants or training pants, there is no point
+            if(used > 300) return false; // If the underwear is already heavily used, we stop trying
+            if(used > GetCapacity(type) / 3) return false; // If its more than 1/3 our bladder/bowel size already, we stop trying
+            if ((vsAmount + used) > capacity) return false; // If the underwear would be more than full, there is no point
+            
+            return true;
+        }
+        // Minor incident on very full bladder/bowel. Balances the players chances to get to the potty, even if that means minor incidents. Also obviously cute
+        public bool MinorAccident(IncidentType type)
+        {
+            float capacity = GetCapacity(type);
+            float fullness = GetFullness(type);
+            float fullnessPercent = fullness / capacity;
+            if (fullnessPercent < lastWarningThreshold) return false; // Just to make it easily readable that this is for after and inside the last warning threshold
+            if (fullnessPercent > 1.1f) return false; // If its too much, leaking will not do
+            
+            // We can lose maximal the amount until the last warning threshold, because we would trigger that warning again. This only happens after the last warning anyway.
+            float amount = Math.Min((fullnessPercent - lastWarningThreshold - 0.01f) * capacity, GetMaxCapacity(type) * 0.8f);
+            if (!IsTryingToHoldIt(type, amount)) return false;
+
+            if (type == IncidentType.POOP)
+            {
+                Animations.AnimateMessingMinor(this);
+            }
+            else
+            {
+                Animations.AnimateWettingMinor(this);
+            }
+            
+            ChangeContinence(type, CalculateContinenceLossOrGain(type, false, true, amount / GetMaxCapacity(type)));
+            AddAccidentFromFullness(type, amount);
+            return true;
+            //AddMess(amountToLose);
+            //_ = this.pants.AddPoop(this.underwear.AddPoop(bowelFullness));
+        }
+        public void ChangeFullness(IncidentType type, float amount)
+        {
+            // We intentionally allow fullness over max 
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    SetFullness(type, bladderFullness + amount);
+                    break;
+                case IncidentType.POOP:
+                    SetFullness(type, bowelFullness + amount);
+                    break;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        public void AddAccidentFromFullness(IncidentType type, float amount)
+        {
+            ChangeFullness(type, -amount);
+            AddAccident(type, amount);
+        }
+        public void AddAccident(IncidentType type, float amount)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    if (isSleeping)
+                    {
+                        _ = this.bed.AddPee(this.pants.AddPee(this.underwear.AddPee(amount)));
+                    }
+                    else
+                    {
+                        _ = this.pants.AddPee(this.underwear.AddPee(amount));
+                    }
+                    break;
+                case IncidentType.POOP:
+                    if (isSleeping)
+                    {
+                        _ = this.bed.AddPoop(this.pants.AddPoop(this.underwear.AddPoop(amount)));
+                    }
+                    else
+                    {
+                        _ = this.pants.AddPoop(this.underwear.AddPoop(amount));
+                    }
+                    break;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+
+        }
+        // Minor accidents (leaking) can happen before failure and is usually not causing someone else to notice
+        public void AccidentMinor(IncidentType type)
+        {
+            if (isSleeping) return;
+
+
+        }
+        public void Accident(IncidentType type, bool voluntary = false, bool inUnderwear = true)
+        {
+            float attemptThreshold = GetAttemptThreshold(type);
+            float capacity = GetCapacity(type);
+            float fullness = GetFullness(type);
+            float continence = GetContinence(type);
+            float maxCapacity = GetMaxCapacity(type); // yes, this is the maximum capacity a bladder/bowel can have, used for changing continence
+
             //If we're sleeping check if we have an accident or get up to use the potty
             if (isSleeping)
             {
-                //When we're sleeping, our bowel fullness can exceed our capacity since we calculate for the whole night at once
-                //Hehehe, this may be evil, but with a smaller bladder, you'll have to pee multiple times a night
+                //When we're sleeping, our fullness can exceed our capacity since we calculate for the whole night at once
+                //Hehehe, this may be evil, but with a smaller bladder/bowel, you'll have to go multiple times a night
                 //So roll the dice each time >:)
                 //<TODO>: Give stamina penalty every time you get up to go potty. Since you disrupted sleep.
-                int numMesses = (int)((bowelFullness - GetBowelAttemptThreshold()) / bowelCapacity);
-                float additionalAmount = bowelFullness - (numMesses * bowelCapacity);
-                int numAccidents = 0;
+                int numIncidentAmount = (int)((fullness - attemptThreshold) / capacity);
+                float additionalAmount = continence - (numIncidentAmount * capacity);
+                int numAccident = 0;
                 int numPotty = 0;
 
                 if (additionalAmount > 0)
-                    numMesses++;
+                    numIncidentAmount++;
 
-                for (int i = 0; i < numMesses; i++)
+                for (int i = 0; i < numIncidentAmount; i++)
                 {
                     //Randomly decide if we get up. Less likely if we have lower continence
-                    bool lclVoluntary = voluntary || Regression.rnd.NextDouble() < (double)this.bowelContinence;
-                    StartWetting(lclVoluntary && underwear.removable, true); //Always in underwear in bed
-                    float amountToLose = (i != numMesses - 1) ? bowelCapacity : additionalAmount;
+                    bool lclVoluntary = voluntary || Regression.rnd.NextDouble() < (double)continence;
+                    StartAccident(type, lclVoluntary && underwear.removable, true); //Always in underwear in bed
+                    float amountToLose = (i != numIncidentAmount - 1) ? capacity : additionalAmount;
                     if (!lclVoluntary)
                     {
-                        numAccidents++;
+                        numAccident++;
+                        ChangeContinence(type, CalculateContinenceLossOrGain(type, voluntary, inUnderwear, amountToLose / maxCapacity)); // maxCapacity is correct, for balancing reasons
                         //Any overage in the container, add to the pants. Ignore overage over that.
                         //When sleeping, the pants are actually the bed
-                        _ = this.bed.AddPoop(this.pants.AddPoop(this.underwear.AddPoop(amountToLose)));
-                        bowelFullness -= amountToLose;
-
+                        AddAccidentFromFullness(type, amountToLose);
                     }
                     else
                     {
@@ -473,75 +673,195 @@ namespace PrimevalTitmouse
                         bowelFullness -= amountToLose;
                         if (!underwear.removable) //Certain underwear can't be taken off to use the toilet (ie diapers)
                         {
-                            _ = this.bed.AddPoop(this.pants.AddPoop(this.underwear.AddPoop(amountToLose)));
-                            numAccidents++;
+                            ChangeContinence(type, CalculateContinenceLossOrGain(type, voluntary, inUnderwear, amountToLose / maxCapacity)); // maxCapacity is correct, for balancing reasons
+                            AddAccidentFromFullness(type, amountToLose);
+                            numAccident++;
                         }
                     }
                 }
-                numPottyPooAtNight = numPotty;
-                numAccidentPooAtNight = numAccidents;
+                switch (type)
+                {
+                    case IncidentType.PEE:
+                        numPottyPeeAtNight = numPotty;
+                        numAccidentPeeAtNight = numAccident;
+                        break;
+                    case IncidentType.POOP:
+                        numPottyPooAtNight = numPotty;
+                        numAccidentPooAtNight = numAccident;
+                        break;
+                    default:
+                        throw new Exception("Not implemented: type " + type.ToString());
+                }
+
             }
             else if (inUnderwear)
             {
-
-                StartMessing(voluntary, true); //Always in underwear in bed
-                                               //Any overage in the container, add to the pants. Ignore overage over that.
-
-                if (bowelFullness >= GetBowelAttemptThreshold())
+                StartAccident(type,voluntary, true);
+                bool attemptOnly = fullness < attemptThreshold;
+                if (!attemptOnly)
                 {
-                    _ = this.pants.AddPoop(this.underwear.AddPoop(bowelFullness));
-                    this.bowelFullness = 0.0f;
+                    ChangeContinence(type, CalculateContinenceLossOrGain(type, voluntary, inUnderwear, fullness / maxCapacity)); // yes this is correct, we do relative to max bladder to temper loss on near no control (and frequent accidents)
+                    AddAccidentFromFullness(type, fullness);
                 }
+                FinalizeAccident(type, voluntary, true, attemptOnly); // Trying in your underwear is different, people might be acting differently
             }
             else
             {
-                StartMessing(voluntary, false);
+
                 if (underwear.removable)
                 {
-                    if (bowelFullness >= GetBowelAttemptThreshold())
+                    bool attemptOnly = fullness < attemptThreshold;
+                    StartAccident(type, voluntary, false);
+                    if (!attemptOnly)
                     {
-                        this.bowelFullness = 0.0f;
+                        ChangeContinence(type, CalculateContinenceLossOrGain(type, voluntary, inUnderwear, fullness / capacity)); // yes this is correct, its capacity as the gain (for making it) should be relative to the bladder state, not max
+                        ChangeFullness(type, -this.bowelFullness);
                     }
+                    FinalizeAccident(type, voluntary, true, attemptOnly); // Trying in your underwear is different, people might be acting differently
                 }
+
             }
         }
-
-        public void StartMessing(bool voluntary = false, bool inUnderwear = true)
+        public void Mess(bool voluntary = false, bool inUnderwear = true)
         {
-            if (!Regression.config.Messing)
-                return;
-
-            if (bowelFullness < GetBowelAttemptThreshold())
+            Accident(IncidentType.POOP,voluntary,inUnderwear);
+        }
+        public void StartAccident(IncidentType type, bool voluntary = false, bool inUnderwear = true)
+        {
+            switch (type)
             {
-                Animations.AnimatePoopAttempt(this, inUnderwear);
+                case IncidentType.PEE:
+                    if (!Regression.config.Wetting) return;
+                    break;
+                case IncidentType.POOP:
+                    if (!Regression.config.Messing) return;
+                    break;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+            float attemptThreshold = GetAttemptThreshold(type);
+            float fullness = GetFullness(type);
+
+            if (fullness < attemptThreshold)
+            {
+                switch (type)
+                {
+                    case IncidentType.PEE:
+                        Animations.AnimatePeeAttempt(this, inUnderwear);
+                        break;
+                    case IncidentType.POOP:
+                        Animations.AnimatePoopAttempt(this, inUnderwear);
+                        break;
+                    default:
+                        throw new Exception("Not implemented: type " + type.ToString());
+                }
             }
             else
             {
+                switch (type)
+                {
+                    case IncidentType.PEE:
+                        Animations.AnimateWettingStart(this, voluntary, inUnderwear);
+                        break;
+                    case IncidentType.POOP:
+                        Animations.AnimateMessingStart(this, voluntary, inUnderwear);
+                        break;
+                    default:
+                        throw new Exception("Not implemented: type " + type.ToString());
+                }
+            }
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    Animations.AnimateWettingEnd(this);
+                    break;
+                case IncidentType.POOP:
+                    Animations.AnimateMessingEnd(this);
+                    break;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        // percentLost: The amount of gain or loss is dependend on how much percent of the maxBladder or maxBowel we lost
+        // This allowes for small gains or losses on small accidents and reduces edge cases 
+        public float CalculateContinenceLossOrGain(IncidentType type, bool voluntary, bool inUnderwear, float percentLost)
+        {
+            float fullness = GetFullness(type);
 
-                //If we have an accident (not voluntary), decrease continence
-                //If we use the potty before we REALLY have to go (we go before we reach some threshold), increase continence
-                //Otherwise, if it is voluntary but waited until we almost had an accident (fullness above some threshold) don't change anything
-                if (!voluntary)
-                    this.ChangeBowelContinence(0.01f * Regression.config.BowelLossContinenceRate * situationMultiplier(voluntary, inUnderwear));
-                else if (bowelFullness > GetBowelTrainingThreshold())
-                    this.ChangeBowelContinence(-0.01f * Regression.config.BowelGainContinenceRate * situationMultiplier(voluntary, inUnderwear));
-
-                Animations.AnimateMessingStart(this, voluntary, inUnderwear);
+            int rate;
+            if (voluntary)
+            {
+                rate = type == IncidentType.POOP ? Regression.config.BowelGainContinenceRate : Regression.config.BladderGainContinenceRate;
+            }
+            else
+            {
+                rate = type == IncidentType.POOP ? Regression.config.BowelLossContinenceRate : Regression.config.BladderLossContinenceRate;
             }
 
-            Animations.AnimateMessingEnd(this);
+
+            //If we have an accident (not voluntary), decrease continence
+            //If we use the potty before we REALLY have to go (we go before we reach some threshold), increase continence
+            //Otherwise, if it is voluntary but waited until we almost had an accident (fullness above some threshold) don't change anything
+            if (!voluntary)
+                return -0.01f * rate * percentLost * situationMultiplier(voluntary, inUnderwear);
+            else if (fullness > GetTrainingThreshold(type))
+                return 0.01f * rate * percentLost * situationMultiplier(voluntary, inUnderwear);
+            else
+            {
+                return 0f;
+            }
+        }
+        private void FinalizeAccident(IncidentType type, bool voluntary = false, bool inUnderwear = true, bool attemptOnly = false)
+        {
+            var dirt = type == IncidentType.POOP ? pants.messiness : pants.wetness;
             if (!this.InToilet(inUnderwear))
-                _ = Animations.HandleVillager(this, true, inUnderwear, pants.messiness > 0.0, false);
-            if (pants.messiness <= 0.0 || !inUnderwear)
+                _ = Animations.HandleVillager(this, type == IncidentType.POOP, inUnderwear, dirt > 0, false);
+            if (attemptOnly || dirt <= 0.0 || !inUnderwear)
                 return;
-            HandlePoopOverflow();
+            HandleOverflow(type);
         }
 
-        private void HandlePoopOverflow()
+        private void HandleOverflow(IncidentType type)
         {
             if (isSleeping)
                 return;
 
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    _HandlePeeOverflow();
+                    break;
+                case IncidentType.POOP:
+                    _HandlePoopOverflow();
+                    break;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
+        // Overflow functions are so different that it is less confusing to keep them as-is
+
+        private void _HandlePeeOverflow()
+        {
+            Animations.Write(Regression.t.Pee_Overflow, this, Animations.peeAnimationTime);
+
+            int defenseReduction = -Math.Max(Math.Min((int)(pants.wetness / pants.absorbency * 10.0), 10), 1);
+
+            Buff buff = new Buff(id: WET_DEBUFF, displayName: "Wet", effects: new BuffEffects()
+            {
+                Defense = { defenseReduction }
+            })
+            {
+                description = string.Format("{0} {1} Defense.", Strings.RandString(Regression.t.Debuff_Wet_Pants), defenseReduction),
+                millisecondsDuration = 1080000,
+                glow = pants.messiness != 0.0 ? Color.Brown : Color.Yellow
+            };
+            if (Game1.player.hasBuff(WET_DEBUFF))
+                this.RemoveBuff(WET_DEBUFF);
+            Game1.player.applyBuff(buff);
+        }
+
+        private void _HandlePoopOverflow()
+        {
             Animations.Write(Regression.t.Poop_Overflow, this, Animations.poopAnimationTime);
             float howMessy = pants.messiness / pants.containment;
             int speedReduction = howMessy >= 0.5 ? (howMessy > 1.0 ? -3 : -2) : -1;
@@ -579,125 +899,9 @@ namespace PrimevalTitmouse
             return multiplier;
         }
 
-        public void StartWetting(bool voluntary = false, bool inUnderwear = true)
-        {
-
-            if ((double)bladderFullness < GetBladderAttemptThreshold())
-            {
-                Animations.AnimatePeeAttempt(this, inUnderwear);
-            }
-            else
-            {
-                //If we have an accident (not voluntary), decrease continence
-                //If we use the potty before we REALLY have to go (we go before we reach some threshold), increase continence
-                //Otherwise, if it is voluntary but waited until we almost had an accident (fullness above some threshold) don't change anything
-                if (!voluntary)
-                    this.ChangeBladderContinence(0.01f * (float)Regression.config.BladderLossContinenceRate * situationMultiplier(voluntary, inUnderwear));
-                else if(bladderFullness > GetBladderTrainingThreshold())
-                    this.ChangeBladderContinence(-0.01f * (float)Regression.config.BladderGainContinenceRate * situationMultiplier(voluntary, inUnderwear));
-                Animations.AnimateWettingStart(this, voluntary, inUnderwear);
-            }
-
-            Animations.AnimateWettingEnd(this);
-            if (!this.InToilet(inUnderwear))
-                _ = Animations.HandleVillager(this, false, inUnderwear, pants.wetness > 0.0, false);
-            if ((pants.wetness <= 0.0 || !inUnderwear))
-                return;
-            HandlePeeOverflow();
-        }
-        private void HandlePeeOverflow()
-        {
-            if (isSleeping)
-                return;
-
-            Animations.Write(Regression.t.Pee_Overflow, this, Animations.peeAnimationTime);
-
-            int defenseReduction = -Math.Max(Math.Min((int)(pants.wetness / pants.absorbency * 10.0), 10), 1);
-
-            Buff buff = new Buff(id: WET_DEBUFF, displayName: "Wet", effects: new BuffEffects()
-            {
-                Defense = { defenseReduction }
-            })
-            {
-                description = string.Format("{0} {1} Defense.", Strings.RandString(Regression.t.Debuff_Wet_Pants), defenseReduction),
-                millisecondsDuration = 1080000,
-                glow = pants.messiness != 0.0 ? Color.Brown : Color.Yellow
-            };
-            if (Game1.player.hasBuff(WET_DEBUFF))
-                this.RemoveBuff(WET_DEBUFF);
-            Game1.player.applyBuff(buff);
-        }
-
         public void Wet(bool voluntary = false, bool inUnderwear = true)
         {
-            if (!Regression.config.Wetting)
-                return;
-
-            numPottyPeeAtNight = 0;
-            numAccidentPeeAtNight = 0;
-            //If we're sleeping check if we have an accident or get up to use the potty
-            if (isSleeping)
-            {
-                //When we're sleeping, our bladder fullness can exceed our capacity since we calculate for the whole night at once
-                //Hehehe, this may be evil, but with a smaller bladder, you'll have to pee multiple times a night
-                //So roll the dice each time >:)
-                int numWettings = (int)((bladderFullness - GetBladderAttemptThreshold()) / bladderCapacity);
-                float additionalAmount = bladderFullness - (numWettings * bladderCapacity);
-                int numAccidents = 0;
-                int numPotty = 0;
-
-                if (additionalAmount > 0)
-                    numWettings++;
-
-                for (int i = 0; i < numWettings; i++)
-                {
-                    //Randomly decide if we get up. Less likely if we have lower continence
-                    bool lclVoluntary = voluntary || Regression.rnd.NextDouble() < (double)this.bladderContinence;
-                    StartWetting(lclVoluntary && underwear.removable, true); //Always in underwear in bed
-                    float amountToLose = (i != numWettings - 1) ? bladderCapacity : additionalAmount;
-                    if (!lclVoluntary)
-                    {
-                        numAccidents++;
-                        //Any overage in the container, add to the pants. Ignore overage over that.
-                        //When sleeping, the pants are actually the bed
-                        _ = this.bed.AddPee(this.pants.AddPee(this.underwear.AddPee(amountToLose)));
-                        bladderFullness -= amountToLose;
-
-                    }
-                    else
-                    {
-                        numPotty++;
-                        bladderFullness -= amountToLose;
-                        if (!underwear.removable) //Certain underwear can't be taken off to use the toilet (ie diapers)
-                        {
-                            _ = this.bed.AddPee(this.pants.AddPee(this.underwear.AddPee(amountToLose)));
-                            numAccidents++;
-                        }
-                    }
-                }
-                numPottyPeeAtNight = numPotty;
-                numAccidentPeeAtNight = numAccidents;
-            }
-            else if (inUnderwear)
-            {
-                StartWetting(voluntary, true);
-                //Any overage in the container, add to the pants. Ignore overage over that.
-                if (bladderFullness >= GetBladderAttemptThreshold())
-                {
-                    _ = this.pants.AddPee(this.underwear.AddPee(bladderFullness));
-                    this.bladderFullness = 0.0f;
-                }
-            } else
-            {
-                StartWetting(voluntary, false);
-                if (underwear.removable) {
-                    if (bladderFullness >= GetBladderAttemptThreshold())
-                    {
-                    this.bladderFullness = 0.0f;
-                    }
-                }
-            }
-            if (bladderFullness < 0) bladderFullness = 0;
+            Accident(IncidentType.PEE,voluntary,inUnderwear);
         }
 
         public void HandleMorning()
@@ -733,6 +937,8 @@ namespace PrimevalTitmouse
 
             Animations.AnimateMorning(this);
             bed.Wash();
+            pants = CreateNewPants();
+            CleanPants();
         }
 
         public void HandleNight()
@@ -842,5 +1048,10 @@ namespace PrimevalTitmouse
                 this.AddWater(10);
             }
         }
+    }
+    public enum IncidentType
+    {
+        PEE,
+        POOP
     }
 }

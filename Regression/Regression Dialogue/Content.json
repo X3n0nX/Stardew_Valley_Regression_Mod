@@ -35,6 +35,6 @@
 		    "LogName": "Jas",
             "Action": "Include",
             "FromFile": "Dialogue/NPCs/Jas.json"
-		},	
+		}
 	]
 }

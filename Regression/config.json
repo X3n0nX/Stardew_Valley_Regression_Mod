@@ -17,5 +17,9 @@
 	"BowelLossContinenceRate": 2, //in 1% increments. i.e. 5 = 5% loss per accident
 	"BladderGainContinenceRate": 2, //in 1% increments. i.e. 5 = 5% gain per success. 3% seams balanced, as it is probably doubled to 6% for potty runs (toilet multiplier). It's efford for the player.
 	"BowelGainContinenceRate": 2, //in 1% increments. i.e. 5 = 5% gain per success
+	"MaxBladderCapacity": 600, // 600 is around 3 potty runs a day
+	"MaxBowelCapacity": 1200, // 1200 is around 1.5 potty runs a day
+	"StartBladderContinence": 70, // A value (in percent) between 0 and 100, defines the starting (new game) bladder continence. Usually 70.
+	"StartBowelContinence": 90, // A value (in percent) between 0 and 100, defines the starting (new game) bowel continence. Usually 90.
 	"Lang": "en"
 }

@@ -20,5 +20,9 @@
         public int BowelLossContinenceRate;
         public int BladderGainContinenceRate;
         public int BowelGainContinenceRate;
+        public int MaxBladderCapacity;
+        public int MaxBowelCapacity;
+        public int StartBladderContinence;
+        public int StartBowelContinence;
     }
 }

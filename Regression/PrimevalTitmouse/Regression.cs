@@ -33,6 +33,9 @@ namespace PrimevalTitmouse
         const float timeInTick = (1f/43f); //One second realtime ~= 1/43 hours in game
         public override void Entry(IModHelper h)
         {
+            //var harmony = new Harmony("com.primevaltitmouse.regression");
+            //harmony.PatchAll();
+
             help = h;
             monitor = Monitor;
             config = Helper.ReadConfig<Config>();
@@ -269,25 +272,27 @@ namespace PrimevalTitmouse
                         break;
                     case SButton.F8:
                         config.Easymode = !config.Easymode;
+
+                        Animations.Write(config.Easymode ? Regression.t.EasyMode_On : Regression.t.EasyMode_Off, body);
                         break;
                     case SButton.S:
                         if (e.IsDown(SButton.LeftShift))
                         {
-                            body.ChangeBowelContinence(0.1f);
+                            body.ChangeContinence(IncidentType.POOP, 0.1f);
                         }
                         else
                         {
-                            body.ChangeBladderContinence(0.1f);
+                            body.ChangeContinence(IncidentType.PEE, 0.1f);
                         }
                         break;
                     case SButton.W:
                         if (e.IsDown(SButton.LeftShift))
                         {
-                            body.ChangeBowelContinence(-0.1f);
+                            body.ChangeContinence(IncidentType.POOP, -0.1f);
                         }
                         else
                         {
-                            body.ChangeBladderContinence(-0.1f);
+                            body.ChangeContinence(IncidentType.PEE, -0.1f);
                         }
                         break;
                 }
@@ -311,8 +316,17 @@ namespace PrimevalTitmouse
                     case SButton.F7:
                         Animations.CheckContinence(body);
                         break;
+                    case SButton.F8:
+                        Animations.CheckPottyFeeling(body);
+                        break;
                     case SButton.F9:
                         config.Debug = !config.Debug;
+                        break;
+                    case SButton.F10:
+                        body.MinorAccident(IncidentType.PEE);
+                        break;
+                    case SButton.F11:
+                        body.MinorAccident(IncidentType.POOP);
                         break;
                 }
             }
@@ -361,14 +375,14 @@ namespace PrimevalTitmouse
                 if(Game1.currentLocation is SeedShop)
                 {
                     //The seed shop does not sell the Joja diaper
-                    availableUnderwear.Remove("Joja diaper");
+                    availableUnderwear.Remove("joja diaper");
                     underwearAvailableAtShop = true;
                 } else if(Game1.currentLocation is JojaMart)
                 {
                     //Joja shop ONLY sels the Joja diaper and a cloth diaper
                     availableUnderwear.Clear();
-                    availableUnderwear.Add("Joja diaper");
-                    availableUnderwear.Add("Cloth diaper");
+                    availableUnderwear.Add("joja diaper");
+                    availableUnderwear.Add("cloth diaper");
                     underwearAvailableAtShop = true;
                 }
 
@@ -378,7 +392,7 @@ namespace PrimevalTitmouse
                     {
                         Underwear underwear = new Underwear(type, 0.0f, 0.0f, 1);
                         currentShopMenu.forSale.Add(underwear);
-                        currentShopMenu.itemPriceAndStock.Add(underwear, new ItemStockInformation(underwear.container.price, 999));
+                        currentShopMenu.itemPriceAndStock.Add(underwear, new ItemStockInformation(underwear.container.price, StardewValley.Menus.ShopMenu.infiniteStock));
                     }
                 }
             }
@@ -418,6 +432,39 @@ namespace PrimevalTitmouse
             //Handle a Left Click
             if (e.Button == SButton.MouseLeft)
             {
+                
+                var men = Game1.activeClickableMenu as StardewValley.Menus.GameMenu;
+                if (men != null)
+                {
+                    var inventory = men.pages[men.currentTab] as StardewValley.Menus.InventoryPage;
+                    if (inventory != null)
+                    {
+                        var clothing = inventory.hoveredItem as StardewValley.Objects.Clothing;
+                        if(clothing != null)
+                        {
+                            if(clothing.clothesType.Value == Clothing.ClothesType.PANTS)
+                            {
+                                if (body.HasWetOrMessyDebuff())
+                                {
+                                    Game1.activeClickableMenu = null;
+                                    if (!Regression.config.PantsChangeRequiresHome || body.InPlaceWithPants())
+                                    {
+                                        body.ChangePants();
+                                        Animations.Write(Regression.t.Change_At_Home, body);
+                                    }
+                                    else
+                                    {
+                                        Animations.Write(Regression.t.Change_Requires_Home, body);
+                                    }
+                                    
+                                    return;
+                                    
+                                }
+                            }
+                        }
+                    }
+                        
+                }
                 //If Left click is already being interpreted by another event (or we otherwise wouldn't process such an event. Ignore it.
                 if ((Game1.dialogueUp || Game1.currentMinigame != null || (Game1.eventUp || Game1.activeClickableMenu != null) || Game1.fadeToBlack) || (who.isRidingHorse() || !who.canMove || (Game1.player.isEating || who.canOnlyWalk) || who.FarmerSprite.pauseForSingleAnimation))
                     return;
@@ -439,7 +486,7 @@ namespace PrimevalTitmouse
                     {
                         if(Regression.config.PantsChangeRequiresHome && body.HasWetOrMessyDebuff() && !body.InPlaceWithPants())
                         {
-                            Animations.Say(Regression.t.Change_Requires_Pants, body);
+                            Animations.Write(Regression.t.Change_Requires_Pants, body);
                             return;
                         }
                         who.reduceActiveItemByOne(); //Take it out of inventory
@@ -447,7 +494,7 @@ namespace PrimevalTitmouse
                         Underwear underwear = new Underwear(container.name, container.wetness, container.messiness, 1);
 
                         //If the underwear returned is not removable, destroy it
-                        if (!container.removable) { }
+                        if (!container.removable && !container.washable) { }
                         //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
                         else if (!who.addItemToInventoryBool(underwear, false))
                         {

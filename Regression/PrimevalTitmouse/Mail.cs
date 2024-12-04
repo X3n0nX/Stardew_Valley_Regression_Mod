@@ -23,13 +23,14 @@ namespace PrimevalTitmouse
                 initialSupplies = new();
                 letterShown = false;
                 //Always give turnips and diapers
-                initialSupplies.Add(new StardewValley.Object("399", 20, false, -1, 0));
-                initialSupplies.Add(new Underwear("pawprint diaper", 0.0f, 0.0f, 40));
+                initialSupplies.Add(new StardewValley.Object("399", 40, false, -1, 0)); // it needs definitly a bit of food at the start
+                //initialSupplies.Add(new Underwear("pawprint diaper", 0.0f, 0.0f, 40));
+                initialSupplies.Add(new Underwear("training pants", 0.0f, 0.0f, 5)); // training pants are washable, they might be a good start equipment and are "not that great"
                 //If we're in Hard mode, also give pull-up.
-                if (!Regression.config.Easymode)
+                /*if (!Regression.config.Easymode)
                 {
-                    initialSupplies.Add(new Underwear("lavender pullup", 0.0f, 0.0f, 15));
-                }
+                    initialSupplies.Add(new Underwear("training pants", 0.0f, 0.0f, 5)); // training pants are washable, they might be a good start equipment and are "not that great"
+                }*/
                 letterContents += "[#]A Little... Protection.";
                 Game1.mailbox.Add(initialRegressionLetterTitle);
                 Dictionary<string, string> mails = Game1.content.Load<Dictionary<string, string>>("Data\\mail");

@@ -26,11 +26,15 @@
 	"Drink_Water_Source": [
 		"You scoop up some water in a cup and drain it down."
 	],
+	"Bladder_Green": [
+		"You don't feel like you need to pee.",
+		"You're pretty sure your bladder is mostly empty."
+	],
 	"Bladder_Yellow": [
-		"You need to pee.",
+		"You need to pee soon.",
 		"You should find somewhere to pee soon.",
 		"You feel like you might pee soon.",
-		"Your bladder is getting full."
+		"Your bladder is slowly getting full."
 	],
 	"Bladder_Orange": [
 		"You really need to pee!",
@@ -40,8 +44,18 @@
 	],
 	"Bladder_Red": [
 		"You can’t hold it anymore! You're about to pee yourself!",
-		"You have to pee so badly you start hopping around!",
-		"You feel a few drops of pee leak out into your $UNDERWEAR_NAME$!"
+		"You have to pee so badly you start hopping around!"
+	],
+	"Bladder_Leak": [
+		"You feel a little pee drip in your $UNDERWEAR_NAME$!",
+		"You feel a few drops of pee leak out into your $UNDERWEAR_NAME$!",
+		"While hopping around, trying not to pee yourself, a little escapes into your $UNDERWEAR_NAME$!",
+		"While crossing your legs, you wee your $UNDERWEAR_NAME$ a little!",
+		"Your $UNDERWEAR_NAME$ gets a little wet while you try to hold it a little longer!"
+	],
+	"Bowels_Green": [
+		"You don't feel like you need to poop.",
+		"You're pretty sure you can hold your poop for a while."
 	],
 	"Bowels_Yellow": [
 		"You need to poop.",
@@ -57,6 +71,12 @@
 	"Bowels_Red": [
 		"You can feel the poop starting to push out!",
 		"You can’t hold it anymore! You're about to mess yourself!"
+	],
+	"Bowels_Leak": [
+		"Some poop slowly escapes your control, soiling your $UNDERWEAR_NAME$!",
+		"A little poop stains your $UNDERWEAR_NAME$!",
+		"While trying to hold it, you soil your $UNDERWEAR_NAME$ a little!",
+		"While trying your best to hold it, your $UNDERWEAR_NAME$ get a little messy!"
 	],
 	"Bladder_Continence_Green": [ "You're pretty good at holding your pee." ],
 	"Bladder_Continence_Yellow": [ "You can mostly hold your pee it. Mostly." ],
@@ -141,16 +161,16 @@
 		"You try to mess in your $UNDERWEAR_NAME$, but you can't."
 	],
 	"Still_Soiled": [
-		"You feel your <wet&messy> $UNDERWEAR_NAME$ and blush at the sensation.",
-		"You feel like a little <boy/girl> knowing that you're still in $UNDERWEAR_PREFIX$ <wet&messy> $UNDERWEAR_NAME$.",
-		"You blush and smile warmly realizing you're wearing $UNDERWEAR_PREFIX$ <wet&poopy> $UNDERWEAR_NAME$.",
-		"You smell something stinky and your heart flutters as you realize you're still wearing $UNDERWEAR_PREFIX$ <wet&messy> $UNDERWEAR_NAME$.",
-		"You feel your <wet&poopy> $UNDERWEAR_NAME$ squishing between your legs and smile to yourself.",
-		"You notice your sagging <wet&messy> $UNDERWEAR_NAME$ <is#are> snug and warm.",
-		"You notice you're waddling because your $UNDERWEAR_NAME$ <is#are> <wet&messy>.",
-		"You consider changing your <wet&messy> $UNDERWEAR_NAME$ soon, but not right now. It's still warm",
-		"You press your hand into your squishy $UNDERWEAR_NAME$. You feel like a little baby knowing you <wet&messed> <it#them>.",
-		"You feel your $UNDERWEAR_NAME$. <It's#They're> all <wet&messy>!"
+		"You feel your $UNDERWEAR_LONGDESC$ and blush at the sensation.",
+		"You feel like a little <boy/girl> knowing that you're still in $UNDERWEAR_LONGDESC$.",
+		"You blush and smile warmly realizing you're wearing $UNDERWEAR_LONGDESC$.",
+		"You smell something stinky and your heart flutters as you realize you're still wearing $UNDERWEAR_LONGDESC$.",
+		"You feel your $UNDERWEAR_LONGDESC$ squishing between your legs and smile to yourself.",
+		"You notice your sagging $UNDERWEAR_LONGDESC$ <is#are> snug and warm.",
+		"You notice you're waddling because your $UNDERWEAR_LONGDESC$",
+		"You consider changing your $UNDERWEAR_LONGDESC$ soon, but not right now. It's still warm",
+		"You press your hand into your squishy $UNDERWEAR_LONGDESC$. You feel like a little baby in <it#them>.",
+		"You feel your $UNDERWEAR_LONGDESC$. <It's#They're> all squishy!"
 	],
 	"Wet_Accident": [
 		"You bite your lip and take a sharp breath through your nose as your bladder gives in and you flood your $UNDERWEAR_NAME$.",
@@ -518,6 +538,12 @@
 	"Change_Requires_Pants": [
 		"You don't have another pair of $PANTS_NAME$ here to change into. You probably need to go home first."
 	],
+	"Change_Requires_Home": [
+		"Dirty pants have to be changed at home."
+	],
+	"Change_At_Home": [
+		"You change yourself into another pair of $PANTS_NAME$."
+	],
 	"PeekWaistband": [
 		"You peek inside your waistband and see"
 	],
@@ -526,7 +552,8 @@
 	],
 	"Underwear_Clean": "clean $UNDERWEAR_DESC$",
 	"Underwear_Drying": "drying $UNDERWEAR_DESC$",
-
+	"EasyMode_On": "Easy Mode on. Hunger and Thirst are refilled every morning and the wet beds dried.",
+	"EasyMode_Off": "Easy Mode off. Hunger and Thirst are never refilled and wet beds dry slowly.",
 	"Underwear_Wet": [ //Chosen based on diaper wetness, applied after Underwear_Messy. Words in brackets only show if underwear is also messy.
 		"slightly damp $UNDERWEAR_DESC$",
 		"somewhat wet $UNDERWEAR_DESC$",
@@ -1449,8 +1476,8 @@
 		"blue jeans": {
 			"name": "blue jeans",
 			"description": "sturdy blue jeans",
-			"absorbency": 300.0,
-			"containment": 60.0,
+			"absorbency": 400.0,
+			"containment": 600.0,
 			"spriteIndex": -1,
 			"price": 2000,
 			"washable": true,
@@ -1459,91 +1486,104 @@
 			"removable": true,
 			"durability": -1
 		},
+		"legs": {
+			"name": "legs",
+			"description": "your two legs",
+			"absorbency": 10.0,
+			"containment": 10.0,
+			"spriteIndex": -1,
+			"price": 2000,
+			"washable": true,
+			"plural": true,
+			"dryingTime": 600,
+			"removable": false,
+			"durability": -1
+		},
 		"black thong": {
 			"name": "black thong",
-			"description": "lacy black thong",
+			"description": "lacy black thong, not absorbend or durable",
 			"absorbency": 75.0,
-			"containment": 60.0,
+			"containment": 75.0,
 			"spriteIndex": 0,
-			"price": 10,
-			"washable": true,
+			"price": 100,
+			"washable": false,
 			"plural": false,
 			"dryingTime": 300,
 			"removable": true,
-			"durability": 4
+			"durability": 1
 		},
 		"polka dot panties": {
 			"name": "polka dot panties",
 			"description": "simple white panties with pink polka dots",
-			"absorbency": 150.0,
-			"containment": 100.0,
+			"absorbency": 120.0,
+			"containment": 350.0,
 			"spriteIndex": 1,
-			"price": 10,
+			"price": 50,
 			"washable": true,
 			"plural": true,
-			"dryingTime": 400,
+			"dryingTime": 300,
 			"removable": true,
-			"durability": 4
+			"durability": 3
 		},
 		"big kid undies": {
 			"name": "big kid undies",
 			"description": "cotton undies for big kids only",
-			"absorbency": 150.0,
-			"containment": 115.0,
+			"absorbency": 120.0,
+			"containment": 350.0,
 			"spriteIndex": 2,
-			"price": 10,
+			"price": 40,
 			"washable": true,
 			"plural": true,
-			"dryingTime": 400,
+			"dryingTime": 300,
 			"removable": true,
 			"durability": 4
 		},
 		"dinosaur undies": {
 			"name": "dinosaur undies",
-			"description": "green undies covered in adorable dinosaurs",
-			"absorbency": 150.0,
-			"containment": 115.0,
+			"description": "green, lightly padded undies covered in adorable dinosaurs",
+			"absorbency": 400.0,
+			"containment": 600.0,
 			"spriteIndex": 3,
-			"price": 10,
+			"price": 35,
 			"washable": true,
 			"plural": true,
-			"dryingTime": 400,
+			"dryingTime": 500,
 			"removable": true,
-			"durability": 4
+			"durability": 8
 		},
 		"lavender pullup": {
-			"name": "lavender pullup",
-			"description": "soft and snug flowery lavender pullup",
-			"absorbency": 600.0,
-			"containment": 170.0,
+			"name": "lavender pullups",
+			"description": "thick, soft and snug disposable flowery lavender pullups",
+			"absorbency": 1550.0,
+			"containment": 1400.0,
 			"spriteIndex": 4,
 			"price": 25,
 			"washable": false,
-			"plural": false,
+			"plural": true,
 			"dryingTime": 0,
 			"removable": true,
 			"durability": 0
 		},
 		"training pants": {
 			"name": "training pants",
-			"description": "thin cloth potty training pants that look like big kid undies",
-			"absorbency": 600.0,
-			"containment": 120.0,
+			"description": "thin cloth potty training pants that look similar to big kid undies",
+			"absorbency": 850.0,
+			"containment": 1400.0,
 			"spriteIndex": 5,
-			"price": 25,
+			"price": 80,
 			"washable": true,
 			"plural": true,
 			"dryingTime": 600,
 			"removable": true,
-			"durability": 5
+			"durability": 6
 		},
-		"Joja diaper": {
+		"joja diaper": {
 			"name": "Joja diaper",
-			"description": "thin white plastic diaper from JojaMart",
-			"absorbency": 1200.0,
-			"containment": 300.0,
+			"description": "thin white and cheap plastic diaper from JojaMart",
+			"absorbency": 1100.0,
+			"containment": 1400.0,
 			"spriteIndex": 6,
-			"price": 50,
+			"price": 30,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
@@ -1552,9 +1592,9 @@
 		},
 		"baby print diaper": {
 			"name": "baby print diaper",
-			"description": "little soft and crinkly fresh-scented baby print diaper. Its a bit small, but you can fit",
+			"description": "little soft and crinkly fresh-scented disposable baby print diaper. Its a bit small, but you can fit",
 			"absorbency": 1500.0,
-			"containment": 1000.0,
+			"containment": 1200.0,
 			"spriteIndex": 7,
 			"price": 75,
 			"washable": false,
@@ -1563,24 +1603,24 @@
 			"removable": false,
 			"durability": 0
 		},
-		"Cloth diaper": {
+		"cloth diaper": {
 			"name": "Cloth diaper",
 			"description": "thick and soft white cloth diaper",
-			"absorbency": 2000.0,
-			"containment": 1500.0,
+			"absorbency": 1400.0,
+			"containment": 2600.0,
 			"spriteIndex": 8,
-			"price": 500,
+			"price": 260,
 			"washable": true,
 			"plural": false,
-			"dryingTime": 800,
-			"removable": true,
-			"durability": 8
+			"dryingTime": 1000,
+			"removable": false, // washable was redefined as the ability to take it off and wash. Removable controls if you can quickly get out of it (pull-up)
+			"durability": 6
 		},
 		"space diaper": {
 			"name": "space diaper",
 			"description": "very thick and soft blue plastic diaper with spaceship designs",
 			"absorbency": 2700.0,
-			"containment": 2700.0,
+			"containment": 2800.0,
 			"spriteIndex": 9,
 			"price": 100,
 			"washable": false,
@@ -1604,11 +1644,11 @@
 		},
 		"heart diaper": {
 			"name": "heart diaper",
-			"description": "very thick and soft pink plastic diaper with a large fade-when-wet heart on the front",
-			"absorbency": 3000.0,
-			"containment": 3000.0,
+			"description": "extremly thick and soft pink plastic diaper with a large fade-when-wet heart on the front",
+			"absorbency": 3400.0,
+			"containment": 3500.0,
 			"spriteIndex": 11,
-			"price": 120,
+			"price": 140,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
