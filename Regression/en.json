@@ -915,7 +915,12 @@
 		"Spring Onion": {
 			"name": "Spring Onion",
 			"waterContent": 25,
-			"calorieContent": 800 //One hundred large scallions, only because this is the "starter" food
+			"calorieContent": 500 //Reduced from 700 to 500 - One hundred large scallions, only because this is the "starter" food
+		},
+		"Field Snack": {
+			"name": "Field Snack",
+			"waterContent": 10,
+			"calorieContent": 700 //Old reliable, easily craftable by the player, worth little and gives a good buff. "starter" food
 		},
 		"Wild Horseradish": {
 			"name": "Wild Horseradish",
