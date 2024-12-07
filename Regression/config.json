@@ -18,8 +18,10 @@
 	"BladderGainContinenceRate": 2, //in 1% increments. i.e. 5 = 5% gain per success. 3% seams balanced, as it is probably doubled to 6% for potty runs (toilet multiplier). It's efford for the player.
 	"BowelGainContinenceRate": 2, //in 1% increments. i.e. 5 = 5% gain per success
 	"MaxBladderCapacity": 600, // 600 is around 3 potty runs a day
-	"MaxBowelCapacity": 1200, // 1200 is around 1.5 potty runs a day
+	"MaxBowelCapacity": 1000, // 1000 is around 1.5 potty runs a day, dependend on work (calorie intake)
 	"StartBladderContinence": 70, // A value (in percent) between 0 and 100, defines the starting (new game) bladder continence. Usually 70.
 	"StartBowelContinence": 90, // A value (in percent) between 0 and 100, defines the starting (new game) bowel continence. Usually 90.
+	"ReadSaveFiles": true, // Will read the legacy save files (to keep loading old stardew saves)
+	"WriteSaveFiles": false, // Will read and write the legacy save files (no longer needed, it's now written directly into the stardew saves)
 	"Lang": "en"
 }

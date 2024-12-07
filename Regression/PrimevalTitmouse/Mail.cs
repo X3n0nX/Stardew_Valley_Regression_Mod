@@ -27,7 +27,7 @@ namespace PrimevalTitmouse
                 initialSupplies.Add(new StardewValley.Object("403", 20, false, -1, 0)); // Field Snacks might be a better choise
                 // field snacks might be better as a generic choise and are not sold 
                 //initialSupplies.Add(new Underwear("pawprint diaper", 0.0f, 0.0f, 40));
-                initialSupplies.Add(new Underwear("training pants", 0.0f, 0.0f, 5)); // training pants are washable, they might be a good start equipment and are "not that great"
+                initialSupplies.Add(new Underwear("training pants", 5)); // training pants are washable, they might be a good start equipment and are "not that great"
                 //If we're in Hard mode, also give pull-up.
                 /*if (!Regression.config.Easymode)
                 {

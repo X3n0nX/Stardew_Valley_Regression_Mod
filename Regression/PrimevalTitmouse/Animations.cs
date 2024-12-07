@@ -297,10 +297,16 @@ namespace PrimevalTitmouse
         {
             string baseString = Strings.RandString(Animations.GetData().Still_Soiled);
 
-            baseString = baseString.Replace("$UNDERWEAR_LONGDESC$", Strings.DescribeUnderwear(b.underwear, b.underwear.name, true));
+            baseString = baseString.Replace("$UNDERWEAR_LONGDESC$", Strings.DescribeUnderwear(b.underwear, b.underwear.displayName, true));
             Animations.Say(baseString, b);
         }
+        public static void AnimateShouldChange(Body b)
+        {
+            string baseString = Strings.RandString(Animations.GetData().Should_Change);
 
+            baseString = baseString.Replace("$UNDERWEAR_LONGDESC$", Strings.DescribeUnderwear(b.underwear, b.underwear.displayName, true));
+            Animations.Say(baseString, b);
+        }
         public static void AnimateWashingUnderwear(Container c)
         {
             if (c.MarkedForDestroy())
@@ -317,7 +323,7 @@ namespace PrimevalTitmouse
         public static void CheckPants(Body b)
         {
             StardewValley.Objects.Clothing pants = b.GetPantsStardew();
-            b.pants.name = pants.displayName;
+            b.pants.displayName = pants.displayName;
             b.pants.description = pants.displayName;
             b.pants.plural = true;
             Animations.Say(Animations.GetData().LookPants[0] + " " + Strings.DescribeUnderwear(b.pants, null) + ".", b);
@@ -591,7 +597,7 @@ namespace PrimevalTitmouse
             }
             else
             {
-                if (!c.IsDrying())
+                if (!c.drying)
                 {
                     if ((double)c.messiness <= .0f)
                     {

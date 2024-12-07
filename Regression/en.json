@@ -168,9 +168,14 @@
 		"You feel your $UNDERWEAR_LONGDESC$ squishing between your legs and smile to yourself.",
 		"You notice your sagging $UNDERWEAR_LONGDESC$ <is#are> snug and warm.",
 		"You notice you're waddling because your $UNDERWEAR_LONGDESC$",
-		"You consider changing your $UNDERWEAR_LONGDESC$ soon, but not right now. It's still warm",
+		"You consider changing your $UNDERWEAR_LONGDESC$",
 		"You press your hand into your squishy $UNDERWEAR_LONGDESC$. You feel like a little baby in <it#them>.",
 		"You feel your $UNDERWEAR_LONGDESC$. <It's#They're> all squishy!"
+	],
+	"Should_Change": [
+		"You feel your $UNDERWEAR_LONGDESC$ and realize you should really get changed!",
+		"Your $UNDERWEAR_LONGDESC$ <feel#feels> very heavy. Changie time!",
+		"Feeling your $UNDERWEAR_LONGDESC$ sagging, you think it's probably time for a diaper change!"
 	],
 	"Wet_Accident": [
 		"You bite your lip and take a sharp breath through your nose as your bladder gives in and you flood your $UNDERWEAR_NAME$.",
@@ -1556,7 +1561,7 @@
 			"removable": true,
 			"durability": 8
 		},
-		"lavender pullup": {
+		"lavender pullups": {
 			"name": "lavender pullups",
 			"description": "thick, soft and snug disposable flowery lavender pullups",
 			"absorbency": 1550.0,
@@ -1564,7 +1569,7 @@
 			"spriteIndex": 4,
 			"price": 25,
 			"washable": false,
-			"plural": true,
+			"plural": false,
 			"dryingTime": 0,
 			"removable": true,
 			"durability": 0
@@ -1583,7 +1588,7 @@
 			"durability": 6
 		},
 		"joja diaper": {
-			"name": "Joja diaper",
+			"name": "joja diaper",
 			"description": "thin white and cheap plastic diaper from JojaMart",
 			"absorbency": 1100.0,
 			"containment": 1400.0,
@@ -1609,7 +1614,7 @@
 			"durability": 0
 		},
 		"cloth diaper": {
-			"name": "Cloth diaper",
+			"name": "cloth diaper",
 			"description": "thick and soft white cloth diaper",
 			"absorbency": 1400.0,
 			"containment": 2600.0,

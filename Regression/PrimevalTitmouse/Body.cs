@@ -4,9 +4,11 @@ using StardewValley;
 using StardewValley.Buffs;
 using StardewValley.Locations;
 using StardewValley.Minigames;
+using StardewValley.Mods;
 using StardewValley.Tools;
 using System;
 using System.Reflection;
+using System.Text.Json.Serialization;
 using static PrimevalTitmouse.Container;
 
 namespace PrimevalTitmouse
@@ -14,11 +16,16 @@ namespace PrimevalTitmouse
     //<TODO> A lot of bladder and bowel stuff is processed similarly. Consider refactor with arrays and Function pointers.
     public class Body
     {
+        // Floximo: In general you need to go to the toilet (in reality) about every 3-4 hours on average, lets go with 4 and assume 500mL and 16 waking hours a day (and we assume you healthy, not waking up at night) its around 2500mL of pee a day.
+        // For Pee the gameplay aligns pretty good, considering the values this is based on are wildly out of propotions. But i guess if only 20% of the water you drink is peed out, and the rest sweat, this might be possible.
+        // Poop is usually once a day on average. The values set balanced out to you needing to poop every 4 hours at least. That is a lot if you don't want to only pay potty simulator. Gets worse with bad potty training.
+        // Balancing poop with the given values "foodToBowelConversion" and "requiredCaloriesPerDay" is challanging, as the bowel capacity is linear to this 2 values. 
+
         //Lets think of Food in Calories, and water in mL
         //For a day Laborer (like a farmer) that should be ~3500 Cal, and 14000 mL - NOTE: (Floximo) you mean 1400 mL probably. Up to 3000 mL is considered healthy
         //Of course this is dependent on amount of work, but let's go one step at a time
         private static readonly float requiredCaloriesPerDay = 3000f; // I adjusted it from 3500 to 3000, because the farmer still eats half the farm every day
-        private static readonly float requiredWaterPerDay = 8000f; //8oz glasses: every 20min for 8 hours + every 40 min for 8 hour
+        private static readonly float requiredWaterPerDay = 8000f; //8oz glasses: every 20min for 8 hours (5455mL) + every 40 min for 8 hour (2727mL) Floximo: That is rough. Possible in extrem heat but rough to drink.
 
         //Average # of Pees per day is ~3
         private static readonly float maxBladderCapacity = Regression.config.MaxBladderCapacity; //about 600mL => changed to 800mL as player will start with lower bladder by default
@@ -26,8 +33,8 @@ namespace PrimevalTitmouse
         private static readonly float waterToBladderConversion = 0.2f;//Only ~1/4 (0.225f) water becomes pee, rest is sweat etc. => changed to 0.2f (1/5) for game balance reasons (too intrusive)
 
         //Average # of poops per day varies wildly. Let's say about 1.5 per day.
-        private static readonly float foodToBowelConversion = 0.67f;
-        private static readonly float maxBowelCapacity = (requiredCaloriesPerDay*foodToBowelConversion) / 2f / 1200f * Regression.config.MaxBowelCapacity; // The last 2 numbers usually end up as / 1200 * 1200 (cancle eachother out) to make configuration easier to understand 
+        private static readonly float foodToBowelConversion = 0.5f; // lowered from 0.67f to 0.5f to make the numbers smaller (too much poop) and bowel capacity / 1.5f (1000f in total)
+        private static readonly float maxBowelCapacity = (requiredCaloriesPerDay*foodToBowelConversion) / 1.5f / 1000f * Regression.config.MaxBowelCapacity; // The last 2 numbers usually end up as / 1200 * 1200 (cancle eachother out) to make configuration easier to understand 
         private static readonly float minBowelContinence = 0.3f; // Also describes capacity as changes are linear
 
         //Setup Thresholds and messages
@@ -51,22 +58,114 @@ namespace PrimevalTitmouse
         private static readonly string WET_DEBUFF = "Regression.Wet";
         private static readonly int wakeUpPenalty = 4;
 
+        public static readonly string modDataPrefix = "PrimevalTitmouse/Body";
+        private void save(string name, int val)
+        {
+            Game1.player.modData[BuildKeyFor(name)] = val.ToString();
+        }
+        private void save(string name, float val)
+        {
+            Game1.player.modData[BuildKeyFor(name)] = val.ToString();
+        }
+        private void save(string name, bool val)
+        {
+            Game1.player.modData[BuildKeyFor(name)] = val.ToString();
+        }
+        private static int LoadInt(string name, int defaultVal)
+        {
+            if (!Game1.player.modData.ContainsKey(BuildKeyFor(name))) return defaultVal;
+            return int.Parse(Game1.player.modData[BuildKeyFor(name)]);
+        }
+        private static float LoadFloat(string name, float defaultVal)
+        {
+            if (!Game1.player.modData.ContainsKey(BuildKeyFor(name))) return defaultVal;
+            return float.Parse(Game1.player.modData[BuildKeyFor(name)]);
+        }
+        private static bool LoadBool(string name, bool defaultVal)
+        {
+            if (!Game1.player.modData.ContainsKey(BuildKeyFor(name))) return defaultVal;
+            return bool.Parse(Game1.player.modData[BuildKeyFor(name)]);
+        }
+        private static string BuildKeyFor(string varName)
+        {
+            return $"{modDataPrefix}/{varName}";
+        }
+        private bool HasKeyFor(string varName)
+        {
+            return Game1.player.modData != null && Game1.player.modData.ContainsKey(BuildKeyFor(varName));
+        }
         //Things that describe an individual
-        public int bedtime = 0;
-        public float bladderContinence = Math.Min(1f, Math.Max(minBowelContinence, Regression.config.StartBladderContinence / 100f));
-        public float bladderFullness = 0f;
-        public float bowelContinence = Math.Min(1f, Math.Max(minBowelContinence, Regression.config.StartBowelContinence / 100f));
-        public float bowelFullness = 0f;
-        public float hunger = 0f;
-        public float thirst = 0f;
-        public bool isSleeping = false;
-        public Container bed;
-        public Container pants;
-        public Container underwear;
-        public int numPottyPooAtNight = 0;
-        public int numPottyPeeAtNight = 0;
-        public int numAccidentPooAtNight = 0;
-        public int numAccidentPeeAtNight = 0;
+        public int bedtime
+        {
+            get => LoadInt("bedtime", 0);
+            set => save("bedtime", value);
+        }
+
+        public float bladderContinence
+        {
+            get => LoadFloat("bladderContinence", Math.Min(1f, Math.Max(minBowelContinence, Regression.config.StartBladderContinence / 100f)));
+            set => save("bladderContinence", value);
+        }
+
+        public float bladderFullness
+        {
+            get => LoadFloat("bladderFullness", 0f);
+            set => save("bladderFullness", value);
+        }
+
+        public float bowelContinence
+        {
+            get => LoadFloat("bowelContinence", Math.Min(1f, Math.Max(minBowelContinence, Regression.config.StartBowelContinence / 100f)));
+            set => save("bowelContinence", value);
+        }
+
+        public float bowelFullness
+        {
+            get => LoadFloat("bowelFullness", 0f);
+            set => save("bowelFullness", value);
+        }
+
+        public float hunger
+        {
+            get => LoadFloat("hunger", 0f);
+            set => save("hunger", value);
+        }
+
+        public float thirst
+        {
+            get => LoadFloat("thirst", 0f);
+            set => save("thirst", value);
+        }
+
+        public bool isSleeping
+        {
+            get => LoadBool("isSleeping", false);
+            set => save("isSleeping", value);
+        }
+
+        public int numPottyPooAtNight
+        {
+            get => LoadInt("numPottyPooAtNight", 0);
+            set => save("numPottyPooAtNight", value);
+        }
+
+        public int numPottyPeeAtNight
+        {
+            get => LoadInt("numPottyPeeAtNight", 0);
+            set => save("numPottyPeeAtNight", value);
+        }
+
+        public int numAccidentPooAtNight
+        {
+            get => LoadInt("numAccidentPooAtNight", 0);
+            set => save("numAccidentPooAtNight", value);
+        }
+
+        public int numAccidentPeeAtNight
+        {
+            get => LoadInt("numAccidentPeeAtNight", 0);
+            set => save("numAccidentPeeAtNight", value);
+        }
         private float lastStamina = 0;
 
         public float bladderCapacity
@@ -92,12 +191,49 @@ namespace PrimevalTitmouse
                 //return Math.Max(bowelCapacity, minBowelCapacity * minBowelContinence);
             }
         }
+        private Container _bed;
+        [JsonIgnore]
+        public Container bed {
+            get
+            {
+                if(_bed == null)
+                {
+                    _bed = new Container(this, "bed", "bed");
+                }
+                return _bed;
+            }
+        }
+        private Container _pants;
+        [JsonIgnore]
+        public Container pants
+        {
+            get
+            {
+                if (_pants == null)
+                {
+                    _pants = new Container(this, "pants", "blue jeans");
+                }
+                return _pants;
+            }
+        }
+
+        private Container _underwear;
+        [JsonIgnore]
+        public Container underwear
+        {
+            get
+            {
+                if (_underwear == null)
+                {
+                    _underwear = new Container(this, "underwear", "dinosaur undies");
+                }
+                return _underwear;
+            }
+        }
 
         public Body()
         {
-            bed = new("bed");
-            pants = CreateNewPants();
-            underwear = new("dinosaur undies");
+
         }
 
         public bool IsAllowedResource(IncidentType type)
@@ -400,21 +536,14 @@ namespace PrimevalTitmouse
         }
 
         //Put on underwear and clean pants
-        private Container ChangeUnderwear(Container container)
+        private void ChangeUnderwear(Container container)
         {
-            Container oldUnderwear = this.underwear;
-            if (!oldUnderwear.removable && !oldUnderwear.washable)
-                Animations.Warn(Regression.t.Change_Destroyed, this);
-            this.underwear = container;
-
-            ChangePants();
+            this.underwear.ResetToDefault(container);
             Animations.Say(Regression.t.Change, this);
-            return oldUnderwear;
         }
-        public void ChangePants()
+        public void ChangeUnderwear(Underwear uw)
         {
-            pants = CreateNewPants();
-            CleanPants();
+            ChangeUnderwear(uw.container);
         }
 
         public StardewValley.Objects.Clothing GetPantsStardew()
@@ -425,34 +554,19 @@ namespace PrimevalTitmouse
 
             return pants;
         }
-        public Container CreateNewPants()
+        public void ResetPants()
         {
             var myPants = GetPantsStardew();
-            Container newPants;
-            Regression.t.Underwear_Options.TryGetValue(myPants == null ? "legs" : "blue jeans", out newPants);
-            var newObject = new Container(newPants);
+            Container newPants = GetTypeDefault(myPants == null ? "legs" : "blue jeans");
+            
+            pants.ResetToDefault(newPants);
 
             if (myPants != null)
             {
-                newObject.name = myPants.displayName.ToLower();
-                newObject.description = myPants.description.ToLower();
+                pants.displayName = myPants.displayName.ToLower();
+                pants.description = myPants.description.ToLower();
             }
-            return newObject;
-        }
-
-        public Container ChangeUnderwear(Underwear uw)
-        {
-            return ChangeUnderwear(new Container(uw.container.name, uw.container.wetness, uw.container.messiness, uw.container.durability));
-        }
-
-        public Container ChangeUnderwear(string type)
-        {
-            Container newPants, refPants;
-            Regression.t.Underwear_Options.TryGetValue("type", out refPants);
-            newPants = new Container(refPants);
-            newPants.messiness = 0;
-            newPants.wetness = 0;
-            return ChangeUnderwear(newPants);
+            CleanPants();
         }
 
         //If we put on our pants, remove wet/messy debuffs
@@ -491,7 +605,7 @@ namespace PrimevalTitmouse
             if (currentTool.WaterLeft * 200 >= thirst)
             {
                 this.AddWater(thirst);
-                currentTool.WaterLeft -= (int)(thirst / 200f);
+                currentTool.WaterLeft -= (int)(thirst * 200f);
                 Animations.AnimateDrinking(false);
             }
             else if (currentTool.WaterLeft > 0)
@@ -521,23 +635,16 @@ namespace PrimevalTitmouse
         {
             return Game1.currentLocation is FarmHouse;
         }
+        public bool NeedsChangies(IncidentType type)
+        {
+            // If the underwear was already used and the capacity remaining is smaller than the size of an accident of this type
+            return underwear.GetUsed(type) > 0 && underwear.GetCapacity(type) - underwear.GetUsed(type) < GetCapacity(type);
+        }
+
         public bool IsTryingToHoldIt(IncidentType type, float vsAmount)
         {
-            float capacity;
-            float used;
-            switch (type)
-            {
-                case IncidentType.PEE:
-                    capacity = underwear.absorbency;
-                    used = underwear.wetness;
-                    break;
-                case IncidentType.POOP:
-                    capacity = underwear.containment;
-                    used = underwear.messiness;
-                    break;
-                default:
-                    throw new Exception("Not implemented: type " + type.ToString());
-            }
+            float capacity = underwear.GetCapacity(type);
+            float used = underwear.GetUsed(type);
 
             if (!underwear.removable) return false; // If we don't have pants or training pants, there is no point
             if(used > 300) return false; // If the underwear is already heavily used, we stop trying
@@ -646,7 +753,7 @@ namespace PrimevalTitmouse
                 //So roll the dice each time >:)
                 //<TODO>: Give stamina penalty every time you get up to go potty. Since you disrupted sleep.
                 int numIncidentAmount = (int)((fullness - attemptThreshold) / capacity);
-                float additionalAmount = continence - (numIncidentAmount * capacity);
+                float additionalAmount = fullness - (numIncidentAmount * capacity);
                 int numAccident = 0;
                 int numPotty = 0;
 
@@ -669,13 +776,16 @@ namespace PrimevalTitmouse
                     }
                     else
                     {
-                        numPotty++;
-                        bowelFullness -= amountToLose;
                         if (!underwear.removable) //Certain underwear can't be taken off to use the toilet (ie diapers)
                         {
+                            numAccident++;
                             ChangeContinence(type, CalculateContinenceLossOrGain(type, voluntary, inUnderwear, amountToLose / maxCapacity)); // maxCapacity is correct, for balancing reasons
                             AddAccidentFromFullness(type, amountToLose);
-                            numAccident++;
+                        }
+                        else
+                        {
+                            numPotty++;
+                            ChangeFullness(type, -amountToLose);
                         }
                     }
                 }
@@ -907,11 +1017,11 @@ namespace PrimevalTitmouse
         public void HandleMorning()
         {
             isSleeping = false;
+            var dryingTime = 0;
             if (Regression.config.Easymode)
             {
                 hunger = 0;
                 thirst = 0;
-                bed.dryingTime = 0;
             }
             else
             {
@@ -919,16 +1029,14 @@ namespace PrimevalTitmouse
                 Farmer player = Game1.player;
                 if (bed.messiness > 0.0 || bed.wetness > 0.0)
                 {
-                    bed.dryingTime = 1000;
+                    dryingTime = 1000;
                     player.stamina -= 20f;
                 }
                 else if (bed.wetness > 0.0)
                 {
-                    bed.dryingTime = 600;
+                    dryingTime = 600;
                     player.stamina -= 10f;
                 }
-                else
-                    bed.dryingTime = 0;
 
                 int timesUpAtNight = Math.Max(numPottyPeeAtNight, numPottyPooAtNight);
                 player.stamina -= (timesUpAtNight * wakeUpPenalty);
@@ -936,9 +1044,8 @@ namespace PrimevalTitmouse
             }
 
             Animations.AnimateMorning(this);
-            bed.Wash();
-            pants = CreateNewPants();
-            CleanPants();
+            bed.Wash(dryingTime);
+            ResetPants();
         }
 
         public void HandleNight()

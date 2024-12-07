@@ -92,52 +92,73 @@ namespace PrimevalTitmouse
         {
             List<Item> objList = new List<Item>();
             foreach (string validUnderwearType in Strings.ValidUnderwearTypes())
-                objList.Add(new Underwear(validUnderwearType, 0.0f, 0.0f, 20));
+                objList.Add(new Underwear(validUnderwearType,20));
             objList.Add(new StardewValley.Object("399", 99, false, -1, 0));
             objList.Add(new StardewValley.Object("348", 99, false, -1, 0));
             Game1.activeClickableMenu = new ItemGrabMenu(objList);
         }
 
-        private static void restoreItems(StardewValley.Inventories.Inventory items, Dictionary<int, Dictionary<string, string>> invReplacement)
+        private static void restoreItems(StardewValley.Inventories.Inventory items, Dictionary<int, Dictionary<string, string>> invReplacement = null)
         {
-            foreach (KeyValuePair<int, Dictionary<string, string>> entry in invReplacement)
+            if (invReplacement != null) { 
+                foreach (KeyValuePair<int, Dictionary<string, string>> entry in invReplacement)
+                {
+                    var underwear = new Underwear();
+                    underwear.rebuild(entry.Value, items[entry.Key]);
+                    items[entry.Key] = underwear;
+                }
+            }
+
+
+            for (int i = 0; i < items.Count; i++)
             {
-                var underwear = new Underwear();
-                underwear.rebuild(entry.Value, items[entry.Key]);
-                items[entry.Key] = underwear;
+                var item = items[i];
+                // we have to access the type this way, because it's not yet of the correct class
+                if (item?.modData?.ContainsKey(Container.BuildKeyFor("name", Underwear.modDataKey)) == true)
+                {
+                    var underwear = new Underwear();
+                    underwear.modData.CopyFrom(item.modData);
+                    underwear.Stack = item.Stack;
+                    items[i] = underwear;
+                }
             }
         }
 
         private void ReceiveAfterDayStarted(object sender, DayStartedEventArgs e)
         {
-            body = Helper.Data.ReadJsonFile<Body>(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName)) ?? new Body();
+            if (config.ReadSaveFiles)
+            {
+                body = Helper.Data.ReadJsonFile<Body>(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName)) ?? new Body();
+            }
+            else
+            {
+                body = new Body();
+            }
+            
             started = true;
             who = Game1.player;
 
-            var invReplacement = Helper.Data.ReadJsonFile< Dictionary<int, Dictionary<string, string>>>(string.Format("{0}/RegressionSaveInv.json", Constants.SaveFolderName));
-            if (invReplacement != null)
-            {
-                restoreItems(Game1.player.Items, invReplacement);
-            }
+            Dictionary<int, Dictionary<string, string>> invReplacement = null;
+            if(config.ReadSaveFiles) invReplacement = Helper.Data.ReadJsonFile<Dictionary<int, Dictionary<string, string>>>(string.Format("{0}/RegressionSaveInv.json", Constants.SaveFolderName));
+            restoreItems(Game1.player.Items, invReplacement);
 
-            var chestReplacement = Helper.Data.ReadJsonFile<Dictionary<string, Dictionary<int, Dictionary<string, string>>>>(string.Format("{0}/RegressionSaveChest.json", Constants.SaveFolderName));
-            if (chestReplacement != null)
+            Dictionary<string, Dictionary<int, Dictionary<string, string>>> chestReplacement = null;
+            if (config.ReadSaveFiles) chestReplacement = Helper.Data.ReadJsonFile<Dictionary<string, Dictionary<int, Dictionary<string, string>>>>(string.Format("{0}/RegressionSaveChest.json", Constants.SaveFolderName));
+
+            int locId = 0;
+            foreach (var location in Game1.locations)
             {
-                int locId = 0;
-                foreach (var location in Game1.locations)
+                foreach (var obj in location.Objects.Values)
                 {
-                    foreach (var obj in location.Objects.Values)
+                    var id = string.Format("{0}-{1}-{2}", locId, obj.TileLocation.X, obj.TileLocation.Y);
+                    if (obj is Chest chest)
                     {
-                        var id = string.Format("{0}-{1}-{2}", locId, obj.TileLocation.X, obj.TileLocation.Y);
-                        if (obj is Chest chest && chestReplacement.ContainsKey(id))
-                        {
-                            restoreItems(chest.Items, chestReplacement[id]);
-                        }
+                        restoreItems(chest.Items, chestReplacement != null && chestReplacement.ContainsKey(id) ? chestReplacement[id] : null);
                     }
-                    locId++;
                 }
-                restoreItems(Game1.player.Items, invReplacement);
+                locId++;
             }
+            //restoreItems(Game1.player.Items, invReplacement);
 
             Animations.AnimateNight(body);
             HandleMorning(sender, e);
@@ -171,8 +192,6 @@ namespace PrimevalTitmouse
             body.bedtime = lastTimeOfDay;
             if (Game1.dayOfMonth != 1 || Game1.currentSeason != "spring" || Game1.year != 1)
                 body.HandleNight();
-            if (string.IsNullOrWhiteSpace(Constants.SaveFolderName))
-                return;
 
             var chestReplacements = new Dictionary<string, Dictionary<int, Dictionary<string, string>>>();
 
@@ -197,9 +216,9 @@ namespace PrimevalTitmouse
 
             var invReplacements = replaceItems(Game1.player.Items);
 
-            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName), body);
-            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSaveInv.json", Constants.SaveFolderName), invReplacements);
-            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSaveChest.json", Constants.SaveFolderName), chestReplacements);
+            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName), config.WriteSaveFiles ? body : null);
+            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSaveInv.json", Constants.SaveFolderName), config.WriteSaveFiles ? invReplacements : null);
+            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSaveChest.json", Constants.SaveFolderName), config.WriteSaveFiles ? chestReplacements : null);
         }
 
         private void ReceiveUpdateTick(object sender, OneSecondUpdateTickingEventArgs e)
@@ -346,7 +365,7 @@ namespace PrimevalTitmouse
             if (Game1.currentLocation is FarmHouse && (attemptToSleepMenu = e.NewMenu as DialogueBox) != null && Game1.currentLocation.lastQuestionKey == "Sleep" && !config.Easymode)
             {
                 //If enough time has passed, the bed has dried
-                if (body.bed.IsDrying())
+                if (body.bed.drying)
                 {
                     Response[] sleepAttemptResponses = attemptToSleepMenu.responses;
                     if (sleepAttemptResponses.Length == 2)
@@ -390,7 +409,7 @@ namespace PrimevalTitmouse
                 {
                     foreach(string type in availableUnderwear)
                     {
-                        Underwear underwear = new Underwear(type, 0.0f, 0.0f, 1);
+                        Underwear underwear = new Underwear(type, 1);
                         currentShopMenu.forSale.Add(underwear);
                         currentShopMenu.itemPriceAndStock.Add(underwear, new ItemStockInformation(underwear.container.price, StardewValley.Menus.ShopMenu.infiniteStock));
                     }
@@ -449,7 +468,7 @@ namespace PrimevalTitmouse
                                     Game1.activeClickableMenu = null;
                                     if (!Regression.config.PantsChangeRequiresHome || body.InPlaceWithPants())
                                     {
-                                        body.ChangePants();
+                                        body.ResetPants();
                                         Animations.Write(Regression.t.Change_At_Home, body);
                                     }
                                     else
@@ -482,7 +501,7 @@ namespace PrimevalTitmouse
                 if (activeObject != null)
                 {
                     //If the Underwear we are holding isn't currently wet, messy, or drying; change into it.
-                    if ((double)activeObject.container.wetness + (double)activeObject.container.messiness == 0.0 && !activeObject.container.IsDrying())
+                    if ((double)activeObject.container.wetness + (double)activeObject.container.messiness == 0.0 && !activeObject.container.drying)
                     {
                         if(Regression.config.PantsChangeRequiresHome && body.HasWetOrMessyDebuff() && !body.InPlaceWithPants())
                         {
@@ -490,18 +509,24 @@ namespace PrimevalTitmouse
                             return;
                         }
                         who.reduceActiveItemByOne(); //Take it out of inventory
-                        Container container = body.ChangeUnderwear(activeObject); //Put on the new underwear and return the old
-                        Underwear underwear = new Underwear(container.name, container.wetness, container.messiness, 1);
+                        Underwear underwear = new Underwear(body.underwear, 1);
+
+                        // We have to do all this before we change the underwear, because we lose the reference
 
                         //If the underwear returned is not removable, destroy it
-                        if (!container.removable && !container.washable) { }
+                        if (!body.underwear.removable && !body.underwear.washable) {
+                            Animations.Warn(Regression.t.Change_Destroyed, body);
+                        }
                         //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
                         else if (!who.addItemToInventoryBool(underwear, false))
                         {
                             List<Item> objList = new List<Item>();
                             objList.Add(underwear);
                             Game1.activeClickableMenu = new ItemGrabMenu(objList);
-                        }
+                        }                           
+
+                        body.ChangeUnderwear(activeObject);
+                        body.ResetPants();
                     }
                     //If it is wet, messy or drying, check if we can wash it
                     else if (activeObject.container.washable)
@@ -540,10 +565,15 @@ namespace PrimevalTitmouse
             if (Game1.timeOfDay == 610)
                 Mail.CheckMail();
 
-            //If its earlier than 6:30, we aren't wet/messy don't notice that we're still soiled (or don't notice with ~5% chance even if soiled)
-            if (rnd.NextDouble() >= 0.0555555559694767 || body.underwear.wetness + (double)body.underwear.messiness <= 0.0 || Game1.timeOfDay < 630)
+            if (Game1.timeOfDay < 630)
                 return;
-            Animations.AnimateStillSoiled(this.body);
+
+            //If its earlier than 6:30, we aren't wet/messy don't notice that we're still soiled (or don't notice with ~5% chance even if soiled)
+            if (rnd.NextDouble() < 0.0555555559694767 && body.underwear.wetness + (double)body.underwear.messiness > 0.0)
+                Animations.AnimateStillSoiled(this.body);
+
+            if (rnd.NextDouble() < 0.0555555559694767 && (body.NeedsChangies(IncidentType.PEE) || body.NeedsChangies(IncidentType.POOP)))
+                Animations.AnimateShouldChange(this.body);
         }
 
         public Regression()

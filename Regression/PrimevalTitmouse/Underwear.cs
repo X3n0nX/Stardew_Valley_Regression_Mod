@@ -1,29 +1,69 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Netcode;
 using StardewValley;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Xml.Serialization;
+using static PrimevalTitmouse.Container;
 
 namespace PrimevalTitmouse
 {
     public class Underwear : StardewValley.Object
     {
-        public static Color color;
-        public Container container;
-        public string id;
-
         public Underwear()
         {
             //base.Actor();
         }
 
-        public Underwear(string type, float wetness = 0.0f, float messiness = 0.0f, int count = 1)
+        public Underwear(string typeName, int count)
         {
             //base.Actor();
-            this.Initialize(type, wetness, messiness, count);
+            this.Initialize(Container.GetTypeDefault(typeName), count);
+        }
+        public Underwear(Container baseType, int count)
+        {
+            //base.Actor();
+            this.Initialize(baseType,count);
+        }
+        public static readonly string modDataKey = "PrimevalTitmouse/Underwear";
+        
+        public Color color {
+            get {
+                string colorStr;
+                modData.TryGetValue("${modDataKey}/color", out colorStr);
+                if (!string.IsNullOrEmpty(colorStr))
+                {
+                    uint colorValue = uint.Parse(colorStr);
+                    return new Color(
+                        ((colorValue >> 24) & 0xFF) / 255f,
+                        ((colorValue >> 16) & 0xFF) / 255f,
+                        ((colorValue >> 8) & 0xFF) / 255f,
+                        (colorValue & 0xFF) / 255f
+                    );
+                }
+                return new Color();
+            }
+            set {
+                string colorStr = ((uint)(value.R * 255) << 24 |
+                       (uint)(value.G * 255) << 16 |
+                       (uint)(value.B * 255) << 8 |
+                       (uint)(value.A * 255)).ToString();
+                modData.Add("${modDataKey}/color", colorStr);
+            }
+        }
+        private Container _container;
+        public Container container {
+            get {
+                if (_container == null)
+                {
+                    _container = new Container(this, "dinosaur undies");
+                }
+                return _container;
+            }
         }
 
         public override bool canBeDropped()
@@ -59,24 +99,28 @@ namespace PrimevalTitmouse
             return new Dictionary<string, string>()
             {
                 {
-                  "type",
-                  container.name
+                    "type",
+                    container.name
                 },
                 {
-                  "wetness",
-                  string.Format("{0}",  container.wetness)
+                    "wetness",
+                    string.Format("{0}",  container.wetness)
                 },
                 {
-                  "messiness",
-                  string.Format("{0}",  container.messiness)
+                    "messiness",
+                    string.Format("{0}",  container.messiness)
                 },
                 {
-                  "stack",
-                  string.Format("{0}",  Stack)
+                    "durability",
+                    string.Format("{0}",  container.durability)
                 },
                 {
-                  "dryingTime",
-                  container.serializeDryingDate()
+                    "stack",
+                    string.Format("{0}",  Stack)
+                },
+                {
+                    "dryingTime",
+                    Container.serializeDryingDate(container.timeWhenDoneDrying)
                 }
             };
         }
@@ -89,47 +133,51 @@ namespace PrimevalTitmouse
 
         protected override Item GetOneNew()
         {
-            return new Underwear(this.name, this.container.wetness, this.container.messiness, 1);
+            //return new Underwear(this.name, this.container.wetness, this.container.messiness, -100, 1);
+            return new Underwear(this.container, 1);
         }
 
         public StardewValley.Object getReplacement()
         {
-            return new StardewValley.Object("685", 1, false, -1, 0);
+            var saveObj = new StardewValley.Object("685", Stack, false, -1, 0);
+            saveObj.modData.CopyFrom(this.modData);
+            return saveObj;
         }
 
-        public void Initialize(string type, float wetness, float messiness, int count = 1)
+        public void Initialize(Container baseType, int count)
         {
-            this.container = new Container(type);
-            this.container.wetness = wetness;
-            this.container.messiness = messiness;
+            //this.container = new Container(type);
+            this._container = null;
+            this.container.ResetToDefault(baseType);
             if (count > 1)
                 Stack = count;
-            id = type;
             name = container.name;
-            Price = this.container.price;
+            Price = container.price;
         }
-
         public override int maximumStackSize()
         {
-            if (container.messiness > 0.0 || container.wetness > 0.0 || container.IsDrying())
+            if (!container.stackable)
                 return 1;
             return base.maximumStackSize();
         }
 
         public void rebuild(Dictionary<string, string> data, object replacement)
         {
-            Initialize(data["type"], float.Parse(data["wetness"]), float.Parse(data["messiness"]), int.Parse(data["stack"]));
+            var container = new Container();
+
+            container.ResetToDefault(data["type"], float.Parse(data["wetness"]), float.Parse(data["messiness"]), data.ContainsKey("durability") ? int.Parse(data["durability"]) : -100);
             if (data.ContainsKey("dryingTime"))
             {
-                this.container.parseDryingDate(data["dryingTime"]);
+                container.timeWhenDoneDrying = Container.parseDryingDate(data["dryingTime"]);
             }
+            Initialize(container, int.Parse(data["stack"]));
         }
 
         public override string DisplayName
         {
             get
             {
-                return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Status + id);
+                return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Status + container.displayName);
             }
         }
 
@@ -137,7 +185,7 @@ namespace PrimevalTitmouse
         {
             get
             {
-                return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Status + id);
+                return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Status + container.name);
             }
         }
 
@@ -151,9 +199,10 @@ namespace PrimevalTitmouse
                     return "messy ";
                 if (container.wetness > 0.0)
                     return "wet ";
-                return container.IsDrying() ? "drying " : "";
+                return container.drying ? "drying " : "";
             }
         }
+
 
         public static bool getPantsPlural(int itemNum)
         {

@@ -18,7 +18,7 @@ namespace PrimevalTitmouse
             float num2 = u.messiness / u.containment;
             if ((double)num1 == 0.0 && (double)num2 == 0.0)
             {
-                newValue = !u.IsDrying() ? Strings.t.Underwear_Clean.Replace("$UNDERWEAR_DESC$", newValue) : Strings.t.Underwear_Drying.Replace("$UNDERWEAR_DESC$", newValue);
+                newValue = !u.drying ? Strings.t.Underwear_Clean.Replace("$UNDERWEAR_DESC$", newValue) : Strings.t.Underwear_Drying.Replace("$UNDERWEAR_DESC$", newValue);
             }
             else
             {
@@ -49,8 +49,17 @@ namespace PrimevalTitmouse
                     }
                 }
             }
+            string newOrOld = "";
+            if(u.washable && u.InnerContainer != null && u.durability < u.InnerContainer.durability)
+            {
+                newOrOld = "used ";
+                if(u.durability < u.InnerContainer.durability / 2)
+                {
+                    newOrOld = "old ";
+                }
+            }
             if (noPrefix) return newValue;
-            return u.GetPrefix() + " " + newValue;
+            return u.GetPrefix() + " " + newOrOld + newValue;
         }
 
 
@@ -60,9 +69,13 @@ namespace PrimevalTitmouse
             if (b != null)
                 c = b.underwear;
             if (c != null)
-                str = Strings.ReplaceOr(str.Replace("$UNDERWEAR_NAME$", c.name).Replace("$UNDERWEAR_PREFIX$", c.GetPrefix()).Replace("$UNDERWEAR_DESC$", c.description).Replace("$INSPECT_UNDERWEAR_NAME$", Strings.DescribeUnderwear(c, c.name)).Replace("$INSPECT_UNDERWEAR_DESC$", Strings.DescribeUnderwear(c, c.description)), !c.plural, "#");
+                str = Strings.ReplaceOr(str.Replace("$UNDERWEAR_NAME$", c.displayName).Replace("$UNDERWEAR_PREFIX$", c.GetPrefix()).Replace("$UNDERWEAR_DESC$", c.description).Replace("$INSPECT_UNDERWEAR_NAME$", Strings.DescribeUnderwear(c, c.displayName)).Replace("$INSPECT_UNDERWEAR_DESC$", Strings.DescribeUnderwear(c, c.description)), !c.plural, "#");
             if (b != null)
-                str = str.Replace("$PANTS_NAME$", b.pants.name).Replace("$PANTS_PREFIX$", b.pants.GetPrefix()).Replace("$PANTS_DESC$", b.pants.description).Replace("$BEDDING_DRYTIME$", Game1.getTimeOfDayString(b.bed.timeWhenDoneDrying.time));
+            {
+
+                str = str.Replace("$PANTS_NAME$", b.pants.displayName).Replace("$PANTS_PREFIX$", b.pants.GetPrefix()).Replace("$PANTS_DESC$", b.pants.description).Replace("$BEDDING_DRYTIME$", Game1.getTimeOfDayString(b.bed.timeWhenDoneDrying.time));
+            }
+               
             return Strings.ReplaceOr(str, Strings.who.IsMale, "/").Replace("$FARMERNAME$", Strings.who.Name);
         }
 

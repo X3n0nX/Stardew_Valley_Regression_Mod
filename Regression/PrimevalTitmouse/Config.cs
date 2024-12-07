@@ -24,5 +24,7 @@
         public int MaxBowelCapacity;
         public int StartBladderContinence;
         public int StartBowelContinence;
+        public bool ReadSaveFiles;
+        public bool WriteSaveFiles;
     }
 }
