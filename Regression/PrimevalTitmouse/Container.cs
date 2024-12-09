@@ -154,7 +154,40 @@ namespace PrimevalTitmouse
             public int season;
             public int year;
         }
-        private Date _timeWhenDoneDrying;
+        private string _timeWhenDoneDrying = "";
+        public Date timeWhenDoneDrying
+        {
+            get => parseDryingDate(LoadString("timeWhenDoneDrying", _timeWhenDoneDrying));
+            set
+            {
+                save("timeWhenDoneDrying", value);
+                _timeWhenDoneDrying = serializeDryingDate(value);
+            }
+        }
+        public static Date parseDryingDate(string date)
+        {
+            var dateObj = new Date();
+            if (date == "")
+            {
+                dateObj.time = 0;
+                dateObj.day = 0;
+                dateObj.season = 0;
+                dateObj.year = 0;
+                return dateObj;
+            }
+
+            string[] splitted = date.Split("-");
+            dateObj.time = int.Parse(splitted[0]);
+            dateObj.day = int.Parse(splitted[1]);
+            dateObj.season = int.Parse(splitted[2]);
+            dateObj.year = int.Parse(splitted[3]);
+
+            return dateObj;
+        }
+        public static string serializeDryingDate(Date timeWhenDoneDrying)
+        {
+            return string.Format("{0}-{1}-{2}-{3}", timeWhenDoneDrying.time, timeWhenDoneDrying.day, timeWhenDoneDrying.season, timeWhenDoneDrying.year);
+        }
         public bool drying {
             get
             {
@@ -184,6 +217,7 @@ namespace PrimevalTitmouse
             }
         }
 
+
         // Here starts the block that contains all values we can take from type
         private string _description;
         private float _absorbency;
@@ -195,7 +229,7 @@ namespace PrimevalTitmouse
         private int _dryingTime;
         private bool _removable;
 
-        public Date timeWhenDoneDrying { get => _timeWhenDoneDrying; set => _timeWhenDoneDrying = value; }
+        
         public float absorbency { get => InnerContainer != null ? InnerContainer.absorbency : _absorbency; set => _absorbency = value; }
         public float containment { get => InnerContainer != null ? InnerContainer.containment : _containment; set => _containment = value; }
         public bool plural { get => InnerContainer != null ? InnerContainer.plural : _plural; set => _plural = value; }
@@ -389,30 +423,6 @@ namespace PrimevalTitmouse
                 throw new Exception(string.Format("Invalid underwear choice: {0}", type));
 
             return c;
-        }
-        public static Date parseDryingDate(string date)
-        {
-            var dateObj = new Date();
-            if (date == "")
-            {
-                dateObj.time = 0;
-                dateObj.day = 0;
-                dateObj.season = 0;
-                dateObj.year = 0;
-                return dateObj;
-            }
-
-            string[] splitted = date.Split("-");
-            dateObj.time = int.Parse(splitted[0]);
-            dateObj.day = int.Parse(splitted[1]);
-            dateObj.season = int.Parse(splitted[2]);
-            dateObj.year = int.Parse(splitted[3]);
-
-            return dateObj;
-        }
-        public static string serializeDryingDate(Date timeWhenDoneDrying)
-        {
-            return string.Format("{0}-{1}-{2}-{3}", timeWhenDoneDrying.time, timeWhenDoneDrying.day, timeWhenDoneDrying.season, timeWhenDoneDrying.year);
         }
     }
 }

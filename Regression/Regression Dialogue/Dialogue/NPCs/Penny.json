@@ -149,7 +149,10 @@
 "Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
 "Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1",
 "Adult_Followup":"#$p 135#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
-
+			
+	"Diaper_Change_Accept": "#Hop on the changing table!$l#$b#%Penny changes your diaper and smiles at you#$action Regression.StartChange \"heart diaper\"#$h",
+  "Diaper_Change_Refuse": "Do you want to play the big kid today? I can see it sagging from here!",
+  "Diaper_Change_Followup": "#$p dirty_change_yes#Not now sweety!(This is an error, this should not be able to happen!)|Guess who gets their bottom changed?$h#$action Regression.StartChange \"heart diaper\"#$h"
 			},
 		},
 

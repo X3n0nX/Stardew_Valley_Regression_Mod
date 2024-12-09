@@ -31,10 +31,20 @@
             "Action": "Include",
             "FromFile": "Dialogue/NPCs/Vincent.json"
         },
-		{
-		    "LogName": "Jas",
-            "Action": "Include",
-            "FromFile": "Dialogue/NPCs/Jas.json"
-		}
-	]
+      {
+        "LogName": "Jas",
+        "Action": "Include",
+        "FromFile": "Dialogue/NPCs/Jas.json"
+      },
+      {
+        "LogName": "Maru",
+        "Action": "Include",
+        "FromFile": "Dialogue/NPCs/Maru.json"
+      },
+      {
+        "LogName": "Abigail",
+        "Action": "Include",
+        "FromFile": "Dialogue/NPCs/Abigail.json"
+      }
+    ]
 }

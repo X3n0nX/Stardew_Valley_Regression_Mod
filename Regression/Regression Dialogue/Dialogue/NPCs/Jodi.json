@@ -59,8 +59,9 @@
   "winter_Sat6":"Maybe I should push Vincent to use the potty more, but I don't want him to feel ashamed about himself.$2#$e#He just looks so carefree playing in his diapers too. I don't want to take that away from him.",
   "winter_Sun6":"%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve and smile up at her.#$e#Awwwww.",
   "winter_Sun10":"%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve as your thumb finds its way into your mouth without you noticing.#$e#Awwwww. Well aren't you a precious little boy.^Well aren't you a precious little girl.$1",
-
-
+        "Diaper_Change_Accept": "#Just a second... See it stretches! There! Right as rain!$l#$b#%Jodi changes you#$action Regression.StartChange \"baby print diaper\" \"sams pants\"#$h",
+        "Diaper_Change_Refuse": "Well, if you are like Vincent and want to stay in your filthy pants, suit yourself! Just don't leak on the couch, you hear?",
+        "Diaper_Change_Followup": "#$p dirty_change_yes#Again? Sorry i am bussy right now. I have to change Vincents bottom next!(This is an error, this should not be able to happen!)|I am glad you see reason! Hold this, yes this is baby powder, don't look at me like that!$3'#$b#%Jodi changes your#$action Regression.StartChange \"baby print diaper\" \"sams pants\"#$3"
 			}
 		}
 	]

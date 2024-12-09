@@ -1,0 +1,15 @@
+{
+	"Changes":[
+		{
+			"LogName":"Maru",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Maru",
+			"Entries": {
+				"Diaper_Change_Accept": "%Maru changes you quick and professional#$action Regression.StartChange \"joja diaper\"#$h",
+				"Diaper_Change_Refuse": "I am here if you change your mind.",
+				"Diaper_Change_Followup": "#$p dirty_change_yes#?(This is an error, this should not be able to happen!)|Glad to help$l#$b#%Maru changes you with professional efficiency#$action Regression.StartChange \"joja diaper\"#$3"
+
+			}
+		}
+	]
+}

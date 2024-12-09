@@ -28,14 +28,14 @@ namespace PrimevalTitmouse
         private static readonly float requiredWaterPerDay = 8000f; //8oz glasses: every 20min for 8 hours (5455mL) + every 40 min for 8 hour (2727mL) Floximo: That is rough. Possible in extrem heat but rough to drink.
 
         //Average # of Pees per day is ~3
-        private static readonly float maxBladderCapacity = Regression.config.MaxBladderCapacity; //about 600mL => changed to 800mL as player will start with lower bladder by default
-        private static readonly float minBladderContinence = 0.3f; // Also describes capacity as changes are linear
+        public static float maxBladderCapacity => Regression.config.MaxBladderCapacity; //about 600mL => changed to 800mL as player will start with lower bladder by default
+        public static readonly float minBladderContinence = 0.3f; // Also describes capacity as changes are linear
         private static readonly float waterToBladderConversion = 0.2f;//Only ~1/4 (0.225f) water becomes pee, rest is sweat etc. => changed to 0.2f (1/5) for game balance reasons (too intrusive)
 
         //Average # of poops per day varies wildly. Let's say about 1.5 per day.
         private static readonly float foodToBowelConversion = 0.5f; // lowered from 0.67f to 0.5f to make the numbers smaller (too much poop) and bowel capacity / 1.5f (1000f in total)
-        private static readonly float maxBowelCapacity = (requiredCaloriesPerDay*foodToBowelConversion) / 1.5f / 1000f * Regression.config.MaxBowelCapacity; // The last 2 numbers usually end up as / 1200 * 1200 (cancle eachother out) to make configuration easier to understand 
-        private static readonly float minBowelContinence = 0.3f; // Also describes capacity as changes are linear
+        private static float maxBowelCapacity => (requiredCaloriesPerDay*foodToBowelConversion) / 1.5f / 1000f * Regression.config.MaxBowelCapacity; // The last 2 numbers usually end up as / 1200 * 1200 (cancle eachother out) to make configuration easier to understand 
+        public static readonly float minBowelContinence = 0.3f; // Also describes capacity as changes are linear
 
         //Setup Thresholds and messages
         private static readonly float trainingThreshold = 0.5f; // we set a threshold that allowes for potty training, so that should also be the warning level, for the player to understand whats going on
@@ -414,6 +414,10 @@ namespace PrimevalTitmouse
                 }
                 Accident(type, voluntary: false, inUnderwear: true);
             }
+            else if(!IsTryingToHoldIt(type) && oldFullnessPercent > 0.7f)
+            {
+                Accident(type, voluntary: true, inUnderwear: true);
+            }
             else
             {
                 //If we have no room left, or randomly based on our current continence level warn about how badly we need to pee
@@ -442,8 +446,15 @@ namespace PrimevalTitmouse
             float newPercent = (requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
 
             //Convert food lost into poo at half rate
-            if (amount < 0 && hunger < requiredCaloriesPerDay)
-                AddResource(IncidentType.POOP, amount * -1f * conversionRatio * foodToBowelConversion);
+            if (amount < 0)
+            {
+                if(hunger < requiredCaloriesPerDay)
+                    AddResource(IncidentType.POOP, amount * -1f * conversionRatio * foodToBowelConversion);
+                else
+                    // People do stop pooping after days not eating, but a) thats probably not the case and b) its a game. We assume a little poop is produced.
+                    AddResource(IncidentType.POOP, amount * -0.4f * conversionRatio * foodToBowelConversion);
+            }
+                
 
             //If we go over full, add additional to bowels at half rate
             if (hunger < 0)
@@ -478,9 +489,15 @@ namespace PrimevalTitmouse
             thirst -= amount;
             float newPercent = (requiredWaterPerDay - thirst) / requiredWaterPerDay;
 
-            //Convert water lost into pee at half rate
-            if (amount < 0 && thirst < requiredWaterPerDay)
-                AddResource(IncidentType.PEE, amount * -1f * conversionRatio * waterToBladderConversion);
+            //Convert food lost into poo at half rate
+            if (amount < 0)
+            {
+                if (hunger < requiredWaterPerDay)
+                    AddResource(IncidentType.PEE, amount * -1f * conversionRatio * waterToBladderConversion);
+                else
+                    // As long as we are not dead, some pee will be generated. We need to filter out toxins.
+                    AddResource(IncidentType.POOP, amount * -0.4f * conversionRatio * waterToBladderConversion);
+            }
 
             //Also if we go over full, add additional to Bladder at half rate
             if (thirst < 0)
@@ -522,7 +539,7 @@ namespace PrimevalTitmouse
             //Change of bladder capacity is no longer nessesary. Handled by getter.
 
             if (Regression.config.Debug)
-                Animations.Say(string.Format("{0} continence changed by {1} to {2}, {0} capacity now {3}", type == IncidentType.POOP ? "Bowel": "Bladder", previousContinence, GetContinence(type), GetCapacity(type)), (Body)null);
+                Animations.Say(string.Format("{0} continence changed by {1} to {2}, {0} capacity now {3}", type == IncidentType.POOP ? "Bowel": "Bladder", GetContinence(type) - previousContinence, GetContinence(type), GetCapacity(type)), (Body)null);
 
             //Warn that we may be losing control
             if(type == IncidentType.POOP)
@@ -548,7 +565,7 @@ namespace PrimevalTitmouse
 
         public StardewValley.Objects.Clothing GetPantsStardew()
         {
-            var farmer = Animations.GetWho();
+            var farmer = Animations.player;
             StardewValley.Objects.Clothing pants = (StardewValley.Objects.Clothing)farmer.pantsItem.Value;
             if (pants != null) pants.LoadData(); // YES, this is nessesary to load the data of the pants before accessing them... if there are pants (watch out for null)
 
@@ -574,6 +591,10 @@ namespace PrimevalTitmouse
         {
             RemoveBuff(WET_DEBUFF);
             RemoveBuff(MESSY_DEBUFF);
+            if (Game1.player.dialogueQuestionsAnswered.Contains("dirty_change_yes")) 
+                Game1.player.dialogueQuestionsAnswered.Remove("dirty_change_yes");
+            if (Game1.player.dialogueQuestionsAnswered.Contains("dirty_change_no"))
+                Game1.player.dialogueQuestionsAnswered.Remove("dirty_change_no");
         }
         public bool HasWetOrMessyDebuff()
         {
@@ -641,7 +662,7 @@ namespace PrimevalTitmouse
             return underwear.GetUsed(type) > 0 && underwear.GetCapacity(type) - underwear.GetUsed(type) < GetCapacity(type);
         }
 
-        public bool IsTryingToHoldIt(IncidentType type, float vsAmount)
+        public bool IsTryingToHoldIt(IncidentType type, float vsAmount = 0)
         {
             float capacity = underwear.GetCapacity(type);
             float used = underwear.GetUsed(type);
@@ -730,13 +751,6 @@ namespace PrimevalTitmouse
             }
 
         }
-        // Minor accidents (leaking) can happen before failure and is usually not causing someone else to notice
-        public void AccidentMinor(IncidentType type)
-        {
-            if (isSleeping) return;
-
-
-        }
         public void Accident(IncidentType type, bool voluntary = false, bool inUnderwear = true)
         {
             float attemptThreshold = GetAttemptThreshold(type);
@@ -776,6 +790,7 @@ namespace PrimevalTitmouse
                     }
                     else
                     {
+                        numPotty++; // we still count it as potty success to generate the message later (to know if we even tried)
                         if (!underwear.removable) //Certain underwear can't be taken off to use the toilet (ie diapers)
                         {
                             numAccident++;
@@ -784,7 +799,6 @@ namespace PrimevalTitmouse
                         }
                         else
                         {
-                            numPotty++;
                             ChangeFullness(type, -amountToLose);
                         }
                     }
@@ -825,7 +839,7 @@ namespace PrimevalTitmouse
                     if (!attemptOnly)
                     {
                         ChangeContinence(type, CalculateContinenceLossOrGain(type, voluntary, inUnderwear, fullness / capacity)); // yes this is correct, its capacity as the gain (for making it) should be relative to the bladder state, not max
-                        ChangeFullness(type, -this.bowelFullness);
+                        ChangeFullness(type, -fullness);
                     }
                     FinalizeAccident(type, voluntary, true, attemptOnly); // Trying in your underwear is different, people might be acting differently
                 }
@@ -899,7 +913,7 @@ namespace PrimevalTitmouse
             float fullness = GetFullness(type);
 
             int rate;
-            if (voluntary)
+            if (voluntary && !inUnderwear)
             {
                 rate = type == IncidentType.POOP ? Regression.config.BowelGainContinenceRate : Regression.config.BladderGainContinenceRate;
             }
@@ -909,15 +923,14 @@ namespace PrimevalTitmouse
             }
 
 
-            //If we have an accident (not voluntary), decrease continence
-            //If we use the potty before we REALLY have to go (we go before we reach some threshold), increase continence
-            //Otherwise, if it is voluntary but waited until we almost had an accident (fullness above some threshold) don't change anything
-            if (!voluntary)
+            //If we have an accident (not voluntary) or just go in our pants, decrease continence
+            if (!voluntary || inUnderwear)
                 return -0.01f * rate * percentLost * situationMultiplier(voluntary, inUnderwear);
-            else if (fullness > GetTrainingThreshold(type))
+            else if (fullness > GetTrainingThreshold(type) && InToilet(inUnderwear)) //If we REALLY hafe to go AND use toilet, increase continence
                 return 0.01f * rate * percentLost * situationMultiplier(voluntary, inUnderwear);
             else
             {
+                //Otherwise, if it is voluntary but just peed/pooped on the ground, don't change anything
                 return 0f;
             }
         }
@@ -995,20 +1008,14 @@ namespace PrimevalTitmouse
             {
                 multiplier = (voluntary ? (float)Regression.config.NighttimeGainMultiplier : (float)Regression.config.NighttimeLossMultiplier) / 100f;
             }
-            // InToilet does its own checks, making sure it's a valid use of the toilet. Handled differently, usually giving a gain bonus. Loss doesn't mather as the function checks on valid attempts.
-            else if (InToilet(inUnderwear))
-            {
-                multiplier = (float)Regression.config.ToiletGainMultiplier / 100f;
-            }
-            // If we voluntary pee/poop our pants, this adds situational modifiers. Usually negates possible gains or at least reduces them.
-            else if(voluntary && inUnderwear)
-            {
-                multiplier = (float)Regression.config.GoingVoluntaryInUnderwearGainMultiplier / 100f;
-            }
      
             return multiplier;
         }
-
+        public void WetAndMess(bool voluntary = false, bool inUnderwear = true)
+        {
+            Wet(voluntary, inUnderwear);
+            Mess(voluntary, inUnderwear);
+        }
         public void Wet(bool voluntary = false, bool inUnderwear = true)
         {
             Accident(IncidentType.PEE,voluntary,inUnderwear);

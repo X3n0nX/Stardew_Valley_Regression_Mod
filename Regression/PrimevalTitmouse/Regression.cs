@@ -1,12 +1,16 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GenericModConfigMenu;
+using Microsoft.Xna.Framework;
 using Regression;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
+using StardewValley.Delegates;
+using StardewValley.GameData.Characters;
 using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Objects;
 using StardewValley.Tools;
+using StardewValley.Triggers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,8 +33,10 @@ namespace PrimevalTitmouse
         public static Farmer who;
         private float tickCD1 = 0;
         private float tickCD2 = 0;
+        public static string dirtyEventToken = "dirtyEventToken";
 
         const float timeInTick = (1f/43f); //One second realtime ~= 1/43 hours in game
+        public Dictionary<string,bool> jsonLoaded = new();
         public override void Entry(IModHelper h)
         {
             //var harmony = new Harmony("com.primevaltitmouse.regression");
@@ -44,12 +50,280 @@ namespace PrimevalTitmouse
             h.Events.GameLoop.DayStarted += new EventHandler<DayStartedEventArgs>(ReceiveAfterDayStarted);
             h.Events.GameLoop.OneSecondUpdateTicking += new EventHandler<OneSecondUpdateTickingEventArgs>(ReceiveUpdateTick);
             h.Events.GameLoop.TimeChanged += new EventHandler<TimeChangedEventArgs>(ReceiveTimeOfDayChanged);
+            h.Events.GameLoop.GameLaunched += new EventHandler<GameLaunchedEventArgs>(OnGameLaunched);
             h.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(ReceiveKeyPress);
             h.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(ReceiveMouseChanged);
             h.Events.Display.MenuChanged += new EventHandler<MenuChangedEventArgs>(ReceiveMenuChanged);
             h.Events.Display.RenderingHud += new EventHandler<RenderingHudEventArgs>(ReceivePreRenderHudEvent);
-        }
 
+            TriggerActionManager.RegisterAction("Regression.StartChange", this.StartChange);
+        }
+        private void OnGameLaunched(object sender, GameLaunchedEventArgs e)
+        {
+            // get Generic Mod Config Menu's API (if it's installed)
+            var configMenu = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (configMenu is null)
+                return;
+
+            // register mod
+            configMenu.Register(
+                mod: this.ModManifest,
+                reset: () => config = new Config(),
+                save: () => this.Helper.WriteConfig(config)
+            );
+
+            // Config of the main page. Most important options
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Cheat Mode",
+                tooltip: () => "Allowes to spawn items, change potty training and displays debug related messages. (Debug)",
+                getValue: () => config.Debug,
+                setValue: value => config.Debug = value
+            );
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Easy Mode",
+                tooltip: () => "Hunger and Thirst are refilled every morning and the wet beds dried. (Easymode)",
+                getValue: () => config.Easymode,
+                setValue: value => config.Easymode = value
+            );
+            
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Wetting",
+                tooltip: () => "This activates pee and bladder events.",
+                getValue: () => config.Wetting,
+                setValue: value => config.Wetting = value
+            );
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Messing",
+                tooltip: () => "This activates poop and bowel events.",
+                getValue: () => config.Messing,
+                setValue: value => config.Messing = value
+            );
+
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Bladder Capacity (mL)",
+                tooltip: () => "600 is around 3 potty runs a day. (MaxBladderCapacity)",
+                getValue: () => config.MaxBladderCapacity,
+                setValue: value => config.MaxBladderCapacity = value,
+                min: 300, max: 1800, interval: 50
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Bowel Capacity (mL)",
+                tooltip: () => "1000 is around 1.5 potty runs a day. (MaxBowelCapacity)",
+                getValue: () => config.MaxBowelCapacity,
+                setValue: value => config.MaxBowelCapacity = value,
+                min: 300, max: 1800, interval: 50
+            );
+
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Always notice accidents",
+                tooltip: () => "Defines if you will notice accidents on low control values. (AlwaysNoticeAccidents)",
+                getValue: () => config.AlwaysNoticeAccidents,
+                setValue: value => config.AlwaysNoticeAccidents = value
+            );
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Pants Change at Home",
+                tooltip: () => "Changing your pants (in case you soiled your cloth) requires you to be at home. (Usually on) (PantsChangeRequiresHome)",
+                getValue: () => config.PantsChangeRequiresHome,
+                setValue: value => config.PantsChangeRequiresHome = value
+            );
+            configMenu.AddPageLink(
+                mod: this.ModManifest,
+                pageId: "Key Bindings",
+                text: () => "Key Bindings"
+            );
+            configMenu.AddPageLink(
+                mod: this.ModManifest,
+                pageId: "Continence",
+                text: () => "Continence"
+            );
+            configMenu.AddPageLink(
+                mod: this.ModManifest,
+                pageId: "Friendships",
+                text: () => "Friendships"
+            );
+            configMenu.AddPageLink(
+                mod: this.ModManifest,
+                pageId: "Continence",
+                text: () => "Continence"
+            );
+            configMenu.AddPageLink(
+                mod: this.ModManifest,
+                pageId: "Save Files",
+                text: () => "Save Files"
+            );
+            // All the options related to continence balancing
+            configMenu.AddPage(
+                mod: this.ModManifest,
+                pageId: "Key Bindings"
+            );
+            configMenu.AddKeybind(
+                mod: this.ModManifest,
+                name: () => "Pee Pants",
+                tooltip: () => "The key you want to press to just piddle yourself. (KeyPee)",
+                getValue: () => (SButton)config.KeyPee,
+                setValue: value => config.KeyPee = (int)value
+            );
+            configMenu.AddKeybind(
+                mod: this.ModManifest,
+                name: () => "Poop Pants",
+                tooltip: () => "The key you want to press to just poop yourself. (KeyPoop)",
+                getValue: () => (SButton)config.KeyPoop,
+                setValue: value => config.KeyPoop = (int)value
+            );
+            configMenu.AddKeybind(
+                mod: this.ModManifest,
+                name: () => "Pee In Potty",
+                tooltip: () => "The key you want to press to pee in the potty like a good girl or boy. (KeyPeeInToilet)",
+                getValue: () => (SButton)config.KeyPeeInToilet,
+                setValue: value => config.KeyPeeInToilet = (int)value
+            );
+            configMenu.AddKeybind(
+                mod: this.ModManifest,
+                name: () => "Poop In Potty",
+                tooltip: () => "The key you want to press to poop in the potty like a good girl or boy. (KeyPoopInToilet)",
+                getValue: () => (SButton)config.KeyPoopInToilet,
+                setValue: value => config.KeyPoopInToilet = (int)value
+            );
+            configMenu.AddKeybind(
+                mod: this.ModManifest,
+                name: () => "Go In Pants",
+                tooltip: () => "The key you want to press to pee and poop yourself. (KeyGoInPants)",
+                getValue: () => (SButton)config.KeyGoInPants,
+                setValue: value => config.KeyGoInPants = (int)value
+            );
+            configMenu.AddKeybind(
+                mod: this.ModManifest,
+                name: () => "Go Potty",
+                tooltip: () => "The key you want to press to pee and poop in the potty like a good girl or boy. (KeyGoInToilet)",
+                getValue: () => (SButton)config.KeyGoInToilet,
+                setValue: value => config.KeyGoInToilet = (int)value
+            );
+
+            // All the options related to continence balancing
+            configMenu.AddPage(
+                mod: this.ModManifest,
+                pageId: "Continence"
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Nighttime Losses",
+                tooltip: () => "How serious the loss of potty training is at night, compared to daytime. Usually 50 (half). (NighttimeLossMultiplier)",
+                getValue: () => config.NighttimeLossMultiplier,
+                setValue: value => config.NighttimeLossMultiplier = value,
+                min: 0, max: 200, interval: 10
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Nighttime Gains",
+                tooltip: () => "How big the gains are if you stay dry/clean at night, compared to daytime. Usually 50 (half). (NighttimeGainMultiplier)",
+                getValue: () => config.NighttimeGainMultiplier,
+                setValue: value => config.NighttimeGainMultiplier = value,
+                min: 0, max: 200, interval: 10
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Accident Bladder Loss",
+                tooltip: () => $"2 is a 2% continence loss for {config.MaxBladderCapacity}mL accidents. (BladderLossContinenceRate)",
+                getValue: () => config.BladderLossContinenceRate,
+                setValue: value => config.BladderLossContinenceRate = value,
+                min: 0, max: 20, interval: 1
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Accident Bowel Loss",
+                tooltip: () => $"3 is a 3% continence loss for {config.MaxBowelCapacity}mL accidents. (BowelLossContinenceRate)",
+                getValue: () => config.BowelLossContinenceRate,
+                setValue: value => config.BowelLossContinenceRate = value,
+                min: 0, max: 20, interval: 1
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Toilet Bladder Gain",
+                tooltip: () => $"3 is a 3% continence gain for making it to the toilet with a bladder that is at least half full. (BladderGainContinenceRate)",
+                getValue: () => config.BladderGainContinenceRate,
+                setValue: value => config.BladderGainContinenceRate = value,
+                min: 0, max: 20, interval: 1
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Toilet Bowel Gain",
+                tooltip: () => $"3 is a 3% continence gain for making it to the toilet with a bowel that is at least half full. (BowelGainContinenceRate)",
+                getValue: () => config.BowelGainContinenceRate,
+                setValue: value => config.BowelGainContinenceRate = value,
+                min: 0, max: 20, interval: 1
+            );
+
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Start Bladder Continence",
+                tooltip: () => $"Defines the starting (new game) bladder continence. Usually 70. Also applies to old saves without this mod activated (StartBladderContinence)",
+                getValue: () => config.StartBladderContinence,
+                setValue: value => config.StartBladderContinence = value,
+                min: (int)(Body.minBladderContinence*100), max: 100, interval: 5
+            );
+            configMenu.AddNumberOption(
+               mod: this.ModManifest,
+               name: () => "Start Bowel Continence",
+               tooltip: () => $"Defines the starting (new game) bowel continence. Usually 90. Also applies to old saves without this mod activated (StartBowelContinence)",
+               getValue: () => config.StartBowelContinence,
+               setValue: value => config.StartBowelContinence = value,
+               min: (int)(Body.minBowelContinence * 100), max: 100, interval: 5
+            );
+
+            // All the options related to friendship changes caused by accidents
+            configMenu.AddPage(
+                mod: this.ModManifest,
+                pageId: "Friendships"
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Penalty Peeing",
+                tooltip: () => "How peeing in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for pee incidents. (FriendshipPenaltyBladderMultiplier)",
+                getValue: () => config.FriendshipPenaltyBladderMultiplier,
+                setValue: value => config.FriendshipPenaltyBladderMultiplier = value,
+                min: 0, max: 500, interval: 10
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "Penalty Pooping",
+                tooltip: () => "How pooping in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for poop incidents. (FriendshipPenaltyBowelMultiplier)",
+                getValue: () => config.FriendshipPenaltyBowelMultiplier,
+                setValue: value => config.FriendshipPenaltyBowelMultiplier = value,
+                min: 0, max: 500, interval: 10
+            );
+
+            // All the options related to save files
+            configMenu.AddPage(
+                mod: this.ModManifest,
+                pageId: "Save Files"
+            );
+            configMenu.AddParagraph(
+                mod: this.ModManifest,
+                text: () => "Starting at version 1.5.0, save files (json) are no longer required/created. The only use of this functions is to load old save files or manually edit saves."
+            );
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Read Save Files",
+                tooltip: () => "This will activate reading of the (legacy) save files. This will also delete save files from the last day, if a new one starts.",
+                getValue: () => config.ReadSaveFiles,
+                setValue: value => config.ReadSaveFiles = value
+            );
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Write Save Files",
+                tooltip: () => "This will activate writing of the (legacy) save files. It is recommended to disable this option.",
+                getValue: () => config.WriteSaveFiles,
+                setValue: value => config.WriteSaveFiles = value
+            );
+        }
         public void DrawStatusBars()
         {
 
@@ -124,11 +398,15 @@ namespace PrimevalTitmouse
             }
         }
 
+
         private void ReceiveAfterDayStarted(object sender, DayStartedEventArgs e)
         {
+            var configFile = "RegressionSave.json";
             if (config.ReadSaveFiles)
             {
-                body = Helper.Data.ReadJsonFile<Body>(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName)) ?? new Body();
+                body = Helper.Data.ReadJsonFile<Body>(string.Format("{0}/{1}", Constants.SaveFolderName, configFile));
+                if (body == null) body = new Body();
+                else jsonLoaded[configFile] = true;
             }
             else
             {
@@ -138,12 +416,16 @@ namespace PrimevalTitmouse
             started = true;
             who = Game1.player;
 
+            configFile = "RegressionSaveInv.json";
             Dictionary<int, Dictionary<string, string>> invReplacement = null;
-            if(config.ReadSaveFiles) invReplacement = Helper.Data.ReadJsonFile<Dictionary<int, Dictionary<string, string>>>(string.Format("{0}/RegressionSaveInv.json", Constants.SaveFolderName));
+            if(config.ReadSaveFiles) invReplacement = Helper.Data.ReadJsonFile<Dictionary<int, Dictionary<string, string>>>(string.Format("{0}/{1}", Constants.SaveFolderName, configFile));
+            if(invReplacement != null) jsonLoaded[configFile] = true;
             restoreItems(Game1.player.Items, invReplacement);
 
+            configFile = "RegressionSaveChest.json";
             Dictionary<string, Dictionary<int, Dictionary<string, string>>> chestReplacement = null;
-            if (config.ReadSaveFiles) chestReplacement = Helper.Data.ReadJsonFile<Dictionary<string, Dictionary<int, Dictionary<string, string>>>>(string.Format("{0}/RegressionSaveChest.json", Constants.SaveFolderName));
+            if (config.ReadSaveFiles) chestReplacement = Helper.Data.ReadJsonFile<Dictionary<string, Dictionary<int, Dictionary<string, string>>>>(string.Format("{0}/{1}", Constants.SaveFolderName, configFile));
+            if (chestReplacement != null) jsonLoaded[configFile] = true;
 
             int locId = 0;
             foreach (var location in Game1.locations)
@@ -216,41 +498,167 @@ namespace PrimevalTitmouse
 
             var invReplacements = replaceItems(Game1.player.Items);
 
-            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSave.json", Constants.SaveFolderName), config.WriteSaveFiles ? body : null);
-            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSaveInv.json", Constants.SaveFolderName), config.WriteSaveFiles ? invReplacements : null);
-            Helper.Data.WriteJsonFile(string.Format("{0}/RegressionSaveChest.json", Constants.SaveFolderName), config.WriteSaveFiles ? chestReplacements : null);
+            var configFile = "RegressionSave.json";
+            if (config.WriteSaveFiles || jsonLoaded.ContainsKey(configFile))
+            {
+                Helper.Data.WriteJsonFile(string.Format("{0}/{1}", Constants.SaveFolderName, configFile), config.WriteSaveFiles ? body : null);
+                if (jsonLoaded.ContainsKey(configFile)) jsonLoaded.Remove(configFile);
+            }
+
+            configFile = "RegressionSaveInv.json";
+            if (config.WriteSaveFiles || jsonLoaded.ContainsKey(configFile))
+            {
+                Helper.Data.WriteJsonFile(string.Format("{0}/{1}", Constants.SaveFolderName, configFile), config.WriteSaveFiles ? invReplacements : null);
+                if (jsonLoaded.ContainsKey(configFile)) jsonLoaded.Remove(configFile);
+            }
+
+            configFile = "RegressionSaveChest.json";
+            if (config.WriteSaveFiles || jsonLoaded.ContainsKey(configFile))
+            {
+                Helper.Data.WriteJsonFile(string.Format("{0}/{1}", Constants.SaveFolderName, configFile), config.WriteSaveFiles ? chestReplacements : null);
+                if (jsonLoaded.ContainsKey(configFile)) jsonLoaded.Remove(configFile);
+            }
         }
 
+        public bool StartChange(string[] args, TriggerActionContext context, out string error)
+        {
+            try
+            {
+                var underwearName = "big kid undies";
+                if (args[1] != null)
+                {
+                    underwearName = args[1];
+                }
+
+                var diaper = new Underwear(underwearName, 1);
+                Underwear underwear = new Underwear(body.underwear, 1);
+
+                // We have to do all this before we change the underwear, because we lose the reference
+
+                //If the underwear returned is not removable, destroy it
+                if (!body.underwear.removable && !body.underwear.washable)
+                {
+                    Animations.Warn(Regression.t.Change_Destroyed, body);
+                }
+                //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
+                else if (!who.addItemToInventoryBool(underwear, false))
+                {
+                    List<Item> objList = new List<Item>();
+                    objList.Add(underwear);
+                    Game1.activeClickableMenu = new ItemGrabMenu(objList);
+                }
+
+                body.ChangeUnderwear(diaper);
+                body.ResetPants();
+                if (args[2] != null)
+                {
+                    body.pants.displayName = args[1];
+                    body.pants.description = args[1];
+                }
+            }
+            catch (Exception e)
+            {
+                error = e.Message;
+                return false;
+            }
+
+            error = null;
+            return true;
+        }
         private void ReceiveUpdateTick(object sender, OneSecondUpdateTickingEventArgs e)
         {
 
-                //Ignore everything until we've started the day
-                if (!started)
-                    return;
+            //Ignore everything until we've started the day
+            if (!started)
+                return;
 
 
-                //If time is moving, update our body state (Hunger, thirst, etc.)
-                if (ShouldTimePass())
+            //If time is moving, update our body state (Hunger, thirst, etc.)
+            if (ShouldTimePass())
+            {
+                this.body.HandleTime(timeInTick);
+                if (tickCD1 != 0) //Former Bug: When consuming items, they would give 2-3 goes at the "Handle eating and drinking." if statement below. Cause: This function would trigger multiple times while the if statement below was still true, causing it to fire multiple times.
                 {
-                    this.body.HandleTime(timeInTick);
-                    if (tickCD1 != 0) //Former Bug: When consuming items, they would give 2-3 goes at the "Handle eating and drinking." if statement below. Cause: This function would trigger multiple times while the if statement below was still true, causing it to fire multiple times.
-                    {
-                        tickCD2 += 1; //This should trigger multiple times during the eating animation.
-                    }
-                    if (tickCD2 >= 2) //Setting this to 2 should be able to balance preventing double triggers and ensuring no loss in intentional triggers.
-                    {
-                        tickCD1 = 0;
-                        tickCD2 = 0;
-                    }
-                    
+                    tickCD2 += 1; //This should trigger multiple times during the eating animation.
+                }
+                if (tickCD2 >= 2) //Setting this to 2 should be able to balance preventing double triggers and ensuring no loss in intentional triggers.
+                {
+                    tickCD1 = 0;
+                    tickCD2 = 0;
                 }
 
-                //Handle eating and drinking.
-                if (Game1.player.isEating && Game1.activeClickableMenu == null && tickCD1 == 0)
+                
+                // The following block makes npc (usually) not talk to you if you wear wet or messy pants... short of the special texts
+                
+                var newList = new List<NPC>();
+                var isFilthy = body.pants.wetness > 0 || body.pants.messiness > 0;
+                var list = Utility.GetNpcsWithinDistance(((Character)Animations.player).Tile, 10, (GameLocation)Game1.currentLocation);
+                foreach (var npc in list)
                 {
-                    body.Consume(who.itemToEat.Name);
-                    tickCD1 += 1;
+                    if (npc.CurrentDialogue.Count > 0 && npc.CurrentDialogue.Peek().TranslationKey == dirtyEventToken)
+                    {
+                        RemoveDialogueFromNPC(npc, dirtyEventToken);
+                    }
+                    if (isFilthy)
+                    {
+                        var npcName = "";
+                        var mod = Animations.modifierForState(npc);
+                        var responseKey = mod + Animations.responseKeyAdditionForState(npc);
+                        var npcType = Animations.npcTypeList(npc);
+                        List<string> stringList3 = new List<string>();
+                        foreach (string key2 in npcType)
+                        {
+                            Dictionary<string, string[]> dictionary;
+                            string[] strArray;
+                            if (Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
+                            {
+                                stringList3 = new List<string>(); // We could remove this line again, but the general texts are more meant as fallback, they often don't fit well if custom texts are defined
+                                stringList3.AddRange((IEnumerable<string>)strArray);
+                            }
+
+                        }
+                        
+                        var randNpcString = Strings.RandString(stringList3.ToArray());
+                        var npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
+                        npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
+                        
+
+                        npcStatement = npcName + npcStatement;
+                        npc.setNewDialogue(new Dialogue(npc, dirtyEventToken, npcStatement), true, true);
+                    }
                 }
+
+
+            }
+
+            //Handle eating and drinking.
+            if (Game1.player.isEating && Game1.activeClickableMenu == null && tickCD1 == 0)
+            {
+                body.Consume(who.itemToEat.Name);
+                tickCD1 += 1;
+            }
+        }
+        private void RemoveDialogueFromNPC(NPC npc, string keyRemove)
+        {
+            // Temporary stack to hold dialogues we want to keep
+            Stack<Dialogue> tempStack = new Stack<Dialogue>();
+
+            // Iterate through the stack to find the dialogue to remove
+            while (npc.CurrentDialogue.Count > 0)
+            {
+                Dialogue current = npc.CurrentDialogue.Pop();
+
+                if (current.TranslationKey != keyRemove)
+                {
+                    tempStack.Push(current); // Keep this dialogue if it doesn't match
+                }
+            }
+
+            // Restore the remaining dialogues back into the original stack
+            while (tempStack.Count > 0)
+            {
+                npc.CurrentDialogue.Push(tempStack.Pop());
+            }
         }
 
         //Determine if we need to handle time passing (not the same as Game time passing)
@@ -263,8 +671,38 @@ namespace PrimevalTitmouse
         private void ReceiveKeyPress(object sender, ButtonPressedEventArgs e)
         {
             //If we haven't started the day, ignore the key presses
-            if (!started)
-                return;
+            if (!started) return;
+
+            // We ignore keypresses in menues
+            if (Game1.activeClickableMenu != null) return;
+
+            bool altDown = e.IsDown(SButton.LeftAlt);
+            bool shiftDown = e.IsDown(SButton.LeftShift);
+
+            //START Keybind-section
+            if (!altDown)
+            {
+                bool triggered = true;
+
+                int button = (int)e.Button;
+                if (button == config.KeyGoInPants && (!shiftDown || config.KeyGoInPants != config.KeyGoInToilet))
+                    body.WetAndMess(true, true);
+                else if (button == config.KeyGoInToilet)
+                    body.WetAndMess(true, false);
+                else if (button == config.KeyPee && (!shiftDown || config.KeyPee != config.KeyPeeInToilet))
+                    body.Wet(true, true);
+                else if (button == config.KeyPoop && (!shiftDown || config.KeyPoop != config.KeyPoopInToilet))
+                    body.Mess(true, true);
+                else if (button == config.KeyPeeInToilet)
+                    body.Wet(true, false);
+                else if (button == config.KeyPoopInToilet)
+                    body.Mess(true, false);
+                else triggered = false;
+
+                if (triggered) return;
+            }
+            // END Keybind-section
+
 
             //Interpret buttons differently if holding Left Alt & Debug is enabled
             if (e.IsDown(SButton.LeftAlt) && config.Debug)
@@ -291,7 +729,6 @@ namespace PrimevalTitmouse
                         break;
                     case SButton.F8:
                         config.Easymode = !config.Easymode;
-
                         Animations.Write(config.Easymode ? Regression.t.EasyMode_On : Regression.t.EasyMode_Off, body);
                         break;
                     case SButton.S:
@@ -320,12 +757,6 @@ namespace PrimevalTitmouse
             {
                 switch (e.Button)
                 {
-                    case SButton.F1:
-                            body.Wet(true, !e.IsDown(SButton.LeftShift));
-                            break;
-                    case SButton.F2:
-                            body.Mess(true, !e.IsDown(SButton.LeftShift));
-                            break;
                     case SButton.F5:
                         Animations.CheckUnderwear(body);
                         break;
@@ -337,15 +768,6 @@ namespace PrimevalTitmouse
                         break;
                     case SButton.F8:
                         Animations.CheckPottyFeeling(body);
-                        break;
-                    case SButton.F9:
-                        config.Debug = !config.Debug;
-                        break;
-                    case SButton.F10:
-                        body.MinorAccident(IncidentType.PEE);
-                        break;
-                    case SButton.F11:
-                        body.MinorAccident(IncidentType.POOP);
                         break;
                 }
             }

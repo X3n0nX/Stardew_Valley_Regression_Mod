@@ -69,7 +69,15 @@ namespace PrimevalTitmouse
             if (b != null)
                 c = b.underwear;
             if (c != null)
+            {
+                var gettingChangedDialog = Strings.RandString(Animations.GetData().Diaper_Change_Dialog);
+                gettingChangedDialog = Strings.ReplaceAndOr(gettingChangedDialog, b.pants.wetness > 0, b.pants.messiness > 0);
+                str = str.Replace("$Diaper_Change_Dialog", gettingChangedDialog);
+
                 str = Strings.ReplaceOr(str.Replace("$UNDERWEAR_NAME$", c.displayName).Replace("$UNDERWEAR_PREFIX$", c.GetPrefix()).Replace("$UNDERWEAR_DESC$", c.description).Replace("$INSPECT_UNDERWEAR_NAME$", Strings.DescribeUnderwear(c, c.displayName)).Replace("$INSPECT_UNDERWEAR_DESC$", Strings.DescribeUnderwear(c, c.description)), !c.plural, "#");
+
+            }
+               
             if (b != null)
             {
 

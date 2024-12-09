@@ -216,10 +216,36 @@
 		"Your $UNDERWEAR_NAME$ <bulges#bulge> as you openly mess yourself.",
 		"You give up trying to hold it and sigh in relief as you mess your $UNDERWEAR_NAME$!"
 	],
-	"Toilet_Night": [
-		"You had to <pee&poop> last night, and made it to the toilet$HOW_MANY_TIMES",
-		"You woke up to <pee&poop> in the potty like a big <boy/girl> last night$HOW_MANY_TIMES"
+	"Diaper_Change_Dialog": [
+		"#$q dirty_change_yes/dirty_change_no Diaper_Change_Followup#Do you want to get changed like a toddler?#$r dirty_change_yes 1 Diaper_Change_Accept#Nod.#$r dirty_change_no 0 Diaper_Change_Refuse#Shake your head."
 	],
+	"Night": {
+		"Toilet_Night": [
+			"You had to <pee&poop> last night and made it $TOILET_TIMES_TOTAL to the toilet",
+			"You woke up $TOILET_ONCE_TWICE_TOTAL to <pee&poop> in the potty like a big <boy/girl> last night",
+			"You had to get up $TOILET_TIMES_TOTAL to <pee&poop> at night"
+		],
+		"Sleep_All_Night": [
+			"You slept through the whole night",
+			"You didn't wake up once this night",
+			"You wake up in the morning",
+			"You didn't feel the need to go tonight",
+			"You slept like a baby"
+		],
+		"Accident_At_Night": [
+			"<but >you <peed&pooped> yourself $ACCIDENT_TIMES_TOTAL like a toddler",
+			"you <still ><wet&soiled> yourself $ACCIDENT_ONCE_TWICE_TOTAL like the little bed<wetter&pooper> you are"
+		],
+		"Belittle_Accidents": [
+			"Looks like someone really does need to be in their diapers at night",
+			"Someone should wear protection at night"
+		],
+		"Underwear_Stuck": [
+			"but you couldn't get your $UNDERWEAR_NAME$ off in time"
+		]
+	},
+
+
 	"Wake_Up_Underwear_State": [
 		"You wake up in $INSPECT_UNDERWEAR_NAME$."
 	],
@@ -284,19 +310,76 @@
 		"Your pants are poopy!",
 		"You messed your pants!"
 	],
+	"Villager_Friendship_Modifier": {
+		// ground: going go on the ground, successfully peeing/pooping there
+		// ground_attempt: trying to go on the ground, but nothing comes out
+		// soiled: successfully peeing/pooping in your pants
+		// dirty: having dirty cloth (wet/poopy pants). NPC usually don't talk to you if you are filthy
+		"adult": {
+			"ground": 2.0,
+			"ground_attempt": 1.0,
+			"soiled": 1.0,
+			"dirty": 0.3
+		},
+		"teen": {
+			"ground": 1.5,
+			"ground_attempt": 0.5,
+			"soiled": 1.0,
+			"dirty": 0.1
+		},
+		"kid": {
+			"ground": 1.0,
+			"ground_attempt": 0.25,
+			"soiled": 0,
+			"dirty": 0
+		},
+		"animal": {
+			"ground": 0,
+			"ground_attempt": 0,
+			"soiled": 0,
+			"dirty": 0
+		},
+		"abigail": {
+			"ground": 1.0,
+			"ground_attempt": 0.5,
+			"soiled": 0,
+			"dirty": 0.1
+		},
+		"jodi": {
+			"ground": 1.0,
+			"ground_attempt": 0.5,
+			"soiled": 0,
+			"dirty": 0
+		},
+		"sam": {
+			"ground": 2.0,
+			"ground_attempt": 1.0,
+			"soiled": 0,
+			"dirty": 0.1
+		},
+		"penny": {
+			"ground": 1.0,
+			"ground_attempt": 0.5,
+			"soiled": 0,
+			"dirty": 0.05
+		}
+	},
 	"Villager_Reactions": {
 		"adult": {
 			"soiled_verynice": [
-				"Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?",
-				"I think little $FARMERNAME$ needs <his/her> diaper changed!",
-				"I know a little farmer who needs <his/her> diaper changed!$1"
+				"Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?$l",
+				"I think little $FARMERNAME$ needs <his/her> diaper changed!$h",
+				"I know a little farmer who needs <his/her> diaper changed!$h"
 			],
 			"soiled_nice": [
-				"You poor thing! Did you just <wet&mess> yourself?",
-				"Does someone need a diaper change?"
+				"You poor thing! Did you just <wet&mess> yourself?$s",
+				"Does someone need a diaper change?$h"
 			],
 			"soiled_mean": [
-				"You <&really >might want to go change your pants."
+				"You <&really >might want to go change your pants.$3"
+			],
+			"dirty": [
+				"You might want to get changed first."
 			],
 			"ground": [
 				"$FARMERNAME$! Living in the country doesn't make us barbarians!$3",
@@ -319,6 +402,9 @@
 				"...$5",
 				"...Did you just...$2"
 			],
+			"dirty": [
+				"Your pants are all... <wet&mess>...."
+			],
 			"ground": [
 				"Eww. Is that normal in the city?$5",
 				"What... Ugh!$5",
@@ -326,6 +412,31 @@
 			],
 			"ground_attempt": [
 				"What... Put your pants back on!$5"
+			]
+		},
+		"kid": {
+			"soiled_verynice": [
+				"*Giggles* Uh oh!$1"
+			],
+			"soiled_nice": [
+				"*Giggles* Uh oh!$1"
+			],
+			"soiled_mean": [
+				"Oh... gross...$3",
+				"Ewww$3",
+				"...$2",
+				"Ha ha! You <wet&messed> yourself!"
+			],
+			"dirty": [
+				"Pants <pee pee&poopy>!"
+			],
+			"ground": [
+				"Ewww!$3",
+				"Ewww! Don't <pee&poop> there!$3",
+				"...$2"
+			],
+			"ground_attempt": [
+				"Eww!$3"
 			]
 		},
 		"animal": {
@@ -342,10 +453,10 @@
 		},
 		"abigail": {
 			"soiled_verynice": [
-				"Want a change? #$b#I could change you, if you want!$h",
+				"Want a change? #$b#I could change you, if you want!$h$Diaper_Change_Dialog",
 				"Sometimes I just put on a diaper and sit around playing games all day. #$b#Maybe we could do that together sometime.$h",
 				"I think I'm pretty wet. #$b#Would you mind helping me change?",
-				"Let me help with that! Lay down for me.$h",
+				"Let me help with that! Lay down for me.$h$Diaper_Change_Dialog",
 				"Ewww, I think.... I think I pooped myself.$s #$b#...$s #$b#Could you... maybe change me?"
 			],
 			"soiled_nice": [
@@ -368,7 +479,7 @@
 		"haley": {
 			"soiled_verynice": [
 				"$lI'm really glad you've gotten me into this whole diaper thing!",
-				"$hLooks like <that#those> $UNDERWEAR_NAME$ <is#are> a little <wet&messy> now! How about a changing?",
+				"$hLooks like <that#those> $UNDERWEAR_NAME$ <is#are> a little <wet&messy> now!",
 				"$sI think my diaper's starting to sag. Can you give me a hand?"
 			],
 			"soiled_nice": [
@@ -381,13 +492,27 @@
 				"$uI was gonna tell you to change your clothes because of how unstylish they are, but it looks like you need your diaper changed more, you big baby!"
 			]
 		},
+		"maru": {
+			"soiled_verynice": [
+				"Again? Sure, you know the drill...$l$Diaper_Change_Dialog"
+			],
+			"soilded_nice": [
+				"Lets be professional about this. Lie down on the bed for me please?$0$Diaper_Change_Dialog"
+			],
+			"soiled_mean": [
+				"Incontinence i guess?$4"
+			],
+			"dirty": [
+				"You will catch a cold, or worse. Let's get the <soggy&dirty> cloth off!$1$Diaper_Change_Dialog"
+			]
+		},
 		"jodi": {
 			"soiled_verynice": [
 				"%Jodi leans down to put a comforting hand on your back.#$b#You can tell me if you had a little accident $FARMERNAME$. It's nothing to be ashamed of.",
-				"You don't need to rush potty training if you're not ready yet.",
-				"It can be hard for little <boys/girls> to remember to go potty sometimes. It's okay.",
+				"You don't need to rush potty training if you're not ready yet.#$b#You need help?$Diaper_Change_Dialog",
+				"It can be hard for little <boys/girls> to remember to go potty sometimes. It's okay.#$b#Need a change?$Diaper_Change_Dialog",
 				"Oh goodness!$1",
-				"Awww, you're so cute when you're embarrassed!$1"
+				"Awww, you're so cute when you're embarrassed!$1#$b#Comeon, lets get you in some new Diapers!$Diaper_Change_Dialog"
 			],
 			"soiled_nice": [
 				"$FARMERNAME$, I  think you might need to go change.",
@@ -395,17 +520,20 @@
 			],
 			"soiled_mean": [
 				"You might need to tap into those supplies I left you$4"
+			],
+			"dirty": [
+				"$p dirty_change_no# No leaks! $3| Aww, come here @! This things happen! We can make one of Vincents diapers fit! $1$Diaper_Change_Dialog"
 			]
 		},
 		"sam": {
 			"soiled_verynice": [
 				"#$p 102#Oh man, that was pretty hard to miss!$1|Man, you're just like Vincent.$1",
-				"Are you okay buddy?#$b#$y 'Do you want some help with that?_Yes please._Alright, go get a change and lie down for me. I'll clean you right up$3_Not yet!_Looks like the little <boy/girl> wants to stay <wet&messy> a bit longer!$1'",
+				"Are you okay buddy?#$b#Do you want some help with that?$Diaper_Change_Dialog",
 				"It's okay $FARMERNAME$. Accidents are nothing to be ashamed of.",
 				"Awwww, look at you go! That must have felt good.$4",
 				"Oh man, that was pretty hard to miss!$1",
 				"Good one!$1",
-				"Man, you're such a little baby sometimes.#$b#%Sam giggles a bit as he pats your squishy bottom.",
+				"Man, you're such a little baby sometimes.#$b#%Sam giggles a bit as he pats your squishy bottom.#$b#Need help with that?$Diaper_Change_Dialog",
 				"Awww, did the little farmer have a little accident?",
 				"I bet I could get Mommy to go change you.$3#$b#I'm kidding I'm kidding!$1",
 				"Man, it looks like you really need diapers, don't you.",
@@ -423,7 +551,10 @@
 				"...Oh$2",
 				"You might want to take care of that...",
 				"#$p 102#You might want to take care of that...|Great, more potty issues to be witness to. Thanks.$5"
-			]
+			],
+			"dirty": [
+				"Can't let you get a cold, can i. Need help?$1$Diaper_Change_Dialog"
+			],
 		},
 		"penny": {
 			"soiled_verynice": [
@@ -474,61 +605,62 @@
 		},
 		"vincent": {
 			"soiled_verynice": [
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Mommy told me big kids are supposed to use the potty. #$b#I don't wanna be a big kid either!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|%Vincent watches you <wet&mess> yourself and giggles.#$b#Good one!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|%You notice Vincent watching as you <wet&mess> yourself.#$b#All better?",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|%Vincent watches the whole scene curiously and giggles when you look over. #$b# You <peed&pooped>!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|If you want I could ask my Mommy to change you.#$b#No?#$b#That's okay, I like being <wet&messy> too!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|$FARMERNAME$'s <wet&messy> and I'm still dry!$1#$b#...#$b#Wait...$2"
+				"#$p 102#%*Giggles*|Mommy told me big kids are supposed to use the potty. #$b#I don't wanna be a big kid either!$1",
+				"#$p 102#%*Giggles*|%Vincent watches you <wet&mess> yourself and giggles.#$b#Good one!$1",
+				"#$p 102#%*Giggles*|%You notice Vincent watching as you <wet&mess> yourself.#$b#All better?",
+				"#$p 102#%*Giggles*|%Vincent watches the whole scene curiously and giggles when you look over. #$b# You <peed&pooped>!$1",
+				"#$p 102#%*Giggles*|If you want I could ask my Mommy to change you.#$b#No?#$b#That's okay, I like being <wet&messy> too!$1",
+				"#$p 102#%*Giggles*|$FARMERNAME$'s <wet&messy> and I'm still dry!$1#$b#...#$b#Wait...$2"
 			],
 			"soiled_nice": [
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Don't cry, Mommy says it's okay to have accidents sometimes.",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Don't worry $FARMERNAME$, I still do that too!",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Feel all better?",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|It smells like you need a diaper change!"
+				"#$p 102#%*Giggles*|Don't cry, Mommy says it's okay to have accidents sometimes.",
+				"#$p 102#%*Giggles*|Don't worry $FARMERNAME$, I still do that too!",
+				"#$p 102#%*Giggles*|Feel all better?",
+				"#$p 102#%*Giggles*|It smells like you need a diaper change!",
+				"#$p 102#%*Giggles*|I kney it! It does happen to bigs too!"
 			],
 			"soiled_mean": [
-				"#$p 102#%Vincent doesn't seem to notice what happened.|%Vincent saw what happened and snickers at you.",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Was that an accident?",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Ha! Gross!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|$FARMERNAME$ just <peed&pooped> <himself/herself>!$1",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Hah! I just watched you <pee&poop> yourself!$1"
+				"#$p 102#%Ewww$3|%Vincent saw what happened and snickers at you.",
+				"#$p 102#%Ewww$3|Was that an accident?",
+				"#$p 102#%Ewww$3|Ha! Gross!$1",
+				"#$p 102#%Ewww$3|$FARMERNAME$ just <peed&pooped> <himself/herself>!$1",
+				"#$p 102#%Ewww$3|Hah! I just watched you <pee&poop> yourself!$1"
 			],
 			"ground": [
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Ewww!$3",
-				"Ewww! Don't <pee&poop> there!$3",
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Hey everyone! $FARMERNAME$ just <peed&pooped> on the ground!$1"
+				"#$p 102#%Ewww!$3|Ewww!$3",
+				"#$p 102#%Ewww!$3|Ewww! Don't <pee&poop> there!$3",
+				"#$p 102#%Ewww!$3|Hey everyone! $FARMERNAME$ just <peed&pooped> on the ground!$1"
 			],
 			"ground_attempt": [
-				"#$p 102#%Vincent doesn't seem to notice what happened.|Eww! Why are you trying to <pee&poop> on on the ground?$3"
+				"#$p 102#%...$2|Eww! Why are you trying to <pee&poop> on on the ground?$3"
 			]
 		},
 		"jas": {
 			"soiled_verynice": [
-				"#$p 102#%Jas doesn't seem to notice what happened.|Don't cry, it's okay for little <boy/girl>s to have accidents sometimes.",
-				"#$p 102#%Jas doesn't seem to notice what happened.|Oh no, did you have an accident? That's okay, you can try again next time.",
-				"#$p 102#%Jas doesn't seem to notice what happened.|It's okay, I won't tell anyone you had an accident $FARMERNAME$",
-				"#$p 102#%Jas doesn't seem to notice what happened.|It's okay $FARMERNAME$, I still have accidents too.$1",
-				"#$p 102#%Jas doesn't seem to notice what happened.|I can see you waddling!$4",
-				"#$p 102#%Jas doesn't seem to notice what happened.|Did you have an accident? It's okay, once you're all clean you'll feel all better."
+				"#$p 102#%*Giggles*|Don't cry, it's okay for little <boy/girl>s to have accidents sometimes.",
+				"#$p 102#%*Giggles*|Oh no, did you have an accident? That's okay, you can try again next time.",
+				"#$p 102#%*Giggles*|It's okay, I won't tell anyone you had an accident $FARMERNAME$",
+				"#$p 102#%*Giggles*|It's okay $FARMERNAME$, I still have accidents too.$1",
+				"#$p 102#%*Giggles*|I can see you waddling!$4",
+				"#$p 102#%*Giggles*|Did you have an accident? It's okay, once you're all clean you'll feel all better."
 			],
 			"soiled_nice": [
-				"#$p 102#%Jas doesn't seem to notice what happened.|*Giggles* Uh oh!$1",
-				"#$p 102#%Jas doesn't seem to notice what happened.|You're supposed to do that on the potty you know.$4",
-				"#$p 102#%Jas doesn't seem to notice what happened.|Do you need me to get Aunt Marnie? She always helps me when I have an accident.$3"
+				"#$p 102#%...$2|*Giggles* Uh oh!$1",
+				"#$p 102#%...$2|You're supposed to do that on the potty you know.$4",
+				"#$p 102#%...$2|Do you need me to get Aunt Marnie? She always helps me when I have an accident.$3"
 			],
 			"soiled_mean": [
-				"#$p 102#%Jas doesn't seem to notice what happened.|Oh... gross...$3",
-				"#$p 102#%Jas doesn't seem to notice what happened.|Ewww$3",
-				"#$p 102#%Jas doesn't seem to notice what happened.|...$2"
+				"#$p 102#%Ewww!$3|Oh... gross...$3",
+				"#$p 102#%Ewww!$3|Ewww$3",
+				"#$p 102#%Ewww!$3|...$2"
 			],
 			"ground": [
-				"#$p 102#%Jas doesn't seem to notice what happened.|Ewww!$3",
-				"Ewww! Don't <pee&poop> there!$3",
-				"#$p 102#%Jas doesn't seem to notice what happened.|...$2"
+				"Ewww!$3",
+				"#$p 102#%Ewww!$3|Ewww! Don't <pee&poop> there!$3",
+				"#$p 102#%Ewww!$3|...$2"
 			],
 			"ground_attempt": [
-				"#$p 102#%Jas doesn't seem to notice what happened.|Eww! Why are you trying to <pee&poop> on on the ground?$3"
+				"#$p 102#%...$2|Eww! Why are you trying to <pee&poop> on on the ground?$3"
 			]
 		}
 	},

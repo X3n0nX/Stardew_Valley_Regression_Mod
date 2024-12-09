@@ -141,7 +141,10 @@
 "Little_Little": "Uh huh!$3#$b#%Sam squeals happily and hides his blushing face.",
 "Little_Excited": "Yeah!$3#$b#%Sam squeals happily and hides his blushing face.",
 "Little_Followup":"#$p 124#You always make me feel so little. It means so much to me, thank you.$4|I really want to go back to diapers full time.$4#$b#I just don't think I can while I'm still living with Mommy.$10",
-
+			
+				"Diaper_Change_Accept": "#Ah, hold still. Don't worry i got this!$l#$b#%Sam changes your diaper, making a lot of mistakes while doing so.#$action Regression.StartChange \"joja diaper\"#$h",
+				"Diaper_Change_Refuse": "Oh, ok.",
+				"Diaper_Change_Followup": "#$p dirty_change_yes#No?(This is an error, this should not be able to happen!)|Sure thing, lets see...$h#$b#%Sam changes your diaper, he just can't it get quite right.#$action Regression.StartChange \"joja diaper\"#$h"
 			}
 		},
 

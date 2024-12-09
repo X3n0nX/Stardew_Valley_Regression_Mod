@@ -1,27 +1,31 @@
 //Thanks to contributors: u/BabyKunoichi, u/abdlnikki, u/FurryDestiny
 //Thanks to alpha testers: u/zombiekarasu, u/dr_daddy, u/errycupid, u/rosebush413, u/mrnogee, u/crinklycuddles, u/vulpix77
 {
-	"Wetting": true,
-	"Messing": true,
-	"Easymode": false,
+	"Wetting": true, // This activates poop and bowel events.
+	"Messing": true, // This activates pee and bladder events.
+	"Easymode": false, // Hunger and Thirst are refilled every morning and the wet beds dried.
 	"PantsChangeRequiresHome": true, // If changing your pants (in case you soiled your cloth) requires you to be at home
 	"FriendshipPenaltyBladderMultiplier": 100, // How peeing in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for pee incidents
 	"FriendshipPenaltyBowelMultiplier": 200, // How pooping in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for poop incidents
-	"AlwaysNoticeAccidents": true,
-	"Debug": false,
-	"ToiletGainMultiplier": 200, //0 would be no gain, 50 half as much, 200 twice as much. Only applies while daytime.
-	"NighttimeLossMultiplier": 50, //0 would be no loss, 50 half as much, 200 twice as much. Half may be more balanced, because otherwise there is no coming back.
-	"NighttimeGainMultiplier": 100, //0 would be no gain, 50 half as much, 200 twice as much
-	"GoingVoluntaryInUnderwearGainMultiplier": 0, //If you go in your pants on purpose, the continence gained should probably not be as high as making it to a toilet (+toilet multiplier) or at least on the floor. 0 would be no gain, 50 half as much, 200 twice as much. 0 is balanced as it doesn't reduce continence at least.
-	"BladderLossContinenceRate": 2, //in 1% increments. i.e. 5 = 5% loss per accident. 3% seams balanced
-	"BowelLossContinenceRate": 2, //in 1% increments. i.e. 5 = 5% loss per accident
-	"BladderGainContinenceRate": 2, //in 1% increments. i.e. 5 = 5% gain per success. 3% seams balanced, as it is probably doubled to 6% for potty runs (toilet multiplier). It's efford for the player.
-	"BowelGainContinenceRate": 2, //in 1% increments. i.e. 5 = 5% gain per success
+	"AlwaysNoticeAccidents": true, // Defines if you will notice accidents on low control values.
+	"Debug": true, // Allowes to spawn items, change potty training and displays debug related messages.
+	"NighttimeLossMultiplier": 50, //How serious the loss of potty training is at night, compared to daytime. Usually 50 (half).
+	"NighttimeGainMultiplier": 50, //How big the gains are if you stay dry/clean at night, compared to daytime. Usually 50 (half).
+	"BladderLossContinenceRate": 2, //2 is a 2% continence loss for MaxBladderCapacity accidents.
+	"BowelLossContinenceRate": 4, //3 is a 3% continence loss for MaxBowelCapacity accidents.
+	"BladderGainContinenceRate": 3, //3 is a 3% continence gain for making it to the toilet with a bladder that is at least half full.
+	"BowelGainContinenceRate": 4, //3 is a 3% continence gain for making it to the toilet with a bowel that is at least half full.
 	"MaxBladderCapacity": 600, // 600 is around 3 potty runs a day
 	"MaxBowelCapacity": 1000, // 1000 is around 1.5 potty runs a day, dependend on work (calorie intake)
 	"StartBladderContinence": 70, // A value (in percent) between 0 and 100, defines the starting (new game) bladder continence. Usually 70.
 	"StartBowelContinence": 90, // A value (in percent) between 0 and 100, defines the starting (new game) bowel continence. Usually 90.
-	"ReadSaveFiles": true, // Will read the legacy save files (to keep loading old stardew saves)
-	"WriteSaveFiles": false, // Will read and write the legacy save files (no longer needed, it's now written directly into the stardew saves)
+	"ReadSaveFiles": true, // This will activate reading of the (legacy) save files. This will also delete save files from the last day, if a new one starts.
+	"WriteSaveFiles": false, // This will activate writing of the (legacy) save files. It is recommended to disable this option.
+	"KeyPee": 112, // F1 - Key for peeing in underwear
+	"KeyPeeInToilet": 112, // F1 - If this is set to the same value than KeyPee, Shift has to be pressed in addition
+	"KeyPoop": 113, // F2 - Key for peeing in underwear
+	"KeyPoopInToilet": 113, // F2 - If this is set to the same value than KeyPoopInToilet, Shift has to be pressed in addition
+	"KeyGoInPants": 0, // Unbound - Pee and Poop in your pants
+	"KeyGoInToilet": 0, // Unbound - Pee and Poop in the toilet - If this is set to the same value than KeyGoInPants, Shift has to be pressed in addition
 	"Lang": "en"
 }

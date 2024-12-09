@@ -3,12 +3,14 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Characters;
+using StardewValley.GameData.Characters;
 using StardewValley.Menus;
 using StardewValley.TerrainFeatures;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -50,7 +52,7 @@ namespace PrimevalTitmouse
 
         public static Texture2D sprites;
         private static Data t;
-        private static Farmer who;
+        public static Farmer player => Game1.player;
 
         //Static Accessor Methods. Ensure that variables are initialized.
         public static Data GetData()
@@ -64,11 +66,7 @@ namespace PrimevalTitmouse
             return sprites;
         }
 
-        public static Farmer GetWho()
-        {
-            Animations.who ??= Game1.player;
-            return who;
-        }
+        
 
         public static float ZoomScale()
         {
@@ -78,21 +76,24 @@ namespace PrimevalTitmouse
         public static void AnimateDrinking(bool waterSource = false)
         {
             //If we aren't facing downward, turn
-            if (Animations.GetWho().getFacingDirection() != (int)FaceDirection.Down)
-                Animations.GetWho().faceDirection((int)FaceDirection.Down);
+            if (player.getFacingDirection() != (int)FaceDirection.Down)
+                player.faceDirection((int)FaceDirection.Down);
+
 
             //Stop doing anything that would prevent us from moving
             //Essentially take control of the variable
-            Animations.GetWho().forceCanMove();
+            player.forceCanMove();
+
 
             //Stop any form of animation
-            Animations.GetWho().completelyStopAnimatingOrDoingAction();
+            player.completelyStopAnimatingOrDoingAction();
+
 
             // ISSUE: method pointer
             //Start Drinking animation. While drinking pause time and don't allow movement.
-            Animations.GetWho().FarmerSprite.animateOnce(StardewValley.FarmerSprite.drink, DRINK_ANIMATION_INTERVAL, DRINK_ANIMATION_FRAMES, new AnimatedSprite.endOfAnimationBehavior(EndDrinking));
-            Animations.GetWho().freezePause = PAUSE_TIME;
-            Animations.GetWho().canMove = false;
+            player.FarmerSprite.animateOnce(StardewValley.FarmerSprite.drink, DRINK_ANIMATION_INTERVAL, DRINK_ANIMATION_FRAMES, new AnimatedSprite.endOfAnimationBehavior(EndDrinking));
+            player.freezePause = PAUSE_TIME;
+            player.canMove = false;
 
             //If we drink from the watering can, don't say anything
             if (!waterSource)
@@ -135,27 +136,27 @@ namespace PrimevalTitmouse
             else
                 Say(Animations.GetData().Mess_Accident, b);
 
-            Animations.GetWho().doEmote(12, false);
-            if (b.IsFishing() || !Animations.GetWho().canMove) return; // We skip the actual animations if nessesary
-            //Animations.GetWho().forceCanMove();
-            //Animations.GetWho().completelyStopAnimatingOrDoingAction();
-            Animations.GetWho().jitterStrength = 1.0f;
-            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.GetWho().position.Value - new Vector2(((Character)Animations.GetWho()).facingDirection.Value == 1 ? 0.0f : (float)-Game1.tileSize, (float)(Game1.tileSize * 2)), false, ((Character)Animations.GetWho()).facingDirection.Value == 1, (float)((Character)Animations.GetWho()).StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
 
-            Animations.GetWho().freezePause = poopAnimationTime;
-            Animations.GetWho().canMove = false;
+            player.doEmote(12, false);
+            if (b.IsFishing() || !player.canMove) return; // We skip the actual animations if nessesary
+
+            player.jitterStrength = 1.0f;
+            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, player.position.Value - new Vector2(((Character)Animations.player).facingDirection.Value == 1 ? 0.0f : (float)-Game1.tileSize, (float)(Game1.tileSize * 2)), false, ((Character)Animations.player).facingDirection.Value == 1, (float)((Character)Animations.player).StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
+
+            player.freezePause = poopAnimationTime;
+            player.canMove = false;
         }
         public static void AnimateMessingEnd(Body b)
         {
 
             if (b.IsFishing()) return;
             Game1.playSound("coin");
-            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.GetWho().position.Value - new Vector2(Animations.GetWho().facingDirection.Value == 1 ? 0.0f : -Game1.tileSize, Game1.tileSize * 2), false, Animations.GetWho().facingDirection.Value == 1, Animations.GetWho().StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
+            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.player.position.Value - new Vector2(Animations.player.facingDirection.Value == 1 ? 0.0f : -Game1.tileSize, Game1.tileSize * 2), false, Animations.player.facingDirection.Value == 1, Animations.player.StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
         }
         public static void AnimateMessingMinor(Body b)
         {
             Animations.Say(Animations.GetData().Bowels_Leak, b);
-            ((Character)Animations.GetWho()).doEmote(12, false);
+            ((Character)Animations.player).doEmote(12, false);
         }
 
         public static void AnimateWettingStart(Body b, bool voluntary, bool inUnderwear)
@@ -179,9 +180,9 @@ namespace PrimevalTitmouse
                 else
                     Animations.Say(Animations.GetData().Pee_Voluntary, b);
 
-                ((GameLocation)Animations.GetWho().currentLocation).temporarySprites.Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position.Value, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
+                ((GameLocation)Animations.player.currentLocation).temporarySprites.Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position.Value, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
                 HoeDirt terrainFeature;
-                if (Animations.GetWho().currentLocation.terrainFeatures.ContainsKey(((Character)Animations.GetWho()).Tile) && (terrainFeature = Animations.GetWho().currentLocation.terrainFeatures[((Character)Animations.GetWho()).Tile] as HoeDirt) != null)
+                if (Animations.player.currentLocation.terrainFeatures.ContainsKey(((Character)Animations.player).Tile) && (terrainFeature = Animations.player.currentLocation.terrainFeatures[((Character)Animations.player).Tile] as HoeDirt) != null)
                     terrainFeature.state.Value = 1;
             }
             else if (voluntary)
@@ -190,18 +191,17 @@ namespace PrimevalTitmouse
                 Animations.Say(Animations.GetData().Wet_Accident, b);
 
             // We skip the actual animations if nessesary
-            if (b.IsFishing() || !Animations.GetWho().canMove) return;
-            //Animations.GetWho().forceCanMove();
-            //Animations.GetWho().completelyStopAnimatingOrDoingAction();
-            Animations.GetWho().jitterStrength = 0.5f;
-            Animations.GetWho().freezePause = peeAnimationTime; //milliseconds
-            Animations.GetWho().canMove = false;
-            ((Character)Animations.GetWho()).doEmote(28, false);
+            if (b.IsFishing() || !Animations.player.canMove) return;
+
+            player.jitterStrength = 0.5f;
+            player.freezePause = peeAnimationTime; //milliseconds
+            player.canMove = false;
+            ((Character)Animations.player).doEmote(28, false);
         }
         public static void AnimateWettingMinor(Body b)
         {
             Animations.Say(Animations.GetData().Bladder_Leak, b);
-            ((Character)Animations.GetWho()).doEmote(28, false);
+            ((Character)Animations.player).doEmote(28, false);
         }
 
 
@@ -210,9 +210,9 @@ namespace PrimevalTitmouse
             if (b.IsFishing()) return;
             if ((double)b.pants.wetness > (double)b.pants.absorbency)
             {
-                ((GameLocation)Animations.GetWho().currentLocation).temporarySprites.Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position.Value, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
+                ((GameLocation)player.currentLocation).temporarySprites.Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position.Value, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
                 HoeDirt terrainFeature;
-                if (Animations.GetWho().currentLocation.terrainFeatures.ContainsKey(((Character)Animations.GetWho()).Tile) && (terrainFeature = Animations.GetWho().currentLocation.terrainFeatures[((Character)Animations.GetWho()).Tile] as HoeDirt) != null)
+                if (Animations.player.currentLocation.terrainFeatures.ContainsKey(((Character)Animations.player).Tile) && (terrainFeature = player.currentLocation.terrainFeatures[((Character)Animations.player).Tile] as HoeDirt) != null)
                     terrainFeature.state.Value = 1;
             }
         }
@@ -236,36 +236,94 @@ namespace PrimevalTitmouse
             }
             Animations.Write(msg, b);
         }
-
+        private static string GetNumericTranslationOnceTwice(int amount)
+        {
+            switch (amount)
+            {
+                case 1:
+                    return "once";
+                case 2:
+                    return "twice";
+                default:
+                    return $"{amount} times";
+            }
+        }
+        private static string GetNumericTranslationTimes(int amount)
+        {
+            switch (amount)
+            {
+                case 1:
+                    return "one time";
+                case 2:
+                    return "two times";
+                case 3:
+                    return "three times";
+                case 4:
+                    return "four times";
+                case 5:
+                    return "five times";
+                default:
+                    return $"{amount} times";
+            }
+        }
+        // Function to make the first character of the input string upper case
+        public static string FirstCharToUpper(this string input) =>
+            input switch
+            {
+                null => throw new ArgumentNullException(nameof(input)),
+                "" => throw new ArgumentException($"{nameof(input)} cannot be empty", nameof(input)),
+                _ => string.Concat(input[0].ToString().ToUpper(), input.AsSpan(1))
+            };
         public static void AnimateNight(Body b)
         {
             bool first = b.numPottyPeeAtNight > 0;
             bool second = b.numPottyPooAtNight > 0;
             if (!(first | second) || !b.IsAllowedResource(IncidentType.PEE) && !b.IsAllowedResource(IncidentType.POOP))
                 return;
-            string toiletMsg = Strings.ReplaceAndOr(Strings.RandString(Animations.GetData().Toilet_Night), first, second, "&");
 
-            if (b.numAccidentPooAtNight == 0 && b.numAccidentPeeAtNight == 0)
-                toiletMsg = Strings.InsertVariable(toiletMsg, "$HOW_MANY_TIMES", ".");
+            var list = Animations.GetData().Night;
+            // assumtion: if we wake up to pee/poop, we do that togehter if possible. So if we wake up 2 times for pee and 1 time for poop, it is likely we only got up twice, not 3 times
+            int gotUpAtNight = Math.Max(b.numPottyPeeAtNight, b.numPottyPooAtNight);
+            string toiletMsg = "";
+
+            if (gotUpAtNight > 0)
+            {
+                toiletMsg = Strings.ReplaceAndOr(Strings.RandString(list["Toilet_Night"]), first, second, "&");
+            }
             else
             {
-                if (!b.underwear.removable)
-                {
-                    toiletMsg = Strings.InsertVariable(toiletMsg, "$HOW_MANY_TIMES", ", but couldn't get your $UNDERWEAR_NAME$ off!$HOW_MANY_TIMES");
-                    toiletMsg = Strings.InsertVariable(toiletMsg, "$HOW_MANY_TIMES", " So you still woke up$HOW_MANY_TIMES");
-                }
-                else
-                {
-                    toiletMsg = Strings.InsertVariable(toiletMsg, "$HOW_MANY_TIMES", ", but you still woke up$HOW_MANY_TIMES");
-                }
-                if (b.numAccidentPeeAtNight > 0)
-                    toiletMsg = Strings.InsertVariable(toiletMsg, "$HOW_MANY_TIMES", " wet$HOW_MANY_TIMES");
-                if (b.numAccidentPooAtNight > 0)
-                    toiletMsg = Strings.InsertVariable(toiletMsg, "$HOW_MANY_TIMES", " and messy$HOW_MANY_TIMES");
-                if (b.numAccidentPooAtNight > 0 || b.numAccidentPeeAtNight > 0)
-                    toiletMsg = Strings.InsertVariable(toiletMsg, "$HOW_MANY_TIMES", "! Looks like someone really does need to be in their diapers at night$HOW_MANY_TIMES");
+                toiletMsg = Strings.RandString(list["Sleep_All_Night"]);
             }
-            toiletMsg = Strings.InsertVariable(toiletMsg, "$HOW_MANY_TIMES", ".");
+            toiletMsg = FirstCharToUpper(toiletMsg);
+
+            if (b.numAccidentPooAtNight == 0 && b.numAccidentPeeAtNight == 0)
+                toiletMsg += ".";
+            else
+            {
+                var butPlaceholder = false;
+                if (gotUpAtNight > 0)
+                {
+                    butPlaceholder = true;
+                    if (!b.underwear.removable)
+                    {
+                        toiletMsg += " " + Strings.RandString(list["Underwear_Stuck"]);
+                        butPlaceholder = false;
+                    }
+                }
+                toiletMsg += ".";
+
+                var accidentReport = Strings.ReplaceOptional(Strings.ReplaceAndOr(Strings.RandString(list["Accident_At_Night"]), b.numAccidentPeeAtNight > 0, b.numAccidentPooAtNight > 0), butPlaceholder);
+                accidentReport = FirstCharToUpper(accidentReport);
+
+                toiletMsg += " " + accidentReport + ".";
+
+                if (b.numAccidentPooAtNight > 0 || b.numAccidentPeeAtNight > 0)
+                    toiletMsg += " " + FirstCharToUpper(Strings.RandString(list["Belittle_Accidents"])) + ".";
+            }
+            toiletMsg = Strings.InsertVariable(toiletMsg, "$TOILET_ONCE_TWICE_TOTAL", GetNumericTranslationOnceTwice(gotUpAtNight));
+            toiletMsg = Strings.InsertVariable(toiletMsg, "$TOILET_TIMES_TOTAL", GetNumericTranslationTimes(gotUpAtNight));
+            toiletMsg = Strings.InsertVariable(toiletMsg, "$ACCIDENT_ONCE_TWICE_TOTAL", GetNumericTranslationOnceTwice(Math.Max(b.numAccidentPeeAtNight,b.numAccidentPooAtNight)));
+            toiletMsg = Strings.InsertVariable(toiletMsg, "$ACCIDENT_TIMES_TOTAL", GetNumericTranslationTimes(Math.Max(b.numAccidentPeeAtNight,b.numAccidentPooAtNight)));
             Write(toiletMsg, b);
         }
 
@@ -397,32 +455,24 @@ namespace PrimevalTitmouse
 
         private static void EndDrinking(Farmer who)
         {
-            Animations.GetWho().completelyStopAnimatingOrDoingAction();
-            Animations.GetWho().forceCanMove();
+            player.completelyStopAnimatingOrDoingAction();
+            player.forceCanMove();
         }
 
         public static void HandlePasserby()
         {
-            if (Utility.isThereAFarmerOrCharacterWithinDistance(Animations.GetWho().Tile, 3, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
+            if (Utility.isThereAFarmerOrCharacterWithinDistance(player.Tile, 3, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
                 return;
             npc.CurrentDialogue.Push(new Dialogue(npc, null, "Oh wow, your diaper is all wet!"));
         }
-
-        public static bool HandleVillager(Body b, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
+        private static List<NPC> NearbyVillager(Body b, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
         {
-            int baseFriendshipLoss = (mess ? Regression.config.FriendshipPenaltyBowelMultiplier : Regression.config.FriendshipPenaltyBladderMultiplier);
-
             int radius = 3;
 
-            bool someoneNoticed = true;
-            float actualLoss = -(baseFriendshipLoss / 100);
-
             //If we are messing, increase the radius of noticeability (stinky)
-            // OLD: Double how much friendship we lose (mess is gross)
             if (mess)
             {
                 radius *= 2;
-                //actualLoss *= 2f; Unnessesary. Its now defined over config already as such.
             }
 
             //If we pulled down our pants, quadruple the radius (not contained and visible!)
@@ -430,35 +480,69 @@ namespace PrimevalTitmouse
             if (!inUnderwear)
             {
                 radius *= 4;
-                actualLoss *= 2f;
             }
-
-            //Did we try, but not actually succeed? (not full enough)
-            if (attempt)
-                actualLoss /= 2f;
 
             //Double noticeability is we had a blow-out/leak (people can see)
             if (overflow)
                 radius *= 2;
 
-            //Get NPC in radius
-            //<TODO> This needs to be reworked to get a list of NPCs
-            if (Utility.isThereAFarmerOrCharacterWithinDistance(((Character)Animations.GetWho()).Tile, radius, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
-                return false;
+            var list = Utility.GetNpcsWithinDistance(((Character)Animations.player).Tile, radius, (GameLocation)Game1.currentLocation);
 
-            //Reduce the loss if the person likes you (more forgiving)
-            int heartLevelForNpc = Animations.GetWho().getFriendshipHeartLevelForNPC(npc.getName());
+            var newList = new List<NPC>();
+            foreach(var npcEntry in list)
+            {
+                if (!NPC_LIST.Contains(npcEntry.Name))
+                {
+                    newList.Add(npcEntry);
+                }
+            }
+            return newList;
+        }
+        public static Dictionary<string,int> FriendshipLossOnAccident(Body b, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
+        {
+            var list = new Dictionary<string,int>();
+            
+            //Get NPC in radius
+            var nearby = NearbyVillager(b, mess, inUnderwear, overflow, attempt);
+           
+            foreach (var npc in nearby)
+            {
+                int finalLossValue = FriendshipLossOnAccident(npc, mess,inUnderwear,overflow,attempt);
+                list[npc.getName().ToLower()] = finalLossValue;
+            }
+            return list;
+        }
+        public static int FriendshipLossOnAccident(NPC npc, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
+        {
+            int heartLevelForNpc = player.getFriendshipHeartLevelForNPC(npc.getName().ToLower());
+            int baseFriendshipLoss = (mess ? Regression.config.FriendshipPenaltyBowelMultiplier : Regression.config.FriendshipPenaltyBladderMultiplier);
 
             //Does this leave the possibility of friendship gain if we have enough hearts already? Maybe because they find the vulnerability endearing?
-            float friendshipLoss = actualLoss + (heartLevelForNpc - 2) / 2 * (baseFriendshipLoss / 5);
+            float friendshipLoss = -1 + (heartLevelForNpc - 2) / 2;
 
-            //Make a list based on who saw us.
+            var modifiers = Animations.GetData().Villager_Friendship_Modifier;
+            var modifierKey = modifierForIncident(npc, mess, inUnderwear, overflow, attempt);
+
+            float finalModifier = 1.0f;
+            foreach (string key2 in npcTypeList(npc))
+            {
+                float floatOut;
+                Dictionary<string, float> dictionary;
+                if (modifiers.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(modifierKey, out floatOut))
+                {
+                    finalModifier = floatOut;
+                }
+            }
+
+            return (int)Math.Floor((baseFriendshipLoss / 100 / 5) * friendshipLoss * finalModifier);
+        }
+        public static List<string> npcTypeList(NPC npc)
+        {
             List<string> npcType = new List<string>();
-            string npcName = "";
+            
             if (npc is Horse || npc is Pet)
             {
                 npcType.Add("animal");
-                npcName += string.Format("{0}: ", npc.Name);
             }
             else
             {
@@ -476,65 +560,108 @@ namespace PrimevalTitmouse
                 }
                 npcType.Add(npc.getName().ToLower());
             }
-
-            //What did we do? Use to figure out the response.
-            string responseKey = "";
+            return npcType;
+        }
+        public static string modifierForState(NPC npc)
+        {
+            return "dirty";
+        }
+        public static string modifierForIncident(NPC npc, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
+        {
             if (!inUnderwear)
             {
                 //If we weren't wearing underwear, we tried on the ground.
                 //But did we succeed or just try to go?
-                responseKey = attempt ? "ground_attempt" : "ground";
+                return attempt ? "ground_attempt" : "ground";
             }
             else
             {
                 //Otherwise, we are soiling ourselves
-                responseKey += "soiled";
-
+                return "soiled";
+            }
+        }
+        public static string responseKeyAdditionForState(NPC npc)
+        {
+            return "";
+        }
+        public static string responseKeyAdditionForIncident(NPC npc, bool inUnderwear, int friendshipLoss)
+        {
+            // we only have special responses for soiling our underwear
+            if (inUnderwear)
+            {
                 //Animals only have a "nice" response
-                if (npcType.Contains("animal"))
+                if (npcTypeList(npc).Contains("animal"))
                 {
-                    responseKey += "_nice";
-                    friendshipLoss = 0;
-                }
-                //If we have a really high relationship with the NPC, they're very nice about our accident
-                else if (heartLevelForNpc >= 8)
-                {
-                    responseKey += "_verynice";
-                    friendshipLoss = 0;
+                    return "nice";
                 }
                 else
+                {
+                    int heartLevelForNpc = player.getFriendshipHeartLevelForNPC(npc.getName());
+                    //If we have a really high relationship with the NPC, they're very nice about our accident
+                    if (heartLevelForNpc >= 8)
+                    {
+                        return "verynice";
+                    }
                     //Otherwise they'll be mean or nice depending on how much friendship we're losing
-                    responseKey = friendshipLoss < 0 ? responseKey + "_mean" : responseKey + "_nice";
-
-                //Why are Abigail and Jodi special?
-                if (npc.getName() == "Abigail" || npc.getName() == "Jodi")
-                    friendshipLoss = 0;
+                    if (friendshipLoss < 0) return "nice";
+                    return "mean";
+                }
             }
+            return "";
+        }
+        public static bool HandleVillager(Body b, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
+        {
+            bool someoneNoticed = false;
 
-            int finalLossValue = (int)Math.Round(friendshipLoss);
-            //If we're in debug mode, notify how the relationship was effected
-            if (Regression.config.Debug)
-                Animations.Say(string.Format("{0} ({1}) changed friendship from {2} by {3}.", npc.Name, npc.Age, heartLevelForNpc, finalLossValue), (Body)null);
+            //Get NPC in radius
+            var nearby = NearbyVillager(b, mess, inUnderwear, overflow, attempt);
 
-
-            //If we didn't lose any friendship, or we disabled friendship penalties (by adjusting it to 0), then don't adjust the value
-            if (finalLossValue < 0)
-                Animations.GetWho().changeFriendship(finalLossValue, npc);
-
-
-            List<string> stringList3 = new List<string>();
-            foreach (string key2 in npcType)
+            foreach (var npc in nearby)
             {
-                Dictionary<string, string[]> dictionary;
-                string[] strArray;
-                if (Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
-                    stringList3.AddRange((IEnumerable<string>)strArray);
+                someoneNoticed = true;
+
+                //Make a list based on who saw us.
+                var npcType = npcTypeList(npc);
+
+                string npcName = "";
+                if (npc is Horse || npc is Pet)
+                {
+                    npcName += string.Format("{0}: ", npc.Name);
+                }
+
+                //What did we do? Use to figure out the response.
+                string modifierKey = modifierForIncident(npc,mess,inUnderwear,overflow,attempt);
+                int finalLossValue = FriendshipLossOnAccident(npc,mess,inUnderwear,overflow,attempt);
+
+                //If we're in debug mode, notify how the relationship was effected
+                if (Regression.config.Debug && finalLossValue < 0)
+                    Animations.Say(string.Format("{0} ({1}) changed friendship from {2} by {3}.", npc.Name, npc.Age, player.getFriendshipHeartLevelForNPC(npc.getName()), finalLossValue), (Body)null);
+
+
+                //If we didn't lose any friendship, or we disabled friendship penalties (by adjusting it to 0), then don't adjust the value
+                if (finalLossValue < 0)
+                    player.changeFriendship(finalLossValue, npc);
+
+                string responseKey = modifierKey + "_" + responseKeyAdditionForIncident(npc,inUnderwear, finalLossValue);
+                List<string> stringList3 = new List<string>();
+                foreach (string key2 in npcType)
+                {
+                    Dictionary<string, string[]> dictionary;
+                    string[] strArray;
+                    if (Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
+                    {
+                        stringList3 = new List<string>(); // We could remove this line again, but the general texts are more meant as fallback, they often don't fit well if custom texts are defined
+                        stringList3.AddRange((IEnumerable<string>)strArray);
+                    }
+                        
+                }
+
+                //Construct and say Statement
+                string npcStatement = npcName + Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
+                npc.setNewDialogue(new Dialogue(npc, null, npcStatement), true, true);
+                Game1.drawDialogue(npc);
             }
 
-            //Construct and say Statement
-            string npcStatement = npcName + Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
-            npc.setNewDialogue(new Dialogue(npc, null, npcStatement), true, true);
-            Game1.drawDialogue(npc);
             return someoneNoticed;
         }
 
