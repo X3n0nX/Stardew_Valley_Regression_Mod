@@ -38,7 +38,7 @@ namespace PrimevalTitmouse
         public static readonly float minBowelContinence = 0.3f; // Also describes capacity as changes are linear
 
         //Setup Thresholds and messages
-        private static readonly float trainingThreshold = 0.5f; // we set a threshold that allowes for potty training, so that should also be the warning level, for the player to understand whats going on
+        public static readonly float trainingThreshold = 0.5f; // we set a threshold that allowes for potty training, so that should also be the warning level, for the player to understand whats going on
         private static readonly float lastWarningThreshold = 0.8f; // with a minimum continence of 0.3, 0.8 is still warned about, as it would warn up to 0.7, while 0.69 is out of range (means only 1 warning)
         public static readonly float[] WETTING_THRESHOLDS = { trainingThreshold + 0.05f, 0.69f, lastWarningThreshold }; 
         public static readonly string[][] WETTING_MESSAGES = { Regression.t.Bladder_Yellow, Regression.t.Bladder_Orange, Regression.t.Bladder_Red};
@@ -166,6 +166,7 @@ namespace PrimevalTitmouse
             get => LoadInt("numAccidentPeeAtNight", 0);
             set => save("numAccidentPeeAtNight", value);
         }
+
         private float lastStamina = 0;
 
         public float bladderCapacity
@@ -595,6 +596,7 @@ namespace PrimevalTitmouse
                 Game1.player.dialogueQuestionsAnswered.Remove("dirty_change_yes");
             if (Game1.player.dialogueQuestionsAnswered.Contains("dirty_change_no"))
                 Game1.player.dialogueQuestionsAnswered.Remove("dirty_change_no");
+            
         }
         public bool HasWetOrMessyDebuff()
         {
@@ -650,7 +652,9 @@ namespace PrimevalTitmouse
 
         public bool InToilet(bool inUnderwear)
         {
-            return !inUnderwear && (Game1.currentLocation is FarmHouse || Game1.currentLocation is JojaMart || Game1.currentLocation is Club || Game1.currentLocation is MovieTheater || Game1.currentLocation is IslandFarmHouse || Game1.currentLocation.Name == "Saloon" || Game1.currentLocation.Name == "Hospital" || Game1.currentLocation.Name == "BathHouse_MensLocker" || Game1.currentLocation.Name == "BathHouse_WomensLocker");
+            // I understand that it is important to give a way to go potty somewhere, but thats just plays wrong. 
+            //return !inUnderwear && (Game1.currentLocation is FarmHouse || Game1.currentLocation is JojaMart || Game1.currentLocation is Club || Game1.currentLocation is MovieTheater || Game1.currentLocation is IslandFarmHouse || Game1.currentLocation.Name == "Saloon" || Game1.currentLocation.Name == "Hospital" || Game1.currentLocation.Name == "BathHouse_MensLocker" || Game1.currentLocation.Name == "BathHouse_WomensLocker");
+            return !inUnderwear && (Game1.currentLocation is FarmHouse || Game1.currentLocation is IslandFarmHouse || Game1.currentLocation.Name == "BathHouse_MensLocker" || Game1.currentLocation.Name == "BathHouse_WomensLocker");
         }
         public bool InPlaceWithPants()
         {
@@ -668,7 +672,7 @@ namespace PrimevalTitmouse
             float used = underwear.GetUsed(type);
 
             if (!underwear.removable) return false; // If we don't have pants or training pants, there is no point
-            if(used > 300) return false; // If the underwear is already heavily used, we stop trying
+            if(used > 350) return false; // If the underwear is already heavily used, we stop trying
             if(used > GetCapacity(type) / 3) return false; // If its more than 1/3 our bladder/bowel size already, we stop trying
             if ((vsAmount + used) > capacity) return false; // If the underwear would be more than full, there is no point
             
@@ -900,7 +904,7 @@ namespace PrimevalTitmouse
                     Animations.AnimateWettingEnd(this);
                     break;
                 case IncidentType.POOP:
-                    Animations.AnimateMessingEnd(this);
+                    Animations.AnimateMessingEnd(Game1.player);
                     break;
                 default:
                     throw new Exception("Not implemented: type " + type.ToString());
@@ -965,7 +969,7 @@ namespace PrimevalTitmouse
 
         private void _HandlePeeOverflow()
         {
-            Animations.Write(Regression.t.Pee_Overflow, this, Animations.peeAnimationTime);
+            Animations.Write(Regression.t.Pee_Overflow, this,null, Animations.peeAnimationTime);
 
             int defenseReduction = -Math.Max(Math.Min((int)(pants.wetness / pants.absorbency * 10.0), 10), 1);
 
@@ -985,7 +989,7 @@ namespace PrimevalTitmouse
 
         private void _HandlePoopOverflow()
         {
-            Animations.Write(Regression.t.Poop_Overflow, this, Animations.poopAnimationTime);
+            Animations.Write(Regression.t.Poop_Overflow, this,null, Animations.poopAnimationTime);
             float howMessy = pants.messiness / pants.containment;
             int speedReduction = howMessy >= 0.5 ? (howMessy > 1.0 ? -3 : -2) : -1;
             Buff buff = new Buff(id: MESSY_DEBUFF, displayName: "Messy", effects: new BuffEffects() {
@@ -1034,7 +1038,7 @@ namespace PrimevalTitmouse
             {
 
                 Farmer player = Game1.player;
-                if (bed.messiness > 0.0 || bed.wetness > 0.0)
+                if (bed.messiness > 0.0)
                 {
                     dryingTime = 1000;
                     player.stamina -= 20f;
@@ -1093,7 +1097,7 @@ namespace PrimevalTitmouse
             this.AddFood((float)(requiredCaloriesPerDay * (double)hours / -18.67));
         }
 
-        public bool IsFishing()
+        public static bool IsFishing()
         {
             FishingRod currentTool;
             return (currentTool = Game1.player.CurrentTool as FishingRod) != null && (currentTool.isCasting || currentTool.isTimingCast || (currentTool.isNibbling || currentTool.isReeling) || currentTool.castedButBobberStillInAir || currentTool.pullingOutOfWater);
@@ -1152,7 +1156,7 @@ namespace PrimevalTitmouse
         public void Consume(string itemName)
         {
             Consumable item;
-            if(Animations.GetData().Consumables.TryGetValue(itemName, out item))
+            if(Animations.Data.Consumables.TryGetValue(itemName, out item))
             {
                 this.AddFood(item.calorieContent);
                 this.AddWater(item.waterContent);
@@ -1165,7 +1169,7 @@ namespace PrimevalTitmouse
     }
     public enum IncidentType
     {
-        PEE,
-        POOP
+        PEE = 0,
+        POOP = 1
     }
 }

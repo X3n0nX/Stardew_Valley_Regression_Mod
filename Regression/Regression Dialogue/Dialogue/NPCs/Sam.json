@@ -14,7 +14,7 @@
 "spring_Mon2":"I can't believe I have a job...$2
 #$q 120/121 Job_Followup#It almost feels like I'm not old enough yet.
 #$r 120 0 Job_Ready#You just need a little more time before you're ready.
-#$r 120 0 Job_Pretend#You could always just stop pretending to be a big boy.
+#$r 121 0 Job_Pretend#You could always just stop pretending to be a big boy.
 ",
 "Job_Ready": "Yeah, I guess I do, but I'm supposed to be responsible for Mommy...$9#$b#I mean Mom...$8",
 "Job_Pretend": "Man I wish. It'd be so much better to just play all day. Just like Vincent.$4#$b#He doesn't have to work.$5",
@@ -35,8 +35,8 @@
 "spring_Sun8":"It's been wonderful getting to know you @. I feel like I can be perfectly honest with you.
 #$q 124/125 Little_Followup#I don't like being a big kid, I wanna go back to being a little boy.
 #$r 124 0 Little_Little#Awww, Sam. You ARE just a little boy!
-#$r 125 0 Little_Little#Looks like I'm going to need some more diapers for the little boy.
-#$r 124 0 Little_Excited#Yeah, being big is gross. We should play together!
+#$r 124 0 Little_Little#Looks like I'm going to need some more diapers for the little boy.
+#$r 125 0 Little_Excited#Yeah, being big is gross. We should play together!
 #$r 125 0 Little_Excited#I'll change your diapers if you change mine.
 ",
 "Little_Little": "Uh huh!$3#$b#%Sam squeals happily and hides his blushing face.",
@@ -48,7 +48,7 @@
 "summer_Mon2":"I can't believe I have a job...$2
 #$q 120/121 Job_Followup#It almost feels like I'm not old enough yet.
 #$r 120 0 Job_Ready#You just need a little more time before you're ready.
-#$r 120 0 Job_Pretend#You could always just stop pretending to be a big boy.
+#$r 121 0 Job_Pretend#You could always just stop pretending to be a big boy.
 ",
 "Job_Ready": "Yeah, I guess I do, but I'm supposed to be responsible for Mommy...$9#$b#I mean Mom...$8",
 "Job_Pretend": "Man I wish. It'd be so much better to just play all day. Just like Vincent.$4#$b#He doesn't have to work.$5",
@@ -101,8 +101,8 @@
 "fall_Fri8":"It's been wonderful getting to know you @. I feel like I can be perfectly honest with you.
 #$q 124/125 Little_Followup#I don't like being a big kid, I wanna go back to being a little boy.
 #$r 124 0 Little_Little#Awww, Sam. You ARE just a little boy!
-#$r 125 0 Little_Little#Looks like I'm going to need some more diapers for the little boy.
-#$r 124 0 Little_Excited#Yeah, being big is gross. We should play together!
+#$r 124 0 Little_Little#Looks like I'm going to need some more diapers for the little boy.
+#$r 125 0 Little_Excited#Yeah, being big is gross. We should play together!
 #$r 125 0 Little_Excited#I'll change your diapers if you change mine.
 ",
 "Little_Little": "Uh huh!$3#$b#%Sam squeals happily and hides his blushing face.",
@@ -142,9 +142,9 @@
 "Little_Excited": "Yeah!$3#$b#%Sam squeals happily and hides his blushing face.",
 "Little_Followup":"#$p 124#You always make me feel so little. It means so much to me, thank you.$4|I really want to go back to diapers full time.$4#$b#I just don't think I can while I'm still living with Mommy.$10",
 			
-				"Diaper_Change_Accept": "#Ah, hold still. Don't worry i got this!$l#$b#%Sam changes your diaper, making a lot of mistakes while doing so.#$action Regression.StartChange \"joja diaper\"#$h",
+				"Diaper_Change_Accept": "#Ah, hold still. Don't worry, i have to change Vincent all the time when i babysit!$l#$b#%Sam changes your diaper, like he does for Vincent.#$action DIAPER_CHANGE \"baby print diaper\" \"sams old pants\"#$h",
 				"Diaper_Change_Refuse": "Oh, ok.",
-				"Diaper_Change_Followup": "#$p dirty_change_yes#No?(This is an error, this should not be able to happen!)|Sure thing, lets see...$h#$b#%Sam changes your diaper, he just can't it get quite right.#$action Regression.StartChange \"joja diaper\"#$h"
+				"Diaper_Change_Followup": "#$p dirty_change_yes#No?(This is an error, this should not be able to happen!)|Sure thing, lets see...$h#$b#%Sam changes your diaper, he just can't it get quite right.#$action DIAPER_CHANGE \"baby print diaper\" \"sams old pants\"#$h"
 			}
 		},
 
@@ -167,7 +167,7 @@
   "Rainy_Night_4": "Hey, I tossed a couple frozen pizzas into the oven. Here's yours. [206]$h#$e#%Sam sits down to eat with an audible squish. He doesn't seem concerned about it.",
   "Indoor_Day_0": "Phew... I'll tell you one thing I don't miss about my old life... working at JojaMart.#$e#Did I ever tell you how embarrassed I got every time I had to work in the diaper isle?$10#$e#One time I found an open package, and instead of throwing it out I hid it for later.$4#$e#I was so nervous, but I'm glad I did it! That was a fun week.$10",
   "Indoor_Day_1": "Hey, I made you some instant pancakes. Enjoy. [211]$h#$e#What? I never learned to cook... Mommy always did that.#$e#I miss her a lot actually$2",
-  "Indoor_Day_2": "Good morning @.#$b#$y 'Sam is obviously in need of a diaper change._Common little boy, let's go take care of that diaper._Y-yeah, Okay!_Hmmm._I think that should hold until after breakfast._%Sam just blushes and nods, reaching his hand down to feel how squishy his diaper is.'",
+  "Indoor_Day_2": "Good morning @.#$b#%Sam is obviously in need of a diaper change.#$b#$y 'Common little boy, let's go take care of that diaper._Y-yeah, Okay!_Hmmm. I think that should hold until after breakfast._*Sam just blushes and nods, reaching his hand down to feel how squishy his diaper is*'",
   "Indoor_Day_3": "Uhhmmmm, @? C-can I show you something?$4#$e#%Sam presses your hand into his diaper front. It's still dry, but not for long.#$b#%Sam sighs as you feel the warmth spread across your hand. You give it a good squish just to watch him squirm.",
   "Indoor_Day_4": "Um... Maybe I'll help out on the farm some other day. I feel lazy today.$1#$e#%Sam wiggles his crinkly bottom at you before scampering off to find his coloring book.",
   "Indoor_Night_0": "Hey, you look tired. Let me help you relax tonight, okay? Maybe I'll give you a massage later.#$e$I owe you that much for taking care of my diapers all the time!$10",

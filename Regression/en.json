@@ -219,6 +219,10 @@
 	"Diaper_Change_Dialog": [
 		"#$q dirty_change_yes/dirty_change_no Diaper_Change_Followup#Do you want to get changed like a toddler?#$r dirty_change_yes 1 Diaper_Change_Accept#Nod.#$r dirty_change_no 0 Diaper_Change_Refuse#Shake your head."
 	],
+	"Change_Other_Dialog": [
+		"#$q change_other_yes/change_other_no Change_Diaper_Followup#Do you help $NPC_NAME$ getting out $NPC_HIS_HER$ $NPC_INSPECT_UNDERWEAR_NAME$?",
+		"#$q change_other_yes/change_other_no Change_Diaper_Followup#$NPC_NAME$ has $NPC_INSPECT_UNDERWEAR_NAME$ in $NPC_HIS_HER$ $NPC_PANTS_NAME$. Do you change $NPC_HIM_HER$?"
+	],
 	"Night": {
 		"Toilet_Night": [
 			"You had to <pee&poop> last night and made it $TOILET_TIMES_TOTAL to the toilet",
@@ -310,6 +314,58 @@
 		"Your pants are poopy!",
 		"You messed your pants!"
 	],
+	"Villager_Underwear_Options": {
+		"vincent": {
+			"baby print diaper": {
+				"friendship": "20",
+				"dialog_key": "Change_Diaper_Accept_BabyPrint",
+				"observerfriendship": "friend_Jodi_10"
+			},
+			"lavender pullups": {
+				"friendship": "-20",
+				"dialog_key": "Change_Diaper_Accept_Lavender",
+				"observerfriendship": "friend_Jodi_-5"
+			},
+			"training pants": {
+				"friendship": "10",
+				"dialog_key": "Change_Diaper_Accept_Training",
+				"observerfriendship": "friend_Jodi_-10"
+			},
+			"big kid undies": {
+				"friendship": "10",
+				"dialog_key": "Change_Diaper_Accept_BigKids",
+				"observerfriendship": "friend_Jodi_-40"
+			},
+			"dinosaur undies": {
+				"friendship": "15",
+				"dialog_key": "Change_Diaper_Accept_Dinos",
+				"observerfriendship": "friend_Jodi_-20"
+			}
+		},
+		"jas": {
+			"baby print diaper": {
+				"friendship": "-20",
+				"dialog_key": "Change_Diaper_Accept_Upset"
+			},
+			"lavender pullups": {
+				"friendship": "20",
+				"dialog_key": "Change_Diaper_Accept"
+			},
+			"training pants": {
+				"friendship": "30",
+				"dialog_key": "Change_Diaper_Accept"
+			},
+			"big kid undies": {
+				"friendship": "0",
+				"dialog_key": "Change_Diaper_Accept_Unprotected"
+			},
+			"dinosaur undies": {
+				"friendship": "2",
+				"dialog_key": "Change_Diaper_Accept_Unprotected"
+			}
+
+		}
+	},
 	"Villager_Friendship_Modifier": {
 		// ground: going go on the ground, successfully peeing/pooping there
 		// ground_attempt: trying to go on the ground, but nothing comes out
@@ -362,6 +418,12 @@
 			"ground_attempt": 0.5,
 			"soiled": 0,
 			"dirty": 0.05
+		},
+		"jas": {
+			"ground": 1.0,
+			"ground_attempt": 0.5,
+			"soiled": 0,
+			"dirty": 0,
 		}
 	},
 	"Villager_Reactions": {
@@ -415,6 +477,11 @@
 			]
 		},
 		"kid": {
+			"general_fallback": [
+				"Not now! 'M playing!",
+				"Playing?",
+				"... Yes?"
+			],
 			"soiled_verynice": [
 				"*Giggles* Uh oh!$1"
 			],
@@ -452,11 +519,17 @@
 			]
 		},
 		"abigail": {
+			"general": [
+				"You need a change?#$b#$query !DIAPER_USED#Aww...|$GETTING_CHANGED_DIALOG$"
+			],
+			"general_fallback": [
+				"%Maybe you should get to know Abigail better first!"
+			],
 			"soiled_verynice": [
-				"Want a change? #$b#I could change you, if you want!$h$Diaper_Change_Dialog",
+				"Want a change? #$b#I could change you, if you want!$h$GETTING_CHANGED_DIALOG$",
 				"Sometimes I just put on a diaper and sit around playing games all day. #$b#Maybe we could do that together sometime.$h",
 				"I think I'm pretty wet. #$b#Would you mind helping me change?",
-				"Let me help with that! Lay down for me.$h$Diaper_Change_Dialog",
+				"Let me help with that! Lay down for me.$h$GETTING_CHANGED_DIALOG$",
 				"Ewww, I think.... I think I pooped myself.$s #$b#...$s #$b#Could you... maybe change me?"
 			],
 			"soiled_nice": [
@@ -493,47 +566,41 @@
 			]
 		},
 		"maru": {
+			"general": [
+				"Everything dry?#$b#$query !DIAPER_USED#Hmm... but come back if that changes.|$GETTING_CHANGED_DIALOG$"
+			],
+			"general_fallback": [
+				"%Maybe you should get to know Maru better first!"
+			],
 			"soiled_verynice": [
-				"Again? Sure, you know the drill...$l$Diaper_Change_Dialog"
+				"Again? Sure, you know the drill...$l$GETTING_CHANGED_DIALOG$"
 			],
 			"soilded_nice": [
-				"Lets be professional about this. Lie down on the bed for me please?$0$Diaper_Change_Dialog"
+				"Lets be professional about this. Lie down on the bed for me please?$0$GETTING_CHANGED_DIALOG$"
 			],
 			"soiled_mean": [
 				"Incontinence i guess?$4"
 			],
 			"dirty": [
-				"You will catch a cold, or worse. Let's get the <soggy&dirty> cloth off!$1$Diaper_Change_Dialog"
-			]
-		},
-		"jodi": {
-			"soiled_verynice": [
-				"%Jodi leans down to put a comforting hand on your back.#$b#You can tell me if you had a little accident $FARMERNAME$. It's nothing to be ashamed of.",
-				"You don't need to rush potty training if you're not ready yet.#$b#You need help?$Diaper_Change_Dialog",
-				"It can be hard for little <boys/girls> to remember to go potty sometimes. It's okay.#$b#Need a change?$Diaper_Change_Dialog",
-				"Oh goodness!$1",
-				"Awww, you're so cute when you're embarrassed!$1#$b#Comeon, lets get you in some new Diapers!$Diaper_Change_Dialog"
-			],
-			"soiled_nice": [
-				"$FARMERNAME$, I  think you might need to go change.",
-				"You poor thing! Did you just <wet&mess> yourself?"
-			],
-			"soiled_mean": [
-				"You might need to tap into those supplies I left you$4"
-			],
-			"dirty": [
-				"$p dirty_change_no# No leaks! $3| Aww, come here @! This things happen! We can make one of Vincents diapers fit! $1$Diaper_Change_Dialog"
+				"You will catch a cold, or worse. Let's get the <soggy&dirty> cloth off!$1$GETTING_CHANGED_DIALOG$g"
 			]
 		},
 		"sam": {
+			"general": [
+				"Wait a second, i know that look!#$b#%Sam checks your diaper#$b#$query !DIAPER_USED#I guess later than.|$GETTING_CHANGED_DIALOG$",
+				"%You put your hand in sams pants. He blushes a lot while you check him.$9#$b#$query !DIAPER_USED \"sam\"#He is wearing $NPC_PANTS_NAME$ and $NPC_INSPECT_UNDERWEAR_NAME$.|$CHANGE_OTHER_DIALOG$"
+			],
+			"general_fallback": [
+				"%Maybe you should get to know Sam better first!"
+			],
 			"soiled_verynice": [
-				"#$p 102#Oh man, that was pretty hard to miss!$1|Man, you're just like Vincent.$1",
-				"Are you okay buddy?#$b#Do you want some help with that?$Diaper_Change_Dialog",
+				"#$p 102#Oh man, that was pretty hard to miss!$1|Man, you're just like Vincent.$1#$GETTING_CHANGED_DIALOG$",
+				"Are you okay buddy?#$b#Do you want some help with that? $GETTING_CHANGED_DIALOG$",
 				"It's okay $FARMERNAME$. Accidents are nothing to be ashamed of.",
 				"Awwww, look at you go! That must have felt good.$4",
 				"Oh man, that was pretty hard to miss!$1",
 				"Good one!$1",
-				"Man, you're such a little baby sometimes.#$b#%Sam giggles a bit as he pats your squishy bottom.#$b#Need help with that?$Diaper_Change_Dialog",
+				"Man, you're such a little baby sometimes.#$b#%Sam giggles a bit as he pats your squishy bottom.#$b#Need help with that? $GETTING_CHANGED_DIALOG$",
 				"Awww, did the little farmer have a little accident?",
 				"I bet I could get Mommy to go change you.$3#$b#I'm kidding I'm kidding!$1",
 				"Man, it looks like you really need diapers, don't you.",
@@ -553,19 +620,25 @@
 				"#$p 102#You might want to take care of that...|Great, more potty issues to be witness to. Thanks.$5"
 			],
 			"dirty": [
-				"Can't let you get a cold, can i. Need help?$1$Diaper_Change_Dialog"
-			],
+				"Oh man. Can't let you catch a cold, can i$9?#$b#Where are vincents diapers again?$1$GETTING_CHANGED_DIALOG$"
+			]
 		},
 		"penny": {
+			"general": [
+				"Did my big <boy/girl> forgot about the potty again?#$b#%Penny checks your diaper#$b#$query !DIAPER_USED#Good <boy/girl>!|$GETTING_CHANGED_DIALOG$"
+			],
+			"general_fallback": [
+				"%Maybe you should get to know Penny better first!"
+			],
 			"soiled_verynice": [
 				"$FARMERNAME$! You're <wetting&messing> your $UNDERWEAR_NAME$!$5#$b#Why didn't you tell me you needed the potty?$3#$b#*Sigh* It's okay, we can try again next time.",
-				"%Penny watches you with an eyebrow raised.#$b#Is there something you want to tell me @?$3",
+				"%Penny watches you with an eyebrow raised.#$b#Is there something you want to tell me @?$3$GETTING_CHANGED_DIALOG$",
 				"%Penny waits until you're all finished before tugging your waistband for a check.#$b#Looks like you didn't save anything for the potty little <boy/girl>.$1",
 				"%You tug on Penny's sleeve for help to go potty right before <wetting&messing> your $UNDERWEAR_NAME$.#$b#Oh no you were so close!$3#$b#I'm not mad, I know you're trying. You'll get the hang of it really soon.",
 				"Did you have an accident in your $UNDERWEAR_NAME$ $FARMERNAME$?#$b#You have to tell me as soon as your body says you have to go potty, okay?$3",
 				"#$p 102#Did you have an accident in your $UNDERWEAR_NAME$ $FARMERNAME$?|You have the same potty face as Vincent.$1#$b#Do you need help getting changed like him too?#$b#%Penny tickles your tummy teasingly.",
 				"I saw that.$3#$b#$y 'Was that REALLY an accident?_Uh huh, I tried to hold it._Oh $FARMERNAME$, I know it's hard for you. I'm very proud of you for trying._I didn't wanna use the potty._$FARMERNAME$, I know it's hard for you, but you still have to try, okay?$3'",
-				"We're supposed to do that on the potty $FARMERNAME$. What happened?$3#$b#It's okay, I'm not angry. You're trying really hard. It's okay if you still have accidents sometimes.#$b#<Boys/Girls> are easy to clean!$1"
+				"We're supposed to do that on the potty $FARMERNAME$. What happened?$3#$b#It's okay, I'm not angry. You're trying really hard. It's okay if you still have accidents sometimes.#$b#<Boys/Girls> are easy to clean!$1$GETTING_CHANGED_DIALOG$"
 			],
 			"soiled_nice": [
 				"You might wanna change. Just incase someone else says something.",
@@ -603,7 +676,38 @@
 				"I have enough to clean up.$3"
 			]
 		},
+		"jodi": {
+			"general": [
+				"You need a change?#$b#%Jodi checks your diaper#$b#$query !DIAPER_USED#Good for now.|$GETTING_CHANGED_DIALOG$"
+			],
+			"general_fallback": [
+				"%Maybe you should get to know Jodi better first!"
+			],
+			"soiled_verynice": [
+				"%Jodi leans down to put a comforting hand on your back.#$b#You can tell me if you had a little accident $FARMERNAME$. It's nothing to be ashamed of.",
+				"You don't need to rush potty training if you're not ready yet.#$b#You need help?$GETTING_CHANGED_DIALOG$",
+				"It can be hard for little <boys/girls> to remember to go potty sometimes. It's okay.#$b#Need a change?$GETTING_CHANGED_DIALOG$",
+				"Oh goodness!$1",
+				"Awww, you're so cute when you're embarrassed!$1#$b#Comeon, lets get you in some new Diapers!$GETTING_CHANGED_DIALOG$"
+			],
+			"soiled_nice": [
+				"$FARMERNAME$, I  think you might need to go change.",
+				"You poor thing! Did you just <wet&mess> yourself?"
+			],
+			"soiled_mean": [
+				"You might need to tap into those supplies I left you$4"
+			],
+			"dirty": [
+				"$p dirty_change_no# No leaks! $3| Aww, come here @, no crying! This things happen! We can make one of Vincents diapers fit and there are some pants from sam that you could borrow!$1$GETTING_CHANGED_DIALOG$"
+			]
+		},
 		"vincent": {
+			"general": [
+				"%You wonder if Vincent might need a change. You quickly check his diaper.#$b#$query !DIAPER_USED \"vincent\"#He is wearing $NPC_PANTS_NAME$ and $NPC_INSPECT_UNDERWEAR_NAME$.|$CHANGE_OTHER_DIALOG$"
+			],
+			"general_fallback": [
+				"%Maybe you should get to know Vincent or Jodi better first!"
+			],
 			"soiled_verynice": [
 				"#$p 102#%*Giggles*|Mommy told me big kids are supposed to use the potty. #$b#I don't wanna be a big kid either!$1",
 				"#$p 102#%*Giggles*|%Vincent watches you <wet&mess> yourself and giggles.#$b#Good one!$1",
@@ -636,6 +740,12 @@
 			]
 		},
 		"jas": {
+			"general": [
+				"%You wonder if Jas might need a change. You quickly check her diaper.#$b#Wha? No, 'm a big girl now!$3#$b#$query !DIAPER_USED \"jas\"#She is wearing $NPC_PANTS_NAME$ and $NPC_INSPECT_UNDERWEAR_NAME$.|$CHANGE_OTHER_DIALOG$"
+			],
+			"general_fallback": [
+				"%Maybe you should get to know Jas or Marnie better first!"
+			],
 			"soiled_verynice": [
 				"#$p 102#%*Giggles*|Don't cry, it's okay for little <boy/girl>s to have accidents sometimes.",
 				"#$p 102#%*Giggles*|Oh no, did you have an accident? That's okay, you can try again next time.",
@@ -666,11 +776,19 @@
 	},
 
 	"Change": [
-		"You change into $PANTS_PREFIX$ clean $PANTS_NAME$ and $INSPECT_UNDERWEAR_NAME$."
+		"You change into $PANTS_PREFIX$ clean $PANTS_NAME$ and $INSPECT_UNDERWEAR_NAME$.",
+		"You get changed into $PANTS_PREFIX$ $PANTS_NAME$ and $INSPECT_UNDERWEAR_NAME$."
 		//***"You take off your soiled <OLD_UNDERWEAR_DESC> and put on $UNDERWEAR_PREFIX$ clean $UNDERWEAR_NAME$."
 	],
 	"Change_Destroyed": [
-		"You ruined your $UNDERWEAR_NAME$ when taking <it#them> off. So you throw <it#them> away."
+		"You ruined your $UNDERWEAR_NAME$ when taking <it#them> off. So you throw <it#them> away.",
+		"$UNDERWEAR_NAME$ <is#are> ruined, so you throw <it#them> away."
+	],
+	"Change_Other_Destroyed": [
+		"$NPC_NAME$s $NPC_INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> ruined, so you throw <it#them> away."
+	],
+	"Getting_Changed_Destroyed": [
+		"Your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> ruined and thrown away for you."
 	],
 	"Change_Requires_Pants": [
 		"You don't have another pair of $PANTS_NAME$ here to change into. You probably need to go home first."
@@ -1647,7 +1765,7 @@
 			"absorbency": 75.0,
 			"containment": 75.0,
 			"spriteIndex": 0,
-			"price": 100,
+			"price": 120,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 300,
@@ -1686,7 +1804,7 @@
 			"absorbency": 400.0,
 			"containment": 600.0,
 			"spriteIndex": 3,
-			"price": 35,
+			"price": 45,
 			"washable": true,
 			"plural": true,
 			"dryingTime": 500,
@@ -1712,7 +1830,7 @@
 			"absorbency": 850.0,
 			"containment": 1400.0,
 			"spriteIndex": 5,
-			"price": 80,
+			"price": 60,
 			"washable": true,
 			"plural": true,
 			"dryingTime": 600,
@@ -1725,7 +1843,7 @@
 			"absorbency": 1100.0,
 			"containment": 1400.0,
 			"spriteIndex": 6,
-			"price": 30,
+			"price": 15,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
@@ -1734,11 +1852,11 @@
 		},
 		"baby print diaper": {
 			"name": "baby print diaper",
-			"description": "little soft and crinkly fresh-scented disposable baby print diaper. Its a bit small, but you can fit",
+			"description": "little soft and crinkly fresh-scented disposable baby print diaper, made for big children. Its a bit small, but you can fit",
 			"absorbency": 1500.0,
 			"containment": 1200.0,
 			"spriteIndex": 7,
-			"price": 75,
+			"price": 20,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
@@ -1751,12 +1869,12 @@
 			"absorbency": 1400.0,
 			"containment": 2600.0,
 			"spriteIndex": 8,
-			"price": 260,
+			"price": 120,
 			"washable": true,
 			"plural": false,
 			"dryingTime": 1000,
 			"removable": false, // washable was redefined as the ability to take it off and wash. Removable controls if you can quickly get out of it (pull-up)
-			"durability": 6
+			"durability": 8
 		},
 		"space diaper": {
 			"name": "space diaper",
@@ -1764,7 +1882,7 @@
 			"absorbency": 2700.0,
 			"containment": 2800.0,
 			"spriteIndex": 9,
-			"price": 100,
+			"price": 80,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
@@ -1777,7 +1895,7 @@
 			"absorbency": 2700.0,
 			"containment": 2700.0,
 			"spriteIndex": 10,
-			"price": 100,
+			"price": 80,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
@@ -1790,7 +1908,7 @@
 			"absorbency": 3400.0,
 			"containment": 3500.0,
 			"spriteIndex": 11,
-			"price": 140,
+			"price": 120,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,

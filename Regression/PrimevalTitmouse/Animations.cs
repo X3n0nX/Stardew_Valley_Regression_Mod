@@ -13,6 +13,7 @@ using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 namespace PrimevalTitmouse
@@ -31,11 +32,12 @@ namespace PrimevalTitmouse
     internal static class Animations
     {
         //<FIXME> Adding Leo here as a quick fix to a softlock issue due to not having ABDL dialogue written
-        private static readonly List<string> NPC_LIST = new List<string> { "Linus", "Krobus", "Dwarf", "Leo" };
+        //private static readonly List<string> NPC_LIST = new List<string> { "Linus", "Krobus", "Dwarf", "Leo" };
         public static readonly int poopAnimationTime = 2000; //ms
         public static readonly int peeAnimationTime = 2000; //ms
         //Magic Constants
         public const string SPRITES = "Assets/sprites.png";
+        public const string PEE_POOP_ICON = "Assets/pee_poop.png";
         public const int PAUSE_TIME = 20000;
         public const float DRINK_ANIMATION_INTERVAL = 80f;
         public const int DRINK_ANIMATION_FRAMES = 8;
@@ -50,23 +52,24 @@ namespace PrimevalTitmouse
             Up = 0
         };
 
-        public static Texture2D sprites;
-        private static Data t;
+        private static Texture2D _sprites;
+        public static Texture2D sprites { 
+            get {
+                _sprites ??= Regression.help.ModContent.Load<Texture2D>(SPRITES);
+                return _sprites;
+            }
+        }
+        private static Texture2D _peepoopSprites;
+        public static Texture2D peepoopSprites
+        {
+            get
+            {
+                _peepoopSprites ??= Regression.help.ModContent.Load<Texture2D>(PEE_POOP_ICON);
+                return _peepoopSprites;
+            }
+        }
+        public static Data Data => Regression.t;
         public static Farmer player => Game1.player;
-
-        //Static Accessor Methods. Ensure that variables are initialized.
-        public static Data GetData()
-        {
-            t ??= Regression.t;
-            return t;
-        }
-        public static Texture2D GetSprites()
-        {
-            sprites ??= Regression.help.ModContent.Load<Texture2D>(SPRITES);
-            return sprites;
-        }
-
-        
 
         public static float ZoomScale()
         {
@@ -100,13 +103,13 @@ namespace PrimevalTitmouse
                 return;
 
             //Otherwise say something about it
-            Say(Animations.GetData().Drink_Water_Source, null);
+            Say(Animations.Data.Drink_Water_Source, null);
         }
 
         //Not really an animation. Just say the bedding's current state.
         public static void AnimateDryingBedding(Body b)
         {
-            Write(Animations.GetData().Bedding_Still_Wet, b);
+            Write(Animations.Data.Bedding_Still_Wet, b);
         }
 
 
@@ -120,25 +123,25 @@ namespace PrimevalTitmouse
 
             if (!(b.underwear.removable || inUnderwear))
             {
-                Animations.Say(Animations.GetData().Cant_Remove, b);
+                Animations.Say(Animations.Data.Cant_Remove, b);
                 return;
             }
 
             if (!inUnderwear)
             {
                 if (b.InToilet(inUnderwear))
-                    Say(Animations.GetData().Poop_Toilet, b);
+                    Say(Animations.Data.Poop_Toilet, b);
                 else
-                    Say(Animations.GetData().Poop_Voluntary, b);
+                    Say(Animations.Data.Poop_Voluntary, b);
             }
             else if (voluntary)
-                Say(Animations.GetData().Mess_Voluntary, b);
+                Say(Animations.Data.Mess_Voluntary, b);
             else
-                Say(Animations.GetData().Mess_Accident, b);
+                Say(Animations.Data.Mess_Accident, b);
 
 
             player.doEmote(12, false);
-            if (b.IsFishing() || !player.canMove) return; // We skip the actual animations if nessesary
+            if (Body.IsFishing() || !player.canMove) return; // We skip the actual animations if nessesary
 
             player.jitterStrength = 1.0f;
             Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, player.position.Value - new Vector2(((Character)Animations.player).facingDirection.Value == 1 ? 0.0f : (float)-Game1.tileSize, (float)(Game1.tileSize * 2)), false, ((Character)Animations.player).facingDirection.Value == 1, (float)((Character)Animations.player).StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
@@ -146,16 +149,16 @@ namespace PrimevalTitmouse
             player.freezePause = poopAnimationTime;
             player.canMove = false;
         }
-        public static void AnimateMessingEnd(Body b)
+        public static void AnimateMessingEnd(Character target)
         {
 
-            if (b.IsFishing()) return;
+            if (Body.IsFishing()) return;
             Game1.playSound("coin");
-            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, Animations.player.position.Value - new Vector2(Animations.player.facingDirection.Value == 1 ? 0.0f : -Game1.tileSize, Game1.tileSize * 2), false, Animations.player.facingDirection.Value == 1, Animations.player.StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
+            Game1.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite("TileSheets\\animations", new Microsoft.Xna.Framework.Rectangle(192, 1152, Game1.tileSize, Game1.tileSize), 50f, 4, 0, target.position.Value - new Vector2(target.facingDirection.Value == 1 ? 0.0f : -Game1.tileSize, Game1.tileSize * 2), false, target.facingDirection.Value == 1, target.StandingPixel.Y / 10000f, 0.01f, Microsoft.Xna.Framework.Color.White, 1f, 0.0f, 0.0f, 0.0f, false));
         }
         public static void AnimateMessingMinor(Body b)
         {
-            Animations.Say(Animations.GetData().Bowels_Leak, b);
+            Animations.Say(Animations.Data.Bowels_Leak, b);
             ((Character)Animations.player).doEmote(12, false);
         }
 
@@ -169,16 +172,16 @@ namespace PrimevalTitmouse
 
             if (!(b.underwear.removable || inUnderwear))
             {
-                Animations.Say(Animations.GetData().Cant_Remove, b);
+                Animations.Say(Animations.Data.Cant_Remove, b);
                 return;
             }
 
             if (!inUnderwear)
             {
                 if (b.InToilet(inUnderwear))
-                    Animations.Say(Animations.GetData().Pee_Toilet, b);
+                    Animations.Say(Animations.Data.Pee_Toilet, b);
                 else
-                    Animations.Say(Animations.GetData().Pee_Voluntary, b);
+                    Animations.Say(Animations.Data.Pee_Voluntary, b);
 
                 ((GameLocation)Animations.player.currentLocation).temporarySprites.Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position.Value, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
                 HoeDirt terrainFeature;
@@ -186,12 +189,12 @@ namespace PrimevalTitmouse
                     terrainFeature.state.Value = 1;
             }
             else if (voluntary)
-                Animations.Say(Animations.GetData().Wet_Voluntary, b);
+                Animations.Say(Animations.Data.Wet_Voluntary, b);
             else
-                Animations.Say(Animations.GetData().Wet_Accident, b);
+                Animations.Say(Animations.Data.Wet_Accident, b);
 
             // We skip the actual animations if nessesary
-            if (b.IsFishing() || !Animations.player.canMove) return;
+            if (Body.IsFishing() || !Animations.player.canMove) return;
 
             player.jitterStrength = 0.5f;
             player.freezePause = peeAnimationTime; //milliseconds
@@ -200,14 +203,14 @@ namespace PrimevalTitmouse
         }
         public static void AnimateWettingMinor(Body b)
         {
-            Animations.Say(Animations.GetData().Bladder_Leak, b);
+            Animations.Say(Animations.Data.Bladder_Leak, b);
             ((Character)Animations.player).doEmote(28, false);
         }
 
 
         public static void AnimateWettingEnd(Body b)
         {
-            if (b.IsFishing()) return;
+            if (Body.IsFishing()) return;
             if ((double)b.pants.wetness > (double)b.pants.absorbency)
             {
                 ((GameLocation)player.currentLocation).temporarySprites.Add(new TemporaryAnimatedSprite(13, (Vector2)((Character)Game1.player).position.Value, Microsoft.Xna.Framework.Color.White, 10, ((Random)Game1.random).NextDouble() < 0.5, 70f, 0, (int)Game1.tileSize, 0.05f, -1, 0));
@@ -221,18 +224,18 @@ namespace PrimevalTitmouse
         {
             bool flag = (double)b.pants.wetness > 0.0;
             bool second = (double)b.pants.messiness > 0.0;
-            string msg = "" + Strings.RandString(Animations.GetData().Wake_Up_Underwear_State);
+            string msg = "" + Strings.RandString(Animations.Data.Wake_Up_Underwear_State);
             if (second)
             {
-                msg = msg + " " + Strings.ReplaceOptional(Strings.RandString(Animations.GetData().Messed_Bed), flag);
+                msg = msg + " " + Strings.ReplaceOptional(Strings.RandString(Animations.Data.Messed_Bed), flag);
                 if (!Regression.config.Easymode)
-                    msg = msg + " " + Strings.ReplaceAndOr(Strings.RandString(Animations.GetData().Washing_Bedding), flag, second, "&");
+                    msg = msg + " " + Strings.ReplaceAndOr(Strings.RandString(Animations.Data.Washing_Bedding), flag, second, "&");
             }
             else if (flag)
             {
-                msg = msg + " " + Strings.RandString(Animations.GetData().Wet_Bed);
+                msg = msg + " " + Strings.RandString(Animations.Data.Wet_Bed);
                 if (!Regression.config.Easymode)
-                    msg = msg + " " + Strings.ReplaceAndOr(Strings.RandString(Animations.GetData().Spot_Washing_Bedding), flag, second, "&");
+                    msg = msg + " " + Strings.ReplaceAndOr(Strings.RandString(Animations.Data.Spot_Washing_Bedding), flag, second, "&");
             }
             Animations.Write(msg, b);
         }
@@ -281,7 +284,7 @@ namespace PrimevalTitmouse
             if (!(first | second) || !b.IsAllowedResource(IncidentType.PEE) && !b.IsAllowedResource(IncidentType.POOP))
                 return;
 
-            var list = Animations.GetData().Night;
+            var list = Animations.Data.Night;
             // assumtion: if we wake up to pee/poop, we do that togehter if possible. So if we wake up 2 times for pee and 1 time for poop, it is likely we only got up twice, not 3 times
             int gotUpAtNight = Math.Max(b.numPottyPeeAtNight, b.numPottyPooAtNight);
             string toiletMsg = "";
@@ -330,37 +333,37 @@ namespace PrimevalTitmouse
         public static void AnimatePeeAttempt(Body b, bool inUnderwear)
         {
 
-            if (b.IsFishing()) return;
+            if (Body.IsFishing()) return;
             if (inUnderwear)
-                Say(Animations.GetData().Wet_Attempt, b);
+                Say(Animations.Data.Wet_Attempt, b);
             else if (b.InToilet(inUnderwear))
-                Say(Animations.GetData().Pee_Toilet_Attempt, b);
+                Say(Animations.Data.Pee_Toilet_Attempt, b);
             else
-                Say(Animations.GetData().Pee_Attempt, b);
+                Say(Animations.Data.Pee_Attempt, b);
         }
 
         public static void AnimatePoopAttempt(Body b, bool inUnderwear)
         {
 
-            if (b.IsFishing()) return;
+            if (Body.IsFishing()) return;
             if (inUnderwear)
-                Animations.Say(Animations.GetData().Mess_Attempt, b);
+                Animations.Say(Animations.Data.Mess_Attempt, b);
             else if (b.InToilet(inUnderwear))
-                Animations.Say(Animations.GetData().Poop_Toilet_Attempt, b);
+                Animations.Say(Animations.Data.Poop_Toilet_Attempt, b);
             else
-                Animations.Say(Animations.GetData().Poop_Attempt, b);
+                Animations.Say(Animations.Data.Poop_Attempt, b);
         }
 
         public static void AnimateStillSoiled(Body b)
         {
-            string baseString = Strings.RandString(Animations.GetData().Still_Soiled);
+            string baseString = Strings.RandString(Animations.Data.Still_Soiled);
 
             baseString = baseString.Replace("$UNDERWEAR_LONGDESC$", Strings.DescribeUnderwear(b.underwear, b.underwear.displayName, true));
             Animations.Say(baseString, b);
         }
         public static void AnimateShouldChange(Body b)
         {
-            string baseString = Strings.RandString(Animations.GetData().Should_Change);
+            string baseString = Strings.RandString(Animations.Data.Should_Change);
 
             baseString = baseString.Replace("$UNDERWEAR_LONGDESC$", Strings.DescribeUnderwear(b.underwear, b.underwear.displayName, true));
             Animations.Say(baseString, b);
@@ -369,35 +372,47 @@ namespace PrimevalTitmouse
         {
             if (c.MarkedForDestroy())
             {
-                Animations.Write(Strings.InsertVariables(Animations.GetData().Overwashed_Underwear[0], (Body)null, c), (Body)null);
+                Animations.Write(Strings.InsertVariables(Animations.Data.Overwashed_Underwear[0], (Body)null, c), (Body)null);
                 Game1.player.reduceActiveItemByOne();
             }
             else
             {
-                Animations.Write(Strings.InsertVariables(Strings.RandString(Animations.GetData().Washing_Underwear), (Body)null, c), (Body)null);
+                Animations.Write(Strings.InsertVariables(Strings.RandString(Animations.Data.Washing_Underwear), (Body)null, c), (Body)null);
             }
         }
 
         public static void CheckPants(Body b)
         {
-            StardewValley.Objects.Clothing pants = b.GetPantsStardew();
-            b.pants.displayName = pants.displayName;
-            b.pants.description = pants.displayName;
-            b.pants.plural = true;
-            Animations.Say(Animations.GetData().LookPants[0] + " " + Strings.DescribeUnderwear(b.pants, null) + ".", b);
+            Animations.Say(Animations.Data.LookPants[0] + " " + Strings.DescribeUnderwear(b.pants, null) + ".", b);
         }
         public static bool WarnCurrentThreshold(float[] thresholds, string[][] messages, float currentValue, bool greaterAs = false)
+        {
+            var curr = GetCurrentThreshold(thresholds,messages,currentValue,greaterAs);
+            if(curr != null)
+            {
+                Animations.Warn(curr);
+                return true;
+            }
+            return false;
+        }
+        public static string[] GetCurrentThreshold(float[] thresholds, string[][] messages, float currentValue, bool greaterAs = false)
+        {
+            var index = GetCurrentTresholdIndex(thresholds, messages, currentValue, greaterAs);
+            if(index >= 0) return messages[index];
+            return null;
+        }
+        public static int GetCurrentTresholdIndex(float[] thresholds, string[][] messages, float currentValue, bool greaterAs = false)
         {
             for (int index = thresholds.Length - 1; index >= 0; index--)
             {
                 if (thresholds[index] > currentValue && !greaterAs) continue;
                 if (thresholds[index] <= currentValue && greaterAs) continue;
 
-                Animations.Warn(messages[index]);
-                return true;
+                return index;
             }
-            return false;
+            return -1;
         }
+
         public static void CheckContinence(Body b)
         {
             if (b.IsAllowedResource(IncidentType.PEE))
@@ -412,33 +427,30 @@ namespace PrimevalTitmouse
         }
         public static void CheckPottyFeeling(Body b)
         {
-            float newFullness = b.bladderFullness / b.bladderCapacity;
+            Warn(Strings.RandString(GetPottyFeeling(b, IncidentType.PEE)) + "^" + Strings.RandString(GetPottyFeeling(b, IncidentType.POOP)));
+        }
 
-            bool pottyMessage = false;
-            if (newFullness > (1 - b.bladderContinence))
+        public static string[] GetPottyFeeling(Body b, IncidentType type)
+        {
+            float newFullness = b.GetFullness(type) / b.GetCapacity(type);
+            string[] pottyMessages = null;
+            if (newFullness > (1 -  b.GetContinence(type)))
             {
-                pottyMessage = WarnCurrentThreshold(Body.WETTING_THRESHOLDS, Body.WETTING_MESSAGES, newFullness, false); // index offset is 1, because we want the current, not next message
+                pottyMessages = GetCurrentThreshold(type == IncidentType.PEE ? Body.WETTING_THRESHOLDS : Body.MESSING_THRESHOLDS, type == IncidentType.PEE ? Body.WETTING_MESSAGES : Body.MESSING_MESSAGES, newFullness, false);
             }
-            if (!pottyMessage) Warn(Body.WETTING_MESSAGE_GREEN);
-
-            newFullness = b.bowelFullness / b.bowelCapacity;
-            pottyMessage = false;
-            if (newFullness > (1 - b.bowelContinence))
-            {
-                pottyMessage = WarnCurrentThreshold(Body.MESSING_THRESHOLDS, Body.MESSING_MESSAGES, newFullness, false); // index offset is 1, because we want the current, not next message
-            }
-            if (!pottyMessage) Warn(Body.MESSING_MESSAGE_GREEN);
+            if (pottyMessages != null) return pottyMessages;
+            return type == IncidentType.PEE ? Body.WETTING_MESSAGE_GREEN : Body.MESSING_MESSAGE_GREEN;
         }
         public static void CheckUnderwear(Body b)
         {
-            Say(Animations.GetData().PeekWaistband[0] + " " + Strings.DescribeUnderwear(b.underwear, (string)null) + ".", b);
+            Say(Animations.Data.PeekWaistband[0] + " " + Strings.DescribeUnderwear(b.underwear, (string)null) + ".", b);
         }
 
         public static void DrawUnderwearIcon(Container c, int x, int y)
         {
             Microsoft.Xna.Framework.Color defaultColor = Microsoft.Xna.Framework.Color.White;
 
-            Texture2D underwearSprites = Animations.GetSprites();
+            Texture2D underwearSprites = Animations.sprites;
             Microsoft.Xna.Framework.Rectangle srcBoxCurrent = Animations.UnderwearRectangle(c, FullnessType.None, LARGE_SPRITE_DIM);
 
             Microsoft.Xna.Framework.Rectangle destBoxCurrent = new Microsoft.Xna.Framework.Rectangle(x, y, DIAPER_HUD_DIM, DIAPER_HUD_DIM);
@@ -449,7 +461,34 @@ namespace PrimevalTitmouse
                 string source = Strings.DescribeUnderwear(c, (string)null);
                 string str = source.First<char>().ToString().ToUpper() + source.Substring(1);
                 int num = Game1.tileSize * 6 + Game1.tileSize / 6;
-                IClickableMenu.drawHoverText((SpriteBatch)Game1.spriteBatch, Game1.parseText(str, (SpriteFont)Game1.tinyFont, num), (SpriteFont)Game1.smallFont, 0, 0, -1, (string)null, -1, (string[])null, (Item)null, 0, null, -1, -1, -1, 1f, (CraftingRecipe)null);
+                IClickableMenu.drawHoverText((SpriteBatch)Game1.spriteBatch, Game1.parseText(str, (SpriteFont)Game1.tinyFont, num), (SpriteFont)Game1.smallFont, 0, 0, -1, null, -1, null, null, 0, null, -1, x - (DIAPER_HUD_DIM * 5), y);
+            }
+        }
+        public static void DrawStateIcon(Body b, IncidentType type, int x, int y)
+        {
+            float newFullness = b.GetFullness(type) / b.GetCapacity(type);
+            
+            if (newFullness < Body.trainingThreshold || newFullness < (1 - b.GetContinence(type))) return;
+
+            int topOffset = LARGE_SPRITE_DIM - (int)Math.Ceiling(newFullness * LARGE_SPRITE_DIM);
+            Microsoft.Xna.Framework.Color defaultColor = Microsoft.Xna.Framework.Color.White;
+
+            Texture2D peeOrPoopIcon = Animations.peepoopSprites;
+            if (peeOrPoopIcon == null) return;
+            Microsoft.Xna.Framework.Rectangle emptyIcon = Animations.StatusRectangle(b, type,false, LARGE_SPRITE_DIM);
+            Microsoft.Xna.Framework.Rectangle filledIcon = Animations.StatusRectangle(b, type, true, LARGE_SPRITE_DIM, topOffset);
+
+            Microsoft.Xna.Framework.Rectangle emptyBoxCurrent = new Microsoft.Xna.Framework.Rectangle(x, y, DIAPER_HUD_DIM, DIAPER_HUD_DIM);
+            Microsoft.Xna.Framework.Rectangle fullBoxCurrent = new Microsoft.Xna.Framework.Rectangle(x, y+ topOffset, DIAPER_HUD_DIM, DIAPER_HUD_DIM- topOffset);
+
+            ((SpriteBatch)Game1.spriteBatch).Draw(peeOrPoopIcon, emptyBoxCurrent, emptyIcon, defaultColor);
+            ((SpriteBatch)Game1.spriteBatch).Draw(peeOrPoopIcon, fullBoxCurrent, filledIcon, defaultColor);
+            if (Game1.getMouseX() >= x && Game1.getMouseX() <= x + DIAPER_HUD_DIM && Game1.getMouseY() >= y && Game1.getMouseY() <= y + DIAPER_HUD_DIM)
+            {
+                string source = Animations.GetPottyFeeling(b, type)[0];
+                string str = source.First<char>().ToString().ToUpper() + source.Substring(1);
+                int num = Game1.tileSize * 6 + Game1.tileSize / 6;
+                IClickableMenu.drawHoverText((SpriteBatch)Game1.spriteBatch, Game1.parseText(str, (SpriteFont)Game1.tinyFont, num), (SpriteFont)Game1.smallFont, 0, 0,-1,null,-1,null,null,0,null,-1,x -(DIAPER_HUD_DIM * 5),y);
             }
         }
 
@@ -461,7 +500,7 @@ namespace PrimevalTitmouse
 
         public static void HandlePasserby()
         {
-            if (Utility.isThereAFarmerOrCharacterWithinDistance(player.Tile, 3, (GameLocation)Game1.currentLocation) is not NPC npc || NPC_LIST.Contains(npc.Name))
+            if (Utility.isThereAFarmerOrCharacterWithinDistance(player.Tile, 3, (GameLocation)Game1.currentLocation) is not NPC npc)
                 return;
             npc.CurrentDialogue.Push(new Dialogue(npc, null, "Oh wow, your diaper is all wet!"));
         }
@@ -486,18 +525,21 @@ namespace PrimevalTitmouse
             if (overflow)
                 radius *= 2;
 
+            return NearbyVillager(radius);
+        }
+
+        public static List<NPC> NearbyVillager(int radius)
+        {
             var list = Utility.GetNpcsWithinDistance(((Character)Animations.player).Tile, radius, (GameLocation)Game1.currentLocation);
 
             var newList = new List<NPC>();
-            foreach(var npcEntry in list)
+            foreach (var npcEntry in list)
             {
-                if (!NPC_LIST.Contains(npcEntry.Name))
-                {
-                    newList.Add(npcEntry);
-                }
+                newList.Add(npcEntry);
             }
             return newList;
         }
+
         public static Dictionary<string,int> FriendshipLossOnAccident(Body b, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
         {
             var list = new Dictionary<string,int>();
@@ -520,7 +562,7 @@ namespace PrimevalTitmouse
             //Does this leave the possibility of friendship gain if we have enough hearts already? Maybe because they find the vulnerability endearing?
             float friendshipLoss = -1 + (heartLevelForNpc - 2) / 2;
 
-            var modifiers = Animations.GetData().Villager_Friendship_Modifier;
+            var modifiers = Animations.Data.Villager_Friendship_Modifier;
             var modifierKey = modifierForIncident(npc, mess, inUnderwear, overflow, attempt);
 
             float finalModifier = 1.0f;
@@ -562,10 +604,7 @@ namespace PrimevalTitmouse
             }
             return npcType;
         }
-        public static string modifierForState(NPC npc)
-        {
-            return "dirty";
-        }
+
         public static string modifierForIncident(NPC npc, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
         {
             if (!inUnderwear)
@@ -582,7 +621,12 @@ namespace PrimevalTitmouse
         }
         public static string responseKeyAdditionForState(NPC npc)
         {
+            if (!Regression.canGetGiveChangeNpc(npc))
+            {
+                return "_fallback";
+            }
             return "";
+            
         }
         public static string responseKeyAdditionForIncident(NPC npc, bool inUnderwear, int friendshipLoss)
         {
@@ -615,7 +659,6 @@ namespace PrimevalTitmouse
 
             //Get NPC in radius
             var nearby = NearbyVillager(b, mess, inUnderwear, overflow, attempt);
-
             foreach (var npc in nearby)
             {
                 someoneNoticed = true;
@@ -648,7 +691,7 @@ namespace PrimevalTitmouse
                 {
                     Dictionary<string, string[]> dictionary;
                     string[] strArray;
-                    if (Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
+                    if (Animations.Data.Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
                     {
                         stringList3 = new List<string>(); // We could remove this line again, but the general texts are more meant as fallback, they often don't fit well if custom texts are defined
                         stringList3.AddRange((IEnumerable<string>)strArray);
@@ -656,10 +699,20 @@ namespace PrimevalTitmouse
                         
                 }
 
+                if (stringList3.Count <= 0) continue;
+
                 //Construct and say Statement
                 string npcStatement = npcName + Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
-                npc.setNewDialogue(new Dialogue(npc, null, npcStatement), true, true);
-                Game1.drawDialogue(npc);
+
+                Regression.QueueAction(() =>
+                {
+                    if (b.underwear.used)
+                    {
+                        npcStatement = Strings.InsertVariables(npcStatement, npc);
+                        npc.setNewDialogue(new Dialogue(npc, null, npcStatement), true, true);
+                        Game1.drawDialogue(npc);
+                    }
+                });
             }
 
             return someoneNoticed;
@@ -672,7 +725,10 @@ namespace PrimevalTitmouse
 
         public static void Say(string msg, Body b = null)
         {
-            Game1.showGlobalMessage(Strings.InsertVariables(msg, b, (Container)null));
+            Regression.QueueAction(() =>
+            {
+                Game1.showGlobalMessage(Strings.InsertVariables(msg, b, (Container)null));
+            });
         }
 
         public static void Say(string[] msgs, Body b = null)
@@ -748,25 +804,39 @@ namespace PrimevalTitmouse
             }
             return new Microsoft.Xna.Framework.Rectangle(c.spriteIndex * LARGE_SPRITE_DIM, num + (LARGE_SPRITE_DIM - height), LARGE_SPRITE_DIM, height);
         }
-
-        public static void Warn(string msg, Body b = null)
+        public static Microsoft.Xna.Framework.Rectangle StatusRectangle(Body b, IncidentType type, bool isFilledPicture, int height = LARGE_SPRITE_DIM, int topOffset = 0)
         {
-            Game1.addHUDMessage(new HUDMessage(Strings.InsertVariables(msg, b, (Container)null), 2));
+            return new Microsoft.Xna.Framework.Rectangle( (int)type * LARGE_SPRITE_DIM, (isFilledPicture ? LARGE_SPRITE_DIM : 0)  + topOffset + (LARGE_SPRITE_DIM - height), LARGE_SPRITE_DIM, height - topOffset);
         }
 
-        public static void Warn(string[] msgs, Body b = null)
+        public static void Warn(string msg, Body b = null, Container c = null)
         {
-            Animations.Warn(Strings.RandString(msgs), b);
+            msg = Strings.InsertVariables(msg, b, c);
+            Regression.QueueAction(() =>
+            {
+                Game1.addHUDMessage(new HUDMessage(msg, 2));
+            });
+            
         }
 
-        public static void Write(string msg, Body b = null, int delay = 0)
+        public static void Warn(string[] msgs, Body b = null, Container c = null)
         {
-            DelayedAction.showDialogueAfterDelay(Strings.InsertVariables(msg, b, (Container)null), delay);
+            Animations.Warn(Strings.RandString(msgs), b, c);
         }
 
-        public static void Write(string[] msgs, Body b = null, int delay = 0)
+        public static void Write(string msg, Body b = null, Container c = null,int delay = 0)
         {
-            Animations.Write(Strings.RandString(msgs), b, delay);
+            msg = Strings.InsertVariables(msg, b, c);
+            Regression.QueueAction(() =>
+            {
+                DelayedAction.showDialogueAfterDelay(msg, 0);
+            },delay);
+            
+        }
+
+        public static void Write(string[] msgs, Body b = null, Container c = null, int delay = 0)
+        {
+            Animations.Write(Strings.RandString(msgs), b, c, delay);
         }
     }
 }

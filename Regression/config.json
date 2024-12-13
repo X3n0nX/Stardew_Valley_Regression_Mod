@@ -8,7 +8,7 @@
 	"FriendshipPenaltyBladderMultiplier": 100, // How peeing in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for pee incidents
 	"FriendshipPenaltyBowelMultiplier": 200, // How pooping in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for poop incidents
 	"AlwaysNoticeAccidents": true, // Defines if you will notice accidents on low control values.
-	"Debug": true, // Allowes to spawn items, change potty training and displays debug related messages.
+	"Debug": false, // Allowes to spawn items, change potty training and displays debug related messages.
 	"NighttimeLossMultiplier": 50, //How serious the loss of potty training is at night, compared to daytime. Usually 50 (half).
 	"NighttimeGainMultiplier": 50, //How big the gains are if you stay dry/clean at night, compared to daytime. Usually 50 (half).
 	"BladderLossContinenceRate": 2, //2 is a 2% continence loss for MaxBladderCapacity accidents.

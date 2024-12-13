@@ -144,7 +144,7 @@ namespace PrimevalTitmouse
         {
             get
             {
-                return messiness == 0.0 && wetness == 0.0 && !drying && (InnerContainer == null || durability == InnerContainer.durability);
+                return !used && !drying && (InnerContainer == null || durability == InnerContainer.durability);
             }
         }
         public struct Date
@@ -239,6 +239,8 @@ namespace PrimevalTitmouse
         public int dryingTime { get => InnerContainer != null ? InnerContainer.dryingTime : _dryingTime; set => _dryingTime = value; }
         public bool removable { get => InnerContainer != null ? InnerContainer.removable : _removable; set => _removable = value; }
         
+        public bool used { get => wetness > 0 || messiness > 0; }
+
 
         private Container _innerContainer = null;
         public Container InnerContainer
@@ -276,7 +278,17 @@ namespace PrimevalTitmouse
             modDataDictionary = Game1.player.modData;
             if(name == "")
             {
-                Regression.monitor.Log(modDataBaseKey + " had no name, so fallback "+ fallbackType + " was used");
+                Regression.monitor.Log($"{modDataBaseKey} for body had no name, so fallback {fallbackType} was used");
+                ResetToDefault(fallbackType);
+            }
+        }
+        public Container(NPC npc, string subtype, string fallbackType)
+        {
+            modDataBaseKey = "NPC/" + subtype;
+            modDataDictionary = npc.modData;
+            if (name == "")
+            {
+                Regression.monitor.Log($"{modDataBaseKey} for {npc.Name} had no name, so fallback {fallbackType} was used");
                 ResetToDefault(fallbackType);
             }
         }

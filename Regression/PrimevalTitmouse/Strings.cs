@@ -1,4 +1,5 @@
-﻿using StardewValley;
+﻿using Microsoft.Xna.Framework.Input;
+using StardewValley;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -66,15 +67,15 @@ namespace PrimevalTitmouse
         public static string InsertVariables(string msg, Body b, Container c = null)
         {
             string str = msg;
-            if (b != null)
+            if (b != null && c == null)
                 c = b.underwear;
             if (c != null)
             {
-                var gettingChangedDialog = Strings.RandString(Animations.GetData().Diaper_Change_Dialog);
+                var gettingChangedDialog = Strings.RandString(Animations.Data.Diaper_Change_Dialog);
                 gettingChangedDialog = Strings.ReplaceAndOr(gettingChangedDialog, b.pants.wetness > 0, b.pants.messiness > 0);
-                str = str.Replace("$Diaper_Change_Dialog", gettingChangedDialog);
+                str = str.Replace("$GETTING_CHANGED_DIALOG$", "#$b#" + gettingChangedDialog);
 
-                str = Strings.ReplaceOr(str.Replace("$UNDERWEAR_NAME$", c.displayName).Replace("$UNDERWEAR_PREFIX$", c.GetPrefix()).Replace("$UNDERWEAR_DESC$", c.description).Replace("$INSPECT_UNDERWEAR_NAME$", Strings.DescribeUnderwear(c, c.displayName)).Replace("$INSPECT_UNDERWEAR_DESC$", Strings.DescribeUnderwear(c, c.description)), !c.plural, "#");
+                str = Strings.ReplaceOr(str.Replace("$UNDERWEAR_NAME$", c.displayName).Replace("$UNDERWEAR_PREFIX$", c.GetPrefix()).Replace("$UNDERWEAR_DESC$", c.description).Replace("$INSPECT_UNDERWEAR_NAME$", Strings.DescribeUnderwear(c, c.displayName)).Replace("$INSPECT_UNDERWEAR_NAME_NO_PREFIX$", Strings.DescribeUnderwear(c, c.displayName,true)).Replace("$INSPECT_UNDERWEAR_DESC$", Strings.DescribeUnderwear(c, c.description)), !c.plural, "#");
 
             }
                
@@ -86,6 +87,62 @@ namespace PrimevalTitmouse
                
             return Strings.ReplaceOr(str, Strings.who.IsMale, "/").Replace("$FARMERNAME$", Strings.who.Name);
         }
+        public static string npcUnderwearOptions(NPC npc)
+        {
+            var modifiers = Animations.Data.Villager_Underwear_Options;
+            Dictionary<string, Dictionary<string, string>> foundDict = null;
+
+            foreach (string key2 in Animations.npcTypeList(npc))
+            {
+                Dictionary<string, Dictionary<string, string>> dictionary;
+                if (modifiers.TryGetValue(key2, out dictionary))
+                {
+                    foundDict = dictionary;
+                }
+            }
+
+            if (foundDict == null) return "";
+            var list = new List<string>();
+            foreach (string key in foundDict.Keys)
+            {
+                if (!Regression.HasUnderwear(key)) continue;
+                var entry = foundDict[key];
+                // #$r change_other_yes 2 Change_Diaper_Accept#Yes
+                list.Add($"#$r change_other_yes {entry["friendship"]} {entry["dialog_key"]} {(entry.TryGetValue("observerfriendship", out string val) ? val : "")}#{key.FirstCharToUpper()}");
+            }
+            list.Add($"#$r change_other_no 0 Change_Diaper_Refuse#Not now");
+            return string.Join("#", list);
+        }
+        public static string InsertVariables(string msg, NPC b, Container c = null)
+        {
+            string str = msg;
+            if (b != null && c == null)
+                c =  Regression.npcUnderwear(b);
+            if (c != null)
+            {
+                var changeOtherDialog = Strings.RandString(Animations.Data.Change_Other_Dialog);
+                changeOtherDialog = Strings.ReplaceAndOr(changeOtherDialog, c.wetness > 0, c.messiness > 0);
+                changeOtherDialog += npcUnderwearOptions(b);
+                str = str.Replace("$CHANGE_OTHER_DIALOG$", changeOtherDialog);
+
+                str = Strings.ReplaceOr(str.Replace("$NPC_UNDERWEAR_NAME$", c.displayName).Replace("$NPC_UNDERWEAR_PREFIX$", c.GetPrefix()).Replace("$NPC_UNDERWEAR_DESC$", c.description).Replace("$NPC_INSPECT_UNDERWEAR_NAME$", Strings.DescribeUnderwear(c, c.displayName)).Replace("$NPC_INSPECT_UNDERWEAR_NAME_NO_PREFIX$", Strings.DescribeUnderwear(c, c.displayName,true)).Replace("$NPC_INSPECT_UNDERWEAR_DESC$", Strings.DescribeUnderwear(c, c.description)), !c.plural, "#");
+
+            }
+
+            if (b != null)
+            {
+                var pants = Regression.npcPants(b);
+                str = str.Replace("$NPC_PANTS_NAME$", pants.displayName).Replace("$NPC_PANTS_PREFIX$", pants.GetPrefix()).Replace("$NPC_PANTS_DESC$", pants.description);
+            }
+
+            str = str.Replace("$NPC_NAME$", b.Name.FirstCharToUpper());
+            str = str.Replace("$NPC_HE_SHE$", b.Gender == Gender.Male ? "he" : (b.Gender == Gender.Female ? "she" : "they"));
+            str = str.Replace("$NPC_HIS_HER$",b.Gender == Gender.Male ? "his" : (b.Gender == Gender.Female ? "her" : "their"));
+            str = str.Replace("$NPC_HIM_HER$", b.Gender == Gender.Male ? "him" : (b.Gender == Gender.Female ? "her" : "them"));
+            str = str.Replace("$NPC_HIS_HER_IS_ARE$", b.Gender == Gender.Male ? "his" : (b.Gender == Gender.Female ? "her" : "their"));
+            return str;
+        }
+
 
         public static string InsertVariable(string inputString, string variableName, string variableValue)
         {
@@ -96,6 +153,7 @@ namespace PrimevalTitmouse
 
         public static string RandString(string[] msgs = null)
         {
+            if (msgs == null || msgs.Length == 0) return "";
             return msgs[Regression.rnd.Next(msgs.Length)];
         }
 

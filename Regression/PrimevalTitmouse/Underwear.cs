@@ -78,6 +78,7 @@ namespace PrimevalTitmouse
 
         public override void drawInMenu(SpriteBatch spriteBatch, Vector2 location, float scaleSize, float transparency, float layerDepth, StackDrawType drawStackNumber, Color color, bool drawShadow)
         {
+            if (Animations.sprites == null) return;
             int ratio = Animations.LARGE_SPRITE_DIM / Animations.SMALL_SPRITE_DIM;
             Vector2 offset = new(Game1.tileSize/2, Game1.tileSize/2); //Center of tile
             Vector2 origin = new(Animations.LARGE_SPRITE_DIM/2, Animations.LARGE_SPRITE_DIM/2); //Center of Sprite

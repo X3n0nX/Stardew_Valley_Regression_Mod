@@ -29,6 +29,8 @@ namespace PrimevalTitmouse
         public string[] Cant_Remove;
         public string[] Change;
         public string[] Change_Destroyed;
+        public string[] Change_Other_Destroyed;
+        public string[] Getting_Changed_Destroyed;
         public string[] Change_Requires_Pants;
         public string[] Change_Requires_Home;
         public string[] Change_At_Home;
@@ -39,6 +41,7 @@ namespace PrimevalTitmouse
         public string[] Food_None;
         public string[] LookPants;
         public string[] Diaper_Change_Dialog;
+        public string[] Change_Other_Dialog;
         public string[] Mess_Accident;
         public string[] Mess_Attempt;
         public string[] Mess_Voluntary;
@@ -67,6 +70,7 @@ namespace PrimevalTitmouse
         public string[] Underwear_Wet;
         public Dictionary<string, Dictionary<string, float>> Villager_Friendship_Modifier;
         public Dictionary<string, Dictionary<string, string[]>> Villager_Reactions;
+        public Dictionary<string, Dictionary<string, Dictionary<string, string>>> Villager_Underwear_Options;
         public string[] Wake_Up_Underwear_State;
         public string[] Washing_Bedding;
         public string[] Washing_Underwear;

@@ -51,17 +51,13 @@ Highly recommended: (Allowes ingame configuration of the mod)
 - F5: Check State of Underwear
 - F6: Check State of Pants
 - F7: Check State of Potty Training
-- F9: Toggle Debug Mode
+- F8: Check Potty Feeling
 - Left Shift + F1: Pull down pants and attempt to pee.
 - Left Shift + F2: Pull down pants and attempt to poop.
 - Left Shift + Left Click: Drink when near water source or holding watering can.
 - Note, the following locations have toilets (use you imagination, there is no icon/sprite). Pulling down your pants anywhere else will result in you going on the floor (*gross*).
   - House
-  - Hospital
-  - Club
-  - Joja-Mart
-  - Movie Theater
-  - Saloon
+  - Island House
   - Bathhouse Locker-room
 
 ### In Debug
