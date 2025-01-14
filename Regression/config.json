@@ -5,12 +5,14 @@
 	"Messing": true, // This activates pee and bladder events.
 	"Easymode": false, // Hunger and Thirst are refilled every morning and the wet beds dried.
 	"PantsChangeRequiresHome": true, // If changing your pants (in case you soiled your cloth) requires you to be at home
+	"UnderwearChangeCauseExposure": true, // Changing your underwear, by yourself, requires you to undress, as such exposing yourself. With this option activated you need to change your diapers at home or away from people.
 	"FriendshipPenaltyBladderMultiplier": 100, // How peeing in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for pee incidents
 	"FriendshipPenaltyBowelMultiplier": 200, // How pooping in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for poop incidents
 	"AlwaysNoticeAccidents": true, // Defines if you will notice accidents on low control values.
 	"Debug": false, // Allowes to spawn items, change potty training and displays debug related messages.
 	"NighttimeLossMultiplier": 50, //How serious the loss of potty training is at night, compared to daytime. Usually 50 (half).
 	"NighttimeGainMultiplier": 50, //How big the gains are if you stay dry/clean at night, compared to daytime. Usually 50 (half).
+	"InUnderwearOnPurposeMultiplier": 50, // How big of a negativ impact has an accident in underwear if it was on purpose?. Usually 50 (half) as much as an actual accident.
 	"BladderLossContinenceRate": 2, //2 is a 2% continence loss for MaxBladderCapacity accidents.
 	"BowelLossContinenceRate": 4, //3 is a 3% continence loss for MaxBowelCapacity accidents.
 	"BladderGainContinenceRate": 3, //3 is a 3% continence gain for making it to the toilet with a bladder that is at least half full.

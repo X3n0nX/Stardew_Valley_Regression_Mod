@@ -24,18 +24,23 @@ namespace PrimevalTitmouse
         //Lets think of Food in Calories, and water in mL
         //For a day Laborer (like a farmer) that should be ~3500 Cal, and 14000 mL - NOTE: (Floximo) you mean 1400 mL probably. Up to 3000 mL is considered healthy
         //Of course this is dependent on amount of work, but let's go one step at a time
-        private static readonly float requiredCaloriesPerDay = 3000f; // I adjusted it from 3500 to 3000, because the farmer still eats half the farm every day
+        private static readonly float requiredCaloriesPerDay = 3500f;
+        public float hungerMeterMax
+        {
+            get => requiredCaloriesPerDay * 2;
+        }
+
         private static readonly float requiredWaterPerDay = 8000f; //8oz glasses: every 20min for 8 hours (5455mL) + every 40 min for 8 hour (2727mL) Floximo: That is rough. Possible in extrem heat but rough to drink.
 
         //Average # of Pees per day is ~3
         public static float maxBladderCapacity => Regression.config.MaxBladderCapacity; //about 600mL => changed to 800mL as player will start with lower bladder by default
-        public static readonly float minBladderContinence = 0.3f; // Also describes capacity as changes are linear
+        public static readonly float minBladderContinence = 0.4f; // Also describes capacity as changes are linear
         private static readonly float waterToBladderConversion = 0.2f;//Only ~1/4 (0.225f) water becomes pee, rest is sweat etc. => changed to 0.2f (1/5) for game balance reasons (too intrusive)
 
         //Average # of poops per day varies wildly. Let's say about 1.5 per day.
-        private static readonly float foodToBowelConversion = 0.5f; // lowered from 0.67f to 0.5f to make the numbers smaller (too much poop) and bowel capacity / 1.5f (1000f in total)
-        private static float maxBowelCapacity => (requiredCaloriesPerDay*foodToBowelConversion) / 1.5f / 1000f * Regression.config.MaxBowelCapacity; // The last 2 numbers usually end up as / 1200 * 1200 (cancle eachother out) to make configuration easier to understand 
-        public static readonly float minBowelContinence = 0.3f; // Also describes capacity as changes are linear
+        private static readonly float foodToBowelConversion = 0.4f; // lowered from 0.67f to 0.4f to make the numbers smaller (too much poop) and bowel capacity / 1.4f (1000f in total)
+        private static float maxBowelCapacity => (requiredCaloriesPerDay*foodToBowelConversion) / 1.4f / 1000f * Regression.config.MaxBowelCapacity; // The last 2 numbers usually end up as / 1200 * 1200 (cancle eachother out) to make configuration easier to understand 
+        public static readonly float minBowelContinence = 0.4f; // Also describes capacity as changes are linear
 
         //Setup Thresholds and messages
         public static readonly float trainingThreshold = 0.5f; // we set a threshold that allowes for potty training, so that should also be the warning level, for the player to understand whats going on
@@ -46,9 +51,9 @@ namespace PrimevalTitmouse
         public static readonly float[] MESSING_THRESHOLDS = { trainingThreshold + 0.05f, 0.69f, lastWarningThreshold };
         public static readonly string[][] MESSING_MESSAGES = { Regression.t.Bowels_Yellow, Regression.t.Bowels_Orange, Regression.t.Bowels_Red};
         public static readonly string[] MESSING_MESSAGE_GREEN = Regression.t.Bowels_Green;
-        public static readonly float[] BLADDER_CONTINENCE_THRESHOLDS = { minBladderContinence, 0.5f, 0.65f, 0.8f, 1.0f };
+        public static readonly float[] BLADDER_CONTINENCE_THRESHOLDS = { minBladderContinence, 0.55f, 0.65f, 0.8f, 1.0f };
         public static readonly string[][] BLADDER_CONTINENCE_MESSAGES = { Regression.t.Bladder_Continence_Min, Regression.t.Bladder_Continence_Red, Regression.t.Bladder_Continence_Orange, Regression.t.Bladder_Continence_Yellow, Regression.t.Bladder_Continence_Green};
-        public static readonly float[] BOWEL_CONTINENCE_THRESHOLDS = { minBowelContinence, 0.5f, 0.65f, 0.8f, 1.0f };
+        public static readonly float[] BOWEL_CONTINENCE_THRESHOLDS = { minBowelContinence, 0.55f, 0.65f, 0.8f, 1.0f };
         public static readonly string[][] BOWEL_CONTINENCE_MESSAGES = { Regression.t.Bowel_Continence_Min, Regression.t.Bowel_Continence_Red, Regression.t.Bowel_Continence_Orange, Regression.t.Bowel_Continence_Yellow, Regression.t.Bowel_Continence_Green };
         private static readonly float[] HUNGER_THRESHOLDS = { 0.0f, 0.25f };
         private static readonly string[][] HUNGER_MESSAGES = { Regression.t.Food_None, Regression.t.Food_Low };
@@ -56,7 +61,7 @@ namespace PrimevalTitmouse
         private static readonly string[][] THIRST_MESSAGES = { Regression.t.Water_None, Regression.t.Water_Low };
         private static readonly string MESSY_DEBUFF = "Regression.Messy";
         private static readonly string WET_DEBUFF = "Regression.Wet";
-        private static readonly int wakeUpPenalty = 4;
+        private static readonly int wakeUpPenalty = 8;
 
         public static readonly string modDataPrefix = "PrimevalTitmouse/Body";
         private void save(string name, int val)
@@ -343,6 +348,18 @@ namespace PrimevalTitmouse
                     throw new Exception("Not implemented: type " + type.ToString());
             }
         }
+        public float GetContinenceMin(IncidentType type)
+        {
+            switch (type)
+            {
+                case IncidentType.PEE:
+                    return minBladderContinence;
+                case IncidentType.POOP:
+                    return minBowelContinence;
+                default:
+                    throw new Exception("Not implemented: type " + type.ToString());
+            }
+        }
         public float GetContinence(IncidentType type)
         {
             switch (type)
@@ -372,7 +389,7 @@ namespace PrimevalTitmouse
         }
         public float GetHungerPercent()
         {
-            return (requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
+            return (hungerMeterMax - hunger) / hungerMeterMax;
         }
 
         public float GetThirstPercent()
@@ -415,7 +432,7 @@ namespace PrimevalTitmouse
                 }
                 Accident(type, voluntary: false, inUnderwear: true);
             }
-            else if(!IsTryingToHoldIt(type) && oldFullnessPercent > 0.7f)
+            else if(!underwear.removable && oldFullnessPercent > 0.7f && !IsTryingToHoldIt(type))
             {
                 Accident(type, voluntary: true, inUnderwear: true);
             }
@@ -442,14 +459,14 @@ namespace PrimevalTitmouse
         public void AddFood(float amount, float conversionRatio = 1f)
         {
             //How full are we?
-            float oldPercent = (requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
+            float oldPercent = GetHungerPercent();
             hunger -= amount;
-            float newPercent = (requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
+            float newPercent = GetHungerPercent();
 
             //Convert food lost into poo at half rate
             if (amount < 0)
             {
-                if(hunger < requiredCaloriesPerDay)
+                if(hunger < hungerMeterMax)
                     AddResource(IncidentType.POOP, amount * -1f * conversionRatio * foodToBowelConversion);
                 else
                     // People do stop pooping after days not eating, but a) thats probably not the case and b) its a game. We assume a little poop is produced.
@@ -462,7 +479,7 @@ namespace PrimevalTitmouse
             {
                 AddResource(IncidentType.POOP, hunger * -0.5f * conversionRatio * foodToBowelConversion);
                 hunger = 0f;
-                newPercent =(requiredCaloriesPerDay - hunger) / requiredCaloriesPerDay;
+                newPercent = GetHungerPercent();
             }
 
             if (Regression.config.NoHungerAndThirst)
@@ -472,11 +489,12 @@ namespace PrimevalTitmouse
             }
 
             //If we're starving and not eating, take a stamina hit
-            if (hunger > requiredCaloriesPerDay && amount < 0)
+            if (hunger > hungerMeterMax && amount < 0)
             {
                 //Take percentage off stamina equal to percentage above max hunger
-                Game1.player.stamina += newPercent * Game1.player.MaxStamina;
-                hunger = requiredCaloriesPerDay;
+                // Floximo: This is now half as punishing, preventing deadlock situations where the farmer could no longer reach field or town. If intended, this is the place to edit the final values or insert config.
+                Game1.player.stamina += newPercent * (hungerMeterMax / requiredCaloriesPerDay) * Game1.player.MaxStamina / 2;
+                hunger = hungerMeterMax; 
                 newPercent = 1;
             }
 
@@ -538,9 +556,7 @@ namespace PrimevalTitmouse
             SetContinence(type, previousContinence + percent);
 
             //Change of bladder capacity is no longer nessesary. Handled by getter.
-
-            if (Regression.config.Debug)
-                Animations.Say(string.Format("{0} continence changed by {1} to {2}, {0} capacity now {3}", type == IncidentType.POOP ? "Bowel": "Bladder", GetContinence(type) - previousContinence, GetContinence(type), GetCapacity(type)), (Body)null);
+            Regression.monitor.Log(string.Format("{0} continence changed by {1} to {2}, {0} capacity now {3}", type == IncidentType.POOP ? "Bowel" : "Bladder", GetContinence(type) - previousContinence, GetContinence(type), GetCapacity(type)), LogLevel.Debug);
 
             //Warn that we may be losing control
             if(type == IncidentType.POOP)
@@ -582,7 +598,7 @@ namespace PrimevalTitmouse
             if (myPants != null)
             {
                 pants.displayName = myPants.displayName.ToLower();
-                pants.description = myPants.description.ToLower();
+                pants.description = myPants.displayName.ToLower();
             }
             CleanPants();
         }
@@ -733,7 +749,7 @@ namespace PrimevalTitmouse
                 case IncidentType.PEE:
                     if (isSleeping)
                     {
-                        _ = this.bed.AddPee(this.pants.AddPee(this.underwear.AddPee(amount)));
+                        _ = this.bed.AddPee(this.underwear.AddPee(amount));
                     }
                     else
                     {
@@ -743,7 +759,7 @@ namespace PrimevalTitmouse
                 case IncidentType.POOP:
                     if (isSleeping)
                     {
-                        _ = this.bed.AddPoop(this.pants.AddPoop(this.underwear.AddPoop(amount)));
+                        _ = this.bed.AddPoop(this.underwear.AddPoop(amount));
                     }
                     else
                     {
@@ -760,7 +776,7 @@ namespace PrimevalTitmouse
             float attemptThreshold = GetAttemptThreshold(type);
             float capacity = GetCapacity(type);
             float fullness = GetFullness(type);
-            float continence = GetContinence(type);
+            
             float maxCapacity = GetMaxCapacity(type); // yes, this is the maximum capacity a bladder/bowel can have, used for changing continence
 
             //If we're sleeping check if we have an accident or get up to use the potty
@@ -780,8 +796,10 @@ namespace PrimevalTitmouse
 
                 for (int i = 0; i < numIncidentAmount; i++)
                 {
+                    float adjustedContinence = GetContinence(type) - GetContinenceMin(type);
                     //Randomly decide if we get up. Less likely if we have lower continence
-                    bool lclVoluntary = voluntary || Regression.rnd.NextDouble() < (double)continence;
+                    //Up to 80% control we never have accidents and at min-continence we always have accidents
+                    bool lclVoluntary = voluntary || GetContinence(type) > 0.8f || adjustedContinence > 0 && Regression.rnd.NextDouble() < adjustedContinence;
                     StartAccident(type, lclVoluntary && underwear.removable, true); //Always in underwear in bed
                     float amountToLose = (i != numIncidentAmount - 1) ? capacity : additionalAmount;
                     if (!lclVoluntary)
@@ -1012,6 +1030,10 @@ namespace PrimevalTitmouse
             {
                 multiplier = (voluntary ? (float)Regression.config.NighttimeGainMultiplier : (float)Regression.config.NighttimeLossMultiplier) / 100f;
             }
+            else if (voluntary && inUnderwear)
+            {
+                multiplier *= (Regression.config.InUnderwearOnPurposeMultiplier / 100f);
+            }
      
             return multiplier;
         }
@@ -1040,13 +1062,13 @@ namespace PrimevalTitmouse
                 Farmer player = Game1.player;
                 if (bed.messiness > 0.0)
                 {
-                    dryingTime = 1000;
-                    player.stamina -= 20f;
+                    dryingTime = 800;
+                    player.stamina -= 60f;
                 }
                 else if (bed.wetness > 0.0)
                 {
                     dryingTime = 600;
-                    player.stamina -= 10f;
+                    player.stamina -= 40f;
                 }
 
                 int timesUpAtNight = Math.Max(numPottyPeeAtNight, numPottyPooAtNight);
@@ -1070,6 +1092,13 @@ namespace PrimevalTitmouse
             const int wakeUpTime = timeInDay + 600;
             const float sleepRate = 3.0f; //Let's say body functions change @ 1/3 speed while sleeping. Arbitrary.
             int timeSlept = wakeUpTime - bedtime; //Bedtime will never exceed passout-time of 2:00AM (2600)
+
+            // Resets
+            numPottyPeeAtNight = 0;
+            numAccidentPeeAtNight = 0;
+            numPottyPooAtNight = 0;
+            numAccidentPooAtNight = 0;
+
             HandleTime(timeSlept / 100.0f / sleepRate);
         }
 
@@ -1152,19 +1181,30 @@ namespace PrimevalTitmouse
             Animations.Warn(messages, this);
         }
 
-        //<TODO> Expand Consumables to add food. But we'd need a lot more info. For now, treat all food the same.
-        public void Consume(string itemName)
+
+        public void Consume(Item item)
         {
-            Consumable item;
-            if(Animations.Data.Consumables.TryGetValue(itemName, out item))
+            // It seams like the worth in health recovery is twice
+            var foodWorth = item.staminaRecoveredOnConsumption() + item.healthRecoveredOnConsumption() * 2;
+            // This value ends up 25 + 22 = 47 for green beans, parsnip, potatoes and 50 + 44 = 94 for kale and is used as a messure of effective food in the game. As such a good start for our calculation.
+            // Cooked foods naturally have higher values, for example stir fry, having: 38 17 cave carrot + 30 13 mushroom + 50 22 kale + 25 11 oil (corn) = 143 63 ingredien worth => 200 90 as Stir Fry
+            // => As we double the health value this is 200 + 180 = 380 
+            // Having a base value, we can now freely choose a muliplier to control the difficulty of survival. If we go from Stir fry, a difficult dish that definitly should fill us up for the day (days are short), should be around 3500 kcal = 9,2 muliplier.
+            // We go with 10 should be more than difficult already, as that means a parsnip/potato/... has only 470 calories anyway, 940 for kale
+            foodWorth = foodWorth * 10;
+
+            string itemName = item.Name;
+            Consumable consumable;
+            if (Animations.Data.Consumables.TryGetValue(itemName, out consumable))
             {
-                this.AddFood(item.calorieContent);
-                this.AddWater(item.waterContent);
-            } else
+                this.AddWater(consumable.waterContent);
+            }
+            else
             {
-                this.AddFood(400);
                 this.AddWater(10);
             }
+
+            this.AddFood(foodWorth);
         }
     }
     public enum IncidentType

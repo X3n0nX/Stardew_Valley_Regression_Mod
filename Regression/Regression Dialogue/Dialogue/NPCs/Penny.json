@@ -8,10 +8,10 @@
 //Penny's response Ids are 130-139
 
 
-"spring_Mon8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
+"spring_Mon6":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
 #$q 134/135 Adult_Followup#I have a hard time thinking of you like you're an adult...
-#$r 134 0 Adult_Little#Honestly, I don't really feel like one.
-#$r 134 0 Adult_Little#Good! Cause I don't wanna be one.
+#$r 134 10 Adult_Little#Honestly, I don't really feel like one.
+#$r 134 10 Adult_Little#Good! Cause I don't wanna be one.
 #$r 135 0 Adult_Big#Not fair! I'm a big kid!
 ",
 "Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
@@ -34,10 +34,10 @@
 "Potty_Followup":"#$p 131#I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
 
 "spring_Sat6":"Oh hello @.#$q 132/133 Show_Followup#Oh, do you want to show me something?
-#$r 132 0 Show_Nice#Show her the pretty flower you picked.
-#$r 132 0 Show_Nice#Show her the cool rock you found in the mines.
-#$r 132 0 Show_Nice#Show her your favorite plushie.
-#$r 133 0 Show_Diaper#Show her your diaper.",
+#$r 132 5 Show_Nice#Show her the pretty flower you picked.
+#$r 132 5 Show_Nice#Show her the cool rock you found in the mines.
+#$r 132 5 Show_Nice#Show her your favorite plushie.
+#$r 133 5 Show_Diaper#Show her your diaper.",
 "Show_Nice": "Oh wow @, that is very lovely! Thank you for showing me.#$b#You look so pleased! You're just like a little kid at show and tell.$1",
 "Show_Diaper": "Oh goodness @. That doesn't look like you're trying very hard to make it to the potty.$3",
 "Show_Followup":"Well don't you look excited!$1#$e#%Penny pats your head fondly.",
@@ -48,18 +48,18 @@
 "summer_Tue6":"#$p 102#I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.$1#$b#She's still not great at keeping them clean...$3",
 
 "summer_Wed6":"Oh hello @.#$q 132/133 Show_Followup#Oh, do you want to show me something?
-#$r 132 0 Show_Nice#Show her the pretty flower you picked.
-#$r 132 0 Show_Nice#Show her the cool rock you found in the mines.
-#$r 132 0 Show_Nice#Show her your favorite plushie.
-#$r 133 0 Show_Diaper#Show her your diaper.",
+#$r 132 5 Show_Nice#Show her the pretty flower you picked.
+#$r 132 5 Show_Nice#Show her the cool rock you found in the mines.
+#$r 132 5 Show_Nice#Show her your favorite plushie.
+#$r 133 5 Show_Diaper#Show her your diaper.",
 "Show_Nice": "Oh wow @, that is very lovely! Thank you for showing me.#$b#You look so pleased! You're just like a little kid at show and tell.$1",
 "Show_Diaper": "Oh goodness @. That doesn't look like you're trying very hard to make it to the potty.$3",
 "Show_Followup":"Well don't you look excited!$1#$e#%Penny pats your head fondly.",
 
-"summer_Fri8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
+"summer_Fri6":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
 #$q 134/135 Adult_Followup#I have a hard time thinking of you like you're an adult...
-#$r 134 0 Adult_Little#Honestly, I don't really feel like one.
-#$r 134 0 Adult_Little#Good! Cause I don't wanna be one.
+#$r 134 10 Adult_Little#Honestly, I don't really feel like one.
+#$r 134 10 Adult_Little#Good! Cause I don't wanna be one.
 #$r 135 0 Adult_Big#Not fair! I'm a big kid!
 ",
 "Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
@@ -84,18 +84,18 @@
 "fall_Tue4":"Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
 
 "fall_Wed6":"Oh hello @.#$q 132/133 Show_Followup#Oh, do you want to show me something?
-#$r 132 0 Show_Nice#Show her the pretty flower you picked.
-#$r 132 0 Show_Nice#Show her the cool rock you found in the mines.
-#$r 132 0 Show_Nice#Show her your favorite plushie.
-#$r 133 0 Show_Diaper#Show her your diaper.",
+#$r 132 5 Show_Nice#Show her the pretty flower you picked.
+#$r 132 5 Show_Nice#Show her the cool rock you found in the mines.
+#$r 132 5 Show_Nice#Show her your favorite plushie.
+#$r 133 5 Show_Diaper#Show her your diaper.",
 "Show_Nice": "Oh wow @, that is very lovely! Thank you for showing me.#$b#You look so pleased! You're just like a little kid at show and tell.$1",
 "Show_Diaper": "Oh goodness @. That doesn't look like you're trying very hard to make it to the potty.$3",
 "Show_Followup":"Well don't you look excited!$1#$e#%Penny pats your head fondly.",
 
-"fall_Sun8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
+"fall_Sun6":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
 #$q 134/135 Adult_Followup#I have a hard time thinking of you like you're an adult...
-#$r 134 0 Adult_Little#Honestly, I don't really feel like one.
-#$r 134 0 Adult_Little#Good! Cause I don't wanna be one.
+#$r 134 10 Adult_Little#Honestly, I don't really feel like one.
+#$r 134 10 Adult_Little#Good! Cause I don't wanna be one.
 #$r 135 0 Adult_Big#Not fair! I'm a big kid!
 ",
 "Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
@@ -117,10 +117,10 @@
 "winter_Tue6":"I wish I could treat my mom like the toddler she acts like all the time.$3#$e#It would probably be good for her...$2",
 
 "winter_Wed6":"Oh hello @.#$q 132/133 Show_Followup#Oh, do you want to show me something?
-#$r 132 0 Show_Nice#Show her the pretty flower you picked.
-#$r 132 0 Show_Nice#Show her the cool rock you found in the mines.
-#$r 132 0 Show_Nice#Show her your favorite plushie.
-#$r 133 0 Show_Diaper#Show her your diaper.",
+#$r 132 5 Show_Nice#Show her the pretty flower you picked.
+#$r 132 5 Show_Nice#Show her the cool rock you found in the mines.
+#$r 132 5 Show_Nice#Show her your favorite plushie.
+#$r 133 5 Show_Diaper#Show her your diaper.",
 "Show_Nice": "Oh wow @, that is very lovely! Thank you for showing me.#$b#You look so pleased! You're just like a little kid at show and tell.$1",
 "Show_Diaper": "Oh goodness @. That doesn't look like you're trying very hard to make it to the potty.$3",
 "Show_Followup":"Well don't you look excited!$1#$e#%Penny pats your head fondly.",
@@ -140,19 +140,19 @@
 "winter_Fri6":"#$p 102#I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.$1#$b#She's still not great at keeping them clean...$3",
 "winter_Sat4":"Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
 
-"winter_Sun8":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
+"winter_Sun6":"Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4
 #$q 134/135 Adult_Followup#I have a hard time thinking of you like you're an adult...
-#$r 134 0 Adult_Little#Honestly, I don't really feel like one.
-#$r 134 0 Adult_Little#Good! Cause I don't wanna be one.
+#$r 134 10 Adult_Little#Honestly, I don't really feel like one.
+#$r 134 10 Adult_Little#Good! Cause I don't wanna be one.
 #$r 135 0 Adult_Big#Not fair! I'm a big kid!
 ",
 "Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
 "Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1",
 "Adult_Followup":"#$p 135#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
 			
-	"Diaper_Change_Accept": "#Hop on the changing table!$l#$b#%Penny changes your diaper and smiles at you#$action DIAPER_CHANGE \"heart diaper\"#$h",
+	"Diaper_Change_Accept": "#Lets get that butt cleaned up!$l#$b#%Penny changes your diaper and smiles at you#$action DIAPER_CHANGE \"heart diaper\" \"second hand pants\"#$h",
   "Diaper_Change_Refuse": "Do you want to play the big kid today? I can see it sagging from here!",
-  "Diaper_Change_Followup": "#$p dirty_change_yes#Not now sweety!(This is an error, this should not be able to happen!)|Guess who gets their bottom changed?$h#$action DIAPER_CHANGE \"heart diaper\"#$h"
+  "Diaper_Change_Followup": "..."
 			},
 		},
 

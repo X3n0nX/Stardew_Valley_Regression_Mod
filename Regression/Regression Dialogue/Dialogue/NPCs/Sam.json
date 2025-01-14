@@ -142,9 +142,15 @@
 "Little_Excited": "Yeah!$3#$b#%Sam squeals happily and hides his blushing face.",
 "Little_Followup":"#$p 124#You always make me feel so little. It means so much to me, thank you.$4|I really want to go back to diapers full time.$4#$b#I just don't think I can while I'm still living with Mommy.$10",
 			
-				"Diaper_Change_Accept": "#Ah, hold still. Don't worry, i have to change Vincent all the time when i babysit!$l#$b#%Sam changes your diaper, like he does for Vincent.#$action DIAPER_CHANGE \"baby print diaper\" \"sams old pants\"#$h",
+        "Change_Diaper_Accept_BabyPrint": "Are those vincents? I... mmm.$8#$b#%You change sam while he is covering his eyes with both of his hands. How cute!#$b#...$9#$b#I kind of like them.$8#$action CHANGE_DIAPER_OTHERS \"sam\" \"baby print diaper\"#$b#Seams fine, a little small perhaps. Maybe another diaper would fit him better?",
+        "Change_Diaper_Accept_Training": "Are those... training pants?$8#$b#%You change sam into a pair of training pants.#$b#%He probably could make it to the potty, but you are pretty sure those pants will be soaked by the end of the hour.#$action CHANGE_DIAPER_OTHERS \"sam\" \"training pants\"#$b#%He probably would like another type of diaper more.",
+        "Change_Diaper_Accept_BigKids": "You sure i am ready for those?$1#$b#%You change sam into a pair of big kid undies.#$b#%He looks a bit disappointed. Maybe he isn't as big of a kid as he wants you to think he is.$1#$action CHANGE_DIAPER_OTHERS \"sam\" \"big kid undies\"",
+        "Change_Diaper_Accept_Joja": "Thats the one from the joja mart, right? I tried those myself, they fit better. But i made the couch wet last time when i...$8#$b#%You change sam into a joja diaper, while he is still realizing what he just admitted to#$b#I told mum it was vincent.$9#$action CHANGE_DIAPER_OTHERS \"sam\" \"joja diaper\"#$b#%Another brand might be better...",
+        "Change_Diaper_Accept_HeartDiaper": "A heart, how... cute?$1#$b#%You change sam into a heart diaper.#$b#%He playes it off like he doesn't like it all that much, considering the design. But being in those thick, cosy, crinkeling diapers, he can't keep up the fascade long.#$action CHANGE_DIAPER_OTHERS \"sam\" \"heart diaper\"#$b#I guess they are nice...$9#$b#You get the impression sam likes those way more than he is willing to admit. And he looks very cute in them.",
+				
+        "Diaper_Change_Accept": "#Ah, hold still. Don't worry, i have to change Vincent all the time when i babysit!$l#$b#%Sam changes your diaper, like he does for Vincent.#$action DIAPER_CHANGE \"baby print diaper\" \"sams old pants\"#$h",
 				"Diaper_Change_Refuse": "Oh, ok.",
-				"Diaper_Change_Followup": "#$p dirty_change_yes#No?(This is an error, this should not be able to happen!)|Sure thing, lets see...$h#$b#%Sam changes your diaper, he just can't it get quite right.#$action DIAPER_CHANGE \"baby print diaper\" \"sams old pants\"#$h"
+				"Diaper_Change_Followup": "..."
 			}
 		},
 

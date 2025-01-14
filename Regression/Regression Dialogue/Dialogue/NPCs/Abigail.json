@@ -7,9 +7,9 @@
 			"Entries": {
 
 
-				"Diaper_Change_Accept": "#Just lie down for me!$l#$b#%Abigail changes your diaper, using way to much baby powder#$action DIAPER_CHANGE \"joja diaper\"#$h",
+				"Diaper_Change_Accept": "#Just lie down for me!$l#$b#%Abigail changes your diaper, using way to much baby powder#$action DIAPER_CHANGE \"joja diaper\" \"stinky pants\"#$h",
 				"Diaper_Change_Refuse": "I was just asking.",
-				"Diaper_Change_Followup": "#$p dirty_change_yes#Not now sweety!(This is an error, this should not be able to happen!)|You changed your mind? Sure...$h#$action DIAPER_CHANGE \"joja diaper\"#$h"
+				"Diaper_Change_Followup": "..."
 			}
 		}
 	]

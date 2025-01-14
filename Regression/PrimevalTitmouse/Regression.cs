@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Xml.Serialization;
 using xTile.Dimensions;
@@ -31,18 +32,15 @@ namespace PrimevalTitmouse
     public class Regression : Mod
     {
         public static int lastTimeOfDay = 0;
-        public static bool morningHandled = true;
         public static Random rnd = new Random();
         public static bool started = false;
-        public Body body;
+        public static Body body;
         public static Config config;
         public static IModHelper help;
         public static IMonitor monitor;
         public bool shiftHeld;
         public static Data t;
         public static Farmer who;
-        private float tickCD1 = 0;
-        private float tickCD2 = 0;
         public static string dirtyEventToken = "dirtyEventToken";
         public static string generalEventToken = "generalEventToken";
         public static bool SelfIsFurry = false;
@@ -72,6 +70,8 @@ namespace PrimevalTitmouse
 
             h.Events.Player.Warped += new EventHandler<WarpedEventArgs>(OnWarped);
 
+            h.ConsoleCommands.Add("dialog", "Triggers a debug dialog. Usage: dialog <npcName> <message>", TriggerDialogCommand);
+            h.ConsoleCommands.Add("emote", "Sets an NPC's emote. Usage: set_emote <NPCName> <EmoteID>", SetEmoteCommand);
             // A multi action manager, as the game only allowes one action to be triggered
             // Example: $action ACTIONS CHANGE_DIAPER_OTHERS vincent \"baby print diaper\" ADD_DIALOG \"Thank you so much! Here!\" \"change_vincent\" GIVE_UNDERWEAR \"baby print diaper\"
             TriggerActionManager.RegisterAction("ACTIONS", this.ActionManager);
@@ -102,46 +102,97 @@ namespace PrimevalTitmouse
             GameStateQueryDelegate queryDelegate = (GameStateQueryDelegate)Delegate.CreateDelegate(typeof(GameStateQueryDelegate), this, "DIAPER_USED");
             GameStateQuery.Register("DIAPER_USED", queryDelegate);
 
+            GameStateQueryDelegate queryDelegateBad = (GameStateQueryDelegate)Delegate.CreateDelegate(typeof(GameStateQueryDelegate), this, "DIAPER_USED_BAD");
+            GameStateQuery.Register("DIAPER_USED_BAD", queryDelegateBad);
+
             WorldIsFurry = Helper.ModRegistry.IsLoaded("sion9000.AnthroCharactersContinued");
             SelfIsFurry = Helper.ModRegistry.IsLoaded("krystedez.FurryFarmer");
         }
+        private void SetEmoteCommand(string command, string[] args)
+        {
+            if (args.Length < 2)
+            {
+                Monitor.Log("Usage: set_emote <NPCName> <EmoteID>", LogLevel.Error);
+                return;
+            }
 
+            string npcName = args[0];
+            if (!int.TryParse(args[1], out int emoteId))
+            {
+                Monitor.Log("EmoteID must be an integer.", LogLevel.Error);
+                return;
+            }
 
+            NPC npc = Game1.getCharacterFromName(npcName);
+            if (npc == null)
+            {
+                Monitor.Log($"NPC '{npcName}' not found.", LogLevel.Error);
+                return;
+            }
+
+            if (emoteId < 0 || emoteId > 64)
+            {
+                Monitor.Log($"EmoteID '{emoteId}' is out of range. Valid IDs: 0-64.", LogLevel.Error);
+                return;
+            }
+
+            npc.doEmote(emoteId,false);
+
+            Monitor.Log($"Set {npcName}'s emote to {emoteId}.", LogLevel.Info);
+        }
+
+        /// <summary>
+        /// Handler for the "dialog" console command.
+        /// Usage: dialog <npcName> <message>
+        /// </summary>
+        private void TriggerDialogCommand(string command, string[] args)
+        {
+            if (args.Length < 2)
+            {
+                Monitor.Log("Usage: dialog <npcName> <message>", LogLevel.Error);
+                return;
+            }
+
+            string npcName = args[0];
+            string message = string.Join(" ", args, 1, args.Length - 1);
+
+            TriggerDebugDialog(npcName, message);
+        }
+        /// <summary>
+        /// Handler for the "dialog" console command.
+        /// Usage: trigger_dialog <npcName> <message>
+        /// </summary>
+
+        /// <summary>
+        /// Triggers a dialog for the specified NPC with the given message.
+        /// </summary>
+        /// <param name="npcName">Name of the NPC.</param>
+        /// <param name="message">Dialog message.</param>
+        private void TriggerDebugDialog(string npcName, string message)
+        {
+            NPC npc = Game1.getCharacterFromName(npcName);
+            if (npc != null)
+            {
+                // Create a new Dialogue object
+                Dialogue dialogue = new Dialogue(npc,"",message);
+
+                npc.setNewDialogue(dialogue, true, true);
+
+                // Show the dialogue to the player
+                Game1.drawDialogue(npc);
+
+                // Log to confirm the dialog was triggered
+                Monitor.Log($"Dialog triggered for {npcName}: {message}", LogLevel.Info);
+            }
+            else
+            {
+                Monitor.Log($"NPC '{npcName}' not found!", LogLevel.Warn);
+            }
+        }
 
         private void OnWarped(object sender, WarpedEventArgs e)
         {
-            // Some character have random changes after warped
-            foreach(var npc in e.NewLocation.characters)
-            {
-                var name = npc.Name.ToLower();
-                if(name == "vincent")
-                {
-                    if (Regression.rnd.Next(2) > 0) npcChange(npc);
-                    var undies = npcUnderwear(npc);
-                    var result = Regression.rnd.Next(7);
-                    // Vincent is oft messy or wet. Sometimes both
-                    if (result <= 2) undies.AddPoop((float)Math.Max(400, 900));
-                    if (result > 0 && result <= 5) undies.AddPee((float)Math.Max(300, 700));
-                }
-                else if(name == "jas")
-                {
-                    if (Regression.rnd.Next(2) > 0) npcChange(npc);
-                    var undies = npcUnderwear(npc);
-                    var result = Regression.rnd.Next(7);
-                    // Jas is less often messy, nearly as often wet
-                    if (result <= 2) undies.AddPoop((float)Math.Max(200, 700));
-                    if (result > 0 && result <= 5) undies.AddPee((float)Math.Max(300, 700));
-                }
-                else if (name == "jas")
-                {
-                    if (Regression.rnd.Next(2) > 0) npcChange(npc);
-                    var undies = npcUnderwear(npc);
-                    var result = Regression.rnd.Next(7);
-                    // Jas is less often messy, nearly as often wet
-                    if (result <= 2) undies.AddPoop((float)Math.Max(200, 700));
-                    if (result > 0 && result <= 5) undies.AddPee((float)Math.Max(300, 700));
-                }
-            }
+            return;
         }
         public bool DIAPER_USED(string[] query, GameStateQueryContext context)
         {            
@@ -159,10 +210,10 @@ namespace PrimevalTitmouse
                     default:
                         break;
                 }
-                var npc = NpcByName(targetNpcName);
+                var npc = NpcBody.ByName(targetNpcName,20);
                 if (npc == null) return false;
 
-                underwear = npcUnderwear(npc);
+                underwear = npc.underwear;
                 // we don't null check, that should not happen and if it does, we want to see that
             }
             switch (query.Length > 2 ? query[2]?.ToLower() : null)
@@ -173,6 +224,38 @@ namespace PrimevalTitmouse
                     return underwear.messiness > 0;
                 default:
                     return underwear.used;
+            }
+        }
+        public bool DIAPER_USED_BAD(string[] query, GameStateQueryContext context)
+        {
+            var underwear = body.underwear;
+
+            var targetNpcName = query.Length > 1 ? query[1] : null;
+            if (targetNpcName != null)
+            {
+                switch (targetNpcName)
+                {
+                    case "pee":
+                        return underwear.wetness > (underwear.absorbency / 2);
+                    case "poop":
+                        return underwear.messiness > (underwear.containment / 2);
+                    default:
+                        break;
+                }
+                var npc = NpcBody.ByName(targetNpcName, 20);
+                if (npc == null) return false;
+
+                underwear = npc.underwear;
+                // we don't null check, that should not happen and if it does, we want to see that
+            }
+            switch (query.Length > 2 ? query[2]?.ToLower() : null)
+            {
+                case "pee":
+                    return underwear.wetness > (underwear.absorbency / 2);
+                case "poop":
+                    return underwear.messiness > (underwear.containment / 2);
+                default:
+                    return underwear.used_bad; // if very wet OR slightly poopy (yes, even if a little, not like the specific questions on top)
             }
         }
 
@@ -235,6 +318,7 @@ namespace PrimevalTitmouse
         private void HandleMorning(object Sender, DayStartedEventArgs e)
         {
             body.HandleMorning();
+            Mail.CheckMail();
         }
 
         public static Dictionary<int, Dictionary<string, string>> replaceItems(IList<Item> items)
@@ -261,6 +345,10 @@ namespace PrimevalTitmouse
                 {
                     var underwear = new Underwear();
                     underwear.rebuild(entry.Value, items[entry.Key]);
+                    if(items[entry.Key] != null)
+                    {
+                        underwear.modData.CopyFrom(items[entry.Key].modData);
+                    }
                     items[entry.Key] = underwear;
                 }
             }
@@ -335,18 +423,7 @@ namespace PrimevalTitmouse
                 if (jsonLoaded.ContainsKey(configFile)) jsonLoaded.Remove(configFile);
             }
         }
-        public NPC NpcByName(string name, int range = 20)
-        {
-            name = name.ToLower();
-            foreach (var npc in Animations.NearbyVillager(range))
-            {
-                if (npc.Name.ToLower() == name)
-                {
-                    return npc;
-                }
-            }
-            return null;
-        }
+
         public bool StartAccident(string[] args, TriggerActionContext context, out string error)
         {
             
@@ -354,19 +431,10 @@ namespace PrimevalTitmouse
 
             if (args.Length < 2)
             {
-                error = "Parameter 1, target, has to be the name of an npc";
+                error = "Parameter 1, type, should be given!";
                 return false;
             }
-            var target = args[1];
-            target = target.ToLower();
-
-            if (args.Length < 3)
-            {
-                error = "Parameter 2, type, should be given!";
-                return false;
-            }
-            var typeStr = args[2];
-
+            var typeStr = args[1];
             IncidentType type = IncidentType.PEE;
             switch (typeStr)
             {
@@ -377,9 +445,17 @@ namespace PrimevalTitmouse
                     type = IncidentType.POOP;
                     break;
                 default:
-                    error = $"Parameter 2, type '{type}' is unknown!";
+                    error = $"Parameter 1, type '{type}' is unknown!";
                     return false;
             }
+
+            if (args.Length < 3)
+            {
+                error = "Parameter 2, target, be 'player' or an npc name";
+                return false;
+            }
+            var target = args.Length < 3 ? "player" : args[2];
+            target = target.ToLower();
 
 
             if (target == "player" || target == "farmer" || target == "self")
@@ -388,13 +464,13 @@ namespace PrimevalTitmouse
             }
             else
             {
-                var targetNpc = NpcByName(target);
+                var targetNpc = NpcBody.ByName(target,20);
                 if (targetNpc == null)
                 {
-                    error = $"Parameter 1, '{target}' not found in local npc list in 20 range";
+                    error = $"Parameter 2, '{target}' not found in local npc list in 20 range";
                     return false;
                 }
-                npcAccident(targetNpc, type);
+                targetNpc.accidentFromFullness(type);
             }
             return true;
         }
@@ -458,7 +534,7 @@ namespace PrimevalTitmouse
                 }
                 var target = args[1];
                 target = target.ToLower();
-                var targetNpc = NpcByName(target);
+                var targetNpc = NpcBody.ByName(target,20);
                 if (targetNpc == null)
                 {
                     error = $"Parameter 1, '{target}' not found in local npc list in 20 range";
@@ -473,7 +549,7 @@ namespace PrimevalTitmouse
                     return false;
                 }
 
-                var currentUnderwear = npcUnderwear(targetNpc);
+                var currentUnderwear = targetNpc.underwear;
                 // We create a new, untethered container first, of the same type.
                 Underwear oldUnderwear = new Underwear(currentUnderwear.name, 1);
                 // We "reset" that new container to the same informations (including wet or dirty), so making a copy of it.
@@ -492,13 +568,13 @@ namespace PrimevalTitmouse
                     }
                 }
 
-                npcChange(targetNpc, underwearName, args.Length > 3 ? args[3] : null);
+                targetNpc.change(underwearName, args.Length > 3 ? args[3] : null);
 
                 
                 //If the underwear returned is not removable, destroy it
                 if (!oldUnderwear.container.washable)
                 {
-                    var msg = Strings.InsertVariables(Strings.RandString(Regression.t.Change_Other_Destroyed), targetNpc,oldUnderwear.container);
+                    var msg = Strings.InsertVariables(Strings.RandString(Regression.t.Change_Other_Destroyed), targetNpc.npc,oldUnderwear.container);
                     Animations.Warn(msg);
                 }
                 else if (!who.addItemToInventoryBool(oldUnderwear, false)) //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
@@ -606,10 +682,10 @@ namespace PrimevalTitmouse
                 }
                 var target = args[1];
                 target = target.ToLower();
-                var targetNpc = NpcByName(target);
+                var targetNpc = NpcBody.ByName(target, -1);
                 if (targetNpc == null)
                 {
-                    error = $"Parameter 1, '{target}' not found in local npc list in 20 range";
+                    error = $"Parameter 1, '{target}' not found in global npc list";
                     return false;
                 }
                 if (args.Length < 3)
@@ -621,10 +697,10 @@ namespace PrimevalTitmouse
                 if(args.Length > 3)
                 {
                     eventToken = args[3];
-                    if (targetNpc.CurrentDialogue.Count > 0) RemoveDialogueFromNPC(targetNpc, eventToken);
+                    if (targetNpc.CurrentDialogue.Count > 0) targetNpc.RemoveDialogue(eventToken);
                 }
                 var msg = args[2].Replace("___", "#").Replace("$_", "$");
-                targetNpc.setNewDialogue(new Dialogue(targetNpc, eventToken, msg), true, false);
+                targetNpc.npc.setNewDialogue(new Dialogue(targetNpc.npc, eventToken, msg), true, false);
             }
             catch (Exception e)
             {
@@ -646,35 +722,24 @@ namespace PrimevalTitmouse
             //If time is moving, update our body state (Hunger, thirst, etc.)
             if (ShouldTimePass())
             {
-                this.body.HandleTime(timeInTick);
-                if (tickCD1 != 0) //Former Bug: When consuming items, they would give 2-3 goes at the "Handle eating and drinking." if statement below. Cause: This function would trigger multiple times while the if statement below was still true, causing it to fire multiple times.
-                {
-                    tickCD2 += 1; //This should trigger multiple times during the eating animation.
-                }
-                if (tickCD2 >= 2) //Setting this to 2 should be able to balance preventing double triggers and ensuring no loss in intentional triggers.
-                {
-                    tickCD1 = 0;
-                    tickCD2 = 0;
-                }
+                //body.HandleTime(timeInTick); to handle this cleaner, we move this to the time-changing tick
 
                 
                 // The following block makes npc (usually) not talk to you if you wear wet or messy pants... short of the special texts
-                
-                var newList = new List<NPC>();
                 var isFilthy = body.pants.used;
-                var list = Utility.GetNpcsWithinDistance(((Character)Animations.player).Tile, 10, (GameLocation)Game1.currentLocation);
-                foreach (var npc in list)
+                foreach (var npc in NpcBody.ByRange(10))
                 {
-                    if (npc.CurrentDialogue.Count > 0) RemoveDialogueFromNPC(npc, dirtyEventToken);
-                    if(npc.CurrentDialogue.Count > 0) RemoveDialogueFromNPC(npc, generalEventToken);
-                    
+                    if (npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(dirtyEventToken);
+                    if(npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(generalEventToken);
+
+                    if (npc.Age == 2 && !ChildrenAndDiapers) continue;
 
                     if (isFilthy)
                     {
                         var mod = "dirty";
-                        var responseKey = mod + Animations.responseKeyAdditionForState(npc);
+                        var responseKey = mod + Animations.responseKeyAdditionForState(npc.npc, true);
                         
-                        var randNpcString = Strings.RandString(GetVillagerReactions(npc,responseKey).ToArray());
+                        var randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey,mod).ToArray());
                         if (randNpcString == "") continue;
                         var npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
                         npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
@@ -682,182 +747,31 @@ namespace PrimevalTitmouse
                         {
                             npcStatement = Strings.ReplaceOptional(npcStatement, body.HasWetOrMessyDebuff());
                         }
-                        npcStatement = Strings.InsertVariables(npcStatement, npc);
-                        npc.setNewDialogue(new Dialogue(npc, dirtyEventToken, npcStatement), true, true);
+                        npcStatement = Strings.InsertVariables(npcStatement, npc.npc);
+                        npc.npc.setNewDialogue(new Dialogue(npc.npc, dirtyEventToken, npcStatement), true, true);
                     }
                     else if (npc.CurrentDialogue.Count <= 0)
                     {
                         var mod = "general";
-                        var responseKey = mod + Animations.responseKeyAdditionForState(npc);
+                        var responseKey = mod + Animations.responseKeyAdditionForState(npc.npc, false);
 
-                        var randNpcString = Strings.RandString(GetVillagerReactions(npc, responseKey).ToArray());
+                        var randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey, mod).ToArray());
                         if (randNpcString == "") continue;
                         var npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
                         if (npcStatement.Contains("DIAPER_CHANGE")) {
                             npcStatement = Strings.ReplaceOptional(npcStatement, body.HasWetOrMessyDebuff());
                         }
                         npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
-                        npcStatement = Strings.InsertVariables(npcStatement, npc);
+                        npcStatement = Strings.InsertVariables(npcStatement, npc.npc);
 
-                        npc.setNewDialogue(new Dialogue(npc, dirtyEventToken, npcStatement), true, true);
+                        npc.npc.setNewDialogue(new Dialogue(npc.npc, dirtyEventToken, npcStatement), true, true);
                     }
 
                 }
-
-
-            }
-
-            //Handle eating and drinking.
-            if (Game1.player.isEating && Game1.activeClickableMenu == null && tickCD1 == 0)
-            {
-                body.Consume(who.itemToEat.Name);
-                tickCD1 += 1;
-            }
-        }
-        private List<string> GetVillagerReactions(NPC npc, string responseKey)
-        {
-            var npcType = Animations.npcTypeList(npc);
-            List<string> stringList3 = new List<string>();
-            foreach (string key2 in npcType)
-            {
-                Dictionary<string, string[]> dictionary;
-                string[] strArray;
-                if (Animations.Data.Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
-                {
-                    stringList3 = new List<string>(); // We could remove this line again, but the general texts are more meant as fallback, they often don't fit well if custom texts are defined
-                    stringList3.AddRange((IEnumerable<string>)strArray);
-                }
-
-            }
-            return stringList3;
-        }
-        public static string npcDefaultUnderwear(NPC npc) {
-            switch (npc.Name.ToLower())
-            {
-                case "vincent":
-                    return "baby print diaper";
-                case "jas":
-                    return "lavender pullups";
-                default:
-                    return npc.Gender == Gender.Male ? "big kid undies" : "polka dot panties";
-            }
-        }
-        public static Container npcUnderwear(NPC npc)
-        {
-            return new Container(npc, "underwear", npcDefaultUnderwear(npc));
-        }
-        public static string npcDefaultPantsName(NPC npc)
-        {
-            switch (npc.Name.ToLower())
-            {
-                case "vincent":
-                    return "toddler pants";
-                case "jas":
-                    return "purple toddler skirts";
-                default:
-                    return npc.Gender == Gender.Male ? "pants" : "skirt";
-            }
-        }
-        public static Container npcPants(NPC npc)
-        {
-            var staticType = "blue jeans";
-            var defaultName = npcDefaultPantsName(npc);
-            var pants = new Container(npc, "pants", staticType);
-            if(pants.displayName == staticType && defaultName != "" && defaultName != pants.displayName)
-            {
-                pants.displayName = defaultName;
-                pants.description = defaultName;
-            }
-            return pants;
-        }
-
-        // a very simplified accident mechanic that assumes that the npc has an accident in a way that the diaper can be anywhere from full to empty
-        public static void npcAccident(NPC npc, IncidentType type)
-        {
-            
-            var underwear = npcUnderwear(npc);
-            var accidentSize = (float)Regression.rnd.Next((int)(underwear.GetCapacity(type) * 0.1f), (int)underwear.GetCapacity(type));
-            if (type == IncidentType.PEE)
-            {
-                npc.movementPause = 3000;
-                npc.doEmote(28, false);
-                underwear.AddPee(accidentSize);
-                Game1.playSound("wateringCan");
-            }
-            else
-            {
-                npc.movementPause = 3000;
-                npc.doEmote(12, false);
-                underwear.AddPoop(accidentSize);
-                Animations.AnimateMessingEnd(npc);
-            }
-           
-            
-            
-        }
-        public static void npcChange(NPC npc, string underwearName = null, string pantsName = null)
-        {
-            var underwear = npcUnderwear(npc);
-            if (underwearName != null)
-            {
-                underwear.ResetToDefault(underwearName);
-            }
-            else
-            {
-                underwear.ResetToDefault(npcDefaultUnderwear(npc));
-            }
-            
-            var pants = npcPants(npc);
-            pants.ResetToDefault(pants,0,0);
-        }
-        // This refers to the "general" interaction that can contain dialog to getting changed or doing changes, depending on the character interacted with. It could also be both.
-        public static bool canGetGiveChangeNpc(NPC npc)
-        {
-            int heartLevelForNpc = Game1.player.getFriendshipHeartLevelForNPC(npc.Name);
-            switch (npc.Name.ToLower()) {
-                case "vincent": // can get changed
-                    return heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Jodi") >= 4;
-                case "jas": // can get changed
-                    return heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Marnie") >= 4;
-                case "sam": // can get changed AND give changes
-                    return heartLevelForNpc >= 8 && Game1.player.dialogueQuestionsAnswered.Contains("124") || Game1.player.dialogueQuestionsAnswered.Contains("125");
-                case "jodi": // can give changes
-                    return heartLevelForNpc >= 6;
-                case "abigail":
-                    return heartLevelForNpc >= 8;
-                case "gus":
-                    return heartLevelForNpc >= 8;
-                case "maru":
-                    return heartLevelForNpc >= 4;
-                case "penny":
-                    return heartLevelForNpc > 6;
-                default:
-                    return false;
             }
         }
 
-        private void RemoveDialogueFromNPC(NPC npc, string keyRemove)
-        {
-            // Temporary stack to hold dialogues we want to keep
-            Stack<Dialogue> tempStack = new Stack<Dialogue>();
 
-            // Iterate through the stack to find the dialogue to remove
-            while (npc.CurrentDialogue.Count > 0)
-            {
-                Dialogue current = npc.CurrentDialogue.Pop();
-
-                if (current.TranslationKey != keyRemove)
-                {
-                    tempStack.Push(current); // Keep this dialogue if it doesn't match
-                }
-            }
-
-            // Restore the remaining dialogues back into the original stack
-            while (tempStack.Count > 0)
-            {
-                npc.CurrentDialogue.Push(tempStack.Pop());
-            }
-        }
 
         //Determine if we need to handle time passing (not the same as Game time passing)
         private static bool ShouldTimePass()
@@ -1022,32 +936,57 @@ namespace PrimevalTitmouse
             {
                 //Default to all underwear being available
                 List<string> allUnderwear = Strings.ValidUnderwearTypes();
-                List<string> availableUnderwear = allUnderwear;
-                bool underwearAvailableAtShop = false;
-                if(Game1.currentLocation is SeedShop)
+                if (Game1.currentLocation is SeedShop)
                 {
-                    //The seed shop does not sell the Joja diaper
-                    availableUnderwear.Remove("joja diaper");
-                    underwearAvailableAtShop = true;
-                } else if(Game1.currentLocation is JojaMart)
-                {
-                    //Joja shop ONLY sels the Joja diaper and a cloth diaper
-                    availableUnderwear.Clear();
-                    availableUnderwear.Add("joja diaper");
-                    availableUnderwear.Add("cloth diaper");
-                    underwearAvailableAtShop = true;
-                }
-
-                if(underwearAvailableAtShop)
-                {
-                    foreach(string type in availableUnderwear)
+                    foreach (string type in allUnderwear)
                     {
-                        Underwear underwear = new Underwear(type, 1);
-                        currentShopMenu.forSale.Add(underwear);
-                        currentShopMenu.itemPriceAndStock.Add(underwear, new ItemStockInformation(underwear.container.price, StardewValley.Menus.ShopMenu.infiniteStock));
+                        //The seed shop does not sell the Joja diaper
+                        if (type == "joja diaper") continue;
+                        //The seed shop does not sell every diaper and underwear as single items
+                        addUnderwearToShop(currentShopMenu, type);
                     }
+                } else if(Game1.currentLocation is JojaMart) {
+                    // Joja shop sells big brands now, "pampers" and "dry nites". You probably also find normal undies and simple cloth diapers there.
+                    // As such uses packages and has slightly lower prices (bulk)
+                    // This makes sense and mirrors the advantages and disadvantages of large chains in rual areas
+                    var type = "joja diaper";
+                    if (allUnderwear.Contains(type))
+                    {
+                        addUnderwearToShop(currentShopMenu, type, 10, 0.8f);
+                        addUnderwearToShop(currentShopMenu, type, 40, 0.7f);
+                    }
+                    type = "baby print diaper";
+                    if (allUnderwear.Contains(type))
+                    {
+                        addUnderwearToShop(currentShopMenu, type, 20, 0.8f);
+                        addUnderwearToShop(currentShopMenu, type, 60, 0.7f);
+                    }
+                    type = "lavender pullups";
+                    if (allUnderwear.Contains(type))
+                    {
+                        addUnderwearToShop(currentShopMenu, type, 10, 0.8f);
+                        addUnderwearToShop(currentShopMenu, type, 40, 0.7f);
+                    }
+                    type = "big kid undies";
+                    if (allUnderwear.Contains(type))
+                    {
+                        addUnderwearToShop(currentShopMenu, type, 3, 0.8f);
+                    }
+                    type = "cloth diaper";
+                    if (allUnderwear.Contains(type))
+                    {
+                        addUnderwearToShop(currentShopMenu, type, 5, 0.75f);
+                    }
+                    
                 }
             }
+        }
+
+        private static void addUnderwearToShop(ShopMenu shop, string type, int amount = 1, float priceMultiplier = 1f)
+        {
+            var underwear = new Underwear(type, amount);
+            shop.forSale.Add(underwear);
+            shop.itemPriceAndStock.Add(underwear, new ItemStockInformation( (int)Math.Ceiling((float)underwear.container.price * (float)amount * priceMultiplier), StardewValley.Menus.ShopMenu.infiniteStock));
         }
 
         //Check if we are at a natural water source
@@ -1140,7 +1079,7 @@ namespace PrimevalTitmouse
                 /////This is the highest priority (apparently?)
                 if (who.CurrentTool != null && who.CurrentTool is WateringCan && e.IsDown(SButton.LeftShift))
                 {
-                    this.body.DrinkWateringCan();
+                    body.DrinkWateringCan();
                     return;
                 }
 
@@ -1159,6 +1098,10 @@ namespace PrimevalTitmouse
 
                         Underwear OldUnderwear = new Underwear(body.underwear, 1);
 
+                        if (Regression.config.UnderwearChangeCauseExposure)
+                        {
+                            Animations.HandleVillager(body, false, false, false, true);
+                        }
                         body.ChangeUnderwear(activeObject);
                         who.reduceActiveItemByOne();
                         body.ResetPants();
@@ -1191,9 +1134,30 @@ namespace PrimevalTitmouse
                     
                 //If we're at a water source, and not holding underwear, drink from it.
                 if ((AtWaterSource()|| AtWell()) && e.IsDown(SButton.LeftShift))
-                  this.body.DrinkWaterSource();
+                  body.DrinkWaterSource();
             }
                 
+        }
+        public static bool ChildrenAndDiapers
+        {
+            get
+            {
+                if (Game1.player.dialogueQuestionsAnswered.Contains("102")) return false;
+                if (Game1.player.dialogueQuestionsAnswered.Contains("101")) return true;
+                return true;
+            }
+            set
+            {
+                if (value) {
+                    if (Game1.player.dialogueQuestionsAnswered.Contains("102")) Game1.player.DialogueQuestionsAnswered.Remove("102");
+                    if (!Game1.player.dialogueQuestionsAnswered.Contains("101")) Game1.player.DialogueQuestionsAnswered.Add("101");
+                }
+                else
+                {
+                    if (Game1.player.dialogueQuestionsAnswered.Contains("101")) Game1.player.DialogueQuestionsAnswered.Remove("101");
+                    if (!Game1.player.dialogueQuestionsAnswered.Contains("102")) Game1.player.DialogueQuestionsAnswered.Add("102");
+                }
+            }
         }
 
         //If approppriate, draw bars for Hunger, thirst, bladder and bowels
@@ -1247,6 +1211,13 @@ namespace PrimevalTitmouse
                 getValue: () => config.Messing,
                 setValue: value => config.Messing = value
             );
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Children and Diapers",
+                tooltip: () => "Would you be comfortable seeing diaper related dialogue from Vincent and Jas?",
+                getValue: () => ChildrenAndDiapers,
+                setValue: value => ChildrenAndDiapers = value
+            );
 
             configMenu.AddNumberOption(
                 mod: this.ModManifest,
@@ -1279,6 +1250,14 @@ namespace PrimevalTitmouse
                 getValue: () => config.PantsChangeRequiresHome,
                 setValue: value => config.PantsChangeRequiresHome = value
             );
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => "Underwear Change Causes Exposure",
+                tooltip: () => "Changing your underwear, by yourself, requires you to undress, as such exposing yourself. With this option activated you need to change your diapers at home or away from people. (Usually on) (UnderwearChangeCauseExposure)",
+                getValue: () => config.UnderwearChangeCauseExposure,
+                setValue: value => config.UnderwearChangeCauseExposure = value
+            );
+            
             configMenu.AddPageLink(
                 mod: this.ModManifest,
                 pageId: "Key Bindings",
@@ -1371,6 +1350,14 @@ namespace PrimevalTitmouse
                 tooltip: () => "How big the gains are if you stay dry/clean at night, compared to daytime. Usually 50 (half). (NighttimeGainMultiplier)",
                 getValue: () => config.NighttimeGainMultiplier,
                 setValue: value => config.NighttimeGainMultiplier = value,
+                min: 0, max: 200, interval: 10
+            );
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => "In Diaper on Purpose Modifier",
+                tooltip: () => "How big of a negativ impact has an accident in underwear if it was on purpose?. Usually 50 (half) as much as an actual accident.",
+                getValue: () => config.InUnderwearOnPurposeMultiplier,
+                setValue: value => config.InUnderwearOnPurposeMultiplier = value,
                 min: 0, max: 200, interval: 10
             );
             configMenu.AddNumberOption(
@@ -1510,23 +1497,77 @@ namespace PrimevalTitmouse
             Animations.DrawStateIcon(body, IncidentType.PEE, x3, y3 + 74);
             Animations.DrawStateIcon(body, IncidentType.POOP, x3, y3 + 74 + 74);
         }
+
+        /// <param name="oldTime">The original time in HHMM format (e.g., 1550 for 15:50).</param>
+        /// <param name="newTime">The new time in HHMM format (e.g., 1600 for 16:00).</param>
+        /// <returns>The difference in minutes as an integer.</returns>
+        /// <exception cref="ArgumentException">Thrown when input times are invalid.</exception>
+        public int GetTimeDifference(int oldTime, int newTime)
+        {
+            // Validate and convert HHMM to total minutes since midnight
+            int ConvertToMinutes(int time)
+            {
+                int hours = time / 100;
+                int minutes = time % 100;
+                if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59)
+                    throw new ArgumentException($"Invalid time format: {time}. Expected HHMM with HH=00-23 and MM=00-59.");
+                return hours * 60 + minutes;
+            }
+
+            int oldMinutes = ConvertToMinutes(oldTime);
+            int newMinutes = ConvertToMinutes(newTime);
+
+            // Calculate the difference, accounting for midnight wrap-around
+            return newMinutes >= oldMinutes
+                ? newMinutes - oldMinutes
+                : (1440 - oldMinutes) + newMinutes;
+        }
         private void ReceiveTimeOfDayChanged(object sender, TimeChangedEventArgs e)
         {
-            lastTimeOfDay = Game1.timeOfDay;
 
-            //If its 6:10AM, handle delivering mail
-            if (Game1.timeOfDay == 610)
-                Mail.CheckMail();
+            //lastTimeOfDay = Game1.timeOfDay;
 
-            if (Game1.timeOfDay < 630)
+            int newTime = e.NewTime;
+            int oldTime = e.OldTime;
+
+            // Calculate the difference
+            int difference = GetTimeDifference(oldTime, newTime);
+
+            //Monitor.Log($"Time changed from {oldTime} to {newTime}. Difference: {difference} minutes.", LogLevel.Debug);
+            if(difference < 120) // we make sure that this doesn't get out of hand. Daychange is handled seperatly.
+            {
+                // If all of the 24 hours would be done as a 1 minute tick, there would be 1440 ticks in theory 
+                /*float tickLen = 1440f;
+                float lengthTotal = (float) difference / (float)tickLen;*/
+                // But we handle this as fraction of an hour, so its 1/60 * minutes
+                float fractionOfAnHour = (float)difference * (1f / 60f);
+                body.HandleTime((float)difference * (1f/60f));
+
+                // NPC actions are based on chance. Chances that would be vastly different if every client would run them seperatly
+                if (!Game1.IsMultiplayer || Game1.IsServer)
+                {
+
+                    foreach (NPC npc in Utility.getAllCharacters())
+                    {
+                        new NpcBody(npc).RandomAction(fractionOfAnHour);
+                    }
+                        
+                }
+            }
+
+
+            // Update lastTimeOfDay
+            lastTimeOfDay = newTime;              
+
+            if (newTime < 630)
                 return;
 
             //If its earlier than 6:30, we aren't wet/messy don't notice that we're still soiled (or don't notice with ~5% chance even if soiled)
             if (rnd.NextDouble() < 0.0555555559694767 && body.underwear.wetness + (double)body.underwear.messiness > 0.0)
-                Animations.AnimateStillSoiled(this.body);
+                Animations.AnimateStillSoiled(body);
 
             if (rnd.NextDouble() < 0.0555555559694767 && (body.NeedsChangies(IncidentType.PEE) || body.NeedsChangies(IncidentType.POOP)))
-                Animations.AnimateShouldChange(this.body);
+                Animations.AnimateShouldChange(body);
 
             if (Game1.player.dialogueQuestionsAnswered.Contains("change_other_yes"))
                 Game1.player.dialogueQuestionsAnswered.Remove("change_other_yes");

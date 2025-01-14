@@ -2,35 +2,37 @@
 {
     public class Config
     {
-        public bool AlwaysNoticeAccidents;
-        public bool Debug;
-        public bool Easymode;
-        public string Lang;
-        public bool PantsChangeRequiresHome;
-        public bool Wetting;
-        public bool Messing;
-        public int FriendshipPenaltyBladderMultiplier;
-        public int FriendshipPenaltyBowelMultiplier;
-        public bool NoHungerAndThirst;
-        public int NighttimeLossMultiplier;
-        public int NighttimeGainMultiplier;
-        public int BladderLossContinenceRate;
-        public int BowelLossContinenceRate;
-        public int BladderGainContinenceRate;
-        public int BowelGainContinenceRate;
-        public int MaxBladderCapacity;
-        public int MaxBowelCapacity;
-        public int StartBladderContinence;
-        public int StartBowelContinence;
-        public bool ReadSaveFiles;
-        public bool WriteSaveFiles;
+        public bool AlwaysNoticeAccidents = true;
+        public bool Debug = false;
+        public bool Easymode = false;
+        public string Lang = "en";
+        public bool PantsChangeRequiresHome = true;
+        public bool UnderwearChangeCauseExposure = true;
+        public bool Wetting = true;
+        public bool Messing = true;
+        public int FriendshipPenaltyBladderMultiplier = 100;
+        public int FriendshipPenaltyBowelMultiplier = 200;
+        public bool NoHungerAndThirst = false;
+        public int NighttimeLossMultiplier = 50;
+        public int NighttimeGainMultiplier = 50;
+        public int InUnderwearOnPurposeMultiplier = 50;
+        public int BladderLossContinenceRate = 2;
+        public int BowelLossContinenceRate = 4;
+        public int BladderGainContinenceRate = 3;
+        public int BowelGainContinenceRate = 4;
+        public int MaxBladderCapacity = 600;
+        public int MaxBowelCapacity = 1000;
+        public int StartBladderContinence = 70;
+        public int StartBowelContinence = 90;
+        public bool ReadSaveFiles = true;
+        public bool WriteSaveFiles = false;
 
-        public int KeyGoInPants;
-        public int KeyPee;
-        public int KeyPoop;
-        public int KeyGoInToilet;
-        public int KeyPeeInToilet;
-        public int KeyPoopInToilet;
+        public int KeyGoInPants = 0;
+        public int KeyPee = 112;
+        public int KeyPoop = 113;
+        public int KeyGoInToilet = 0;
+        public int KeyPeeInToilet = 112;
+        public int KeyPoopInToilet = 113;
 
     }
 }

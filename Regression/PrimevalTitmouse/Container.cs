@@ -240,7 +240,7 @@ namespace PrimevalTitmouse
         public bool removable { get => InnerContainer != null ? InnerContainer.removable : _removable; set => _removable = value; }
         
         public bool used { get => wetness > 0 || messiness > 0; }
-
+        public bool used_bad { get => wetness > (absorbency / 2f) || messiness > 0; }
 
         private Container _innerContainer = null;
         public Container InnerContainer
@@ -267,10 +267,6 @@ namespace PrimevalTitmouse
         {
             modDataBaseKey = Underwear.modDataKey;
             modDataDictionary = underwear.modData;
-            if (name == "")
-            {
-                Regression.monitor.Log(modDataBaseKey + " had no name, and there is no fallback possible for underwear");
-            }
         }
         public Container(Body body,string subtype, string fallbackType)
         {
@@ -278,7 +274,7 @@ namespace PrimevalTitmouse
             modDataDictionary = Game1.player.modData;
             if(name == "")
             {
-                Regression.monitor.Log($"{modDataBaseKey} for body had no name, so fallback {fallbackType} was used");
+               // Regression.monitor.Log($"{modDataBaseKey} for body had no name, so fallback {fallbackType} was used");
                 ResetToDefault(fallbackType);
             }
         }
@@ -288,7 +284,7 @@ namespace PrimevalTitmouse
             modDataDictionary = npc.modData;
             if (name == "")
             {
-                Regression.monitor.Log($"{modDataBaseKey} for {npc.Name} had no name, so fallback {fallbackType} was used");
+                //Regression.monitor.Log($"{modDataBaseKey} for {npc.Name} had no name, so fallback {fallbackType} was used");
                 ResetToDefault(fallbackType);
             }
         }

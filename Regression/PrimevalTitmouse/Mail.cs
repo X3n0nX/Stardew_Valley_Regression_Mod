@@ -28,6 +28,7 @@ namespace PrimevalTitmouse
                 // field snacks might be better as a generic choise and are not sold 
                 //initialSupplies.Add(new Underwear("pawprint diaper", 0.0f, 0.0f, 40));
                 initialSupplies.Add(new Underwear("training pants", 5)); // training pants are washable, they might be a good start equipment and are "not that great"
+                initialSupplies.Add(new Underwear("joja diaper", 25)); // joja diapers are cheap and the player would want to replace them at some point, but they are a good night diaper
                 //If we're in Hard mode, also give pull-up.
                 /*if (!Regression.config.Easymode)
                 {
