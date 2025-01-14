@@ -30,8 +30,7 @@ Follow instructions provided by the individual prerequisite mods and programs.
 - Stardew Valley (version 1.6.14)
 - [SMAPI](https://smapi.io/) (version 4.1.8)
 - [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915?tab=files) (version 2.4.4)
-Highly recommended: (Allowes ingame configuration of the mod)
-- [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098?tab=files)
+- [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098?tab=files) Highly recommended: (Allowes ingame configuration of the mod)
 
 ### Installation
 1) Download the [latest release](https://github.com/zippity21/Stardew_Valley_Regression_Mod/releases). Be careful that you don't download the source code. The release is the one that contains Regression.dll.
