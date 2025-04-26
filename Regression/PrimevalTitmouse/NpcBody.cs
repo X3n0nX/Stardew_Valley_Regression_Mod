@@ -111,21 +111,21 @@ namespace PrimevalTitmouse
                 switch (npc.Name.ToLower())
                 {
                     case "vincent": // can get changed
-                        return true;//Regression.ChildrenAndDiapers && heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Jodi") >= 4;
+                        return Regression.ChildrenAndDiapers && heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Jodi") >= 4;
                     case "jas": // can get changed
-                        return true;//Regression.ChildrenAndDiapers && heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Marnie") >= 4;
+                        return Regression.ChildrenAndDiapers && heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Marnie") >= 4;
                     case "sam": // can get changed AND give changes
-                        return true;//heartLevelForNpc >= 8 && Game1.player.dialogueQuestionsAnswered.Contains("124") || Game1.player.dialogueQuestionsAnswered.Contains("125");
+                        return heartLevelForNpc >= 8 && Game1.player.dialogueQuestionsAnswered.Contains("124") || Game1.player.dialogueQuestionsAnswered.Contains("125");
                     case "jodi": // can give changes
                         return heartLevelForNpc >= 6;
                     case "abigail":
-                        return true;//heartLevelForNpc >= 8;
+                        return heartLevelForNpc >= 8;
                     case "gus":
                         return heartLevelForNpc >= 8;
                     case "maru":
-                        return true;//heartLevelForNpc >= 4 || Game1.currentLocation.Name == "Hospital";
+                        return heartLevelForNpc >= 4 || Game1.currentLocation.Name == "Hospital";
                     case "penny":
-                        return true;//heartLevelForNpc > 6;
+                        return heartLevelForNpc > 6;
                     default:
                         return false;
                 }
