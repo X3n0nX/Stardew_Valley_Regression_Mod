@@ -4,12 +4,13 @@
 			"LogName":"Maru",
 			"Action":"EditData",
 			"Target":"Characters/Dialogue/Maru",
-			"Entries": {
-				"Diaper_Change_Accept": "%Maru changes you quick and professional#$action DIAPER_CHANGE \"joja diaper\"#$h",
-				"Diaper_Change_Refuse": "I am here if you change your mind.",
-				"Diaper_Change_Followup": "..."
+      "Entries": {
 
-			}
+        "Diaper_Change_Accept": "{{i18n:Maru.Change_Diaper.Accept}}#$action DIAPER_CHANGE \"joja diaper\"#$h",
+        "Diaper_Change_Refuse": "{{i18n:Maru.Change_Diaper.Refuse}}",
+        "Diaper_Change_Followup": "{{i18n:Maru.Change_Diaper.Followup}}"
+
+      }
 		}
 	]
 }

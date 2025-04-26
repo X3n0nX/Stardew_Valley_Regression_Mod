@@ -245,8 +245,6 @@
       "but you didn't want to rip off your $UNDERWEAR_NAME$"
     ]
   },
-
-
   "Wake_Up_Underwear_State": [
     "You wake up in $INSPECT_UNDERWEAR_NAME$."
   ],
@@ -300,16 +298,6 @@
     "You smell something really stinky and realize your poop overflowed into your $PANTS_NAME$!",
     "You start crying as you feel a big log of poop squish out past your $UNDERWEAR_NAME$ and smear down your legs!",
     "Oh no! Your $UNDERWEAR_NAME$ couldn't hold the poop and it came out into your $PANTS_NAME$!"
-  ],
-  "Debuff_Wet_Pants": [
-    "Your pants are wet!",
-    "You wet your pants!",
-    "You peed your pants!"
-  ],
-  "Debuff_Messy_Pants": [
-    "Your pants are messy!",
-    "Your pants are poopy!",
-    "You messed your pants!"
   ],
   "Potty_Dialogs": {
     "vincent": {
@@ -2158,5 +2146,59 @@
       "removable": false,
       "durability": 0
     }
-  }
+  },
+  "Numeric_Translation": {
+    "single": "a",
+    "plural": "a pair of",
+    "multiple times": "multiple times",
+    "once": "once",
+    "twice": "twice",
+    "one time": "one time",
+    "two times": "two times",
+    "three times": "three times",
+    "four times": "four times",
+    "five times": "five times",
+    "times": "times"
+  },
+  "Debuffs": {
+    "Regression.Wet": {
+      "name": "Wet",
+      "type": "Defense",
+      "description": [
+        "Your pants are wet!",
+        "You wet your pants!",
+        "You peed your pants!"
+      ]
+    },
+    "Regression.Messy": {
+      "name": "Messy",
+      "type": "Speed",
+      "description": [
+        "Your pants are messy!",
+        "Your pants are poopy!",
+        "You messed your pants!"
+      ]
+    }
+  },
+  "Underwear_States": {
+    "wet": {
+      "text_description": "wet",
+      "text_display_name": "wet"
+    },
+    "messy": {
+      "text_description": "messy",
+      "text_display_name": "messy"
+    },
+    "wet_and_messy": {
+      "text_description": "wet and messy",
+      "text_display_name": "wet and messy"
+    },
+    "drying": {
+      "text_description": "drying",
+      "text_display_name": "drying"
+    }
+  },
+  "Passby": [
+    "Oh wow, your diaper is all wet!"
+  ],
 }

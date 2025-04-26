@@ -111,21 +111,21 @@ namespace PrimevalTitmouse
                 switch (npc.Name.ToLower())
                 {
                     case "vincent": // can get changed
-                        return Regression.ChildrenAndDiapers && heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Jodi") >= 4;
+                        return true;//Regression.ChildrenAndDiapers && heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Jodi") >= 4;
                     case "jas": // can get changed
-                        return Regression.ChildrenAndDiapers && heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Marnie") >= 4;
+                        return true;//Regression.ChildrenAndDiapers && heartLevelForNpc >= 6 && Game1.player.getFriendshipHeartLevelForNPC("Marnie") >= 4;
                     case "sam": // can get changed AND give changes
-                        return heartLevelForNpc >= 8 && Game1.player.dialogueQuestionsAnswered.Contains("124") || Game1.player.dialogueQuestionsAnswered.Contains("125");
+                        return true;//heartLevelForNpc >= 8 && Game1.player.dialogueQuestionsAnswered.Contains("124") || Game1.player.dialogueQuestionsAnswered.Contains("125");
                     case "jodi": // can give changes
                         return heartLevelForNpc >= 6;
                     case "abigail":
-                        return heartLevelForNpc >= 8;
+                        return true;//heartLevelForNpc >= 8;
                     case "gus":
                         return heartLevelForNpc >= 8;
                     case "maru":
-                        return heartLevelForNpc >= 4 || Game1.currentLocation.Name == "Hospital";
+                        return true;//heartLevelForNpc >= 4 || Game1.currentLocation.Name == "Hospital";
                     case "penny":
-                        return heartLevelForNpc > 6;
+                        return true;//heartLevelForNpc > 6;
                     default:
                         return false;
                 }
@@ -237,7 +237,7 @@ namespace PrimevalTitmouse
                     if (underwear.wetness > (underwear.absorbency / 2f)) getChangedChance = 0.7f;
                     break; // Always does it in secret
                 case "abigail":
-                    if (Game1.player.getFriendshipHeartLevelForNPC(npc.Name) < 4) return false;
+                    //if (Game1.player.getFriendshipHeartLevelForNPC(npc.Name) < 4) return false;
 
                     getChangedChance = 0.4f; // adults tend to get changed for other reasons, like getting out of slightly wet diapers
                     if (underwear.wetness > (underwear.absorbency / 2f)) getChangedChance = 0.9f;
@@ -280,7 +280,7 @@ namespace PrimevalTitmouse
                     pottyChance = incidentType == IncidentType.PEE ? 0.2f : 0.6f;
                     break; // Always does it in secret
                 case "abigail":
-                    if (Game1.player.getFriendshipHeartLevelForNPC(npc.Name) < 4) return false;
+                    //if (Game1.player.getFriendshipHeartLevelForNPC(npc.Name) < 4) return false;
                     pottyChance = incidentType == IncidentType.PEE ? 0.3f : 0.8f;
                     break;
                 default:

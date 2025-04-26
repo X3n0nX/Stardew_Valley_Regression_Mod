@@ -1,0 +1,527 @@
+{
+  // Dialogues for Gus
+
+  "Gus.Dialogue.Saloon4": "Good evening. Make yourself at home.#$e#%Gus leans in close so no one else can hear.#$b#If you need to change you can use my room. It's private.$1",
+  "Gus.Dialogue.Saloon8": "Must be nice to just go wherever� I�m holding a big one in, now, honestly.#$b#I can't just step away when the saloon is packed!$1",
+  "Gus.Dialogue.Mon2": "Yeah, I know a lot about the people living here.#$e#That's one of the benefits of being a bartender.$h#$e#Sometimes I hear too much...#$b#%Gus winks and glances down at your pants.",
+  "Gus.Dialogue.Sat4": "Are you much of a chef, @?#$e#If you have a kitchen and some recipes, you can cook some useful dishes.#$e#Though it's easier picturing you getting fed than doing the cooking!$1",
+
+  // Dialogues for Jas
+
+  "Jas.Dialogue.Introduction": "...$u#$b#Hi...$u",
+
+  "Jas.Dialogue.spring_Mon": "Oh...Are you looking for Aunt Marnie?$u|%You notice Jas doing a potty dance before she catches you watching.#$b#%She freezes in place and blushes hard. You can hear a soft hiss.#$e#U-hmmm...$2",
+  "Jas.Dialogue.spring_Mon8": "It's fun to live on a farm.$h|%You notice Jas doing a potty dance before she catches you watching. She stops to smile and wave at you.#$b#%Her eyes suddenly widen and a blush spreads across her cheeks as you hear a soft hiss, but she doesn't seem too concerned.#$e#Hi @!",
+  "Jas.Dialogue.spring_Tue6": "You can play with my dolls if you want to. Just make sure to brush their hair when you're done.|Hi @. Can I show you something?#$b#%Jas holds up a well loved lamb plushie she was playing with.#$b#This is Bethany. She's my favorite!",
+  "Jas.Dialogue.spring_Wed2": "...Hi.$u|Vincent doesn't try to use the potty like I do.$3#$b#He's gross.",
+  "Jas.Dialogue.spring_Wed6": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Vincent told me he likes using his diapers.$3#$e#I do too, but I'm a big girl, so I'm trying to use the potty like I'm supposed to.",
+  "Jas.Dialogue.spring_Wed10": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Vincent told me he likes using his diapers.#$e#I do too, but I'm a big girl, so I'm trying to use the potty like I'm supposed to.$3#$b#It's not very fun. I wish I wasn't supposed to...$2",
+  "Jas.Dialogue.spring_Thu": "I'm not supposed to talk to strangers...$u|%Jas is quietly sucking her thumb until she notices you nearby. She quickly puts her hands at her side and blushes.#$e#�$2",
+  "Jas.Dialogue.spring_Thu4": "Miss Penny is teaching me how to write in cursive.|%Jas is quietly sucking her thumb. She smiles when she notices you nearby and waves with her freehand.",
+  "Jas.Dialogue.spring_Fri2": "Do you like my bow? It would probably look cute on you too!",
+  "Jas.Dialogue.spring_Sat8": "I had an accident at the library yesterday...$3#$b#I told Miss Penny it was Vincent though, so I got away with it.$1#$e#I'm very clever.$4",
+  "Jas.Dialogue.spring_Sun6": "Shane's gone a lot, and Aunt Marnie is busy all the time... so I'm thankful for all my toys.$h#$e#Do you want to play with me? We could play house!",
+  "Jas.Dialogue.spring_12_1": "The egg festival is tomorrow!$1#$e#I don't want to win the egg hunt, I only want to get some chocolate.",
+  "Jas.Dialogue.spring_12_2": "The egg festival is tomorrow!$1#$e#I don't want to win the egg hunt, I only want to get some chocolate.",
+
+  "Jas.Dialogue.summer_Mon8": "It's fun to live on a farm.$h|I'm a big girl, see!$1#$b#%Jas lifts her skirt up high to show off her pull ups. She seems very proud.#$e#Told you.$4",
+  "Jas.Dialogue.summer_Wed4": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Aunt Marnie says I'm a big girl even if I have accidents sometimes.",
+  "Jas.Dialogue.summer_Wed8": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|I'm a big girl and big girls use the potty when they have to go.#$b#It's really hard though, and I still have accidents...$2#$e#Vincent doesn't have to worry about the potty...$3",
+  "Jas.Dialogue.summer_Thu6": "Miss Penny is teaching me how to write in cursive.|Yesterday, Miss Penny walked away to talk to Mr. Gunther and then Vincent pooped his diaper on purpose!#$b#He told me I should do it too, but I didn't because I'm a big girl and I only get poopy on accident now.$4",
+  "Jas.Dialogue.summer_Fri2": "Uhm... @? Do you know where Aunt Marn...!$3#$b#%Jas blushes while suddenly holding very still.#$e#Uhm... N-never mind...$2",
+  "Jas.Dialogue.summer_Fri6": "@? Do you know where Aunt Marn...!$3#$b#%Jas blushes while suddenly holding very still. After a bit she sighs and smiles up at you.#$e#Never mind, I don't have to go anymore.",
+  "Jas.Dialogue.summer_Fri10": "@? Do you know where Aunt Marn...!$3#$b#%Jas blushes as her knees seem to bend on their own. After a bit she sighs and smiles up at you.#$e#Never mind, I don't have to go anymore.#$e#%Jas doesn't seem to mind the smell coming from her pull ups.",
+  "Jas.Dialogue.summer_Sat4": "I didn't make it to the potty yesterday and Aunt Marnie said that pull ups are only for girls who are trying to use the potty.$3#$e#I'm going try real hard today because I am a big girl!",
+  "Jas.Dialogue.summer_Sun6": "Can you keep a secret? Sometimes I go potty in my pull up on purpose when I'm playing.#$b#It's more fun than having to stop playing!$1",
+  "Jas.Dialogue.summer_Sun10": "Can you keep a secret?#$b#%Jas glances around before grunting softly, pushing a mess into her pull ups. She looks up at you with a relieved smile and a deep blush.#$b#Oops!$1",
+  "Jas.Dialogue.summer_3_1": "It's my birthday tomorrow! Aunt Marnie always gets me pink cake. It's my favorite!$1",
+  "Jas.Dialogue.summer_3_2": "It's my birthday tomorrow! Aunt Marnie always gets me pink cake. It's my favorite!$1",
+
+  "Jas.Dialogue.fall_Mon": "Oh...Are you looking for Aunt Marnie?$u|%You notice Jas doing a potty dance before she catches you watching.#$b#%She freezes in place and blushes hard. You can hear a soft hiss.#$e#U-hmmm...$2",
+  "Jas.Dialogue.fall_Mon8": "It's fun to live on a farm.$h|%You notice Jas doing a potty dance before she catches you watching. She stops to smile and wave at you.#$b#%Her eyes suddenly widen and a blush spreads across her cheeks as you hear a soft hiss, but she doesn't seem too concerned.#$e#Hi @!",
+  "Jas.Dialogue.fall_Tue6": "You can play with my dolls if you want to. Just make sure to brush their hair when you're done.|Hi @. Can I show you something?#$b#%Jas holds up a well loved lamb plushie she was playing with.#$b#This is Bethany. She's my favorite!",
+  "Jas.Dialogue.fall_Wed2": "...Hi.$u|Vincent doesn't try to use the potty like I do.$3#$b#He's gross.",
+  "Jas.Dialogue.fall_Wed6": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Vincent told me he likes using his diapers.$3#$e#I do too, but I'm a big girl, so I'm trying to use the potty like I'm supposed to.",
+  "Jas.Dialogue.fall_Wed10": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Vincent told me he likes using his diapers.#$e#I do too, but I'm a big girl, so I'm trying to use the potty like I'm supposed to.$3#$b#It's not very fun. I wish I wasn't supposed to...$2",
+  "Jas.Dialogue.fall_Thu": "I'm not supposed to talk to strangers...$u|%Jas is quietly sucking her thumb until she notices you nearby. She quickly puts her hands at her side and blushes.#$e#�$2",
+  "Jas.Dialogue.fall_Thu4": "Miss Penny is teaching me how to write in cursive.|%Jas is quietly sucking her thumb. She smiles when she notices you nearby and waves with her freehand.",
+  "Jas.Dialogue.fall_Fri2": "Do you like my bow? It would probably look cute on you too!",
+  "Jas.Dialogue.fall_Sat8": "I had an accident at the library yesterday...$3#$b#I told Miss Penny it was Vincent though, so I got away with it.$1#$e#I'm very clever.$4",
+  "Jas.Dialogue.fall_Sun6": "Shane's gone a lot, and Aunt Marnie is busy all the time... so I'm thankful for all my toys.$h#$e#Do you want to play with me? We could play house!",
+  "Jas.Dialogue.fall_15_1": "I'm excited for the fair tomorrow. Last year Shane won me a whole bunch of toys!",
+  "Jas.Dialogue.fall_15_2": "I'm excited for the fair tomorrow. Last year Shane won me a whole bunch of toys!",
+  "Jas.Dialogue.fall_26_1": "I'm going to do the whole maze tomorrow and I'm going going to be scared once!",
+  "Jas.Dialogue.fall_26_2": "I'm going to do the whole maze tomorrow and I'm going going to be scared once!",
+
+  "Jas.Dialogue.winter_Mon8": "It's fun to live on a farm.$h|I'm a big girl, see!$1#$b#%Jas lifts her skirt up high to show off her pull ups. She seems very proud.#$e#Told you.$4",
+  "Jas.Dialogue.winter_Wed4": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Aunt Marnie says I'm a big girl even if I have accidents sometimes.",
+  "Jas.Dialogue.winter_Wed8": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|I'm a big girl and big girls use the potty when they have to go.#$b#It's really hard though, and I still have accidents...$2#$e#Vincent doesn't have to worry about the potty...$3",
+  "Jas.Dialogue.winter_Thu6": "Miss Penny is teaching me how to write in cursive.|Yesterday, Miss Penny walked away to talk to Mr. Gunther and then Vincent pooped his diaper on purpose!#$b#He told me I should do it too, but I didn't because I'm a big girl and I only get poopy on accident now.$4",
+  "Jas.Dialogue.winter_Fri2": "Uhm... @? Do you know where Aunt Marn...!$3#$b#%Jas blushes while suddenly holding very still.#$e#Uhm... N-never mind...$2",
+  "Jas.Dialogue.winter_Fri6": "@? Do you know where Aunt Marn...!$3#$b#%Jas blushes while suddenly holding very still. After a bit she sighs and smiles up at you.#$e#Never mind, I don't have to go anymore.",
+  "Jas.Dialogue.winter_Fri10": "@? Do you know where Aunt Marn...!$3#$b#%Jas blushes as her knees seem to bend on their own. After a bit she sighs and smiles up at you.#$e#Never mind, I don't have to go anymore.#$e#%Jas doesn't seem to mind the smell coming from her pull ups.",
+  "Jas.Dialogue.winter_Sat4": "I didn't make it to the potty yesterday and Aunt Marnie said that pull ups are only for girls who are trying to use the potty.$3#$e#I'm going try real hard today because I am a big girl!",
+  "Jas.Dialogue.winter_Sun6": "Can you keep a secret? Sometimes I go potty in my pull up on purpose when I'm playing.#$b#It's more fun than having to stop playing!$1",
+  "Jas.Dialogue.winter_Sun10": "Can you keep a secret?#$b#%Jas glances around before grunting softly, pushing a mess into her pull ups. She looks up at you with a relieved smile and a deep blush.#$b#Oops!$1",
+  "Jas.Dialogue.winter_22_1": "I finally got the perfect gift for my secret friend. I want to tell them what I got so bad!$1#$b#But then it wouldn't be a secret.$4",
+  "Jas.Dialogue.winter_22_2": "I finally got the perfect gift for my secret friend. I want to tell them what I got so bad!$1#$b#But then it wouldn't be a secret.$4",
+
+  // Diaperchange for Jas
+
+  "Jas.Change_Diaper.Accept_BabyPrint": "*Du Kniest dich hin und zeigst Jas eine Windel mit Baby Motiven* Neeiin! Ich bin ein großes Mädchen! Ich kann schon aufs Töpfchen gehen... manchmal! *Sie sieht verärgert aus, aber muss gewickelt werden*$3#$b#%Du wickelst Jas in eine frische Windel mit Baby Motiven während sie ein wenig quengelt.#$b#...$3#$b#Wollte Pullups$2#$b#...$3",
+  "Jas.Change_Diaper.Accept_BabyPrint_Post": "Jas wirkt ein wenig unglücklich, aber wieder gut geschütz.",
+
+  "Jas.Change_Diaper.Accept_Training": "*Du Kniest dich hin und zeigst Jas ein paar Trainings Höschen.* Pullups!$1#$b#%Du ziehst Jas ein frisches Trainings Höschen an.$3#$b#Sag es nicht Tante Marn. Sie sagt, ich soll aufs Töpchen gehen wenn ich nicht wieder Windeln tragen möchte.$3",
+  "Jas.Change_Diaper.Accept_Training_Post": "Jas sieht glücklich aus. Sie wird es wahrscheinlich wieder nicht bis aufs Töpfchen schaffen, aber das ist schon in Ordnung.",
+
+  "Jas.Change_Diaper.Accept_Lavender": "*Du zeigst Jas ein paar Lavender Pullups. Sie sieht erst verwirrt aus, dann erkennt Sie sie aber* Oh, das sind die, die laut meiner Tante sehr teuer sind!$0#$b#%Ohne große Mühe ziehst du ihr die Lavender Pullups an.$3#$b#Yey! Sie sind kuschlig und sehen super süß aus!$4",
+  "Jas.Change_Diaper.Accept_Lavender_Post": "Jas wird sie wahrscheinlich nicht lange trocken halten, aber sie sieht glücklich aus.",
+
+  "Jas.Change_Diaper.Accept_BigKids": "Oh! Unterhosen für wirklich große Kinder! Tante Marn sagt, die bekomme ich wenn meine Pullups trocken bleiben, aber das kann ich jetzt schon!$1#$b#%Du ziehst Jas die Unterhosen für große Kinder an.#$b#Das muss ich Vincent sagen! Er wird sich so freuen! *Sie wirkt aufgeregt*$1",
+  "Jas.Change_Diaper.Accept_BigKids_Post": "Marnie würde sich aufregen wenn Sie Jas in ihren schmutzigen Sachen sieht. Etwas, was wahrscheinlich schon bald eintreten wird...",
+
+  "Jas.Change_Diaper.Accept_Dinos": "Mmm, das sind Dinos! Ich glaube die sind für Jungs. *Jas sieht ein wenig enttäuscht über das Design aus*$2#$b#%Du ziehst Jas die Dinosaurier Unterhosen an.#$b#Ich bin ein richtiges Mädchen!$2#$b#%Jas sieht wirklich sehr enttäuscht aus, aber Schlussendlich ist sie wieder trocken.",
+  "Jas.Change_Diaper.Accept_Dinos_Post": "Du fragst dich ob der Schutz ausreichend ist während Jas davon läuft als hätte sie Frösche in ihrer Unterhose.",
+
+  "Jas.Change_Diaper.Refuse_Pretext": "Ist schon gut, ich bin schon ein großes Mädchen!",
+  "Jas.Change_Diaper.Refuse_SlightlyWet": "was Jas wahrscheinlich nicht ist, aber für den Moment muss sie nicht wirklich gewickelt werden... Noch nicht.",
+  "Jas.Change_Diaper.Refuse_UsedBad": "Du siehst wie Jas in ihrer vollen Windel davonwatschelt. Du jedenfalls, bist da anderer Meinung.",
+  "Jas.Change_Diaper.Followup": "...",
+
+  // Dialogues for Jodi
+
+  "Jodi.Dialogue.Introduction": "Oh! Bist du es @? Ich bin Jodi.#$e#Hast du mein Paket erhalten? Ich hoffe es reicht für den Anfang.#$e#${Schau nicht so beschämt, der alte Bauernhof ist sehr beeindruckend! Ich möchte nicht, dass unser neuer kleiner Bauer unvorbereitet überrascht wird, wenn er ein wenig unachtsam ist.$1^Schau nicht so beschämt, der alte Bauernhof ist sehr beeindruckend! Ich möchte nicht, dass unsere neue kleine Bäuerin unvorbereitet überrascht wird, wenn sie ein wenig unachtsam ist.}$",
+
+  "Jodi.Dialogue.spring_Mon": "${Da ist ja der kleine Bauer!^Da ist ja die kleine Bäuering!}$#$e#Wie behandeln dich die Leute aus der Stadt?",
+  "Jodi.Dialogue.spring_Mon6": "${Da ist ja der kleine Bauer!^Da ist ja die kleine Bäuering!}#$b#%Jodi zieht deinen Hosenbund nach hinten, um ihn kurz zu kontrollieren.#$e#Fürs erste sollte das in Ordnung sein",
+  "Jodi.Dialogue.spring_Tue4": "#$c .5#Hast du schon Tiere auf deiner Farm? Kannst du mir sagen wie die Kuh macht?#$e#Richtig! Die Kuh mach MOO!$1|Hast du schon Tiere auf deiner Farm? Kannst du mir sagen wie das Huhn macht?#$e#Richtig! Das Huhn macht boack boack!$1",
+  "Jodi.Dialogue.spring_Wed2": "Would you like to tell me all about your farm?#$e#%Jodi smiles at you while you gush about how pretty your farm is.#$e#What a clever little boy you are.$1^What a clever little girl you are.$1",
+  "Jodi.Dialogue.spring_Wed8": "Would you like to tell me all about your farm?#$e#%Jodi smiles at you while you gush about how pretty your farm is. You barely even notice her hand check to see if your pants are still dry.#$e#What a clever little boy you are.$1^What a clever little girl you are.$1",
+  "Jodi.Dialogue.spring_Thu2": "Sam still sleeps with his old teddy bear, though, he tries to hide it in the morning.#$e#I don't know what to say to make him feel less embarrassed about it.$2",
+  "Jodi.Dialogue.spring_Fri": "How are you doing @? Are you eating enough?#$e#...Do you have enough... supplies?",
+  "Jodi.Dialogue.spring_Fri4": "How are you doing @? Are you eating enough?#$e#I bet you've already run out of the diapers I gave you by now.#$e#I sure hope your farm is making enough money to buy more!$1#$e#",
+  "Jodi.Dialogue.spring_Sat4": "I'm so glad you're trying to improve that old farm.|Vincent fell asleep on my lap yesterday.#$e#It was so precious, I never wanted it to end!$1",
+  "Jodi.Dialogue.spring_Sun6": "Being motherly makes me feel important.#$b#Even if the little ones aren't my own!$1#$e#%Jodi gives you a wink.",
+
+  "Jodi.Dialogue.summer_Mon6": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve and smile up at her.#$e#Awwwww.",
+  "Jodi.Dialogue.summer_Mon10": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve as your thumb finds its way into your mouth without you noticing.#$e#Awwwww. Well aren't you a precious little boy.^Well aren't you a precious little girl.$1",
+  "Jodi.Dialogue.summer_Tue6": "Sam tries really hard to act like a big kid, but he still melts when I pet his hair just like when he was a little boy.|Sometimes I catch Sam watching me change Vincent.#$e#He almost looks jealous.$1",
+  "Jodi.Dialogue.summer_Wed8": "Oh hi there @!#$q 110/111 Show_Followup#Oh, do you want to show me something?#$r 110 0 Show_Nice#Show her the pretty flower you picked.#$r 110 0 Show_Nice#Show her the cool rock you found in the mines.#$r 110 0 Show_Nice#Show her your favorite plushie.#$r 111 0 Show_Diaper#Show her your diaper.",
+  "Jodi.Dialogue.summer_Thu4": "That farm seems like a lot of work for such a little farmer! I guess you're only pretending to be so little.#$e#%Jodi winks at you.",
+  "Jodi.Dialogue.summer_Fri8": "#$p 102#Maintaining a household is difficult work... but somebody has to do it.|Vincent doesn't show any signs of getting out of diapers any time soon.#$e#I guess he'll just be my little boy for a little bit longer.$1",
+  "Jodi.Dialogue.summer_Sat": "%Jodi is humming a soft song to herself while she goes about her business. It's familiar somehow.",
+  "Jodi.Dialogue.summer_Sat10": "%Jodi is humming a soft song to herself while she goes about her business. It's familiar somehow.#$e#%She notices you paying attention and smiles. Without stopping her hum, she pulls you into a hug, letting you feel the comforting hum in her chest.#$e#Looks like someone might need a nap.",
+  "Jodi.Dialogue.summer_Sun6": "Oh no! @! Is that a boo boo on your finger? What happened?$2#$b#%You tell Jodi about hurting your finger on the farm with tears in your eyes while she puts on a bandaid for you. She gives it a kiss for good measure.#$e#There we go, all better. Have fun playing!",
+  "Jodi.Dialogue.summer_Sun10": "Oh no! @! Is that a boo boo on your finger? What happened?$2#$b#%You tell Jodi about hurting your finger on the farm with tears in your eyes while she puts on a bandaid for you.#$b#She gives it a kiss for good measure before patting your bottom to send you away.#$e#There we go, all better. Have fun playing!",
+
+  "Jodi.Dialogue.fall_Mon2": "#$p 102#There's the little farmer!|Sam doesn't think I notice that Vincent's diapers run out faster than they should.#$e#I guess I still have two little boys, don't I!$1",
+  "Jodi.Dialogue.fall_Tue4": "#$c .5#Do you have any animals on your farm? Can you tell me what the dog says?#$e#That's right! Dog says bark!$1|Do you have any animals on your farm? Can you tell me what the cat says?#$e#That's right! Cat says meow!$1",
+  "Jodi.Dialogue.fall_Wed8": "If you ever need help with one of your little accidents, don't be afraid to ask, okay?#$e#You're so cute when you're blushing!$1",
+  "Jodi.Dialogue.fall_Thu2": "Are you hungry?#$b#%Jodi pulls out a granola bar for you and smiles warmly as you take it.#$e#That should hold you over for now.",
+  "Jodi.Dialogue.fall_Fri2": "#$p 102#I bet you've already run out of the diapers I gave you by now.|I guess I'd have less work to do if Vincent was potty trained.#$e#At least boys are easy to clean.",
+  "Jodi.Dialogue.fall_Sat": "There's the little farmer!#$e#How's the town treating you?",
+  "Jodi.Dialogue.fall_Sat8": "There's the little farmer!#$b#%Jodi pulls the back your waist band for a quick check.#$e#You should be okay for now.",
+  "Jodi.Dialogue.fall_Sun6": "Being motherly makes me feel important.#$b#Even if the little ones aren't my own!$1#$e#%Jodi gives you a wink.",
+
+  "Jodi.Dialogue.winter_Mon10": "%Jodi is humming a soft song to herself while she goes about her business. It's familiar somehow.#$e#%She notices you paying attention and smiles. Without stopping her hum, she pulls you into a hug, letting you feel the comforting hum in her chest.#$e#Looks like someone might need a nap.",
+  "Jodi.Dialogue.winter_Tue10": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve as your thumb finds its way into your mouth without you noticing.#$e#Awwwww. Well aren't you a precious little boy.^Well aren't you a precious little girl.$1",
+  "Jodi.Dialogue.winter_Wed6": "Oh no! @! Is that a boo boo on your finger? What happened?$2#$b#%You tell Jodi about hurting your finger on the farm with tears in your eyes while she puts on a bandaid for you. She gives it a kiss for good measure.#$e#There we go, all better. Have fun playing!",
+  "Jodi.Dialogue.winter_Wed10": "Oh no! @! Is that a boo boo on your finger? What happened?$2#$b#%You tell Jodi about hurting your finger on the farm with tears in your eyes while she puts on a bandaid for you.#$b#She gives it a kiss for good measure before patting your bottom to send you away.#$e#There we go, all better. Have fun playing!",
+  "Jodi.Dialogue.winter_Thu4": "Sam tries really hard to act like a big kid, but he still melts when I pet his hair just like when he was a little boy.#$e#It feels nice to know he trusts me enough to let his guard down.#$e#It makes me feel like a good mother.$1",
+  "Jodi.Dialogue.winter_Fri2": "You're a good boy. You know that, right?^You're a good girl. You know that, right?",
+  "Jodi.Dialogue.winter_Sat6": "Maybe I should push Vincent to use the potty more, but I don't want him to feel ashamed about himself.$2#$e#He just looks so carefree playing in his diapers too. I don't want to take that away from him.",
+  "Jodi.Dialogue.winter_Sun6": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve and smile up at her.#$e#Awwwww.",
+  "Jodi.Dialogue.winter_Sun10": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve as your thumb finds its way into your mouth without you noticing.#$e#Awwwww. Well aren't you a precious little boy.^Well aren't you a precious little girl.$1",
+
+  // Dialogues for Jodi Questions
+
+  "Jodi.Dialogue.Show_Pretext": "Oh hallo @!",
+  "Jodi.Dialogue.Show_Question": "Oh, willst du mir etwas zeigen?",
+  "Jodi.Dialogue.Show_Response1": "Zeig ihr die schöne Blume, die du gepflückt hast.",
+  "Jodi.Dialogue.Show_Response2": "Zeig ihr den coolen Stein, den du in der Mine gefunden hast.",
+  "Jodi.Dialogue.Show_Response3": "Zeig ihr dein lieblings Stofftier.",
+  "Jodi.Dialogue.Show_Response4": "Zeig ihr deine Windel.",
+
+  "Jodi.Dialogue.Show_Nice": "%Jodi holds it delicately, looking at it like it's the most important thing in the world.#$b#This is wonderful! Thank you for showing me.$1#$b#%Jodi gives it back and pats your head affectionately.",
+  "Jodi.Dialogue.Show_Diaper": "%Jodi grins at your proud display.#$b#Well isn't that something!$1#$b#Let's see if it's still clean.#$b#%Jodi presses her hand against your diaper, giving it a thorough check.",
+  "Jodi.Dialogue.Show_Followup": "#$p 110#Well don't you look excited! Did you find even more things to show me?$1|Well don't you look excited! Are you going to show off for me again?$1#$b#%You shamelessly show Jodi your diaper again and she pats it fondly.",
+
+  // Diaperchange for Jodi
+
+  "Jodi.Change_Diaper.Accept": "Na komm, wir ziehen dir schnell eine frische Windel an. Nur eine Sekunde... siehst du wie dehnbar sie ist! So! Einwandfrei!$l#$b#%Jodi zieht dir deine $INSPECT_UNDERWEAR_NAME$ aus und steckt dich in eine von Vincents Windeln mit Baby Motiven",
+  "Jodi.Change_Diaper.Accept_Debuff": "und noch eine von Sams alten Hosen",
+  "Jodi.Change_Diaper.Refuse": "Na gut, wenn du so wie Vincent bist und lieber in deiner dreckigen Windel bleiben möchtest, deine Entscheidung! Aber mach mir bloß nicht die Couch nass! Hast du das verstanden?!",
+  "Jodi.Change_Diaper.Followup": "...",
+
+  // Dialogues for Penny
+
+  "Penny.Dialogue.spring_Tue6": "I've always felt comfortable around little kids. I feel more confident.#$e#I feel that way around you too.#$b#I like that.$1",
+  "Penny.Dialogue.spring_Wed4": "Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
+  "Penny.Dialogue.spring_Thu4": "We're very lucky to have a library in such a small town.|It doesn't seem like Vincent is going to get out of diapers any time soon...$3#$e#It's pretty clear he's not even trying.",
+
+  "Penny.Dialogue.summer_Mon4": "Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
+  "Penny.Dialogue.summer_Tue2": "I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.",
+  "Penny.Dialogue.summer_Tue6": "I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.$1#$b#She's still not great at keeping them clean...$3",
+  "Penny.Dialogue.summer_Sat4": "I wish I could treat my mom like the toddler she acts like all the time.$3#$e#It would probably be good for her...$2",
+
+  "Penny.Dialogue.fall_Mon4": "We're very lucky to have a library in such a small town.|It doesn't seem like Vincent is going to get out of diapers any time soon...$3#$e#It's pretty clear he's not even trying.",
+  "Penny.Dialogue.fall_Mon8": "I've always felt comfortable around little kids. I feel more confident.#$e#I feel that way around you too.#$b#I like that.$1",
+  "Penny.Dialogue.fall_Tue4": "Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
+
+  "Penny.Dialogue.winter_Tue6": "I wish I could treat my mom like the toddler she acts like all the time.$3#$e#It would probably be good for her...$2",
+  "Penny.Dialogue.winter_Fri2": "I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.",
+  "Penny.Dialogue.winter_Fri6": "I'm tutoring Vincent and Jas today... They're a handful, but it's nice to make a difference in someone's life.|Jas is so proud of her pull ups. I'm really proud to have helped her get there.$1#$b#She's still not great at keeping them clean...$3",
+  "Penny.Dialogue.winter_Sat4": "Hello there @. You look happy today.#$b#$y 'Have you been doing better with your potty issues?_Yup! It's easy!_Good! I'm glad to hear it.$1_Not really. I still have accidents..._Oh @. It's okay, that's nothing to be ashamed of. Keep trying your hardest, you'll get it!'",
+
+  // Dialogues for Penny Questions
+
+  "Penny.Dialogue.Adult_Pretext": "Hello @! I'm really glad I've gotten to know you.#$b#I want to tell you something; it's a little embarrassing.$4",
+  "Penny.Dialogue.Adult_Question": "I have a hard time thinking of you like you're an adult...",
+  "Penny.Dialogue.Adult_Response1": "Honestly, I don't really feel like one.",
+  "Penny.Dialogue.Adult_Response2": "Good! Cause I don't wanna be one.",
+  "Penny.Dialogue.Adult_Response3": "Not fair! I'm a big kid!",
+
+  "Penny.Dialogue.Adult_Little": "Well that's a relief! I was afraid I was reading too far into things.$1#$b#Though, your little potty problems are a dead give away, aren't they little one?$4",
+  "Penny.Dialogue.Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1",
+  "Penny.Dialogue.Adult_Followup": "I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
+
+
+  "Penny.Dialogue.Potty_Pretext": "Hallo. Ähm... Diese alte Farm muss ja wirklich eine große Ablenkung für dich sein$3#$e#...$2#",
+  "Penny.Dialogue.Potty_Question": "Fällt es dir eigentlich schwer auf Töpfchen zu gehen @?",
+  "Penny.Dialogue.Potty_Response1": "Uh huh. Es ist zu anstrengend. Ich mag das nicht.",
+  "Penny.Dialogue.Potty_Response2": "Ähm ja, aber ich gebe wirklich mein Bestes, erhlich!",
+  "Penny.Dialogue.Potty_Response3": "Ähm...Nein?",
+  "Penny.Dialogue.Potty_Response4": "Das ist eine wirklich merkwürdige Frage.",
+
+  "Penny.Dialogue.Potty_Trouble": "Dachte ich es mir. Ist schon gut.#$e#Wenn.. Wenn du möchtest kann ich dir dabei helfen... Ich könnte dir dabei zusehen um zu schauen, ob du es richtig machst...$4#$b#...$3#$b#Wenn es für dich in Ordnung ist...$2",
+  "Penny.Dialogue.Potty_Easy": "Oh... Ich verstehe. Dann brauchst du wohl nich meine Hilfs...$2#$b#Tut mir leid, das ich dich auf das Thema angesprochen habe..$2",
+  "Penny.Dialogue.Potty_Followup": "Ich bin mir sicher, du schaffst das alleine.|%Penny spricht leiser.#$b#Meldet sich dein Körper schon das du aufs Töpfchen musst @?$4",
+
+
+  "Penny.Dialogue.Show_Pretext": "Oh hallo @.",
+  "Penny.Dialogue.Show_Question": "Oh, willst du mir etwas zeigen?",
+  "Penny.Dialogue.Show_Response1": "Zeig ihr die schöne Blume, die du gepflückt hast.",
+  "Penny.Dialogue.Show_Response2": "Zeig ihr den coolen Stein, den du in der Mine gefunden hast.",
+  "Penny.Dialogue.Show_Response3": "Zeig ihr dein lieblings Stofftier.",
+  "Penny.Dialogue.Show_Response4": "Zeig ihr deine Windel.",
+
+  "Penny.Dialogue.Show_Nice": "Oh wow, danke @, das du mir das gezeigt hast#$b#Du siehst so stolz aus! Du bist wie ein kleines Kind das neue Sachen zeigt und erklärt$1",
+  "Penny.Dialogue.Show_Diaper": "Oh mein Gott @. Das sieht aber nicht danach aus, als würdest du dich sehr anstrengen aufs Töfchen zu gehen.$3",
+  "Penny.Dialogue.Show_Followup": "Na, du siehst aber ganz schön aufgeregt aus!$1#$e#%Penny streichelt dir sanft über deinen Kopf.",
+
+  // Dialogues for Penny Marriage
+
+  "Penny.Dialogue_Marriage.Rainy_Day_0": "On rainy days my thoughts always drift toward cinnamon and cookies.#$b#Maybe they'd make for good motivation as a reward for making it to the potty on time.$1#$e#I think I'll go make some.",
+  "Penny.Dialogue_Marriage.Rainy_Day_1": "It's pretty damp outside.#$e#Maybe we don't have to try so hard to get to the potty today.#$b#Just for today, okay?$4",
+  "Penny.Dialogue_Marriage.Rainy_Day_2": "Hi, honey! I did some shopping this morning and got this for you.[186 180 770 535]#$e#I picked up some more supplies, just in case.$11",
+  "Penny.Dialogue_Marriage.Rainy_Day_3": "I was just thinking about that night we met in the bathhouse.$l#$e#I'll never forget that night...$l",
+  "Penny.Dialogue_Marriage.Rainy_Day_4": "On days like this, I love to curl up with a good book.#$e#Do you want to sit with me?#$b#I could read to you, would you like that?$11",
+
+  "Penny.Dialogue_Marriage.patio": "This is a lot more peaceful than my old spot in town. I'm very happy here.",
+
+  "Penny.Dialogue_Marriage.Rainy_Night_0": "Hello there @. Have you been making it to the potty today?#$b#$y 'Can you try to go potty for me right now please?_Try using the potty._%Penny watches while you tinkle into the potty. She looks very proud of you._Go right were you stand._Goodness, that sure didn't look like you were trying very hard @.$4'",
+  "Penny.Dialogue_Marriage.Rainy_Night_1": "Oh goodness @, your cloths are soaked! Have you been playing in the rain all day?$1#$e#${You seem to be very pleased for such a muddy little.^You seem to be very pleased for such a muddy little girl.}$",
+  "Penny.Dialogue_Marriage.Rainy_Night_2": "%Penny puts a comforting hand on your shoulder.#$b#@, I know how the rain can make getting to the potty harder. I won't be upset at any accidents tonight, I promise.#$b#In fact, I'm never upset about your accidents.$1#$b#They just make you look even more precious.$11",
+  "Penny.Dialogue_Marriage.Rainy_Night_3": "The sound of rain used to bother me, when I lived in that old metal trailer.$2#$b#But it's quite soothing here.#$e#If you're done with chores for the day we could sit on the porch together and just listen to the rain.#$b#Common, let's get your bed time diaper on early. We don't have to worry about that until tomorrow.$11",
+  "Penny.Dialogue_Marriage.Rainy_Night_4": "I felt like making a nice dinner. I hope you like it. [212 214 225 209 200]$h#$e#You don't need me to feed it to you, do you?$1",
+
+  "Penny.Dialogue_Marriage.Indoor_Day_0": "It's so peaceful here. I used to have the most horrific nightmares, but now I sleep like a baby.#$e#Well, not quite as much of a baby as you.$1#$b#Are you ready to change out of your night time diaper?",
+  "Penny.Dialogue_Marriage.Indoor_Day_1": "Good morning, @! I made you a hot breakfast.[195 210 211]#$e#It's important to me that you leave here with a full belly.$h#$e#Don't forget to use the potty before you go out @.#$b#You don't want that full tummy turning into full pants now, do you?$1",
+  "Penny.Dialogue_Marriage.Indoor_Day_2": "You know, I think I'll read a book today. I picked up something new from the library last time I was there.#$e#I also picked up some picture books if you'd like me to read to you tonight.$4",
+  "Penny.Dialogue_Marriage.Indoor_Day_3": "I love to hear about all the artifacts you've found. Archaeology is fascinating!#$e#To think... there may have been farmers at this very spot 10,000 years ago.",
+  "Penny.Dialogue_Marriage.Indoor_Day_4": "Was I shy when we first met? It's funny to think about.#$b#It's hard to feel shy around someone when you've changed their pants so many times!$1#$e#How about we don't worry about the potty today. How's that sound @?#$b#${Would you want to be a little boy, just for today?#$11#^Would you want to be a little girl, just for today?#$11#}$",
+
+  "Penny.Dialogue_Marriage.Indoor_Night_0": "Good evening, honey. Did you do a good job making it to the potty today?$3#$e#If not, that's okay. We've got all the time in the world!",
+  "Penny.Dialogue_Marriage.Indoor_Night_1": "Hello there @. I would like to hear all about your day.#$b#$y 'But first, can you try to go potty for me right now please?_Try using the potty._Look at you! Using the potty like a big kid. Good job!$!._Go right were you stand._%Penny sighs and rolls her eyes, but she doesn't hide her little grin at your antics.'",
+  "Penny.Dialogue_Marriage.Indoor_Night_2": "@, I'm proud of you for trying to use the potty, even though it's hard.#$e#How about, just for tonight, we get your night time diaper on early and you don't have to worry about it until tomorrow.$4#$b#We can just curl up together and I can read you some stories. How's that sound?$11",
+  "Penny.Dialogue_Marriage.Indoor_Night_3": "${You're my special boy, did you know that?^You're my special girl, did you know that?}$$%e$%Penny pull you in for a hug and gently rubs your back.",
+  "Penny.Dialogue_Marriage.Indoor_Night_4": "Ready to tuck in? I made the bed and everything...#$b#Let's get your night time diaper on first though.$11",
+
+  "Penny.Dialogue_Marriage.Outdoor_0": "It's so peaceful here. I used to have the most horrific nightmares, but now I sleep like a baby.#$e#Well, not quite as much of a baby as you.$1#$b#Are you ready to change out of your night time diaper?",
+  "Penny.Dialogue_Marriage.Outdoor_1": "I would've been so happy growing up on a farm.#$b#I guess I can see why you're so hesitant to grow up.$1",
+  "Penny.Dialogue_Marriage.Outdoor_2": "Hi, honey! I'll watch for a bit if you want to go play.#$b#%Penny ruffles your hair affectionately.",
+  "Penny.Dialogue_Marriage.Outdoor_3": "Now @, I know the farm can be very distracting. I mean, just look at it!$1#$b#Try and listen to your body though, okay? If it says you need the potty then come in right away.",
+  "Penny.Dialogue_Marriage.Outdoor_4": "It's really nice outside. I think I'll read a book on the porch today. I picked up something new from the library last time I was there.#$e#I also picked up some picture books if you'd like me to read to you tonight.$4",
+
+  "Penny.Dialogue_Marriage.OneKid_0": "Have you had any time to play with %kid1 today?#$b#You're already so good at playing, it must be pretty easy for you!$1",
+  "Penny.Dialogue_Marriage.OneKid_1": "Little %kid1 is going to have such a great childhood here.",
+  "Penny.Dialogue_Marriage.OneKid_3": "I feel a lot older now that we have a child. Maybe it's just this new responsibility weighing on me.#$e#It's not bad! I've wanted this for a long time.$11#$b#And I've already had some good practice changing diapers.$4",
+
+  "Penny.Dialogue_Marriage.TwoKids_0": "I already gave %kid1 and %kid2 their food. They're such hungry children!#$b#That's certainly ONE of the reasons the diaper budget is so high.$1",
+  "Penny.Dialogue_Marriage.TwoKids_1": "We have to make sure and give %kid1 a lot of attention now that we have %kid2. We don't want any jealousy between them.",
+  "Penny.Dialogue_Marriage.TwoKids_2": "I've had this dream that %kid2 grew wings and flew into the night sky. What does it mean?",
+  "Penny.Dialogue_Marriage.TwoKids_3": "A nice house, two wonderful kids, and a beautiful plot of land. We're so very fortunate.",
+
+  "Penny.Dialogue_Marriage.Good_0": "@...I still can't believe we're married...$l",
+  "Penny.Dialogue_Marriage.Good_1": "I had dreams of marrying you for such a long time.#$e#I also had dreams where you were just a tiny baby. I'm surprised both of them came true!$1",
+  "Penny.Dialogue_Marriage.Good_2": "I knew you were the one from the moment you moved here.#$b#Now how about we go change your night time diaper.",
+  "Penny.Dialogue_Marriage.Good_3": "Wow, you look really handsome today! Did you shave?$l^Wow, you look beautiful today. Did you do something different with your hair?$l",
+  "Penny.Dialogue_Marriage.Good_4": "This place is really starting to feel like home.#$b#It probably helps that it already smelled like a nursery!$1",
+  "Penny.Dialogue_Marriage.Good_6": "You look so precious in your night time diapers!$1#$e#Did you know you sometimes suck your thumb at night?#$b#You were so cute I couldn't stand it.$11",
+
+  "Penny.Dialogue_Marriage.jobLeave": "I have to go into town today.#$b#$c .5#Make sure you try your best to make it to the potty, okay? I love you.#$e#Do you need help changing out of your night time diaper before I go?$4",
+  "Penny.Dialogue_Marriage.jobReturn": "#$c .6#Good evening. My day was fine, thanks! How was yours?$h#$e#Jas and Vincent weren't behaving very well today. I'm still all wound up...",
+
+  "Penny.Dialogue_Marriage.funLeave": "I'm going to head into town today, just for fun. I'll be back in a while!",
+  "Penny.Dialogue_Marriage.funReturn": "I had a nice time... It's good to stay in contact with everyone. Tell me about your day.",
+
+  "Penny.Dialogue_Marriage.spring_1": "We've got a long, warm year to look forward to. Let's make it a productive one.",
+  "Penny.Dialogue_Marriage.spring_3": "I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Jas is trying to use the potty. She really is. She's still not that great at it...$3#$e#I almost wanted to put her back in diapers yesterday just so it'd be easier to deal with.$1#$e#I'd never do that to her though, she tries so hard to earn her pull ups.",
+  "Penny.Dialogue_Marriage.spring_8": "Spring is probably my favorite season. There's a certain freshness in the air that fills me with hope.",
+  "Penny.Dialogue_Marriage.spring_12": "Are you excited for the Egg Festival tomorrow?|Vincent and Jas are really excited for the Egg Festival tomorrow.#$b#Jas got so excited talking about it that she had an accident.$3#$b#Vincent probably did too, but he was already wet, so I'd have no way of knowing!$1",
+  "Penny.Dialogue_Marriage.spring_15": "Ah, the 'spring cleaning'... I'm actually going to enjoy this.",
+  "Penny.Dialogue_Marriage.spring_16": "Hmm... maybe I should experiment with a new recipe. You liked the last recipe I made, didn't you, honey?|Tutoring Vincent and Jas can be a handful, especially with their potty issues.$3#$b#It doesn't bother me though, it's just another skill I can help them work on.#$e#At least, if I could get Vincent to work on it at all...$2",
+
+  "Penny.Dialogue_Marriage.summer_1": "Summer may be searing hot, but the humidity feels great on the skin.",
+  "Penny.Dialogue_Marriage.summer_2": "In summer, the ants become very active. I could watch them for hours... they have a pretty complex civilization from the looks of it!",
+  "Penny.Dialogue_Marriage.summer_10": "I'm excited to tutor Vincent and Jas today.|*Sigh* Vincent convinced Jas to use her pull up yesterday...$5#$e#It's hard to get him to take the potty seriously, but Jas has been trying really hard.$3#$b#Though, I don't think she would have made it this time anyway. She ended up making quite the mess.$2#$b#She seemed more relieved than embarrassed, so I guess it's okay.",
+  "Penny.Dialogue_Marriage.summer_16": "*phew*... I need to eat more melon to combat this heat!",
+  "Penny.Dialogue_Marriage.summer_24": "I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Vincent used his diapers yesterday as usual.$3#$e#I know he can tell when he does it, but he never tells me when he's wet or messy.$5#$b#I swear that boy prefers to sit around in his used diapers.$1",
+
+  "Penny.Dialogue_Marriage.fall_1": "Fall... It makes me think of colored paper and glue. Maybe I'm spending too much time with the children.$h",
+  "Penny.Dialogue_Marriage.fall_2": "Will you grow any giant pumpkins this year?$11#$e#I'd consider planting them now a great birthday present!$1",
+  "Penny.Dialogue_Marriage.fall_5": "The smell of fall reminds me of the smell of books... weird, isn't it?",
+  "Penny.Dialogue_Marriage.fall_11": "I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Jas is trying to use the potty. She really is. She's still not that great at it...$3#$e#I almost wanted to put her back in diapers yesterday just so it'd be easier to deal with.$1#$e#I'd never do that to her though, she tries so hard to earn her pull ups.",
+  "Penny.Dialogue_Marriage.fall_23": "Hmm... maybe I should experiment with a new recipe. You liked the last recipe I made, didn't you, honey?|Tutoring Vincent and Jas can be a handful, especially with their potty issues.$3#$b#It doesn't bother me though, it's just another skill I can help them work on.#$e#At least, if I could get Vincent to work on it at all...$2",
+
+  "Penny.Dialogue_Marriage.winter_1": "Winter's a good time to unwind a bit. You deserve it after the long year!",
+  "Penny.Dialogue_Marriage.winter_3": "If you're having lots of fun playing in the snow, I'd understand if you had a little accident.$4",
+  "Penny.Dialogue_Marriage.winter_6": "The falling snow reminds me of grandma, rocking by the fire. I have this vivid memory of her shadow, flickering against the orange wood... That was long ago.",
+  "Penny.Dialogue_Marriage.winter_10": "I'm excited to tutor Vincent and Jas today.|*Sigh* Vincent convinced Jas to use her pull up yesterday...$5#$e#It's hard to get him to take the potty seriously, but Jas has been trying really hard.$3#$b#Though, I don't think she would have made it this time anyway. She ended up making quite the mess.$2#$b#She seemed more relieved than embarrassed, so I guess it's okay.",
+  "Penny.Dialogue_Marriage.winter_24": "I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Vincent used his diapers yesterday as usual.$3#$e#I know he can tell when he does it, but he never tells me when he's wet or messy.$5#$b#I swear that boy prefers to sit around in his used diapers.$1",
+
+  // Diaperchange for Penny
+
+  "Penny.Change_Diaper.Accept": "#Jetz machen wir erst einmal deine Hintern sauber!$l#$b#%Penny wickelt dich und lächelt dich dabei an.#",
+  "Penny.Change_Diaper.Refuse": "Willst du heute etwa <den/das> <großen/große> <Jungen/Mädchen> spielen? Ich kann sie von hier aus durchhängen sehen!",
+  "Penny.Change_Diaper.Followup": "...",
+
+  // Dialogues for Sam
+
+  "Sam.Dialogue.Thu6_1": "I think my Daddy might be coming back in a year or so.#$e#I guess you might be able to meet him, then. If you're still living here.#$e#You wouldn't abandon the farm after putting so much effort into it!",
+  "Sam.Dialogue.Fri4": "Daddy used to work as a garbage man in the city.#$e#You don't even want to know some of the things he found in people's trash.",
+  "Sam.Dialogue.Sun8": "@! Mommy got freezy pops for us! Score!$1",
+
+  "Sam.Dialogue.spring_Mon8": "#$p 102#@! Mommy got freezy pops for us! Score!$1|We watched a movie as a family last night.$7#$e#Vincent messed his diaper right at the beginning, but since he didn't seem bothered Mommy waited until the movie ended to change him.#$e#I wanted to be in his shoes.$4",
+  "Sam.Dialogue.spring_Tue4": "After Vincent was born, things felt different.$7#$e#I missed the attention I used to get. I guess I still do.$9",
+
+  "Sam.Dialogue.summer_Mon6": "Have you been to the desert yet?#$e#You can find some interesting things there. Daddy took me a couple times when I was younger.",
+  "Sam.Dialogue.summer_Wed8": "We watched a movie as a family last night.$7#$b#Vincent fell asleep right away, so he wasn't in Mommy's lap like he usually is.#$b#I was sort of leaning against her shoulder, and she patted her lap so I laid my head down in it...$4#$b#It felt silly at first, but she pet my hair a lot and that was nice.$4#$e#I felt like her special little boy again.$10",
+
+  "Sam.Dialogue.fall_Mon8": "@! Mommy got freezy pops for us! Score!$1|We watched a movie as a family last night.$7#$b#Vincent messed his diaper right at the beginning, but since he didn't seem bothered Mommy waited until the movie ended to change him.#$e#I wanted to be in his shoes.$4",
+  "Sam.Dialogue.fall_Tue4": "Hi, @. Do you want to hang out or something?#$e#I could show you my favorite stuffy.$1#$b#He's a worm and I named him Mr. Wiggles!$10",
+  "Sam.Dialogue.fall_Thu6_1": "I think my Daddy might be coming back next year.#$e#I guess that's kind of soon. Weird.",
+  "Sam.Dialogue.fall_Thu6": "I guess I should start thinking about moving out soon...$s#$e#...But I would miss Mommy's fish casserole, so I dunno...$s#$e#I hate making decisions.",
+  "Sam.Dialogue.fall_Sat4": "After Vincent was born, things felt different.$7#$e#I missed the attention I used to get. I guess I still do.$9",
+
+  "Sam.Dialogue.winter_Tue4": "Hi, @. Do you want to hang out or something?#$e#We could make a snow fort!$1",
+  "Sam.Dialogue.winter_Thu6_1": "I think my Daddy is coming back this spring.#$e#It's been 3 years since I've seen him. This is going to be strange.",
+  "Sam.Dialogue.winter_Thu6": "Daddy's been back for a while now. I guess I'm finally getting used to it.",
+  "Sam.Dialogue.winter_Thu8": "We watched a movie as a family last night.$7#$b#Vincent fell asleep right away, so he wasn't in Mommy's lap like he usually is.#$b#I was sort of leaning against her shoulder, and she patted her lap so I laid my head down in it...$4#$b#It felt silly at first, but she pet my hair a lot and that was nice.$4#$e#I felt like her special little boy again.$10",
+
+  // Dialogues for Sam Questions
+
+  "Sam.Dialogue.Job_Pretext": "Ich kann es kaum glauben das ich eine Job habe...$2",
+  "Sam.Dialogue.Job_Question": "Ich habe das Gefühl, das ich noch gar nicht alt genug dafür bin.",
+  "Sam.Dialogue.Job_Response1": "Du brauchst einfach ein wenig Zeit, bist du bereit dafür bist.",
+  "Sam.Dialogue.Job_Response2": "Du könntest jederzeit damit aufhören, so zu tun, als wärsr du ein großer Junge",
+
+  "Sam.Dialogue.Job_Ready": "Ja, ich weiß, das könnte ich. Aber ich bin doch für meine Mami verantwortlich...$9#$b#Ich meine Mom...$8",
+  "Sam.Dialogue.Job_Pretend": "Mann, ich wünschte. Ich könnte den ganzen Tag einfach nur spielen. So wie Vincent.$4#$b#Er muss nicht zur Arbeit gehen.$5",
+  "Sam.Dialogue.Job_Followup": "#$p 120#Es hat sich gut angefühlt zuzugeben, das ich noch nicht bereit dafür bin. Danke.$3|Ich frage mich, ob ich einfach mal eine Tag blau machen soll und einfach den ganzen Tag im Wald spielen sollte!$1",
+
+  "Sam.Dialogue.Diaper_Pretext": "Kann ich dir ein Geheimnis anvertrauen?$7",
+  "Sam.Dialogue.Diaper_Question": "Ich habe das noch niemanden erzählt, aber ich möchte wirklich gerne wieder Windeln tragen.",
+  "Sam.Dialogue.Diaper_Response1": "Od, du bist so ein kleine süßer Junge.",
+  "Sam.Dialogue.Diaper_Response2": "Wirklich?! Ich auch!",
+
+  "Sam.Dialogue.Diaper_Nice": "W-Wirklich?!$10%Sam ist so überwältige, das er ein wenig anfängt zu weinen. Du nimmst ihn in den Arm und reibst ihm über den Rücken bis er sich wieder beruhigt hat.#$e#D-Danke @.$4%Sam sieht so aus, als wäre ihm eine große Last von seinen Schultern genommen worden.",
+  "Sam.Dialogue.Diaper_Join": "Wirklich?! Im ernst?! Du würdest so süß darin aussehen @! Wir könnten ja Windel Freunde werden!$10#$e#Mann, es fühlt sich komich an, jemanden anderen das laut zu sagen.$4",
+  "Sam.Dialogue.Diaper_Followup": "Ich habe, bis ich ein Teenager war ins Bett gemacht.$9#$b#Es war mir peinlich, das ich so lange für die Nacht Windeln brauchte! Aber jetzt, vermisse ich sie.$4#$b#Isn't that funny?$10",
+
+  "Sam.Dialogue.Little_Pretext": "Es ist wundevoll dich kennen zu lernen @. Ich habe das Gefühl, ich kann ganz ehrlich zu dir sein.",
+  "Sam.Dialogue.Little_Question": "Ich möchte kein goßes Kind sein. Ich will viellieber wieder ein kleiner Junge sein.",
+  "Sam.Dialogue.Little_Response1": "Oh, Sam. Du BIST doch noch ein kleiner Junge!",
+  "Sam.Dialogue.Little_Response2": "Sieht so aus, als bräuchte ich noch mehr Windeln für den kleinen Jungen.",
+  "Sam.Dialogue.Little_Response3": "Ja, groß zu sein ist schlimm. Wir sollten einfach zusammen spielen!",
+  "Sam.Dialogue.Little_Response4": "Ich wechsle deine Windel, wenn du meine wechselst.",
+
+  "Sam.Dialogue.Little_Little": "Uh huh!$3#$b#%Sam quietscht vor Freude und versteckt sein knall rotes Gesicht",
+  "Sam.Dialogue.Little_Excited": "Ja!$3#$b#%Sam quietscht vor Freude und versteckt sein knall rotes Gesicht.",
+  "Sam.Dialogue.Little_Followup": "Durch dich fühle ich mich immer so klein. Das bedeutet mir so viel, Danke dir.$4|Ich möchte wirklich wieder die ganze Zeit Windeln tragen.$4#$b#Ich glaube nur, das ich das nicht kann, solange ich noch bei meiner Mum wohne$10",
+
+  // Dialogues for Sam Marriage
+
+  "Sam.Dialogue_Marriage.Rainy_Day_0": "%Sam is staring out the window, watching the rain roll down wearing just his soggy night diaper and pajama shirt.#$e#%He doesn't seem to notice you. He bends his knees slightly, gently pushing a soft mess into his diaper without a second though. Only then do you tap his shoulder.#$b#@!8#$b#I-I was just watchin' the rain$10.",
+  "Sam.Dialogue_Marriage.Rainy_Day_1": "Sebastian loves this kind of weather. When we were little we used to go frog catching when it rained.#$e#Do you wanna go catch frogs?!$1",
+  "Sam.Dialogue_Marriage.Rainy_Day_2": "Hey, I found one of these rolling around in the back of a drawer. [90 88 86 535]#$e#I thought you might be able to use it.",
+  "Sam.Dialogue_Marriage.Rainy_Day_3": "Aw, man. These cloudy days are kind of a drag...$7#$e#We could just play inside all day.#$b#$y 'Maybe we can cuddle and watch some cartoons._You'll need to wear a second diaper this time._I didn't leak THAT much last time!$1_You'll have to change me first!_Awww, but I'll miss out on all the squishing.$10'",
+  "Sam.Dialogue_Marriage.Rainy_Day_4": "How'd you sleep? The sound of rain really makes me zonk.#$e#I woke up wet too, but I don't remember waking up to pee.$4#$b#That rain really works on me, huh!$10",
+
+  "Sam.Dialogue_Marriage.patio": "*Sigh*... I'm never gonna land this trick...$s",
+
+  "Sam.Dialogue_Marriage.Rainy_Night_0": "Hey, how was your day? I just layed around and read comics most of the day... it was great.$1#$b#What? N-no, I don't need a change!$8#$e#%It is obvious Sam is in a stinky diaper.",
+  "Sam.Dialogue_Marriage.Rainy_Night_1": "It was a pretty low-key day for me... colas, frozen pizza, a few hours noodling around with a coloring book. I feel relaxed.#$e#%Sam proves his point by sighing and flooding his diaper in front of you, blushing softly.",
+  "Sam.Dialogue_Marriage.Rainy_Night_2": "Earlier, I listened to our live recording from that show we played. Remember that? Man, was that sloppy.#$b#It made me a little nervous that you were there, I didn't want to mess up and have you think I was a loser!$10",
+  "Sam.Dialogue_Marriage.Rainy_Night_3": "I hope Vincent's not too lonely now that I'm gone... I kinda felt responsible for the little guy.$s|I hope Vincent's not too lonely now that I'm gone... I kinda felt responsible for the little guy.$s#$e#I bet he'd get a kick out of how much of a little guy I turned out to be!$10.Sometimes I like to imagine being little like this right along side him. Having Mommy change our diapers together.$4#$e#I doubt I could ever fill a diaper as good as he can!$10",
+  "Sam.Dialogue_Marriage.Rainy_Night_4": "Hey, I tossed a couple frozen pizzas into the oven. Here's yours. [206]$h#$e#%Sam sits down to eat with an audible squish. He doesn't seem concerned about it.",
+
+  "Sam.Dialogue_Marriage.Indoor_Day_0": "Phew... I'll tell you one thing I don't miss about my old life... working at JojaMart.#$e#Did I ever tell you how embarrassed I got every time I had to work in the diaper isle?$10#$e#One time I found an open package, and instead of throwing it out I hid it for later.$4#$e#I was so nervous, but I'm glad I did it! That was a fun week.$10",
+  "Sam.Dialogue_Marriage.Indoor_Day_1": "Hey, I made you some instant pancakes. Enjoy. [211]$h#$e#What? I never learned to cook... Mommy always did that.#$e#I miss her a lot actually$2",
+  "Sam.Dialogue_Marriage.Indoor_Day_2": "Good morning @.#$b#$y 'Sam is obviously in need of a diaper change._Common little boy, let's go take care of that diaper._Y-yeah, Okay!_Hmmm._I think that should hold until after breakfast._%Sam just blushes and nods, reaching his hand down to feel how squishy his diaper is.'",
+  "Sam.Dialogue_Marriage.Indoor_Day_3": "Uhhmmmm, @? C-can I show you something?$4#$e#%Sam presses your hand into his diaper front. It's still dry, but not for long.#$b#%Sam sighs as you feel the warmth spread across your hand. You give it a good squish just to watch him squirm.",
+  "Sam.Dialogue_Marriage.Indoor_Day_4": "Um... Maybe I'll help out on the farm some other day. I feel lazy today.$1#$e#%Sam wiggles his crinkly bottom at you before scampering off to find his coloring book.",
+
+  "Sam.Dialogue_Marriage.Indoor_Night_0": "Hey, you look tired. Let me help you relax tonight, okay? Maybe I'll give you a massage later.#$e$I owe you that much for taking care of my diapers all the time!$10",
+  "Sam.Dialogue_Marriage.Indoor_Night_1": "My day?$8#$b#Oh... I can hardly remember. I didn't really do anything of note. Just relaxed and had a good time.$3#$b#It doesn't take long to notice Sam's leaking diaper he was trying to sneak by you.",
+  "Sam.Dialogue_Marriage.Indoor_Night_2": "Hey, sorry I didn't make the bed. You know I'm sloppy... that's why you like me, right?$h#$b#You notice Sam's messy diaper just before he plops down on it with an audible squish.",
+  "Sam.Dialogue_Marriage.Indoor_Night_3": "#$p 102#The only thing I miss about living at home is Mommy's fish casserole. And Mommy... I miss my Mommy$9|As much as I love being open about my diapers with you, I kind of miss the naughty rush of nabbing one of Vincent's.#$b#Or being sneaky while watching Vincent get changed.$4#$e#Is it weird to miss wanting the thing you finally have?$10",
+  "Sam.Dialogue_Marriage.Indoor_Night_4": "Ready to hit the hay? I got all the diaper supplies laid out all by myself this time!$3#$e# I love you so much.$4",
+
+  "Sam.Dialogue_Marriage.Outdoor_0": "Maybe I should get some off-road wheels for my skateboard. Mayor Lewis can't touch me out here.$h",
+  "Sam.Dialogue_Marriage.Outdoor_1": "I still get nervous about my diapers crinkling when I'm off the farm.#$e#At least I don't have to worry about that here!$1",
+  "Sam.Dialogue_Marriage.Outdoor_2": "Hi, @! If I knew more about farm work I'd help you out more. Sorry!#$e#It makes me feel like a helpless little Daddy's boy!$3^It makes me feel like a helpless little Momma's boy!$3",
+  "Sam.Dialogue_Marriage.Outdoor_3": "Something in the air makes me feel positive... maybe it's the faint whiff of pizza from Gus' ovens.#$b#%Wait... That smell's not pizza.$10",
+  "Sam.Dialogue_Marriage.Outdoor_4": "Wow... you look great today, and the specks of mud just add some extra charm.$l",
+
+  "Sam.Dialogue_Marriage.OneKid_0": "I'll change %kid1's diaper... don't worry about it. You've already done your fair share of changing diapers!$10",
+  "Sam.Dialogue_Marriage.OneKid_1": "It's weird, but I really like being a father!$h#$e#I feel like all of our little time together prepared me for how much playing babies need to do!",
+  "Sam.Dialogue_Marriage.OneKid_3": "I think we should have another kid. Why stop now?",
+
+  "Sam.Dialogue_Marriage.TwoKids_0": "I woke up early, fed the kids and changed their diapers! We're all set. You can just focus on raking in that sweet money.$h#$e#I'm just kidding... I didn't marry you for the money. Though the diaper budget has certainly gone up.",
+  "Sam.Dialogue_Marriage.TwoKids_1": "We have to make sure and give %kid1 a lot of attention now that we have %kid2. We don't want any jealousy between them.#$e#I know how jealous I always felt about Vincent...$9",
+  "Sam.Dialogue_Marriage.TwoKids_2": "It's fun to see the babies playing with each other. I think they're going to be very close.",
+  "Sam.Dialogue_Marriage.TwoKids_3": "I never thought I'd become such a family man, but I'm really satisfied with what we've built here. Life is going great.$h",
+
+  "Sam.Dialogue_Marriage.Good_1": "Do you ever think of that night we snuck into my room? I do, often...$l#$b#It was the first time I wore diapers around anyone else.$4",
+  "Sam.Dialogue_Marriage.Good_2": "You know, I think I had a feeling we'd be together from the very beginning. There's just something special between us.$l#$b#I spent so much time fantasizing about being the farmer's little boy, and now it's a reality!$1",
+  "Sam.Dialogue_Marriage.Good_3": "%Sam tugs on your sleeve bashfully.#$b#Uhmmmm, @? Can you change me please?$4#$e#Sam looks even more embarrassed as you give him a thorough check, just to make sure he really needs one.",
+  "Sam.Dialogue_Marriage.Good_4": "%Sam is giggling to himself while playing with a jingly toy. You decide to give a quick diaper check while he's distracted.#$b#H-hey!$8#$e#He definitely needs a change.",
+  "Sam.Dialogue_Marriage.Good_5": "I wanna show you something!$3#$b#Sam holds up a crayon drawing of both of you smiling on the farm.#$e#Do you love it?!$1",
+  "Sam.Dialogue_Marriage.Good_6": "Be careful out there! I know you go into the caves sometimes... you could be eaten alive in there!#$e#And my diaper would never get changed again and I would drown.$8#$b#Yup, that's what would happen.$1",
+
+  "Sam.Dialogue_Marriage.funLeave": "I'm gonna visit the family today, okay? I'll be home in the evening.",
+  "Sam.Dialogue_Marriage.funReturn": "Seeing my family today was nice. I didn't realize just how much I missed my Mommy$4|I saw my family today, and I decided to wear my diapers. I don't think anyone noticed.#$b#I've been in them for so long here that I was afraid I'd have an accident if I didn't.$10#$e#Vincent was the same proud little diaper boy he always is.#$b#It was fun getting to play with him while we were both in diapers.",
+
+  "Sam.Dialogue_Marriage.spring_1": "Ub... spring... my doze... allergies.$s",
+  "Sam.Dialogue_Marriage.spring_12": "Are you excited for tomorrow's festival? It'll be cool to see Sebastian again.",
+  "Sam.Dialogue_Marriage.spring_23": "Oh... tomorrow's the flower dance, isn't it? I thought I could get out of it now that we're married.#$e#Whatever. I guess it's funny in a weird way, especially now that I'm going to be waddling the whole time.$1",
+
+  "Sam.Dialogue_Marriage.summer_1": "The pollen count is a little lower in summer, so my nose is really happy.$h",
+  "Sam.Dialogue_Marriage.summer_10": "Have you thought about what you're going to put in the luau soup?#$e#It might be funny to put something nasty. You know, to play a prank on the governor!$h#$e#Sorry...",
+  "Sam.Dialogue_Marriage.summer_27": "Summer's great, but I'm ready for the fall now.#$e#Should we watch the jellyfish tomorrow night? It's always kind of fun.",
+
+  "Sam.Dialogue_Marriage.fall_1": "It seems like the whole valley's changed overnight... I guess fall's finally here.",
+  "Sam.Dialogue_Marriage.fall_15": "Hey, tomorrow's the fair. I need to get my old slingshot wrist back in shape...",
+  "Sam.Dialogue_Marriage.fall_26": "I wonder if Mommy will let Vincent enter the haunted maze this year. Probably not...$h#$e#Poor kid. He's gonna have to grow up some day...#$e#Well...Maybe not. I sure didn't!$10",
+
+  "Sam.Dialogue_Marriage.winter_1": "The cold air makes my diapers feel even more warm and cozy. It's pretty wonderful.$1",
+  "Sam.Dialogue_Marriage.winter_7": "Are we going to stop by the ice festival tomorrow? It might be fun to see everyone again...",
+  "Sam.Dialogue_Marriage.winter_28": "We had a great year, @... it's kind of sad that it's over.#$e#We'll just have to make next year even better!$h",
+
+  // Diaperchange for Sam
+
+  "Sam.Change_Diaper.Accept_BabyPrint": "Sind das Vincents? Ich... mmm.$8#$b#%Du wickelst Sam während er sich mit beiden Händen die Augen zugält. So niedlich!#$b#...$9#$b#Irgendwie gefallen sie mir.$8",
+  "Sam.Change_Diaper.Accept_BabyPrint_Post": "Passen gut, ein wenig eng vieleicht. Eine andere Windel würde ihm wahrscheinlich besser passen?",
+
+  "Sam.Change_Diaper.Accept_Training": "Sind das... Trainings Höchsen?$8#$b#%Du ziehst Sam ein paar Trainings Höchsen an.#$b#%Er würde es wahrscheinlich auf die Toilette schaffen. Aber du bist dir sicher, das seine Hose bis zum Ende der Stunde wieder nass seins wird.",
+  "Sam.Change_Diaper.Accept_Training_Post": "Wahrscheinlich würde er eine andere Sorte mehr mögen.",
+
+  "Sam.Change_Diaper.Accept_BigKids": "Bist du sicher ich bin bereit dafür?$1#$b#%Du ziehst Sam ein paar Unterhosen für große Kinder an.#$b#%Er sieht ein wenig bedrückt aus. Vielleicht ist er doch nicht so ein großes Kind, wie er dir weismachen will.$1",
+  "Sam.Change_Diaper.Accept_BigKids_Post": "",
+
+  "Sam.Change_Diaper.Accept_Joja": "Das ist eine aus dem Joja Markt, oder? Ich habe sie schon einmal probiert, sie passen besser. Aber das letzte mal habe ich die Couch nass gemacht als Ich...$8#$b#%Du wickelst Sam in eine Joja Windel während er gerade merkt, was er gerade zugegeben hat.#$b#Ich habe Mum erzählt es war Vincent.$9",
+  "Sam.Change_Diaper.Accept_Joja_Post": "Eine andere Marke währe wahrscheinlich besser...",
+
+  "Sam.Change_Diaper.Accept_HeartDiaper": "Ein Herz, wie... süß?$1#$b#%Du wickelst Sam in eine Herz Windel.#$b#%Er tut so, als würde er sie nicht besonders mögen. Wegen dem Design. Aber da er in dieser dicken, kuschligen und knisternden Windel steckt, kann er seine Faszination nicht lange verbergen",
+  "Sam.Change_Diaper.Accept_HeartDiaper_Post": "Ich denke sie ist gut...$9#$b#Du hast den Eindruck, das Sam sie viel mehr mag, als er zugeben möschte. Und er sieht so süß in ihr aus.",
+
+  "Sam.Change_Diaper.Accept": "Ah, halt still. Keine Sorge, ich habe Vincent schon oft gewickelt als ich auf Ihn aufgepasst habe!$l#$b#%Sam wechselt deine Windel als würde er es bei Vincent tun.",
+  "Sam.Change_Diaper.Refuse": "Willst du heute noch mit den großen Kindern spielen? Ich kann sie von hier aus durchhängen sehen!",
+  "Sam.Change_Diaper.Followup": "...",
+
+  // Dialogues for Sebastian
+
+  "Sebastian.Dialogue.Diaper_Question": "Das ist vieleicht eine komische Frage...#$b#Brauchst du aktuell deine Windel wirklich?",
+  "Sebastian.Dialogue.Diaper_Response1": "... Ja, das tue ich...",
+  "Sebastian.Dialogue.Diaper_Response2": "Ja, Ich brauche sie für meine Unfälle.",
+  "Sebastian.Dialogue.Diaper_Response3": "Nein, Ich mag sie einfach nur.",
+
+  "Sebastian.Dialogue.Diaper_Yes": "Oh...#$b#Ok, ich hoffe dir ist das jetz nich zu peinlich.#$b#Ich finde es eigentlich ganz niedlich$4",
+  "Sebastian.Dialogue.Diaper_No": "Wirklich?#$b#Ich dachte mir schon das das der Fall ist#$e#Wow$4",
+  "Sebastian.Dialogue.Diaper_Followup": "#$p 306#${In deinen Windeln siehst du aus wie ein kleiner Junge.$1^In deinen Windeln siehst du aus wie ein kleines Mädchen.$1}$Ich hoffe, du bist nicht verärgert wenn ich dich nach deinen Windeln frage.$2",
+
+  // Dialogues for Vincent
+
+  "Vincent.Dialogue.Introduction": "Oh, ein Fremder!  Mein Name ist Vincent.#$b#Meine Mutti sagt ich soll nicht mit Fremden sprechen... Aber du siehst in Ordnung aus.",
+
+  "Vincent.Dialogue.spring_Mon10": "#$p 102#I wanna be just like my big brother when I grow up!|I think I need my diaper changed, but I'm gonna wait until Mommy checks me.#$e#I don't mind being messy a bit longer!$1",
+  "Vincent.Dialogue.spring_Tue": "#$p 102#*sigh*... Mommy won't let me have any more gummies today.$s|I like it better when Miss Penny reads to us.",
+  "Vincent.Dialogue.spring_Tue10": "#$p 102#Don't tell Mommy... but you're my favorite grown-up.$h|I found a frog and put it in my diaper.#$b#It's a surprise for Mommy!$1#$e#%Vincent looks like he's being tickled.",
+  "Vincent.Dialogue.spring_Wed2": "#$p 102#I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|Mommy told me I can still be her little baby boy if I wasn't ready to grow up yet.#$e#I love my Mommy!$1",
+  "Vincent.Dialogue.spring_Thu": "#$p 102#I'm hungry... where's Mommy?$s|%You notice Vincent's diaper peeking out of his waistband.#$e#Hi @!$1",
+  "Vincent.Dialogue.spring_Thu6": "#$p 102#You're not as boring as most grown-ups!|%You notice Vincent's diaper peeking out of his waistband.#$b#%When he sees you he giggles and pats his crinkly bottom.",
+  "Vincent.Dialogue.spring_Thu10": "#$p 102#You're not as boring as most grown-ups!|%You notice Vincent's diaper peeking out of his waistband.#$b#%When he sees you he giggles and pats his crinkly bottom.#$e#%You just barely notice a squish.",
+  "Vincent.Dialogue.spring_Fri2": "#$p 102#Oh no... Mommy's making lentil soup tonight.$s|Sam says I'm still his cute little baby brother.#$e#%Vincent wiggles in glee.",
+  "Vincent.Dialogue.spring_Fri_inlaw_Sam": "#$p 102#Oh no... Mommy's making lentil soup tonight.$s|How's my brother doing?#$e#Can you tell him he can still borrow my stuffies if he wants?$3#$b#I don't want him to be scared.$2",
+  "Vincent.Dialogue.spring_Sat8": "#$p 102#Miss Penny makes me read a new book every week.$s|Jas pooped in her pull ups at the library yesterday!#$e#She blamed it on me and Ms. Penny believed her.$2#$e#I was pretty messy though.$3",
+  "Vincent.Dialogue.spring_Sun4": "#$p 102#Hi there!|I can tie my own shoes now, but sometimes I ask Mommy to do it for me anyway.#$e#I like how it makes her all smiley!$1",
+  "Vincent.Dialogue.spring_12_1": "The egg hunt is tomorrow! I'm gonna find so many!$1#$e#I'm a good finder.",
+  "Vincent.Dialogue.spring_12_2": "The egg hunt is tomorrow! I'm gonna find so many!$1#$e#I'm a good finder.",
+
+  "Vincent.Dialogue.summer_Mon4": "#$p 102#I wanna be just like my big brother when I grow up!|Jas only pretends to be a big girl.$3",
+  "Vincent.Dialogue.summer_Mon8": "#$p 102#I wanna be just like my big brother when I grow up!|Jas only pretends to be a big girl.$3#$e#Pull ups are basically just diapers anyway.",
+  "Vincent.Dialogue.summer_Tue": "#$p 102#*sigh*... Mommy won't let me have any more gummies today.$s|My teddy bear's name is Squishy.#$e#I like him a lot!$1",
+  "Vincent.Dialogue.summer_Tue_inlaw_Penny": "#$p 102#*sigh*... Mommy won't let me have any more gummies today.$s|Does Miss Penny change your diapers too?#$e#She says I gotta try and use the potty more, but if I do she won't change me anymore.$2",
+  "Vincent.Dialogue.summer_Wed10": "#$p 102#I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|@! I wanna show you something cool!#$e#%Vincent squats down shamelessly, grunting softly while you watch his pants droop.#$e#All done!$1",
+  "Vincent.Dialogue.summer_Thu6": "#$p 102#You're not as boring as most grown-ups!|Mommy wants me to try using the potty, but I don't wanna.$3#$b#It's scary, and I don't wanna be a big kid yet.$2",
+  "Vincent.Dialogue.summer_Fri2": "#$p 102#Ew, it's boiled beet night again...$s|%Vincent is sucking on his thumb and humming happily to himself.#$e#Hi @!$1",
+  "Vincent.Dialogue.summer_Fri10": "#$p 102#I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%Vincent is sucking on his thumb and humming happily to himself.#$e#%You notice him pause for a minute, his free hand resting on his diaper, a faint blush on his cheeks, and a little grin behind his thumb.#$e#Ahhhh.",
+  "Vincent.Dialogue.summer_Sat10": "#$p 102#Don't tell Mommy... but you're my favorite grown-up.$h|I found a frog and put it in my diaper.#$b#It's a surprise for Mommy!$1#$e#%Vincent looks like he's being tickled.",
+  "Vincent.Dialogue.summer_Sun2": "#$p 102#Miss Penny makes me read a new book every week.$s|Sometimes, when I'm bored, I like to play with my old baby toys.",
+
+  "Vincent.Dialogue.fall_Mon4": "#$p 102#I wanna be just like my big brother when I grow up!|Jas keeps bragging about being in pull ups.#$e#I miss when we were in diapers together.$2",
+  "Vincent.Dialogue.fall_Tue10": "#$p 102#*sigh*... Mommy won't let me have any more gummies today.$s|Wanna know a secret?#$e#I don't wanna stop wearing diapers.$3#$e#Mommy says it's okay if I'm not ready yet!$1",
+  "Vincent.Dialogue.fall_Wed": "#$p 102#I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%You notice Vincent's diaper peeking out of his waistband.",
+  "Vincent.Dialogue.fall_Wed6": "#$p 102#I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%You notice Vincent's diaper peeking out of his waistband.#$b#%When he sees you he giggles and pats his crinkly bottom.",
+  "Vincent.Dialogue.fall_Wed10": "#$p 102#I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%You notice Vincent's diaper peeking out of his waistband.#$b#%When he sees you he giggles and pats his crinkly bottom.#$e#%You just barely notice a squish.",
+  "Vincent.Dialogue.fall_Thu10": "#$p 102#You're not as boring as most grown-ups!|I think I need my diaper changed, but I'm gonna wait until Mommy checks me.#$e#I don't mind being messy a bit longer!$1",
+  "Vincent.Dialogue.fall_Fri4": "#$p 102#Oh no... Mommy's making lentil soup tonight.$s|I can tie my own shoes now, but sometimes I ask Mommy to do it for me anyway.#$e#I like how it makes her all smiley!$1",
+  "Vincent.Dialogue.fall_Sat6": "#$p 102#Miss Penny makes me read a new book every week.$s|Mommy told me I can still be her little baby boy if I wasn't ready to grow up yet.#$e#I love my Mommy!$1",
+  "Vincent.Dialogue.fall_Sun4": "#$p 102#Hi there!|Sam says I'm still his cute little baby brother.#$e#%Vincent wiggles in glee.",
+  "Vincent.Dialogue.fall_Sun_inlaw_Sam": "#$p 102#Hi there!|How's my brother doing?#$e#Can you tell him he can still borrow my stuffies if he wants?$3#$b#I don't want him to be scared.$2",
+
+  "Vincent.Dialogue.winter_Mon": "#$p 102#I wanna be just like my big brother when I grow up!|Jas only pretends to be a big girl.",
+  "Vincent.Dialogue.winter_Mon8": "#$p 102#I wanna be just like my big brother when I grow up!|Jas only pretends to be a big girl.$3#$e#Pull ups are basically just diapers anyway.",
+  "Vincent.Dialogue.winter_Tue10": "#$p 102#*sigh*... Mommy won't let me have any more gummies today.$s|%Vincent stares off for a moment and sighs in relief as a faint hiss reaches your ears.#$e#Just warmin' up!$1",
+  "Vincent.Dialogue.winter_Wed2": "#$p 102#I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%Vincent is sucking on his thumb and humming happily to himself.#$e#Hi @!$1",
+  "Vincent.Dialogue.winter_Wed10": "#$p 102#I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%Vincent is sucking on his thumb and humming happily to himself.#$e#%You notice him pause for a minute, his free hand resting on his diaper, a faint blush on his cheeks, and a little grin behind his thumb.#$e#Ahhhh",
+  "Vincent.Dialogue.winter_Thu8": "#$p 102#You're not as boring as most grown-ups!|Mommy wants me to try using the potty, but I don't wanna.$3#$b#It's SO cold!$2",
+  "Vincent.Dialogue.winter_Fri": "#$p 102#Oh no... Mommy's making lentil soup tonight.$s|Sam said he'd make a snow man with me today!#$e#We're gonna have hot chocolate after too.",
+  "Vincent.Dialogue.winter_Sat10": "#$p 102#Don't tell Mommy... but you're my favorite grown-up.$h|@! I wanna show you something cool!#$e#%Vincent squats down shamelessly, grunting softly while you watch his pants droop.#$e#All done!$1",
+  "Vincent.Dialogue.winter_Sun": "#$p 102#Miss Penny makes me read a new book every week.$s|My teddy bear's name is Squishy.#$e#I like him a lot!$1",
+  "Vincent.Dialogue.winter_Sun_inlaw_Penny": "#$p 102#Miss Penny makes me read a new book every week.$s|Does Miss Penny change your diapers too?#$e#She says I gotta try and use the potty more, but if I do she won't change me anymore.$2",
+
+  // Diaperchange for Abigail
+
+  "Abigail.Change_Diaper.Accept": "#Leg dich bitte hin!$l#$b#%Abigail wechselt deine Windel, benutzt dabei aber ein wenig zu viel Babypuder",
+  "Abigail.Change_Diaper.Refuse": "Ich hab ja nur gefragt.",
+  "Abigail.Change_Diaper.Followup": "...",
+
+  // Diaperchange for Maru
+
+  "Maru.Change_Diaper.Accept": "%Maru wickelt dich schnell und professionell",
+  "Maru.Change_Diaper.Refuse": "Ich bin hier falls du deine Meinung änderst",
+  "Maru.Change_Diaper.Followup": "...",
+
+  // Dialogues ABDL Childs Question
+
+  "Dialogue.ABDLChild_Question": "Hast du ein Problem damit ABDL Dialoge von Vincent und Jas zu sehen?",
+  "Dialogue.ABDLChild_Response1": "Nein, Ich habe kein Problem damit",
+  "Dialogue.ABDLChild_Response2": "Ja, Ich möchte lieber die originalen Dialoge sehen.",
+
+  "Dialogue.ABDLChild_Yes": "Je mehr Herzen du bei einem NPC hast, desto mehr ABDL Dialoge werden dir angezeigt.",
+  "Dialogue.ABDLChild_No": "Ok. Alle Originalen Texte bleiben erhalten.",
+  "Dialogue.ABDLChild_Jas_fallback": "...$u|%Der Windelbund von Jas´s Pull Up schaut leicht hervor.",
+  "Dialogue.ABDLChild_Vincent_fallback": "Wie ist dein Name?|%Du hörst ein leises Rascheln bei jedem Schritt den Vincent geht."
+}

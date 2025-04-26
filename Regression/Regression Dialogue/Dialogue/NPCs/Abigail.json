@@ -7,9 +7,9 @@
 			"Entries": {
 
 
-				"Diaper_Change_Accept": "#Just lie down for me!$l#$b#%Abigail changes your diaper, using way to much baby powder#$action DIAPER_CHANGE \"joja diaper\" \"stinky pants\"#$h",
-				"Diaper_Change_Refuse": "I was just asking.",
-				"Diaper_Change_Followup": "..."
+				"Diaper_Change_Accept": "{{i18n:Abigail.Change_Diaper.Accept}}#$action DIAPER_CHANGE \"joja diaper\" \"stinky pants\"#$h",
+				"Diaper_Change_Refuse": "{{i18n:Abigail.Change_Diaper.Refuse}}",
+				"Diaper_Change_Followup": "{{i18n:Abigail.Change_Diaper.Followup}}"
 			}
 		}
 	]

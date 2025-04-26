@@ -1,0 +1,2209 @@
+﻿{
+  "Jodi_Initial_Letter": [ "<Lieber/Liebe> @,^Willkommen in der Stadt! Hier ist etwas Gemüse aus dem Garten zurd Überbrückung bis du richtig angekommen bist. Dein Großvater hat mir von deinem kleinen Problem erzählt. Deshalb habe ich ein paar zusätzliche Hilfsmittel für dich reingelegt. Besuche Pierre wenn du mehr brauchst!^      <, Jodi" ],
+  "Food_Low": [
+    "Du bist hungrig.",
+    "Dein Magen knurrt.",
+    "Du denkst daran, etwas zu essen.",
+    "Dz denkst daran, Essen zu finden.",
+    "Du brauchst etwas zu essen."
+  ],
+  "Food_None": [
+    "Du bist am Verhungern!",
+    "Alles, woran du denken kannst, ist Essen! Besser iss etwas!",
+    "Du bist so hungrig, dass du nicht mehr klar denken kannst!"
+  ],
+  "Water_Low": [
+    "Du wirst ziemlich durstig.",
+    "Du könntest wirklich Wasser gebrauchen.",
+    "Du denkst darüber nach etwas zu trinken.",
+    "Du brauchst etwas zu trinken"
+  ],
+  "Water_None": [
+    "Du bist dehydriert!",
+    "Du bist super durstig! Hol dir sofort etwas zu trinken!",
+    "Du bist so durstig, dass du nicht mehr klar denken kannst!"
+  ],
+  "Drink_Water_Source": [
+    "Du schöpfst etwas Wasser in eine Tasse und lässt es hinunter laufen"
+  ],
+  "Bladder_Green": [
+    "Du hast nicht das gefühl pinkeln zu müssen.",
+    "Du bist dir ziemlich sicher, das deine Blase fast leer ist."
+  ],
+  "Bladder_Yellow": [
+    "Du musst pinkeln",
+    "Du solltest bald einen Ort zum pinkeln finden",
+    "Du hast das Gefühl, bald pinkeln zu müssen.",
+    "Deine Blase füllt sich langsam"
+  ],
+  "Bladder_Orange": [
+    "Du musst dringend pinkeln!",
+    "Du bist dir nicht sicher, wie lange du dein Pipi noch halten kannst",
+    "Wenn du nicht bald pinkelst, wird es in die Hose gehen!",
+    "Du überkreuzt die Beine um dir nicht selst einzupinkeln."
+  ],
+  "Bladder_Red": [
+    "Du kannst es nicht mehr halten! Du bist dabei, dich einzupinkeln!",
+    "Du musst so dringend pinkeln, das du anfängst herumzuhüpfen!"
+  ],
+  "Bladder_Leak": [
+    "Du spürst, ein paar Tropfen Pipi in deiner $UNDERWEAR_NAME$!",
+    "Du spürst, wie ein paar Tropfen Pipi in deine $UNDERWEAR_NAME$ laufen!",
+    "Als du herumhüpfst, um zu verdindern das du dir einpinkelst, gelangt ein wenig Pipi in deine $UNDERWEAR_NAME$!",
+    "Als du deine Beine überkreuzt, tropft etwas Pipi in deine $UNDERWEAR_NAME$!",
+    "Deine $UNDERWEAR_NAME$ wird etwas feucht als du versuchst es noch länger zu halten!"
+  ],
+  "Bowels_Green": [
+    "Du hast nicht das gefühl kacken zu müssen.",
+    "Du bist dir ziemlich sicher deine Kacke noch für eine Weile zurück halten zu können."
+  ],
+  "Bowels_Yellow": [
+    "Du musst kacken",
+    "Du solltest einen Ort zum Kacken finden.",
+    "Du spürst ein Grummeln im Darm.",
+    "Vieleicht ist es Zeit, auf die Toilette zu gehen."
+  ],
+  "Bowels_Orange": [
+    "Du musst wirklich kacken!",
+    "Wenn du nicht bald einen Ort zum Kacken findest, wird es in die Hose gehen!",
+    "Du bist dir nicht sicher, wie lange du deine Kacke noch zurück halten kannst."
+  ],
+  "Bowels_Red": [
+    "Du spürst, wie sich die Kacke langsam herrausdrückt!",
+    "Du kannst es nicht mehr halten! Du bist kurz davor dir selbst einzukacken! "
+  ],
+  "Bowels_Leak": [
+    "Etwas Kacke entzieht sich langsam deiner Kontrolle und beschmutzt deine $UNDERWEAR_NAME$!",
+    "Ein wenig Kacke beschmutzt $UNDERWEAR_NAME$!",
+    "Bei Versuch es weiter zurück zu halten, gelangt etwas Kacke in deine $UNDERWEAR_NAME$!",
+    "Als du dein Bestest gibst es weiter zurück zu halten, wird deine $UNDERWEAR_NAME$ etwas schmutzig!"
+  ],
+  "Bladder_Continence_Green": [ "Du hast keine Probleme dein Pipi zu halten." ],
+  "Bladder_Continence_Yellow": [ "Du scheinst dein Pipi immer schlechter halten zu können." ],
+  "Bladder_Continence_Orange": [ "Du kannst dein Pipi kaum noch halten" ],
+  "Bladder_Continence_Red": [ "Du bist kurz davor, dein Pipi gar nicht mehr halten zu können." ],
+  "Bladder_Continence_Min": [ "Du bist fast völlig unfähig, dein Pipi zu halten." ],
+  "Bowel_Continence_Green": [ "Du hast keine Probleme deine Kacke zu halten." ],
+  "Bowel_Continence_Yellow": [ "Du scheinst deine Kacke immer schlechter halten zu können." ],
+  "Bowel_Continence_Orange": [ "Du kannst deine Kacke kaum noch halten." ],
+  "Bowel_Continence_Red": [ "Du bist kurz davor, deine Kacke gar nicht mehr halten zu können." ],
+  "Bowel_Continence_Min": [ "Du bist fast völlig unfähig, deine Kacke zu halten." ],
+  "Pee_Voluntary": [
+    "Du ziehst deine $UNDERWEAR_NAME$ herunter und pinkelst auf den Boden.",
+    "Du bewegst deinen $UNDERWEAR_NAME$, holst tief Luft und entleerst deine Blase.",
+    "Du schaust dich nervös um, ziehst deine $UNDERWEAR_NAME$ runter und lässt es einfach auf den Boden laufen!",
+    "Du ziehst deine $PANTS_NAME$ bis zu den Knien, hockst dich hin und lässt dein Pipi auf den Boden spritzen.",
+    "Du ziehst deine $PANTS_NAME$ runter und pinkelst auf den Boden.",
+    "Du ziehst deine $PANTS_NAME$ runter and <pinkelst/tinkle> auf den Boden.",
+    "Du ziehst deine $PANTS_NAME$ runter, <spreizt deine Beine/hockst dich hin>, und entleerst deine Blase."
+  ],
+  "Poop_Voluntary": [
+    "Du ziehst deine $PANTS_NAME$ runter, gest in die Hocke und entleerst deinen Darm.",
+    "Du schaust dich nervös um, ziehst deine $PANTS_NAME$ runter umd machst dein Geschäft direkt hier auf den Boden!",
+    "Du ziehst dich aus, gehst in die Hocke und lässt deine Kacke auf den Boden fallen.",
+    "Du ziehst deine $PANTS_NAME$ runter und kackst auf den Boden.",
+    "Du ziehst deine $PANTS_NAME$ bis zu den Knien, hockst dich hin und presst deine gesamte Kacke hinaus."
+  ],
+  "Pee_Toilet": [
+    "Beim pinkeln in die Toilette, atmest du erleichtert auf.",
+    "Du pinkelst in das Töpfchen wie ein <großer/großes> <Junge/Mädchen>.",
+    "Du ziehst deine $PANTS_NAME$ runter, <stehst vor der Toilette/Sitzt auf der Toilette> und pinkelst wie ein großer/großes> <Junge/Mädchen>.",
+    "Du hast es gerade so auf die Toilette geschafft. Noch etwas länger und du hättest dir in die Hose gepinkelt!",
+    "Du pinkelst in die Toilette. Gut das du es bis hierhin zurückhalten konntest!",
+    "Du pinkelst voller stolz in die Toilette. Jetzt brauchst du keine Windel mehr!",
+    "Du pinkelst in die Toilette. Deine Mami wäre stolz!",
+    "Du ziehst dich aus und gehst auf die Toilette wie ein <guter/gutes> <Junge/Mädchen>."
+  ],
+  "Poop_Toilet": [
+    "Während deine Kacke in die Toilette gleitet, entspannst du dich langsam. Uff, das hat sich gut angefühlt!",
+    "Du ziehst deine $PANTS_NAME$ bis zu den Knien, setzt dich auf die Toilette und machst dein Geschäft wie ein <großer/großes> <Junge/Mädchen>.",
+    "Du machst dein Geschäft in das Töpfchen wie ein <großer/großes> <Junge/Mädchen>.",
+    "Du kackst in die Toilette. Vielleicht machst du dich heute nicht mehr in die Hose!",
+    "Du ziehst deine $PANTS_NAME$ bis zu den Knien und kackst in die Toilette.",
+    "Du kackst voller Stolz in die Toilette. Jetzt brauchst du keine Windel mehr!",
+    "Du kackst in die Toilette. Deine Mami wäre stolz!",
+    "Du ziehst dich aus und gehst auf die Toilette wie ein <guter/gutes> <Junge/Mädchen>."
+  ],
+  "Pee_Toilet_Attempt": [
+    "Du versuchst, wie ein großer <Junge/Mädchen> ins Töpfchen zu pinkeln, aber es kommt nichts heraus.",
+    "Du ziehst deine $PANTS_NAME$ runter, <spreizt deine Beine/setzt dich auf die Toilette> und versuchst zu pinkel aber nichts kommt heraus."
+  ],
+  "Poop_Toilet_Attempt": [
+    "Du windest dich ein wenig, während du versuchst, in die Toilette zu kacken, aber es kommt nichts heraus.",
+    "Du versuchst, ins Töpfchen zu kacken wie ein großer <Junge/Mädchen>, aber du kannst es nicht.",
+    "Du ziehst deine $PANTS_NAME$ bis zu den Knien, setzt dich auf die Toilette und versuchst zu kacken, aber es kommt nicht raus."
+  ],
+  "Wet_Voluntary": [
+    "Du entspannst deine Blase und dein Pipi fließt in deine $UNDERWEAR_NAME$.",
+    "Deine Blase kribbelt, als du dich entspannnst. Du spürst wie die Wärme sich langsam in deineer $UNDERWEAR_NAME$ ausbreitet.",
+    "Du atmest tief ein und lässt dein Pipi in deine $UNDERWEAR_NAME$ laufen.",
+    "Du schaust dich ein wenig verlegen um während du absichtlich, wie ein kleiner <Junge/Mädchen>, in deine $UNDERWEAR_NAME$ pinkelst."
+  ],
+  "Mess_Voluntary": [
+    "Du gehst ein wenig in die Hocke und entleerst deinen Darm in deine $UNDERWEAR_NAME$.",
+    "Du konzentrierst dich und drückst eine warme Ladung Kacke in deinen $UNDERWEAR_NAME$.",
+    "Du hoffst, das niemand bemerkt, wie du absichtlich eine großen Haufen in deine $UNDERWEAR_NAME$ drückst."
+  ],
+  "Pee_Attempt": [
+    "Du ziehst deine $PANTS_NAME$ runter und entspannst deine Blase, aber es kommt nichts heraus.",
+    "Du ziehst deine $PANTS_NAME$ runter, <spreizt deine Beine/hockst dich hin>, und versuchst zu pinkeln, aber es geht nicht."
+  ],
+  "Poop_Attempt": [
+    "Du ziehst deine $PANTS_NAME$ runter und versuchst zu kacken, aber du kannst nicht.",
+    "Du ziehst deine $PANTS_NAME$ bis zu den Knien, gehst in die Hocke und versuchst zu kacken, aber es kommt nichts raus."
+  ],
+  "Wet_Attempt": [
+    "Du entspannst deine Blase, aber es kommt nichts heraus.",
+    "Du versuchst, in deine $UNDERWEAR_NAME$ zu pinkeln, aber du kannst es nicht."
+  ],
+  "Mess_Attempt": [
+    "Du gehst ein wenig in die Hocke und drückst, aber es kommt nichts heraus.",
+    "Du versuchst in deine $UNDERWEAR_NAME$ zu kacken, aber du kannst es nicht."
+  ],
+  "Still_Soiled": [
+    "Du fühlst deine <nasse&volle> $UNDERWEAR_NAME$ und errötest bei diesem Gefühl.",
+    "Du fühlst dich wie ein <kleiner/kleines> <Junge/Mädchen> weil du immer noch $UNDERWEAR_PREFIX$ <nasse&volle> $UNDERWEAR_NAME$ trägst.",
+    "Du errötest und lächelst, als du merkst, dass du $UNDERWEAR_PREFIX$ <nasse&volle> $UNDERWEAR_NAME$ trägst.",
+    "Du riechst etwas Stinkendes und dein Herz flattert, als du merkst, dass du immer noch $UNDERWEAR_PREFIX$ <nasse&volle> $UNDERWEAR_NAME$ trägst.",
+    "Du spürst, wie sich deine <nasse&volle> $UNDERWEAR_NAME$ zwischen diene Beinen zusammenquetscht und beginnst zu lächeln.",
+    "Du bemerkst, dass deine durchhängende <nasse&volle> $UNDERWEAR_NAME$ ist kuschelig und warm ist.",
+    "Du merkst, dass du watschelst, weil deine $UNDERWEAR_NAME$ ist <nass&voll>.",
+    "Du überlegst, ob du deine <nasse&volle> $UNDERWEAR_NAME$ bald wechseln solltest, aber noch nicht jetzt. Es ist immer noch warm.",
+    "Du drückst deine Hand in deine matschige $UNDERWEAR_NAME$. Du fühst dich wie ein kleines Baby da du weist sie ist <nass&voll>.",
+    "Du spürst deine $UNDERWEAR_NAME$. Sie ist <nass&voll>!"
+  ],
+  "Should_Change": [
+    "Du spürst deine $UNDERWEAR_NAME$ und stellst fest, du solltest sie wirklich langsam wechseln!",
+    "Deine $UNDERWEAR_NAME$ fühlt sich sehr schwer an. Es wird Zeit für einen Wechsel!",
+    "Als du spürst, wie sehr deine $UNDERWEAR_NAME$ durchhängt und denkst, es ist wahrscheinlich Zeit für ein Windelwechsel!"
+  ],
+  "Wet_Accident": [
+    "Du beißt dir auf die Lippe und atmest scharf durch die Nase ein, als deine Blase nachgibt und du deinen $UNDERWEAR_NAME$ überschwemmst.",
+    "Du bist hilflos aus Pipi in deine $UNDERWEAR_NAME$ fließt.",
+    "Du hoffst, das niemand das Pipi bemerkt, das in deine $UNDERWEAR_NAME$ läuft.",
+    "Dein Daumen findet den Weg in deinen Mund, als du plötzlich spürst, wie sich Wärme in deiner $UNDERWEAR_NAME$ ausbreitet!",
+    "Du hoffst, dass deine $UNDERWEAR_NAME$ nicht ausläuft, als du merkst, dass du dir gerade in die Hose pinkelst.",
+    "Du bleibst stehen und fängst an, in deine $UNDERWEAR_NAME$ zu pinkeln!",
+    "Du lächelst verlegen, als du merkst, dass die Wärme, die sich in deinem Schritt ausbreitet, Pipi ist!",
+    "Du <keuchst/quickst> als du merkst, dass du dir plötzlich in die Hose pinkelst!",
+    "Mit einem leisen Zischen strömt Wärme in deine $UNDERWEAR_NAME$!",
+    "Du drückst deine Hände in den Schritt und spürst die Wärme, als die plötzliche Flut von Pipi aus dir heraussprudelt.",
+    "Du hast deine $UNDERWEAR_NAME$ nass gemacht wie ein <kleiner/kleines> <Junge/Mädchen>!",
+    "Du gibst den Versuch auf, es noch länger zurückzuhalten, und deine Pipi läuft heraus und überschwemmt deine $UNDERWEAR_NAME$.",
+    "Du kannst nicht anders, als dich zu entspannen und dein Pipi in deine $UNDERWEAR_NAME$ laufen zu lasen.",
+    "Upsi! du hast dir eingepinkelt!",
+    "Du machst deine $UNDERWEAR_NAME$ nass! Na ja.",
+    "Du merkst, wie dir immer wärmer wird, bevor du nach unten schaust und feststellst, dass du in deine $UNDERWEAR_NAME$ pinkelst!",
+    "Deine $UNDERWEAR_NAME$ wird schwerer als du dir einpinkelst. Deine Wangen erröten, als du merkst, dass du nur ein <kleiner/kleines> <Junge/Mädchen> bist."
+  ],
+  "Mess_Accident": [
+    "Deine Knie beugen sich und dein Körper reagiert von selbst während du eine warme Ladung in deine $UNDERWEAR_NAME$ drückst.",
+    "Du merkst, das sich plötzlich die Rückseite deiner $UNDERWEAR_NAME$ wölbt! Du errötest leicht, als sich dein warmer, weicher Kot an dich schmiegt, und hebst deinen Po hoch.",
+    "Du seufzt vor Erleichterung und grinst verschämt, als der unverwechselbare Geruch von Kacke aus deinem $UNDERWEAR_NAME$ zu wehen beginnt.",
+    "Du verdeckst verschämt dein Gesicht, während du deine $UNDERWEAR_NAME$ mit warmer Kacke füllst. Nachdem du fertig bist, bemerkst du, dass dein Daumen den Weg in deinen Mund gefunden hat.",
+    "Mit einem leisen Knistergeräusch quetscht sich deine Kacke in deine $UNDERWEAR_NAME$.",
+    "Du fängst an, dich zu winden und drückst eine schwere Ladung Kacke in deine $UNDERWEAR_NAME$.",
+    "Du hast dich erschrocken als du bemerkst, du hast dir eingekackt!",
+    "Du kannst deine Kacke nicht mehr halten und drückst sie in deine $UNDERWEAR_NAME$.",
+    "Du gibst letzlich auf und eine schwere Ladung warmer Kacke drückt sich in deine $UNDERWEAR_NAME$.",
+    "Du erstarrst und schaust dich verlegen um, während deine Kacke in deinen $UNDERWEAR_NAME$ quillt.",
+    "Du hast dir in die Hose gekackt!",
+    "Du spürst, wie sich eine warme Masse in deinem $UNDERWEAR_NAME$ ausbreitet und fühlst dich wie ein <kleiner/kleines> <Junge/Mädchen>.",
+    "Du drückst auf die Rückseite deiner$UNDERWEAR_NAME$ während sie sich wölbt und kicherst wäkrend es sich verteilt.",
+    "Upsi! Deine $UNDERWEAR_NAME$ ist jetzt ganz schmutzig!",
+    "Du kannst es nicht länger halten! Du kackst dir in die $UNDERWEAR_NAME$!",
+    "Du hast in deine $UNDERWEAR_NAME$ gekackt wie ein <kleiner/kleines> <Junge/Mädchen>!",
+    "Deine $UNDERWEAR_NAME$ wölbt sich als du dir einkackst.",
+    "Du kannst es nicht länger halten und seufzt erleichtert als du in deine $UNDERWEAR_NAME$ kackst!"
+  ],
+  "Diaper_Change_Dialog": [
+    "#$q dirty_change_yes/dirty_change_no Diaper_Change_Followup#Soll ich deine $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ wechseln wie bei einem Kleinkind?#$r dirty_change_yes 1 Diaper_Change_Accept#Nicken.#$r dirty_change_yes 1 Diaper_Change_Accept#Ja bitte?#$r dirty_change_no -1 Diaper_Change_Refuse#Neeeiiinnn!#$r dirty_change_no 0 Diaper_Change_Refuse#Schüttle mit dem Kopf."
+  ],
+  "Change_Other_Dialog": [
+    "#$q change_other_yes/change_other_no Change_Diaper_Followup#Brauchst du Hilfe $NPC_NAME$ um aus deiner $NPC_INSPECT_UNDERWEAR_NAME$ zu kommen?",
+    "#$q change_other_yes/change_other_no Change_Diaper_Followup#$NPC_NAME$ has $NPC_INSPECT_UNDERWEAR_NAME$ in $NPC_HIS_HER$ $NPC_PANTS_NAME$. Do you change $NPC_HIM_HER$?"
+  ],
+  "Night": {
+    "Toilet_Night": [
+      "Du musstest letzte Nacht <pinkeln&kacken> und bist $TOILET_TIMES_TOTAL zur Toilette gegangen",
+      "You woke up $TOILET_ONCE_TWICE_TOTAL to <pinkeln&kacken> in the potty wie ein <großer/großes> <Junge/Mädchen>",
+      "Du musstest letzte Nacht insgesamt $TOILET_TIMES_TOTAL mal aufstehen um zu <pinkeln&kacken>"
+    ],
+    "Sleep_All_Night": [
+      "Du bist nich ein mal diese Nacht aufgewacht",
+      "Du hast geschlafen wie ein Baby",
+      "Du hast davon geträumt, ins Töpfchen zu machen",
+      "In deinen Träumen hast du gegen das Töpfchenmonter gekämpft",
+      "Du hattest nich ein mal das Gefühl diese Nacht aufstehen zu müssen"
+    ],
+    "Accident_At_Night": [
+      "<aber >du hast dir selbst $ACCIDENT_TIMES_MULTIPLE_TOTAL mal <eingepinkelt&eingekackt>, wie ein Kleinkind",
+      "du hast dir selbst $ACCIDENT_TIMES_MULTIPLE_TOTAL mal <eingepinkelt&eingekackt>, wie der kleiner Bettnässer, der du bist"
+    ],
+    "Underwear_Stuck": [
+      "aber du fühltest dich sicher in deiner $UNDERWEAR_NAME$",
+      "aber du wolltest deine $UNDERWEAR_NAME$ nicht zerreißen"
+    ]
+  },
+  "Wake_Up_Underwear_State": [
+    "Du wachst in $INSPECT_UNDERWEAR_NAME$ auf."
+  ],
+  "Wet_Bed": [
+    "Du stellst fest das du letzte Nacht ins Bett gemacht hast. --Dein Bett ist immer noch nass!",
+    "Dein Bett ist kalt und nass. Du musst letzte Nacht ins Bett gemacht haben!",
+    "Du hast ins Bett gemacht wie ein <kleiner/kleines> <Junge/Mädchen>!",
+    "Du wachst auf und fühlst dich unwohl weil du in einer Pfütze aus kaltem Pipi liegst.",
+    "Dein Bettzeug ist ganz nass. Du brauchst eine Windel wie ein <kleiner/kleines> <Junge/Mädchen>!",
+    "Dein Schlafanzug ist unbequem und nass. Du merkst, dass du letzte Nacht ins Bett gemacht hast!"
+  ],
+  "Messed_Bed": [
+    "Du fängst an zu weinen als du merkst, du hast ins Bett gekackt< und gepinkelt> wie ein Baby!",
+    "Jemand braucht eine Windel! Du hast letzt Nacht ins Bett gekackt< und gepinkelt>!",
+    "Deine Wangen brennen als du bemerkst das dein Bett ganz <nass und >voller Kacke ist!",
+    "Du schämst dich als du merkst das du ins Bett <gepinkelt und>gekackt hast während du schliefst!",
+    "Letzte Nacht musst du ins Bett <gepinkelt und>gekackt haben!",
+    "Dir wird klar, du musst letzte Nacht in dein Bett <gepinkelt und >gekackt haben! Oh nein!",
+    "Du riechst das etwas stinkt und merkst, das du letzte Nacht das Bett <nass und >vollgekackt hast!"
+  ],
+  "Spot_Washing_Bedding": [
+    "Du bringst dein <nasses&schmutziges> Bettzeug zum Fluss und reinigst die <nassen&schmutzigen> Stellen, aber es war anstrengend und das Bettzeug wird wahrscheinlich nicht vor $BEDDING_DRYTIME$ trocken sein."
+  ],
+  "Washing_Bedding": [
+    "Du bringst dein <nasses&schmutziges> Bettzeug zum Fluss und wäscht es, aber es war anstrengend und das Bettzeug wird wahrscheinlich nicht vor $BEDDING_DRYTIME$ trocken sein."
+  ],
+  "Washing_Underwear": [
+    "Du wäscht deine $UNDERWEAR_NAME$ im Wasser. <Es#Sie> wird morgen trocken sein."
+  ],
+  "Overwashed_Underwear": [
+    "Du wäscht deine $UNDERWEAR_NAME$ im Wasser. <Es#Sie> ist zu abgenutz und viel auseinander!"
+  ],
+  "Bedding_Still_Wet": [
+    "Dein Bettzeug wird erst in $BEDDING_DRYTIME$ trocken sein!"
+  ],
+  "Cant_Remove": [
+    "Du versuchst, deinen $UNDERWEAR_NAME$ herunterzuziehen, aber du bekommst sie nicht ab ohne sie zu ruinieren. Vielleicht solltest du dir etwas anderes anziehen? Oder du könntest sie einfach benutzen..."
+  ],
+  "Pee_Overflow": [
+    "Deine $UNDERWEAR_NAME$ läuft aus! Deine Hose ist nass!",
+    "Du fängst an zu weinen, als du spürst, wie dir dein Pipi das Beine herunterläuft!",
+    "Du wirst rot als du bemerkst, wie dir dein Pipi das Beine herunterläuft!!",
+    "Du bemerkst einen nassen Fleck auf deiner $PANTS_NAME$ und stellst fest, deine $UNDERWEAR_NAME$ läuft aus!",
+    "Deine  konnte das Pipi nicht halten und sie ist in deine $PANTS_NAME$ ausgelaufen!",
+    "Deine $UNDERWEAR_NAME$ <ist#sind> übervoll! Sie läuft in deine Hose aus."
+  ],
+  "Poop_Overflow": [
+    "Deine $UNDERWEAR_NAME$ läuft aus! Deine Hose ist voller Kacke!",
+    "Du wirst knallrot und merkst, dass deine Hose jetzt voller Kacke ist!",
+    "Deine Wangen brennen vor Scham als du bemerkst, deine $UNDERWEAR_NAME$ ist voll und läuft jetzt in deine $PANTS_NAME$ aus!",
+    "Du riecht etwas stinkendes und merkst, deine $UNDERWEAR_NAME$ ist voll und läuft jetzt in deine $PANTS_NAME$ aus!",
+    "Du fängst an zu weinen, als du spürst, wie ein großer Klumpen Kacke aus deiner $UNDERWEAR_NAME$ herausquillt und deine Beine hinunterschmiert!",
+    "Oh nein! Deine $UNDERWEAR_NAME$ konnte die Kacke nicht halten und sie ist in deine $PANTS_NAME$ geflossen!"
+  ],
+  "Debuff_Wet_Pants": [
+    "Deine Hose ist nass!",
+    "Du hast deine Hose nass gemacht!",
+    "Du hast dir in die Hose gepinkelt!"
+  ],
+  "Debuff_Messy_Pants": [
+    "Deine Hose ist schmutzig!",
+    "Du hast deine Hose schmutzig gemacht!",
+    "Du hast dir in die Hose gekackt!"
+  ],
+  "Potty_Dialogs": {
+    "vincent": {
+      "pee": {
+        "pre": {
+          "success": [
+
+          ],
+          "fail": [
+            "Hu?",
+            "Oh.",
+            "...",
+            "Was?"
+          ]
+        },
+        "post": {
+          "success": [
+
+          ],
+          "fail": [
+            "*hehe*",
+            "...warm",
+            "...schön",
+            "mmm!"
+          ]
+        }
+      },
+      "poop": {
+        "pre": {
+          "success:": [
+
+          ],
+          "fail": [
+            "Nnnn... Nnnf..",
+            "Hmm?",
+            "Bauchweh",
+            "Oww... Hmmnh..."
+          ]
+        },
+        "post": {
+          "success": [
+
+          ],
+          "fail": [
+            "*kichert*",
+            "hehe...",
+            "...warm",
+            "...schön",
+            "Jetzt bin ich fertig!",
+            "Jetzt ist es ok!",
+            "Fertig!",
+            "Jetzt ist alles gut!"
+          ]
+        }
+      }
+    },
+    "jas": {
+      "pee": {
+        "pre": {
+          "success": [
+            "muss ganz dringeng, jetzt!",
+            "Ich muss auf´s Töpfchen!",
+            "? oh!",
+            "pullern!",
+            "Es ist Nummer 1"
+          ],
+          "fail": [
+            "ich muss...",
+            "ich muss..",
+            "pullern...",
+            "was... oh",
+            "ich glaube..."
+          ]
+        },
+        "post": {
+          "success": [
+            "Großes Mädchen!",
+            "Super!",
+            "Groß!",
+            "habs ins Töpfchen gemacht!"
+          ],
+          "fail": [
+            "Uh-Oh...",
+            "...Uh",
+            "Ahh...",
+            "Aber... Ich bin doch ... ein großes Mädchen...",
+            "Ich... hab nicht...",
+            "Jetzt muss ich auch nicht mehr gegen",
+            "... nass",
+            "Es ist zu spät..."
+          ]
+        }
+      },
+      "poop": {
+        "pre": {
+          "success": [
+            "muss ganz dringeng, jetzt!",
+            "Nummer 2!",
+            "Hilfe! Schnell!",
+            "Ich muss ganz dringend!",
+            "Kann ich... bitte?!"
+          ],
+          "fail": [
+            "Nnnummer 2... nnh...",
+            "2, Num.. hnnn...",
+            "Mr... Mrs... nff...",
+            "Aww... ummh...",
+            "muss...",
+            "Nein, ooho, nnnff...",
+            "Ich muss..."
+          ]
+        },
+        "post": {
+          "success": [
+            "Groß!",
+            "Hab es ins Töpfchen gemacht! Ganz alleine!"
+          ],
+          "fail": [
+            "Kackie!",
+            "Aber... Ich bin doch ... ein großer Mädchen...",
+            "...iiihh...",
+            "eeek... aww...",
+            "neein... eklige Hose",
+            "Ich muss nicht mehr",
+            "Ich... hab nicht...",
+            "Das war ich nicht"
+          ]
+        }
+      }
+    },
+    "sam": {
+      "pee": {
+        "pre": {
+          "success": [
+
+          ],
+          "fail": [
+            "...",
+            "fff..",
+            "..."
+          ]
+        },
+        "post": {
+          "success": [
+
+          ],
+          "fail": [
+            "...",
+            "hu!",
+            "mmm...",
+            "Nein, mir geht es gut!"
+          ]
+        }
+      },
+      "poop": {
+        "pre": {
+          "success": [
+
+          ],
+          "fail": [
+            "uh...",
+            "nnn..."
+          ]
+        },
+        "post": {
+          "success": [
+
+          ],
+          "fail": [
+            "*hustet*",
+            "*hustet* fff...",
+            "uuh...",
+            "nnn...",
+            "Oh, Ich habe gerade nachgedacht.",
+            "Entschuldige, was?"
+          ]
+        }
+      }
+    },
+    "abigail": {
+      "pee": {
+        "pre": {
+          "success": [
+
+          ],
+          "fail": [
+            "..."
+          ]
+        },
+        "post": {
+          "success": [
+
+          ],
+          "fail": [
+            "...",
+            "hu..."
+          ]
+        }
+      },
+      "poop": {
+        "pre": {
+          "success": [
+
+          ],
+          "fail": [
+            "uh...",
+            "nnn..."
+          ]
+        },
+        "post": {
+          "success": [
+
+          ],
+          "fail": [
+            "*kichert*",
+            "uuh...",
+            "nnnf..."
+          ]
+        }
+      }
+    }
+  },
+  "Villager_Underwear_Options": {
+    "vincent": {
+      "baby print diaper": {
+        "friendship": "20",
+        "dialog_key": "Change_Diaper_Accept_BabyPrint",
+        "observerfriendship": "friend_Jodi_10"
+      },
+      "lavender pullups": {
+        "friendship": "-20",
+        "dialog_key": "Change_Diaper_Accept_Lavender",
+        "observerfriendship": "friend_Jodi_-5"
+      },
+      "training pants": {
+        "friendship": "10",
+        "dialog_key": "Change_Diaper_Accept_Training",
+        "observerfriendship": "friend_Jodi_-10"
+      },
+      "big kid undies": {
+        "friendship": "10",
+        "dialog_key": "Change_Diaper_Accept_BigKids",
+        "observerfriendship": "friend_Jodi_-40"
+      },
+      "dinosaur undies": {
+        "friendship": "15",
+        "dialog_key": "Change_Diaper_Accept_Dinos",
+        "observerfriendship": "friend_Jodi_-20"
+      }
+    },
+    "jas": {
+      "baby print diaper": {
+        "friendship": "-30",
+        "dialog_key": "Change_Diaper_Accept_BabyPrint",
+        "observerfriendship": "friend_Marnie_-10"
+      },
+      "lavender pullups": {
+        "friendship": "30",
+        "dialog_key": "Change_Diaper_Accept_Lavender",
+        "observerfriendship": "friend_Marnie_20"
+      },
+      "training pants": {
+        "friendship": "30",
+        "dialog_key": "Change_Diaper_Accept_Training",
+        "observerfriendship": "friend_Marnie_25"
+      },
+      "big kid undies": {
+        "friendship": "10",
+        "dialog_key": "Change_Diaper_Accept_BigKids",
+        "observerfriendship": "friend_Marnie_-20"
+      },
+      "dinosaur undies": {
+        "friendship": "-30",
+        "dialog_key": "Change_Diaper_Accept_Dinos",
+        "observerfriendship": "friend_Marnie_-15"
+      }
+    },
+    "sam": {
+      "baby print diaper": {
+        "friendship": "15",
+        "dialog_key": "Change_Diaper_Accept_BabyPrint",
+        "observerfriendship": "friend_Jodi_10"
+      },
+      "training pants": {
+        "friendship": "10",
+        "dialog_key": "Change_Diaper_Accept_Training",
+        "observerfriendship": "friend_Jodi_10"
+      },
+      "big kid undies": {
+        "friendship": "-20",
+        "dialog_key": "Change_Diaper_Accept_BigKids",
+        "observerfriendship": "friend_Jodi_15"
+      },
+      "joja diaper": {
+        "friendship": "10",
+        "dialog_key": "Change_Diaper_Accept_Joja",
+        "observerfriendship": "friend_Jodi_5"
+      },
+      "heart diaper": {
+        "friendship": "30",
+        "dialog_key": "Change_Diaper_Accept_HeartDiaper",
+        "observerfriendship": "friend_Jodi_15"
+      }
+    }
+  },
+  "Villager_Friendship_Modifier": {
+    // ground: going go on the ground, successfully peeing/pooping there
+    // ground_attempt: trying to go on the ground, but nothing comes out
+    // soiled: successfully peeing/pooping in your pants
+    // dirty: having dirty cloth (wet/poopy pants). NPC usually don't talk to you if you are filthy
+    "adult": {
+      "ground": 2.0,
+      "ground_attempt": 1.0,
+      "soiled": 1.0,
+      "dirty": 0.3
+    },
+    "teen": {
+      "ground": 1.5,
+      "ground_attempt": 0.5,
+      "soiled": 1.0,
+      "dirty": 0.1
+    },
+    "kid": {
+      "ground": 1.0,
+      "ground_attempt": 0.25,
+      "soiled": 0,
+      "dirty": 0
+    },
+    "animal": {
+      "ground": 0,
+      "ground_attempt": 0,
+      "soiled": 0,
+      "dirty": 0
+    },
+    "abigail": {
+      "ground": 1.0,
+      "ground_attempt": 0.5,
+      "soiled": 0,
+      "dirty": 0.1
+    },
+    "jodi": {
+      "ground": 1.0,
+      "ground_attempt": 0.5,
+      "soiled": 0,
+      "dirty": 0
+    },
+    "sam": {
+      "ground": 2.0,
+      "ground_attempt": 1.0,
+      "soiled": 0,
+      "dirty": 0.1
+    },
+    "penny": {
+      "ground": 1.0,
+      "ground_attempt": 0.5,
+      "soiled": 0,
+      "dirty": 0.05
+    },
+    "jas": {
+      "ground": 1.0,
+      "ground_attempt": 0.5,
+      "soiled": 0,
+      "dirty": 0
+    }
+  },
+  "Villager_Reactions": {
+    "adult": {
+      "soiled_verynice": [
+        "Aww, brauchst du meine Hilfe um deine <nasse&schmutzige> $UNDERWEAR_NAME$ zu wechseln?",
+        "Ich glaube <der/die> kleine $FARMERNAME$ muss gewickelt werden!",
+        "Ich kenne <einen/eine> <kleinen/kleine> <Farmer/Farmerin> <der/die> gewickelt werden muss!$1"
+      ],
+      "soiled_nice": [
+        "Du armes kleine Ding! Hast du dir selbst <eingepinkelt&eingekackt>?",
+        "Muss hier jemand gewickelt werden?"
+      ],
+      "soiled_mean": [
+        "Du solltest <&wirklich >deine Hose wechseln gehen."
+      ],
+      "dirty": [
+        "Du solltest dich vieleicht erst einmal umziehen gehen."
+      ],
+      "ground": [
+        "$FARMERNAME$! Auf dem Land zu leben, macht uns nicht zu Barbaren!$3",
+        "Das ist nicht in Ordnung! Benutzt eine Toilette!$3"
+      ],
+      "ground_attempt": [
+        "$FARMERNAME$! Was machst du da?$3",
+        "Ist das... Hast du kein Schamgefühl!$3"
+      ]
+    },
+    "teen": {
+      "soiled_verynice": [
+        "Du bist so niedlich, wenn du dich schämst!$1",
+        "Wo ist deine Mami $FARMERNAME$? Ich glaube deine $UNDERWEAR_NAME$ muss gewechselt werden."
+      ],
+      "soiled_nice": [
+        "Hast du dir gerade <eingepinkelt&eingekackt> $FARMERNAME$?",
+        "Ich wollte dich nur wissen lassen, $FARMERNAME$, du solltest wirklich deine Windel wechseln gehen"
+      ],
+      "soiled_mean": [
+        "...$5",
+        "...Hast du gerade...$2"
+      ],
+      "dirty": [
+        "Deine Hose ist komplett... <nass&dreckig>...."
+      ],
+      "ground": [
+        "Igitt. Ist das in der Stadt normal?$5",
+        "Was... Igitt!$5",
+        "Hast du gerade auf den Boden <gepinkelt&gekackt>? Ekelhaft!$5"
+      ],
+      "ground_attempt": [
+        "Was... Zieh deine Hose wieder an!$5",
+        "Hey ${Mann^Mädel}, ich kann alles sehen!$5"
+      ]
+    },
+    "kid": {
+      "general": [
+        "Nicht jetzt! Ich spiele gerade!",
+        "Spielen?",
+        "... Ja?"
+      ],
+      "soiled_verynice": [
+        "*Kichert* Uh oh!$1"
+      ],
+      "soiled_nice": [
+        "*Kichert* Uh oh!$1"
+      ],
+      "soiled_mean": [
+        "Oh... ekelhaft...$3",
+        "Igitt$3",
+        "...$2",
+        "Ha ha! Du hast dir in die Hose <gepinkelt/gekackt>!"
+      ],
+      "dirty": [
+        "<Hosenpisser&Hosenscheißer>!"
+      ],
+      "ground": [
+        "Igitt!$3",
+        "Igitt! <Pinkle&Kacke> nicht dort!$3",
+        "...$2"
+      ],
+      "ground_attempt": [
+        "Igitt!$3",
+        "Igitt! Ich kann deine $UNDERWEAR_NAME$ sehen!$3"
+      ]
+    },
+    "animal": {
+      "soiled_nice": [
+        "...",
+        "???"
+      ],
+      "ground": [
+        "<...&!!!>"
+      ],
+      "ground_attempt": [
+        "<...&???>"
+      ]
+    },
+    "abigail": {
+      "general_offer_change": [
+        "Musst du gewickelt werden?#$b#$query !DIAPER_USED#Oh...|$GETTING_CHANGED_DIALOG$"
+      ],
+      "soiled_verynice": [
+        "Brauchst du eine wechsel? #$b#Ich kann dich wickeln, wenn du möchtest!$h",
+        "Manchmal ziehe ich einfach eine Windel an, sitze herum und spiele den ganzen Tag #$b#Vielleicht können wir das auch mal zusammen machen..$h",
+        "Ich glaube ich bin ziemlich nass. #$b#Könntest du mich vieleicht wickeln?",
+        "Lass mich dir dabei helfen! Leg dich für mich hin.$h",
+        "Ewww, Ich glaube.... Ich glaube ich habe mir in die Hose gekackt.$s #$b#...$s #$b#Könntest du... mich vieleicht wickeln?"
+      ],
+      "soiled_nice": [
+        "$lWar ich das? ...Oh! Nichts! Haha!",
+        "Also, hast du irgendein medizinisches Problem oder so?",
+        "Du solltest vieleicht deine Windel wechseln. Nur für den Fall, dass jemand anderes etwas sagt.",
+        "$lVielleicht probiere ich das mit den Windeln auch mal aus.",
+        "Ist das Wickeln eigentlich aufwendig? Entschuldige, unhöfliche Frage!!",
+        "$l*Kontrolliert sich schnell selbst* Oh! Hast du mir zugesehen?!"
+      ],
+      "soiled_mean": [
+        "Ich bin nur... vergiss es.",
+        "Das ist ziemlich peinlich.",
+        "...Wow. Ich gehe jetzt.",
+        "*Fühlt schnell den eigenen Hintern* Igitt! Das ist eklig! Das solltest du nicht in der Öffentlichkeit tun!",
+        "Ich dachte, nur Babies machen sich in die Hose! Werd erwachsen!",
+        "Hast du dir gerade in die Hose <gepinkelt&gekackt>? Du brauchst Windeln!"
+      ],
+      "dirty_offer_change": [
+        "$p dirty_change_no# Uh, ok! $1| Du bist ganz schön dreckig @. Ich kann dir eine Windel anziehen wenn du willst. Wo habe ich sie denn nur? Oh, ah, haha...$l$GETTING_CHANGED_DIALOG$"
+      ]
+    },
+    "haley": {
+      "soiled_verynice": [
+        "$lIch bin wirklich froh, dass du mich für diese ganze Windelsache begeistern konntest!",
+        "$hSieht aus als währe deine $UNDERWEAR_NAME$ ein wenig <nass&voll>! Soll ich die wickeln?",
+        "$sIch glaube, meine Windel ist langsam voll. Kannst du mir helfen?"
+      ],
+      "soiled_nice": [
+        "$lDeine $UNDERWEAR_NAME$ ist irgendwie süß. Wo bekomme ich die her?",
+        "$hIch glaube, du läufst etwas aus!"
+      ],
+      "soiled_mean": [
+        "$uWindeln sind NICHT in Mode. Genauso wie sich selbst wie ein Baby <einzupinkeln&einzukacken>!",
+        "$uWie, eww. Warum sind alle in dieser Stadt so eklig?!",
+        "$uIch wollte dir eigentlich sagen, dass du deine Klamotten wechseln sollst, weil sie so unstylisch sind, aber es sieht so aus, als müsstest du eher deine Windel wechseln, du großes Baby!"
+      ]
+    },
+    "maru": {
+      "general_offer_change": [
+        "Alles Trocken?#$b#$query !DIAPER_USED#Hmm... aber komm wieder sollte sich das ändern.|$GETTING_CHANGED_DIALOG$"
+      ],
+      "soiled_verynice": [
+        "Schon wieder? Wirklich, du kennst den Ablauf...$l$GETTING_CHANGED_DIALOG$"
+      ],
+      "soilded_nice": [
+        "Lass uns das professionell angehen. Leg dich bitte für mich aufs Bett?$0$GETTING_CHANGED_DIALOG$"
+      ],
+      "soiled_mean": [
+        "Inkontinenz, vermute ich?$4"
+      ],
+      "dirty_offer_change": [
+        "Du wirst dich noch erkälten, oder schlimmeres. Jetzt ziehen wir dir erst einmal diese <nassen&dreckigen> Sachen aus!$1$GETTING_CHANGED_DIALOG$g"
+      ]
+    },
+    "sam": {
+      "general_offer_change": [
+        "Warte einen Moment. Ich kenne doch diesen Blick!#$b#%Sam untersucht deine Windel#$b#$query !DIAPER_USED#Ich schätze dann halt später.|$GETTING_CHANGED_DIALOG$",
+        "%Du fässt Sam an seine Hose. Er wird sehr rot als du ihn untersuchst.$9#$b#$query !DIAPER_USED \"SAM\"#Er trägt $NPC_PANTS_NAME$ und $NPC_INSPECT_UNDERWEAR_NAME$.|$CHANGE_OTHER_DIALOG$"
+      ],
+      "soiled_verynice": [
+        "#$p 102#Oh Mann, das war ja kaum zu übersehen!$1|Mann, du bist genau wie Vincent.$1",
+        "Bist du okay, Kumpel?#$b#$y 'Soll ich dir dabei helfen?_Ja bitte._Gut, zieh dich aus und leg dich für mich hin. Ich mache dich gleich sauber.$3_Noch nicht!!_Sieht aus, als müsste <der/das> kleine <Junge/Mädchen> noch etwas länger in seiner <nassen&vollen> $UNDERWEAR_NAME$ bleiben!$1'",
+        "Es ist ok $FARMERNAME$. Unfälle sind nichts, wofür man sich schämen muss.",
+        "Awwww, sieh mal, wie du gehst! Das muss sich gut angefühlt haben.$4",
+        "Oh Mann, das war ja kaum zu übersehen!$1",
+        "Gut gemacht!$1",
+        "Mann, du bist manchmal so ein kleines Baby.#$b#%Sam kichert ein bisschen, während er deinen dicken Hintern streichelt.",
+        "Oh, hatte der kleine Bauer einen kleinen Unfall?",
+        "Ich wette, ich könnte Mami dazu bringen, dich zu wickeln.$3#$b#Ich mache nur Spaß, ich mache nur Spaß!$1",
+        "Mann, es sieht so aus, als ob du wirklich Windeln brauchst, nicht wahr?",
+        "Oh wow, du hast dir wirklich <eingepinkelt&eingekackt>!#$b#$y 'Darf ich mal anfassen?_Ja._%Sam wird rot, als er seine Hand in deine matschige Windel drückt_Nein danke._Ok, Ich möchte nicht.'"
+      ],
+      "soiled_nice": [
+        "Du solltest vieleicht deine Windel wechseln. Nur für den Fall, dass jemand anderes etwas sagt.$7",
+        "B-bist du ok?$8",
+        "%Sam wird rot als du dir <einpinkelst&einkackst>. Dir fällt auf, wie aufmerksam er die ganze Szene beobachtet.",
+        "Oh Mann, das tut mir leid. Das kann sich nicht gut anfühlen."
+      ],
+      "soiled_mean": [
+        "Ich bin nur... vergiss es.$5",
+        "Das ist ziemlich peinlich.$2",
+        "...Oh$2",
+        "Vielleicht solltest du dich darum kümmern..",
+        "#$p 102#Vielleicht solltest du dich darum kümmern...|Toll, noch mehr Töpfchenprobleme, die man miterleben muss. Danke!.$5"
+      ],
+      "dirty_offer_change": [
+        "Oh Mann. Ich kann dich nicht erkälten lassen, deine Mutter würde mich umbringen.$9#$b#Wo sind denn Vincents Windeln schon wieder?$1$GETTING_CHANGED_DIALOG$"
+      ]
+    },
+    "penny": {
+      "general_offer_change": [
+        "Hat mein <kleiner/kleines> <Junge/Mädchen> wieder vergessen auf Töpfchen zu gehen?#$b#%Penny untersucht deine Windel#$b#$query !DIAPER_USED#<Guter/Gutes> <Junge/Mädchen>!|$GETTING_CHANGED_DIALOG$"
+      ],
+      "general_fallback": [
+        "%Maybe you should get to know Penny better first!"
+      ],
+      "soiled_verynice": [
+        "$FARMERNAME$! Du hast deine $UNDERWEAR_NAME$ <nass&voll> gemacht!$5#$b#Warum hast du mir nicht gesagt, dass du aufs Töpfchen musst?$3#$b#*Seufz* Ist schon gut, wir können es nächstes Mal wieder versuchen.",
+        "%Penny beobachtet dich mit einer hochgezogenen Augenbraue#$b#Ist da etwas, was du mir sagen willst @?$3",
+        "%Penny wartet, bis du fertig bist, bevor sie an deinem Windelbund zieht.#$b#Sieht aus, als hättest du nichts fürs Töpfchen übrig gelassen <kleiner/kleines> <Junge/Mädchen>.$1",
+        "%Du zerrst an Pennys Ärmel, damit sie dir hilft, aufs Töpfchen zu gehen, kurz bevor du in deine  $UNDERWEAR_NAME$ <pinkelst&kackst>.#$b#Oh nein, du warst so nah dran!$3#$b#Ich bin nicht böse, ich weiß, dass du es versuchst. Du wirst den Dreh bald raus haben.",
+        "Hattest du einen Unfall in deine $UNDERWEAR_NAME$ $FARMERNAME$?#$b#Du musst es mir sagen, sobald dein Körper sagt, dass du aufs Töpfchen gehen musst, okay?$3",
+        "#$p 102#Hattest du einen Unfall in deine $UNDERWEAR_NAME$ $FARMERNAME$?|Du hast das gleiche Töpfchengesicht wie Vincent.$1#$b#Brauchst du auch Hilfe beim wechseln wie er?#$b#%Penny kitzelt dich neckisch am Bauch.",
+        "Das habeich gesehen.$3#$b#$y 'War das wirklich ein Unfall?_Uh huh, Ich habe versucht es zu halten._Oh $FARMERNAME$, Ich weiß, es fällt dir schwer. Ich bin sehr stolz auf dich, das du es versucht hast._Ich nicht aufs Tüpchen gehen._$FARMERNAME$, Ich weiß, dass es schwer für dich ist, aber du musst es trotzdem versuchen, okay?$3'",
+        "Wir sollten das auf dem Töpfchen machen $FARMERNAME$. Was ist passiert?$3#$b#Es ist ok, ich bin nicht böse. Du gibst dir wirklich Mühe. Es ist also in Ordnung, wenn du trotzdem manchmal Unfälle hast..#$b#<Jungen/Mädchen> sind einfach sauber zu machen!$1"
+      ],
+      "soiled_nice": [
+        "Du solltest vieleicht deine Windel wechseln. Nur für den Fall, dass jemand anderes etwas sagt.",
+        "B-bist du ok?$3",
+        "Brauchst du Hilfe, um aufs Töpfchen zu gehen?",
+        "Entschuldige. Das kann sich nicht gut anfühlen.$3"
+      ],
+      "soiled_mean": [
+        "...$5",
+        "Uhmm...$2",
+        "...Oh$2",
+        "#$p 102#H-hast du...|Du auch?$5"
+      ],
+      "dirty_offer_change": [
+        "Oh du <armer/armes> <kleiner/kleines> <Junge/Mädchen>! Hat da wieder jemand vergessen auf Töpfchen zu gehen? Na komm. Jetz ziehen wir dir erst einmal diese nassen Sachen aus und du bekommst eine schöne warme Windel!$1$GETTING_CHANGED_DIALOG$"
+      ]
+    },
+    "gus": {
+      "soiled_verynice": [
+        "Du hast es nicht ganz geschafft? Ist schon okay. Das ist nicht die schlimmste Sauerei, die ich hier gesehen habe, glaub mir.$1",
+        "Sieht aus, als wäre das eine Erleichterung, hah!$1",
+        "Du konntest es nicht länger aushalten, was?",
+        "Junge, Junge, das wird ein verdammt anstrengender Windelwechsel.$1",
+        "So ist es gut, lass alles raus.",
+        "Wow, du wirkst ziemlich zufruieden.$1",
+        "Wenigstens fühlt es sich gut an, eine Last loszuwerden...#$b#Auch wenn sie in der Hose ist, oder?$1",
+        "Machst du deinen eigenen Dünger, $FARMERNAME$?",
+        "You got any clean diapers? I always keep some spare in back for ya, just in case, pal.$1#$b#Well, you and anyone else who happens to need one."
+      ],
+      "soiled_nice": [
+        "Würdest du dich bitte darum kümmern?#$b#Danke",
+        "Du solltest wirklich gehen, denke ich!$1",
+        "Sie haben es nicht ganz geschafft? Das ist in Ordnung, geh dich frisch machen. Der Saloon wird noch hier sein, wenn du zurückkommst..",
+        "Ich hoffe, der Geruch ist eine schmutzige Windel und kein verfaulendes Essen im Hinterzimmer.…"
+      ],
+      "soiled_mean": [
+        "Könntest du dich darum kümmern, bevor es jemand anderen stört, Kumpel?$2",
+        "Ich habe schon genug sauber zu machen.$3"
+      ],
+      "dirty_offer_change": [
+        "Oh je! Hattest du wieder Probleme damit auf die Toilette zu kommen? Nun ja. Wie Versprochen habe ich noch einige Reserven hier rumliegen. Nur für den Fall!$1$GETTING_CHANGED_DIALOG$"
+      ]
+    },
+    "jodi": {
+      "general_offer_change": [
+        "Musst du gewickelt werden?#$b#%Jodi untersucht deine $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.#$b#$query !DIAPER_USED_BAD#[OnClean: Schau sich das einer an! Du bist ja komplett sauber! Wie ist das denn möglich?][OnSlightlyWet: Du bist nur ein wenig nass. Komm wieder wenn du einen anderen deiner \"Unfälle\" hattest. *zwinker*]|$GETTING_CHANGED_DIALOG$"
+      ],
+      "soiled_verynice": [
+        "%Jodi beugt sich hinunter und legt dir beruhigend die Hand auf den Rücken.#$b#Du kannst mir sagen, wenn du einen kleinen Unfall hattest $FARMERNAME$. Das ist nichts, wofür man sich schämen muss.",
+        "Du brauchst das Töpfchentraining nicht zu überstürzen, wenn du noch nicht so weit bist.",
+        "Es kann für kleine <Jungen/Mädchen> manchmal schwer sein, sich daran zu erinnern, aufs Töpfchen zu gehen. Das ist in Ordnung.",
+        "Meine Güte!$1",
+        "Oh, du bist so süß, wenn du dich schämst!$1"
+      ],
+      "soiled_nice": [
+        "$FARMERNAME$, Ich glaube du solltest deine $UNDERWEAR_NAME$ wechseln.",
+        "Du armes Ding! Hast du dir gerade in die Hose <gepinkelt&gekackt>?"
+      ],
+      "soiled_mean": [
+        "Du musst vieleicht auf die Hilfsmittel zurückgreifen, die ich dir geschickt habe$4"
+      ],
+      "dirty_offer_change": [
+        "$p dirty_change_no# Keine Unfälle, super! $3| Ach komm her @, nicht weinen! Diese Dinge passiere! Wir können eine von Vincents Windeln für dich passend machen. Und da sind ein paar Hosen von Jas die du dir leihen kannst!$1$GETTING_CHANGED_DIALOG$"
+      ]
+    },
+    "vincent": {
+      "general_offer_change": [
+        "%Du fragst dich, ob Vincent vieleicht gewickelt werden muss. Du prüfst es schnell und findest $NPC_INSPECT_UNDERWEAR_NAME$.#$b#$query !DIAPER_USED \"vincent\"#Muss nicht gewickelt werden! Wollen wir weiter spielen!$3|$CHANGE_OTHER_DIALOG$"
+      ],
+      "soiled_verynice": [
+        "Mami hat mir gesagt, dass große Kinder aufs Töpfchen gehen müssen. #$b#Ich will auch kein großes Kind sein!$1",
+        "%Vincent sieht dir zu wie du dir selbst <einpinkelst&einkackst> und kichert.#$b#Gut gemacht!$1",
+        "%Du bemerkst, wie Vincent dich beobachtet, während du dir <einpinkelst&einkackst>.#$b#Alles besser?",
+        "%Vincent beobachtet die ganze Szene neugierig und kichert, als du zu ihm rüberschaust. #$b# Du hast <gepinkelt&gekackt>!$1",
+        "Wenn du willst, kann ich meine Mami bitten, dich zu wickeln. #$b#Nein?#$b#Das ist ok, Ich mag es auch wenn ich <nass&schmutzig> bin!$1",
+        "$FARMERNAME$ ist <nass&schmutzig> und ich bin immer noch sauber!$1#$b#...#$b#Moment...$2"
+      ],
+      "soiled_nice": [
+        "Nicht weinen, Mami sagt, es ist okay, wenn man manchmal Unfälle hat.",
+        "Mach dir keine Sorgen  $FARMERNAME$, Ich mache das auch!",
+        "Fühlt es sich jetzt besser an?",
+        "Es riecht als bräuchtest du einen Windelwechsel!"
+      ],
+      "soiled_mean": [
+        "%Vincent hat gesehen, was passiert ist und kichert dich an.",
+        "War das ein Unfall?",
+        "Ha! Ekelhaft!$1",
+        "$FARMERNAME$ hat sich gerade selbst <eingepinkelt&eingekackt>!$1",
+        "Hah! Ich habe dich gerade dabei beobachtet, wie du dich selbst <eingepinkelt&eingekackt>!$1"
+      ],
+      "ground": [
+        "Igitt!$3",
+        "Igitt! <Pinkle&Kacke> nicht hier!$3",
+        "Hey alle zusammen! $FARMERNAME$ hat gerade auf den Boden <gepinkelt&gekackt>!$1"
+      ]
+    },
+    "jas": {
+      "general_offer_change": [
+        "%Du fragst dich, ob Jas vieleicht gewickelt werden muss. Du prüfst es schnell und findest $NPC_INSPECT_UNDERWEAR_NAME$.#$b#$query !DIAPER_USED \"jas\"#Was? Nein.. Gerade bin ich kein großes Mädchen! Siehst du? Sauber!$3|$CHANGE_OTHER_DIALOG$"
+      ],
+      "soiled_verynice": [
+        "Nicht weinen, es ist okay, wenn kleine <Jungen/Mädchen> manchmal Unfälle haben.",
+        "Oh nein, hattest Du einen Unfall? Das ist okay, du kannst es das nächste Mal wieder versuchen.",
+        "Es ist okay, ich werde niemandem erzählen, dass du einen Unfall hattest $FARMERNAME$",
+        "Es ist ok $FARMERNAME$, auch ich hatte einen Unfall.$1",
+        "Ich kann dich watscheln sehen!$4",
+        "Hattest du einen Unfall? Schon gut, wenn du erst einmal wieder sauber bist, wird es dir besser gehen."
+      ],
+      "soiled_nice": [
+        "*kichert* Oh oh!$1",
+        "Du sollst das auf dem Töpfchen machen, weißt du.$4",
+        "Soll ich Tante Marnie holen? Sie hilft mir immer, wenn ich einen Unfall habe.$3"
+      ],
+      "soiled_mean": [
+        "Oh... widerlich...$3",
+        "Igitt$3",
+        "..$2"
+      ],
+      "ground": [
+        "Igitt!$3",
+        "Igitt! <Pinkle&Kacke> nicht hier!$3",
+        "...$2"
+      ]
+    }
+  },
+  "Change": [
+    "Du wechelst in $PANTS_PREFIX$ saubere $PANTS_NAME$ und $INSPECT_UNDERWEAR_NAME$.",
+    "Deine Kleidung wurden in $PANTS_PREFIX$ $PANTS_NAME$ und $INSPECT_UNDERWEAR_NAME$ gewechselt."
+    //***"You take off your soiled <OLD_UNDERWEAR_DESC> and put on $UNDERWEAR_PREFIX$ clean $UNDERWEAR_NAME$."
+  ],
+  "Change_Destroyed": [
+    "Du hast deine $UNDERWEAR_NAME$ beim Ausziehen zerrissen. Du kannst sie nicht wieder verwenden.",
+    "$UNDERWEAR_NAME$ <ist#sind> ruiniert, also wirfst du sie weg."
+  ],
+  "Change_Other_Destroyed": [
+    "$NPC_NAME$s $NPC_INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <ist#sind> ruiniert, also wirfst du sie weg."
+  ],
+  "Getting_Changed_Destroyed": [
+    "Your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> ruined and thrown away for you."
+  ],
+  "Change_Requires_Pants": [
+    "Du hast kein anderes Paar $PANTS_NAME$ zum Anziehen hier. Du musst wohl erst nach Hause gehen."
+  ],
+  "Change_Requires_Home": [
+    "Dreckige Hosen müssen Zuhause gewechselt werden."
+  ],
+  "Change_At_Home": [
+    "Du wechselst deine Hosen selbst in dein neues Paar $PANTS_NAME$."
+  ],
+  "PeekWaistband": [
+    "Du schaust in deinen Hosenbund und siehst"
+  ],
+  "LookPants": [
+    "Du schaust an dir herunter und siehst"
+  ],
+  "Underwear_Clean": "saubere $UNDERWEAR_DESC$",
+  "Underwear_Drying": "trocknende $UNDERWEAR_DESC$",
+  "EasyMode_On": "Einfacher Modus An. Hunger und Durst sind jeden morgen voll und die nassen Betten sind trocken.",
+  "EasyMode_Off": "Einfacher Modus Aus. Hunger und Durst werden nicht automatisch aufgefüllt und die nassen Betten trocken langsamer.",
+  "Underwear_Wet": [ //Chosen based on diaper wetness, applied after Underwear_Messy. Words in brackets only show if underwear is also messy.
+    "leicht feuchte $UNDERWEAR_DESC$",
+    "etwas nasse $UNDERWEAR_DESC$",
+    "sehr nasse $UNDERWEAR_DESC$",
+    "durchnässte $UNDERWEAR_DESC$",
+    "triefend nasse $UNDERWEAR_DESC$"
+  ],
+  "Underwear_Messy": [ //Chosen based on diaper messiness, applied before Underwear_Wet. Words in brackets are only used if underwear is also wet.
+    "<und >leicht volle $UNDERWEAR_DESC$",
+    "<und >etwas volle $UNDERWEAR_DESC$",
+    "<und >volle $UNDERWEAR_DESC$",
+    "$UNDERWEAR_DESC$ mit Kacke gefüllt",
+    "$UNDERWEAR_DESC$ mit herausquellender Kacke"
+  ],
+  "Consumables": {
+    //
+    //Working on creating entries for every consumable.
+    //Water values are arbitrary, but should be accurate to each other relatively. Poisons mean vomitting, indigestion, and other issues, therefore poisonous items cause a loss to calories and water.
+    //
+    //Crops
+    //With a lot of these, I looked up the calorie count for an average size or average amount for small items like berries, then rounded out the numbers. For balance, some really small numbers are unnaturally high. For grains, I went with half a cup of grains. All items are assumed to undergo basic cooking if necesary to make edible, such as with potatoes.
+
+
+    // Floximo (comment): I appriciate all the work that has gone into making it realistic, but in terms of gameplay its disastrous.
+    // Harvesting a plot that gives us resources worth 200 coins and making it value 1/40 of the daily calorie intake after 8 days of growing is not fun or challenging, it is unbalanced.
+    // The assumtion should be that it is reasonable to harvest and store an amount of food that can feed at least 4 people over the winter (usual family size). That means 1 artichoke or 1 corn is not an ear but a yield of a garden plot (so more like 10 to 20 times that)
+    // We also assume we eat things cooked. Days are very short, so this assumtion should be a given as reasonable.
+    // In any case, this manual list is not archiving any goal, not realism, not balance, not fun or easy of maintainance. In fact it also fails on being complete and as such causes issues in anything imaginable. As such we try to get Energy/Health values from the game instead.
+
+
+    //Veggies
+    //
+    "Amaranth": {
+      "name": "Amaranth",
+      "waterContent": 0,
+      "calorieContent": 350 //Half cup Amaranth, made as simple bread or cooked directly like rice
+    },
+    "Artichoke": {
+      "name": "Artischocke",
+      "waterContent": 200,
+      "calorieContent": 150 //Two large artichokes, raw
+    },
+    "Beet": {
+      "name": "Rübe",
+      "waterContent": 25,
+      "calorieContent": 140 //Four beets, raw
+    },
+    "Bok Choy": {
+      "name": "bok choy",
+      "waterContent": 75,
+      "calorieContent": 110 //One head of bok choy, raw
+    },
+    "Corn": {
+      "name": "Mais",
+      "waterContent": 25,
+      "calorieContent": 190 //One large ear of sweet corn, simply cooked
+    },
+    "Eggplant": {
+      "name": "Aubergine",
+      "waterContent": 50,
+      "calorieContent": 150 //One large Eggplant, simply cooked
+    },
+    "Fiddlehead Fern": {
+      "name": "Fiddlehead Fern",
+      "waterContent": 25,
+      "calorieContent": 140 //Four fiddleheads, raw
+    },
+    "Garlic": {
+      "name": "Knoblauch",
+      "waterContent": 25,
+      "calorieContent": 50 //One large head of garlic, raw
+    },
+    "Green Bean": {
+      "name": "Grüne Bohen",
+      "waterContent": 25,
+      "calorieContent": 160 //Four large greenbeans, raw or simply cooked
+    },
+    "Hops": {
+      "name": "Hopfen",
+      "waterContent": 25,
+      "calorieContent": 350 //Half cup of hops, can't find a calorie count since people don't actually eat hops, so just using Amaranth's
+    },
+    "Kale": {
+      "name": "Grünkohl",
+      "waterContent": 25,
+      "calorieContent": 100 //Enough kale leaves to match a head of lettuce, raw
+    },
+    "Parsnip": {
+      "name": "Pastinake",
+      "waterContent": 25,
+      "calorieContent": 150 //Two parsnips, raw
+    },
+    "Potato": {
+      "name": "Kartoffel",
+      "waterContent": 25,
+      "calorieContent": 180 //One large potato, 'baked'
+    },
+    "Radish": {
+      "name": "Radieschen",
+      "waterContent": 25,
+      "calorieContent": 100 //20 radishes at 5calories each, raw. According to every source I can find, a one inch wide radish only contains 1.9 calories. This doesn't seem right, so I bumped it up.
+    },
+    "Red Cabbage": {
+      "name": "Rotkohl",
+      "waterContent": 75,
+      "calorieContent": 350 //One large head of red cabbage, raw
+    },
+    "Taro Root": {
+      "name": "Taro Root",
+      "waterContent": 50,
+      "calorieContent": 500 //One small taro root (1pound), cooked simply. IRL, Normal taro root, harvested after 8-10 months, is 2-4 pounds. 
+    },
+    "Tomato": {
+      "name": "Tomate",
+      "waterContent": 100,
+      "calorieContent": 140 //Four large tomatoes, raw
+    },
+    "Unmill Rice": {
+      "name": "Ungeschälter Reis",
+      "waterContent": 25,
+      "calorieContent": 350 //Half cup, cooked simply
+    },
+    "Yam": {
+      "name": "Süßkartoffel",
+      "waterContent": 25,
+      "calorieContent": 180 //One Large yam, cooked simply
+    },
+    //
+    //Fruit
+    //
+    "Apple": {
+      "name": "Apfel",
+      "waterContent": 100,
+      "calorieContent": 120 //One large apple, raw
+    },
+    "Apricot": {
+      "name": "Aprikose",
+      "waterContent": 100,
+      "calorieContent": 100 //Four apricots, raw
+    },
+    "Banana": {
+      "name": "Banane",
+      "waterContent": 50,
+      "calorieContent": 130 //One large banana, raw
+    },
+    "Blackberry": {
+      "name": "Brombeere",
+      "waterContent": 50,
+      "calorieContent": 140 //Two cups of blackberries, raw
+    },
+    "Blueberry": {
+      "name": "Blaubeere",
+      "waterContent": 50,
+      "calorieContent": 170 //Two cups of blueberries, raw
+    },
+    "Cactus Fruit": {
+      "name": "Kaktusfrucht",
+      "waterContent": 100,
+      "calorieContent": 120 //Two large fruits, raw
+    },
+    "Cherry": {
+      "name": "Kirsche",
+      "waterContent": 50,
+      "calorieContent": 150 //Two cups of cherries, raw
+    },
+    "Cranberries": {
+      "name": "Preiselbeeren",
+      "waterContent": 50,
+      "calorieContent": 100 //Two cups of cranberries, raw
+    },
+    "Crystal Fruit": {
+      "name": "Kristallfrucht",
+      "waterContent": 150,
+      "calorieContent": 350 //One large crystal fruit. Fantasy item, so I get to dictate it. >:3
+    },
+    "Grape": {
+      "name": "Weintrauben",
+      "waterContent": 100,
+      "calorieContent": 220 //Two cups of grapes, raw
+    },
+    "Hot Pepper": {
+      "name": "Hot Pepper",
+      "waterContent": -500,
+      "calorieContent": 100 //Four cups of Jalapenos to barely make it to 100. Have some water ready.
+    },
+    "Mango": {
+      "name": "Mango",
+      "waterContent": 100,
+      "calorieContent": 135 //One Mango, raw
+    },
+    "Melon": {
+      "name": "Melone",
+      "waterContent": 125,
+      "calorieContent": 500 //One large honeydew melon as reference for the stardew melon, raw
+    },
+    "Orange": {
+      "name": "Orange",
+      "waterContent": 100,
+      "calorieContent": 100 //One large orange, raw
+    },
+    "Peach": {
+      "name": "Pfirsich",
+      "waterContent": 100,
+      "calorieContent": 130 //Two peaches, raw
+    },
+    "Pineapple": {
+      "name": "Ananas",
+      "waterContent": 125,
+      "calorieContent": 300 //One large pineapple, raw. Your mouth is gonna tingle after eating this.
+    },
+    "Pomegranate": {
+      "name": "Granatapfel",
+      "waterContent": 50,
+      "calorieContent": 130 //One large pomegranate, raw
+    },
+    "Qi Fruit": {
+      "name": "Qi Fruit",
+      "waterContent": 500,
+      "calorieContent": 1000 //Qi Fruit? We get to cultivate now? Well, in the cultivator novels, Qi Fruit tends to be able to 'sustain the martial artist for a week' and such.
+    },
+    "Salmonberry": {
+      "name": "Lachsbeere",
+      "waterContent": 25,
+      "calorieContent": 150 //Two cups of salmonberries, raw
+    },
+    "Spice Berry": {
+      "name": "Gewürz Beere",
+      "waterContent": -25,
+      "calorieContent": 180 //Two cups of spice berries, raw
+    },
+    "Starfruit": {
+      "name": "Sternfrucht",
+      "waterContent": 125,
+      "calorieContent": 400 //RL starfruits are about 40 calories each; this fruit seems to be quite different from those, though
+    },
+    "Strawberry": {
+      "name": "Erdbeere",
+      "waterContent": 50,
+      "calorieContent": 100 //Two cups of strawberries, raw
+    },
+    "Wild Plum": {
+      "name": "Wilde Pflaume",
+      "waterContent": 50,
+      "calorieContent": 120 //Four plums, raw
+    },
+    //
+    //Flower
+    //
+    "Blue Jazz": {
+      "name": "Blauer Jazz",
+      "waterContent": 25,
+      "calorieContent": 50
+    },
+    "Crocus": {
+      "name": "Krokus",
+      "waterContent": 25,
+      "calorieContent": 50
+    },
+    "Fairy Rose": {
+      "name": "Feenrose",
+      "waterContent": 25,
+      "calorieContent": 50
+    },
+    "Poppy": {
+      "name": "Mohnblume",
+      "waterContent": 25,
+      "calorieContent": 50
+    },
+    "Summer Spangle": {
+      "name": "Sommer Spargel",
+      "waterContent": 25,
+      "calorieContent": 50
+    },
+    "Sunflower": {
+      "name": "Sonnenblume",
+      "waterContent": 25,
+      "calorieContent": 200 //Sunflower seeds are boosting this over other flowers
+    },
+    "Sweet Pea": {
+      "name": "Zuckererbse",
+      "waterContent": 25,
+      "calorieContent": 50
+    },
+    "Tulip": {
+      "name": "Tulpe",
+      "waterContent": 25,
+      "calorieContent": 50
+    },
+    //
+    //Forage
+    //
+    "Cave Carrot": {
+      "name": "Höhlen Karotte",
+      "waterContent": 25,
+      "calorieContent": 120 //Four large carrots, raw
+    },
+    "Chanterelle": {
+      "name": "Pfifferlinge",
+      "waterContent": 25,
+      "calorieContent": 50 //Two cups of chanterelle. These things are worse than kale for calories...
+    },
+    "Common Mushroom": {
+      "name": "Gewöhnlicher Pilz",
+      "waterContent": 25,
+      "calorieContent": 100 //Two cups of Shiitake, raw
+    },
+    "Daffodil": {
+      "name": "Narzisse",
+      "waterContent": 25,
+      "calorieContent": 50
+    },
+    "Dandelion": {
+      "name": "Löwenzahn",
+      "waterContent": 25,
+      "calorieContent": 60
+    },
+    "Ginger": {
+      "name": "Ingwer",
+      "waterContent": -250, //IIRC, straight ginger root causes burning sensations on mucous membranes, like the throat, so let's up the demand for water a little....
+      "calorieContent": 80 //One cup ginger root, raw
+    },
+    "Hazelnut": {
+      "name": "Haselnuss",
+      "waterContent": "000",
+      "calorieContent": 425 //Half cup of Hazelnuts. They're also called filberts, lol.
+    },
+    "Holly": {
+      "name": "Stechpalme", //Don't eat Holly, it's poisonous.
+      "waterContent": -1500,
+      "calorieContent": -1250
+    },
+    "Leek": {
+      "name": "Lauch", //Must... Not... Spin...
+      "waterContent": 25,
+      "calorieContent": 110 //Two leeks, raw
+    },
+    "Magma Cap": {
+      "name": "Magmakappe",
+      "waterContent": -1500,
+      "calorieContent": 1500 //With all the energy it's absorbed, there's plenty for you to use... Assuming you can quench your newfound thirst.
+    },
+    "Morel": {
+      "name": "Morchel",
+      "waterContent": 25,
+      "calorieContent": 40 //Two cups of morels. And I thought the chanterelles were bad...
+    },
+    "Purple Mushroom": {
+      "name": "Violetter Pilz",
+      "waterContent": 25,
+      "calorieContent": 750 //Half of magmacap
+    },
+    "Red Mushroom": {
+      "name": "Roter Pilz", //Don't eat this toadstool, unless you want to turn into a tanuki!
+      "waterContent": -500,
+      "calorieContent": -1000
+    },
+    "Sap": {
+      "name": "Saft", //....Why can we eat this? Why would we want to eat this? At least the mushrooms and holly make since, because 'mistaken identity'. What edible thing are you mistaking tree sap as?
+      "waterContent": -200,
+      "calorieContent": -100
+    },
+    "Snow Yam": {
+      "name": "Schnee Yamswurzel",
+      "waterContent": 25,
+      "calorieContent": 180 //One Large yam, cooked simply
+    },
+    "Spring Onion": {
+      "name": "Frühlingszwiebel",
+      "waterContent": 25,
+      "calorieContent": 800 //One hundred large scallions, only because this is the "starter" food
+    },
+    "Wild Horseradish": {
+      "name": "Wilder Meerrettich",
+      "waterContent": -2500, //This is wasabi's crappy tasting cousin, but the spice is still there.
+      "calorieContent": 115 //One cup of raw horseradish, about the size of a normal prepared root.
+    },
+    "Winter Root": {
+      "name": "Winterwurzel",
+      "waterContent": 25,
+      "calorieContent": 300 //Since Winter Root is a tuber, I just picked a random one. Winged bean tuber it is! Half cup sized tubers.
+    },
+    //
+    //Animal Drops
+    //
+    "Duck Egg": {
+      "name": "Entenei",
+      "waterContent": 50,
+      "calorieContent": 80 //One 'USDA medium' egg
+    },
+    "Egg": {
+      "name": "Ei",
+      "waterContent": 50,
+      "calorieContent": 80 //One 'USDA medium' egg
+    },
+    "Goat Milk": {
+      "name": "Ziegenmilch",
+      "waterContent": 470, //16oz ~ 490mL. Did rounding because the numbers don't have to be perfectly accurate.
+      "calorieContent": 340 //16oz of goat milk
+    },
+    "Golden Egg": {
+      "name": "Goldenes Ei",
+      "waterContent": 50,
+      "calorieContent": 360 //One 'USDA medium' gold flake lined egg
+    },
+    "L. Goat Milk": {
+      "name": "L. Ziegenmilch",
+      "waterContent": 3785, //Description is a gallon of milk; 1 gallon = 3785mL
+      "calorieContent": 2700 //It's a gallon of milk, lots of calories.... Plus side, the babs can actually live off milk.
+    },
+    "Large Egg": {
+      "name": "Großes Ei",
+      "waterContent": 75,
+      "calorieContent": 130 //One 'USDA extra-large' egg
+    },
+    "Large Milk": {
+      "name": "Große Milch",
+      "waterContent": 3785,
+      "calorieContent": 2400
+    },
+    "Milk": {
+      "name": "Milch",
+      "waterContent": 470,
+      "calorieContent": 300
+    },
+    "Ostrich Egg": {
+      "name": "Straußen Ei",
+      "waterContent": 200,
+      "calorieContent": 2000
+    },
+    "Truffle": {
+      "name": "Trüffel",
+      "waterContent": 25,
+      "calorieContent": 70 //One whole, raw truffle. I feel sorry for the poor soul eating this...
+    },
+    "Void Egg": {
+      "name": "Leeren Ei",
+      "waterContent": 50,
+      "calorieContent": 360 // One 'USDA jumbo' void egg
+    },
+    //
+    //Cooking
+    //Will try looking up calorie counts for similar items. The rest will be done by adding ingredient calories and see how it looks.
+    "Algae Soup": {
+      "name": "Algensuppe",
+      "waterContent": 660,
+      "calorieContent": 760
+    },
+    "Artichoke Dip": {
+      "name": "Artischocken-Dip",
+      "waterContent": 200,
+      "calorieContent": 900 //2cups
+    },
+    "Autumn's Bounty": {
+      "name": "Herbst-Fülle", //1 whole extra large pumpkin makes about 36cups of cooked pumpkin. 1 cup is about 100 calories. Assuming not oversized pumpkins, 24 cups of cooked pumpkin seems fine.
+      "waterContent": 0,
+      "calorieContent": 2580
+    },
+    "Baked Fish": {
+      "name": "Backfisch",
+      "waterContent": 0,
+      "calorieContent": 660
+    },
+    "Banana Pudding": {
+      "name": "Bananenpudding",
+      "waterContent": 590,
+      "calorieContent": 1000 //2cups
+    },
+    "Bean Hotpot": {
+      "name": "Bohneneintopf",
+      "waterContent": 0,
+      "calorieContent": 600 //4cups
+    },
+    "Blackberry Cobbler": {
+      "name": "Brombeer Schusterjunge",
+      "waterContent": 0,
+      "calorieContent": 2500 //About 4cups filling and one cup crust
+    },
+    "Blueberry Tart": {
+      "name": "Blaubeerkuchen",
+      "waterContent": 0,
+      "calorieContent": 520 //About 2cups in volume
+    },
+    "Bread": {
+      "name": "Brot",
+      "waterContent": 0,
+      "calorieContent": 900 //Calories in standard baguette
+    },
+    "Bruschetta": {
+      "name": "Bruschetta",
+      "waterContent": 0,
+      "calorieContent": 1200 //Big piece, but it uses an entire loaf of bread, so...
+    },
+    "Cheese Cauliflower": {
+      "name": "Blumenkohl mit Käse",
+      "waterContent": 0,
+      "calorieContent": 540 //4 cups
+    },
+    "Chocolate Cake": {
+      "name": "Schokoladenkuchen",
+      "waterContent": 250,
+      "calorieContent": 28800 //A three tier cake with icing would be about 18 pounds(288oz), according to a baker's website. Have fun filling your pamps.
+    },
+    "Chowder": {
+      "name": "Fischsuppe",
+      "waterContent": 150,
+      "calorieContent": 640 //4 cups
+    },
+    "Coleslaw": {
+      "name": "Krautsalat",
+      "waterContent": 25,
+      "calorieContent": 1000 //4 cups
+    },
+    "Complete Breakfast": {
+      "name": "Nahaftes Frühstück",
+      "waterContent": 25,
+      "calorieContent": 1700
+    },
+    "Cookie": {
+      "name": "Keks",
+      "waterContent": 25,
+      "calorieContent": 850 //A dozen cookies, because they're so delicious.
+    },
+    "Crab Cakes": {
+      "name": "Krabbenküchlein",
+      "waterContent": 25,
+      "calorieContent": 880 //8 2in wide 3/4inch tall crab cakes.
+    },
+    "Cranberry Candy": {
+      "name": "Preiselbeer Bonbon", //This item's sprite looks like juice, and is made with apples, so just using cranberry apple juice as reference
+      "waterContent": 470,
+      "calorieContent": 320 //16oz
+    },
+    "Cranberry Sauce": {
+      "name": "Preiselbeer Sauce",
+      "waterContent": 25,
+      "calorieContent": 880 //2 cups
+    },
+    "Crispy Bass": {
+      "name": "Knuspriger Barsch", //An average bass weighs about five pounds. Roughly 1/3 of the weight of a large fish is good for typical fish meat. That's still a lot of meat to eat in one sitting.
+      "waterContent": 25,
+      "calorieContent": 1800 //six fillets on each side, about 150calories per bass fillet at that size
+    },
+    "Dish O' The Sea": {
+      "name": "Meeresfrüchte", //Canned or not, sardines are still super salty. Eating a pile of straight sardines sounds painful. At least the hashbrowns don't need any extra salt.
+      "waterContent": -750,
+      "calorieContent": 750
+    },
+    "Eggplant Parmesan": {
+      "name": "Aubergine Parmesan",
+      "waterContent": 75,
+      "calorieContent": 1240 //4 cups
+    },
+    "Escargot": {
+      "name": "Schnecke",
+      "waterContent": 125,
+      "calorieContent": 520 //16 normal sized escargot snails; just pretending SDV snails are bigger because magic and meteors. lol.
+    },
+    "Farmer's Lunch": {
+      "name": "Farmer's Lunch",
+      "waterContent": 75,
+      "calorieContent": 1500
+    },
+    "Fiddlehead Risotto": {
+      "name": "Fiddlehead Risotto",
+      "waterContent": 120,
+      "calorieContent": 1360 //2 cups
+    },
+    "Fish Stew": {
+      "name": "Fischeintopf", //Wait... Fish stew literally contains no fish, only only arthropods and mollusks o.o
+      "waterContent": 280,
+      "calorieContent": 840 //4 cups
+    },
+    "Fish Taco": {
+      "name": "Fisch Taco",
+      "waterContent": 120,
+      "calorieContent": 1600 //One face sized taco, just to make sure calorie count is greater than ingredient sum
+    },
+    "Fried Calamari": {
+      "name": "Gebratene Calamari",
+      "waterContent": 50,
+      "calorieContent": 800 //"4 cups", I assume not packed
+    },
+    "Fried Eel": {
+      "name": "Gebratener Aal",
+      "waterContent": 150,
+      "calorieContent": 1300 //4 cups
+    },
+    "Fried Egg": {
+      "name": "Spiegelei",
+      "waterContent": 25,
+      "calorieContent": 160 //Double eggs, because incetivizing processing
+    },
+    "Fried Mushroom": {
+      "name": "Gebratener Pilz",
+      "waterContent": 50,
+      "calorieContent": 500 //6cups
+    },
+    "Fruit Salad": {
+      "name": "Obstsalat",
+      "waterContent": 100,
+      "calorieContent": 880 //8 cups fruit salad; indgredient sum is 770
+    },
+    "Ginger Ale": {
+      "name": "Ginger Ale",
+      "waterContent": 470,
+      "calorieContent": 160 //16oz
+    },
+    "Glazed Yams": {
+      "name": "Glasierte Süßkartoffel",
+      "waterContent": 50,
+      "calorieContent": 400 //4cups
+    },
+    "Hashbrowns": {
+      "name": "Kartoffelpuffer",
+      "waterContent": 50,
+      "calorieContent": 350 //4cups
+    },
+    "Ice Cream": {
+      "name": "Eiscreme",
+      "waterContent": 125,
+      "calorieContent": 350 //One cone, double scoop
+    },
+    "Life Elixir": {
+      "name": "Lebenselixier", //"Restores health to full." ....Then why do some foods restore more health than this?
+      "waterContent": 235, //8oz
+      "calorieContent": 2000 //Delicious, Nutritious, magic world health potions!
+    },
+    "Lobster Bisque": {
+      "name": "Lobster Bisque",
+      "waterContent": 250,
+      "calorieContent": 1100 //4 cup
+    },
+    "Lucky Lunch": {
+      "name": "Hummerbiskuit", //ngl, this recipe is a little off putting to me... Sea cucumber is really slimy, cooked or not, unless it's way overcooked and tastes terrible.
+      "waterContent": 100,
+      "calorieContent": 1000 //1 slimy sea cucumber taco
+    },
+    "Magic Rock Candy": {
+      "name": "Magischer Kandiszucker",
+      "waterContent": 0,
+      "calorieContent": 2500 //Pure, unadulterated magic rainbow sugar crystals.
+    },
+    "Maki Roll": {
+      "name": "Maki Rolle",
+      "waterContent": 0,
+      "calorieContent": 800 //4 rolls.
+    },
+    "Mango Sticky Rice": {
+      "name": "Mango Klebereis",
+      "waterContent": 0,
+      "calorieContent": 920 //4 cups
+    },
+    "Maple Bar": {
+      "name": "Ahorn Riegel", //Weird name for a maple donut, but okay.
+      "waterContent": 0,
+      "calorieContent": 600 //One doughnut, apparently
+    },
+    "Miner's Treat": {
+      "name": "Bergmannsheil",
+      "waterContent": 0,
+      "calorieContent": 1000 //Extra large lollipop, just to stay higher than sum of ingredients
+    },
+    "Oil": {
+      "name": "Öl",
+      "waterContent": 0,
+      "calorieContent": 120 //1 tablespoon. Seriously.
+    },
+    "Oil of Garlic": {
+      "name": "Knoblauchöl",
+      "waterContent": 0,
+      "calorieContent": 125 //1 tablespoon
+    },
+    "Omelet": {
+      "name": "Omelet", //Can it really be called an omelette without cheese?
+      "waterContent": 0,
+      "calorieContent": 450 //4 medium egg omelette
+    },
+    "Pale Broth": {
+      "name": "Blasse Brühe",
+      "waterContent": 660,
+      "calorieContent": 760 //copy of algae soup
+    },
+    "Pancakes": {
+      "name": "Pfannkuchen",
+      "waterContent": 0,
+      "calorieContent": 400 //4 4inch pancakes
+    },
+    "Parsnip Soup": {
+      "name": "Pastinakensuppe",
+      "waterContent": 500,
+      "calorieContent": 640 //4 cups of parsnip cream soup
+    },
+    "Pepper Poppers": {
+      "name": "Pepper Poppers",
+      "waterContent": 0,
+      "calorieContent": 800 //12 poppers
+    },
+    "Piña Colada": {
+      "name": "Piña Colada",
+      "waterContent": 235,
+      "calorieContent": 420 //8oz
+    },
+    "Pink Cake": {
+      "name": "Rosa Kuchen",
+      "waterContent": 0,
+      "calorieContent": 1900 //An entire cake. Fewer calories than I expected, tbh.
+    },
+    "Pizza": {
+      "name": "Pizza",
+      "waterContent": 0,
+      "calorieContent": 1840 //A 12" cheese pizza
+    },
+    "Plum Pudding": {
+      "name": "Pflaumenpudding",
+      "waterContent": 0,
+      "calorieContent": 1000 //Apparently Plum Puddings are measured in loafs?
+    },
+    "Poi": {
+      "name": "Poi",
+      "waterContent": 300,
+      "calorieContent": 1080 //4 cups
+    },
+    "Poppyseed Muffin": {
+      "name": "Mohn Muffin",
+      "waterContent": 25,
+      "calorieContent": 670 //1 muffin
+    },
+    "Pumpkin Pie": {
+      "name": "Kürbiskuchen",
+      "waterContent": 50,
+      "calorieContent": 2500 //1 pie
+    },
+    "Pumpkin Soup": {
+      "name": "Kürbissuppe",
+      "waterContent": 1250,
+      "calorieContent": 870 //8 cups
+    },
+    "Radish Salad": {
+      "name": "Radieschensalat",
+      "waterContent": 50,
+      "calorieContent": 600
+    },
+    "Red Plate": {
+      "name": "Roter Teller",
+      "waterContent": 150,
+      "calorieContent": 600
+    },
+    "Rhubarb Pie": {
+      "name": "Rhabarberkuchen",
+      "waterContent": 150,
+      "calorieContent": 3530 //1 pie. Why is it so much worse than other pies?
+    },
+    "Rice": {
+      "name": "Reis",
+      "waterContent": 50,
+      "calorieContent": 400 //2 cups cooked white rice
+    },
+    "Rice Pudding": {
+      "name": "Reis Pudding",
+      "waterContent": 100,
+      "calorieContent": 1200 //4 cups
+    },
+    "Roasted Hazelnuts": {
+      "name": "geröstete Haselnüsse",
+      "waterContent": 50,
+      "calorieContent": 1440 //1 cup of roasted hazelnuts
+    },
+    "Roots Platter": {
+      "name": "Wurzelteller",
+      "waterContent": 50,
+      "calorieContent": 750
+    },
+    "Salad": {
+      "name": "Salat",
+      "waterContent": 50,
+      "calorieContent": 600
+    },
+    "Salmon Dinner": {
+      "name": "Lachs Abendessen",
+      "waterContent": 100,
+      "calorieContent": 1400
+    },
+    "Sashimi": {
+      "name": "Sashimi",
+      "waterContent": 75,
+      "calorieContent": 800
+    },
+    "Seafoam Pudding": {
+      "name": "Meerschaumpudding", //pudding made from fish and squid ink? I love seafood, but even this seems too much...
+      "waterContent": 150,
+      "calorieContent": 1160 //4 cups of generic pudding 
+    },
+    "Shrimp Cocktail": {
+      "name": "Shrimp Cocktail",
+      "waterContent": 150,
+      "calorieContent": 550 //Boosted to exceed ingredient sum
+    },
+    "Spaghetti": {
+      "name": "Spaghetti",
+      "waterContent": 100,
+      "calorieContent": 1200 //4 cups
+    },
+    "Spicy Eel": {
+      "name": "Pikanter Aal",
+      "waterContent": -250,
+      "calorieContent": 1300 //fried eel copy
+    },
+    "Squid Ink Ravioli": {
+      "name": "Tintenfisch Tinten Ravioli",
+      "waterContent": 100,
+      "calorieContent": 1200 //4 cups
+    },
+    "Stir Fry": {
+      "name": "Gebratenes",
+      "waterContent": 50,
+      "calorieContent": 800 //4 cups stirfry veggies on rice
+    },
+    "Strange Bun": {
+      "name": "Seltsames Brötchen", //Sea slug and burnt hair mayonaise.... Yum....
+      "waterContent": 50,
+      "calorieContent": 800
+    },
+    "Stuffing": {
+      "name": "Füllung",
+      "waterContent": 50,
+      "calorieContent": 1400 //4 cups
+    },
+    "Sugar": {
+      "name": "Zucker", //Beets UOM is 4 beets per item to get calorie. 1 beet has about 6g sugar, 20 24g per 1 item. Therefore, 8g of sugar per 1 sugar item.
+      "waterContent": 0,
+      "calorieContent": 35
+    },
+    "Super Meal": {
+      "name": "Supermahlzeit",
+      "waterContent": 100,
+      "calorieContent": 560 //4 cups 'super foods salad'
+    },
+    "Survivor Burger": {
+      "name": "Überlebens Burger",
+      "waterContent": 50,
+      "calorieContent": 1400 //4 veggie burgers
+    },
+    "Tom Kha Soup": {
+      "name": "Tom Kha Suppe",
+      "waterContent": 250,
+      "calorieContent": 1040 //8 cups
+    },
+    "Tortilla": {
+      "name": "Tortillas",
+      "waterContent": 25,
+      "calorieContent": 150 //1 large tortilla, what can be made from 1 large ear of corn
+    },
+    "Triple Shot Espresso": {
+      "name": "3-facher Espresso",
+      "waterContent": 115, //4 oz
+      "calorieContent": 0
+    },
+    "Tropical Curry": {
+      "name": "Tropisches Curry",
+      "waterContent": 240,
+      "calorieContent": 960 //4 cups coconut pineapple thai curry
+    },
+    "Trout Soup": {
+      "name": "Forellensuppe",
+      "waterContent": 240,
+      "calorieContent": 800 //4 cups
+    },
+    "Vegetable Medley": {
+      "name": "Gemüsemischung",
+      "waterContent": 75,
+      "calorieContent": 550
+    },
+    "Wheat Flour": {
+      "name": "Weizen Mehl",
+      "waterContent": 0,
+      "calorieContent": 400 //half cup
+    },
+    "Cola": {
+      "name": "Cola",
+      "waterContent": 240,
+      "calorieContent": 100
+    },
+    "Espresso": {
+      "name": "Espresso",
+      "waterContent": 44,
+      "calorieContent": 3
+    },
+    "Coffee": {
+      "name": "Kaffee",
+      "waterContent": 240,
+      "calorieContent": 1
+    },
+    "Wine": {
+      "name": "Wein",
+      "waterContent": 148,
+      "calorieContent": 123
+    },
+    "Beer": {
+      "name": "Bier",
+      "waterContent": 355,
+      "calorieContent": 154
+    },
+    "Tea": {
+      "name": "Tee",
+      "waterContent": 240,
+      "calorieContent": 2
+    },
+    "Juice": {
+      "name": "Saft",
+      "waterContent": 240,
+      "calorieContent": 114
+    }
+  },
+  "Underwear_Options": {
+    "bed": {
+      "name": "Bett",
+      "description": "gemütliches Bett",
+      "absorbency": 2500.0,
+      "containment": 1000.0,
+      "spriteIndex": -1,
+      "price": 0,
+      "washable": true,
+      "plural": false,
+      "dryingTime": 2400,
+      "removable": false,
+      "durability": -1
+    },
+    "blue jeans": {
+      "name": "Blaue Jeans",
+      "description": "robuste blaue Jeans",
+      "absorbency": 300.0,
+      "containment": 60.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    "legs": {
+      "name": "Beine",
+      "description": "deine beiden Beine",
+      "absorbency": 10.0,
+      "containment": 10.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": false,
+      "durability": -1
+    },
+    "black thong": {
+      "name": "Schwarzer Tanga",
+      "description": "schwarzer Spitzen-Tanga",
+      "absorbency": 75.0,
+      "containment": 60.0,
+      "spriteIndex": 0,
+      "price": 10,
+      "washable": true,
+      "plural": false,
+      "dryingTime": 300,
+      "removable": true,
+      "durability": 4
+    },
+    "polka dot panties": {
+      "name": "Gepunktetes Höschen",
+      "description": "einfaches weißes Höschen mit rosa Punkten",
+      "absorbency": 150.0,
+      "containment": 100.0,
+      "spriteIndex": 1,
+      "price": 10,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 400,
+      "removable": true,
+      "durability": 4
+    },
+    "big kid undies": {
+      "name": "Unterwäsche für große Kinder",
+      "description": "Baumwollunterwäsche für große Kinder",
+      "absorbency": 150.0,
+      "containment": 115.0,
+      "spriteIndex": 2,
+      "price": 10,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 400,
+      "removable": true,
+      "durability": 4
+    },
+    "dinosaur undies": {
+      "name": "Dinosaurier Unterhosen",
+      "description": "grüne Unterhosen mit niedlichen Dinosauriern",
+      "absorbency": 150.0,
+      "containment": 115.0,
+      "spriteIndex": 3,
+      "price": 10,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 400,
+      "removable": true,
+      "durability": 4
+    },
+    "lavender pullup": {
+      "name": "Lavender Pullup",
+      "description": "weich und kuschelig, blumige Lavender Pullup",
+      "absorbency": 600.0,
+      "containment": 170.0,
+      "spriteIndex": 4,
+      "price": 25,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": true,
+      "durability": 0
+    },
+    "training pants": {
+      "name": "Trainings Höschen",
+      "description": "dünne Töpfchentrainingshosen aus Stoff, die wie Unterhosen für große Kinder aussehen",
+      "absorbency": 600.0,
+      "containment": 120.0,
+      "spriteIndex": 5,
+      "price": 25,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": 5
+    },
+    "joja diaper": {
+      "name": "Joja Windel",
+      "description": "dünne weiße Plastikwindel vom JojaMart",
+      "absorbency": 1200.0,
+      "containment": 300.0,
+      "spriteIndex": 6,
+      "price": 50,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "baby print diaper": {
+      "name": "Windel mit Babymotiven",
+      "description": "kleine weiche und knisternde, frisch duftende Windel mit Babymotiven. Sie ist ein bisschen klein, aber könnte dir passen",
+      "absorbency": 1500.0,
+      "containment": 1000.0,
+      "spriteIndex": 7,
+      "price": 75,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "cloth diaper": {
+      "name": "Stoffwindel",
+      "description": "dicke weiche, weiße Stoffwindel",
+      "absorbency": 2000.0,
+      "containment": 1500.0,
+      "spriteIndex": 8,
+      "price": 500,
+      "washable": true,
+      "plural": false,
+      "dryingTime": 800,
+      "removable": true,
+      "durability": 8
+    },
+    "space diaper": {
+      "name": "Weltraum Windel",
+      "description": "sehr dicke und weiche blaue Plastikwindel mit Raumschiffmotiven",
+      "absorbency": 2700.0,
+      "containment": 2700.0,
+      "spriteIndex": 9,
+      "price": 100,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "pawprint diaper": {
+      "name": "Pfötchen Windel",
+      "description": "bauschige Plastikwindel mit niedlichen Tiermotiven und, bei nässe verblassenden, Pfötchen",
+      "absorbency": 2700.0,
+      "containment": 2700.0,
+      "spriteIndex": 10,
+      "price": 100,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "heart diaper": {
+      "name": "Herz Windel",
+      "description": "sehr dicke und weiche rosa Plastikwindel mit einem großen, bei nässe verblassenden, Herz auf der Vorderseite",
+      "absorbency": 3000.0,
+      "containment": 3000.0,
+      "spriteIndex": 11,
+      "price": 120,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    }
+  },
+  "Numeric_Translation": {
+    "single": "ein",
+    "plural": "ein paar",
+    "multiple times": "mehrfach",
+    "once": "einmal",
+    "twice": "zweimal",
+    "one time": "ein Mal",
+    "two times": "zwei Mal",
+    "three times": "drei Mal",
+    "four times": "vier Mal",
+    "five times": "fünf Mal",
+    "times": "Mal"
+  },
+  "Debuffs": {
+    "Regression.Wet": {
+      "name": "Wet",
+      "type": "Defense",
+      "description": [
+        "Deine Hose ist nass!",
+        "Du hast deine Hose nass gemacht!",
+        "Du hast dir in die Hose gepinkelt!"
+      ]
+    },
+    "Regression.Messy": {
+      "name": "Messy",
+      "type": "Speed",
+      "description": [
+        "Deine Hose ist schmutzig!",
+        "Du hast deine Hose schmutzig gemacht!",
+        "Du hast dir in die Hose gekackt!"
+      ]
+    }
+  },
+  "Underwear_States": {
+    "wet": {
+      "text_description": "nass",
+      "text_display_name": "nasse"
+    },
+    "messy": {
+      "text_description": "voll",
+      "text_display_name": "volle"
+    },
+    "wet_and_messy": {
+      "text_description": "nass und voll",
+      "text_display_name": "nasse and volle"
+    },
+    "drying": {
+      "text_description": "trocknende",
+      "text_display_name": "trocknende"
+    }
+  },
+  "Passby": [
+    "Oh wow, deine Windel ist ja komplett nass!"
+  ],
+}
