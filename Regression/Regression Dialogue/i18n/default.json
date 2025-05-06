@@ -6,6 +6,12 @@
   "Gus.Dialogue.Mon2": "Yeah, I know a lot about the people living here.#$e#That's one of the benefits of being a bartender.$h#$e#Sometimes I hear too much...#$b#%Gus winks and glances down at your pants.",
   "Gus.Dialogue.Sat4": "Are you much of a chef, @?#$e#If you have a kitchen and some recipes, you can cook some useful dishes.#$e#Though it's easier picturing you getting fed than doing the cooking!$1",
 
+  // Diaperchange from Gus
+
+  "Gus.Change_Diaper.Accept": "",
+  "Gus.Change_Diaper.Refuse": "",
+  "Gus.Change_Diaper.Followup": "...",
+
   // Dialogues for Jas
 
   "Jas.Dialogue.Introduction": "...$u#$b#Hi...$u",
@@ -66,7 +72,7 @@
   "Jas.Dialogue.winter_22_1": "I finally got the perfect gift for my secret friend. I want to tell them what I got so bad!$1#$b#But then it wouldn't be a secret.$4",
   "Jas.Dialogue.winter_22_2": "I finally got the perfect gift for my secret friend. I want to tell them what I got so bad!$1#$b#But then it wouldn't be a secret.$4",
 
-  // Diaperchange for Jas
+  // Diaperchange to Jas
 
   "Jas.Change_Diaper.Accept_BabyPrint": "*You kneel down and show jas a baby print diaper* Nooo! I am a big girl! I can make it to the potty... sometimes! *She looks upset, but she does need a change*$3#$b#%You change jas into a fresh baby print diaper while she quengels a little.#$b#...$3#$b#want pull ups$2#$b#...$3",
   "Jas.Change_Diaper.Accept_BabyPrint_Post": "Jas seams a little unhappy, but well protected again.",
@@ -146,7 +152,7 @@
   "Jodi.Dialogue.Show_Diaper": "%Jodi grins at your proud display.#$b#Well isn't that something!$1#$b#Let's see if it's still clean.#$b#%Jodi presses her hand against your diaper, giving it a thorough check.",
   "Jodi.Dialogue.Show_Followup": "#$p 110#Well don't you look excited! Did you find even more things to show me?$1|Well don't you look excited! Are you going to show off for me again?$1#$b#%You shamelessly show Jodi your diaper again and she pats it fondly.",
 
-  // Diaperchange for Jodi
+  // Diaperchange from Jodi
 
   "Jodi.Change_Diaper.Accept": "Comeon, lets get you in a fresh diaper. Just a second... see it stretches! There! Right as rain!$l#$b#%Jodi changes you from $INSPECT_UNDERWEAR_NAME$ into one of Vincents baby print diapers",
   "Jodi.Change_Diaper.Accept_Debuff": "and some of Sams old pants",
@@ -193,7 +199,8 @@
   "Penny.Dialogue.Potty_Response3": "Ummm...No?",
   "Penny.Dialogue.Potty_Response4": "That's a really awkward question.",
 
-  "Penny.Dialogue.Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2",
+  //"Penny.Dialogue.Potty_Trouble": "I thought so. It's okay.#$e#I-if you want I could maybe help... I could check to see if you're doing okay...$4#$b#...$3#$b#If that's okay...$2",
+  "Penny.Dialogue.Potty_Trouble": "I thought so. It's okay.#$2#I.. I also had sometimes the same problem...$2#$b#Thats the reason i wear these Lavender Pullups#$b#Penny pull down her waistband a little bit and show you there Pullup#$b#I´m realy happy about saying it to an outher person$1",
   "Penny.Dialogue.Potty_Easy": "Oh... I guess you don't need my help then...$2#$b#I'm sorry I brought it up...$2",
   "Penny.Dialogue.Potty_Followup": "I'm sure you can handle it all on your own.|%Penny lowers her voice.#$b#Do you need to check in with your body and see if you need the potty @?$4",
 
@@ -290,11 +297,26 @@
   "Penny.Dialogue_Marriage.winter_10": "I'm excited to tutor Vincent and Jas today.|*Sigh* Vincent convinced Jas to use her pull up yesterday...$5#$e#It's hard to get him to take the potty seriously, but Jas has been trying really hard.$3#$b#Though, I don't think she would have made it this time anyway. She ended up making quite the mess.$2#$b#She seemed more relieved than embarrassed, so I guess it's okay.",
   "Penny.Dialogue_Marriage.winter_24": "I wonder if Maru and Dr. Harvey will ever get together? I'm sure Harvey likes her...|Vincent used his diapers yesterday as usual.$3#$e#I know he can tell when he does it, but he never tells me when he's wet or messy.$5#$b#I swear that boy prefers to sit around in his used diapers.$1",
 
-  // Diaperchange for Penny
+  // Diaperchange to Penny
 
-  "Penny.Change_Diaper.Accept": "#Lets get that butt cleaned up!$l#$b#%Penny changes your diaper and smiles at you#",
-  "Penny.Change_Diaper.Refuse": "Do you want to play the big kid today? I can see it sagging from here!",
-  "Penny.Change_Diaper.Followup": "...",
+  "Penny.Change_Diaper.Accept_BabyPrint": "Insert Text",
+  "Penny.Change_Diaper.Accept_BabyPrint_Post": "Penny seams very angry.",
+
+  "Penny.Change_Diaper.Accept_Lavender": "Insert Text",
+  "Penny.Change_Diaper.Accept_Lavender_Post": "Insert Text",
+
+  "Penny.Change_Diaper.Accept_HeartDiaper": "Insert Text",
+  "Penny.Change_Diaper.Accept_HeartDiaper_Post": "Insert Text",
+
+  "Penny.Change_Diaper.Refuse_Pretext": "Insert Text",
+  "Penny.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
+  "Penny.Change_Diaper.Refuse_UsedBad": "Insert Text",
+
+  // Diaperchange from Penny
+
+  "Penny.Diaper_Change.Accept": "Lets get that butt cleaned up!$l#$b#%Penny changes your diaper and smiles at you.",
+  "Penny.Diaper_Change.Refuse": "Do you want to play the big kid today? I can see it sagging from here!",
+  "Penny.Diaper_Change.Followup": "...",
 
   // Dialogues for Sam
 
@@ -421,26 +443,28 @@
   "Sam.Dialogue_Marriage.winter_7": "Are we going to stop by the ice festival tomorrow? It might be fun to see everyone again...",
   "Sam.Dialogue_Marriage.winter_28": "We had a great year, @... it's kind of sad that it's over.#$e#We'll just have to make next year even better!$h",
 
-  // Diaperchange for Sam
+  // Diaperchange to Sam
 
   "Sam.Change_Diaper.Accept_BabyPrint": "Are those vincents? I... mmm.$8#$b#%You change sam while he is covering his eyes with both of his hands. How cute!#$b#...$9#$b#I kind of like them.$8",
-  "Sam.Change_Diaper.Accept_BabyPrint_Post": "Seams fine, a little small perhaps. Maybe another diaper would fit him better?",
+  "Sam.Change_Diaper.Accept_BabyPrint_Post": "%Seams fine, a little small perhaps. Maybe another diaper would fit him better?",
 
   "Sam.Change_Diaper.Accept_Training": "Are those... training pants?$8#$b#%You change sam into a pair of training pants.#$b#%He probably could make it to the potty, but you are pretty sure those pants will be soaked by the end of the hour.",
-  "Sam.Change_Diaper.Accept_Training_Post": "He probably would like another type of diaper more.",
+  "Sam.Change_Diaper.Accept_Training_Post": "%He probably would like another type of diaper more.",
 
   "Sam.Change_Diaper.Accept_BigKids": "You sure i am ready for those?$1#$b#%You change sam into a pair of big kid undies.#$b#%He looks a bit disappointed. Maybe he isn't as big of a kid as he wants you to think he is.$1",
   "Sam.Change_Diaper.Accept_BigKids_Post": "",
 
   "Sam.Change_Diaper.Accept_Joja": "Thats the one from the joja mart, right? I tried those myself, they fit better. But i made the couch wet last time when i...$8#$b#%You change sam into a joja diaper, while he is still realizing what he just admitted to#$b#I told mum it was vincent.$9",
-  "Sam.Change_Diaper.Accept_Joja_Post": "Another brand might be better...",
+  "Sam.Change_Diaper.Accept_Joja_Post": "%Another brand might be better...",
 
   "Sam.Change_Diaper.Accept_HeartDiaper": "A heart, how... cute?$1#$b#%You change sam into a heart diaper.#$b#%He playes it off like he doesn't like it all that much, considering the design. But being in those thick, cosy, crinkeling diapers, he can't keep up the fascade long.",
-  "Sam.Change_Diaper.Accept_HeartDiaper_Post": "I guess they are nice...$9#$b#You get the impression sam likes those way more than he is willing to admit. And he looks very cute in them.",
+  "Sam.Change_Diaper.Accept_HeartDiaper_Post": "%I guess they are nice...$9#$b#You get the impression sam likes those way more than he is willing to admit. And he looks very cute in them.",
 
-  "Sam.Change_Diaper.Accept": "Ah, hold still. Don't worry, i have to change Vincent all the time when i babysit!$l#$b#%Sam changes your diaper, like he does for Vincent.",
-  "Sam.Change_Diaper.Refuse": "Do you want to play the big kid today? I can see it sagging from here!",
-  "Sam.Change_Diaper.Followup": "...",
+  // Diaperchange from Sam
+
+  "Sam.Diaper_Change.Accept": "Ah, hold still. Don't worry, i have to change Vincent all the time when i babysit!$l#$b#%Sam changes your diaper, like he does for Vincent.",
+  "Sam.Diaper_Change.Refuse": "Do you want to play the big kid today? I can see it sagging from here!",
+  "Sam.Diaper_Change.Followup": "...",
 
   // Dialogues for Sebastian
 
@@ -504,17 +528,53 @@
   "Vincent.Dialogue.winter_Sun": "#$p 102#Miss Penny makes me read a new book every week.$s|My teddy bear's name is Squishy.#$e#I like him a lot!$1",
   "Vincent.Dialogue.winter_Sun_inlaw_Penny": "#$p 102#Miss Penny makes me read a new book every week.$s|Does Miss Penny change your diapers too?#$e#She says I gotta try and use the potty more, but if I do she won't change me anymore.$2",
 
-  // Diaperchange for Abigail
+  // Diaperchange to Abigail
 
-  "Abigail.Change_Diaper.Accept": "#Just lie down for me!$l#$b#%Abigail changes your diaper, using way to much baby powder",
-  "Abigail.Change_Diaper.Refuse": "I was just asking.",
-  "Abigail.Change_Diaper.Followup": "...",
+  "Abigail.Change_Diaper.Accept_BabyPrint": "Insert Text",
+  "Abigail.Change_Diaper.Accept_BabyPrint_Post": "Abigail seams very angry.",
 
-  // Diaperchange for Maru
+  "Abigail.Change_Diaper.Accept_Lavender": "Insert Text",
+  "Abigail.Change_Diaper.Accept_Lavender_Post": "Insert Text",
 
-  "Maru.Change_Diaper.Accept": "%Maru changes you quick and professional",
-  "Maru.Change_Diaper.Refuse": "I am here if you change your mind.",
-  "Maru.Change_Diaper.Followup": "...",
+  "Abigail.Change_Diaper.Accept_Joja": "Insert Text",
+  "Abigail.Change_Diaper.Accept_Joja_Post": "Insert Text",
+
+  "Abigail.Change_Diaper.Accept_HeartDiaper": "Insert Text",
+  "Abigail.Change_Diaper.Accept_HeartDiaper_Post": "Insert Text",
+
+  "Abigail.Change_Diaper.Refuse_Pretext": "Insert Text",
+  "Abigail.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
+  "Abigail.Change_Diaper.Refuse_UsedBad": "Insert Text",
+
+  // Diaperchange from Abigail
+
+  "Abigail.Diaper_Change.Accept": "#Just lie down for me!$l#$b#%Abigail changes your diaper, using way to much baby powder",
+  "Abigail.Diaper_Change.Refuse": "I was just asking.",
+  "Abigail.Diaper_Change.Followup": "...",
+
+  // Diaperchange to Maru
+
+  "Maru.Change_Diaper.Accept_BabyPrint": "Insert Text",
+  "Maru.Change_Diaper.Accept_BabyPrint_Post": "Maru seams very angry.",
+
+  "Maru.Change_Diaper.Accept_Lavender": "Insert Text",
+  "Maru.Change_Diaper.Accept_Lavender_Post": "Insert Text",
+
+  "Maru.Change_Diaper.Accept_Joja": "Insert Text",
+  "Maru.Change_Diaper.Accept_Joja_Post": "Insert Text",
+
+  "Maru.Change_Diaper.Accept_HeartDiaper": "Insert Text",
+  "Maru.Change_Diaper.Accept_HeartDiaper_Post": "Insert Text",
+
+  "Maru.Change_Diaper.Refuse_Pretext": "Insert Text",
+  "Maru.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
+  "Maru.Change_Diaper.Refuse_UsedBad": "Insert Text",
+
+  // Diaperchange from Maru
+
+  "Maru.Diaper_Change.Accept": "%Maru changes you quick and professional",
+  "Maru.Diaper_Change.Refuse": "I am here if you change your mind.",
+  "Maru.Diaper_Change.Followup": "...",
 
   // Dialogues ABDL Childs Question
 

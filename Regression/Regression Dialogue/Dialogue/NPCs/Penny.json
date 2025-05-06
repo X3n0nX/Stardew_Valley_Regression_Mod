@@ -5,40 +5,50 @@
 			"Action":"EditData",
 			"Target":"Characters/Dialogue/Penny",
       "Entries": {
-        //Penny's response Ids are 130-139
+        /*
+            Penny's response Ids:
+              penny_potty_trouble
+              penny_potty_easy
 
-        "spring_Mon8": "{{i18n:Penny.Dialogue.Adult_Pretext}}#$q 134/135 Adult_Followup#{{i18n:Penny.Dialogue.Adult_Question}}#$r 134 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response1}}#$r 134 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response2}}#$r 135 0 Adult_Big#{{i18n:Penny.Dialogue.Adult_Response3}}",
+              penny_show_nice
+              penny_show_diaper
+
+              penny_adult_little
+              penny_adult_big  
+        */
+
+        "spring_Mon8": "{{i18n:Penny.Dialogue.Adult_Pretext}}#$q penny_adult_little/penny_adult_big Adult_Followup#{{i18n:Penny.Dialogue.Adult_Question}}#$r penny_adult_little 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response1}}#$r penny_adult_little 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response2}}#$r penny_adult_big 0 Adult_Big#{{i18n:Penny.Dialogue.Adult_Response3}}",
         "spring_Tue6": "{{i18n:Penny.Dialogue.spring_Tue6}}",
         "spring_Wed4": "{{i18n:Penny.Dialogue.spring_Wed4}}",
         "spring_Thu4": "#$p 102#{{i18n:Penny.Dialogue.spring_Thu4}}",
-        "spring_Fri2": "{{i18n:Penny.Dialogue.Potty_Pretext}}#$q 130/131 Potty_Followup#{{i18n:Penny.Dialogue.Potty_Question}}#$r 130 0 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response1}}#$r 130 5 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response2}}#$r 131 -5 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response3}}#$r 131 -30 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response4}}",
-        "spring_Sat6": "{{i18n:Penny.Dialogue.Show_Pretext}}#$q 132/133 Show_Followup#{{i18n:Penny.Dialogue.Show_Question}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response1}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response2}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response3}}#$r 133 0 Show_Diaper#{{i18n:Penny.Dialogue.Show_Response4}}",
+        "spring_Fri2": "{{i18n:Penny.Dialogue.Potty_Pretext}}#$q penny_potty_trouble/penny_potty_easy Potty_Followup#{{i18n:Penny.Dialogue.Potty_Question}}#$r penny_potty_trouble 0 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response1}}#$r penny_potty_trouble 5 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response2}}#$r penny_potty_easy -5 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response3}}#$r penny_potty_easy -30 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response4}}",
+        "spring_Sat6": "{{i18n:Penny.Dialogue.Show_Pretext}}#$q penny_show_nice/penny_show_diaper Show_Followup#{{i18n:Penny.Dialogue.Show_Question}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response1}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response2}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response3}}#$r penny_show_diaper 0 Show_Diaper#{{i18n:Penny.Dialogue.Show_Response4}}",
 
 
         "summer_Mon4": "{{i18n:Penny.Dialogue.summer_Mon4}}",
         "summer_Tue2": "#$p 102#{{i18n:Penny.Dialogue.summer_Tue2}}",
         "summer_Tue6": "#$p 102#{{i18n:Penny.Dialogue.summer_Tue6}}",
-        "summer_Wed6": "{{i18n:Penny.Dialogue.Show_Pretext}}#$q 132/133 Show_Followup#{{i18n:Penny.Dialogue.Show_Question}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response1}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response2}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response3}}#$r 133 0 Show_Diaper#{{i18n:Penny.Dialogue.Show_Response4}}",
-        "summer_Fri8": "{{i18n:Penny.Dialogue.Adult_Pretext}}#$q 134/135 Adult_Followup#{{i18n:Penny.Dialogue.Adult_Question}}#$r 134 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response1}}#$r 134 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response2}}#$r 135 0 Adult_Big#{{i18n:Penny.Dialogue.Adult_Response3}}",
+        "summer_Wed6": "{{i18n:Penny.Dialogue.Show_Pretext}}#$q penny_show_nice/penny_show_diaper Show_Followup#{{i18n:Penny.Dialogue.Show_Question}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response1}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response2}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response3}}#$r penny_show_diaper 0 Show_Diaper#{{i18n:Penny.Dialogue.Show_Response4}}",
+        "summer_Fri8": "{{i18n:Penny.Dialogue.Adult_Pretext}}#$q penny_adult_little/penny_adult_big Adult_Followup#{{i18n:Penny.Dialogue.Adult_Question}}#$r penny_adult_little 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response1}}#$r penny_adult_little 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response2}}#$r penny_adult_big 0 Adult_Big#{{i18n:Penny.Dialogue.Adult_Response3}}",
         "summer_Sat4": "{{i18n:Penny.Dialogue.summer_Sat4}}",
-        "summer_Sun2": "{{i18n:Penny.Dialogue.Potty_Pretext}}#$q 130/131 Potty_Followup#{{i18n:Penny.Dialogue.Potty_Question}}#$r 130 0 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response1}}#$r 130 5 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response2}}#$r 131 -5 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response3}}#$r 131 -30 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response4}}",
+        "summer_Sun2": "{{i18n:Penny.Dialogue.Potty_Pretext}}#$q penny_potty_trouble/penny_potty_easy Potty_Followup#{{i18n:Penny.Dialogue.Potty_Question}}#$r penny_potty_trouble 0 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response1}}#$r penny_potty_trouble 5 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response2}}#$r penny_potty_easy -5 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response3}}#$r penny_potty_easy -30 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response4}}",
 
 
         "fall_Mon4": "#$p 102#{{i18n:Penny.Dialogue.fall_Mon4}}",
         "fall_Mon8": "{{i18n:Penny.Dialogue.fall_Mon8}}",
         "fall_Tue4": "{{i18n:Penny.Dialogue.fall_Tue4}}",
-        "fall_Wed6": "{{i18n:Penny.Dialogue.Show_Pretext}}#$q 132/133 Show_Followup#{{i18n:Penny.Dialogue.Show_Question}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response1}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response2}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response3}}#$r 133 0 Show_Diaper#{{i18n:Penny.Dialogue.Show_Response4}}",
-        "fall_Sun8": "{{i18n:Penny.Dialogue.Adult_Pretext}}#$q 134/135 Adult_Followup#{{i18n:Penny.Dialogue.Adult_Question}}#$r 134 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response1}}#$r 134 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response2}}#$r 135 0 Adult_Big#{{i18n:Penny.Dialogue.Adult_Response3}}",
-        "fall_Sat2": "{{i18n:Penny.Dialogue.Potty_Pretext}}#$q 130/131 Potty_Followup#{{i18n:Penny.Dialogue.Potty_Question}}#$r 130 0 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response1}}#$r 130 5 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response2}}#$r 131 -5 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response3}}#$r 131 -30 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response4}}",
+        "fall_Wed6": "{{i18n:Penny.Dialogue.Show_Pretext}}#$q penny_show_nice/penny_show_diaper Show_Followup#{{i18n:Penny.Dialogue.Show_Question}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response1}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response2}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response3}}#$r penny_show_diaper 0 Show_Diaper#{{i18n:Penny.Dialogue.Show_Response4}}",
+        "fall_Sun8": "{{i18n:Penny.Dialogue.Adult_Pretext}}#$q penny_adult_little/penny_adult_big Adult_Followup#{{i18n:Penny.Dialogue.Adult_Question}}#$r penny_adult_little 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response1}}#$r penny_adult_little 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response2}}#$r penny_adult_big 0 Adult_Big#{{i18n:Penny.Dialogue.Adult_Response3}}",
+        "fall_Sat2": "{{i18n:Penny.Dialogue.Potty_Pretext}}#$q penny_potty_trouble/penny_potty_easy Potty_Followup#{{i18n:Penny.Dialogue.Potty_Question}}#$r penny_potty_trouble 0 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response1}}#$r penny_potty_trouble 5 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response2}}#$r penny_potty_easy -5 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response3}}#$r penny_potty_easy -30 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response4}}",
 
 
         "winter_Tue6": "{{i18n:Penny.Dialogue.winter_Tue6}}",
-        "winter_Wed6": "{{i18n:Penny.Dialogue.Show_Pretext}}#$q 132/133 Show_Followup#{{i18n:Penny.Dialogue.Show_Question}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response1}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response2}}#$r 132 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response3}}#$r 133 0 Show_Diaper#{{i18n:Penny.Dialogue.Show_Response4}}",
-        "winter_Thu2": "{{i18n:Penny.Dialogue.Potty_Pretext}}#$q 130/131 Potty_Followup#{{i18n:Penny.Dialogue.Potty_Question}}#$r 130 0 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response1}}#$r 130 5 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response2}}#$r 131 -5 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response3}}#$r 131 -30 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response4}}",
+        "winter_Wed6": "{{i18n:Penny.Dialogue.Show_Pretext}}#$q penny_show_nice/penny_show_diaper Show_Followup#{{i18n:Penny.Dialogue.Show_Question}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response1}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response2}}#$r penny_show_nice 0 Show_Nice#{{i18n:Penny.Dialogue.Show_Response3}}#$r penny_show_diaper 0 Show_Diaper#{{i18n:Penny.Dialogue.Show_Response4}}",
+        "winter_Thu2": "{{i18n:Penny.Dialogue.Potty_Pretext}}#$q penny_potty_trouble/penny_potty_easy Potty_Followup#{{i18n:Penny.Dialogue.Potty_Question}}#$r penny_potty_trouble 0 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response1}}#$r penny_potty_trouble 5 Potty_Trouble#{{i18n:Penny.Dialogue.Potty_Response2}}#$r penny_potty_easy -5 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response3}}#$r penny_potty_easy -30 Potty_Easy#{{i18n:Penny.Dialogue.Potty_Response4}}",
         "winter_Fri2": "#$p 102#{{i18n:Penny.Dialogue.winter_Fri2}}",
         "winter_Fri6": "#$p 102#{{i18n:Penny.Dialogue.winter_Fri6}}",
         "winter_Sat4": "{{i18n:Penny.Dialogue.winter_Sat4}}",
-        "winter_Sun8": "{{i18n:Penny.Dialogue.Adult_Pretext}}#$q 134/135 Adult_Followup#{{i18n:Penny.Dialogue.Adult_Question}}#$r 134 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response1}}#$r 134 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response2}}#$r 135 0 Adult_Big#{{i18n:Penny.Dialogue.Adult_Response3}}",
+        "winter_Sun8": "{{i18n:Penny.Dialogue.Adult_Pretext}}#$q penny_adult_little/penny_adult_big Adult_Followup#{{i18n:Penny.Dialogue.Adult_Question}}#$r penny_adult_little 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response1}}#$r penny_adult_little 0 Adult_Little#{{i18n:Penny.Dialogue.Adult_Response2}}#$r penny_adult_big 0 Adult_Big#{{i18n:Penny.Dialogue.Adult_Response3}}",
 
 
         "Adult_Little": "{{i18n:Penny.Dialogue.Adult_Little}}",
@@ -53,12 +63,17 @@
 
         "Potty_Trouble": "{{i18n:Penny.Dialogue.Potty_Trouble}}",
         "Potty_Easy": "{{i18n:Penny.Dialogue.Potty_Easy}}",
-        "Potty_Followup": "#$p 131#{{i18n:Penny.Dialogue.Potty_Followup}}",
+        "Potty_Followup": "#$p penny_potty_easy#{{i18n:Penny.Dialogue.Potty_Followup}}",
 
+        "Change_Diaper_Accept_BabyPrint": "{{i18n:Penny.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"penny\" \"baby print diaper\"#$b#%{{i18n:Penny.Change_Diaper.Accept_BabyPrint_Post}}",
+        "Change_Diaper_Accept_Lavender": "{{i18n:Penny.Change_Diaper.Accept_Lavender}}#$action CHANGE_DIAPER_OTHERS \"penny\" \"lavender pullups\"#$b#%{{i18n:Penny.Change_Diaper.Accept_Lavender_Post}}",
+        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Penny.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"penny\" \"heart diaper\"#$b#%{{i18n:Penny.Change_Diaper.Accept_HeartDiaper_Post}}",
+        "Change_Diaper_Refuse": "{{i18n:Penny.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Penny.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Penny.Change_Diaper.Refuse_UsedBad}}]",
+        "Change_Diaper_Followup": "...",
 
-        "Diaper_Change_Accept": "{{i18n:Penny.Change_Diaper.Accept}}$action DIAPER_CHANGE \"heart diaper\" \"second hand pants\"#$h",
-        "Diaper_Change_Refuse": "{{i18n:Penny.Change_Diaper.Refuse}}",
-        "Diaper_Change_Followup": "{{i18n:Penny.Change_Diaper.Followup}}"
+        "Diaper_Change_Accept": "{{i18n:Penny.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"penny\" \"heart diaper\" \"second hand pants\"#$h",
+        "Diaper_Change_Refuse": "{{i18n:Penny.Diaper_Change.Refuse}}",
+        "Diaper_Change_Followup": "{{i18n:Penny.Diaper_Change.Followup}}"
       },
 		},
 

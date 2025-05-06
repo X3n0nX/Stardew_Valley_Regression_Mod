@@ -1,44 +1,55 @@
 {
-	"Changes":[
-		{
-			"LogName":"Sam",
-			"Action":"EditData",
-			"Target":"Characters/Dialogue/Sam",
+  "Changes": [
+    {
+      "LogName": "Sam",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
       "Entries": {
-        //Sam's response Ids are 120-129
+        /*
+            Sam's response Ids:
+              sam_job_ready
+              sam_job_pretend
+
+              sam_diaper_nice
+              sam_diaper_join
+        
+              sam_little_littel
+              sam_little_exited
+        */
+
 
         "Thu6_1": "{{i18n:Sam.Dialogue.Thu6_1}}",
         "Fri4": "{{i18n:Sam.Dialogue.Fri4}}",
         "Sun8": "{{i18n:Sam.Dialogue.Sun8}}",
 
-        "spring_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}$q 120/121 Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r 120 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r 120 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
+        "spring_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}$q sam_job_ready/sam_job_pretend Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r sam_job_ready 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r sam_job_pretend 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
         "spring_Mon8": "#$p 102#{{i18n:Sam.Dialogue.spring_Mon8}}",
         "spring_Tue4": "{{i18n:Sam.Dialogue.spring_Tue4}}",
-        "spring_Thu6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}$q 122/123 Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r 122 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r 123 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
-        "spring_Sun8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q 124/125 Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r 124 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r 125 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r 124 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r 125 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
+        "spring_Thu6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}$q sam_diaper_nice/sam_diaper_join Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r sam_diaper_nice 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r sam_diaper_join 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
+        "spring_Sun8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q sam_little_littel/sam_little_exited Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r sam_little_littel 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r sam_little_exited 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r sam_little_littel 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r sam_little_exited 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
 
-        "summer_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}$q 120/121 Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r 120 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r 120 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
+        "summer_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}$q sam_job_ready/sam_job_pretend Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r sam_job_ready 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r sam_job_pretend 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
         "summer_Mon6": "{{i18n:Sam.Dialogue.summer_Mon6}}",
-        "summer_Thu6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}$q 122/123 Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r 122 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r 123 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
+        "summer_Thu6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}$q sam_diaper_nice/sam_diaper_join Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r sam_diaper_nice 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r sam_diaper_join 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
         "summer_Wed8": "{{i18n:Sam.Dialogue.summer_Wed8}}",
-        "summer_Sun8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q 124/125 Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r 124 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r 125 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r 124 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r 125 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
+        "summer_Sun8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q sam_little_littel/sam_little_exited Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r sam_little_littel 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r sam_little_exited 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r sam_little_littel 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r sam_little_exited 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
 
-        "fall_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}$q 120/121 Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r 120 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r 120 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
+        "fall_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}$q sam_job_ready/sam_job_pretend Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r sam_job_ready 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r sam_job_pretend 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
         "fall_Mon8": "#$p 102#{{i18n:Sam.Dialogue.fall_Mon8}}",
         "fall_Tue4": "{{i18n:Sam.Dialogue.fall_Tue4}}",
         "fall_Thu6_1": "{{i18n:Sam.Dialogue.fall_Thu6_1}}",
         "fall_Thu6": "{{i18n:Sam.Dialogue.fall_Thu6}}",
-        "fall_Wed6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}$q 122/123 Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r 122 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r 123 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
-        "fall_Fri8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q 124/125 Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r 124 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r 125 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r 124 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r 125 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
+        "fall_Wed6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}$q sam_diaper_nice/sam_diaper_join Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r sam_diaper_nice 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r sam_diaper_join 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
+        "fall_Fri8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q sam_little_littel/sam_little_exited Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r sam_little_littel 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r sam_little_exited 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r sam_little_littel 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r sam_little_exited 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
         "fall_Sat4": "{{i18n:Sam.Dialogue.fall_Sat4}}",
 
-        "winter_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}$q 120/121 Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r 120 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r 120 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
+        "winter_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}$q sam_job_ready/sam_job_pretend Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r sam_job_ready 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r sam_job_pretend 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
         "winter_Tue4": "{{i18n:Sam.Dialogue.winter_Tue4}}",
         "winter_Thu6_1": "{{i18n:Sam.Dialogue.winter_Thu6_1}}",
         "winter_Thu6": "{{i18n:Sam.Dialogue.winter_Thu6}}",
         "winter_Thu8": "{{i18n:Sam.Dialogue.winter_Thu8}}",
-        "winter_Wed6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}$q 122/123 Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r 122 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r 123 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
-        "winter_Sat8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q 124/125 Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r 124 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r 125 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r 124 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r 125 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
+        "winter_Wed6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}$q sam_diaper_nice/sam_diaper_join Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r sam_diaper_nice 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r sam_diaper_join 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
+        "winter_Sat8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q sam_little_littel/sam_little_exited Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r sam_little_littel 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r sam_little_exited 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r sam_little_littel 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r sam_little_exited 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
 
 
         "Job_Ready": "{{i18n:Sam.Dialogue.Job_Ready}}",
@@ -51,17 +62,17 @@
 
         "Little_Little": "{{i18n:Sam.Dialogue.Little_Little}}",
         "Little_Excited": "{{i18n:Sam.Dialogue.Little_Excited}}",
-        "Little_Followup": "#$p 124#{{i18n:Sam.Dialogue.Little_Followup}}",
+        "Little_Followup": "#$p sam_little_littel#{{i18n:Sam.Dialogue.Little_Followup}}",
 
         "Change_Diaper_Accept_BabyPrint": "{{i18n:Sam.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"baby print diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_BabyPrint_Post}}",
-        "Change_Diaper_Accept_Training": "{{i18n:Sam.Change_Diaper.Accept_Training}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"training pants\"#$b#%{{i18n:Sam.Change_Diaper.Accept_Training_Post}}",
-        "Change_Diaper_Accept_BigKids": "{{i18n:Sam.Change_Diaper.Accept_BigKids}}$1#$action CHANGE_DIAPER_OTHERS \"sam\" \"big kid undies\"{{i18n:Sam.Change_Diaper.Accept_BigKids_Post}}",
-        "Change_Diaper_Accept_Joja": "{{i18n:Sam.Change_Diaper.Accept_Joja}}$9#$action CHANGE_DIAPER_OTHERS \"sam\" \"joja diaper\"#$b#%{{i18n:Sam.Change_Diaper.Accept_Joja_Post}}",
-        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Sam.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"heart diaper\"#$b#I guess they are nice...$9#$b#{{i18n:Sam.Change_Diaper.Accept_HeartDiaper_Post}}",
+        "Change_Diaper_Accept_Training": "{{i18n:Sam.Change_Diaper.Accept_Training}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"training pants\"#$b#{{i18n:Sam.Change_Diaper.Accept_Training_Post}}",
+        "Change_Diaper_Accept_BigKids": "{{i18n:Sam.Change_Diaper.Accept_BigKids}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"big kid undies\"#$b#{{i18n:Sam.Change_Diaper.Accept_BigKids_Post}}",
+        "Change_Diaper_Accept_Joja": "{{i18n:Sam.Change_Diaper.Accept_Joja}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"joja diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_Joja_Post}}",
+        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Sam.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"heart diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_HeartDiaper_Post}}",
 
-        "Diaper_Change_Accept": "#{{i18n:Sam.Change_Diaper.Accept}}#$action DIAPER_CHANGE \"baby print diaper\" \"sams old pants\"#$h",
-        "Diaper_Change_Refuse": "{{i18n:Sam.Change_Diaper.Refuse}}",
-        "Diaper_Change_Followup": "{{i18n:Sam.Change_Diaper.Followup}}"
+        "Diaper_Change_Accept": "#{{i18n:Sam.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"sam\" \"baby print diaper\" \"sams old pants\"#$h",
+        "Diaper_Change_Refuse": "{{i18n:Sam.Diaper_Change.Refuse}}",
+        "Diaper_Change_Followup": "{{i18n:Sam.Diaper_Change.Followup}}"
       }
 		},
 

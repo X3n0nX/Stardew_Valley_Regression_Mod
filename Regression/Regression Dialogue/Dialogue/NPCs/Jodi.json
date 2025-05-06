@@ -5,7 +5,11 @@
 			"Action":"EditData",
 			"Target":"Characters/Dialogue/Jodi",
       "Entries": {
-        //Jodi's response Ids are 110-119
+        /*
+            Jodi's response Ids:
+              jodi_show_nice
+              jodi_show_diaper
+        */
         "Introduction": "{{i18n:Jodi.Dialogue.Introduction}}",
 
         "spring_Mon": "{{i18n:Jodi.Dialogue.spring_Mon}}",
@@ -23,7 +27,7 @@
         "summer_Mon6": "{{i18n:Jodi.Dialogue.summer_Mon6}}",
         "summer_Mon10": "{{i18n:Jodi.Dialogue.summer_Mon10}}",
         "summer_Tue6": "#$p 102#{{i18n:Jodi.Dialogue.summer_Tue6}}",
-        "summer_Wed8": "{{i18n:Jodi.Dialogue.Show_Pretext}}#$q 110/111 Show_Followup#{{i18n:Jodi.Dialogue.Show_Question}}#$r 110 0 Show_Nice#{{i18n:Jodi.Dialogue.Show_Response1}}#$r 110 0 Show_Nice#{{i18n:Jodi.Dialogue.Show_Response2}}#$r 110 0 Show_Nice#{{i18n:Jodi.Dialogue.Show_Response3}}#$r 111 0 Show_Diaper#{{i18n:Jodi.Dialogue.Show_Response4}}",
+        "summer_Wed8": "{{i18n:Jodi.Dialogue.Show_Pretext}}#$q jodi_show_nice/jodi_show_diaper Show_Followup#{{i18n:Jodi.Dialogue.Show_Question}}#$r jodi_show_nice 0 Show_Nice#{{i18n:Jodi.Dialogue.Show_Response1}}#$r jodi_show_nice 0 Show_Nice#{{i18n:Jodi.Dialogue.Show_Response2}}#$r jodi_show_nice 0 Show_Nice#{{i18n:Jodi.Dialogue.Show_Response3}}#$r jodi_show_diaper 0 Show_Diaper#{{i18n:Jodi.Dialogue.Show_Response4}}",
         "summer_Thu4": "{{i18n:Jodi.Dialogue.summer_Thu4}}",
         "summer_Fri8": "#$p 102#{{i18n:Jodi.Dialogue.summer_Fri8}}",
         "summer_Sat": "{{i18n:Jodi.Dialogue.summer_Sat}}",
@@ -55,9 +59,9 @@
 
         "Show_Nice": "{{i18n:Jodi.Dialogue.Show_Nice}}",
         "Show_Diaper": "{{i18n:Jodi.Dialogue.Show_Diaper}}",
-        "Show_Followup": "#$p 110#{{i18n:Jodi.Dialogue.Show_Followup}}",
+        "Show_Followup": "#$p jodi_show_nice#{{i18n:Jodi.Dialogue.Show_Followup}}",
 
-        "Diaper_Change_Accept": "{{i18n:Jodi.Change_Diaper.Accept}}[OnDebuffed: {{i18n:Jodi.Change_Diaper.Accept_Debuff}}]#$action DIAPER_CHANGE \"baby print diaper\" \"sams old pants\"#$h",
+        "Diaper_Change_Accept": "{{i18n:Jodi.Change_Diaper.Accept}}[OnDebuffed: {{i18n:Jodi.Change_Diaper.Accept_Debuff}}]#$action DIAPER_CHANGE \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
         "Diaper_Change_Refuse": "{{i18n:Jodi.Change_Diaper.Refuse}}",
         "Diaper_Change_Followup": "{{i18n:Jodi.Change_Diaper.Followup}}"
       }

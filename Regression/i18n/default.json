@@ -1,0 +1,1677 @@
+{
+  // ########################################
+  // Numeric Translations
+  // ########################################
+
+  "Numeric_Translation.Sigle": "a",
+  "Numeric_Translation.Plural": "a pair of",
+  "Numeric_Translation.Multiple_Times": "multiple times",
+  "Numeric_Translation.Once": "once",
+  "Numeric_Translation.Twice": "twice",
+  "Numeric_Translation.One_Time": "one time",
+  "Numeric_Translation.Two_Times": "two times",
+  "Numeric_Translation.Three_Times": "three times",
+  "Numeric_Translation.Four_Times": "four times",
+  "Numeric_Translation.Five_Times": "five times",
+  "Numeric_Translation.Times": "times",
+
+  // ########################################
+  // Gender Texts
+  // ########################################
+
+  "Gender_Text.He": "he",
+  "Gender_Text.His": "his",
+  "Gender_Text.Him": "him",
+  "Gender_Text.She": "she",
+  "Gender_Text.Her": "her",
+  "Gender_Text.They": "they",
+  "Gender_Text.Their": "their",
+  "Gender_Text.Them": "them",
+
+  // ########################################
+  // General
+  // ########################################
+
+  "General.EasyMode.On": "Easy Mode on. Hunger and Thirst are refilled every morning and the wet beds dried.",
+  "General.EasyMode.Off": "Easy Mode off. Hunger and Thirst are never refilled and wet beds dry slowly.",
+
+  // ########################################
+  // Jodis Initial Letter
+  // ########################################
+
+  "Jodi.Initial_Letter.1": "Dear @,^Welcome to town! Here some snacks to tide you over while you move in. Your grandpa told me about your little problem, so I enclosed some supplies for you. Visit Pierre if you run out!^      <, Jodi",
+
+  // ########################################
+  // Food & Water Stats
+  // ########################################
+
+  // Food Low
+  "Food.Low.1": "You're hungry.",
+  "Food.Low.2": "Your stomach rumbles.",
+  "Food.Low.3": "You're thinking about eating food.",
+  "Food.Low.4": "You think about finding food.",
+  "Food.Low.5": "You need some food.",
+
+  // Food None
+  "Food.None.1": "You're starving!",
+  "Food.None.2": "All you can think about is food! Better eat!",
+  "Food.None.3": "You're so hungry you can't think straight!",
+
+  // Water Low
+  "Water.Low.1": "You're getting pretty thirsty.",
+  "Water.Low.2": "You could really use some water.",
+  "Water.Low.3": "You're thinking about getting a drink.",
+  "Water.Low.4": "You need a drink.",
+
+  // Water None
+  "Water.None.1": "You're dehydrated!",
+  "Water.None.2": "You're super thirsty! Get a drink right now!",
+  "Water.None.3": "You're so thirsty you can't think straight!",
+
+  // Drink Water Source
+  "Drink.Water-Source.1": "You scoop up some water in a cup and drain it down.",
+
+  // ########################################
+  // Bladder Stats & Continence
+  // ########################################
+
+  // Bladder Green
+  "Bladder.Green.1": "You don't feel like you need to pee.",
+  "Bladder.Green.2": "You're pretty sure your bladder is mostly empty.",
+
+  // Bladder Yellow
+  "Bladder.Yellow.1": "You need to pee soon.",
+  "Bladder.Yellow.2": "You should find somewhere to pee soon.",
+  "Bladder.Yellow.3": "You feel like you might pee soon.",
+  "Bladder.Yellow.4": "Your bladder is slowly getting full.",
+
+  // Bladder Orange
+  "Bladder.Orange.1": "You really need to pee!",
+  "Bladder.Orange.2": "You're not sure how much longer you can hold your pee!",
+  "Bladder.Orange.3": "If you don't pee soon, you'll have an accident!",
+  "Bladder.Orange.4": "You start crossing your legs trying not to pee yourself!",
+
+  // Bladder Red
+  "Bladder.Red.1": "You can’t hold it anymore! You're about to pee yourself!",
+  "Bladder.Red.2": "You have to pee so badly you start hopping around!",
+
+  // Bladder Leak
+  "Bladder.Leak.1": "You feel a little pee drip in your $UNDERWEAR_NAME$!",
+  "Bladder.Leak.2": "You feel a few drops of pee leak out into your $UNDERWEAR_NAME$!",
+  "Bladder.Leak.3": "While hopping around, trying not to pee yourself, a little escapes into your $UNDERWEAR_NAME$!",
+  "Bladder.Leak.4": "While crossing your legs, you wee your $UNDERWEAR_NAME$ a little!",
+  "Bladder.Leak.5": "Your $UNDERWEAR_NAME$gets a little wet while you try to hold it a little longer!",
+
+  // Bladder Continence Green
+  "Bladder.Continence.Green.1": "You're pretty good at holding your pee.",
+
+  // Bladder Continence Yellow
+  "Bladder.Continence.Yellow.1": "You can mostly hold your pee it. Mostly.",
+
+  // Bladder Continence Orange
+  "Bladder.Continence.Orange.1": "You're pretty bad at holding your pee.",
+
+  // Bladder Continence Red
+  "Bladder.Continence.Red.1": "You're close to being unable to hold your pee.",
+
+  // Bladder Continence Min
+  "Bladder.Continence.Min.1": "You're almost totally unable to hold your pee.",
+
+  // ########################################
+  // Bowel Stats & Continence
+  // ########################################
+
+  // Bowel Green
+  "Bowels.Green.1": "You don't feel like you need to poop.",
+  "Bowels.Green.2": "You're pretty sure you can hold your poop for a while.",
+
+  // Bowel Yellow
+  "Bowels.Yellow.1": "You need to poop.",
+  "Bowels.Yellow.2": "You should find somewhere to poop soon.",
+  "Bowels.Yellow.3": "You feel a rumble in your bowels.",
+  "Bowels.Yellow.4": "It might be time to poop.",
+
+  // Bowels Orange
+  "Bowels.Orange.1": "You really need to poop!",
+  "Bowels.Orange.2": "If you don't find a place to poop soon, you'll mess yourself!",
+  "Bowels.Orange.3": "You're not sure how much longer you can hold your poop!",
+
+  // Bowels Red
+  "Bowels.Red.1": "You can feel the poop starting to push out!",
+  "Bowels.Red.2": "You can’t hold it anymore! You're about to mess yourself!",
+
+  // Bowels Leak
+  "Bowels.Leak.1": "Some poop slowly escapes your control, soiling your $UNDERWEAR_NAME$",
+  "Bowels.Leak.2": "A little poop stains your $UNDERWEAR_NAME$!",
+  "Bowels.Leak.3": "While trying to hold it, you soil your $UNDERWEAR_NAME$ a little!",
+  "Bowels.Leak.4": "While trying your best to hold it, your $UNDERWEAR_NAME$ get a little messy!",
+
+  // Bowel Continence Green
+  "Bowel.Continence.Green.1": "You pretty good at holding your poop.",
+
+  // Bowel Continence Yellow
+  "Bowel.Continence.Yellow.1": "You can hold you poop most of the time.",
+
+  // Bowel Continence Orange
+  "Bowel.Continence.Orange.1": "You're pretty bad at holding your poop.",
+
+  // Bowel Continence Red
+  "Bowel.Continence.Red.1": "You're getting close to being unable to hold your poop.",
+
+  // Bowel Continence Min
+  "Bowel.Continence.Min.1": "You're almost totally unable to hold your poop.",
+
+  // ########################################
+  // Pee and poop messages
+  // ########################################
+
+  // Pee on ground
+
+  "Pee.Ground.1": "You drop your $UNDERWEAR_NAME$ and pee on the ground.",
+  "Pee.Ground.2": "Moving your $UNDERWEAR_NAME$, you take a deep breath and empty your bladder.",
+  "Pee.Ground.3": "Looking around sheepishly, you pull your $UNDERWEAR_NAME$ down and go right where you are!",
+  "Pee.Ground.4": "You slide your $PANTS_NAME$ to your knees</, squat,> and let your pee splatter all over the ground.",
+  "Pee.Ground.5": "You pull down your $PANTS_NAME$ and sprinkle on the ground.",
+  "Pee.Ground.6": "You pull your $PANTS_NAME$ down and go <pee pee/tinkle> on the ground.",
+  "Pee.Ground.7": "You slide your $PANTS_NAME$ down, <spread your legs/squat down>, and empty your bladder.",
+
+  // Try to pee on ground but nothing comes out
+
+  "Pee.Attempt.1": "You pull down your $PANTS_NAME$ and relax your bladder, but nothing comes out.",
+  "Pee.Attempt.2": "You slide your $PANTS_NAME$ down, <spread your legs/squat down>, and try to pee, but you can't.",
+
+  // Pee on toilet
+
+  "Pee.Toilet.1": "Sprinkling into the toilet, you breathe a sigh of relief.",
+  "Pee.Toilet.2": "You pee in the potty like a big <boy/girl>.",
+  "Pee.Toilet.3": "You slide your $PANTS_NAME$ down, <stand in front of the toilet/sit on the toilet>, and pee like a big <boy/girl>.",
+  "Pee.Toilet.4": "You barely make it to the toilet. Any longer and you might have wet yourself!",
+  "Pee.Toilet.5": "You wee in the toilet. Good thing you were able to hold it until then!",
+  "Pee.Toilet.6": "You proudly pee in the toilet. Now you won't need a diaper!",
+  "Pee.Toilet.7": "You tinkle in the toilet. Your Mommy would be proud!",
+  "Pee.Toilet.8": "You undress and go number one in the toilet like a good <boy/girl>.",
+
+  // Try to pee on toilett but nothing comes out
+
+  "Pee.Toilet.Attempt.1": "You try to pee in the potty like a big <boy/girl>, but nothing comes out.",
+  "Pee.Toilet.Attempt.2": "You slide your $PANTS_NAME$ down, <spread your legs/sit on the toilet>, and try to pee, but you can't.",
+
+  // Pee in underwear
+
+  "Pee.Underwear.1": "You relax your bladder and pee gushes into your $UNDERWEAR_NAME$.",
+  "Pee.Underwear.2": "Your bladder tingles as you let go and warmth spreads out into your $UNDERWEAR_NAME$.",
+  "Pee.Underwear.3": "You take a deep breath and release your pee into your $UNDERWEAR_NAME$.",
+  "Pee.Underwear.4": "You glance around a little sheepishly as you deliberately pee your $UNDERWEAR_NAME$ like a little <boy/girl>.",
+
+  // Try to pee in underwear but nothing comes out
+
+  "Pee.Underwear.Attempt.1": "You relax your bladder, but nothing comes out.",
+  "Pee.Underwear.Attempt.2": "You try to pee in your $UNDERWEAR_NAME$, but you can't.",
+
+  // Poop on ground
+
+  "Poop.Ground.1": "You slide your $PANTS_NAME$ down, squat, and empty your bowels.",
+  "Poop.Ground.2": "Looking around nervously, you pull your $PANTS_NAME$ down and go number two right on the ground!",
+  "Poop.Ground.3": "Undressing, you squat and let your poop pile out onto the ground.",
+  "Poop.Ground.4": "You pull down your $PANTS_NAME$ and poop on the ground.",
+  "Poop.Ground.5": "You slide your $PANTS_NAME$ to your knees, squat down, and gently push all your poop out.",
+
+  // Try to poop on ground but nothing comes out
+
+  "Poop.Attempt.1": "You pull down your $PANTS_NAME$ and try to poop, but you can't.",
+  "Poop.Attempt.2": "You slide your $PANTS_NAME$ to your knees, squat down, and strain to poop, but nothing comes out.",
+
+  // Poop on toilet
+
+  "Poop.Toilet.1": "As your poop slides out into the toilet, you start to relax. Whew, that felt good!",
+  "Poop.Toilet.2": "You slide your $PANTS_NAME$ to your knees, sit on the toilet, and poop like a big <boy/girl>.",
+  "Poop.Toilet.3": "You poop in the potty like a big <boy/girl>.",
+  "Poop.Toilet.4": "You poop in the toilet. Maybe now you won't mess yourself today!",
+  "Poop.Toilet.5": "You slide your $PANTS_NAME$ to your knees and poop in the toilet.",
+  "Poop.Toilet.6": "You proudly poop in the toilet. Now you won't need a diaper!",
+  "Poop.Toilet.7": "You poop in the toilet. Your Mommy would be proud!",
+  "Poop.Toilet.8": "You undress and go number two in the toilet like a good <boy/girl>.",
+
+  // Try to poop on toilett but nothing comes out
+
+  "Poop.Toilet.Attempt.1": "You squirm a little as you try to poop in the toilet, but nothing comes out.",
+  "Poop.Toilet.Attempt.2": "You try to poop in the potty like a big <boy/girl>, but you can't.",
+  "Poop.Toilet.Attempt.3": "You slide your $PANTS_NAME$ to your knees, sit on the toilet, and strain to poop, but nothing comes out.",
+
+  // Poop in underwear
+
+  "Poop.Underwear.1": "You squat a little and empty your bowels into your $UNDERWEAR_NAME$.",
+  "Poop.Underwear.2": "You concentrate and push a warm load of poop into your $UNDERWEAR_NAME$.",
+  "Poop.Underwear.3": "You hope nobody notices as you deliberately let a big poop squeeze out into your $UNDERWEAR_NAME$.",
+
+  // Try to poop in underwear but nothing comes out
+
+  "Poop.Underwear.Attempt.1": "You squat a little and strain, but nothing comes out.",
+  "Poop.Underwear.Attempt.2": "You try to mess in your $UNDERWEAR_NAME$, but you can't.",
+
+  // ########################################
+  // Underwear still soiled and changeing 
+  // ########################################
+
+  // Underwear still soiled
+
+  "Underwear.Still_Soiled.1": "You feel your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ and blush at the sensation.",
+  "Underwear.Still_Soiled.2": "You feel like a little <boy/girl> knowing that you're still in $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Underwear.Still_Soiled.3": "You blush and smile warmly realizing you're wearing $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Underwear.Still_Soiled.4": "You smell something stinky and your heart flutters as you realize you're still wearing $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Underwear.Still_Soiled.5": "You feel your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ squishing between your legs and smile to yourself.",
+  "Underwear.Still_Soiled.6": "You notice your sagging $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> snug and warm.",
+  "Underwear.Still_Soiled.7": "You notice you're waddling because your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$",
+  "Underwear.Still_Soiled.8": "You consider changing your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$",
+  "Underwear.Still_Soiled.9": "You press your hand into your squishy $INSPECT_UNDERWEAR_NAME_NO_PREFIX$. You feel like a little baby in <it#them>.",
+  "Underwear.Still_Soiled.10": "You feel your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$. <It's#They're> all squishy!",
+
+  // Underwear should be changed
+
+  "Underwear.Should_Change.1": "You feel your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ and realize you should really get changed!",
+  "Underwear.Should_Change.2": "Your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <feel#feels> very heavy. Changie time!",
+  "Underwear.Should_Change.3": "Feeling your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ sagging, you think it's probably time for a diaper change!",
+
+  // ########################################
+  // Changeing
+  // ########################################
+
+  // Underwear cant remove
+
+  "Change.Cant_Remove.1": "You try to pull down your $UNDERWEAR_NAME$, but you can't get it off without ruining it. Maybe you should change into something else? Or you could just use it...",
+
+  // Change underwear by yourself
+
+  "Change.Underwear.Yourself.1": "You change into $INSPECT_UNDERWEAR_NAME$.",
+
+  // Change underwear and pants by yourself
+
+  "Change.Underwear_Pants.Yourself.1": "You change into $PANTS_PREFIX$ clean $PANTS_NAME$ and $INSPECT_UNDERWEAR_NAME$.",
+
+  // Change underwear by Npc
+
+  "Change.Underwear.Npc.1": "You get changed into $INSPECT_UNDERWEAR_NAME$.",
+
+  // Change underwear and pants by yourself
+
+  "Change.Underwear_Pants.Npc.1": "You get changed into $PANTS_PREFIX$ $PANTS_NAME$ and $INSPECT_UNDERWEAR_NAME$.",
+
+  // The underwear you changed is destroyed
+
+  "Change.Underwear.Destroyed.Player.1": "You ruined your $UNDERWEAR_NAME$ when taking <it#them> off. So you throw <it#them> away.",
+  "Change.Underwear.Destroyed.Player.2": "$UNDERWEAR_NAME$ <is#are> ruined, so you throw <it#them> away.",
+
+  // The underwear you changed an npc is destroyed
+
+  "Change.Underwear.Destroyed.Npc.1": "$NPC_NAME$s $NPC_INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> ruined, so you throw <it#them> away.",
+
+  // The underwear, a npc changed you, is destroyed
+
+  "Change.Underwear.Destroyed.By_Npc.1": "Your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> ruined and thrown away for you.",
+
+  // You also need to change your pants because they are messy
+
+  "Change.Require.Pants.1": "You don't have another pair of $PANTS_NAME$ here to change into. You probably need to go home first.",
+
+  // You have to be at home to change your pants
+
+  "Change.Require.Home.1": "Dirty pants have to be changed at home.",
+
+  // You have to be at home to change your pants
+
+  "Change.Pants.Yourself.Home.1": "You change yourself into another pair of $PANTS_NAME$.",
+
+  // ##########
+  // Peek Waistband 
+  // ##########
+
+  // Peek inside your waistband to check your underwear
+  // text will be conpleatet by script with
+  // with the state of underwear and its name
+
+  "Peek.Waistband.1": "You peek inside your waistband and see",
+
+  // ########################################
+  // Dialogs for changeing 
+  // ########################################
+
+  // Dialoge for getting change by npc
+
+  "Change.Dialog.Question.1": "Do you want to get your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ changed like a toddler?",
+  "Change.Dialog.Question.1.Answer_Yes.1": "Nod.",
+  "Change.Dialog.Question.1.Answer_Yes.2": "Please?",
+  "Change.Dialog.Question.1.Answer_No.1": "Noooo!",
+  "Change.Dialog.Question.1.Answer_No.2": "Shake your head.",
+
+  // Dialoge for changing other npc
+
+  "Change_Other.Dialog.Question.1": "Do you help $NPC_NAME$ getting out of $NPC_INSPECT_UNDERWEAR_NAME$?",
+  "Change_Other.Dialog.Question.2": "$NPC_NAME$ has $NPC_INSPECT_UNDERWEAR_NAME$ in $NPC_HIS_HER$ $NPC_PANTS_NAME$. Do you change $NPC_HIM_HER$?",
+
+  "Change_Other.Dialog.Answer_No": "Not now",
+
+  // ########################################
+  // Accidents
+  // ########################################
+
+  // Pee Accidents
+
+  "Pee.Accident.1": "You bite your lip and take a sharp breath through your nose as your bladder gives in and you flood your $UNDERWEAR_NAME$.",
+  "Pee.Accident.2": "You're helpless as pee streams into your $UNDERWEAR_NAME$.",
+  "Pee.Accident.3": "You hope no one notices the pee pouring into your $UNDERWEAR_NAME$.",
+  "Pee.Accident.4": "Your thumb finds its way into your mouth as you suddenly feel warmth spreading into your $UNDERWEAR_NAME$!",
+  "Pee.Accident.5": "You hope your $UNDERWEAR_NAME$ doesn't leak as you realize you're wetting yourself.",
+  "Pee.Accident.6": "You stop in your tracks as you start to go <wee/tinkle> in your $UNDERWEAR_NAME$!",
+  "Pee.Accident.7": "You give a sheepish smile as you realize the warmth spreading into your crotch is pee!",
+  "Pee.Accident.8": "You <gasp/squeal> when you realize you're suddenly wetting yourself!",
+  "Pee.Accident.9": "With a faint hiss, warmth floods into your $UNDERWEAR_NAME$!",
+  "Pee.Accident.10": "You press your hands to your crotch, feeling the warmth as the sudden flood of pee comes rushing out.",
+  "Pee.Accident.11": "You're wetting your $UNDERWEAR_NAME$ like a little <boy/girl>!",
+  "Pee.Accident.12": "You give up trying to hold it any longer and your pee gushes out, flooding your $UNDERWEAR_NAME$.",
+  "Pee.Accident.13": "You can't help but relax and let your pee spurt into your $UNDERWEAR_NAME$",
+  "Pee.Accident.14": "Oopsies! You're wetting yourself!",
+  "Pee.Accident.15": "You're wetting your $UNDERWEAR_NAME$! Oh well.",
+  "Pee.Accident.16": "You notice a growing warmth before glancing down and realizing you're peeing in your $UNDERWEAR_NAME$!",
+  "Pee.Accident.17": "Your $UNDERWEAR_NAME$ <sags#sag> as you wet yourself. Your cheeks flush as you realize you're just a little <boy/girl>.",
+
+  // Poop Accidents
+
+  "Poop.Accident.1": "Your knees bend and your body bushes on its own as you find yourself pushing a warm load into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.2": "You realize you're suddenly filling the back of your $UNDERWEAR_NAME$! You heft your seat with a slight blush as your warm, soft muck squishes against you.",
+  "Poop.Accident.3": "You sigh with relief and grin bashfully as the distinctive smell of poop begins to waft from your $UNDERWEAR_NAME$.",
+  "Poop.Accident.4": "You bashfully cover your face as you fill your $UNDERWEAR_NAME$ with warm poop. After you're done, you realize your thumb found it's way into your mouth",
+  "Poop.Accident.5": "With a faint crackling sound, your poop squeezes out into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.6": "You start squirming and push a heavy load of poop into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.7": "You're almost startled as you notice it. You're pooping yourself!",
+  "Poop.Accident.8": "You don't want to hold your poop any more and release it into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.9": "You finally give in, and a heavy load of warm poop pushes into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.10": "You freeze up and look around sheepishly as your poop squishes out into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.11": "You're pooping in your pants!",
+  "Poop.Accident.12": "You feel a warm mass spreading into your $UNDERWEAR_NAME$ and feel like a little <boy/girl>.",
+  "Poop.Accident.13": "You push on the back of your $UNDERWEAR_NAME$ as <it#they> <bulges#bulge>, giggling as it squishes around",
+  "Poop.Accident.14": "Oopsies! Your $UNDERWEAR_NAME$ <is#are> all messy now!",
+  "Poop.Accident.15": "You don't try and stop it any longer! You're messing yourself!",
+  "Poop.Accident.16": "You mess your $UNDERWEAR_NAME$ like a little baby <boy/girl>!",
+  "Poop.Accident.17": "Your $UNDERWEAR_NAME$ <bulges#bulge> as you openly mess yourself.",
+  "Poop.Accident.18": "You give up trying to hold it and sigh in relief as you mess your $UNDERWEAR_NAME$!",
+
+  // ########################################
+  // what happend over night
+  // ########################################
+
+  // you go to toilett
+
+  "Night.Toilett.1": "You had to <pee&poop> last night and made it $TOILET_TIMES_TOTAL$ to the toilet",
+  "Night.Toilett.2": "You woke up $TOILET_ONCE_TWICE_TOTAL$ to <pee&poop> in the potty like a big <boy/girl> last night",
+  "Night.Toilett.3": "You had to get up $TOILET_TIMES_TOTAL$ to <pee&poop> at night",
+
+  // you sleep the whole night
+
+  "Night.Sleep.1": "You didn't wake up once this night",
+  "Night.Sleep.2": "You slept like a baby",
+  "Night.Sleep.3": "You dreamt of making it to the potty at night",
+  "Night.Sleep.4": "In your dreams you fought the potty monster",
+  "Night.Sleep.5": "Not once you felt the need to get up tonight",
+
+  // you had an accident at night
+
+  "Night.Accident.1": "<but >you <peed&pooped> yourself $ACCIDENT_TIMES_MULTIPLE_TOTAL$ like a toddler",
+  "Night.Accident.2": "you <still ><wet&soiled> yourself $ACCIDENT_TIMES_MULTIPLE_TOTAL$ like the little bed<wetter&pooper> you are",
+
+  // text if you couldn't remove your underwear at night
+
+  "Night.Underwear_Stuck.1": "but you felt protected in your $UNDERWEAR_NAME$",
+  "Night.Underwear_Stuck.2": "but you didn't want to rip off your $UNDERWEAR_NAME$",
+
+  // ########################################
+  // State of your underwear and bed
+  // after you woke up
+  // ########################################
+
+  // state of your underwear after you woke up
+
+  "Woke_Up.Underwear.1": "You wake up in $INSPECT_UNDERWEAR_NAME$.",
+
+  // your bed is wet after you woke up
+
+  "Woke_Up.Bed.Wet.1": "You find that you leaked last night--your bed is all wet!",
+  "Woke_Up.Bed.Wet.2": "Your bed is cold and wet. You must have wet the bed last night!",
+  "Woke_Up.Bed.Wet.3": "You wet your bed like a little <boy/girl> last night!",
+  "Woke_Up.Bed.Wet.4": "You wake up uncomfortable, lying in a puddle of cold pee.",
+  "Woke_Up.Bed.Wet.5": "Your covers are all wet. You need a diaper like a little <boy/girl>!",
+  "Woke_Up.Bed.Wet.6": "Your pajamas are uncomfortable and wet. You realize you wet the bed last night!",
+
+  // your bed is messed after you woke up
+
+  "Woke_Up.Bed.Messed.1": "Starting to cry, you realize that you pooped< and peed> the bed like a baby!",
+  "Woke_Up.Bed.Messed.2": "Somebody needs a diaper! You <wet and >messed your bed last night!",
+  "Woke_Up.Bed.Messed.3": "Your cheeks burn when you discover that your bed is all <wet and >poopy!",
+  "Woke_Up.Bed.Messed.4": "You are humiliated to realize that you pooped< and peed> in your bed while you were sleeping!",
+  "Woke_Up.Bed.Messed.5": "Your <pee and >poop overflowed into your bed last night!",
+  "Woke_Up.Bed.Messed.6": "You realize you must have <wet and >messed your bed last night! Oh no!",
+  "Woke_Up.Bed.Messed.7": "You smell something stinky and realize you <wet and >messed the bed last night!",
+
+  // ########################################
+  // Washing bed and underwear
+  // ########################################
+
+  // wash your bedding
+
+  "Wash.Bedding.1": "You take your <wet&poopy> bedding to the river and wash it, but it was exhausting and your bedding probably won't be dry until $BEDDING_DRYTIME$.",
+
+  // only wash the dirty spots if your bedding is not to mutch messed
+
+  "Wash.Bedding.Spot.1": "You take your <wet&poopy> bedding to the river and rinse the <wet&poopy> part, but it was tiring and your bedding probably won't be dry until $BEDDING_DRYTIME$.",
+
+  // youe washed bedding is still wet; Message will show if you are trying to go sleep and your bedding is still wet
+
+  "Wash.Bedding.Still_Wet.1": "Your bedding won't be dry until $BEDDING_DRYTIME$!",
+
+  // wash your underwear
+
+  "Wash.Underwear.1": "You wash your $UNDERWEAR_NAME$ in the water. <It#They> will be dry tomorrow.",
+
+  // overwash your underwear, there will be destroyed
+
+  "Wash.Underwear.Overwash.1": "You wash your $UNDERWEAR_NAME$ in the water. <It#They> <was#were> too worn out and fell apart!",
+
+  // ########################################
+  // Pee and poop overflow
+  // You peed / pooped too much and now
+  // its running in your pants
+  // ########################################
+
+  // Pee overflow
+
+  "Pee.Overflow.1": "Your $UNDERWEAR_NAME$ leaked! Your pants are all wet!",
+  "Pee.Overflow.2": "You start crying as you feel pee dribbling down your legs!",
+  "Pee.Overflow.3": "You turn red as you realize your pee is running down your legs!",
+  "Pee.Overflow.4": "You notice a wet spot on your $PANTS_NAME$ and realize your $UNDERWEAR_NAME$ leaked!",
+  "Pee.Overflow.5": "Your $UNDERWEAR_NAME$ couldn't hold the pee and it leaked out into your $PANTS_NAME$!",
+  "Pee.Overflow.6": "Your $UNDERWEAR_NAME$ <is#are> overflowing! You're leaking into your pants.",
+
+  // Poop overflow
+
+  "Poop.Overflow.1": "Your $UNDERWEAR_NAME$ blew out! Your pants are all poopy!",
+  "Poop.Overflow.2": "Turning bright red, you realize your pants are all messy now!",
+  "Poop.Overflow.3": "Your cheeks burn with shame when you discover your poop overflowed out into your $PANTS_NAME$.",
+  "Poop.Overflow.4": "You smell something really stinky and realize your poop overflowed into your $PANTS_NAME$!",
+  "Poop.Overflow.5": "You start crying as you feel a big log of poop squish out past your $UNDERWEAR_NAME$ and smear down your legs!",
+  "Poop.Overflow.6": "Oh no! Your $UNDERWEAR_NAME$ couldn't hold the poop and it came out into your $PANTS_NAME$!",
+
+  // ########################################
+  // Potty dialogs for nps`s
+  // ########################################
+  /*
+
+      Pee:      npc pee
+      Poop:     npc poop
+
+      Fail:     npc fail to hold pee / poop  
+      Success:  npc success to hold pee / poop 
+
+      Pre:      message befor animation
+      Post:     message after animation
+
+      Exemple ID:
+
+      Pee.Fail.Pre    -> Message that will be shown, befor start of animation, if the npc faild to hold there pee -> befor there start to wet there underwear
+      Poop.Fail.Post  -> Message that will be shown, after the animation, if the npc faild to hold there poop -> after there mess there underwear
+
+  */
+
+
+  // ##########
+  // Vincent
+  // ##########
+
+  // Pee Fail
+
+  "Potty_Dialogs.Vincent.Pee.Fail.Pre.1": "Hu?",
+  "Potty_Dialogs.Vincent.Pee.Fail.Pre.2": "Oh.",
+  "Potty_Dialogs.Vincent.Pee.Fail.Pre.3": "...",
+  "Potty_Dialogs.Vincent.Pee.Fail.Pre.4": "Wha?",
+
+  "Potty_Dialogs.Vincent.Pee.Fail.Post.1": "*hehe*",
+  "Potty_Dialogs.Vincent.Pee.Fail.Post.2": "...warm",
+  "Potty_Dialogs.Vincent.Pee.Fail.Post.3": "...nice",
+  "Potty_Dialogs.Vincent.Pee.Fail.Post.4": "mmm!",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Vincent.Poop.Fail.Pre.1": "Nnnn... Nnnf..",
+  "Potty_Dialogs.Vincent.Poop.Fail.Pre.2": "Hmm?",
+  "Potty_Dialogs.Vincent.Poop.Fail.Pre.3": "Tummy ache",
+  "Potty_Dialogs.Vincent.Poop.Fail.Pre.4": "Oww... Hmmnh...",
+
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.2": "hehe...",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.3": "...warm",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.4": "...nice",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.5": "'m done now!",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.6": "'s ok now!",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.7": "finished!",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.8": "all good now!",
+
+  // ##########
+  // Jas
+  // ##########
+
+  // Pee Success
+
+  "Potty_Dialogs.Jas.Pee.Success.Pre.1": "have go go, now!",
+  "Potty_Dialogs.Jas.Pee.Success.Pre.2": "going potty!",
+  "Potty_Dialogs.Jas.Pee.Success.Pre.3": "? oh!",
+  "Potty_Dialogs.Jas.Pee.Success.Pre.4": "pee-pee!",
+  "Potty_Dialogs.Jas.Pee.Success.Pre.5": "'s number 1",
+
+  "Potty_Dialogs.Jas.Pee.Success.Post.1": "big girl!",
+  "Potty_Dialogs.Jas.Pee.Success.Post.2": "yey!",
+  "Potty_Dialogs.Jas.Pee.Success.Post.3": "big!",
+  "Potty_Dialogs.Jas.Pee.Success.Post.4": "made it to the potty!",
+
+  // Pee Fail
+
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.1": "need to...",
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.2": "i have to..",
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.3": "pee-peeee...",
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.4": "wha... oh",
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.5": "i think...",
+
+  "Potty_Dialogs.Jas.Pee.Fail.Post.1": "uh-oh...",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.2": "...uh",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.3": "aww...",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.4": "but... 'm big girl...",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.5": "i... didn't...",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.6": "don't need to go now",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.7": "... wet",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.8": "to late now...",
+
+  // Poop Success
+
+  "Potty_Dialogs.Jas.Poop.Success.Pre.1": "have to go, now!",
+  "Potty_Dialogs.Jas.Poop.Success.Pre.2": "number 2!",
+  "Potty_Dialogs.Jas.Poop.Success.Pre.3": "help! quick!",
+  "Potty_Dialogs.Jas.Poop.Success.Pre.4": "need to go!",
+  "Potty_Dialogs.Jas.Poop.Success.Pre.5": "can i... please?!",
+
+  "Potty_Dialogs.Jas.Poop.Success.Post.1": "Big!",
+  "Potty_Dialogs.Jas.Poop.Success.Post.2": "Made it to the potty! All on my own!",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.1": "nnnumber... nnh...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.2": "2, numb.. hnnn...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.3": "Mr... Mrs... nff...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.4": "Ow... ummh...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.5": "nnneed to-uh...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.6": "No, ooho, nnnff...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.7": "Have to gooooh...",
+
+  "Potty_Dialogs.Jas.Poop.Fail.Post.1": "poopie!",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.2": "'nnnh 'naht suppose too",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.3": "...iiihh...",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.4": "eeek... aww...",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.5": "nooh... icky pants",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.6": "don't have to anymore",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.7": "'s ok now...",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.8": "wasn't me",
+
+  // ##########
+  // Sam
+  // ##########
+
+  // Pee Fail
+
+  "Potty_Dialogs.Sam.Pee.Fail.Pre.1": "...",
+  "Potty_Dialogs.Sam.Pee.Fail.Pre.2": "fff..",
+  "Potty_Dialogs.Sam.Pee.Fail.Pre.3": "...",
+
+  "Potty_Dialogs.Sam.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Sam.Pee.Fail.Post.2": "hu!",
+  "Potty_Dialogs.Sam.Pee.Fail.Post.3": "mmm...",
+  "Potty_Dialogs.Sam.Pee.Fail.Post.4": "no, i'm fine!",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Sam.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Sam.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Sam.Poop.Fail.Post.1": "*cough*",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.2": "*caugh* fff...",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.3": "uuh...",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.4": "nnn...",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.5": "oh, i just was thinking.",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.6": "sorry, what?",
+
+  // ##########
+  // Abigail
+  // ##########
+
+  // Pee Fail
+
+  "Potty_Dialogs.Abigail.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Abigail.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Abigail.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Abigail.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Abigail.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Abigail.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Abigail.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Abigail.Poop.Fail.Post.3": "nnnf...",
+
+  // ##########
+  // Maru
+  // ##########
+
+  // Pee Fail
+
+  "Potty_Dialogs.Maru.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Maru.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Maru.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Maru.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Maru.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Maru.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Maru.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Maru.Poop.Fail.Post.3": "nnnf...",
+
+  // ##########
+  // Emily
+  // ##########
+
+  // Pee Fail
+
+  "Potty_Dialogs.Emily.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Emily.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Emily.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Emily.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Emily.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Emily.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Emily.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Emily.Poop.Fail.Post.3": "nnnf...",
+
+  // ##########
+  // Haley
+  // ##########
+
+  // Pee Fail
+
+  "Potty_Dialogs.Haley.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Haley.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Haley.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Haley.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Haley.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Haley.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Haley.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Haley.Poop.Fail.Post.3": "nnnf...",
+
+  // ##########
+  // Leah
+  // ##########
+
+  // Pee Fail
+
+  "Potty_Dialogs.Leah.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Leah.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Leah.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Leah.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Leah.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Leah.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Leah.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Leah.Poop.Fail.Post.3": "nnnf...",
+
+  // ##########
+  // Penny
+  // ##########
+
+  // Pee Fail
+
+  "Potty_Dialogs.Penny.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Penny.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Penny.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Penny.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Penny.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Penny.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Penny.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Penny.Poop.Fail.Post.3": "nnnf...",
+
+  // ########################################
+  // NPC reactions
+  // ########################################
+
+  // ##########
+  // Adult
+  // ##########
+
+  // non specific adult friendship very nice
+
+  "Villager_Reactions.Adult.Soiled.Verynice.1": "Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?$l",
+  "Villager_Reactions.Adult.Soiled.Verynice.2": "I think little $FARMERNAME$ needs <his/her> diaper changed!$h",
+  "Villager_Reactions.Adult.Soiled.Verynice.3": "I know a little farmer who needs <his/her> diaper changed!$h",
+
+  // non specific adult friendship nice
+
+  "Villager_Reactions.Adult.Soiled.Nice.1": "You poor thing! Did you just <wet&mess> yourself?$s",
+  "Villager_Reactions.Adult.Soiled.Nice.2": "Does someone need a diaper change?$h",
+
+  // non specific adult friendship normal
+
+  "Villager_Reactions.Adult.Soiled.Mean.1": "You <&really >might want to go change your pants.$3",
+
+  // non specific adult if there notice you are messy
+  "Villager_Reactions.Adult.Dirty.1": "You might want to get changed first.",
+
+  // non specific adult if there notice you pee / poop on ground
+  "Villager_Reactions.Adult.Ground.1": "$FARMERNAME$! Living in the country doesn't make us barbarians!$3",
+  "Villager_Reactions.Adult.Ground.2": "That's not okay! Use a toilet!$3",
+
+  // non specific adult if there notice you pee / poop on ground but nothin comes out
+
+  "Villager_Reactions.Adult.Ground.Attempt.1": "$FARMERNAME$! What are you doing!$3",
+  "Villager_Reactions.Adult.Ground.Attempt.2": "This is... have some shame!$3",
+
+  // ##########
+  // Teenager
+  // ##########
+
+  // non specific teen friendship very nice
+
+  "Villager_Reactions.Teen.Soiled.Verynice.1": "Awww, you're so cute when you're embarrassed!$1",
+  "Villager_Reactions.Teen.Soiled.Verynice.2": "Where's your Mommy $FARMERNAME$? I think you need a change.",
+
+  // non specific teen friendship nice
+
+  "Villager_Reactions.Teen.Soiled.Nice.1": "Did you just <wet&mess> yourself $FARMERNAME$?",
+  "Villager_Reactions.Teen.Soiled.Nice.2": "Just letting you know $FARMERNAME$, you should probably change your diaper soon.",
+
+  // non specific teen friendship normal
+
+  "Villager_Reactions.Teen.Soiled.Mean.1": "...$5",
+  "Villager_Reactions.Teen.Soiled.Mean.2": "...Did you just...$2",
+
+  // non specific teen if there notice you are messy
+
+  "Villager_Reactions.Teen.Dirty.1": "Your pants are all... <wet&mess>....",
+
+  // non specific teen if there notice you pee / poop on ground
+
+  "Villager_Reactions.Teen.Ground.1": "Eww. Is that normal in the city?$5",
+  "Villager_Reactions.Teen.Ground.2": "What... Ugh!$5",
+  "Villager_Reactions.Teen.Ground.3": "Did you just <pee&poop> on the ground? Gross!$5",
+
+  // non specific teen if there notice you pee / poop on ground but nothin comes out
+
+  "Villager_Reactions.Teen.Ground.Attempt.1": "What... Put your pants back on!$5",
+  "Villager_Reactions.Teen.Ground.Attempt.2": "Hey ${man^girl}, i can see everything!$5",
+
+  // ##########
+  // Kid
+  // ##########
+
+  // non specific kid general reaction if you talk to them
+  "Villager_Reactions.Kid.General.1": "Not now! 'M playing!",
+  "Villager_Reactions.Kid.General.2": "Playing?",
+  "Villager_Reactions.Kid.General.3": "... Yes?",
+
+  // non specific kid friendship very nice
+
+  "Villager_Reactions.Kid.Soiled.Verynice.1": "*Giggles* Uh oh!$1",
+
+  // non specific kid friendship nice
+
+  "Villager_Reactions.Kid.Soiled.Nice.1": "*Giggles* Uh oh!$1",
+
+  // non specific kid friendship normal
+
+  "Villager_Reactions.Kid.Soiled.Mean.1": "Oh... gross...$3",
+  "Villager_Reactions.Kid.Soiled.Mean.2": "Ewww$3",
+  "Villager_Reactions.Kid.Soiled.Mean.3": "...$2",
+  "Villager_Reactions.Kid.Soiled.Mean.4": "Ha ha! You <wet&messed> yourself!",
+
+  // non specific kid if there notice you are messy
+
+  "Villager_Reactions.Kid.Dirty.1": "Pants <pee pee&poopy>!",
+
+  // non specific kid if there notice you pee / poop on ground
+
+  "Villager_Reactions.Kid.Ground.1": "Ewww!$3",
+  "Villager_Reactions.Kid.Ground.2": "Ewww! Don't <pee&poop> there!$3",
+  "Villager_Reactions.Kid.Ground.3": "...$2",
+
+  // non specific kid if there notice you pee / poop on ground but nothin comes out
+
+  "Villager_Reactions.Kid.Ground.Attempt.1": "Eww!$3",
+  "Villager_Reactions.Kid.Ground.Attempt.2": "Eww! I can see your $UNDERWEAR_NAME$!$3",
+
+  // ##########
+  // Animal
+  // ##########
+
+  // animal friendship nice
+
+  "Villager_Reactions.Animal.Soiled.Nice.1": "...",
+  "Villager_Reactions.Animal.Soiled.Nice.2": "???",
+
+  // animal if there notice you pee / poop on ground
+
+  "Villager_Reactions.Animal.Ground.1": "<...&!!!>",
+
+  // animal if there notice you pee / poop on ground but nothin comes out
+
+  "Villager_Reactions.Animal.Ground.Attempt.1": "<...&???>",
+
+  // ##########
+  // Gus
+  // ##########
+
+  // Gus change your underwear if there are dirty
+
+  "Villager_Reactions.Gus.Change.Dirty_Offer.1": "Oh dear! Had trouble getting there again? As promissed, i have some reserves lying around, just in case!$1",
+
+  // Gus friendship very nice
+
+  "Villager_Reactions.Gus.Soiled.Verynice.1": "Couldn’t quite make it? That’s okay. Ain’t the worst mess I’ve seen ‘round here, trust me.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.2": "Looks like that was a relief, hah!$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.3": "Couldn’t hold it any longer, eh?",
+  "Villager_Reactions.Gus.Soiled.Verynice.4": "Hoo boy, that’s gonna be a heck of a change.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.5": "That’s it, let it all on out.",
+  "Villager_Reactions.Gus.Soiled.Verynice.6": "Wow, you were really <satisfied&pushing> with that one.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.7": "Well, at least it feels good to take a load off...#$b#Even if it’s in your pants, yeah?$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.8": "You makin’ your own fertilizer there $FARMERNAME$?",
+  "Villager_Reactions.Gus.Soiled.Verynice.9": "You got any clean diapers? I always keep some spare in back for ya, just in case, pal.$1#$b#Well, you and anyone else who happens to need one.",
+
+  // Gus friendship nice
+
+  "Villager_Reactions.Gus.Soiled.Nice.1": "You mind takin' care of that please?#$b#Thanks$1",
+  "Villager_Reactions.Gus.Soiled.Nice.2": "When you gotta go I guess!$1",
+  "Villager_Reactions.Gus.Soiled.Nice.3": "Couldn’t quite make it? That's alright, go get cleaned up. The Saloon will still be here when you get back.",
+  "Villager_Reactions.Gus.Soiled.Nice.4": "I hope that smell’s a dirty diaper and not some rotting food in back…",
+
+  // Gus friendship mean
+
+  "Villager_Reactions.Gus.Soiled.Mean.1": "You mind takin' care of that before it bothers anyone else buddy?$2",
+  "Villager_Reactions.Gus.Soiled.Mean.2": "I have enough to clean up.$3",
+
+  // ##########
+  // Jodi
+  // ##########
+
+  // Jodi change your underwear general offer
+
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Pre": "You need a change?#$b#%Jodi checks your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Clean": "Look at that! You are completly clean! How did that happen?",
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Slightly_Wet": "You only a little wet. Come back when you had another of your \"accidents\". *wink*",
+
+  // Jodi change your underwear if there are dirty
+
+  "Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_No": "No leaks! $3",
+  "Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_Yes": "Aww, come here @, no crying! This things happen! We can make one of Vincents diapers fit and there are some pants from sam that you could borrow!$1",
+
+  // Jodi friendship very nice
+
+  "Villager_Reactions.Jodi.Soiled.Verynice.1": "%Jodi leans down to put a comforting hand on your back.#$b#You can tell me if you had a little accident $FARMERNAME$. It's nothing to be ashamed of.",
+  "Villager_Reactions.Jodi.Soiled.Verynice.2": "You don't need to rush potty training if you're not ready yet.#$b#You need help?",
+  "Villager_Reactions.Jodi.Soiled.Verynice.3": "It can be hard for little <boys/girls> to remember to go potty sometimes. It's okay.#$b#Need a change?",
+  "Villager_Reactions.Jodi.Soiled.Verynice.4": "Oh goodness!$1",
+  "Villager_Reactions.Jodi.Soiled.Verynice.5": "Awww, you're so cute when you're embarrassed!$1#$b#Comeon, lets get you in some new Diapers!",
+
+  // Jodi friendship nice
+
+  "Villager_Reactions.Jodi.Soiled.Nice.1": "$FARMERNAME$, I  think you might need to go change.",
+  "Villager_Reactions.Jodi.Soiled.Nice.2": "You poor thing! Did you just <wet&mess> yourself?",
+
+  // Jodi friendship mean
+
+  "Villager_Reactions.Jodi.Soiled.Mean.1": "You might need to tap into those supplies I left you$4",
+
+  // ##########
+  // Vincent
+  // ##########
+
+  // You change Vincent`s underwear general offer
+
+  "Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Pre": "%You wonder if Vincent might need a change. You quickly check and find $NPC_INSPECT_UNDERWEAR_NAME$.",
+  "Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Underwear_ok": "No changies! Wanna play more!$3",
+
+  // Vincent friendship very nice
+
+  "Villager_Reactions.Vincent.Soiled.Verynice.1": "Mommy told me big kids are supposed to use the potty. #$b#I don't wanna be a big kid either!$1",
+  "Villager_Reactions.Vincent.Soiled.Verynice.2": "%Vincent watches you <wet&mess> yourself and giggles.#$b#Good one!$1",
+  "Villager_Reactions.Vincent.Soiled.Verynice.3": "%You notice Vincent watching as you <wet&mess> yourself.#$b#All better?",
+  "Villager_Reactions.Vincent.Soiled.Verynice.4": "%Vincent watches the whole scene curiously and giggles when you look over. #$b# You <peed&pooped>!$1",
+  "Villager_Reactions.Vincent.Soiled.Verynice.5": "If you want I could ask my Mommy to change you.#$b#No?#$b#That's okay, I like being <wet&messy> too!$1",
+  "Villager_Reactions.Vincent.Soiled.Verynice.6": "$FARMERNAME$'s <wet&messy> and I'm still dry!$1#$b#...#$b#Wait, am i?$2",
+
+  // Vincent friendship nice
+
+  "Villager_Reactions.Vincent.Soiled.Nice.1": "Don't cry, Mommy says it's okay to have accidents sometimes.",
+  "Villager_Reactions.Vincent.Soiled.Nice.2": "Don't worry $FARMERNAME$, I still do that too!",
+  "Villager_Reactions.Vincent.Soiled.Nice.3": "Feel all better?",
+  "Villager_Reactions.Vincent.Soiled.Nice.4": "It smells like you need a diaper change!",
+  "Villager_Reactions.Vincent.Soiled.Nice.5": "I kney it! It does happen to bigs too!",
+
+  // Vincent friendship mean
+
+  "Villager_Reactions.Vincent.Soiled.Mean.1": "%Vincent saw what happened and snickers at you.",
+  "Villager_Reactions.Vincent.Soiled.Mean.2": "Was that an accident?",
+  "Villager_Reactions.Vincent.Soiled.Mean.3": "Ha! Gross!$1",
+  "Villager_Reactions.Vincent.Soiled.Mean.4": "$FARMERNAME$ just <peed&pooped> <himself/herself>!$1",
+  "Villager_Reactions.Vincent.Soiled.Mean.5": "Hah! I just watched you <pee&poop> yourself!$1",
+
+  // Vincent player pee/poop on ground
+
+  "Villager_Reactions.Vincent.Ground.1": "Ewww!$3",
+  "Villager_Reactions.Vincent.Ground.2": "Ewww! Don't <pee&poop> there!$3",
+  "Villager_Reactions.Vincent.Ground.3": "Hey! $FARMERNAME$ did <pee-pee&poope> on the ground!$1",
+
+  // ##########
+  // Jas
+  // ##########
+
+  // You change Jas`s underwear general offer
+
+  "Villager_Reactions.Jas.Change.General_Offer.Npc.1.Pre": "%You wonder if Jas might need a change. You quickly check and find $NPC_INSPECT_UNDERWEAR_NAME$.",
+  "Villager_Reactions.Jas.Change.General_Offer.Npc.1.Underwear_ok": "Wha? No, 'm a big girl now! See? Clean!$3",
+
+  // Jas friendship very nice
+
+  "Villager_Reactions.Jas.Soiled.Verynice.1": "Don't cry, it's okay for little <boy/girl>s to have accidents sometimes.",
+  "Villager_Reactions.Jas.Soiled.Verynice.2": "Oh no, did you have an accident? That's okay, you can try again next time.",
+  "Villager_Reactions.Jas.Soiled.Verynice.3": "It's okay, I won't tell anyone you had an accident $FARMERNAME$",
+  "Villager_Reactions.Jas.Soiled.Verynice.4": "It's okay $FARMERNAME$, I still have accidents too.$1",
+  "Villager_Reactions.Jas.Soiled.Verynice.5": "I can see you waddling!$4",
+  "Villager_Reactions.Jas.Soiled.Verynice.6": "Did you have an accident? It's okay, once you're all clean you'll feel all better.",
+
+  // Jas friendship nice
+
+  "Villager_Reactions.Jas.Soiled.Nice.1": "*Giggles* Uh oh!$1",
+  "Villager_Reactions.Jas.Soiled.Nice.2": "You're supposed to do that on the potty you know.$4",
+  "Villager_Reactions.Jas.Soiled.Nice.3": "Do you need me to get Aunt Marnie? She always helps me when I have an accident.$3",
+
+  // Jas friendship mean
+
+  "Villager_Reactions.Jas.Soiled.Mean.1": "Oh... gross...$3",
+  "Villager_Reactions.Jas.Soiled.Mean.2": "Ewww$3",
+  "Villager_Reactions.Jas.Soiled.Mean.3": "...$3",
+
+  // Jas player pee/poop on ground
+
+  "Villager_Reactions.Jas.Ground.1": "Ewww!$3",
+  "Villager_Reactions.Jas.Ground.2": "Ewww! Don't <pee&poop> there!$3",
+  "Villager_Reactions.Jas.Ground.3": "...$3",
+
+  // ##########
+  // Sam
+  // ##########
+
+  // Sam change your underwear general offer
+
+  "Villager_Reactions.Sam.Change.General_Offer.Player.1.Pre": "Wait a second, i know that look!#$b#%Sam checks your diaper",
+  "Villager_Reactions.Sam.Change.General_Offer.Player.1.Underwear_ok": "I guess later than.",
+
+  // You change Sam`s underwear general offer
+
+  "Villager_Reactions.Sam.Change.General_Offer.Npc.1.Pre": "%You put your hand in sams pants. He blushes a lot while you check him.$9",
+  "Villager_Reactions.Sam.Change.General_Offer.Npc.1.Underwear_ok": "He is wearing $NPC_PANTS_NAME$ and $NPC_INSPECT_UNDERWEAR_NAME$.",
+
+  // Sam change your underwear if there are dirty
+
+  "Villager_Reactions.Sam.Change.Dirty_Offer.1": "Oh man. Can't let you catch a cold, mum would kill me.$9#$b#Where are vincents diapers again?$1",
+
+  // Sam friendship very nice
+
+  "Villager_Reactions.Sam.Soiled.Verynice.1": "Oh man, that was pretty hard to miss!$1|Man, you're just like Vincent.$1#$GETTING_CHANGED_DIALOG$",
+  "Villager_Reactions.Sam.Soiled.Verynice.2": "Are you okay buddy?#$b#Do you want some help with that? $GETTING_CHANGED_DIALOG$",
+  "Villager_Reactions.Sam.Soiled.Verynice.3": "It's okay $FARMERNAME$. Accidents are nothing to be ashamed of.",
+  "Villager_Reactions.Sam.Soiled.Verynice.4": "Awwww, look at you go! That must have felt good.$4",
+  "Villager_Reactions.Sam.Soiled.Verynice.5": "Oh man, that was pretty hard to miss!$1",
+  "Villager_Reactions.Sam.Soiled.Verynice.6": "Good one!$1",
+  "Villager_Reactions.Sam.Soiled.Verynice.7": "Man, you're such a little baby sometimes.#$b#%Sam giggles a bit as he pats your squishy bottom.#$b#Need help with that? $GETTING_CHANGED_DIALOG$",
+  "Villager_Reactions.Sam.Soiled.Verynice.8": "Awww, did the little farmer have a little accident?",
+  "Villager_Reactions.Sam.Soiled.Verynice.9": "I bet I could get Mommy to go change you.$3#$b#I'm kidding I'm kidding!$1",
+  "Villager_Reactions.Sam.Soiled.Verynice.10": "Man, it looks like you really need diapers, don't you.",
+  "Villager_Reactions.Sam.Soiled.Verynice.11": "Oh wow, you really <wet&messed> yourself! Can I feel it?#$b#$y 'Yes._*Sam blushes as he presses his hand into your squishy diaper*_No thank you._Okay, I won't.'",
+
+  // Sam friendship nice
+
+  "Villager_Reactions.Sam.Soiled.Nice.1": "You might wanna change. Just incase someone else says something.$7",
+  "Villager_Reactions.Sam.Soiled.Nice.2": "A-are you okay?$8",
+  "Villager_Reactions.Sam.Soiled.Nice.3": "%Sam just blushes a as you <wet&mess> yourself. You take note of how closely he watches the whole scene.",
+  "Villager_Reactions.Sam.Soiled.Nice.4": "Oh man, I'm sorry. That can't feel good.",
+
+  // Sam friendship mean
+
+  "Villager_Reactions.Sam.Soiled.Mean.1": "I'm just..nevermind.$5",
+  "Villager_Reactions.Sam.Soiled.Mean.2": "This is pretty awkward.$2",
+  "Villager_Reactions.Sam.Soiled.Mean.3": "...Oh$2",
+  "Villager_Reactions.Sam.Soiled.Mean.4": "You might want to take care of that...",
+  "Villager_Reactions.Sam.Soiled.Mean.5.Child_Yes": "Great, more potty issues to be witness to. Thanks.$5",
+  "Villager_Reactions.Sam.Soiled.Mean.5.Child_No": "You might want to take care of that...",
+
+  // ##########
+  // Abigail
+  // ##########
+
+  // Abigail change your underwear general offer
+
+  "Villager_Reactions.Abigail.Change.General_Offer.Player.1.Pre": "You need a change?",
+  "Villager_Reactions.Abigail.Change.General_Offer.Player.1.Underwear_ok": "Aww...",
+
+  // You change Abigail`s underwear general offer
+
+  "Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // Abigail change your underwear if there are dirty
+
+  "Villager_Reactions.Abigail.Change.Dirty_Offer.No": "Uh, ok! $1",
+  "Villager_Reactions.Abigail.Change.Dirty_Offer.Yes": "You kind of dirty @. I can give a diaper if you need one. Where i got them from? Oh, ah, haha...$l",
+
+  // Abigail friendship very nice
+
+  "Villager_Reactions.Abigail.Soiled.Verynice.1": "Want a change? #$b#I could change you, if you want?$h",
+  "Villager_Reactions.Abigail.Soiled.Verynice.2": "Sometimes I just put on a diaper and sit around playing games all day. #$b#Maybe we could do that together sometime.$h",
+  "Villager_Reactions.Abigail.Soiled.Verynice.3": "I think I'm pretty wet. #$b#Would you mind helping me change?",
+  "Villager_Reactions.Abigail.Soiled.Verynice.4": "Let me help with that! Lay down for me.$h",
+  "Villager_Reactions.Abigail.Soiled.Verynice.5": "Ewww, I think.... I think I pooped myself.$s #$b#...$s #$b#Could you... maybe change me?",
+
+  // Abigail friendship nice
+
+  "Villager_Reactions.Abigail.Soiled.Nice.1": "$lWas that me? ...Oh! Nothing! Haha!",
+  "Villager_Reactions.Abigail.Soiled.Nice.2": "So, do you have a medical condition or something?",
+  "Villager_Reactions.Abigail.Soiled.Nice.3": "You might wanna change. Just incase someone else says something.",
+  "Villager_Reactions.Abigail.Soiled.Nice.4": "$lI might be into trying that diaper thing sometime.",
+  "Villager_Reactions.Abigail.Soiled.Nice.5": "Is changing too much of a chore? Sorry, rude question!",
+  "Villager_Reactions.Abigail.Soiled.Nice.6": "$l*Checks self quickly* Oh! Were you watching?!",
+
+  // Abigail friendship mean
+
+  "Villager_Reactions.Abigail.Soiled.Mean.1": "I'm just..nevermind.",
+  "Villager_Reactions.Abigail.Soiled.Mean.2": "This is pretty awkward.",
+  "Villager_Reactions.Abigail.Soiled.Mean.3": "...Wow. Walking away now.",
+  "Villager_Reactions.Abigail.Soiled.Mean.4": "*Feels own backside quickly* Eww! That's gross! You shouldn't do that in public!",
+  "Villager_Reactions.Abigail.Soiled.Mean.5": "Did you just <pee&poop> your pants? Wow...",
+
+  // ##########
+  // Maru
+  // ##########
+
+  // Maru change your underwear general offer
+
+  "Villager_Reactions.Maru.Change.General_Offer.Player.1.Pre": "Everything dry?",
+  "Villager_Reactions.Maru.Change.General_Offer.Player.1.Underwear_ok": "Hmm... but come back if that changes.",
+
+  // You change Maru`s underwear general offer
+
+  "Villager_Reactions.Maru.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Maru.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // Maru change your underwear if there are dirty
+
+  "Villager_Reactions.Maru.Change.Dirty_Offer.1": "You will catch a cold, or worse. Let's get the <soggy&dirty> cloth off!$1",
+
+  // Maru friendship very nice
+
+  "Villager_Reactions.Maru.Soiled.Verynice.1": "Again? Sure, you know the drill...$l",
+
+  // Maru friendship nice
+
+  "Villager_Reactions.Maru.Soiled.Nice.1": "Lets be professional about this. Lie down on the bed for me please?$0",
+
+  // Maru friendship mean
+
+  "Villager_Reactions.Maru.Soiled.Mean.1": "Incontinence i guess?$4",
+
+  // ##########
+  // Emily
+  // ##########
+
+  // Emily change your underwear general offer
+
+  "Villager_Reactions.Emily.Change.General_Offer.Player.1.Pre": "Insert Text",
+  "Villager_Reactions.Emily.Change.General_Offer.Player.1.Underwear_ok": "Insert Text",
+
+  // You change Emily`s underwear general offer
+
+  "Villager_Reactions.Emily.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Emily.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // Emily change your underwear if there are dirty
+
+  "Villager_Reactions.Emily.Change.Dirty_Offer.1": "Insert Text",
+
+  // Emily friendship very nice
+
+  "Villager_Reactions.Emily.Soiled.Verynice.1": "Insert Text",
+
+  // Emily friendship nice
+
+  "Villager_Reactions.Emily.Soiled.Nice.1": "Insert Text",
+
+  // Emily friendship mean
+
+  "Villager_Reactions.Emily.Soiled.Mean.1": "Insert Text",
+
+  // ##########
+  // Haley
+  // ##########
+
+  // Haley change your underwear general offer
+
+  "Villager_Reactions.Haley.Change.General_Offer.Player.1.Pre": "Insert Text",
+  "Villager_Reactions.Haley.Change.General_Offer.Player.1.Underwear_ok": "Insert Text",
+
+  // You change Haley`s underwear general offer
+
+  "Villager_Reactions.Haley.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Haley.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // Haley change your underwear if there are dirty
+
+  "Villager_Reactions.Haley.Change.Dirty_Offer.1": "Insert Text",
+
+  // Haley friendship very nice
+
+  "Villager_Reactions.Haley.Soiled.Verynice.1": "$lI'm really glad you've gotten me into this whole diaper thing!",
+  "Villager_Reactions.Haley.Soiled.Verynice.2": "$hLooks like <that#those> $UNDERWEAR_NAME$ <is#are> a little <wet&messy> now!",
+  "Villager_Reactions.Haley.Soiled.Verynice.3": "$sI think my diaper's starting to sag. Can you give me a hand?",
+
+  // Haley friendship nice
+
+  "Villager_Reactions.Haley.Soiled.Nice.1": "$l<That#Those> $UNDERWEAR_NAME$ <is#are> kind of cute. Where can I get <one#some>?",
+  "Villager_Reactions.Haley.Soiled.Nice.2": "$hI think you might be leaking a little!",
+
+  // Haley friendship mean
+
+  "Villager_Reactions.Haley.Soiled.Mean.1": "$uDiapers are NOT in fashion, and neither is <peeing&pooping> your pants like a baby!",
+  "Villager_Reactions.Haley.Soiled.Mean.2": "$uLike, eww. Why is everyone in this town so gross?!",
+  "Villager_Reactions.Haley.Soiled.Mean.3": "$uI was gonna tell you to change your clothes because of how unstylish they are, but it looks like you need your diaper changed more, you big baby!",
+
+  // ##########
+  // Leah
+  // ##########
+
+  // Leah change your underwear general offer
+
+  "Villager_Reactions.Leah.Change.General_Offer.Player.1.Pre": "Insert Text",
+  "Villager_Reactions.Leah.Change.General_Offer.Player.1.Underwear_ok": "Insert Text",
+
+  // You change Leah`s underwear general offer
+
+  "Villager_Reactions.Leah.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Leah.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // Leah change your underwear if there are dirty
+
+  "Villager_Reactions.Leah.Change.Dirty_Offer.1": "Insert Text",
+
+  // Leah friendship very nice
+
+  "Villager_Reactions.Leah.Soiled.Verynice.1": "Insert Text",
+
+  // Leah friendship nice
+
+  "Villager_Reactions.Leah.Soiled.Nice.1": "Insert Text",
+
+  // Leah friendship mean
+
+  "Villager_Reactions.Leah.Soiled.Mean.1": "Insert Text",
+
+  // ##########
+  // Penny
+  // ##########
+
+  // Penny change your underwear general offer
+
+  "Villager_Reactions.Penny.Change.General_Offer.Player.1.Pre": "Did my big <boy/girl> forgot about the potty again?#$b#%Penny checks your diaper.",
+  "Villager_Reactions.Penny.Change.General_Offer.Player.1.Underwear_ok": "Good <boy/girl>!",
+
+  // You change Penny`s underwear general offer
+
+  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // general fallback
+
+  "Villager_Reactions.Penny.Change.General.Fallback.1.": "%Maybe you should get to know Penny better first!",
+
+  // Penny change your underwear if there are dirty
+
+  "Villager_Reactions.Penny.Change.Dirty_Offer.1": "Oh you poor little <boy/girl>! Didn't someone not remember the potty again? Lets get you out of your wet cloth and in a warm diaper!$1",
+
+  // Penny friendship very nice
+
+  "Villager_Reactions.Penny.Soiled.Verynice.1": "$FARMERNAME$! You're <wetting&messing> your $UNDERWEAR_NAME$!$5#$b#Why didn't you tell me you needed the potty?$3#$b#*Sigh* It's okay, we can try again next time.",
+  "Villager_Reactions.Penny.Soiled.Verynice.2": "%Penny watches you with an eyebrow raised.#$b#Is there something you want to tell me @?$3",
+  "Villager_Reactions.Penny.Soiled.Verynice.3": "%Penny waits until you're all finished before tugging your waistband for a check.#$b#Looks like you didn't save anything for the potty little <boy/girl>.$1",
+  "Villager_Reactions.Penny.Soiled.Verynice.4": "%You tug on Penny's sleeve for help to go potty right before <wetting&messing> your $UNDERWEAR_NAME$.#$b#Oh no you were so close!$3#$b#I'm not mad, I know you're trying. You'll get the hang of it really soon.",
+  "Villager_Reactions.Penny.Soiled.Verynice.5": "Did you have an accident in your $UNDERWEAR_NAME$ $FARMERNAME$?#$b#You have to tell me as soon as your body says you have to go potty, okay?$3",
+  "Villager_Reactions.Penny.Soiled.Verynice.6": "Did you have an accident in your $UNDERWEAR_NAME$ $FARMERNAME$?|You have the same potty face as Vincent.$1#$b#Do you need help getting changed like him too?#$b#%Penny tickles your tummy teasingly.",
+  "Villager_Reactions.Penny.Soiled.Verynice.7": "I saw that.$3#$b#$y 'Was that REALLY an accident?_Uh huh, I tried to hold it._Oh $FARMERNAME$, I know it's hard for you. I'm very proud of you for trying._I didn't wanna use the potty._$FARMERNAME$, I know it's hard for you, but you still have to try, okay?$3'",
+  "Villager_Reactions.Penny.Soiled.Verynice.8": "We're supposed to do that on the potty $FARMERNAME$. What happened?$3#$b#It's okay, I'm not angry. You're trying really hard. It's okay if you still have accidents sometimes.#$b#<Boys/Girls> are easy to clean!$1",
+
+  // Penny friendship nice
+
+  "Villager_Reactions.Penny.Soiled.Nice.1": "You might wanna change. Just incase someone else says something.",
+  "Villager_Reactions.Penny.Soiled.Nice.2": "A-are you okay?$3",
+  "Villager_Reactions.Penny.Soiled.Nice.3": "Do you need help making it to the potty?",
+  "Villager_Reactions.Penny.Soiled.Nice.4": "I'm sorry. That can't feel good.$3",
+
+  // Penny friendship mean
+
+  "Villager_Reactions.Penny.Soiled.Mean.1": "...$5",
+  "Villager_Reactions.Penny.Soiled.Mean.2": "Uhmm...$2",
+  "Villager_Reactions.Penny.Soiled.Mean.3": "...Oh$2",
+  "Villager_Reactions.Penny.Soiled.Mean.4": "D-did you...|You too?$5",
+
+  // ########################################
+  // Messages for your pants and underwear
+  // ########################################
+
+  "Look_Pants.1": "You look down and see",
+
+  // your underwear is clean
+
+  "Underwear.Clean": "clean $UNDERWEAR_DESC$",
+
+  // your underwear is drying
+
+  "Underwear.Drying": "drying $UNDERWEAR_DESC$",
+
+  // your underwear is wet
+  // every number stands for a single state depending of wetness
+
+  "Underwear.Wet.1": "slightly damp $UNDERWEAR_DESC$",
+  "Underwear.Wet.2": "somewhat wet $UNDERWEAR_DESC$",
+  "Underwear.Wet.3": "very wet $UNDERWEAR_DESC$",
+  "Underwear.Wet.4": "drenched $UNDERWEAR_DESC$",
+  "Underwear.Wet.5": "dripping wet $UNDERWEAR_DESC$",
+
+  // your underwear is messy
+  // every number stands for a single state depending of messines
+
+  "Underwear.Messy.1": "<and >slightly poopy $UNDERWEAR_DESC$",
+  "Underwear.Messy.2": "<and >somewhat poopy $UNDERWEAR_DESC$",
+  "Underwear.Messy.3": "<and >poopy $UNDERWEAR_DESC$",
+  "Underwear.Messy.4": "$UNDERWEAR_DESC$ filled with poop",
+  "Underwear.Messy.5": "$UNDERWEAR_DESC$ with poop squishing out",
+
+  // ########################################
+  // Types of beds
+  // ########################################
+
+  // bed
+
+  "Bed_Options.Bed.Name": "bed",
+  "Bed_Options.Bed.Description": "cozy bed",
+
+  // ########################################
+  // Types of pants
+  // ########################################
+
+  // blue jeans
+
+  "Pants_Options.Blue_Jeans.Name": "blue jeans",
+  "Pants_Options.Blue_Jeans.Description": "sturdy blue jeans",
+
+  // skirts
+
+  "Pants_Options.Skirt.Name": "skirt",
+  "Pants_Options.Skirt.Description": "simple skirt",
+
+  // toddler pants
+
+  "Pants_Options.Toddler_Pants.Name": "toddler pants",
+  "Pants_Options.Toddler_Pants.Description": "pants for toddler",
+
+  // toddler skirt
+
+  "Pants_Options.Toddler_Skirt.Name": "toddler skirt",
+  "Pants_Options.Toddler_Skirt.Description": "purple toddler skirt",
+
+  // legs
+
+  "Pants_Options.Legs.Name": "legs",
+  "Pants_Options.Legs.Description": "your two legs",
+
+  // ##########
+  // Spezial pants you can get from npc´s if you are messy
+  // ##########
+
+  // stinky pants you get if abigail changes you
+
+  "Pants_Options.Stinky_Pants.Name": "stinky pants",
+  "Pants_Options.Stinky_Pants.Description": "old and stinky pants",
+
+  // sams old pants you get if jodi or sam changes you
+
+  "Pants_Options.Sams_Old_Pants.Name": "sams old pants",
+  "Pants_Options.Sams_Old_Pants.Description": "sams old pants",
+
+  // sams old pants you get if penny changes you
+
+  "Pants_Options.Second_Hand_Pants.Name": "second hand pants",
+  "Pants_Options.Second_Hand_Pants.Description": "second hand pants",
+
+  // self made pants you get if Emily changes you and you are male
+
+  "Pants_Options.Self_Made_Pants.Name": "self made pants",
+  "Pants_Options.Self_Made_Pants.Description": "self made pants",
+
+  // self made skirt you get if Emily changes you and you are female
+
+  "Pants_Options.Self_Made_Skirt.Name": "self made skirt",
+  "Pants_Options.Self_Made_Skirt.Description": "self made skirt",
+
+  // ########################################
+  // Types of underwears
+  // ########################################
+
+  // black thong
+
+  "Underwear_Options.Black_Thong.Name": "black thong",
+  "Underwear_Options.Black_Thong.Description": "lacy black thong, not absorbend or durable",
+
+  // polka dot panties
+
+  "Underwear_Options.Polka_Dot_Panties.Name": "polka dot panties",
+  "Underwear_Options.Polka_Dot_Panties.Description": "simple white panties with pink polka dots",
+
+  // big kid undies
+
+  "Underwear_Options.Big_Kid_Undies.Name": "big kid undies",
+  "Underwear_Options.Big_Kid_Undies.Description": "cotton undies for big kids only",
+
+  // dinosaur undies
+
+  "Underwear_Options.Dinosaur_Undies.Name": "dinosaur undies",
+  "Underwear_Options.Dinosaur_Undies.Description": "dinosaur undies",
+
+  // lavender pullups
+
+  "Underwear_Options.Lavender_Pullups.Name": "lavender pullups",
+  "Underwear_Options.Lavender_Pullups.Description": "thick, soft and snug disposable flowery lavender pullups",
+
+  // training pants
+
+  "Underwear_Options.Training_Pants.Name": "training pants",
+  "Underwear_Options.Training_Pants.Description": "thin cloth potty training pants that look similar to big kid undies",
+
+  // joja diaper
+
+  "Underwear_Options.Joja_Diaper.Name": "joja diaper",
+  "Underwear_Options.Joja_Diaper.Description": "thin white and cheap plastic diaper from JojaMart",
+
+  // baby print diaper
+
+  "Underwear_Options.Baby_Print_Diaper.Name": "baby print diaper",
+  "Underwear_Options.Baby_Print_Diaper.Description": "little soft and crinkly fresh-scented disposable baby print diaper, made for big children. Its a bit small, but you can fit",
+
+  // cloth diaper
+
+  "Underwear_Options.Cloth_Diaper.Name": "cloth diaper",
+  "Underwear_Options.Cloth_Diaper.Description": "thick and soft white cloth diaper",
+
+  // space diaper
+
+  "Underwear_Options.Space_Diaper.Name": "space diaper",
+  "Underwear_Options.Space_Diaper.Description": "very thick and soft blue plastic diaper with spaceship designs",
+
+  // pawprint diaper
+
+  "Underwear_Options.Pawprint_Diaper.Name": "pawprint diaper",
+  "Underwear_Options.Pawprint_Diaper.Description": "puffy plastic diaper with cute animal prints and fade-when-wet little paws",
+
+  // heart diaper
+
+  "Underwear_Options.Heart_Diaper.Name": "heart diaper",
+  "Underwear_Options.Heart_Diaper.Description": "extremly thick and soft pink plastic diaper with a large fade-when-wet heart on the front",
+
+  // ########################################
+  // Debuffs
+  // ########################################
+
+  // Debuff Wet
+  "Debuffs.Wet.Name": "Wet",
+  "Debuffs.Wet.Type": "Defense",
+  "Debuffs.Wet.Description.1": "Your pants are wet!",
+  "Debuffs.Wet.Description.2": "You wet your pants!",
+  "Debuffs.Wet.Description.3": "You peed your pants!",
+
+  // Debuff Messy
+  "Debuffs.Messy.Name": "Messy",
+  "Debuffs.Messy.Type": "Speed",
+  "Debuffs.Messy.Description.1": "Your pants are messy!",
+  "Debuffs.Messy.Description.2": "Your pants are poopy!",
+  "Debuffs.Messy.Description.3": "You messed your pants!",
+
+  // ########################################
+  // Passby
+  // you passby a npc with dirty underwear
+  // ########################################
+
+  "Passby.1": "Oh wow, your diaper is all wet!",
+
+  // ########################################
+  // GenericModConfigMenu
+  // ########################################
+
+  // ##########
+  // First Page
+  // ##########
+
+  // Cheat Mode
+
+  "Config_Menu.Main.Cheat_Mode.Name": "Cheat Mode",
+  "Config_Menu.Main.Cheat_Mode.Tooltip": "Allowes to spawn items, change potty training and displays debug related messages. (Debug)",
+
+  // Easy Mode
+
+  "Config_Menu.Main.Easy_Mode.Name": "Easy Mode",
+  "Config_Menu.Main.Easy_Mode.Tooltip": "Hunger and Thirst are refilled every morning and the wet beds dried. (Easymode)",
+
+  // Wetting 
+
+  "Config_Menu.Main.Wetting.Name": "Wetting",
+  "Config_Menu.Main.Wetting.Tooltip": "This activates pee and bladder events.",
+
+  // Messing 
+
+  "Config_Menu.Main.Messing.Name": "Messing",
+  "Config_Menu.Main.Messing.Tooltip": "This activates poop and bowel events.",
+
+  // Children and Diapers 
+
+  "Config_Menu.Main.Children_And_Diapers.Name": "Children and Diapers",
+  "Config_Menu.Main.Children_And_Diapers.Tooltip": "Would you be comfortable seeing diaper related dialogue from Vincent and Jas?",
+
+  // Bladder Capacity (mL)
+
+  "Config_Menu.Main.Bladder_Capacity.Name": "Bladder Capacity (mL)",
+  "Config_Menu.Main.Bladder_Capacity.Tooltip": "600 is around 3 potty runs a day. (MaxBladderCapacity)",
+
+  // Bowel Capacity (mL)
+
+  "Config_Menu.Main.Bowel_Capacity.Name": "Bowel Capacity (mL)",
+  "Config_Menu.Main.Bowel_Capacity.Tooltip": "1000 is around 1.5 potty runs a day. (MaxBowelCapacity)",
+
+  // Always notice accidents
+
+  "Config_Menu.Main.Always_Notice_Accidents.Name": "Always notice accidents",
+  "Config_Menu.Main.Always_Notice_Accidents.Tooltip": "Defines if you will notice accidents on low control values. (AlwaysNoticeAccidents)",
+
+  // Pants Change at Home
+
+  "Config_Menu.Main.Pants_Change_At_Home.Name": "Pants Change at Home",
+  "Config_Menu.Main.Pants_Change_At_Home.Tooltip": "Changing your pants (in case you soiled your cloth) requires you to be at home. (Usually on) (PantsChangeRequiresHome)",
+
+  // Underwear Change Causes Exposure
+
+  "Config_Menu.Main.Underwear_Change_Causes_Exposure.Name": "Underwear Change Causes Exposure",
+  "Config_Menu.Main.Underwear_Change_Causes_Exposure.Tooltip": "Changing your underwear, by yourself, requires you to undress, as such exposing yourself. With this option activated you need to change your diapers at home or away from people. (Usually on) (UnderwearChangeCauseExposure)",
+
+  // Menu Point Key Bindings
+
+  "Config_Menu.Main.Key_Bindings_Menu.Name": "Key Bindings",
+
+  // Menu Point Continence
+
+  "Config_Menu.Main.Continence_Menu.Name": "Continence",
+
+  // Menu Point Friendships
+
+  "Config_Menu.Main.Friendships_Menu.Name": "Friendships",
+
+  // Menu Point Save Files
+
+  "Config_Menu.Main.Save_Files_Menu.Name": "Save Files",
+
+  // ##########
+  // Page Key Bindings
+  // ##########
+
+  // Pee Pants
+
+  "Config_Menu.Key_Bindings.Pee_Pants.Name": "Pee Pants",
+  "Config_Menu.Key_Bindings.Pee_Pants.Tooltip": "The key you want to press to just piddle yourself. (KeyPee)",
+
+  // Poop Pants
+
+  "Config_Menu.Key_Bindings.Poop_Pants.Name": "Poop Pants",
+  "Config_Menu.Key_Bindings.Poop_Pants.Tooltip": "The key you want to press to just poop yourself. (KeyPoop)",
+
+  // Pee In Potty
+
+  "Config_Menu.Key_Bindings.Pee_In_Potty.Name": "Pee In Potty",
+  "Config_Menu.Key_Bindings.Pee_In_Potty.Tooltip": "The key you want to press to pee in the potty like a good girl or boy. (KeyPeeInToilet)",
+
+  // Poop In Potty
+
+  "Config_Menu.Key_Bindings.Poop_In_Potty.Name": "Poop In Potty",
+  "Config_Menu.Key_Bindings.Poop_In_Potty.Tooltip": "The key you want to press to poop in the potty like a good girl or boy. (KeyPoopInToilet)",
+
+  // Go In Pants
+
+  "Config_Menu.Key_Bindings.Go_In_Pants.Name": "Go In Pants",
+  "Config_Menu.Key_Bindings.Go_In_Pants.Tooltip": "The key you want to press to pee and poop yourself. (KeyGoInPants)",
+
+  // Go Potty
+
+  "Config_Menu.Key_Bindings.Go_Potty.Name": "Go Potty",
+  "Config_Menu.Key_Bindings.Go_Potty.Tooltip": "The key you want to press to pee and poop in the potty like a good girl or boy. (KeyGoInToilet)",
+
+  // ##########
+  // Page Continence
+  // ##########
+
+  // Nighttime Losses
+
+  "Config_Menu.Continence.Nighttime_Losses.Name": "Nighttime Losses",
+  "Config_Menu.Continence.Nighttime_Losses.Tooltip": "How serious the loss of potty training is at night, compared to daytime. Usually 50 (half). (NighttimeLossMultiplier)",
+
+  // Nighttime Gains
+
+  "Config_Menu.Continence.Nighttime_Gains.Name": "Nighttime Gains",
+  "Config_Menu.Continence.Nighttime_Gains.Tooltip": "How big the gains are if you stay dry/clean at night, compared to daytime. Usually 50 (half). (NighttimeGainMultiplier)",
+
+  // In Diaper on Purpose Modifier
+
+  "Config_Menu.Continence.In_Diaper_on_Purpose_Modifier.Name": "In Underwear on Purpose Modifier",
+  "Config_Menu.Continence.In_Diaper_on_Purpose_Modifier.Tooltip": "How big of a negativ impact has an accident in underwear if it was on purpose?. Usually 50 (half) as much as an actual accident.",
+
+  // Accident Bladder Loss
+
+  "Config_Menu.Continence.Accident_Bladder_Loss.Name": "Accident Bladder Loss",
+  "Config_Menu.Continence.Accident_Bladder_Loss.Tooltip": "2 is a 2% continence loss for $MAX_BLADDER_CAPACITY$mL accidents. (BladderLossContinenceRate)",
+
+  // Accident Bowel Loss
+
+  "Config_Menu.Continence.Accident_Bowel_Loss.Name": "Accident Bowel Loss",
+  "Config_Menu.Continence.Accident_Bowel_Loss.Tooltip": "3 is a 3% continence loss for $MAX_BOWEL_CAPACITY$mL accidents. (BowelLossContinenceRate)",
+
+  // Toilet Bladder Gain
+
+  "Config_Menu.Continence.Toilet_Bladder_Gain.Name": "Toilet Bladder Gain",
+  "Config_Menu.Continence.Toilet_Bladder_Gain.Tooltip": "3 is a 3% continence gain for making it to the toilet with a bladder that is at least half full. (BladderGainContinenceRate)",
+
+  // Toilet Bowel Gain
+
+  "Config_Menu.Continence.Toilet_Bowel_Gain.Name": "Toilet Bowel Gain",
+  "Config_Menu.Continence.Toilet_Bowel_Gain.Tooltip": "3 is a 3% continence gain for making it to the toilet with a bowel that is at least half full. (BowelGainContinenceRate)",
+
+  // Start Bladder Continence
+
+  "Config_Menu.Continence.Start_Bladder_Continence.Name": "Start Bladder Continence",
+  "Config_Menu.Continence.Start_Bladder_Continence.Tooltip": "Defines the starting (new game) bladder continence. Usually 70. Also applies to old saves without this mod activated (StartBladderContinence)",
+
+  // Start Bowel Continence
+
+  "Config_Menu.Continence.Start_Bowel_Continence.Name": "Start Bowel Continence",
+  "Config_Menu.Continence.Start_Bowel_Continence.Tooltip": "Defines the starting (new game) bowel continence. Usually 90. Also applies to old saves without this mod activated (StartBowelContinence)",
+
+  // ##########
+  // Page Friendships
+  // ##########
+
+  // Penalty Peeing
+
+  "Config_Menu.Friendships.Penalty_Peeing.Name": "Penalty Peeing",
+  "Config_Menu.Friendships.Penalty_Peeing.Tooltip": "How peeing in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for pee incidents. (FriendshipPenaltyBladderMultiplier)",
+
+  // Penalty Pooping
+
+  "Config_Menu.Friendships.Penalty_Pooping.Name": "Penalty Pooping",
+  "Config_Menu.Friendships.Penalty_Pooping.Tooltip": "How pooping in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for poop incidents. (FriendshipPenaltyBowelMultiplier)",
+
+  // Friendship Debug
+
+  "Config_Menu.Friendships.Debug.Name": "Friendships Debug",
+  "Config_Menu.Friendships.Debug.Tooltip": "Your friendship level to npc´s for getting changed dosen´t matter.",
+
+  // ##########
+  // Save Files Friendships
+  // ##########
+
+  // Headline
+
+  "Config_Menu.Save_Files.Headline": "Starting at Mod version 1.5.0, save files (json) are no longer required/created. The only use of this functions is to load old save files or manually edit saves.",
+
+  // Read Save Files
+
+  "Config_Menu.Save_Files.Read.Name": "Read Save Files",
+  "Config_Menu.Save_Files.Read.Tooltip": "This will activate reading of the (legacy) save files. This will also delete save files from the last day, if a new one starts.",
+
+  // Write Save Files
+
+  "Config_Menu.Save_Files.Wtite.Name": "Write Save Files",
+  "Config_Menu.Save_Files.Wtite.Tooltip": "This will activate writing of the (legacy) save files. It is recommended to disable this option."
+}

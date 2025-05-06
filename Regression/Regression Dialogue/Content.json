@@ -2,9 +2,25 @@
   "Format": "2.0.0",
   "Changes": [
     {
-      "LogName": "Sebastian",
+      "LogName": "Abigail",
       "Action": "Include",
-      "FromFile": "Dialogue/NPCs/Sebastian.json"
+      "FromFile": "Dialogue/NPCs/Abigail.json"
+    },
+    {
+      "LogName": "Emily",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Emily.json"
+    },
+    {
+      "LogName": "Gus",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Gus.json"
+    },
+
+    {
+      "LogName": "Jas",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Jas.json"
     },
     {
       "LogName": "Jodi",
@@ -15,29 +31,9 @@
       }
     },
     {
-      "LogName": "Gus",
+      "LogName": "Leah",
       "Action": "Include",
-      "FromFile": "Dialogue/NPCs/Gus.json"
-    },
-    {
-      "LogName": "Sam",
-      "Action": "Include",
-      "FromFile": "Dialogue/NPCs/Sam.json"
-    },
-    {
-      "LogName": "Penny",
-      "Action": "Include",
-      "FromFile": "Dialogue/NPCs/Penny.json"
-    },
-    {
-      "LogName": "Vincent",
-      "Action": "Include",
-      "FromFile": "Dialogue/NPCs/Vincent.json"
-    },
-    {
-      "LogName": "Jas",
-      "Action": "Include",
-      "FromFile": "Dialogue/NPCs/Jas.json"
+      "FromFile": "Dialogue/NPCs/Leah.json"
     },
     {
       "LogName": "Maru",
@@ -45,9 +41,24 @@
       "FromFile": "Dialogue/NPCs/Maru.json"
     },
     {
-      "LogName": "Abigail",
+      "LogName": "Penny",
       "Action": "Include",
-      "FromFile": "Dialogue/NPCs/Abigail.json"
+      "FromFile": "Dialogue/NPCs/Penny.json"
+    },
+    {
+      "LogName": "Sam",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Sam.json"
+    },
+    {
+      "LogName": "Sebastian",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Sebastian.json"
+    },
+    {
+      "LogName": "Vincent",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Vincent.json"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+	"Changes":[
+    {
+      "LogName": "Emily",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Entries": {
+
+        "Change_Diaper_Accept_BabyPrint": "{{i18n:Emily.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"emily\" \"baby print diaper\"#$b#%{{i18n:Emily.Change_Diaper.Accept_BabyPrint_Post}}",
+        "Change_Diaper_Accept_Lavender": "{{i18n:Emily.Change_Diaper.Accept_Lavender}}#$action CHANGE_DIAPER_OTHERS \"emily\" \"lavender pullups\"#$b#%{{i18n:Emily.Change_Diaper.Accept_Lavender_Post}}",
+        "Change_Diaper_Accept_ClothDiaper": "{{i18n:Emily.Change_Diaper.Accept_ClothDiaper}}#$action CHANGE_DIAPER_OTHERS \"emily\" \"cloth diaper\"#$b#%{{i18n:Emily.Change_Diaper.Accept_ClothDiaper_Post}}",
+        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Emily.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"emily\" \"heart diaper\"#$b#%{{i18n:Emily.Change_Diaper.Accept_HeartDiaper_Post}}",
+        "Change_Diaper_Refuse": "{{i18n:Emily.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Emily.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Emily.Change_Diaper.Refuse_UsedBad}}]",
+        "Change_Diaper_Followup": "...",
+
+        "Diaper_Change_Accept": "{{i18n:Emily.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"emily\" \"cloth diaper\" \"self made <pants/skirt>\"#$h",
+        "Diaper_Change_Refuse": "{{i18n:Emily.Diaper_Change.Refuse}}",
+        "Diaper_Change_Followup": "{{i18n:Emily.Diaper_Change.Followup}}"
+      }
+    }
+	]
+}

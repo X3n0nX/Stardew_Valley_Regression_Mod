@@ -4,13 +4,19 @@
 			"LogName": "Abigail",
 			"Action": "EditData",
 			"Target": "Characters/Dialogue/Abigail",
-			"Entries": {
+      "Entries": {
 
+        "Change_Diaper_Accept_BabyPrint": "{{i18n:Abigail.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"abigail\" \"baby print diaper\"#$b#%{{i18n:Abigail.Change_Diaper.Accept_BabyPrint_Post}}",
+        "Change_Diaper_Accept_Lavender": "{{i18n:Abigail.Change_Diaper.Accept_Lavender}}#$action CHANGE_DIAPER_OTHERS \"abigail\" \"lavender pullups\"#$b#%{{i18n:Abigail.Change_Diaper.Accept_Lavender_Post}}",
+        "Change_Diaper_Accept_Joja": "{{i18n:Abigail.Change_Diaper.Accept_Joja}}#$action CHANGE_DIAPER_OTHERS \"abigail\" \"joja diaper\"#$b#%{{i18n:Abigail.Change_Diaper.Accept_Joja_Post}}",
+        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Abigail.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"abigail\" \"heart diaper\"#$b#%{{i18n:Abigail.Change_Diaper.Accept_HeartDiaper_Post}}",
+        "Change_Diaper_Refuse": "{{i18n:Abigail.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Abigail.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Abigail.Change_Diaper.Refuse_UsedBad}}]",
+        "Change_Diaper_Followup": "{{i18n:Abigail.Change_Diaper.Followup}}",
 
-				"Diaper_Change_Accept": "{{i18n:Abigail.Change_Diaper.Accept}}#$action DIAPER_CHANGE \"joja diaper\" \"stinky pants\"#$h",
-				"Diaper_Change_Refuse": "{{i18n:Abigail.Change_Diaper.Refuse}}",
-				"Diaper_Change_Followup": "{{i18n:Abigail.Change_Diaper.Followup}}"
-			}
+        "Diaper_Change_Accept": "{{i18n:Abigail.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"abigail\" \"joja diaper\" \"stinky pants\"#$h",
+        "Diaper_Change_Refuse": "{{i18n:Abigail.Diaper_Change.Refuse}}",
+        "Diaper_Change_Followup": "{{i18n:Abigail.Diaper_Change.Followup}}"
+      }
 		}
 	]
 }

@@ -25,10 +25,22 @@
 		<None Update="config.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="de.json">
+		<None Update="i18n\de.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Regression Dialogue\Dialogue\NPCs\Leah.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Regression Dialogue\Dialogue\NPCs\Emily.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Regression.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="en.json">
+		<None Update="i18n\default.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="i18n\de.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="manifest.json">
@@ -43,7 +55,7 @@
 		<None Update="Regression Dialogue\Dialogue\NPCs\Abigail.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="Regression Dialogue\Dialogue\NPCs\Maru.json">
+		<None Update="Regression Dialogue\Dialogue\NPCs\Emily.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="Regression Dialogue\Dialogue\NPCs\Gus.json">
@@ -53,6 +65,12 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="Regression Dialogue\Dialogue\NPCs\Jodi.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Regression Dialogue\Dialogue\NPCs\Leah.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Regression Dialogue\Dialogue\NPCs\Maru.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="Regression Dialogue\Dialogue\NPCs\Penny.json">
