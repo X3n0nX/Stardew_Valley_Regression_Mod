@@ -33,7 +33,7 @@ Follow instructions provided by the individual prerequisite mods and programs.
 - [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098?tab=files) Highly recommended: (Allowes ingame configuration of the mod)
 
 ### Installation
-1) Download the [latest release](https://github.com/zippity21/Stardew_Valley_Regression_Mod/releases). Be careful that you don't download the source code. The release is the one that contains Regression.dll.
+1) Download the [latest release](https://github.com/X3n0nX/Stardew_Valley_Regression_Mod/releases). Be careful that you don't download the source code. The release is the one that contains Regression.dll.
 2) Unzip contents of the release into the Mods directory created during SMAPI installation.
 > This should produce a folder "Regression Mod" which should contain two other folders (among other things), "Regression" and "Regression Dialogue".
 - Stardew Valley
