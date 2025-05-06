@@ -27,9 +27,9 @@ The Original Author is u/Primeval_Titmouse, who has long since deleted his reddi
 ## Installation Instructions
 ### Prerequisites
 Follow instructions provided by the individual prerequisite mods and programs.
-- Stardew Valley (version 1.6.14)
-- [SMAPI](https://smapi.io/) (version 4.1.8)
-- [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915?tab=files) (version 2.4.4)
+- Stardew Valley (version 1.6.15)
+- [SMAPI](https://smapi.io/) (version 4.2.2)
+- [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915?tab=files) (version 2.6.1)
 - [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098?tab=files) Highly recommended: (Allowes ingame configuration of the mod)
 
 ### Installation
