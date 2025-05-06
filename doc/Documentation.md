@@ -39,4 +39,4 @@ Placeholder							| used for
 
 Placeholder				| used for
 ----------------------- | ---------
-$BEDDING_DRYTIME$		| will be replaced with the specific time your bed will be dryed
+'$BEDDING_DRYTIME$'		| will be replaced with the specific time your bed will be dryed
