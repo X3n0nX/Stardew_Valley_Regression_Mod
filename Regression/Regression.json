@@ -2049,6 +2049,32 @@
         "{{i18n:Villager_Reactions.Jodi.Soiled.Mean.1}}"
       ]
     },
+    "harvey": {
+      "soiled_verynice": [
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.1}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.2}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.3}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.4}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.5}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.6}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.7}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.8}}"
+      ],
+      "soiled_nice": [
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Nice.1}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Nice.2}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Nice.3}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Nice.4}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Nice.5}}"
+      ],
+      "soiled_mean": [
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Mean.1}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Mean.2}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Mean.3}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Mean.4}}",
+        "{{i18n:Villager_Reactions.Harvey.Soiled.Mean.5}}"
+      ]
+    },
 
     // ##########
     // NPC´s you can change

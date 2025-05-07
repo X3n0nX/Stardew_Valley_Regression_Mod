@@ -16,7 +16,11 @@
       "Action": "Include",
       "FromFile": "Dialogue/NPCs/Gus.json"
     },
-
+    {
+      "LogName": "Harvey",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Harvey.json"
+    },
     {
       "LogName": "Jas",
       "Action": "Include",

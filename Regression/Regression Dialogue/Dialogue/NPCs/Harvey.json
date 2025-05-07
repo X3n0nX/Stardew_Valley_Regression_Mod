@@ -1,0 +1,240 @@
+{
+  "Changes": [
+    {
+      "LogName": "Harvey",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+
+        "Introduction": "{{i18n:Harvey.Dialogue.Introduction}}",
+        "Resort_Entering": "{{i18n:Harvey.Dialogue.Resort_Entering}}",
+        "Resort_Leaving": "{{i18n:Harvey.Dialogue.Resort_Leaving}}",
+        "Resort_Shore": "{{i18n:Harvey.Dialogue.Resort_Shore}}",
+        "Resort_Chair": "{{i18n:Harvey.Dialogue.Resort_Chair}}",
+        "Resort_Bar": "{{i18n:Harvey.Dialogue.Resort_Bar}}",
+        "Resort": "{{i18n:Harvey.Dialogue.Resort}}",
+        "danceRejection": "{{i18n:Harvey.Dialogue.danceRejection}}",
+        "divorced": "{{i18n:Harvey.Dialogue.divorced}}",
+        "breakUp": "{{i18n:Harvey.Dialogue.breakUp}}",
+        "dumped_Guys": "{{i18n:Harvey.Dialogue.dumped_Guys}}",
+        "secondChance_Guys": "{{i18n:Harvey.Dialogue.secondChance_Guys}}",
+
+        /*
+            Harvey response Ids:
+              harvey_cg_shy
+              harvey_cg_bold
+        */
+
+        // spring
+
+        "Mon_1": "{{i18n:Harvey.Dialogue.Mon_1}}",
+        "Tue": "{{i18n:Harvey.Dialogue.Tue}}",
+
+        "spring_Mon4": "{{i18n:Harvey.Dialogue.spring_Mon4}}",
+        "spring_Mon6": "{{i18n:Harvey.Dialogue.spring_Mon6}}",
+        "spring_Mon8": "{{i18n:Harvey.Dialogue.spring_Mon8}}",
+        "spring_Mon10": "{{i18n:Harvey.Dialogue.spring_Mon10}}",
+        "spring_Tue4": "{{i18n:Harvey.Dialogue.spring_Tue4}}",
+        "spring_Tue8": "{{i18n:Harvey.Dialogue.spring_Tue8}}",
+        "spring_Wed2": "{{i18n:Harvey.Dialogue.spring_Wed2}}",
+        "spring_Wed4": "{{i18n:Harvey.Dialogue.CG_Pretext}}#$q harvey_cg_shy/harvey_cg_bold CG_Followup#{{i18n:Harvey.Dialogue.CG_Question}}#$r harvey_cg_shy 0 CG_shy#{{i18n:Harvey.Dialogue.CG_Response1}}#$r harvey_cg_shy 0 CG_shy#{{i18n:Harvey.Dialogue.CG_Response2}}#$r harvey_cg_bold 0 CG_bold#{{i18n:Harvey.Dialogue.CG_Response3}}",
+        "spring_Wed6": "{{i18n:Harvey.Dialogue.spring_Wed6}}",
+        "spring_Wed8": "{{i18n:Harvey.Dialogue.spring_Wed8}}",
+        "spring_Thu2": "{{i18n:Harvey.Dialogue.spring_Thu2}}",
+        "spring_Thu6": "{{i18n:Harvey.Dialogue.spring_Thu6}}",
+        "spring_Fri2": "{{i18n:Harvey.Dialogue.spring_Fri2}}",
+        "spring_Fri4": "{{i18n:Harvey.Dialogue.spring_Fri4}}",
+        "spring_Fri8": "{{i18n:Harvey.Dialogue.spring_Fri8}}",
+        "spring_Fri10": "{{i18n:Harvey.Dialogue.spring_Fri10}}",
+        "spring_Sat2": "{{i18n:Harvey.Dialogue.spring_Sat2}}",
+        "spring_Sat4": "{{i18n:Harvey.Dialogue.spring_Sat4}}",
+        "spring_Sat6": "{{i18n:Harvey.Dialogue.spring_Sat6}}",
+        "spring_Sat8": "{{i18n:Harvey.Dialogue.spring_Sat8}}",
+        "spring_Sun4": "{{i18n:Harvey.Dialogue.spring_Sun4}}",
+        "spring_Sun6": "{{i18n:Harvey.Dialogue.spring_Sun6}}",
+        "spring_Sun8": "{{i18n:Harvey.Dialogue.spring_Sun8}}",
+
+        // summer
+
+        "summer_Mon2": "{{i18n:Harvey.Dialogue.summer_Mon2}}",
+        "summer_Mon6": "{{i18n:Harvey.Dialogue.summer_Mon6}}",
+        "summer_Mon8": "{{i18n:Harvey.Dialogue.summer_Mon8}}",
+        "summer_Tue4": "{{i18n:Harvey.Dialogue.CG_Pretext}}#$q harvey_cg_shy/harvey_cg_bold CG_Followup#{{i18n:Harvey.Dialogue.CG_Question}}#$r harvey_cg_shy 0 CG_shy#{{i18n:Harvey.Dialogue.CG_Response1}}#$r harvey_cg_shy 0 CG_shy#{{i18n:Harvey.Dialogue.CG_Response2}}#$r harvey_cg_bold 0 CG_bold#{{i18n:Harvey.Dialogue.CG_Response3}}",
+        "summer_Tue8": "{{i18n:Harvey.Dialogue.summer_Tue8}}",
+        "summer_Wed2": "{{i18n:Harvey.Dialogue.summer_Wed2}}",
+        "summer_Wed6": "{{i18n:Harvey.Dialogue.summer_Wed6}}",
+        "summer_Wed8": "{{i18n:Harvey.Dialogue.summer_Wed8}}",
+        "summer_Thu2": "{{i18n:Harvey.Dialogue.summer_Thu2}}",
+        "summer_Thu6": "{{i18n:Harvey.Dialogue.summer_Thu6}}",
+        "summer_Fri6": "{{i18n:Harvey.Dialogue.summer_Fri6}}",
+        "summer_Sat4": "{{i18n:Harvey.Dialogue.summer_Sat4}}",
+        "summer_Sun4": "{{i18n:Harvey.Dialogue.summer_Sun4}}",
+        "summer_Sun8": "{{i18n:Harvey.Dialogue.summer_Sun8}}",
+
+        // fall
+
+        "fall_Mon4": "{{i18n:Harvey.Dialogue.CG_Pretext}}#$q harvey_cg_shy/harvey_cg_bold CG_Followup#{{i18n:Harvey.Dialogue.CG_Question}}#$r harvey_cg_shy 0 CG_shy#{{i18n:Harvey.Dialogue.CG_Response1}}#$r harvey_cg_shy 0 CG_shy#{{i18n:Harvey.Dialogue.CG_Response2}}#$r harvey_cg_bold 0 CG_bold#{{i18n:Harvey.Dialogue.CG_Response3}}",
+        "fall_Mon8": "{{i18n:Harvey.Dialogue.fall_Mon8}}",
+        "fall_Tue8": "{{i18n:Harvey.Dialogue.fall_Tue8}}",
+        "fall_Wed4": "{{i18n:Harvey.Dialogue.fall_Wed4}}",
+        "fall_Wed6": "{{i18n:Harvey.Dialogue.fall_Wed6}}",
+        "fall_Thu6": "{{i18n:Harvey.Dialogue.fall_Thu6}}",
+        "fall_Fri6": "{{i18n:Harvey.Dialogue.fall_Fri6}}",
+        "fall_Sat4": "{{i18n:Harvey.Dialogue.fall_Sat4}}",
+        "fall_Sun2": "{{i18n:Harvey.Dialogue.fall_Sun2}}",
+        "fall_Sun4": "{{i18n:Harvey.Dialogue.fall_Sun4}}",
+        "fall_Sun8": "{{i18n:Harvey.Dialogue.fall_Sun8}}",
+        "fall_Sun10": "{{i18n:Harvey.Dialogue.fall_Sun10}}",
+
+        // winter
+
+        "winter_Mon": "{{i18n:Harvey.Dialogue.winter_Mon}}",
+        "winter_Mon2": "{{i18n:Harvey.Dialogue.winter_Mon2}}",
+        "winter_Mon6": "{{i18n:Harvey.Dialogue.winter_Mon6}}",
+        "winter_Tue": "{{i18n:Harvey.Dialogue.winter_Tue}}",
+        "winter_Tue2": "{{i18n:Harvey.Dialogue.winter_Tue2}}",
+        "winter_Tue6": "{{i18n:Harvey.Dialogue.winter_Tue6}}",
+        "winter_Wed4": "{{i18n:Harvey.Dialogue.winter_Wed4}}",
+        "winter_Thu4": "{{i18n:Harvey.Dialogue.CG_Pretext}}#$q harvey_cg_shy/harvey_cg_bold CG_Followup#{{i18n:Harvey.Dialogue.CG_Question}}#$r harvey_cg_shy 0 CG_shy#{{i18n:Harvey.Dialogue.CG_Response1}}#$r harvey_cg_shy 0 CG_shy#{{i18n:Harvey.Dialogue.CG_Response2}}#$r harvey_cg_bold 0 CG_bold#{{i18n:Harvey.Dialogue.CG_Response3}}",
+        "winter_Thu8": "{{i18n:Harvey.Dialogue.winter_Thu8}}",
+        "winter_Fri2": "{{i18n:Harvey.Dialogue.winter_Fri2}}",
+        "winter_Fri6": "{{i18n:Harvey.Dialogue.winter_Fri6}}",
+        "winter_Sat4": "{{i18n:Harvey.Dialogue.winter_Sat4}}",
+        "winter_Sat8": "{{i18n:Harvey.Dialogue.winter_Sat8}}",
+        "winter_Sun4": "{{i18n:Harvey.Dialogue.winter_Sun4}}",
+
+
+        "CG_shy": "{{i18n:Harvey.Dialogue.CG_Shy}}",
+        "CG_bold": "{{i18n:Harvey.Dialogue.CG_Shy}}",
+        "CG_Followup": "#$p harvey_cg_shy#{{i18n:Harvey.Dialogue.CG_Followup.1}}|{{i18n:Harvey.Dialogue.CG_Followup.2}}"
+      }
+    },
+    {
+      "LogName": "Harvey Marriage",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+      "Entries": {
+
+        "Rainy_Day_0": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Day_0}}",
+        "Rainy_Day_1": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Day_1}}",
+        "Rainy_Day_2": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Day_2}}",
+        "Rainy_Day_3": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Day_3}}",
+        "Rainy_Day_4": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Day_4}}",
+
+        "Rainy_Night_0": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Night_0}}",
+        "Rainy_Night_1": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Night_1}}",
+        "Rainy_Night_2": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Night_2}}",
+        "Rainy_Night_3": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Night_3}}",
+        "Rainy_Night_4": "{{i18n:Harvey.Dialogue_Marriage.Rainy_Night_4}}",
+
+        "Indoor_Day_0": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Day_0}}",
+        "Indoor_Day_1": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Day_1}}",
+        "Indoor_Day_2": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Day_2}}",
+        "Indoor_Day_3": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Day_3}}",
+        "Indoor_Day_4": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Day_4}}",
+
+        "Indoor_Night_0": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Night_0}}",
+        "Indoor_Night_1": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Night_1}}",
+        "Indoor_Night_2": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Night_2}}",
+        "Indoor_Night_3": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Night_3}}",
+        "Indoor_Night_4": "{{i18n:Harvey.Dialogue_Marriage.Indoor_Night_4}}",
+
+        "Outdoor_0": "{{i18n:Harvey.Dialogue_Marriage.Outdoor_0}}",
+        "Outdoor_1": "{{i18n:Harvey.Dialogue_Marriage.Outdoor_1}}",
+        "Outdoor_2": "{{i18n:Harvey.Dialogue_Marriage.Outdoor_2}}",
+        "Outdoor_3": "{{i18n:Harvey.Dialogue_Marriage.Outdoor_3}}",
+        "Outdoor_4": "{{i18n:Harvey.Dialogue_Marriage.Outdoor_4}}",
+
+        "patio_Harvey": "{{i18n:Harvey.Dialogue_Marriage.patio_Harvey}}",
+
+        "OneKid_0": "{{i18n:Harvey.Dialogue_Marriage.OneKid_0}}",
+        "OneKid_1": "{{i18n:Harvey.Dialogue_Marriage.OneKid_1}}",
+        "OneKid_3": "{{i18n:Harvey.Dialogue_Marriage.OneKid_3}}",
+        "TwoKids_0": "{{i18n:Harvey.Dialogue_Marriage.TwoKids_0}}",
+        "TwoKids_1": "{{i18n:Harvey.Dialogue_Marriage.TwoKids_1}}",
+        "TwoKids_2": "{{i18n:Harvey.Dialogue_Marriage.TwoKids_2}}",
+        "TwoKids_3": "{{i18n:Harvey.Dialogue_Marriage.TwoKids_3}}",
+
+        "Good_0": "{{i18n:Harvey.Dialogue_Marriage.Good_0}}",
+        "Good_1": "{{i18n:Harvey.Dialogue_Marriage.Good_1}}'",
+        "Good_2": "{{i18n:Harvey.Dialogue_Marriage.Good_2}}",
+        "Good_3": "{{i18n:Harvey.Dialogue_Marriage.Good_3}}",
+        "Good_4": "{{i18n:Harvey.Dialogue_Marriage.Good_4}}",
+        "Good_6": "{{i18n:Harvey.Dialogue_Marriage.Good_6}}",
+
+        "funLeave_Harvey": "{{i18n:Harvey.Dialogue_Marriage.funLeave_Harvey}}",
+        "funReturn_Harvey": "{{i18n:Harvey.Dialogue_Marriage.funReturn_Harvey}}",
+
+        "jobLeave_Harvey": "{{i18n:Harvey.Dialogue_Marriage.jobLeave_Harvey}}",
+        "jobReturn_Harvey": "{{i18n:Harvey.Dialogue_Marriage.jobReturn_Harvey}}",
+        //other month job days. Mon 1,8,15,22, Tue2,9,16,23, and Thurs 4,11,18,25.
+
+
+
+        //Harvey works Mon 1,8,15,22, Tue2,9,16,23, and Thurs 4,11,18,25.
+
+        "spring_1": "{{i18n:Harvey.Dialogue_Marriage.spring_1}}",
+        "spring_12": "{{i18n:Harvey.Dialogue_Marriage.spring_12}}",
+        "spring_23": "{{i18n:Harvey.Dialogue_Marriage.spring_23}}",
+
+        "summer_1": "{{i18n:Harvey.Dialogue_Marriage.summer_1}}",
+        "summer_10": "{{i18n:Harvey.Dialogue_Marriage.summer_10}}",
+        "summer_27": "{{i18n:Harvey.Dialogue_Marriage.summer_27}}",
+
+        "summer_8": "{{i18n:Harvey.Dialogue_Marriage.summer_8}}",
+        "summer_15": "{{i18n:Harvey.Dialogue_Marriage.summer_15}}",
+        "summer_22": "{{i18n:Harvey.Dialogue_Marriage.summer_22}}",
+        "summer_2": "{{i18n:Harvey.Dialogue_Marriage.summer_2}}",
+        "summer_9": "{{i18n:Harvey.Dialogue_Marriage.summer_9}}",
+        "summer_16": "{{i18n:Harvey.Dialogue_Marriage.summer_16}}",
+        "summer_23": "{{i18n:Harvey.Dialogue_Marriage.summer_23}}",
+        "summer_4": "{{i18n:Harvey.Dialogue_Marriage.summer_4}}",
+        "summer_11": "{{i18n:Harvey.Dialogue_Marriage.summer_11}}",
+        "summer_18": "{{i18n:Harvey.Dialogue_Marriage.summer_18}}",
+        "summer_25": "{{i18n:Harvey.Dialogue_Marriage.summer_25}}",
+
+        "fall_1": "{{i18n:Harvey.Dialogue_Marriage.fall_1}}",
+        "fall_15": "{{i18n:Harvey.Dialogue_Marriage.fall_15}}",
+        "fall_26": "{{i18n:Harvey.Dialogue_Marriage.fall_26}}",
+
+        "fall_8": "{{i18n:Harvey.Dialogue_Marriage.fall_8}}",
+        "fall_22": "{{i18n:Harvey.Dialogue_Marriage.fall_22}}",
+        "fall_2": "{{i18n:Harvey.Dialogue_Marriage.fall_2}}",
+        "fall_9": "{{i18n:Harvey.Dialogue_Marriage.fall_9}}",
+        "fall_16": "{{i18n:Harvey.Dialogue_Marriage.fall_16}}",
+        "fall_23": "{{i18n:Harvey.Dialogue_Marriage.fall_23}}",
+        "fall_4": "{{i18n:Harvey.Dialogue_Marriage.fall_4}}",
+        "fall_11": "{{i18n:Harvey.Dialogue_Marriage.fall_11}}",
+        "fall_18": "{{i18n:Harvey.Dialogue_Marriage.fall_18}}",
+        "fall_25": "{{i18n:Harvey.Dialogue_Marriage.fall_25}}",
+
+        "winter_1": "{{i18n:Harvey.Dialogue_Marriage.winter_1}}",
+        "winter_7": "{{i18n:Harvey.Dialogue_Marriage.winter_7}}",
+        "winter_28": "{{i18n:Harvey.Dialogue_Marriage.winter_28}}",
+
+        "winter_8": "{{i18n:Harvey.Dialogue_Marriage.winter_8}}",
+        "winter_15": "{{i18n:Harvey.Dialogue_Marriage.winter_15}}",
+        "winter_22": "{{i18n:Harvey.Dialogue_Marriage.winter_22}}",
+        "winter_2": "{{i18n:Harvey.Dialogue_Marriage.winter_2}}",
+        "winter_9": "{{i18n:Harvey.Dialogue_Marriage.winter_9}}",
+        "winter_16": "{{i18n:Harvey.Dialogue_Marriage.winter_16}}",
+        "winter_23": "{{i18n:Harvey.Dialogue_Marriage.winter_23}}",
+        "winter_4": "{{i18n:Harvey.Dialogue_Marriage.winter_4}}",
+        "winter_11": "{{i18n:Harvey.Dialogue_Marriage.winter_11}}",
+        "winter_18": "{{i18n:Harvey.Dialogue_Marriage.winter_18}}",
+        "winter_25": "{{i18n:Harvey.Dialogue_Marriage.winter_25}}"
+
+      }
+    },
+    {
+      "LogName": "Harvey cutscene",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "Entries": {
+
+        "57/f Harvey 1000/p Harvey": "sweet/-100 -100/farmer 10 19 0 Harvey 9 14 3/skippable/doAction 10 13/viewport 10 14/move farmer 0 -2 0/pause 300/faceDirection Harvey 2/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.1}}\"/faceDirection farmer 0/emote farmer 8/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.2}}\"/emote farmer 28/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.3}}\"/pause 600/advancedMove Harvey false 1 0 0 -4 -5 0/move farmer 0 -7 0 false/move farmer -4 0 3 true/viewport move -1 -2 4500/proceedPosition Harvey 5 10/doAction 5 9/move Harvey 0 -5 2 false/move farmer -1 0 0 false/move farmer 0 -4 0 false/pause 500/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.4}}\"/pause 2000/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.5}}'\"/pause 500/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.6}}\"/pause 600/move Harvey -1 0 0/pause 1000/showFrame Harvey 19/playSound openBox/pause 1000/showFrame Harvey 8/move Harvey 0 1 1/faceDirection farmer 3/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.7}}\"/pause 800/animate Harvey false true 100 4 5 6 7/positionOffset Harvey 2 0/pause 50/positionOffset Harvey 2 0/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/positionOffset Harvey 2 2/pause 50/stopAnimation Harvey/showFrame Harvey 20/pause 150/showFrame Harvey 21/pause 1500/speak Harvey \"$q 86 null#{{i18n:Harvey.Dialogue_Cutscene.1.Question.1}}$u#$r 86 20 event_heart1#{{i18n:Harvey.Dialogue_Cutscene.1.Responce.1}}#$r 86 20 event_heart2#{{i18n:Harvey.Dialogue_Cutscene.1.Responce.2}}#$r 86 -50 event_heart3#{{i18n:Harvey.Dialogue_Cutscene.1.Responce.3}}\"/pause 800/showFrame Harvey 20/pause 150/showFrame Harvey 4/animate Harvey false true 100 7 6 5 4/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/positionOffset Harvey -2 0/pause 50/stopAnimation Harvey/pause 1300/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.8}}\"/emote farmer 60/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.9}}\"/emote farmer 32/pause 800/move farmer 0 1 2 true/faceDirection Harvey 2 true/move farmer 0 1 2/speak Harvey \"{{i18n:Harvey.Dialogue_Cutscene.1.10}}\"/faceDirection farmer 0 true/end"
+
+      }
+    }
+  ]
+}

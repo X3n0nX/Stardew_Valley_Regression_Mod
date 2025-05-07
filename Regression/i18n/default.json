@@ -954,6 +954,37 @@
   "Villager_Reactions.Jodi.Soiled.Mean.1": "You might need to tap into those supplies I left you$4",
 
   // ##########
+  // Harvey
+  // ##########
+
+  // Harvey friendship very nice
+
+  "Villager_Reactions.Harvey.Soiled.Verynice.1": "%Harvey raises an eyebrow at you before silently moving to check your $UNDERWEAR_NAME$.#$b#It is my expert medical opinion that this diaper is <wet&messy>.$3#$b#%He gives your bottom a gentle pat.",
+  "Villager_Reactions.Harvey.Soiled.Verynice.2": "%Harvey chuckles and pats your bottom#$b#Goodness.$1",
+  "Villager_Reactions.Harvey.Soiled.Verynice.3": "It's okay, that's just a sign of a healthy diet.$1#$b#You're okay, just go back to playing.",
+  "Villager_Reactions.Harvey.Soiled.Verynice.4": "%Harvey pinches your cheek.#$b#Don't be shy, that's why I keep you in diapers.",
+  "Villager_Reactions.Harvey.Soiled.Verynice.5": "Do they make thicker diapers than those yet?$2#$b#You might need them.$3",
+  "Villager_Reactions.Harvey.Soiled.Verynice.6": "Oh $FARMERNAME$, you're so cute when you're embarrassed!$1",
+  "Villager_Reactions.Harvey.Soiled.Verynice.7": "%Harvey puts a firm hand on your shoulder#$b#Do you want to tell me what just happened or do you want me to check?",
+  "Villager_Reactions.Harvey.Soiled.Verynice.8": "Either your symptoms are getting worse or you're enjoying yourself.$1#$b#$y 'Well, which is it?_Y-yes..._Awwww. Thank you for telling the truth little <boy/girl>._No!_Well then. I guess that means you're going to need an exam soon, aren't you.$3'",
+
+  // Harvey friendship nice
+
+  "Villager_Reactions.Harvey.Soiled.Nice.1": "Hey, you might have something you need to take care of.$4",
+  "Villager_Reactions.Harvey.Soiled.Nice.2": "Are you feeling okay? Did you eat something that didn't agree with you?$8",
+  "Villager_Reactions.Harvey.Soiled.Nice.3": "At least your symptoms are consistant...$2",
+  "Villager_Reactions.Harvey.Soiled.Nice.4": "%Harvey doesn't speak up, but he gives you a little wink to let you know he saw what happened.",
+  "Villager_Reactions.Harvey.Soiled.Nice.5": "I have supplies from Joja in my office...#$b#You might be better off going to Pierre's.$2",
+
+  // Harvey friendship mean
+
+  "Villager_Reactions.Harvey.Soiled.Mean.1": "Oh. That's certainly a symptom...$8",
+  "Villager_Reactions.Harvey.Soiled.Mean.2": "My office is supposed to be sterile...$5",
+  "Villager_Reactions.Harvey.Soiled.Mean.3": "I can see your medical history is accurate.$2",
+  "Villager_Reactions.Harvey.Soiled.Mean.4": "%Harvey tries not to pay what happened any attention. His awkward glasses adjustment gives him away.",
+  "Villager_Reactions.Harvey.Soiled.Mean.5": "%Harvey clears his throat.#$b#U-uhmm. There's 'supplies' at Pierre's if you need them.$7",
+
+  // ##########
   // Vincent
   // ##########
 

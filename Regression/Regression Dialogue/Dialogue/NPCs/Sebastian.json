@@ -4,16 +4,20 @@
 			"LogName":"Sebastian",
 			"Action":"EditData",
 			"Target":"Characters/Dialogue/Sebastian",
-			"Entries": {
+      "Entries": {
+        /*
+            Sebastian's response Ids:
+              sebastian_diaperquestion_yes
+              sebastian_diaperquestion_no
+        */
 
+        "Mon8": "#$q sebastian_diaperquestion_yes/sebastian_diaperquestion_no diaperquestion_followup#{{i18n:Sebastian.Dialogue.Diaper_Question}}#$r sebastian_diaperquestion_yes -10 diaperquestion_yes#{{i18n:Sebastian.Dialogue.Diaper_Response1}}#$r sebastian_diaperquestion_yes 10 Question1_yes#{{i18n:Sebastian.Dialogue.Diaper_Response2}}#$r sebastian_diaperquestion_no 10 diaperquestion_no#Nope, {{i18n:Sebastian.Dialogue.Diaper_Response3}}",
 
-				"Mon8": "#$q 305/306 diaperquestion_followup#{{i18n:Sebastian.Dialogue.Diaper_Question}}#$r 305 -10 diaperquestion_yes#{{i18n:Sebastian.Dialogue.Diaper_Response1}}#$r 305 10 Question1_yes#{{i18n:Sebastian.Dialogue.Diaper_Response2}}#$r 306 10 diaperquestion_no#Nope, {{i18n:Sebastian.Dialogue.Diaper_Response3}}",
+        "diaperquestion_yes": "{{i18n:Sebastian.Dialogue.Diaper_Yes}}",
+        "diaperquestion_no": "{{i18n:Sebastian.Dialogue.Diaper_No}}",
+        "diaperquestion_followup": "#$p sebastian_diaperquestion_no#${{i18n:Sebastian.Dialogue.Diaper_Followup}}"
 
-				"diaperquestion_yes": "{{i18n:Sebastian.Dialogue.Diaper_Yes}}",
-				"diaperquestion_no": "{{i18n:Sebastian.Dialogue.Diaper_No}}",
-				"diaperquestion_followup": "{{i18n:Sebastian.Dialogue.Diaper_Followup}}"
-
-			}
+      }
 		},	
 	]
 }
