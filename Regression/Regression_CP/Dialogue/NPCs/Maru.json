@@ -1,0 +1,371 @@
+{
+	"Changes":[
+		{
+			"LogName":"Maru",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Maru",
+			"Entries":{	
+			
+  "Introduction": "Oh! Aren't you the one who just moved in?#$b#I'm Maru. I've been looking forward to meeting you!$h#$e#You know, with a small town like this, a new face can really alter the community dynamic. It's exciting!",
+
+  "AcceptBirthdayGift_Positive": "Hey, what's this, a birthday gift? It's great! Thanks for remembering me!$h",
+  "AcceptBirthdayGift_Negative": "Hey, what's this, a birthday gift? It's... uh, well, it's a gift! Thanks for remembering me, anyway.",
+  "AcceptGift_(O)StardropTea": "Mmm... How does it taste so good? This is really a great gift.",
+  "AcceptGift_(O)787": "This will be perfect for powering my latest project! Thanks, @!$h",
+  "AcceptGift_(O)336": "Ah, pure gold... It's not the strongest material, but it has some really useful properties!$h",
+  "AcceptGift_(O)337": "Oh, wow! That's a rare element. It's theorized that all the iridium in our world comes from meteorites...$h",
+  "AcceptGift_(O)122": "Ooh, this is exciting! I'll deconstruct it and see if I can reverse-engineer the technology.$h",
+  "AcceptGift_(O)910": "Ahh! Be careful with that! Are you touching it with your bare hands?$9#$b#... Sorry... hehe... With proper handling, this will be perfect for an exotic machine I'm building.",
+
+  "FlowerDance_Accept": "Heh... sure! Suddenly, the dance sounds a lot more fun.$h",
+  "FlowerDance_Accept_Spouse": "Of course... *whisper* Then can we go home and snuggle?$l",
+  "FlowerDance_Decline": "I'm flattered! But... No.",
+
+  "dating_Maru": "Ummm... Don't break the news to my Dad, okay? I'll handle it.",
+  "dating_Maru_memory_oneday": "Mmm... I'm having a hard time focusing on my work today.$l",
+  "married_Sebastian": "Hey, I guess we're brother and sister now!$h^Hey, I guess we're sisters now!$h#$e#I'm glad that Sebastian found a way out of the basement...#$e#I wish you two all the best!",
+  "married_Penny": "Hey, congratulations!$h#$b#I remember the first time Penny told me she had feelings for you...#$b#She was all shy about it, but I knew right away it was serious... she wouldn't say something like that if she didn't mean it!",
+  "married_Harvey": "You always seemed far too healthy to be at the clinic so often... Now it's all starting to make sense...",
+
+  "divorced": "We have nothing to say to each other.$a",
+  "breakUp": "Not good enough for you, huh?$a#$b#Fine...$s",
+  "dumped_Girls": "You've got some nerve, speaking to me!$a",
+  "secondChance_Girls": "You've lost some respect with me, @... but I'm willing to forgive you.$s",
+
+  "Resort_Entering": "Willy mentioned that you helped fix the boat. Thanks for doing that!",
+  "Resort_Leaving": "That was fun!",
+  "Resort": "I've been noticing a few different starfish species. My favorite are the big purple ones, but they're all very interesting!",
+  "Resort_Towel": "*gasp*... It's a solar eclipse!$3#$b#Oh... never mind. It's just your body blocking the sun.",
+  "Resort_Towel_2": "We're so far removed from civilization out here.#$b#Imagine the stars you could see at night.#$e#Who knows, maybe we'd even see a flying saucer or two!$h",
+  "Resort_Bar": "Mmmm... Why are tropical fruits so good?",
+  "Resort_Shore": "I wonder if Willy would let me bring my telescope here sometime...#The sky is so clear here, I bet I could spot Pelican Town out in the horizon.#Maybe I'd even see you running around %farm Farm!",
+
+  "eventSeen_9": "I should've spent more time on that piece before showing you...$s",
+  "eventSeen_9_memory_oneweek": "How's your hand feeling?#$b#Let me see it... Hey, it looks all better!$h",
+
+  "Event_Hospital_1": "Of course he'll know the difference! This sample is completely ruined!%fork$s",
+  "Event_Hospital_2": "Okay. I'll blame it on you, then.$u",
+  "Event_Hospital_3": "You're right. I should just tell him the truth.%fork$u",
+  "Event_Space1": "It's amazing, isn't it?",
+  "Event_Space2": "I guess you could see it like that...$s#$b#But it's still incredible, isn't it?",
+  "Event_Cut1": "Oh no?$8#$b#Well, that makes me feel a little better, then. Thanks.",
+  "Event_Cut2": "Oh no! Aghh... I'm really really sorry.$s",
+  "event_robot1": "Thanks. That means a lot to me, @.#$b#I know gadgets aren't really your kind of thing... but I do appreciate that you're showing interest in what I do.#$b#I wish I could return the favor somehow.$l",
+  "event_robot2": "What? After she said point-blank that she doesn't want to be a slave? How cold...%fork$a",
+  "event_robot3": "Heh...$8#$b#Yeah I guess he did kinda say that, didn't he?$l#$b#...Um...$l",
+  "event_robot4": "...$8#$b#@...$8",
+  "event_robot_explain1": "...$s#$b#You have a point, I did program her to act human... but her neural net is so complex, I can't be sure conciousness didn't emerge on its own.$8#$b#Furthermore, isn't it a little arrogant to assume that human-like consciousness is the only worthwhile vessel of existence? Computer brains are different than ours, but that doesn't mean we can disregard them.$8",
+  "event_robot_explain2": "I see. Well it wasn't a very funny joke.$a",
+  "event_robot_explain3": "That's horrible! What's gotten into you, @?$a#$b#I'm just going to forget about this conversation... you aren't acting yourself.$a",
+
+  "GreenRain": "I want to go collect samples with my dad, but my Mom is insisting we stay here...",
+  "GreenRain_2": "This is a rare opportunity to study a unique phenomenon... every moment counts!",
+
+//------------------------SPRING----------------------------
+
+  "Mon": "Whenever I'm struggling with a technical problem, I always take a walk.#$e#It's surprising how much a change of scenery can help.",
+  "Mon6": "Sometimes my head gets so cluttered with nonsense I can hardly think. Does that ever happen to you?#$e#Getting some fresh air usually helps.",
+  "Mon8":"Sometimes the only way to focus is to fully commit yourself to what you're doing, and tune everything else out.#$b#You know, diapers happen to be pretty helpful in that kind of flow state.$1",
+
+
+  "Tue": "Have you met my mother? She's the town's carpenter.",
+  "Tue2": "Stop by our house when you need to upgrade your buildings.#$e#It's always nice to have visitors.",
+  "Tue8": "My parents don't know that I wear diapers when I'm working on my projects...$8#$e#It's... too mortifying to even imagine them finding that out.$2#$b#So... let's just keep it our little secret, okay?$4",
+
+
+  "Wed": "On Tuesdays and Thursdays I work at Harvey's clinic.#$b#He says he likes having me around in case his medical equipment goes haywire!$h#$e#Being a farmer must be pretty easy, huh?",
+  "Wed4": "%You spot the unmistakable bulge of a diaper under Maru's overalls.#$b#%When she catches your eye, she blushes hard and looks away.",
+  "Wed8": "I'm glad to have a job at the clinic... I feel like I'm helping people in town.#$e#Dr. Harvey? He's nice, but not really my type...#$e#Oh! But he's a good boss.#$e#I have a suspicion he knows about... you-know-what.$2#$b#...But as long as we have doctor confidentiality laws, I should be okay.$3",
+
+
+  "Thu": "I plan on spending a lot of time with my telescope this summer.",
+  "Thu4": "Sometimes, when I'm looking into space with my telescope, I get struck with this eerie feeling... Like we aren't meant to see this.#$e#It's silly, I know...$h",
+  "Thu8": "You know, I'm really thankful you got me into this diaper thing...$4#$e#...I never realized how easy it is to just push while you're bent over looking through a telescope.$4#$b#%Maru blushes warmly.",
+
+
+  "Fri": "Hey, sorry if I seem cranky... I'm a little sore from work yesterday.#$c .5#I had to carry ten boxes of medical files to the attic!#$e#I had to sort patient records for four hours straight!",
+  "Fri4": "My mother is a carpenter and my dad is a scientist. I guess it makes sense that I'm into building gadgets.",
+  "Fri6": "My Dad is very logical, and my Mom is very intuitive. That difference leads to conflict, sometimes...$s",
+  "Fri8": "I worked on my gadgets all day yesterday. I never had to take a break!$1#$b#%Maru gives you a wink.",
+
+
+  "Sat": "Do you know my Dad, Demetrius? He's a scientist. I have a lot of fun helping him out in the laboratory.",
+  "Sat2": "It's really satisfying when you can repair something yourself, instead of just throwing it away.",
+  "Sat4": "Some people say 'magic isn't real'... but have they ever stopped and really thought about magnetism?",
+  "Sat8": "If you think about the human body, it's hard to believe that somehow, it all just 'works'.#$b#...Even if it doesn't always run perfectly...$1#$e#...Maybe stuff like incontinence is just a byproduct of our own spaghetti-code! *chuckle*$1",
+
+
+  "Sun": "Hi!#$q 3/4 Sun_01_old#Do you have fun working on the farm?#$r 3 0 Sun_01_01#Yes.#$r 4 0 Sun_01_02#No.",
+    "Sun_01_old": "$p 3#Hey, you've made another week of progress on the farm! It seems like things are going well for you.$h|Another tiring week on the farm, huh? It must really be a lot of work...$s",
+    "Sun_01_01": "Well that's good, isn't it?$h",
+    "Sun_01_02": "Yikes! I'm sorry. Have you ever thought of doing something different...?$s",
+  "Sun8":"Hi there, @!
+#$q 540/541 MaruPreference_Followup#Umm... I've got a question... Which kind of diapers do you prefer?
+#$r 540 25 MaruPreference_Cute!#The cutest ones!
+#$r 541 50 MaruPreference_Effective#The most effective ones!
+",
+  "MaruPreference_Cute": "I can see the appeal of that!#$b#I take function over form... but ideally any good diaper should have both!$3#$b#...Luckily for me, Space Diapers fit both catagories fairly well!$4#$b#...Of course, I would like it if their capacity were a bit higher still... but I'm working on something to help with the frequency of changing!",
+  "MaruPreference_Effective": "Me too!$1#$b#I don't want to have to change after every usage. That totally defeats the purpose!$2#$b#Um, besides them just feeling nice to wear.$4#$b#...But thankfully I'm working on a little something to help with the changes whenever they get truly unavoidable!$3",
+  "MaruPreference_Followup": "$p 540#Seen any especially cute diaper prints lately?$4|I wonder if I could develop a higher capacity diaper...#$b#I've tried to subtly nudge my Dad towards super absorbent polymer research, but he only thinks of the farming applications... *sigh*$2",
+
+//------------------------SUMMER----------------------------
+
+  "summer_Mon": "Hmm... What sort of gadget should I tinker with this summer?",
+  "summer_Mon6": "Feel free to come to my room if you ever want to tinker with my gadgets.",
+  "summer_Mon8": "Hey, feel free to come to my room if you ever want to tinker with my gadgets!#$e#...I bet it doesn't smell too different from yours, at this point.$1",
+
+
+  "summer_Tue": "Sebastian is my half-brother, if you didn't know already.#$e#We look totally different.",
+  "summer_Tue4": "Sebastian hardly ever talks to me. I wonder if he even likes me at all?#$e#It's sad, I want to have a brother but he doesn't act like one...",
+  "summer_Tue8": "I'm glad Sebastian took dibs on the basement, when our old room got renovated into the lab.#$e#It would be, uhm... REALLY easy to accidentally fumigate myself these days if I were the one down there...$1#$b#%Maru lets out a bashful chuckle.#$e#...But, yeah. I dunno... Feels like he got the short stick. It's so dark and sad down there.$2",
+
+
+  "summer_Wed": "Are you enjoying the season?#$e#It's been so warm this year.$h",
+  "summer_Wed4": "Penny and I have been doing a seasonal book club.#$b#It's just the two of us, but it's still fun to discuss what we're reading!",
+  "summer_Wed8": "$p 102#Maybe I should be careful, making such a habit out of this... I almost went in my overalls by instinct last time I wasn't wearing...$2|I, um... almost messed myself out of habit during Sunday book club with Penny...$8#$b#I always make sure there's a little background noise in the room so she won't hear me crinkling.$3#$b#But... She works with little kids! She's changed diapers! ...She would smell right away if I did THAT next to her.$9#$e#%Maru blushes with embarassment, hiding her face behind her hands...#$b#I've always caught myself in time, but I feel like I'm bound to slip up eventually...$2",
+
+
+  "summer_Thu": "Sorry, I was just thinking about some gadgets I'm making.#$q 35/36 Thu_01_old#I've decided I'm going to build a robot someday.#$r 35 30 Thu_0#That should be very easy for you#$r 36 -50 Thu_01_01#You should be more realistic#$r 35 40 Thu_01_02#It sounds challenging",
+    "Thu_01_old": "See you later.",
+    "Thu_0": "Really? Are you sure you're not just trying to flatter me?",
+    "Thu_01_01": "You don't think I could do it?$s",
+    "Thu_01_02": "You're right, but I love a challenge!$h",
+  "summer_Thu8": "I still can't believe you got me into the whole diaper thing...#$b#Thank you.$4",
+
+
+  "summer_Fri": "I worked at the clinic yesterday. We didn't have a single patient.#$e#I guess people get sick less during summer.",
+  "summer_Fri4": "%You spot the characteristic bulge of a diaper under Maru's overalls.#$b#%When she catches your eye she blushes hard and looks away...#$b#Um! Hi! N-Nice chatting! Bye!$9",
+  "summer_Fri8": "I worked at the clinic yesterday. We didn't have a single patient.$8#$b#Harvey was busy doing paperwork, so I felt like I had the whole place to myself.#$e#It's getting easy to just wet myself for the fun of it when he's not around.$1#$e#...Oh, and don't worry! I take extra precautions to not leak whenever I'm there.$3#$b#...Despite common misconception, pee isn't actually sterile. *chuckle*$1",
+
+
+  "summer_Sat": "Hey, have any interesting farm stories to tell me?#$e#Guess not.",
+  "summer_Fri2": "Hey, tell me a story about farming.#$e#That's really interesting!",
+  "summer_Sat4": "Any interesting farm stories to share, lately?#$e#Maybe about your... Uhm... N-Never mind.$2",
+  "summer_Sat8": "Hey. Have any interesting farm stories to tell me?#$e#...How about any interesting diaper stories?$4",
+
+
+  "summer_Sun": "I bet you're growing some interesting crops right now.#$b#Dad says a lot of exotic plants grow in the valley this time of year.",
+  "summer_Sun6": "Some day, I'm going to be a world-class inventor.$3#$e#You're lucky to be friends with me!#$b#...just kidding.",
+  "summer_Sun8": "Someday, I want to be a world-class inventor...$3#$b#You might be the only one who will know I'm hefting around a diaper under my lab coat. *chuckle*$1#$e#U-Um... please use this knowledge responsibly.$3",
+
+
+  "summer_1": "This is going to be a great season for stargazing.",
+
+//------------------------FALL----------------------------
+
+  "fall_Mon": "Have you explored the mines much? I've heard you can find some useful materials there.",
+  "fall_Mon4": "Um, if you need anything... I'll be working the clinic tomorrow!$8#$e#So, the pharmacy is open if you need... supplies.",
+  "fall_Mon8": "You should come visit me at the clinic tomorrow. I'm on the clock from 10 a.m. to 4 p.m.$h#$e#*chuckle* ...No, I can't get you any discount on our diapers.$1#$b#But... if just *happened* to need a change while we hung out... Well, a sterile environment MUST be maintained. *wink*$3",
+
+  "fall_Tue": "The trees look beautiful today!$h",
+  "fall_Tue2": "@, I just love how the trees look right now!#$e#I know you like them too.",
+  "fall_Tue8": "I love the colors of autumn...#$e#What can I say? Earthen tones suit me. *wink*$4",
+
+  "fall_Wed": "Bleh... I don't feel like working tomorrow.",
+  "fall_Wed4": "If you have any extra metal laying around, I could always use it for one of my projects.#$e#But only if you don't need it yourself.",
+  "fall_Wed8": "I'm working on a lot of projects this fall.#$b#Between the clinic, the lab, and my machines, I've been drinking a lot of coffee to get everything done.$1#$e#...In other words, moving to diapers has been extremely efficient of me, with all the caffeine in my system! *chuckle*$3#$e#%Maru adjusts her overalls, and you notice the swell of a well-used diaper...",
+
+  "fall_Thu": "In other parts of the world it's spring right now. Imagine that!",
+  "fall_Thu10": "You have a leaf in your hair. Let me get it for you.#$e#...Hehe. There you go!$h",
+
+  "fall_Fri": "I bet we'll start seeing more people at the clinic this season.$s#$e#I hope everyone stays healthy.",
+  "fall_Fri6": "I've been feeling especially optimistic lately...$h",
+  "fall_Fri8": "I've been feeling especially productive lately.#$e#It's probably because I've stopped taking bathroom breaks! *chuckle*$1",
+
+  "fall_Sat": "All these falling leaves will provide food for mushrooms and other small organisms.$u#$e#Interesting, isn't it?",
+  "fall_Sat8": "All these falling leaves will provide food for mushrooms and other small organisms as they decompose. Fascinating, right?$3#$b#Hmm. Speaking of fertilization... I do wonder if I may be able to make a more biodegradable diaper...#$b#It doesn't hurt to be environmentally minded about all this, right?$4",
+
+  "fall_Sun": "Hey, here's to another good week! *toast*",
+
+//------------------------WINTER----------------------------
+
+  "winter_Mon": "My mom always gets really excited about the winter, though, it's probably just for the Feast of the Winter Star.#$e#It is a fun holiday after all!$3",
+  "winter_Mon8": "Hi @!$h#$e#Hey, don't you think my snowman looks kind of like you?#$e#I was gonna make it a little more bottom-heavy once I realized, but I think I got it perfect actually!$1#$e#%Maru makes sure the coast is clear, and then pokes at the back of your diaper.#$b#Hehe.",
+
+  "winter_Tue": "My hair gets so frizzy in this dry weather. *sigh*",
+  "winter_Tue4": "Hey, do you have any ideas for a new gadget I can make?#$e#Mhmm. I trust your opinion.",
+  "winter_Tue8": "Hey, I have a new gadget idea.#$b#It's a surprise, but let's just say it's 'relevant'. *wink*$3",
+
+  "winter_Wed": "I've never liked the cold...$2",
+  "winter_Wed8": "I've never liked the cold, but it turns out diapers help with that.#$b#I guess I shouldn't be surprised!$1",
+
+  "winter_Thu": "Hey! What's up?#$e#It's a good time to explore the caves.#$e#I would go but my Dad would flip.",
+  "winter_Thu10": "@, come closer. I'm cold.$l#$e#My hands are so dry from the winter air. I'm sorry about that.$l#$e#%Maru suddenly sighs with relief#$b#...O-Oh. W-Well, at least now there's one more part of me that isn't cold now! *blush*$1",
+
+  "winter_Fri": "I hope I don't catch the flu this year.",
+  "winter_Fri6": "You look fresh today. I guess it's that crisp winter air.",
+  "winter_Fri8": "I never realized how much sleep I lost from refusing to leave my warm bed to go use the toilet...$2#$b#Now that I don't have to, I sleep SO much better!$3",
+
+  "winter_Sat": "Have you built a furnace yet?#$e#You can use them to turn raw material like ores into more useful products.$u",
+  "winter_Sat2": "Hey, if any of your farming machines need to be fixed, just let me know.$h",
+  "winter_Sat8": "Hi, @!#$e#Wanna help me track some standard deviation?$3#$b#...All you'll need to do is wear some different diapers, and tell me how they hold up! *chuckle*$1#$e#Isn't science fun?$4",
+
+  "winter_Sun": "I get so sleepy when it's cold...",
+  "winter_Sun6": "This cold weather sure makes me awfully sleepy.#$e#...This morning, I woke up, went to the bathroom, and then I went back to bed and dozed off for another hour.",
+  "winter_Sun8": "This cold weather makes me awfully sleepy...#$b#I've been squeezing in a lot of nap-time when nobody's around.$1#$e#Like, this morning... I woke up, went to the bathroom, and then I slept in for an extra hour.$3#$b#...then, after all that, I finally climbed out of bed! *giggle*$1",
+ 
+  "winter_1": "Oh man, it's so cold...$s",
+  
+			},
+		},
+		{
+			"LogName":"MarriageDialogueMaru",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{	
+
+  "Indoor_Day_0": "Hmm? Sorry, sometimes I get so lost in thought that I don't even realize what I'm doing.#$b#It's embarrassing, but even before I started wearing diapers I had some close calls.$2#$b#I guess it's a good thing I made the switch to more protection.$3",
+  "Indoor_Day_1": "I found this in my scrap pile. Think you could find a use for it? [286 287 205 732]",
+  "Indoor_Day_2": "Finally, you're up! I was getting so hungry... *rumble*$1#$b#W-wait, that's more than hungry...$2#$b#%Maru's knees bend slightly as she shamelessly fills her diaper.#$b#Ahhh... Well, I am still hungry!$1",
+  "Indoor_Day_3": "One of the best things about living here is waking up and just letting go into my diaper while listening to the song birds.",
+  "Indoor_Day_4": "How do you keep your hands so soft with all that farmwork?#$b#It's all the baby oil, isn't it.$3",
+  "Indoor_Day_Maru": "Good morning, @!#$e#I had a nightmare last night where I had to go to the toilet really badly but couldn't find an empty stall.$2#$e#Oh! I did eventually find one, though!#$b#...I did think that something felt funny about it when I pushed, but... well, it was just so relieving, I didn't care!$1#$b#Well, um. Right after I was all emptied out, I woke up...$4#$b#And, um... Sorry for stinking up the sheets... *blush*$2",
+
+
+  "Indoor_Night_0": "Oh wow, look at the moon!#$b#%You both stare out the window, leaning into each other.#$b#%After a long, cozy moment you hear a gentle hiss. Maru's cheeks have a soft flush.#$e#Wow.$4",
+  "Indoor_Night_1": "I saw a shooting star earlier. I like to pretend it's MARILDA stopping by to check on us.$1#$b#...I hope she doesn't look in while I'm getting changed.$1#$e#%Maru tosses a clean diaper at you.#$b#I'm not getting any drier. Hop to it!$3",
+  "Indoor_Night_2": "It's wild that I can just be in diapers now. No hiding it!$4",
+  "Indoor_Night_3": "You did good work today! You deserve to relax the rest of the evening. Let me take care of you.#$b#%Maru lies you down and takes her time wiping you clean.#$b#::542:change:space diaper:1::",
+  "Indoor_Night_4": "I'm really starting to love this old house. It's so cozy at night.#$e#Mom's done a great job improving the place.$h#$b#...I wonder if I could somehow ask her to build a big changing table for us, or if that'd be pushing my luck...$2",
+  "Indoor_Night_Maru": "Aw, I think all of my onesies are in the wash...$2#$e#I know, I know, I should be more careful not get them dirty...$2#$b#But it's just fun to try and pop the snaps...$4#$e#%Maru sighs wistfully as she rummages around for her normal pajamas.",
+
+
+  "Rainy_Day_0": "#$p 102#I wonder how Penny is doing? Maybe I'll give her a call later today.|I wonder how Penny is doing...$2#$e#If she's still changing the kids' diapers then it's probably not too different than how I'm doing!$1",
+  "Rainy_Day_1": "I was just daydreaming... do you think MARILDA is okay?$2#$b#I hope she finds some place where she truly belongs... Like I have.$4#$b#%Maru pats your bottom affectionately.",
+  "Rainy_Day_2": "Hey! I had trouble sleeping last night so I fiddled around in my workshop for a bit. Here, I made this for you. [688 369 338 325 287]#$e#No, I haven't changed yet. Why, are you offering to help?$3",
+  "Rainy_Day_3": "The only thing I dislike about rain is the fact that I can't do any stargazing.$2#$b#Promise you'll cheer me up tonight by cuddling by the fire?$8#$b#I won't leak on you this time, I promise!$1",
+  "Rainy_Day_4": "Do I hear a leak in the roof? I'll have to check it out. I know a thing or two about carpentry from watching my mother.#$e#Maybe I shouldn't wear a diaper while I'm up there in this weather..?$2#$b#...Nah, it'll be fine!$1",
+  "Rainy_Day_Maru": "*sniff* Ahhh... I love the smell of petrichor...$4#$e#It's actually a bacteria in the soil getting kicked up by the rain that causes that pleasant smell!$3#$b#But it only releases the spores when it's dry. That's why the smell is most noticable after the first rain of the season.$3#$e#%Maru pauses, shifting slightly, and you hear a quiet streaming noise coming from her diaper.#$b#%As it gradually gets louder, she blushes hard, and bashfully covers her padded crotch with both hands.#$e#U-Uhm... Sorry, th-that wasn't meant to be a demonstration!$9",
+
+
+  "Rainy_Night_0": "I worked on my gadgets all day, and I didn't have to get up once!$1#$b#I, uh... hope you don't mind the smell...$2",
+  "Rainy_Night_1": "Hi @. How was your day? ...Soggy?#$e#Wait, did you mean the rain?$2#$b#Eh, either way, let's get you dry.#$b#%Maru strips off your soggy cloths, wipes you clean, and ruffles a big, soft towel all over you.#$b#::543:change:space diaper:1::",
+  "Rainy_Night_2": "Oh my gosh, your clothes are soaked!$9#$b#Now, how much of that is from the rain and how much is from your diapers?$3#$e#*giggles* It doesn't matter, let's get you cleaned up.$1#$b#%Maru strips off your soggy clothes, wipes you clean, and ruffles a big, soft towel all over you.#$b#::543:change:space diaper:1::",
+  "Rainy_Night_3": "Can we have spaghetti in bed tonight?#$b#I mean, we leak in it enough... So why not?$3",
+  "Rainy_Night_4": "I made some dessert![232 234 223 220]$1#$e#...Make sure to brush your teeth and get a change before bed, though. $3",
+  "Rainy_Night_5": "My day wasn't all that exciting... I stayed inside because of the weather.$2#$e#It was relaxing, though. I kicked back with the latest 'Schematics Weekly'.#$b#And this time I didn't even leak on the chair.$3",
+  "Rainy_Night_Maru": "Good evening, $NICKNAME$. How was your day? I got a whole lot done!#$b#%You catch a whiff of something stinky. Maru's overalls look much puffier than usual...#$b#O-Oh. That? That's because I- um... layered... up...$4#$e#...What? I didn't wanna stop to clean up! I was in a flow state!$3#$b#%...Judging by saturated swell of them, looks like there was more than one kind of flow state going on.",
+
+
+  "patio_Maru": "Eventually this will be one of those robot arm auto-changers we saw in those drawings...#$b#Eventually...$2",
+
+
+  "spouseRoom_Maru": "%You catch Maru trying to clean up a puddle on the floor.#$b#I got up early to do a little stargazing, and I had to pee again, and... well...$2#$e#I've almost cleaned up my mess, I'll just be a little longer.$8",
+
+
+  "Outdoor_0": "Ahh... the farm smells great, it reminds me of the mountains near my parent's house.#$b#%Maru giggles to herself as she bends her knees and fills her diaper right there on the porch.#$b#Now it smells different!$1",
+  "Outdoor_1": "Yeah, I'm eating pancakes on the porch... Want some?#$b#%Maru hands over some pancakes and then wipes her syrupy hands off on her overalls.[211]#$e#I leaked earlier anyway, so they're already dirty.$3",
+  "Outdoor_2": "Hey, @, I got some medicine from the clinic the other day.#$b#...Why don't you give it a try? ...I'd like to study how effective it is.$3[351]",
+  "Outdoor_3": "It seems so long ago that you first moved to the farm.#$b#I didn't think it would change my life, but here I am, looking out over a farm after wetting myself.$1",
+  "Outdoor_4": "%Maru is standing next to a heavy looking bag of used diapers.#$b#I'll take these out in a moment. I'm just... Impressed.",
+  "Outdoor_Maru": "Hi, @!#$b#I just needed some fresh air this morning. I wriggled down under the bedsheets in my sleep again.$1",
+
+
+  "OneKid_0": "Have you spent any time with %kid1 today? Kids need playtime in order reach their full potential.",
+  "OneKid_1": "What do you think... will %kid1 grow up to be a farmer? Or an engineer?",
+  "OneKid_3": "I have high hopes for our child. I've been reading all the scientific data on the best ways to raise children.",
+  "TwoKids_3": "My own workshop, two wonderful kids, and a beautiful plot of land. Life is pretty good.#$b#The diaper budget is a little high though!$1",
+
+
+  "Good_1": "Now that we live together, it's hard to imagine going back to secreting away my diapers.#$b#It's almost as convenient not having to hide them as it is using them!$3",
+  "Good_2": "I never realized the amount of care and planning necessary to run a farm! It's a lot like working in the laboratory.#$b#Clearly it's just as distracting too, given how often you soil yourself.$1",
+  "Good_3": "Don't worry, I won't mind if you track mud into the house. It's fun to get a little dirty now and then.#$b#%Maru winks as she gives your bottom a playful pat.",
+  "Good_4": "For a while there I was considering building a robotic husband. But you're a lot more fun!$h^For a while there I was considering building a robotic wife. But you're a lot more fun!$h",
+  "Good_5": "I was just admiring my wedding amulet... The shell is flawless. This is a very rare specimen!$l",
+  "Good_6": "With a little planning, we could automate most of the farm work and just relax!#$e#Hold on, let me get changed first and I'll start working on blueprints.#$b#Gotta make sure I don't leak at my workbench this time!$3",
+
+
+  "Neutral_0": "I hope you'd still like me even if I gained weight.$2",
+  "Neutral_8": "I feel uninspired today.$s",
+
+
+//Maru visits parents on Monday
+  "funLeave_Maru": "I think I'll visit my parents today. I haven't seen them in a while.#$b#It's going to feel weird wearing panties again...$8#$e#Maybe I shouldn't...$2",
+  "funReturn_Maru": "Mom and Dad are doing just fine. Their routine is still the same, even with me gone.#$e#They mentioned I smell like farm, and I started to get nervous that I have a permanent diaper smell on me now.$2#$b#At least the farm is a good excuse!$1",
+
+
+  "jobLeave_Maru": "I'm heading off to work... Would you want to help me into a new diaper before I go?$3#$e#%You lie Maru down and help her out of the soaked diaper she's been wearing since last night.#$b#%Your face flushes as it always does when you wipe her clean, and then you tape her into a fresh, new diaper.#$b#Thanks, $NICKNAME$.$4",
+  "jobReturn_Maru": "Work was fine. I don't love it, but it's a nice change of pace. I feel like I could lose myself if all I worked on were my own projects...#$e#Anyway, want to help me change again?$1#$b#%Maru lets down her overalls to show you her soggy, soiled diaper she's been in since morning...#$b#%You go through the exciting routine of cleaning her up once again.",
+
+
+//other month job days. Tue2,9,16,23, and Thurs 4,11,18,25.
+
+//---SPRING---
+
+  "spring_1": "It's wonderful to see all the plants and animals come back to life during the spring.#$b#And diaper changes aren't going to be so cold anymore!$1",  
+
+  "spring_2": "So, what's your strategy for optimizing the farm this year?#$b#Thicker diapers, maybe?$3",
+
+  "spring_10": "@! Just wait until you hear this...#$b#The manufacturers messed up one of our shipments of adult diapers yesterday.$5#$b#Thankfully, I could tell right away that the quality was sub-standard.$3#$e#They told us to just keep the duds, and they sent us a replacement shipment for free.#$b#Here, look at this...$3#$b#::544:give:Joja diaper:1::",
+
+  "spring_22": "If I didn't have to hide all the diaper stuff from my family I'd invite them over for dinner sometime.$5#$b#I wish I didn't feel like I had to hide it...$2",
+
+
+//---SUMMER---
+
+  "summer_2": "I like to catalogue the different insects I see in summer.#$b#You can learn a lot about how an ecosystem is doing based on the bug population.$3#$e#...Luckily, the only bugs in this house are a couple of stink bugs.$1#$b#*sniff* ...Whew! Speaking of which... Mind lending me a hand?$1",
+
+  "summer_3":"I worked at the clinic yesterday. We didn't have a single patient.$8#$e#Harvey was busy doing paperwork, so I felt like I had the whole place to myself.#$b#It's easy to just wet myself for the fun of it.$4",
+
+  "summer_20": "I wonder if my brother will ever have the courage to ask Abigail out?",
+
+
+//---FALL---
+
+  "fall_1": "With every season, a new section of the night sky becomes prominent. It's fascinating to witness.#$b#And now I never have to look away for a bathroom break!$1",
+
+  "fall_3": "Fall always reminds me of going out woodcutting with my mom... it might be that smell of freshly cut wood and sap.#$b#Well, that might not be the most prominent smell right now.$3#$b#%Maru palms her bottom which gives off an audible squelch.",
+
+  "fall_25": "Winter's just around the corner. We need to double check the heating system, turn off the valves, and check all the insulation in the house.#$e#Don't worry, dear. I'll take care of it all.",
+
+
+//---WINTER---
+
+  "winter_2": "So, what are your plans for maintaining our income this winter?#$b#If you do any mining, promise me you'll wear protection.#$e#...I meant defensive gear and protective rings. I know you'll be in diapers!$1",
+
+  "winter_5": "Penny came into the clinic yesterday.#$b#A-And, um... I... sort of had forgotten that she was scheduled for a check-up...$9#$e#And... I had pooped. In my diaper... K-Kinda a lot...$2#$e#...oh, gosh, I really hope she didn't smell anything...$2#$t CaughtMaru 0",
+
+  "winter_10": "I hope Dad's doing okay... he can get depressed in winter, when there's less opportunity for field research.#$b#I used to have a hard time in the winter too, but it's easier with a warm diaper.$4",
+
+  "winter_15": "I never realized how much sleep I lost from squirming around, refusing to leave my warm bed to get up and go and to the toilet...$2#$b#Now that I don't have to, I sleep SO much better!$3",
+
+
+
+//---5% Chance for any of these.---
+
+  "spring_Maru": "If I didn't have to hide all the diaper stuff from my family, I'd invite them over for dinner sometime.$8#$b#...I wish I didn't feel like I had to hide it...$2",
+
+  "summer_Maru": "The evenings are so warm, it's really the best time of year for stargazing.#$b#Who knows what might be up there?#$e#And, if duty calls, you're already bent over! So, going to the 'bathroom' is extra easy. *giggle*$4",
+
+  "fall_Maru": "Once, when I was little, I chose to wet myself instead of going inside...#$b#It was a beautiful fall day, just like this... I think that's why I'm so caught up in the memory.$2#$e#In hindsight, maybe I was always going to end up a diaper girl.$1",
+
+  "winter_Maru": "It shouldn't be too hard to invent a wipe warmer...$2",
+
+			},
+		},
+		
+		
+				{
+			"LogName":"Maru 4 heart cutscene",
+			"Action":"EditData",
+			"Target":"Data/Events/Hospital",
+			"Entries":{
+  "7/f Maru 1000/p Maru": "Hospital_Ambient/-1000 -1000/farmer -10000 -10000 0 Maru 9 15 3 Harvey 7 10 0/skippable/changeSprite Maru Hospital/changePortrait Maru Hospital/showFrame Maru 18/viewport 10 15/pause 4000/speak Maru \"*sigh*... I'm so sick of preparing these samples...$s\"/pause 2000/speak Maru \"Hmmm... I am alone for a minute... I could just...$3\"/playSound wateringCan/emote Maru 28/speak Maru \"Wow, they really are convenient!$1\"/pause 2000/playSound doorClose/warp farmer 10 19/pause 100/playSound throw/showFrame Maru 17/shake Maru 2000/jump Maru/specificTemporarySprite maruBeaker/move farmer 0 -1 0/pause 1250/showFrame Maru 0/faceDirection Maru 2/pause 100/speak Maru \"Agh! Oh no!... $4\"/pause 600/showFrame Maru 16/pause 1000/speak Maru \"The whole sample is ruined... Harvey's going to kill me...$s\"/pause 600/showFrame Maru 0/faceDirection Maru 0/pause 1500/faceDirection Maru 2/pause 400/speak Maru \"$q 38 null#@, what should I do?#$r 38 -50 Event_Hospital_1#Just scoop it off the floor. He won't know the difference.#$r 39 -20 Event_Hospital_2#Tell Harvey it was my fault.#$r 38 50 Event_Hospital_3#Tell Harvey it was an accident.\"/move Harvey 3 0 2/move Harvey 0 2 2/doAction 10 13/move Harvey 0 1 2/faceDirection Maru 1/speak Harvey \"What happened? I heard something break.\"/pause 500/speak Maru \"$p 38#I accidentally dropped one of the samples... I'm so sorry.$s|@ came in and slammed the door so loud I dropped this sample.$u\"/fork toldTruth/move Harvey 0 2 3/emote Harvey 40/speak Harvey \"You shouldn't blame others for your own problems, Maru.$a\"/pause 300/faceDirection Harvey 1/speak Harvey \"*sigh*... I'll have to call the patient back in to recollect this sample.$s#$b#This'll probably put us in the red for another month...$s\"/pause 600/faceDirection Maru 2/pause 1000/showFrame Maru 16/pause 500/emote farmer 28/end",
+  
+  
+  "toldTruth": "move Harvey 0 2 3/speak Harvey \"Thanks for telling me the truth, Maru.#$b#Don't worry about the sample, we'll just get another one.\"/pause 500/emote Harvey 32/pause 500/speak Maru \"Thanks for being patient with me, Doctor Harvey.\"/pause 500/speak Harvey \"Of course... you've been a big help around here. I don't know what I'd do without you!\"/pause 500/emote Maru 32/pause 1000/faceDirection Harvey 2/pause 500/emote Harvey 8/speak Harvey \"@? You look a little pale... are you feeling okay?\"/pause 500/faceDirection farmer 2/emote farmer 28/end",  
+			},
+		},
+
+		
+				{
+			"LogName":"Maru 6 heart cutscene",
+			"Action":"EditData",
+			"Target":"Data/Events/Mountain",
+			"Entries":{
+
+  "8/f Maru 1500/w sunny/t 2100 2340": "nightTime/-1000 -1000/farmer 23 29 3 Maru 14 29 3/skippable/bgColor 0 0 0/changeToTemporaryMap NightSceneMaruMap false/ambientLight 0 0 0/viewport 14 23 true/pause 2000/playSound leafrustle/pause 200/faceDirection Maru 1/pause 400/emote Maru 8/pause 800/move farmer -5 0 3/speak Maru \"@! I'm surprised to see you here so late.\"/faceDirection Maru 3/pause 1000/speak Maru \"The night sky looks amazing right now.\"/faceDirection Maru 1/speak Maru \"Come over here, I want to show you something.\"/move farmer -3 0 3/speak Maru \"Here, take a peek.\"/move Maru 0 1 0/move farmer -1 0 3/pause 200/animate farmer true true 100 35/pause 1200/playMusic spaceMusic/speak Maru \"$q 40 null#What do you see?#$r 40 30 Event_Space1#A beautiful planet.#$r 40 -30 Event_Space2#A cold, dark abyss.\"/stopAnimation farmer/faceDirection farmer 2/pause 1000/speak Maru \"By the time any of these stars are visited, you and I will be long gone...$8\"/emote farmer 28/pause 400/speak Maru \"I guess that's the trouble with being human, huh?\"/faceDirection Maru 0/pause 1200/faceDirection Maru 2/emote Maru 40/pause 500/faceDirection Maru 0/speak Maru \"@, um...$8\"/pause 500/faceDirection Maru 2/pause 1500/speak Maru \"I... I started wearing diapers sometimes...$2\"/pause 500/faceDirection Maru 0/emote Maru 60/pause 800/speak Maru \"I hope it's not offensive. It's just, I noticed you, and you'd just go where you stood sometimes...$8#$b#And it seemed so convenient...$2#$b#And...$2\"/emote Maru 28/pause 1500/speak Maru \"Are you mad at me?$8\"/emote farmer 20/pause 500/speak Maru \"Oh good!$4\"/pause 500/speak Maru \"Here, let me show you a binary star system...\"/pause 500/faceDirection farmer 3 true/animate farmer true true 100 35/pause 800/specificTemporarySprite maruTelescope/viewport move 0 -1 16000/pause 16000/globalFade .003/viewport -1000 -1000/pause 500/message \"What a beautiful night! Maru showed me something new...\"/pause 1000 /stopAnimation farmer/changeLocation Mountain/end",
+			},
+		},
+	]
+}

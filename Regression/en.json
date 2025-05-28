@@ -40,6 +40,7 @@
 	],
 	"Bladder_Red": [
 		"You can’t hold it anymore! You're about to pee yourself!",
+		"You let out a desperate little whine as your full bladder threatens to empty itself",
 		"You have to pee so badly you start hopping around!",
 		"You feel a few drops of pee leak out into your $UNDERWEAR_NAME$!"
 	],
@@ -56,16 +57,17 @@
 	],
 	"Bowels_Red": [
 		"You can feel the poop starting to push out!",
+		"You feel a lot of pressure in your backside! It feels like it's about to come out one way or another.",
 		"You can’t hold it anymore! You're about to mess yourself!"
 	],
 	"Bladder_Continence_Yellow": [ "You seem to be getting worse at holding your pee." ],
-	"Bladder_Continence_Orange": [ "You're getting pretty bad at holding your pee." ],
-	"Bladder_Continence_Red": [ "You're getting close to being unable to hold your pee." ],
-	"Bladder_Continence_Min": [ "You don't think you can hold your pee anymore." ],
+	"Bladder_Continence_Orange": [ "...You're getting pretty bad at holding your pee." ],
+	"Bladder_Continence_Red": [ "You're barely able to hold your pee now..." ],
+	"Bladder_Continence_Min": [ "You don't think you can hold your pee anymore!" ],
 	"Bowel_Continence_Yellow": [ "You seem to be getting worse at holding your poop." ],
-	"Bowel_Continence_Orange": [ "You're getting pretty bad at holding your poop." ],
-	"Bowel_Continence_Red": [ "You're getting close to being unable to hold your poop." ],
-	"Bowel_Continence_Min": [ "You don't think you could hold your poop anymore." ],
+	"Bowel_Continence_Orange": [ "...You're getting pretty bad at holding your poop." ],
+	"Bowel_Continence_Red": [ "You're barely able to hold your poop now..." ],
+	"Bowel_Continence_Min": [ "You don't think you could hold your poop anymore!"         ],
 	"Pee_Voluntary": [
 		"You drop your $UNDERWEAR_NAME$ and pee on the ground.",
 		"Moving your $UNDERWEAR_NAME$, you take a deep breath and empty your bladder.",
@@ -117,21 +119,26 @@
 		"You take a deep breath and release your pee into your $UNDERWEAR_NAME$.",
 		"You glance around a little sheepishly as you deliberately pee your $UNDERWEAR_NAME$ like a little <boy/girl>.",
 		"You press your hands to your crotch, feeling the warmth as the sudden flood of pee comes rushing out.",
-		"You feel a blush start coming on as you focus really hard on making your $UNDERWEAR_NAME$ all soggy.",
+		"You feel a blush start coming on as you focus really hard on making your $UNDERWEAR_NAME$ nice and soggy.",
 		"You don't wanna walk all the way to a potty, so you just pee in your $UNDERWEAR_NAME$ like a little baby.",
 		"You close your eyes and relax until you can finally feel yourself wetting your $UNDERWEAR_NAME$.",
-		"You give your bladder a little squeeze so you can listen to the funny hissing noise your $UNDERWEAR_NAME$ <makes#make> when you go tinkle in <it#them>.",
-		"You think about going to the potty a little too hard, and start wetting your $UNDERWEAR_NAME$ by reflex. Oh well... Close enough?"
+		"You feel a warmth spreading at your crotch. What a soggy little <boy/girl> you are!",
+		"Your cheeks warm a little bit as you decide to just skip the trip to the potty and wet yourself instead.",
+		"You give your bladder a little extra push, and soon enough the pee starts to flow into your $UNDERWEAR_NAME$."
 	],
 	"Mess_Voluntary": [
 		"You squat a little and empty your bowels into your $UNDERWEAR_NAME$.",
 		"You concentrate and push a warm load of poo into your $UNDERWEAR_NAME$.",
 		"You hope nobody notices as you deliberately let a big poop squeeze out into your $UNDERWEAR_NAME$.",
 		"You push on the back of your $UNDERWEAR_NAME$ as <it#they> <bulges#bulge>, giggling as it squishes around.",
-		"You squat down and go potty, but \"forget\" to pull your $PANTS_NAME$ down first. Oopsies!",
-		"Your tummy aches a little, so you decide to push the bad feelings out into your $UNDERWEAR_NAME$... Ahhh, all better!",
-		"You feel yourself make a potty-face as you start to fill your $UNDERWEAR_NAME$ on purpose.",
-		"You blush deeply as you decide to poop in your $UNDERWEAR_NAME$ instead of finding a potty."
+		"You squat down and go potty, but \"forget\" to pull your $PANTS_NAME$ down first. Heehee... Oopsies!",
+		"Your tummy feels achey and full, so you decide to push the bad feeling right out into your $UNDERWEAR_NAME$... Ahhh, all better!",
+		"You feel yourself make a potty-face as you start to fill up your $UNDERWEAR_NAME$ on purpose.",
+		"You puff your cheeks and push hard. Looks like you're a little potty-pants now, aren't you?",
+		"You close your eyes, and hope nobody is looking as you lean forwards and fill your $UNDERWEAR_NAME$.",
+		"Your $UNDERWEAR_NAME$ <seems#seem> like a perfectly suitable toilet right now. Hopefully nobody minds the smell...",
+		"You blush deeply as you choose to poop your $UNDERWEAR_NAME$ right here instead of finding a potty.",
+		"Your tushy is all mushy now! ...Well? Isn't this what <a #>$UNDERWEAR_NAME$ <is#are> for?",
 	],
 	"Pee_Attempt": [
 		"You pull down your $PANTS_NAME$ and relax your bladder, but nothing comes out.",
@@ -160,9 +167,10 @@
 		"You consider changing your <wet&messy> $UNDERWEAR_NAME$ soon, but not right now. It's still warm.",
 		"You press your hand into your squishy $UNDERWEAR_NAME$. You feel like a little baby knowing you <wet&messed> <it#them>.",
 		"You feel your $UNDERWEAR_NAME$. <It's#They're> all <wet&messy>!",
-		"Your $UNDERWEAR_NAME$ <is#are> getting a little saggy, so you grab <the#their> waistband, and pull <it#them> all the way up with a soft squelch. Ahh, nice and snug!",
-		"You feel a little cozier walking around with some extra weight to your $UNDERWEAR_NAME$.",
-		"You can't help it, you <poke&squeeze> the <front&back> of your <$UNDERWEAR_NAME$&$PANTS_NAME$>. The squishy warmth of it makes you giggle."
+		"Your $UNDERWEAR_NAME$ <is#are> sagging, so you grab <the#their> waistband, and pull <it#them> back up... <Oh! It's nice and warm!&Oh! It's... very smushy back there.>",
+		"You feel a little cozier walking around with some extra <warmth&weight> in your $UNDERWEAR_NAME$.",
+		"You hope nobody can tell that you're walking around in <a #><soaked&loaded> $UNDERWEAR_NAME$...",
+		"You can't help but give the <front&back> of your $PANTS_NAME$ a little smoosh when you think nobody's looking."
 	],
 	"Wet_Accident": [
 		"You bite your lip and take a sharp breath through your nose as your bladder gives in and you flood your $UNDERWEAR_NAME$.",
@@ -180,11 +188,12 @@
 		"You can't help but relax and let your pee spurt into your $UNDERWEAR_NAME$.",
 		"Oopsies! You're wetting yourself!",
 		"You're wetting your $UNDERWEAR_NAME$! Oh well.",
-		"You notice a growing warmth before glancing down and realizing you're peeing in your $UNDERWEAR_NAME$!",
+		"You notice a growing warmth, before glancing down and realizing you're peeing in your $UNDERWEAR_NAME$.",
 		"Your $UNDERWEAR_NAME$ <sags#sag> as you wet yourself. Your cheeks flush as you realize you're just a little <boy/girl>.",
 		"Uh-oh, your bladder couldn't hold it any longer! Your face and your $UNDERWEAR_NAME$ both feel a lot warmer now...",
-		"You feel it coming and let out a little whine, but you can't stop yourself from peeing in your $UNDERWEAR_NAME$!",
-		"You desperately try to cross your legs, but it's too late! Your $UNDERWEAR_NAME$ <gets#get> soaked. Oops..."
+		"You awkwardly stand very still as you drench your $UNDERWEAR_NAME$.",
+		"You feel it coming and let out a little whine, but you can't stop yourself from peeing in your $UNDERWEAR_NAME$.",
+		"You desperately try to cross your legs, but it's too late! Your $UNDERWEAR_NAME$ <gets#get> soaked!"
 	],
 	"Mess_Accident": [
 		"Your knees bend and your body moves on its own as you find yourself pushing a warm load into the seat of your $UNDERWEAR_NAME$.",
@@ -194,23 +203,21 @@
 		"With a faint crackling sound, your poop squeezes out into your $UNDERWEAR_NAME$.",
 		"You start squirming and push a heavy load of poop into your $UNDERWEAR_NAME$.",
 		"You're almost startled as you notice it. You're pooping yourself!",
-		"You don't want to hold your poop any more and release it into your $UNDERWEAR_NAME$.",
+		"You can't hold your poop any more, so you let it all out into your $UNDERWEAR_NAME$.",
 		"You finally give in, and a heavy load of warm poop pushes into your $UNDERWEAR_NAME$.",
 		"You freeze up and look around sheepishly as your poop squishes out into your $UNDERWEAR_NAME$.",
-		"You're pooping in your pants!",
-		"You feel a warm mass spreading into your $UNDERWEAR_NAME$ and feel like a little <boy/girl>.",
+		"Oh!!! You're pooping in your $PANTS_NAME$!!",
+		"You feel a warm mass spreading into your $UNDERWEAR_NAME$, and feel like a little <boy/girl> again.",
 		"You push on the back of your $UNDERWEAR_NAME$ as <it#they> <bulges#bulge>, giggling as it squishes around.",
 		"Oopsies! Your $UNDERWEAR_NAME$ <is#are> all messy now!",
-		"You don't try and stop it any longer! You're messing yourself!",
-		"You mess your $UNDERWEAR_NAME$ like a little baby <boy/girl>!",
+		"You don't even try to stop it. You're messing yourself!",
+		"Hmm..? Feels like there's something slimy and warm in your $UNDERWEAR_NAME$ suddenly...",
 		"Your $UNDERWEAR_NAME$ <bulges#bulge> as you openly mess yourself.",
-		"You give up trying to hold it and sigh in relief as you mess your $UNDERWEAR_NAME$!",
-		"Your face scrunches up and your cheeks puff out as you can't stop yourself from pooping your $UNDERWEAR_NAME$.",
+		"You give up trying to hold it, and sigh in relief as you mess your $UNDERWEAR_NAME$!",
+		"Your face scrunches up and your cheeks puff out, as you fail to stop yourself from messing your $UNDERWEAR_NAME$.",
 		"Your tummy starts pushing all on its own. Looks like someone should've gone potty earlier!",
-		"You try to pass a little gas to ease the pressure, but mushy poop rushes out into your $UNDERWEAR_NAME$ instead!",
-		"You feel like a little baby as you lose control in your $UNDERWEAR_NAME$.",
-		"You barely get a final warning from your bowels before they start emptying out into your $UNDERWEAR_NAME$!",
-		"With a rumble, you barely have time",
+		"You expected gas, but soft poop rushes out into your $UNDERWEAR_NAME$ instead!",
+		"You barely have time to squat before the seat of your $UNDERWEAR_NAME$ starts feeling all warm and mushy.",
 		"You try to stop pooping after the first log comes out, but it's like a cork popping! Your $UNDERWEAR_NAME$ <feels#feel> a lot heavier now..."
 	],
 	"Toilet_Night": [
@@ -262,16 +269,18 @@
 		"You notice a wet spot growing on your $PANTS_NAME$, and realize your $UNDERWEAR_NAME$ leaked!",
 		"Your $UNDERWEAR_NAME$ couldn't hold the pee and it leaked out into your $PANTS_NAME$!",
 		"Your $UNDERWEAR_NAME$ <is#are> overflowing! You're leaking into your pants.",
-		"Uh-oh! Your $UNDERWEAR_NAME$ can't absorb any more! You feel pee dribbling down into your shoes. Eww..."
+		"Uh-oh! Your $UNDERWEAR_NAME$ can't absorb any more! You feel pee dribbling down into your shoes. Eww...",
+		"You realize, too late, that your waterlogged $UNDERWEAR_NAME$ <isn't#aren't> absorbing any more. Oh dear..."
 	],
 	"Poop_Overflow": [
 		"Your $UNDERWEAR_NAME$ blew out! Your pants are all poopy!",
-		"Turning bright red, you realize your pants are all messy now!",
+		"Turning bright red, you realize you had a blowout in your $UNDERWEAR_NAME$!",
 		"Your cheeks burn with shame when you discover your poop overflowed out into your $PANTS_NAME$.",
 		"You smell something really stinky and realize your poop overflowed into your $PANTS_NAME$!",
 		"You start crying as you feel a big log of poop squish out past your $UNDERWEAR_NAME$ and smear down your legs!",
 		"Oh no! Your $UNDERWEAR_NAME$ couldn't hold the poop and it came out into your $PANTS_NAME$!",
-		"Your $UNDERWEAR_NAME$ are too full! You sniffle and try to fight the tears as stinky poop squishes up your back."
+		"Your poop is starting to spill out of your $UNDERWEAR_NAME$, and get all over the inside of your $PANTS_NAME$! You really hope it washes out...",
+		"Your $UNDERWEAR_NAME$ <is#are> too full to hold any more poop! You try to fight the tears as your stinky mess squishes up your back."
 	],
 	"Debuff_Wet_Pants": [
 		"Your pants are wet!",
@@ -296,6 +305,38 @@
 			"soiled_mean": [
 				"%You're thankful nobody noticed that you're <wetting&filling> your $UNDERWEAR_NAME$."
 			],
+			//You check them
+			"check_verynice": [
+				"%You take a peek when you think nobody is looking, just in case the grown-ups have started wearing diapers behind your back...#$b#%...It could totally happen! ...Maybe!#$b#%...But it hasn't."
+			],
+			"check_nice": [
+				"%You don't see the telltale puffy bulge of a diaper...#$b#%But you suppose that makes sense. This is a grown-up, after all..."
+			],
+			"check_mean": [
+				"...Hm? What do you think you're looking at?$u"
+			],
+			"cooldown_check": [
+				"%You're pretty sure that nothing has changed since you last checked."
+			],
+			//They check you
+			"soiled_change_verynice": [
+				"Oh, poor thing. That doesn't look comfortable at all.#$b#Well, it's a good thing I carry a few of these for you, just in case.$1#$b#::104:change:baby print diaper:1::"
+			],
+			"change_verynice": [
+				"<That#Those> $UNDERWEAR_NAME$ <looks#look> just fine to me. Did you just want my attention?$1"
+			],
+			"soiled_change_nice": [
+				"Oh dear...$3#$b#...I'm sorry, I don't have anything you can change into.$2"
+			],
+			"change_nice": [
+				"...<That#Those> $UNDERWEAR_NAME$ <looks#look> clean to me. Did you just want my attention?"
+			],
+			"soiled_change_mean": [
+				"Oh, that's gross... You should go change.$2"
+			],
+			"change_mean": [
+				"Didn't your parents ever teach you basic privacy..?$3"
+			],
 			//Ground
 			"ground": [
 				"%You hope no one noticed the little <puddle&pile> you left on the ground."
@@ -316,6 +357,38 @@
 			"soiled_mean": [
 				"%You're thankful nobody noticed that you're <wetting&filling> your $UNDERWEAR_NAME$."
 			],
+			//You check them
+			"check_verynice": [
+				"Alright, alright, let's get it over with...$1#$b#%You give them a quick check, just to make absolutely sure they aren't wet or stinky... Yup, all clean here!#$b#Okay. Happy now? *chuckle*"
+			],
+			"check_nice": [
+				"Um... @?"
+			],
+			"check_mean": [
+				"Woah, back off!$a"
+			],
+			"cooldown_check": [
+				"%You're pretty sure that nothing has changed since you last checked."
+			],
+			//They check you
+			"soiled_change_verynice": [
+				"Oof. Um, @? You should definitely change. It's... pretty visible.$1#$b#I'll cover for you, don't worry! *wink*"
+			],
+			"change_verynice": [
+				"Cute $UNDERWEAR_NAME$, @.$1#$b#<It's#They're> dry, don't worry about it."
+			],
+			"soiled_change_nice": [
+				"Sheesh, I can <see&smell> from here that you wrecked that thing...$u#$b#Go ahead and get cleaned up. You can use my room, if you need."
+			],
+			"change_nice": [
+				"You don't smell.#$b#So, uh... As far as I'm willing to find out, you're... probably fine??"
+			],
+			"soiled_change_mean": [
+				"Ew, you smell like <pee&crap>!$a#$b#Geez, did you go in your $PANTS_NAME$?! That's gross! Go change!$u"
+			],
+			"change_mean": [
+				"What?! No, I won't check your pants, go bother someone else.$a"
+			],
 			//Ground
 			"ground": [
 				"%You hope no one noticed the little <puddle&pile> you left on the ground."
@@ -335,6 +408,38 @@
 			],
 			"soiled_mean": [
 				"%You're thankful nobody noticed that you're <wetting&filling> your $UNDERWEAR_NAME$."
+			],
+			//You check them
+			"check_verynice": [
+				"%You don't think anyone here still needs their diapers checked regularly.#$b#%...Well, nobody aside from yourself, that is."
+			],
+			"check_nice": [
+				"%You don't think anybody here needs a diaper check."
+			],
+			"check_mean": [
+				"%You don't think anybody here needs a diaper check...#$b#%But, if they do, it's probably better left to their mommy or daddy."
+			],
+			"cooldown_check": [
+				"%You're pretty sure nothing's changed since the last time you checked."
+			],
+			//They check you
+			"soiled_change_verynice": [
+				"%You think about finding someone who can give you a diaper change..."
+			],
+			"change_verynice": [
+				"%You think about finding someone who can check your diaper..."
+			],
+			"soiled_change_nice": [
+				"%You think about finding someone who can give you a diaper change..."
+			],
+			"change_nice": [
+				"%You think about finding someone who can check your diaper..."
+			],
+			"soiled_change_mean": [
+				"%You think about finding someone who can give you a diaper change..."
+			],
+			"change_mean": [
+				"%You think about finding someone who can check your diaper..."
 			],
 			//Ground
 			"ground": [
@@ -365,37 +470,39 @@
 				"Aw, couldn't hold it in, cutie? *giggle*$1",
 				"Having fun there?$1",
 				"Skipping a step or two, aren't we?$1",
-				"Snuck up on you, huh? I know the feeling.",
-				"%Abigail gets a mischievous glint in her eye.#$b#...I wonder how long it would take Mayor Lewis to notice if you buried <that#those> in his flowerbox? *giggle*",
-				"I thought farmers were supposed to <water&fertilize> their plants... Seems you missed the 'L' again, @.$1",
-				"All done <watering&fertilizing> your pants, @?$1",
+				"Snuck up on you, huh? I know the feeling.$4",
+				"...Are you challenging me? *smirk*",
+				"%Abigail looks at you with a mischievous glint in her eye.#$b#...I wonder how long it would take Mayor Lewis to notice if somebody buried <that#those> in his flowerbox? *chuckle*$4",
+				"I'm pretty sure farmers are supposed to <water&fertilize> their plants, @... <Looks&Smells> to me like you forgot the 'L'!$1",
+				"All done '<watering&fertilizing>' your pants, @?$1",
 				"Hmm, should I go tell one of the grown-ups you had an accident?#$b#Nawww, don't worry, I won't.$1",
-				"Hey, you never gotta hold it in on my account. I promise I don't give a crap.<&#$b#.. It looks like you might've, though! *giggle*$1>"
+				"Hey, you never gotta hold it in on my account. I promise I don't give a crap.<&#$b# ...But it sure smells like you did just now! *giggle*$1>"
 			],
 			"soiled_nice": [
 				"Hmm, should I go tell one of the grown-ups you had an accident?#$b#Nawww, don't worry, I won't.$1",
-				"Hey, you don't need to hold it on my account, I don't give a crap.<& ...Well, I guess YOU did, hehe.$1>",
+				"Hey, you don't need to hold it on my account, I don't give a crap.<& ... Well, it seems like you might have.$1>",
 				"Yeah, I get it. Bathrooms are overrated.",
-				"I thought farmers were supposed to <water&fertilize> their plants? Seems like you missed the 'L' again.",
+				"I thought farmers were supposed to <water&fertilize> their 'plants'... <Looks&Smells> like you missed an 'L' there.",
 				"You skipped a step or two there, buddy.",
 				"I won't snitch on you, so you'd better not tattle on me, alright?"
 			],
 			"soiled_mean": [
 				"Yeesh, dude - I can <hear you going&smell that> from here.$3",
-				"I thought farmers were supposed to <water&fertilize> their plants? Seems you missed the 'L'...$9",
+				"I thought farmers were supposed to <water&fertilize> their 'plants'? Seems you might've missed an 'L'...$9",
 				"If you <leak in&stink up> Dad's store, I'm not covering for you.$3"
 			],
 			//You check them
 			"check_verynice": [
 				"%Abigail gives you an impish smile and shows off her freshly packed diaper.#$b#You gonna do something about it, @?$4",
-				"%You ask if Abigail's had an accident, and she giggles mischievously.#$b#Nope, but I -did- use my diaper a lot...$1#$b#Why do you ask, @? You wanna change me that badly?$1",
-				"%Abigail drops a clean diaper next to you and crosses her arms.#$b#Change. Now.$5#$b#.........$5#$b#*sigh* ...please? It's yucky and I -really- don't wanna have to do it myself...$2#$b#%You oblige, quickly cleaning and changing a furiously-blushing Abigail.",
-				"%You notice Abigail squirming, and ask if she needs to go use the potty.#$b#Hmm... good idea, @!$9#$b#Abigail looks you straight in the eyes and smirks. You hear a loud hissing under her diaper.#$b#...You were saying?",
-				"%You notice Abigail squirming, and ask if she needs to go use the potty.#$b#Hmm... good idea, @!$9#$b#Abigail grins at you, and you watch as her black jeans bloom with shiny wetness.#$b#...You were saying?$4",
+				"%You ask if Abigail's had an accident, and she giggles mischievously.#$b#Nope! But I did use my diaper a whole lot!$1#$b#...Why do you ask, @? You wanna change me that badly? *giggle*$1",
+				"%Abigail drops a clean diaper next to you and crosses her arms.#$b#Change. Now.$5#$b#.........$5#$b#*sigh* .....Please? ...It's yucky and I really don't wanna have to do it myself...$2#$b#%You oblige, and quickly change a furiously-blushing Abigail.",
+				"%You notice Abigail squirming, and suggest that maybe she should go to the bathroom.#$b#Hey, good idea, @!$1#$b#%Abigail scrunches her face up, and you hear a quiet mushy crackling.#$b#Hahh... So, you were saying?$4",
+				"%You notice Abigail squirming, and offer to walk with her to the bathroom.#$b#Oh, didn't you know? There's actually one right here...#$b#%Abigail looks you straight in the eyes and smirks. You hear a loud hissing in her diaper.#$b#...Pretty convenient, huh?$4",
+				"%You notice Abigail squirming, and ask if she wants to go to the potty.#$b#Hmm... Yeah, I think I will!$1#$b#%Abigail grins at you, and you realize a wet spot is blooming at the crotch of her dark jeans.#$b#...Hm? That wasn't what you meant? Maybe you gotta be more careful with your words, then! *giggle*$4",
 				"Hmm? Change? Whatever could you mean, @?#$b#%Abigail smiles sweetly, and discreetly shows you a glimpse of her clean purple undies.",
 				"Oh, @... you'd know if I needed a change.#$b#%Abigail winks, and gently tugs her waistband out to reveal a pair of purple big-girl undies.",
 				"%You ask to check Abigail. She grins and tugs her waistband out to show you a pair of soggy purple undies.#$b#%...You tell her she should probably change.#$b#Yeah? Make me.",
-				"%You ask to check Abigail. She grins and tugs her the back of her waistband out to show you a pair of messy purple underpants.#$b#%...You tell her she really needs a change.#$b#Make me.$4"
+				"%You ask to check Abigail. She grins and tugs her the back of her waistband out to show you a pair of messy purple underpants.#$b#%...You tell her she REALLY needs a change.#$b#*giggles* Yeah? Make me.$4"
 			],
 			"check_nice": [
 				"%You tell Abigail that her diaper looks pretty full.#$b#Yeah? And? ...I'll change it when I wanna! You can't tell me what to do.$3",
@@ -404,7 +511,7 @@
 				"Mmm... no. You can't tell me what to do.",
 				"Tch. Back off, I'm dry.$3#$b#You wanna prove otherwise? Then come back with a warrant, diaper-cop!$5",
 				"%You try to sneak a quick check when you think Abigail isn't paying attention...#$b#%...Oops. Looks like Abigail is actually wearing a pair of regular big-girl undies right now...#$b#%She grins smugly as you flush with embarassment.",
-				"...Oh? Does it look like I'm wearing a diaper to you, @?#$b#%Abigail shifts her jacket aside a little, flaunting an obviously un-padded posterior."
+				"...Oh? Does it look like I'm wearing a diaper to you, @?#$b#%Abigail shifts her jacket aside, flaunting an obviously un-padded posterior."
 			],
 			"check_mean": [
 				"What's under MY pants? None of your business, that's what!$5",
@@ -416,18 +523,18 @@
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"%You ask Abigail for a change.#$b#Aye-aye, cap'n. *giggle*$1#$b#::123:change:space diaper:1::",
-				"Well, I coooould change <it#them> for you... but I don't know if I wanna...#$b#$y 'Abigail sticks her tongue out at you_Please?_Fine, fine, if you're gonna look at me with those big sad puppy-dog eyes...*::101:change:space diaper:1::_Well, maybe I don't want you to!!_Oh? So you're just showing off then?*Well, I give it a ten out of ten, little <buddy/cutie>.$1'",
-				"%Abigail assesses your <wet&messy> $UNDERWEAR_NAME$.#$b#$y 'Hmmm, does the little baby <boy/girl> really need a change? REALLY really?_Yes!_%Abigail pretends to think about it for a long moment*Oh, fine, I'll be nice this time.$1*::123:change:space diaper:1::_...N-no..._Alright, then I won't!$1_I'm not a baby!!_Oh? Well, then maybe you're ready wear these, then?$1*::121:change:polka dot panties:1::'",
+				"%You ask Abigail for a change.#$b#*giggle* ...Aye-aye, cap'n.#$b#::123:change:space diaper:1::",
+				"Well, I coooould change <it#them> for you... but I don't know if I wanna...#$b#$y 'Abigail sticks her tongue out at you_Please?_Fine, fine, if you're gonna look at me with those big sad puppy-dog eyes...*::101:change:space diaper:1::_Well, maybe I don't want you to!!_Oh? So, you're just showing off?*Well, then I give it a ten out of ten, little <buddy/cutie>.$1'",
 				"%You ask Abigail for a change. She giggles mischievously.#$b#Let me consider it...#$b#...$9#$b#...Okay, maybe you deserve it this time.#$b#::122:change:space diaper:1::",
 				"%You ask Abigail for a change. She giggles mischievously.#$b#Let me consider it...#$b#...$9#$b#...Mmmmmm, no. Try a little harder. *smirk*",
-				"%Abigail smiles innocently when you ask for a change.#$b#Mmmmmm, nah, I think <that#those> <soggy&mushy> little $UNDERWEAR_NAME$ can wait a -little- bit longer.",
+				"%Abigail smiles innocently when you ask for a change.#$b#Mmmmmm, nah, I'm pretty sure <that#those> <soggy&mushy> little $UNDERWEAR_NAME$ can wait a little while longer.",
 				"You want a change?#$b#Hmmm, I dunno... What's in it for me?$9",
-				"Are you suuuuure you need a change?$6#$b#...Well, if you're THAT desperate, you can use these! *giggle*$1#$b#::124:change:dinosaur undies:1::"
+				"Are you suuuuure you need a change?$6#$b#...Well, if you're THAT desperate, you can use these! *giggle*$1#$b#::124:change:dinosaur undies:1::",
+				"%Abigail takes a close look your <wet&messy> $UNDERWEAR_NAME$.#$b#$y 'Hmmm, does the little baby <boy/girl> really need a change? REALLY really?_Yes really!!!_%Abigail pretends to think about it for a long moment...*Hmmmm... Alright, you've convinced me!$1*::123:change:space diaper:1::_...N-no..._Oh, alright then. I guess I won't!$1*%Abigail giggles knowingly as she puts the diaper back in her bag._I'm not a baby!!_Oh? Because your $UNDERWEAR_NAME$ says otherwise...*But if you think you're such a big <boy/girl>, then how about you just TRY to keep these clean for the rest of the day?$1*::121:change:polka dot panties:1::'"
 			],
 			"change_verynice": [
-				"Hehe, okay, fine. I'll admit, it's kinda cute when you gloat.$1",
-				"%Abigail pokes your $UNDERWEAR_NAME$.#$b#Well, you're all clean, but this is fun too."
+				"Hehe, okay, fine. I'll admit, it's kinda cute when you gloat about being dry.$1",
+				"%Abigail pokes your $UNDERWEAR_NAME$.#$b#Well... you're all clean, but this is fun too."
 			],
 			"soiled_change_nice": [
 				"Um... so, I don't have any extras right now.$9#$b#But you can use my room if you need a spot to change out of that thing.$1",
@@ -448,18 +555,18 @@
 				"Look. Just cause this doesn't gross me out? Doesn't mean I'm gonna do anything about it.$9"
 			],
 			"change_mean": [
-				"Congratulations? You have a butt, and it is, in fact, attached to your body... just like everybody else.$3",
-				"*gasp* Dear god, it's hideous--$7#$b#Wait, nope, false alarm. This is literally nothing.$3"
+				"Congratulations? You have a butt, and it is - in fact - attached to your body. Just like everybody else.$3",
+				"*gasp* Dear god... it's hideous--$7#$b#*rolls eyes* Nah, false alarm. This is literally nothing.$3"
 			],
 			//Ground
 			"ground": [
 				"Had to go that badly, huh?",
 				"Hehe, yeah! Stick it to the man!$1",
 				"Don't worry, I saw nothing. *wink*",
-				"I dunno, I'd probably have kept that to my pants if I were you.$9"
+				"I dunno, I'd probably have kept that to my pants if I were you.$1"
 			],
 			"ground_attempt": [
-				"Mmm, cute try, but you're pretty bad at this... Maybe just stick to diapers.$1"
+				"Mmm, cute try, but you're pretty bad at this... Maybe just stick to diapers?$1"
 			]
 		},
 		//																																																																
@@ -568,55 +675,52 @@
 			],
 			//Ground
 			"ground": [
-				"$FARMERNAME$! Living in the country doesn't make us barbarians!$3",
-				"That's not okay! Use a toilet!$3"
+				"$FARMERNAME$! Living in the country doesn't make us barbarians!$u",
+				"That's not okay! Use a toilet!$u"
 			],
 			"ground_attempt": [
-				"$FARMERNAME$! What are you doing!$3"
+				"$FARMERNAME$! What are you doing!$u"
 			]
 		},
 		//																																																									
 		"clint": {
 			"soiled_verynice": [
-				"Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?",
-				"I think little $NICKNAME$ needs <his/her> diaper changed!",
-				"I know a little farmer who needs <his/her> diaper changed!$1"
+				"Um...$2#$b#%Clint awkwardly shuffles away from you."
 			],
 			"soiled_nice": [
-				"You poor thing! Did you just <wet&mess> yourself?",
-				"Does someone need a diaper change?"
+				"*muttering* ...Gross...$3#$b#%Clint steps slightly back from you."
 			],
 			"soiled_mean": [
-				"You <&really >might want to go change your pants.$u"
+				"Urgh. No. Don't do that near me again.$3"
 			],
 			//You check them
 			"check_verynice": [
-				"What, are you curious what underpants look like?"
+				"You mind your business, and I'll mind mine.$3"
 			],
 			"check_nice": [
-				"I'll be fine, you worry about your own pants."
+				"I'll be fine, you worry about your own pants.$2"
 			],
 			"check_mean": [
-				"What do you think you're looking at?$u"
+				"What do you think you're looking at?$3"
 			],
 			"cooldown_check": [
 				"%Things haven't changed since the last check."
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"Oh, you have something to show me?#$b#Oh! well, you sure are <wet&messy>!$h#$b#I guess that's no surprise. Why don't you head into my room for some privacy and clean yourself up."
+				"Ugh. Just take this and get cleaned up already.$2#$b#::180:give:Joja diaper:1::"
 			],
 			"change_verynice": [
-				"<That#Those> $UNDERWEAR_NAME$ <looks#look> just fine to me. Did you just want my attention?"
+				"%Clint ignores your request for a diaper-check.#$b#I'm busy."
 			],
 			"soiled_change_nice": [
-				"Oh, yeah, you sure are <wet&messy>... Look, if you need a private place to change, you can use my room.#$b#Just make sure to clean up after yourself."
+				"%Clint pinches his nose.#$b#Ugh. Well, you sure are <wet&messy>...$2#$b#I guess that's no surprise.$2#$b#Look, if you need a private place to change, you can use my room. Just don't make a mess in there."
 			],
 			"change_nice": [
-				"Well, your $UNDERWEAR_NAME$ seem dry to me.#$b#... I guess I check your pants now... Huh."
+				"%Clint ignores your request for a diaper-check.#$b#I'm busy.$3"
 			],
 			"soiled_change_mean": [
-				"Oh gross. Go figure it out yourself.$u"
+				"Urgh, gross. Figure it out yourself.$3"
 			],
 			"change_mean": [
 				"Keep it to yourself...$u",
@@ -660,7 +764,7 @@
 				"I actually started keeping diapers in the lab to experiment with the sodium polyacrylate. You can have one if you need it.#$b#::200:give:Joja diaper:1::"
 			],
 			"change_verynice": [
-				"You look dry enough to me. Or is that new technology that's so efficient I can't tell how much you've soiled it!$1#$b#No, wait, <that's a#those are> normal $UNDERWEAR_NAME$.$2"
+				"You look dry enough to me. Or is that a new technology that's so efficient I can't tell how much you've soiled it..?$1#$b#...No, <that's a#those are> normal $UNDERWEAR_NAME$.$2"
 			],
 			"soiled_change_nice": [
 				"I don't think I can help with that, but if you need a spot to take care of it yourself you can use my room.$5#$b#I'm sure Robin wouldn't mind."
@@ -684,59 +788,54 @@
 			]
 		},
 		//																																																									
-		"Dwarf": {
+		"dwarf": {
 			"soiled_verynice": [
-				"Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?",
-				"I think little $NICKNAME$ needs <his/her> diaper changed!",
-				"I know a little farmer who needs <his/her> diaper changed!$1"
+				"Ah! There's that familiar foul smell of my favorite customer! *chuckle*#$b#Hey, so long as you've got the gold, I can turn a blind-- Erm... Nose? ...To anything, my friend!"
 			],
 			"soiled_nice": [
-				"You poor thing! Did you just <wet&mess> yourself?",
-				"Does someone need a diaper change?"
+				"My people are able to recognize each other by scent alone. A useful quality, in the dark.#$b#Your kind are typically not so... distinctive... as you."
 			],
 			"soiled_mean": [
-				"You <&really >might want to go change your pants.$u"
+				"..."
 			],
 			//You check them
 			"check_verynice": [
-				"What, are you curious what underpants look like?"
+				"...Are you still curious as to what dwarven undergarments look like?#$b#It's just the same as what many of your own kind wears.#$b#Except for you, I suppose."
 			],
 			"check_nice": [
-				"I'll be fine, you worry about your own pants."
+				"Eh? Are you curious what dwarven undergarments look like?#$b#That's a bit personal, isn't it?"
 			],
 			"check_mean": [
-				"What do you think you're looking at?$u"
+				"%The Dwarf hisses at you when you try to get behind them.#$b#%...Seems you won't be checking anything here."
 			],
 			"cooldown_check": [
 				"%Things haven't changed since the last check."
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"Oh, you have something to show me?#$b#Oh! well, you sure are <wet&messy>!$h#$b#I guess that's no surprise. Why don't you head into my room for some privacy and clean yourself up."
+				"Here. I took these from the surface! They're the same type of garment you wear, right?#$b#::113:give:Joja diaper:1::"
 			],
 			"change_verynice": [
-				"<That#Those> $UNDERWEAR_NAME$ looks just fine to me. Did you just want my attention?"
+				"The smell of your... incidents... is not one I can easily ignore.#$b#If you needed assistance, trust me, I would know."
 			],
 			"soiled_change_nice": [
-				"Oh, yeah, you sure are <wet&messy>... Look, if you need a private place to change, you can use my room.#$b#Just make sure to clean up after yourself."
+				"*sniff* Eugh! That's worse than the bug-nests in the mines.#$b#I'm not going near that."
 			],
 			"change_nice": [
-				"Well, your $UNDERWEAR_NAME$ seem dry to me.#$b#... I guess I check your pants now... Huh."
+				"...What?"
 			],
 			"soiled_change_mean": [
-				"Oh gross. Go figure it out yourself.$u"
+				"..."
 			],
 			"change_mean": [
-				"Keep it to yourself...$u",
-				"Didn't your parents teach you basic privacy?$u"
+				"..."
 			],
 			//Ground
 			"ground": [
-				"$FARMERNAME$! Living in the country doesn't make us barbarians!$3",
-				"That's not okay! Use a toilet!$3"
+				"Please, do NOT <urinate&defecate> on the floor of my shop!#$b#...It attracts the duggies."
 			],
 			"ground_attempt": [
-				"$FARMERNAME$! What are you doing!$3"
+				"...I am unfamiliar with you humans and your customs...#$b#But, to us Dwarves?#$b#Well, that is extremely offensive, what you're doing right now."
 			]
 		},
 		//																																																									
@@ -800,48 +899,54 @@
 		"emily": {
 			//Use your diaper near them
 			"soiled_verynice": [
-				"Awww, you're so cute when you're embarrassed!$1",
-				"Where's your mommy $NICKNAME$? I think you need a change."
+				"Oh no, baby, were you holding all that in for me?$2#$b#There, there, just let it all out. We'll get you cleaned up once you're all done.$4#$b#I promise, no one's watching.",
+				"*whisper* Shh, shh... It's okay, you can't help it.#$b#%Emily gently rubs circles on your back.",
+				"Aw, c'mon now, @. You weren't even trying to make it, were you?$4",
+				"$query !LOCATION_NAME Here Saloon#Aww, @, did you give yourself a tummyache trying to hold it again?$2|Oh no! Did you <drink&eat> too much and upset your tummy, @?#$b#I'll grab the mop, okay? Don't worry about it.",
+				"$query !PLAYER_FRIENDSHIP_POINTS Current Haley 2000#Poor sweetie. I hope your tummy feels better now!$2|Uh-oh, is someone <tinkling&making pushies>?$1#$b#Heh, I thought so. Both you and my baby sister get all blushy when it's happening. It's so precious!$4#$b#...Sorry, is it weird to notice that? *chuckle*$1",
+				"$query !PLAYER_FRIENDSHIP_POINTS Current Haley 2000#Awh, don't worry. You tried to hold it in, didn't you..? That's all that matters.$4|It's okay, baby</girl>, Haley does this around the house sometimes too... *chuckle*$1#$b#But unlike my dear sister, you wouldn't be so shy about recieving a change if I noticed you getting too <leaky&stinky>, would you?$4"
 			],
 			"soiled_nice": [
-				"Did you just <wet&mess> yourself $FARMERNAME$?",
-				"Just letting you know $FARMERNAME$, you should probably change your diaper soon."
+				"Aw. Poor <boy/girl>... Do you need me to find a grown-up for you?",
+				"$query !LOCATION_NAME Here Saloon#Oh, @... Are you okay?$2|Oh gosh! Did you <drink&eat> too much, @?$2#$b#Just take it easy, okay?$3",
+				"$query !PLAYER_FRIENDSHIP_POINTS Current Haley 2000#Oh...! Be careful not to leak, @!$6|So, this is where my little sister gets it from, huh? *laughs*$1#$b#...Mmm, it might be sort of cute... if she was actually *responsible* when it came to getting cleaned up as soon as she needs it.$3#$b#...So! Are you a big responsible <boy/girl>, @?"
 			],
 			"soiled_mean": [
-				"...$5",
-				"...Did you just...$2"
+				"Urgh... Yikes!$6",
+				"$query LOCATION_NAME Here Saloon#Oh, yuck!! Don't make a mess on any of the seats!!! *glare*$5|%Emily <grimaces&covers her nose>.#$b#<&Pee-yew... >Looks like the little farmer had an accident in <his/her> pants.$6" 
 			],
 			//You check them
 			"check_verynice": [
-				"Well, if you're that curious...#$b#%They give you the smallest peek.#$b#All right, show's over$1"
+				"%Emily quickly stifles a chuckle behind her hand.#$b#Aww, baby... you want to give me a diaper check?$1#$b#Well! *giggle* ...That's... very sweet! Thank you for offering?$1#$b#%...You're starting to suspect Emily might not wear diapers... But you can never be too sure!"
 			],
 			"check_nice": [
-				"*snickers* What, you think I'm a baby?"
+				"%You're not sure if Emily is the type to wear a diaper...#$b#%...But, if she was, a flowy dress WOULD be the perfect cover..."
 			],
 			"check_mean": [
-				"Back off.$u"
+				"Hey, what do you think you're doing? *glare*$5"
 			],
 			"cooldown_check": [
 				"%Things haven't changed since your last check."
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"soiled very nice change"
+				"Aw, did you make a present for me? *giggle*$1#$b#Let's get you out of that nasty thing!#$b#::260:change:baby print diaper:1::",
+				"Oh, no! You didn't make it?$2#$b#Don't worry, I know it's hard for you. Let's go get that taken care of.$4#$b#::262:change:baby print diaper:1::"
 			],
 			"change_verynice": [
-				"<That#Those> $UNDERWEAR_NAME$ <looks#look> just fine to me, silly. Did you just want my attention?"
+				"Aww, don't worry your little head, $NICKNAME$. If you ever need a change, you can always ask me!"
 			],
 			"soiled_change_nice": [
-				"soiled nice change"
+				"$query !PLAYER_FRIENDSHIP_POINTS Current Haley 2000#Awh, @... I'm sorry, I don't keep diapers on me.|Oh, you had an accident, hmm?<$1& Oof, and a pretty bad one, too...$2>#$b#It's okay. I've learned keep a couple spares in my bag for Haley.#$b#*sigh* She can be such a scatterbrain, always forgetting to replace the ones in her purse...$3#$b#::261:change:baby print diaper:1::"
 			],
 			"change_nice": [
 				"<That#Those> $UNDERWEAR_NAME$ <looks#look> just fine to me, silly. Did you just want my attention?"
 			],
 			"soiled_change_mean": [
-				"Yuck! You smell <like pee&disgusting>! Get it away from me!$u"
+				"$query !PLAYER_FRIENDSHIP_POINTS Current Haley 2000#Yuck! You smell <like pee&disgusting>! Get it away from me!$a|Eugh! No thanks, I have enough on my hands with just Haley to deal with.$5"
 			],
 			"change_mean": [
-				"What?! No I won't check your pants, go bother someone else.$u"
+				"What?! No, I'm not going to check your pants!$a"
 			],
 			//Ground
 			"ground": [
@@ -932,7 +1037,7 @@
 			],
 			"check_nice": [
 				"What do you think you're looking at?$3",
-				"Keep you hands to yourself.$3"
+				"Keep your hands to yourself.$3"
 			],
 			"check_mean": [
 				"Back off.$3",
@@ -958,12 +1063,12 @@
 			],
 			"soiled_change_mean": [
 				"Figure it out yourself.$3",
-				"Keep you pants on.$3"
+				"Keep your pants on.$3"
 			],
 			"change_mean": [
 				"Keep it to yourself...$u",
 				"Figure it out yourself.$3",
-				"Keep you pants on.$3"
+				"Keep your pants on.$3"
 			],
 			//Ground
 			"ground": [
@@ -1003,10 +1108,9 @@
 			],
 			//You check them
 			"check_verynice": [
-				"Yeah, I'm just in undies. Gotta be professional. You know how it is.#$b#Well, I guess you don't$1",
+				"Yeah, I'm just in undies. Gotta be professional. You know how it is.#$b#Well, I guess you don't.$1",
 				"What do you think you're lookin' for?#$b#Tryin' to see if I'm takin' after my crinkliest customer?$1",
-				"I'm not wearin' anything that needs checkin', but I won't object if you want give a pat just to make sure.",
-				"Yeah, I'm just in undies. Gotta be professional. You know how it is.#$b#Well, I guess you don't$1"
+				"I'm not wearin' anything that needs checkin', but I won't object if you want give a pat just to make sure."
 			],
 			"check_nice": [
 				"Yeah, I'm just in undies. Gotta be professional. You know how it is.#$b#Well, I guess you don't$1"
@@ -1054,59 +1158,71 @@
 		"haley": {
 			//Use your diaper near them
 			"soiled_verynice": [
-				"I'm really glad you've gotten me into this whole diaper thing!$4",
+				"Aww! That face is like, so adorbs! *blush*$1",
 				"Looks like <that#those> $UNDERWEAR_NAME$ <is#are> a little <wet&messy> now! How about a changing?$1",
-				"I think my diaper's starting to sag. Can you give me a hand?$2"
+				"%Haley <&takes a few curious sniffs and >giggles at you emptying out your <bladder&tummy>.#$b#Like, right in front of me, @??$13#$b#*mumble* ......C-Cute.$4",
+				"Um, like... @? You can totally borrow from my closet if you ruin your $PANTS_NAME$, by the way.#$b#I donate clothes all the time, but they just keep piling up again! Heehee.$1",
+				"You know, I'll admit it. Maybe gross things CAN be fun sometimes...$13",
+				"$query !PLAYER_FRIENDSHIP_POINTS Current Emily 2000#Heh. Don't let Emily catch you, she hates it when I don't try to make it.$13|Oof, feels good to let it out, huh?$4#$b#My big sis has no clue what she's missing out on! *giggle*$1"
 			],
 			"soiled_nice": [
-				"<That#Those> $UNDERWEAR_NAME$ <is#are> kind of cute. Where can I get <one#some>?$4",
-				"I think you might be leaking a little!$1"
+				"Soooo, like... hypothetically... what colors do those diapers come in?$13",
+				"I think you might be leaking a little!$13"
 			],
 			"soiled_mean": [
-				"Diapers are NOT in fashion, and neither is <peeing&pooping> your pants like a baby!$u",
-				"Like, eww. Why is everyone in this town so gross?!$u",
-				"I was gonna tell you to change your clothes because of how unstylish they are, but it looks like you need your diaper changed more, you big baby!$u"
+				"Diapers are NOT in fashion, and neither is <peeing&pooping> your pants like a baby!$3",
+				"Like, eww. Why is everyone in this town so gross?!$3",
+				"I was gonna tell you to change your clothes because of how unstylish they are, but it looks like you need your diaper changed more, you big baby!$3"
 			],
 			//You check them
 			"check_verynice": [
-				"Well, if you're that curious...#$b#%They give you the smallest peek.#$b#All right, show's over$1"
+				"%Haley proudly lifts her skirt to show a clean pink diaper.#$b#Hmph. Easy!$11",
+				"%Haley bashfully lifts her skirt to show a clean white diaper with cartoon prints on it.#$b#Ugh... It was my sister's choice, not mine.$3",
+				"%Haley nervously lifts her skirt to show a wet diaper with a pawprint design.#$b#I-I was totally going to change it like... now...?$2",
+				"%Haley cautiously lifts up the back of her skirt to show you. ...Wow. That's a full diaper.#$b#U-Umm. How bad is it? I kinda lost track of how many times I...$8#$b#%Haley gives her diaper a tentative grope.#$b#......Wuh-oh.$12",
+				"%You give Haley a quick diaper check. All clean!#$b#Psh! Like there could be any doub-$13#$b#%...Haley awkwardly trails off as you feel the front of her diaper suddenly getting warm against your hand.#$b#...Uuuh... H-Heh... u-umm...$12#$b#*wince* ...Nevermind.$2",
+				"I think my diaper's starting to sag. Can you give me a hand?$2#$b#%...You give Haley a quick change, and she sighs with relief.#$b#...I'm really glad you've gotten me into this whole diaper thing, @.$4",
+				"%You give the back of Haley's diaper a firm smoosh, and she giggles airily.#$b#That feels SO weird, @!$1#$b#Ugh, yeah, whatever. I guess I did mess a little...$13#$b#%You take Haley aside, wipe her down thoroughly, and give her a change.#$b#You know, I .$4",
+				"%You see the pale white fabric of a sodden diaper peeking out from under Haley's skirt.#$b#%The moment Haley realizes what you're staring at, she gives it a tentative poke and her face flushes bright-red.#$b#Oh! Um... Oopsies... I'll, like, take care of it in just a minute!!!$12"
 			],
 			"check_nice": [
-				"*snickers* What, you think I'm a baby?"
+				"%You don't think Haley would let you check her yet, even if she was wearing a diaper..."
 			],
 			"check_mean": [
-				"Back off.$u"
+				"Back off!$a"
 			],
 			"cooldown_check": [
 				"%Things haven't changed since your last check."
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"soiled very nice change"
+				"Looks like we've got a <soggy&stinky> little cutie-patootie on our hands.$13#$b#Let's put you in something nice and cute, okay?$1#$b#::340:change:heart diaper:1::",
+				"You too?$13#$b#...Hey. Wanna see if we could get Emily to change us both? *giggle*$1#$b#Joking, joking! I can be a big girl for like, five minutes to change a <soggy&poopy> diaper or two.$4#$b#::341:change:pawprint diaper:1::",  
+				"Woah.$8#$b#Bestie! You totally <peed&pooped> your pamps!$12#$b#Like... okay, sure, I guess I've sat in worse. But that's gonna give you a rash! And I won't stand for it!#$b#::342:change:heart diaper:1::",
+				"Oh! You need a change?$8#$b#For sure, I'll help!$11#$b#::343:change:lil swabbies:1::"
 			],
 			"change_verynice": [
-				"<That#Those> $UNDERWEAR_NAME$ <looks#look> just fine to me, silly. Did you just want my attention?"
+				"<That#Those> $UNDERWEAR_NAME$ <is#are> totally adorable on you.#$b#Oh! You're asking me like, do you need to change..?#$b#Nope, you're all good</, girl>!$1"
 			],
 			"soiled_change_nice": [
-				"soiled nice change"
+				"Um, that's like... kinda yucky, isn't it?<$2&$12>#$b#I don't wanna touch something that has <pee&poop> on it.$2#$b#But, like, you can totes use our bathroom to clean up any time! Emily won't mind, I'm sure!"
 			],
 			"change_nice": [
-				"<That#Those> $UNDERWEAR_NAME$ <looks#look> just fine to me, silly. Did you just want my attention?"
+				"<That#Those> $UNDERWEAR_NAME$ <is#are> kind of cute, actually...$4#$b#Um, where exactly do you get these? ...Just curious, I mean!$13"
 			],
 			"soiled_change_mean": [
-				"Yuck! You smell <like pee&disgusting>! Get it away from me!$u"
+				"Yuck! You smell <like pee&disgusting>! Get away from me!$u"
 			],
 			"change_mean": [
-				"What?! No I won't check your pants, go bother someone else.$u"
+				"What?! No I won't check your pants, you big baby! Go bother someone else.$3"
 			],
 			//Ground
 			"ground": [
-				"Eww. Is that normal in the city?$5",
 				"What... Ugh!$5",
 				"Did you just <pee&poop> on the ground? Gross!$5"
 			],
 			"ground_attempt": [
-				"What... Put your pants back on!$5"
+				"What?? Put your pants back on!$5"
 			]
 		},
 		//																																																													
@@ -1133,7 +1249,7 @@
 				"Oh. That's certainly a symptom...$8",
 				"My office is supposed to be sterile...$5",
 				"I can see your medical history is accurate.$2",
-				"%Harvey tries not to pay what happened any attention. His awkward glasses adjustment gives him away.",
+				"%Harvey tries not to pay what happened any attention. His awkward glasses-adjustment gives him away.",
 				"%Harvey clears his throat.#$b#U-uhmm. There's 'supplies' at Pierre's if you need them.$7"
 			],
 			//You check them
@@ -1172,9 +1288,16 @@
 			],
 			"change_mean": [
 				"W-we don't offer that service at the clinic.$7"
+			],
+			//Ground
+			"ground": [
+				"@, you're supposed to be wearing protective underwear for a reason.$5#$b#If you cannot make it to a toilet, then use them instead.$5"
+			],
+			"ground_attempt": [
+				"What?? Put your pants back on!$5"
 			]
 		},
-		//																																																													
+		//																																																														
 		"jas": {
 			//Use your diaper near them
 			"soiled_verynice": [
@@ -1204,7 +1327,7 @@
 				"#$p 102#%You consider finding someone you can check.|%After you ask, she lifts her dress to peek under it.#$b#A-Aunt Marnie!$2",
 				"#$p 102#%You consider finding someone you can check.|%After you ask, she lifts her dress and lets you peek under it. She's very wet.#$b#Oh rats.$3",
 				"#$p 102#%You consider finding someone you can check.|%After you ask, she lifts her dress to peek under it.#$b#All dry!$1#$b#I'm very good at this$4#$b#%You point out the smell and her expression droops.#$b#O-ohh.$2",
-				"#$p 102#%You consider finding someone you can check.|I'm all clean, see?#$b#Jas lifts up her dress to proudly show off her clean pull up.#$b#Told you$4",
+				"#$p 102#%You consider finding someone you can check.|I'm all clean, see?#$b#%Jas lifts up her dress to proudly show off her clean pull up.#$b#Told you$4",
 				"#$p 102#%You consider finding someone you can check.|%You ask Jas if she might need to use the potty.#$b#Oh yeah! Thank you!$1",
 				"#$p 102#%You consider finding someone you can check.|I already used the potty thank you very much.$4",
 				"#$p 102#%You consider finding someone you can check.|%You ask Jas if she might need to use the potty. She just shrugs and carries on."
@@ -1279,7 +1402,7 @@
 			"check_verynice": [
 				"You want to check my diaper?#$b#Don't be silly, I'm not the baby.$1",
 				"You want to check my diaper? You silly goose.$1#$b#I think it might be YOUR $UNDERWEAR_NAME$ that needs a check.#$b#%Jodi pulls you forward a little and reaches behind you, pulling your waistband back dramatically.",
-				"%You imagine Jodi wearing a diaper and it makes you giggle.#$b#Well don't you look like a happy little <boy/girl>.$1#$b#What're you thinkin' about?"
+				"%You imagine Jodi wearing a diaper and it makes you giggle.#$b#Well, don't you look like a happy little <boy/girl>?$1#$b#What're you thinkin' about?"
 			],
 			"check_nice": [
 				"You want to check my diaper?#$b#Don't be silly, I'm not the baby.$1",
@@ -1384,54 +1507,49 @@
 		//																																																									
 		"krobus": {
 			"soiled_verynice": [
-				"Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?",
-				"I think little $NICKNAME$ needs <his/her> diaper changed!",
-				"I know a little farmer who needs <his/her> diaper changed!$1"
+				"Ah, the smell of home!$8"
 			],
 			"soiled_nice": [
-				"You poor thing! Did you just <wet&mess> yourself?",
-				"Does someone need a diaper change?"
+				"Oh, oh, let me write that down...#$b#My human behavior research has been difficult without a regular subject to track.$8"
 			],
 			"soiled_mean": [
-				"You <&really >might want to go change your pants.$u"
+				"..?"
 			],
 			//You check them
 			"check_verynice": [
-				"What, are you curious what underpants look like?"
+				"$query !LOCATION_NAME Here MovieTheater#%Krobus doesn't seem to be wearing anything for you to check.|%You hear a distinct crinkling under Krobus's trenchcoat.#$b#I made sure my human disguise was as accurate as possible!$9#$b#Well, almost... I haven't used it yet...$9#$b#Maybe during the movie.$9"
 			],
 			"check_nice": [
-				"I'll be fine, you worry about your own pants."
+				"$query !LOCATION_NAME Here MovieTheater#%Krobus doesn't seem to be wearing anything for you to check.|%Krobus doesn't seem to be wearing a diaper under his trenchcoat.#$b#Oh... I knew I was forgetting a part of my human disguise...$9"
 			],
 			"check_mean": [
-				"What do you think you're looking at?$u"
+				"$query !LOCATION_NAME Here MovieTheater#%Krobus doesn't seem to be wearing anything for you to check.|%Krobus doesn't seem to be wearing a diaper under his trenchcoat."
 			],
 			"cooldown_check": [
 				"%Things haven't changed since the last check."
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"Oh, you have something to show me?#$b#Oh! well, you sure are <wet&messy>!$h#$b#I guess that's no surprise. Why don't you head into my room for some privacy and clean yourself up."
+				"<That#Those> look<s#> quite comfortable, @.$1"
 			],
 			"change_verynice": [
-				"<That#Those> $UNDERWEAR_NAME$ <looks#look> just fine to me. Did you just want my attention?"
+				"I appreciate the human ingenuity of having a bathroom in your pants.$1"
 			],
 			"soiled_change_nice": [
-				"Oh, yeah, you sure are <wet&messy>... Look, if you need a private place to change, you can use my room.#$b#Just make sure to clean up after yourself."
+				"If you need somewhere to change... my shop is mostly dry.#$b#I don't mind!$1"
 			],
 			"change_nice": [
-				"Well, your $UNDERWEAR_NAME$ seem dry to me.#$b#... I guess I check your pants now... Huh."
+				"I see you've kept your $UNDERWEAR_NAME$ clean for now, @.#$b#Hmm... This anomaly certainly muddles up my human behavior research data...$2"
 			],
 			"soiled_change_mean": [
-				"Oh gross. Go figure it out yourself.$u"
+				"Do you really need to change? It doesn't bother me...$3"
 			],
 			"change_mean": [
-				"Keep it to yourself...$u",
-				"Didn't your parents teach you basic privacy?$u"
+				"I don't see anything wrong..."
 			],
 			//Ground
 			"ground": [
-				"$FARMERNAME$! Living in the country doesn't make us barbarians!$3",
-				"That's not okay! Use a toilet!$3"
+				"$query !LOCATION_NAME Here Sewer#Hmm... Isn't this the wrong place for that?$3|Be careful not to slip!$1#$b#...Oh, don't look so shy. It's a sewer! You're allowed to do that here!$7"
 			],
 			"ground_attempt": [
 				"$FARMERNAME$! What are you doing!$3"
@@ -1441,56 +1559,51 @@
 		"leah": {
 			//Use your diaper near them
 			"soiled_verynice": [
-				"%Leah giggles childishly at the noisy <hissing&crackle> in your $UNDERWEAR_NAME$.",
-				"It's OK, $NICKNAME$! I got distracted earlier and did that too.$1",
-				"Golly, you sure do <pee&poop> in your $PANTS_NAME$ a lot, $NICKNAME$! *giggle*$1",
-				"Heehee! Your face is all scrunchy! Little $NICKNAME$ has a case of the <piddly-pants&grumpy-dumpies>!$1",
-				"Hehe, it sure is convenient to wear your bathroom, huh, $NICKNAME$?$1",
-				"%Leah squirms a little as you noisily <wet&mess> your $UNDERWEAR_NAME$.#$b#$NICKNAME$!!! Don't go potty so close to me!! You're gonna make me need to <tinkle&make pushies> too!! *pout*$2",
-				"%Leah sneaks up behind you and openly takes a peek down your waistband, watching raptly as your diaper <swells up&bulges out>.#$b#Ohh...$6#$b#...Hey $NICKNAME$! $NICKNAME$!! Can I draw this one? Is that ok? Would you mind?? It's a really fun shape!! *giggle*$1",
-				"*whisper* H-Hey, um... @? C-Could you do that a little further away?$7#$b#<*squirm*&*gurgle*> Ah, rats... too late, now I need to go to the toilet too...$2",
-				"Ah! Hang on, can you hold that face, @?$7#$b#...Oh, nevermind, there it went.$2",
-				"Hm. Cute.$1"
+				"...Oh! Is it change time?",
+				"Hehe. I get too focused all the time too. It's OK, Just don't get a rash!$1",
+				"Looks like you just made a<n& big> uh-oh...$1#$b#Um... D-Do you... need help changing?$4",
+				"%Leah tries to stifle childish giggles at the noises coming from your $UNDERWEAR_NAME$.#$b#%...She definitely needs to work on her poker face.",
+				"Hehe... Your face is all scrunchy!#$b#Looks like someone's <a little potty-pants&got the grumpy-dumpies>... *giggle*$1",
+				"%Leah watches as you <wet&stink up> your $UNDERWEAR_NAME$.#$b#%You wave at her, and she beams back at you.#$b#Hi, $NICKNAME$.$1",
+				"%Leah squirms a little as you noisily <wet&mess> your $UNDERWEAR_NAME$.#$b#*Whisper* $NICKNAME$! You're gonna make me <tinkle&poop> my pants if you keep going potty in yours right next to me!! *pout*$5#$b#Mmf... Dangit! Now I gotta go too!$6",
+				"Oh! Hang on... can you hold that face, @?$7#$b#%Leah reaches for her sketchbook and pencil.#$b#...Oh, nevermind, there it went.$2",
+				"%Leah looks up from her sketchbook and gives you a sympathetic smile.#$b#Couldn't make it? Aw, that's alright.#$b#...That's what your diapers are for, aren't they?$4",
 			],
 			"soiled_nice": [
-				"Uh-oh! $NICKNAME$! You're <peeing&pooping> in your big <boy/girl> $PANTS_NAME$ again! *giggle*$1",
-				"Heehee, you had an accident, $NICKNAME$!#$b#I don't <mind&like> making <soggies&stinkies> in my diaper, 'cuz <I can just keep drawing! *giggle*$1&it means I have to stop. Especially if I gotta take a bath...$2>",
-				"%You notice Leah openly staring as you go potty in your $UNDERWEAR_NAME$.#$b#%...When you wave at her she gives a big toothy grin and waves right back.",
-				"O-oh... You might wanna go change, @...$3",
-				"U-Umm... Did you... mean to do that, @?$7",
-				"Uh... @? Y-You're... supposed to go to the bathroom for that... I think...",
-				"%You notice Leah shyly sneaking glances as you go potty in your $UNDERWEAR_NAME$.#$b#%...She quickly buries her face into her sketchbook when you wave at her."
+				"*whisper* Uh-oh, $NICKNAME$! You're <peeing&pooping> in your big <boy/girl> $PANTS_NAME$ again! *giggle*$1#$b#...Uh... whoops. Inside thoughts, Leah...$6",
+				"*whisper* H-Hey, um... @? C-Could you do that a little further away?$3#$b#<*squirm*&*gurgle*> A-Ah... too late, now I need to go to the toilet too...$7",
+				"Ohhh... Okay, so thats why you were making that face!$1",
+				"%Leah tries to ignore the <sound&smell> of you <wetting&filling> your $UNDERWEAR_NAME$, but you can see her <blushing shyly&nose crinkle up a little>.",
+				"%You notice Leah shyly sneaking glances as you go potty in your $UNDERWEAR_NAME$.#$b#%...She shyly buries her face back into her sketchbook when you wave at her."
 			],
 			"soiled_mean": [
 				"Uh... @..?$6",
+				"Oh... You might wanna go change, @...$2",
+				"Umm... @? Y-You're... supposed to go to the bathroom for that... I think...$7",
 				"...Did you just...$6",
-				"Eww...$2"
+				"Eww<...$2&..!$6>"
 			],
 			//You check them
 			"check_verynice": [
-				"%You tug back Leah's waistband, but it's hard to tell if her diaper is used under all the blotches of Sky Blue, Forest Green, and Sunflower Yellow.#$b#%You give it a gentle heft, confirming your suspicions.#$b#Oh... I went in my diaper? Gosh, I didn't even notice... C-Could you, um...$7#$b#%...You change her into a fresh diaper. Leah spends the whole time busily sketching flowers into her artbook.",
-				"%Leah hums happily as she doodles something colorful in her sketchbook.#$b#%You're just about to check her diaper when she leans forward a little, and you hear her start letting out tiny grunts of effort.#$b#%Yup... It sounds like you don't need to check her anymore...#$b#*sniff* *sniff* Ohhhh... I think I need a bath now... Dang it!$2",
-				"Ummm... I'm not done yet, $NICKNAME$... Can you change me after I... *grunt*... *blrt*$4#$b#%...Little Leah is such a smart baby, using her diaper to the fullest right before a change.#$b#%Once she's all done pushing, you pull the changing mat out of Leah's bag, take her aside, and wrap her up in a fresh new diaper!",
-				"Oh... Well, um... yes, if it wouldn't be too much of a burden...#$b#%Leah bashfully slips her waistband down to show her soggy diaper.#$b#%You give her a change while she keeps working. She gives you a grateful smile when you're done.#$b#T-Thanks... I was getting itchy.$4",
-				"*giggle* OK, you can look at my diaper, $NICKNAME$!$1#$b#%Leah sticks her butt out and slips her waistband down to show off her diaper. It looks pretty saturated.#$b#I'mma change it when I finish drawing! It's not poopy, so it should be okay if I wait.$1#$b#Umm... as long as I don't leak in my pants...$4#$b#%...You give her a quick change before that can happen, meanwhile Leah pops her pacifier into her mouth and gets back to work.",
-				"%You check Leah's diaper. ...Uh-oh! Looks like someone got a little distracted!#$b#%You have her lift up a little bit so you can change her stinky diaper. Leah just quietly sucks on her pacifier and keeps painting",
-				"%You check Leah's diaper. Based on the color you immediately suspect that she's VERY messy... but one very dry and crinkly butt-pat tells you otherwise.#$b#Oh! Sorry, I should have told you I was painting with Raw Umber earlier...$4#$b#I think more of it ended up on me than on the canvas...$1",
-				"%You check Leah's diaper. It smells like paint, but she hasn't used it yet.",
-				"Nope, I'm alllllll dry! *giggle*$1",
-				"Oh... Erm, no, I'm dry...$3#$b#Ah! But, um... thanks for asking, @! I-It's... really nice that you do that for me!$4"
+				"%You tug back Leah's waistband, but it's hard to tell if her diaper is used or not beneath blotches of 'Sky Blue', 'Forest Green', and 'Sunflower Yellow'.#$b#%You give it a gentle heft, which confirms your suspicions... It's totally soaked!#$b#Oh. I went? Gosh, I-I didn't even notice! ...Could you, um...$7#$b#%...You nod, and change Leah into a fresh white diaper while she continues painting in her artbook.#$b#%...As soon as the new diaper is on, she absentmindedly wipes her fingers on it, streaking it with paint again.",
+				"%Leah hums happily as she doodles something colorful in her sketchbook.#$b#%You're just about to check her diaper when she leans forward a little, and you hear her start letting out tiny grunts of effort.#$b#%Oh dear... It sounds like you really won't need to check her anymore...#$b#*sniff* *sniff* Ohhhh... Oh no. I need a bath now... Dangit...!$2",
+				"Ummm... Yes, I-I'd like a change, b-but, I... think... Can you change me after I...$7#$b#%Leah's face turns bright red with embarassment, as the back of her diaper pushes out.#$b#%As soon as she's finished going potty, you quickly take her aside and pull the changing mat out of her bag, putting her into a nice clean diaper.#$b#T-Thanks...$4",
+				"*giggle* OK, you can look at my diaper, $NICKNAME$!$1#$b#%Leah sticks her butt out, and slips her waistband down to show off her diaper. It looks pretty saturated...#$b#...It's not poopy, so it should be okay if I wait til I'm done with this drawing.$7#$b#%...You insist on giving her a quick change anyways.",
+				"%You check Leah's diaper while she plays with some sculpting clay.#$b#%Based on the heavy brown color it's been stained, you assume she's VERY messy... but one gentle and crinkly butt-pat tells you otherwise.#$b#Oh..!$6#$b#...Hehe, sorry, @. I should have told you that I was painting with a lot of Raw Umber earlier...$4#$b#And, um... I think more of it ended up on me than the canvas...$1",
+				"Gosh, my stomach is so upset! I think I'm about to...$2#$b$...Oh, I-I'm so sorry...$6",
+				"%You do a quick sniff-check on Leah's diaper. It smells strongly like paint, but you're pretty sure she hasn't gone in it yet.#$b#%If it's a little wet, Leah doesn't seem bothered."
+
 			],
 			"check_nice": [
-				"%You ask Leah if she wants a diaper change.#$b#...Umm, no thanks! I don't wanna have to stop right now.$7#$b#%Looks like little Leah isn't going to budge. Oh well.",
-				"Yeah, you can see my diaper, $NICKNAME$! *giggle*$1#$b#%Leah sticks her butt out and pulls her pants down to show off her diaper. It looks a little droopy...#$b#Yeah, I'mma change it when I finish drawing. It's not stinky, so it's okay if I wait!$1",
-				"%Leah looks uncomfortable, but her diaper is all clean...#$b#*whine* I gotta poop!! But clean-up takes so longgg..! *pout*$2#$b#%Leah reluctantly gets up to go to the bathroom.",
-				"Um, okay... It's alright if you look, I suppose.#$b#%You take a peek beneath Leah's pants. Her diaper remains unused, for now...#$b#%...Although there are smears of paint all across the front, where she's been using it for wiping her hands off.",
-				"Oh, @-!#$b#%You're already taking a peek to see if Leah needs a change, but are met with a pair of big girl panties instead! You pull her waistband back up and look away with a blush...#$b#I meant to tell you I'm not wearing a diaper right now... Sorry...$7"
+				"Well, um, maybe I did wet... a little... while I was in the zone...$7#$b#%Leah makes sure the coast is clear, before she bashfully slips her waistband down to show a soggy diaper...#$b#%You take her aside and give her a change.#$b#...Th-thanks, @...",
+				"%You ask Leah if she wants a diaper change.#$b#...Umm, no thanks! I don't wanna have to stop right now.$7#$b#%Looks like Leah isn't going to budge. Oh well.",
+				"%Leah looks uncomfortable, but her diaper is all clean...#$b#*whine* $NICKNAME$, I gotta poop!! But clean-up takes so long... *pout*$2#$b#%Leah reluctantly scampers off to go find the nearest bathroom.",
+				"Um, okay. G-Go ahead...#$b#%You take a peek under Leah's pants. Her diaper remains unused, for now...#$b#%...Although there are many smears of paint all over the outside, where she's been wiping her hands off.",
 			],
 			"check_mean": [
-				"%You wonder if Leah wears diapers too...",
 				"Um... What?$7",
-				"Hey! Stop that!$6",
-				"Huh? What are you doing back there, @??$7"
+				"Hey! Stop that!$5",
+				"Huh? What are you doing back there, @??$6"
 			],
 			"cooldown_check": [
 				"%Things haven't changed since your last check."
@@ -1498,51 +1611,100 @@
 			//They check you
 			"soiled_change_verynice": [
 				"%Leah takes you aside and has you lay down. Once your diaper comes off, she waves a hand in front of her nose enthusiastically.#$b#Pee-yew!! You< smell like pee&'re so stinky>, $NICKNAME$! *giggle*$1#$b#::460:change:pawprint diaper:1::",
-				"%Leah takes you aside, pulls your $PANTS_NAME$ down to your knees, and gives the <front&back> of your $UNDERWEAR_NAME$ a big smush, laughing at the <squelchy noise it makes&squishy feeling>.#$b#Okie-dokie, just leave it to Leah! I'll get you out of those icky pottypants, $NICKNAME$!!$1#$b#::461:change:pawprint diaper:1::",
-				"Oh? Um, yes, I do think that's very <soggy&full>...$7#$b#Oh! Wait! You're asking for a change!! ...Yes, I can change you! Of course! J-Just, um... Follow me!$4#$b#%Leah takes you aside and pulls a changing mat, baby powder, and a diaper out of her bag.#$b#::462:change:pawprint diaper:1::",
-				"%You tug on Leah's sleeve and ask her for a change. She sets her tools down and takes a deep breath in<&, regretting it immediately>.#$b#Sure, okay... My wrists could use a break from this.#$b#%Leah looks around, and finds a clear spot to change your $UNDERWEAR_NAME$.#$b#::462:change:pawprint diaper:1::",
-				"%Leah leans back from her work, and quickly slips a hand below the waistband of your $PANTS_NAME$ to give your $UNDERWEAR_NAME$ a quick check.#$b#Oh, gosh. That's one <soggy&stinky> <boy/girl>...$6#$b#...Umm... can it wait just just a couple minutes though? I'm almost done with this.$1",
-				"%Leah stares at your <soaked&packed> diaper for a moment and pretends to hum thoughtfully, but she keeps breaking into giggle-fits.#$b#...$NICKNAME$, I'm busyyyyyyy! I gotta draw this horsey first! Horses are really hard to draw...$1#$b#You'll be okay! Besides, I don't think you REALLY mind having <a #>mushy<&, stinky> $UNDERWEAR_NAME$! Right, $NICKNAME$? *giggle*$4"
-
+				"%Leah takes you aside, pulls your $PANTS_NAME$ down to your knees, and gives the <front&back> of your $UNDERWEAR_NAME$ a big smush, giggling at  <the squelchy noise it makes&the squishy feeling>.#$b#Okie-dokie, just leave it to Leah! I'll get you out of those icky pottypants, $NICKNAME$!!$1#$b#::461:change:pawprint diaper:1::",
+				"Oh? Um, yeah... You're definitely <soggy&poopy>...$7#$b#If you want a change, I can do that for you!$1#$b#%Leah takes you aside and pulls a changing mat, baby powder, and a diaper out of her bag.#$b#::462:change:pawprint diaper:1::",
+				"%Leah stares at your <soaked&packed> diaper for a moment and pretends to hum thoughtfully, but she keeps breaking into giggle-fits.#$b#...$NICKNAME$, I'm busyyyyyyy! I gotta draw this horsey first! Horses are really hard to draw...$1#$b#You'll be okay! Besides, I don't think you REALLY mind having <a #>mushy<&, stinky> $UNDERWEAR_NAME$. Right, $NICKNAME$? *giggle*$4"
 			],
 			"change_verynice": [
-				"Heehee, you have a pretty butt, $NICKNAME$! ...And your $UNDERWEAR_NAME$ would be really fun to draw sometime...$1#$b#Umm, but <it's#they're> not soggy or stinky yet. So... you don't NEED to show me right now...$7#$b#But you still can if you wanna though!! I don't mind!!$1",
-				"%You ask Leah for a check. She tugs the waistband of your $PANTS_NAME$ back, and gives your $UNDERWEAR_NAME$ an appraising once-over.#$b#Hmm... No, <that#those> $UNDERWEAR_NAME$ <looks#look> fine to me, @.$3#$b#...Oh! But good checking, @."
+				"Heehee, you have a pretty butt, $NICKNAME$! ...And your $UNDERWEAR_NAME$ would be fun to draw sometime...$1#$b#Umm, but <it's#they're> not soggy or stinky yet? So... you don't NEED to show me right now.$1",
+				"%You tug on Leah's sleeve for a diaper check.#$b#Ooh! What are you wearing? Is it one of mine!? Lemme see!!$1#$b#...Heehee, boop!$1#$b#%Leah pokes your $UNDERWEAR_NAME$ with a giggle, before remembering she's supposed to be checking you.#$b#Oh! Right! Umm, <it's#they're> still all clean!$1",
+				"%You ask Leah for a check. She tugs the waistband of your $PANTS_NAME$ back, and gives your $UNDERWEAR_NAME$ an appraising once-over.#$b#Hmm... No, <that#those> $UNDERWEAR_NAME$ <looks#look> fine to me...$7#$b#...O-Oh, but it's good that you're keeping track!$4"
 			],
 			"soiled_change_nice": [
-				"Uh-oh! $NICKNAME$, you're supposed to tell your mommy when you have an accident!$5#$b#...It's OK though. We're friends, so... I can do it for you this time!#$b#%Leah fumbles around in her bag, getting distracted by talking about all of the cool bugs she's seen outside her house recently...#$b#::464:change:baby print diaper:1::",
-				"$NICKNAME$, you made an oopsie again..! I know it's not your fault, but your tummy must've been <sloshing&gurgling> for a while!$2#$b#Make sure to go to the potty when that happens!<& It's really hard to work when you're poopy!>$7#$b#::466:change:lavender pullup:1::",
-				"Umm, $NICKNAME$? I gotta finish my drawings... can you change yourself? Or find a grown-up..?$2#$b#If you can't, that's okay, but these are for my big-girl work! I don't wanna get distracted and forget to finish them on time!$7",
-				"<&*sniff* >...Haah, wow, um... Yep! That's <wet&messy>!$7#$b#...Give you a change!? U-Uhh... @, are you sure it's okay for me to see... a-all of that??$6#$b#Um... H-How about I j-just... give you this instead?! *blush*$6#$b#::465:give:baby print diaper:1::",
-				"%It looks like Leah is busy right now..."
+				"$NICKNAME$, you're supposed to tell a grown-up when you have an accident!$7#$b#...Aw, it's OK, I can still do it. But I've gotta stay in the zone! So, don't make me think any boring grown-up thoughts, OK?$1#$b#%Leah distractedly rummages around in her bag, talking excitedly about the pretty animals she's seen outside her cabin lately...#$b#::464:change:baby print diaper:1::",
+				"$NICKNAME$, you made an oopsie again... I know it's not your fault, but your tummy must've been <sloshing&gurgling> for a while!$2#$b#Make sure to go to the potty when that happens!<& It's hard to work when you're so stinky next to me!>$7#$b#::465:change:lavender pullup:1::",
+				"$NICKNAME$, I gotta finish my drawings, can you change yourself? Or, umm, find a grown-up?$7#$b#If you can't, then I'll do it, but these are for my big-girl work. I don't wanna get distracted and forget to finish them on time again.$2",
+				"%You tug on Leah's sleeve, and ask her for a change. She takes a deep breath and sets her tools down.#$b#...S-Sure, I can do that... I should be giving my wrists a break anyways...#$b#%Leah looks around, and finds a clear spot to change your $UNDERWEAR_NAME$.#$b#::462:change:pawprint diaper:1::"
 			],
 			"change_nice": [
-				"%Leah peeks at your $UNDERWEAR_NAME$.#$b#Y-Yeah. It's clean...$3",
-				"Ooh! What are you wearing? Is it one of mine? Lemme see!!$1#$b#...Heehee, boop!$4#$b#%Leah pokes your butt with a giggle, before remembering she's supposed to be checking you.#$b#Oh! Right! Umm, <it's#they're> still all clean! ...That's all!$1"
+				"%Leah peeks at your $UNDERWEAR_NAME$ very quickly, and can't seem to help but blush a little bit.#$b#Yep! I-It's clean!$6",
+				"%You tug on Leah's sleeve for a diaper check, and she makes sure nobody is looking before carefully peeking down your waistband.#$b#Umm... Y-Yeah, it looks clean."
 			],
 			"soiled_change_mean": [
-				"U-uhh... Oh, gosh! Would you look at that? I need to fix this shading! S-Sorry!$6#$b#%Leah buries her face into her sketchbook. Looks like she's not gonna help you...",
-				"U-Umm... s-sorry, I don't wear diapers..? So, I don't really... um... have any for you?<$2&$6>#$b#%...Leah seems to be thinking about something, but she shakes the thought away."
+				"U-Uhh... Oh, gosh! Would you look at that? I need to... fix this shading! S-Sorry!$6#$b#%Leah buries her face into her sketchbook. Looks like she's not gonna help you...",
+				"U-Umm s-sorry, I don't really... wear... diapers? So, I don't, um... have any for you..<.$2&!$6>#$b#%...Leah seems to chew over a thought for a moment, but then she shakes it off.#$b#...Sorry...$2"
 			],
 			"change_mean": [
-				"Uhhh, nope! That's a little too personal for me!$6",
-				""
+				"Uhm... n-no?! That's... a little too personal for me, I think!$6"
 			],
 			//Ground
 			"ground": [
 				"*cough* *cough* Ugh... Don't do that here, please!$6",
 				"H-Hey! Um! You're... supposed to, um...$5#$b#...<*cough*&*gag*> N-Nevermind... too late...$2",
-				"Eww, thats yucky, $NICKNAME$!$2",
-				"%Leah looks a little confused as you make a big <puddle&pile> on the ground.#$b#Umm, why'd you do that, $NICKNAME$? ...Don't you usually go in your $PANTS_NAME$ when you can't make it?$7",
-				"%Leah crosses her arms and pouts.#$b#$NICKNAME$, come onnnn! You're supposed to do that on the big <boy/girl> potty!! What would your mommy say about you going <tinkle&dookie> on the ground?$5"
+				"Eww, thats yucky.$6",
 			],
 			"ground_attempt": [
 				"H-Hey! Stop!$5#$b#...o-oh, gosh, I didn't mean to yell, sorry...$6",
-				"%Leah looks a little uncomfortable, but doesn't say anything.",
-				"Um... Why did you take your pants off, $NICKNAME$? Can't you find a potty in time?$7#$b#It doesn't look like you're going yet, so... I think you probably can!$1"
+				"%Leah looks away uncomfortably.",
+				"Um... What... Why did you take your $PANTS_NAME$ off..?$7"
 			]
 		},
 		//																																																								
+		"leo": {
+			"soiled_verynice": [
+				"#$p 102#Leo doesn't seem to notice what happened.|Oh! @, you're having potty troubles!$3#$b#Maybe Miss Penny can change you! She's very nice!$1"
+			],
+			"soiled_nice": [
+				"#$p 102#Leo doesn't seem to notice what happened.|You have a strong smell, @. Kind of like <pee&poop>...$3#$b#Is it from being a farmer? ...I don't know what farmers smell like."
+			],
+			"soiled_mean": [
+				"#$p 102#Leo doesn't seem to notice what happened.|Something smells... bad.$2#$b#Oh, it is you.$3"
+			],
+			//You check them
+			"check_verynice": [
+				"#$p 102#%You don't think anybody here needs a diaper check.|%You notice that Leo has a pull-up under his shorts.#$b#Miss Penny is trying to potty-train me because I kept having accidents during class...$3#$b#At least now I get to match all of my friends!$1"
+			],
+			"check_nice": [
+				"#$p 102#%You don't think anybody here needs a diaper check.|%You give Leo a quick check, just to make sure he hasn't had an accident in his shorts.#$b#Oh. Thanks, but you don't need to do that.#$b#I'm so fast, like a jungle tiger! I always make it to the grass outside! Haha!$1"
+			],
+			"check_mean": [
+				"#$p 102#%You don't think anybody here needs a diaper check.|%You don't think Leo would even have access to diapers, here on the island..."
+			],
+			"cooldown_check": [
+				"%Things haven't changed since your last check."
+			],
+			//They check you
+			"soiled_change_verynice": [
+				"%You think about finding someone who can give you a diaper change..."
+			],
+			"change_verynice": [
+				"%You think about finding someone who can check your diaper..."
+			],
+			"soiled_change_nice": [
+				"%You think about finding someone who can give you a diaper change..."
+			],
+			"change_nice": [
+				"%You think about finding someone who can check your diaper..."
+			],
+			"soiled_change_mean": [
+				"%You think about finding someone who can give you a diaper change..."
+			],
+			"change_mean": [
+				"%You think about finding someone who can check your diaper..."
+			],
+			//Ground
+			"ground": [
+				"#$p 102#Leo doesn't seem to notice what happened.|Oh, did you grow up in a jungle too?"
+			],
+			"ground_attempt": [
+				"#$p 102#Leo doesn't seem to notice what happened.|You should do that out in the wilderness, or the scary beasts will smell you and come get you."
+			]
+		},
+		//
+			
+		
+			
+			
 		"lewis": {
 			"soiled_verynice": [
 				"Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?",
@@ -1601,9 +1763,9 @@
 		//																																																									
 		"linus": {
 			"soiled_verynice": [
-				"...Ah. I recognize that face you're making, little sprout.$1",
+				"...Ah. I thought I recognized that face you're making, little sprout.$1",
 				"Is this how you get in touch with nature, little $NICKNAME$? Certainly a... unique method.$1",
-				"That's it, just let all your worries go, little one. ...Though, next time, perhaps you should push them into the soil instead of your $PANTS_NAME$.$1"
+				"That's it, let your worries go, little one.#$b#...Though, next time, perhaps you should push them into the soil instead of your $PANTS_NAME$...$1"
 			],
 			"soiled_nice": [
 				"It's alright little one, you can go whenever you need to when you're out here...#$b#But, er... maybe try pulling your $PANTS_NAME$ *down* next time?$1",
@@ -1615,8 +1777,8 @@
 			],
 			//You check them
 			"check_verynice": [
-				"*chuckle* A diaper? Now, why would I need one of those?#$b#My tent may not have plumbing, but in the great outdoors there's a bathroom wherever you look!$1",
-				"Aw, thanks for worrying about me, little one, but you're the only one who goes in <his/her> $PANTS_NAME$ here.$1#$b#Ah, unless this is your way of saying that I smell bad? ...Perhaps I'll take a dip in the lake tonight, just in case.$1"
+				"*chuckle* A diaper? Now, why would I need one of those?#$b#My tent may not have plumbing, but this is the great outdoors! There's a bathroom wherever you look!$1",
+				"Aw, thanks for worrying about me, little one, but you're the only one who goes in <his/her> $PANTS_NAME$ here.$1#$b#Ah, unless this is your way of saying that I smell bad?$2#$b#...Perhaps I'll take a rinse under the falls tonight, just in case.$1"
 			],
 			"check_nice": [
 				"%You're pretty sure that Linus doesn't wear diapers... but the crinkling and rustling sounds of his leaf-suit still reminds you of one."
@@ -1629,7 +1791,7 @@
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"I'm sorry, little sprout. I tried to make a diaper recipe using some simple forage, like fiber and sap, but...#$b#Well, suffice to say I think you're better off sticking with your store-bought kind. They have a much lower risk of falling apart under your $PANTS_NAME$.$1"
+				"I'm sorry, little sprout. I tried to make a diaper recipe using some simple forage, like fiber and sap, but...#$b#Well, suffice to say I think you're better off sticking with your store-bought kind. They pose a far lower risk of falling apart.$1"
 			],
 			"change_verynice": [
 				"Great job, little sprout! <That#Those> $UNDERWEAR_NAME$ <looks#look> as clean as a mountain spring!$1"
@@ -1642,16 +1804,16 @@
 				"Well, your $UNDERWEAR_NAME$ <looks#look> clean to me! I'm glad to see it, little one.$1"
 			],
 			"soiled_change_mean": [
-				"Eurgh... I'm sorry, young one, but I just don't have anything to help you with.$2#$b#I'm not exactly shopping for my supplies, least of all for something I'd have no use for.$2"
+				"Eurgh... I'm sorry, young one, but I just don't have anything to help you with.$2#$b#I don't exactly buy things from the store... least of all for things I'd have no use for, myself.$2"
 			],
 			"change_mean": [
-				"*sigh* ...I can't imagine the amount of pollution caused by mass-producing those things...$2#$b#Ah, it's not your fault young one. That's just how the world is.$2"
+				"*sigh* ...I can't imagine the amount of pollution caused by mass-producing those things...$2#$b#Ah, it's not your fault young one. That's just how the world is...$2"
 			],
 			//Ground
 			"ground": [
-				"%Linus notices you're <going tinkle&making poopies> on the ground.#$b#Better out than in, little one...$1#$b#And, that's good for the plants too.",
-				"%Linus turns away to give you privacy.#$b#...Just be very careful not to wipe yourself with poison ivy, @.#$b#It's a very unpleasant lesson to learn the hard way! *chuckle*$1",
-				"%Linus politely averts his gaze while you do your business.#$b#Make sure you're staying mindful of the wildlife and burying your business when you're all done, young one."
+				"%Linus notices you're <going tinkle&making poopies> on the ground.#$b#Oh. Well, better out than in, little one.$1#$b#...Plus, that's good for the plants.",
+				"%Linus turns away to give you privacy.#$b#...Just be very careful not to wipe yourself with poison ivy, @.#$b#It is a very unpleasant lesson to learn that the hard way. *chuckle*$1",
+				"%Linus politely averts his gaze while you do your business.#$b#Make sure you're mindful of the wildlife. Bury your business when you're all done."
 			],
 			"ground_attempt": [
 				"Err... $FARMERNAME$? It doesn't look like nature is calling... you can stop trying to answer.$2"
@@ -1661,7 +1823,7 @@
 		"marnie": {
 			"soiled_verynice": [
 				"%As you pass by Marnie, she grabs you by the wrist.#$b#Hold your horses! Something <smells&stinks>, and it ain't my animals!$3#$b#%She firmly pats your butt, squishing your <wet&messy> $UNDERWEAR_NAME$ with a sigh escaping her lips.#$b#You're such a handful @!$1",
-				"Look, $FARMERNAME$, you know that using the bathroom isn't the end of the world, right?$3#$b#Common, I know you can do it.",
+				"Look, $FARMERNAME$, you know that using the bathroom isn't the end of the world, right?$3#$b#C'mon, I know you can do it.",
 				"*Sigh* Have you made it to the potty at all today? Are you even trying?",
 				"Need to take a short bathroom break?$3#$b#Oh, you're all red now!$1#$b#You know, using the potty is a lot less embarrassing. Food for thought."
 			],
@@ -1695,9 +1857,9 @@
 			"soiled_change_verynice": [
 				"Oh you! Fine, let's go find somewhere nice for you to lie down and take a breather.#$b#::520:change:lavender pullup:1::",
 				"%You tug on Marnie's sleeve. She knows that look and immediately goes to check you.#$b#Yup, that's <wet&messy>. Did you even try? *sigh* I guess it doesn't matter. Lie down.$3#$b#::520:change:lavender pullup:1::",
-				"%You tug on Marnie's sleeve. She knows that look and immediately goes to check you.#$b#*sigh* Common $FARMERNAME$, you can do better than this. Let's get you cleaned up.$3#$b#::520:change:lavender pullup:1::",
+				"%You tug on Marnie's sleeve. She knows that look and immediately goes to check you.#$b#*sigh* C'mon, $FARMERNAME$, you can do better than this. Let's get you cleaned up.$3#$b#::520:change:lavender pullup:1::",
 				"Hold up there.$3#$b#%Marnie tugs the back of your $UNDERWEAR_NAME$ and tsks.#$b#Yup, you're <wet&messy>.#$b#::521:change:lavender pullup:1::",
-				"What've you got there?#$b#%Marnie checks you diaper quickly and efficiently.#$b#Oh $FARMERNAME$, were you even trying? Common, let's get you cleaned up.#$b#::523:change:lavender pullup:1::"
+				"What've you got there?#$b#%Marnie checks you diaper quickly and efficiently.#$b#Oh $FARMERNAME$, were you even trying? C'mon, let's get you cleaned up.#$b#::523:change:lavender pullup:1::"
 			],
 			"change_verynice": [
 				"%Marnie sees you standing nearby and takes the opportunity to give you a quick check.#$b#All clean, that's what I like to see.$1",
@@ -1731,33 +1893,37 @@
 		"maru": {
 			//Use your diaper near them
 			"soiled_verynice": [
-				"Eh, don't worry about it. There's more important things to pay attention to.$1",
-				"Had better things to do than stop right now, eh?",
-				"You really don't seem to mind <wetting&messing> yourself, do you.#$b#I guess I don't either anymore.$1"
+				"Eh, don't worry about it. There's more important things to pay attention to!$1",
+				"Had better things to do than stop right now, huh?$1",
+				"%Maru gives you a quiet little hum of approval.",
+				"%As you <let go of your pee&bend your knees and push>, Maru <blushes and grins at you&playfully waves a hand next to her nose>.#$b#Phew! <Sounds&Smells> like someone was holding that in for a while!$1",
+				"Hehe... nice.$1#$b#...Just make sure you change that before you get a rash, OK?$3",
+				"*whisper* These things sure are efficient, huh?$4",
+				"*giggle* ...You really don't seem to mind <wetting&messing> yourself, huh?$1#$b#Well... Truth be told, I don't mind doing it either.$1"
 			],
 			"soiled_nice": [
-				"Isn't that uncomfortable?$2",
+				"Isn't that... uncomfortable?$2",
 				"How are you just okay with that?$8#$b#I-I mean, not in a mean way...$9#$b#It's just... Doesn't it feel bad?$2",
-				"You really don't seem to mind <wetting&messing> yourself, do you.",
+				"You really don't seem to mind <wetting&messing> yourself, do you..?",
 				"I guess you can just do that right here... Huh...$2"
 			],
 			"soiled_mean": [
-				"Did you just!$9#$b#um...$2",
+				"Did you just..!?$9#$b#Um...$2",
 				"Just.. right here?$9"
 			],
 			//You check them
 			"check_verynice": [
-				"%Maru giggles when you ask and shows you her soaked diaper.#$b#I guess I've been in this one longer than I thought.$1",
-				"%Maru giggles when you ask and shows you her stinky diaper.#$b#I guess I've been in this one longer than I thought.$1",
-				"%Maru hardly notices when you reach over to feel how squishy her diaper is. She looks busy, you'll leave her to it.",
-				"%You can smell Maru's diaper when you pass her.#$b#You make a dramatic sniff to get her attention, but she just giggles and gets back to work.",
-				"My diaper? Oh I'm sure that isn't much of a mystery.$1#$b#%Maru wiggles her bottom at you and you can easly tell how swollen her diaper is through her overalls."
+				"%Maru giggles when you ask, and shows you her soaked diaper.#$b#I guess I've been in this one longer than I thought.$1",
+				"%Maru giggles when you ask, and shows you her stinky diaper.#$b#I guess I've been in this one longer than I thought!$1",
+				"%Maru hardly notices when you reach over to feel how squishy her diaper is.#$b#%...She looks busy. You'll leave her to it.",
+				"%You can smell Maru's diaper when you pass her.#$b#%You make a dramatic sniff to get her attention, but she just giggles and gets back to work.",
+				"My diaper? Oh, I'm sure that isn't much of a mystery.$1#$b#%Maru wiggles her bottom at you... You can easly tell how swollen her diaper is through her overalls."
 			],
 			"check_nice": [
 				"W-What!? I-I'm not...$9#$b#%You already caught the shape of her diaper through her overalls, but you're afraid of causing lasting damage if she blushes any harder."
 			],
 			"check_mean": [
-				"%You think Maru would look cute in diapers with her overalls. Though, you're pretty sure she isn't."
+				"%You think Maru would look cute in diapers with her overalls... Though you're pretty sure she isn't wearing one."
 			],
 			"cooldown_check": [
 				"%Things haven't changed since your last check."
@@ -1765,31 +1931,34 @@
 			//They check you
 			"soiled_change_verynice": [
 				"Sure, I could take a break!#$b#::540:change:space diaper:1::",
-				"Wow, you sure are <wet&messy>. Let me help you with that.#$b#::541:change:space diaper:1::"
+				"Wow, you sure are <wet&messy>! Let me help you with that.#$b#::541:change:space diaper:1::",
+				"%Maru gives your <sodden&loaded> $UNDERWEAR_NAME$ a firm smushing before giving you a succinct nod.#$b#I diagnose you with <soggy&stinky> <boy/girl> disease. And the treatment is changies!$1#$b#%Maru peels off your dirty $UNDERWEAR_NAME$ and carefully balls <it#them> up...#$b#::545:change:space diaper:1::",
 			],
 			"change_verynice": [
-				"Sure, I could take a break!#$B#Wait just a second, you don't need a change$3#$b#Are you just trying to trick me$1"
+				"Sure, I could take a break!#$b#...Wait just a second, you don't need a change!$3#$b#Are you just trying to trick me?$1",
+				"*laughing* @, you're supposed to soil your $UNDERWEAR_NAME$ BEFORE you ask me to change them.#$b#...Do you want to try that again?$4"
 			],
 			"soiled_change_nice": [
-				"W-Well... U-Ummm. I don't know if I can.$2#$b#You can change in my room if you need to though, I don't mind. honest."
+				"W-Well... U-Ummm. I don't know if I can.$2#$b#You can change in my room if you need to though, I don't mind. Honest!"
 			],
 			"change_nice": [
 				"I-I didn't realize you needed a... a...$9#$b#Wait, you're dry! Are you trying to trick me?$8"
 			],
 			"soiled_change_mean": [
-				"Yuck! You smell <like pee&disgusting>! Get it away from me!$u"
+				"Huh!? I thought you were able to change yourself, @?$9#$b#...@, if you're injured to the point that you can't do simple tasks, you need to schedule a visit with Doctor Harvey!$5"
 			],
 			"change_mean": [
-				"What? No!"
+				"Wh-what!?$9#$b#I-I mean... No??$8"
 			],
 			//Ground
 			"ground": [
-				"Eww. Is that normal in the city?$5",
-				"What... Ugh!$5",
-				"Did you just <pee&poop> on the ground? Gross!$5"
+				"$query LOCATION_IS_INDOORS Here#@!! Go use the toilet! You could get people sick, doing that!$5|@, you should really find a bathroom when you need to go.$9#$b#...O-Or, uh, wear some protection, and use that instead.",
+				"$query LOCATION_IS_INDOORS Here#Hey!! Don't contaminate my work-space!$9|U-Um... Did you just <pee&poop> on the ground??#$b#<I guess that's... probably better than soaking your pants...$2&If that happens again, you should keep it contained to your underwear, and just worry about the clean-up later. Human feces can transmit all kinds of diseases to the wildlife!$8>",
+				"@, if you aren't going to use the facilities like a grown-up, then you need to be in a diaper.$8#$b#Nurse's orders.$3",
+				"@!! That's so unsanitary!$9#$b#The floor is not a toilet.$5"
 			],
 			"ground_attempt": [
-				"What... Put your pants back on!$5"
+				"$query PLAYER_FRIENDSHIP_POINTS Current Maru 0 1499#Waah! %firstnameletter-@!! P-Put your pants back on!$9|Um, @? You shouldn't be taking off your $PANTS_NAME$ in full public view.#$b#...I mean, you should really be wearing diapers. It's what they're for!$4"
 			]
 		},
 		//																																																								
@@ -1854,10 +2023,10 @@
 			"soiled_verynice": [
 				"$FARMERNAME$! You're <wetting&messing> your $UNDERWEAR_NAME$!$5#$b#Why didn't you tell me you needed the potty?$3#$b#*Sigh* It's okay, we can try again next time.",
 				"%Penny watches you with an eyebrow raised.#$b#Is there something you want to tell me @?$3",
-				"%Penny waits until you're all finished before tugging your waistband for a check.#$b#Looks like you didn't save anything for the potty little <boy/girl>.$1",
-				"%You tug on Penny's sleeve for help to go potty right before <wetting&messing> your $UNDERWEAR_NAME$.#$b#Oh no you were so close!$3#$b#I'm not mad, I know you're trying. You'll get the hang of it really soon.",
-				"Did you have an accident in your $UNDERWEAR_NAME$ $FARMERNAME$?#$b#You have to tell me as soon as your body says you have to go potty, okay?$3",
-				"#$p 102#Did you have an accident in your $UNDERWEAR_NAME$ $FARMERNAME$?|You have the same potty face as Vincent.$1#$b#Do you need help getting changed like him too?#$b#%Penny tickles your tummy teasingly.",
+				"%Penny waits until you're all finished before tugging your waistband for a check.#$b#Looks like you didn't save anything for the potty, little <boy/girl>.$1",
+				"%You tug on Penny's sleeve for help to go potty, right before <wetting&messing> your $UNDERWEAR_NAME$.#$b#Oh no, you were so close!$3#$b#I'm not mad, I know you're trying. You'll get the hang of it really soon.",
+				"Did you have an accident in your $UNDERWEAR_NAME$ @?#$b#You have to tell me as soon as your body says you have to go potty, okay?$3",
+				"#$p 102#Did you have an accident in your $UNDERWEAR_NAME$ @?|You have the same potty face as Vincent.$1#$b#Do you need help getting changed like him too?#$b#%Penny tickles your tummy teasingly.",
 				"I saw that.$3#$b#$y 'Was that REALLY an accident?_Uh huh, I tried to hold it._Oh $FARMERNAME$, I know it's hard for you. I'm very proud of you for trying._I didn't wanna use the potty._$FARMERNAME$, I know it's hard for you, but you still have to try, okay?$3'",
 				"We're supposed to do that on the potty $NICKNAME$. What happened?$3#$b#It's okay, I'm not angry. You're trying really hard. It's okay if you still have accidents sometimes.#$b#<Boys/Girls> are easy to clean!$1"
 			],
@@ -1870,7 +2039,7 @@
 			"soiled_mean": [
 				"...$5",
 				"Uhmm...$2",
-				"...Oh$2",
+				"...Oh.$2",
 				"#$p 102#D-did you...|You too?$5"
 			],
 			//You check them
@@ -1899,7 +2068,7 @@
 			"change_verynice": [
 				"You seem dry. Are you telling me you need to potty?#$b#$y 'Can you try for me?_Yeah!_Good <boy/girl>! Go ahead, I'm watching._*shake your head*_Now now $FARMERNAME$, you know you're supposed to use the potty. Can you try for me? Please?$5'",
 				"You're all clean, good job!",
-				"*giggles* are you trying to brag?$1#$b#Well I'm very impressed you're still dry. Good job$4",
+				"*giggles* Are you trying to brag?$1#$b#Well I'm very impressed you're still dry. Good job$4",
 				"Look at you staying dry!$1#$b#I think now's a good time to try and potty like a big <boy/girl>. Can you do that for me?"
 			],
 			"soiled_change_nice": [
@@ -2005,7 +2174,7 @@
 			],
 			//You check them
 			"check_verynice": [
-				"%You try to imagine Robin in a diaper, but your mental image eventually settles on a Santa suit.#$b#Whatchya thinkin' about there little <guy/lady>?#$b#*giggles* Well if I'm Santa then you'll have to be my little elf.#$b#%Robin boops your nose affectionately."
+				"%You try to imagine Robin in a diaper, but your mental image eventually settles on a Santa suit.#$b#Whatchya thinkin' about there little <guy/lady>?#$b#*giggles* Well, if I'm Santa, then you'll have to be my little elf.#$b#%Robin boops your nose affectionately."
 			],
 			"check_nice": [
 				"%You try to imagine Robin in a diaper, but your mental image eventually settles on a Santa suit.#$b#Whatchya thinkin' about?#$b#%You just giggle and blush."
@@ -2088,7 +2257,7 @@
 			"check_nice": [
 				"Told you I'm dry! I'm not a potty pants like you!$1",
 				"I-I just had too much to drink that's all!",
-				"#$p 102#Sorry... I hope you don't mind the smell, I just really didn't feel like changing.$10|Sorry... Vincent had an accident and I didn't want him to feel so left out.$9#$b#Psst... don't tell him I was just jealous$4"
+				"#$p 102#Sorry... I hope you don't mind the smell, I just really didn't feel like changing.$10|Sorry... Vincent had an accident and I didn't want him to feel so left out.$9#$b#Psst... Don't tell him I was just jealous...$4"
 			],
 			"check_mean": [
 				"Are you looking for something?#$b#%You're too embarrassed to admit you were trying to spot a diaper bulge.",
@@ -2328,19 +2497,18 @@
 			],
 			//You check them			
 			"check_verynice": [
-				"#$p 102#%You consider finding someone you can check.|My diaper? It's fine, see?#$b#%Vincent shamelessly slips down his pants to show you his soggy diaper.#$b#Change? Hmmmmm. Maybe later.",
-				"#$p 102#%You consider finding someone you can check.|My diaper? It's fine, see?#$b#%Vincent shamelessly slips down his pants to show you his stinky diaper.#$b#Change? Hmmmmm. Maybe later.",
-				"#$p 102#%You consider finding someone you can check.|%You find yourself looking at how cute Vincent looks with the little diaper bulge in his pants. He notices you looking and giggles.#$b#Hi $FARMERNAME$.",
+				"#$p 102#%You consider finding someone you can check.|My diaper? It's fine, see?#$b#%Vincent shamelessly slips down his pants to show you his soggy diaper.#$b#Change? Mmmmmm... Maybe later!",
+				"#$p 102#%You consider finding someone you can check.|My diaper? It's fine, see?#$b#%Vincent shamelessly slips down his pants to show you his stinky diaper.#$b#Change? Hmmmmm.... Maybe later.",
 				"#$p 102#%You consider finding someone you can check.|%You ask about his diaper and he just shrugs and carries on. It's pretty easy to tell he's soggy given how much more his pants bulge out than they normally do.",
 				"#$p 102#%You consider finding someone you can check.|%You ask about his diaper and he just shrugs and carries on. He doesn't seem to mind the faint smell following him."
 			],
 			"check_nice": [
 				"#$p 102#%You consider finding someone you can check.|My diaper? It's fine, see?#$b#Vincent shamelessly slips down his pants to show you his soggy diaper.",
 				"#$p 102#%You consider finding someone you can check.|My diaper? It's fine, see?#$b#Vincent shamelessly slips down his pants to show you his stinky diaper.",
-				"#$p 102#%You consider finding someone you can check.|%You find yourself looking at how cute Vincent looks with the little diaper bulge in his pants."
+				"#$p 102#%You consider finding someone you can check.|%You can't help but notice how much Vincent's diaper is bulging his pants outward..."
 			],
 			"check_mean": [
-				"#$p 102#%You consider finding someone you can check.|%It's pretty clear Vincent is wearing a diaper just by the bulge in his pants.",
+				"#$p 102#%You consider finding someone you can check.|%It's pretty clear Vincent is wearing a diaper just by the poof of his pants.",
 				"#$p 102#%You consider finding someone you can check.|%You can definitely smell his messy diaper. He doesn't seem to care."
 			],
 			"cooldown_check": [
@@ -2348,15 +2516,15 @@
 			],
 			//They check you			
 			"soiled_change_verynice": [
-				"#$p 102#%You think about looking for someone who can help you change.|%Vincent giggles when you show him you're diaper.#$b#Don't worry $FARMERNAME$, I still <pee&poop> in my diapers too.",
-				"#$p 102#%You think about looking for someone who can help you change.|*giggles* your $UNDERWEAR_NAME$ looks comfie.",
+				"#$p 102#%You think about looking for someone who can help you change.|%Vincent giggles when you show him your diaper.#$b#Don't worry $FARMERNAME$, I still <pee&poop> in my diapers too.",
+				"#$p 102#%You think about looking for someone who can help you change.|*giggles* your $UNDERWEAR_NAME$ <looks#look> comfy.",
 				"#$p 102#%You think about looking for someone who can help you change.|Uh oh, you're all <wet&messy>! Don't worry, I know what to do.$1#$b#::720:give:lil swabbies:1::",
 				"#$p 102#%You think about looking for someone who can help you change.|Mommy says that it's okay if diapers get <soggy&stinky> cause boys are easy to clean.#$b#Oh wait, here!$1#$b#::720:give:lil swabbies:1::"
 			],
 			"change_verynice": [
 				"#$p 102#%You think about looking for someone who can help you change.|%Vincent giggles when you show him you're diaper.#$b#You're just like me!",
 				"#$p 102#%You think about looking for someone who can help you change.|Oh, you're dry? Did you just get changed?$3",
-				"#$p 102#%You think about looking for someone who can help you change.|$UNDERWEAR_NAME$s look cute on you!$1"
+				"#$p 102#%You think about looking for someone who can help you change.|$UNDERWEAR_NAME$<s#> look cute on you!$1"
 			],
 			"soiled_change_nice": [
 				"#$p 102#%You think about looking for someone who can help you change.|%Vincent giggles when you show him you're diaper.#$b#Did you have an accident?",
@@ -2388,9 +2556,9 @@
 			"soiled_verynice": [
 				"Aye, hardly surprised to hear that noise...$3",
 				"Well, guess ya might as well just go ahead 'n get it all out now.",
-				"Alright... Time for a change, skipper?$3",
-				"Now, $NICKNAME$, do ya remember where yer supposed to do that for next time? *chuckle*$1",
-				"Ah, well. We all get a lil' bit sidetracked now n' then. No harm in it.$1"
+				"Alright... Time for a change, isn' it, skipper?$3",
+				"Now, $NICKNAME$, do ya remember where yer supposed to be doin' that, for next time? *chuckle*$1",
+				"Ah, well. We all get a lil' bit sidetracked now n' then. No harm done.$1"
 			],
 			"soiled_nice": [
 				"Ach, poor kid...$2",
@@ -2403,11 +2571,11 @@
 			//You check them
 			"check_verynice": [
 				"%Willy's pants look damp. Could it be..?#$b#Ahh, I see what yer lookin at now. My trousers just got a good sprayin' of ocean brine a bit ago, <lad/lass>. <...Sorry to get yer hopes up if ya thought we matched, skipper.&>$1",
-				"%You ask Willy what kind of diapers he uses on long boating trips.#$b#Skipper... there's a toilet on board.$2#$b#Wait, did ye think I was sat there crossin' me legs every time I went out for tuna? *chuckle*$1#$b#%...You think he's avoiding the question."
+				"%You ask Willy what kind of diapers he uses on long boating trips.#$b#Skipper... there's a toilet on board...$2#$b#Wait, do ye really think I'm sat there crossin' me legs every time I go out fer the big ones? *chuckle*$1#$b#%...You think he's avoiding the question."
 			],
 			"check_nice": [
-				"Aye, skipper, no need to poke at my bottom. I know how to use the privy.#$b#My ol' Pappy taught me how long before you were even a twinkle in yer mam's eye.$3#$b#*sigh* Mighty shame he ain't still around to teach you, too... I bet ya would've liked him.",
-				"%You try to imagine Willy wearing a diaper.#$b#%It makes you wonder... What does he do if he ever needs to go potty out at sea!? There aren't any toilets on the ocean!!"
+				"Aye, skipper, no need to poke at my bottom. I know how to use the privy! *chuckle*#$b#My ol' Pappy taught me long before you were even a twinkle in yer mam's eye.$3#$b#*sigh* Mighty shame he ain't still around to teach you too. I bet ya would've liked him!",
+				"%You try to imagine Willy wearing a diaper.#$b#%It really makes you wonder... What does he do if he needs to go potty out at sea!? There aren't any toilets on the ocean!!"
 			],
 			"check_mean": [
 				"Eh? What're ya gawkin' at my backside for, kiddo?",
@@ -2418,7 +2586,7 @@
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"Heh! <That#Those> $UNDERWEAR_NAME$ <looks#look> like ya sent <it#'em> straight to Davy Jones' Locker...$1#$b#Aye, alright... If Lewis pitches a fit about me writing these off as a business expense, then he can go there too.$3#$b#::740:change:lil swabbies:1::"
+				"Heh! <That#Those> $UNDERWEAR_NAME$ <looks#look> like ya sent <it#'em> straight to Davy Jones' Locker.$1#$b#Well, if Lewis starts pitchin' a fit over me writing these things off as 'business expenses', he can go there too! *chuckle*$3#$b#::740:change:lil swabbies:1::"
 			],
 			"change_verynice": [
 				"A'yup, that diaper is in ship-shape, skipper.#$b#I hope you're still keepin' yourself proper fed 'n watered though, <lad/lass>! You're only a wee lil' <fella/lady>, after all...$1#$b#I just know it's easy to forget those things when yer all caught up in the art of the craft.$3"
@@ -2448,57 +2616,52 @@
 		//																																																									
 		"wizard": {
 			"soiled_verynice": [
-				"Aww, do you need me to change you out of your <wet&messy> $UNDERWEAR_NAME$?",
-				"I think little $NICKNAME$ needs <his/her> diaper changed!",
-				"I know a little farmer who needs <his/her> diaper changed!$1"
+				"*sigh* If you were to leak upon a spell circle, it could have catastrophic results. Here, allow me.#$b#::760:change:space diaper:1::"
 			],
 			"soiled_nice": [
-				"You poor thing! Did you just <wet&mess> yourself?",
-				"Does someone need a diaper change?"
+				"I would much prefer that you do your business far, far away from any active spell circles.#$b#Introducing any foreign substance to an ongoing ritual can have dire consequences..."
 			],
 			"soiled_mean": [
-				"You <&really >might want to go change your pants.$u"
+				"I sense an ill omen in the air...$1#$b#...Ah. Never mind.#$b#Please take care of that immediately. I'm afraid the 'why' may be a bit too complicated for you, but it is very important."
 			],
 			//You check them
 			"check_verynice": [
-				"What, are you curious what underpants look like?"
+				"You know, those rumors about wizards 'vanishing' their excrement is pure and utter drivel.#$b#Mind you, it is possible -- but no respectable mage would go in their trousers like an infant...#$b#I simply have a washroom tucked away in a pocket dimension."
 			],
 			"check_nice": [
-				"I'll be fine, you worry about your own pants."
+				"%As you try to take a peek, Rasmodius's cape suddenly springs to life, and pushes your hand away.#$b#...Hah?!$1#$b#...By the spirits, @! You mustn't go poking around my robes like that. You could get hurt!"
 			],
 			"check_mean": [
-				"What do you think you're looking at?$u"
+				"%Hm. You don't see a toilet anywhere in the Wizard's tower... Where does he go???"
 			],
 			"cooldown_check": [
 				"%Things haven't changed since the last check."
 			],
 			//They check you
 			"soiled_change_verynice": [
-				"Oh, you have something to show me?#$b#Oh! well, you sure are <wet&messy>!$h#$b#I guess that's no surprise. Why don't you head into my room for some privacy and clean yourself up."
+				"Hm. Well... I suppose a *little* trick of prestidigitation wouldn't take all that much effort...#$b#::760:change:space diaper:1::"
 			],
 			"change_verynice": [
 				"<That#Those> $UNDERWEAR_NAME$ <looks#look> just fine to me. Did you just want my attention?"
 			],
 			"soiled_change_nice": [
-				"Oh, yeah, you sure are <wet&messy>... Look, if you need a private place to change, you can use my room.#$b#Just make sure to clean up after yourself."
+				"It is not my obligation to tend to your trousers.#$b#You are capable enough to change yourself. Please, go and do that."
 			],
 			"change_nice": [
-				"Well, your $UNDERWEAR_NAME$ seem dry to me.#$b#... I guess I check your pants now... Huh."
+				"%Rasmodius pays you no mind."
 			],
 			"soiled_change_mean": [
-				"Oh gross. Go figure it out yourself.$u"
+				"If you simply came here to sully the air and unsettle the precarious flow of magic through my tower, I must ask that you leave at once.$1"
 			],
 			"change_mean": [
-				"Keep it to yourself...$u",
-				"Didn't your parents teach you basic privacy?$u"
+				"%The Wizard ignores you."
 			],
 			//Ground
 			"ground": [
-				"$FARMERNAME$! Living in the country doesn't make us barbarians!$3",
-				"That's not okay! Use a toilet!$3"
+				"@! What in the blazes are you doing!!!$1#$b#%The Wizard snaps his fingers and tidies up the mess you left on the ground.#$b#Bah! Now I have to reexamine all my spell circles to make sure you didn't cause any of them to backlash!$1#$b#...*sigh* I understand you may not have had much notice, but please never do that in my tower again."
 			],
 			"ground_attempt": [
-				"$FARMERNAME$! What are you doing!$3"
+				"@! What are you doing!$3"
 			]
 		}
 		//																																																									
@@ -2538,21 +2701,16 @@
 
 
 	"Consumables": {
-		//About the food changes;
+		//While I like the idea of using the IRL caloric values, it can be extremely punishing earlygame and wasteful lategame.
+		//So, I retuned food by feel instead, using a percentage of the hunger and thirst meters as my frame of reference.
+		//(If a consumable has a negative energy value ingame, I will treat it as harmful, and give it a penalty. Spicy foods will also make you thirsty, as well.)
+		//It's more annoying than difficult, and there's not much of a way to make a meaningful progression; either you're completely resource-starved and scraping by on forage early, or you have a couple chickens/cows, and food becomes completely trivialized.
 
-		//While I like the idea of using the IRL caloric values, it can lead to an unbalanced experience -- or severe number-fudging when faced with outliers, like radishes.
-		//So, I'm balancing food by ~feel~ instead, using the hunger and thirst meters as a frame of reference.
-		//If a consumable has a negative energy value ingame, I will treat it as harmful, and give it a penalty. Spicy foods will also make you thirsty
+		//Feel free to reach out if you have suggestions, though! (Discord: @EmbersAndRoses)
 
-		//Overall, I want to avoid players getting stuck in starvation cycles in the earlygame, while still incentivizing cooking/buying proper meals, and making hunger feel relatively intuitive (since there's no indicator in the UI for how filling an item will be)
-
-		//Feel free to reach out if anything seems too unbalanced! (Discord: @EmbersAndRoses)
 
 		//
-		//Crops
-		//
-		//
-		//Veggies
+		//Vegetables
 		//
 		"Amaranth": {
 			"name": "Amaranth",
@@ -2680,12 +2838,12 @@
 		"Apricot": {
 			"name": "Apricot",
 			"waterContent": 400,
-			"calorieContent": 125
+			"calorieContent": 325
 		},
 		"Banana": {
 			"name": "Banana",
 			"waterContent": 200,
-			"calorieContent": 275
+			"calorieContent": 475
 		},
 		"Blackberry": {
 			"name": "Blackberry",
@@ -2693,9 +2851,9 @@
 			"calorieContent": 140
 		},
 		"Blueberry": {
-			"name": "Blueberry", //Hello my name is Human Farmer. I would like to eat ~one~ blueberry please.
+			"name": "Blueberry",
 			"waterContent": 150,
-			"calorieContent": 75 //(...Seriously, are blueberries just huge?
+			"calorieContent": 100
 		},
 		"Cactus Fruit": {
 			"name": "Cactus Fruit",
@@ -2705,17 +2863,17 @@
 		"Cherry": {
 			"name": "Cherry",
 			"waterContent": 200,
-			"calorieContent": 175
+			"calorieContent": 275
 		},
 		"Cranberries": {
 			"name": "Cranberries",
 			"waterContent": 150,
-			"calorieContent": 100
+			"calorieContent": 150
 		},
 		"Crystal Fruit": {
 			"name": "Crystal Fruit", //Mmm, delicious and fictitious!
-			"waterContent": 800,
-			"calorieContent": 400
+			"waterContent": 1400,
+			"calorieContent": 750
 		},
 		"Grape": {
 			"name": "Grape",
@@ -2730,7 +2888,7 @@
 		"Mango": {
 			"name": "Mango",
 			"waterContent": 200,
-			"calorieContent": 300
+			"calorieContent": 400
 		},
 		"Melon": {
 			"name": "Melon",
@@ -2740,22 +2898,22 @@
 		"Orange": {
 			"name": "Orange",
 			"waterContent": 400,
-			"calorieContent": 250
+			"calorieContent": 450
 		},
 		"Peach": {
 			"name": "Peach",
 			"waterContent": 200,
-			"calorieContent": 275
+			"calorieContent": 475
 		},
 		"Pineapple": {
 			"name": "Pineapple",
 			"waterContent": 800,
-			"calorieContent": 450
+			"calorieContent": 650
 		},
 		"Pomegranate": {
 			"name": "Pomegranate",
 			"waterContent": 400,
-			"calorieContent": 230
+			"calorieContent": 450
 		},
 		"Powdermelon": {
 			"name": "Powdermelon",
@@ -2763,9 +2921,9 @@
 			"calorieContent": 700
 		},
 		"Qi Fruit": {
-			"name": "Qi Fruit", //You probably should not eat Mr. Qi's fruits. You're supposed to ship those, silly. :)
-			"waterContent": 80000,
-			"calorieContent": 35000 //If you still had any continence this late into the game... I'm sorry for your loss.
+			"name": "Qi Fruit",
+			"waterContent": 500,
+			"calorieContent": 1000
 		},
 		"Rhubarb": {
 			"name": "Rhubarb",
@@ -2800,31 +2958,31 @@
 		//
 		//Flowers
 		//
-		//Most of these would actually be poisonous to eat IRL. Don't eat random flowers, kids!
+		//Most of these would actually be poisonous to eat IRL.
 		"Blue Jazz": {
 			"name": "Blue Jazz",
-			"waterContent": 25,
-			"calorieContent": 50
+			"waterContent": 0,
+			"calorieContent": 0
 		},
 		"Crocus": {
 			"name": "Crocus",
-			"waterContent": 25,
-			"calorieContent": 50
+			"waterContent": 0,
+			"calorieContent": 0
 		},
 		"Fairy Rose": {
 			"name": "Fairy Rose",
-			"waterContent": 25,
-			"calorieContent": 50
+			"waterContent": 0,
+			"calorieContent": 0
 		},
 		"Poppy": {
 			"name": "Poppy",
-			"waterContent": 25,
-			"calorieContent": 50
+			"waterContent": 0,
+			"calorieContent": 0
 		},
 		"Summer Spangle": {
 			"name": "Summer Spangle",
-			"waterContent": 25,
-			"calorieContent": 50
+			"waterContent": 0,
+			"calorieContent": 0
 		},
 		"Sunflower": {
 			"name": "Sunflower",
@@ -2833,13 +2991,13 @@
 		},
 		"Sweet Pea": {
 			"name": "Sweet Pea",
-			"waterContent": 25,
-			"calorieContent": 50
+			"waterContent": 0,
+			"calorieContent": 0
 		},
 		"Tulip": {
 			"name": "Tulip",
-			"waterContent": 25,
-			"calorieContent": 50
+			"waterContent": 0,
+			"calorieContent": 0
 		},
 		//
 		//Foraging
@@ -2847,7 +3005,7 @@
 		"Cave Carrot": {
 			"name": "Cave Carrot",
 			"waterContent": 400,
-			"calorieContent": 425 //Mining goes through your hunger meter like crazy. Boosted for emergency snacking.
+			"calorieContent": 625
 		},
 		"Chantrelle": {
 			"name": "Chantrelle",
@@ -2867,27 +3025,27 @@
 		"Dandelion": {
 			"name": "Dandelion",
 			"waterContent": 200,
-			"calorieContent": 150
+			"calorieContent": 250
 		},
 		"Ginger": {
 			"name": "Ginger",
-			"waterContent": -600, //Got a real kick to it.
-			"calorieContent": 200
+			"waterContent": -400, //Got a bit of kick to it.
+			"calorieContent": 400
 		},
 		"Hazelnut": {
 			"name": "Hazelnut",
 			"waterContent": 500,
-			"calorieContent": 325
+			"calorieContent": 525
 		},
 		"Holly": {
 			"name": "Holly",
 			"waterContent": -1500,
-			"calorieContent": -1250 //If the energy penalty didn't warn you this was a bad idea, I don't know what to say.
+			"calorieContent": -1250 //If the energy penalty didn't already warn you that eating poisonous plants was a bad idea, I don't know what to say.
 		},
 		"Leek": {
 			"name": "Leek",
 			"waterContent": 500,
-			"calorieContent": 300
+			"calorieContent": 350
 		},
 		"Magma Cap": {
 			"name": "Magma Cap",
@@ -2897,7 +3055,7 @@
 		"Morel": {
 			"name": "Morel",
 			"waterContent": 200,
-			"calorieContent": 250
+			"calorieContent": 450
 		},
 		"Purple Mushroom": {
 			"name": "Purple Mushroom",
@@ -2907,32 +3065,32 @@
 		"Red Mushroom": {
 			"name": "Red Mushroom",
 			"waterContent": -1500,
-			"calorieContent": -1250 //Don't eat this; you won't go to the Mushroom Kingdom, you'll just go to the hospital.
+			"calorieContent": -1250 //Don't eat this; you won't go to the Mushroom Kingdom, you'll go to the hospital.
 		},
 		"Sap": {
 			"name": "Sap",
 			"waterContent": -100, //Sticky...
-			"calorieContent": 50 //Most tree saps are safe to consume, but they are a bacteria risk.
+			"calorieContent": 50 //Most tree saps are indeed safe to consume, but you should still pasteurize it first for bacteria reasons.
 		},
 		"Snow Yam": {
 			"name": "Snow Yam",
 			"waterContent": 200,
-			"calorieContent": 300
+			"calorieContent": 400
 		},
 		"Spring Onion": {
 			"name": "Spring Onion",
 			"waterContent": 100,
-			"calorieContent": 200
+			"calorieContent": 400
 		},
 		"Wild Horseradish": {
 			"name": "Wild Horseradish",
 			"waterContent": -1200, //...Tastes like getting kicked in the mouth by a horse.
-			"calorieContent": 175
+			"calorieContent": 475
 		},
 		"Winter Root": {
 			"name": "Winter Root",
 			"waterContent": 100,
-			"calorieContent": 350
+			"calorieContent": 450
 		},
 		//
 		//Animals
@@ -2940,12 +3098,12 @@
 		"Duck Egg": {
 			"name": "Duck Egg",
 			"waterContent": 50,
-			"calorieContent": 175
+			"calorieContent": 475
 		},
 		"Egg": {
 			"name": "Egg",
 			"waterContent": 50,
-			"calorieContent": 175
+			"calorieContent": 375
 		},
 		"Goat Milk": {
 			"name": "Goat Milk",
@@ -2980,16 +3138,16 @@
 		"Ostrich Egg": {
 			"name": "Ostrich Egg",
 			"waterContent": 800,
-			"calorieContent": 2000 //A whole Ostrich Egg
+			"calorieContent": 2000 //A whole Ostrich Egg, appearantly
 		},
 		"Truffle": {
 			"name": "Truffle",
 			"waterContent": 25,
-			"calorieContent": 285 //One tennis-ball sized black truffle
+			"calorieContent": 285
 		},
 		"Void Egg": {
 			"name": "Void Egg",
-			"waterContent": -1000, //You'll need to wash down the taste of burnt hair and Abyss.
+			"waterContent": -1000, //You'll need to wash down the taste of burnt hair.
 			"calorieContent": 525
 		},
 		//
@@ -3003,7 +3161,7 @@
 		"Caviar": {
 			"name": "Caviar",
 			"waterContent": 500,
-			"calorieContent": 260 //Yum! The sweet taste of potential mercury poisoning
+			"calorieContent": 260
 		},
 		"Cheese": {
 			"name": "Cheese",
@@ -3028,7 +3186,7 @@
 		"Duck Mayonnaise": {
 			"name": "Duck Mayonnaise",
 			"waterContent": 800,
-			"calorieContent": 1440 //A viable source of calories... but at what cost...?
+			"calorieContent": 1440 //A viable source of calories... but at what cost..?
 		},
 		"Goat Cheese": {
 			"name": "Goat Cheese",
@@ -3043,7 +3201,7 @@
 		"Maple Syrup": {
 			"name": "Maple Syrup",
 			"waterContent": 2400,
-			"calorieContent": 1400 //Fun fact: maple syrup has a mild laxative effect IRL.
+			"calorieContent": 1400 //Fun fact: maple syrup has a mild laxative effect.
 		},
 		"Mayonnaise": {
 			"name": "Mayonnaise",
@@ -3071,7 +3229,7 @@
 			"calorieContent": 1300
 		},
 		"Void Mayonnaise": {
-			"name": "Void Mayonnaise", //Yum! Nightmare sludge, straight from  t h e  v o i d
+			"name": "Void Mayonnaise", //Yum! Nightmare sludge, straight from the void!
 			"waterContent": -500, //Tastes like burnt hair...
 			"calorieContent": 6000 //Potion of Fill Your Pants Immediately
 		},
@@ -3087,7 +3245,7 @@
 		"Coffee": {
 			"name": "Coffee",
 			"waterContent": 4800,
-			"calorieContent": 250 //A little boost to emulate how stimulants like coffee will speed up your bowels
+			"calorieContent": 250
 		},
 		"Cranberry Candy": {
 			"name": "Cranberry Candy",
@@ -3149,7 +3307,7 @@
 		},
 		"Triple Shot Espresso": {
 			"name": "Triple Shot Espresso",
-			"waterContent": 10000, //Thats an awful lot of caffeine for somebody with such a little bladder... Better make sure you're wearing your diapers before you start drinking grown-up drinks like this!
+			"waterContent": 10000, //Thats an awful lot of caffeine for a little bladder... Better make sure you're wearing your big-kid diapers before drinking a grown-up drink like this.
 			"calorieContent": 650
 		},
 		"Wine": {
@@ -3168,7 +3326,7 @@
 		"Anchovy": {
 			"name": "Anchovy",
 			"waterContent": 400,
-			"calorieContent": 350
+			"calorieContent": 450
 		},
 		"Angler": {
 			"name": "Angler", //All Legendary fish give an entire water and hunger meter. If you're going to use them like this, you might as well get your money's worth.
@@ -3183,22 +3341,22 @@
 		"Blue Discus": {
 			"name": "Blue Discus",
 			"waterContent": 400,
-			"calorieContent": 350
+			"calorieContent": 550
 		},
 		"Bream": {
 			"name": "Bream",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Bullhead": {
 			"name": "Bullhead",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Carp": {
 			"name": "Carp",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Catfish": {
 			"name": "Catfish",
@@ -3213,7 +3371,7 @@
 		"Chub": {
 			"name": "Chub",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Crimsonfish": {
 			"name": "Crimsonfish",
@@ -3268,7 +3426,7 @@
 		"Herring": {
 			"name": "Herring",
 			"waterContent": 400,
-			"calorieContent": 350
+			"calorieContent": 550
 		},
 		"Ice Pip": {
 			"name": "Ice Pip",
@@ -3303,7 +3461,7 @@
 		"Lionfish": {
 			"name": "Lionfish",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Midnight Carp": {
 			"name": "Midnight Carp",
@@ -3328,7 +3486,7 @@
 		"Perch": {
 			"name": "Perch",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Pike": {
 			"name": "Pike",
@@ -3338,7 +3496,7 @@
 		"Pufferfish": {
 			"name": "Pufferfish",
 			"waterContent": -8000,
-			"calorieContent": -3500 //Pufferfish are one of the worst things you could eat; One pufferfish can kill 30 adults, and there is no cure for tetrodotoxin poisoning.
+			"calorieContent": -3500 //Pufferfish are one of the worst things you could POSSIBLY stuff in your face-hole. You would die so hard if you did this. There's a reason chefs have to take 3+ years of intensive training to be able to serve Fugu safely.
 		},
 		"Radioactive Carp": {
 			"name": "Radioactive Carp",
@@ -3348,17 +3506,17 @@
 		"Rainbow Trout": {
 			"name": "Rainbow Trout",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Red Mullet": {
 			"name": "Red Mullet",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Red Snapper": {
 			"name": "Red Snapper",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"River Jelly": {
 			"name": "River Jelly",
@@ -3373,17 +3531,17 @@
 		"Sandfish": {
 			"name": "Sandfish",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 725
 		},
 		"Sardine": {
 			"name": "Sardine",
 			"waterContent": 400,
-			"calorieContent": 350
+			"calorieContent": 450
 		},
 		"Scorpion Carp": {
 			"name": "Scorpion Carp",
 			"waterContent": -400,
-			"calorieContent": -1050 //Yeah, okay, I see why this has a penalty.
+			"calorieContent": -1050 //Yeah, eating a scorpion stinger isn't gonna be good...
 		},
 		"Sea Cucumber": {
 			"name": "Sea Cucumber",
@@ -3413,7 +3571,7 @@
 		"Smallmouth Bass": {
 			"name": "Smallmouth Bass",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Son of Crimsonfish": {
 			"name": "Son of Crimsonfish",
@@ -3443,7 +3601,7 @@
 		"Sunfish": {
 			"name": "Sunfish",
 			"waterContent": 400,
-			"calorieContent": 525
+			"calorieContent": 625
 		},
 		"Super Cucumber": {
 			"name": "Super Cucumber",
@@ -3486,10 +3644,7 @@
 			"calorieContent": 700
 		},
 		//
-		//Cooking
-		//
-		//
-		//Ingredients
+		//Cooking Ingredients
 		//
 		"Oil": {
 			"name": "Oil",
@@ -3499,7 +3654,7 @@
 		"Oil of Garlic": {
 			"name": "Oil of Garlic",
 			"waterContent": 1400,
-			"calorieContent": 6000 //It says "Drink this and weaker monsters will avoid you". I'm not sure if the garlic is doing the repelling here...
+			"calorieContent": 6000 //I'm not sure if the garlic is gonna do the repelling here...
 		},
 		"Rice": {
 			"name": "Rice",
@@ -3523,7 +3678,7 @@
 		},
 		"Wheat Flour": {
 			"name": "Wheat Flour",
-			"waterContent": -800, //this is gonna be so dry LMAO
+			"waterContent": -400, //this is gonna be so dry LMAO
 			"calorieContent": 400
 		},
 		//
@@ -3612,7 +3767,7 @@
 		"Complete Breakfast": {
 			"name": "Complete Breakfast",
 			"waterContent": 2400,
-			"calorieContent": 2625
+			"calorieContent": 3000
 		},
 		"Cookie": {
 			"name": "Cookie",
@@ -3657,7 +3812,7 @@
 		"Field Snack": {
 			"name": "Field Snack",
 			"waterContent": 200,
-			"calorieContent": 700 //A good emergency snack
+			"calorieContent": 950 //A good emergency snack
 		},
 		"Fiddlehead Risotto": {
 			"name": "Fiddlehead Risotto",
@@ -3696,7 +3851,7 @@
 		},
 		"Fruit Salad": {
 			"name": "Fruit Salad",
-			"waterContent": 1600,
+			"waterContent": 1200,
 			"calorieContent": 875
 		},
 		"Glazed Yams": {
@@ -3731,7 +3886,7 @@
 		},
 		"Maki Roll": {
 			"name": "Maki Roll",
-			"waterContent": 1000,
+			"waterContent": 800,
 			"calorieContent": 1050
 		},
 		"Mango Sticky Rice": {
@@ -3777,17 +3932,17 @@
 		"Pepper Poppers": {
 			"name": "Pepper Poppers",
 			"waterContent": -1200,
-			"calorieContent": 1400
+			"calorieContent": 1575
 		},
 		"Pink Cake": {
 			"name": "Pink Cake",
 			"waterContent": 400,
-			"calorieContent": 2800
+			"calorieContent": 2400
 		},
 		"Pizza": {
 			"name": "Pizza",
 			"waterContent": 400,
-			"calorieContent": 2450
+			"calorieContent": 2750 //If you're eating multiple whole pizzas back to back, I am not responsible for your blowouts.
 		},
 		"Plum Pudding": {
 			"name": "Plum Pudding",
@@ -3857,7 +4012,7 @@
 		"Sashimi": {
 			"name": "Sashimi",
 			"waterContent": 400,
-			"calorieContent": 700
+			"calorieContent": 1000
 		},
 		"Seafoam Pudding": {
 			"name": "Seafoam Pudding",
@@ -3872,7 +4027,7 @@
 		"Spaghetti": {
 			"name": "Spaghetti",
 			"waterContent": 800,
-			"calorieContent": 1050
+			"calorieContent": 1450
 		},
 		"Spicy Eel": {
 			"name": "Spicy Eel",
@@ -3882,7 +4037,7 @@
 		"Squid Ink Ravioli": {
 			"name": "Squid Ink Ravioli",
 			"waterContent": 1600,
-			"calorieContent": 1225
+			"calorieContent": 1425
 		},
 		"Stir Fry": {
 			"name": "Stir Fry",
@@ -3892,7 +4047,7 @@
 		"Strange Bun": {
 			"name": "Strange Bun",
 			"waterContent": 2000,
-			"calorieContent": 875
+			"calorieContent": 1875
 		},
 		"Stuffing": {
 			"name": "Stuffing",
@@ -3902,12 +4057,12 @@
 		"Super Meal": {
 			"name": "Super Meal",
 			"waterContent": 400,
-			"calorieContent": 1750
+			"calorieContent": 2050
 		},
 		"Survival Burger": {
 			"name": "Survival Burger",
 			"waterContent": 400,
-			"calorieContent": 1575
+			"calorieContent": 1550
 		},
 		"Tom Kha Soup": {
 			"name": "Tom Kha Soup",
@@ -3917,7 +4072,7 @@
 		"Tortilla": {
 			"name": "Tortilla",
 			"waterContent": 100,
-			"calorieContent": 200
+			"calorieContent": 400
 		},
 		"Tropical Curry": {
 			"name": "Tropical Curry",
@@ -3982,7 +4137,7 @@
 			"name": "polka dot panties",
 			"description": "simple white panties with pink polka dots",
 			"absorbency": 75.0,
-			"containment": 125.0,
+			"containment": 150.0,
 			"spriteIndex": 1,
 			"price": 10,
 			"washable": true,
@@ -3995,7 +4150,7 @@
 			"name": "big kid undies",
 			"description": "cotton undies for big kids only",
 			"absorbency": 100.0,
-			"containment": 200.0,
+			"containment": 400.0,
 			"spriteIndex": 2,
 			"price": 10,
 			"washable": true,
@@ -4008,7 +4163,7 @@
 			"name": "dinosaur undies",
 			"description": "green undies covered in adorable dinosaurs",
 			"absorbency": 100.0,
-			"containment": 200.0,
+			"containment": 400.0,
 			"spriteIndex": 3,
 			"price": 10,
 			"washable": true,
@@ -4021,7 +4176,7 @@
 			"name": "lavender pullup",
 			"description": "soft and snug lavender pullup",
 			"absorbency": 600.0,
-			"containment": 350.0,
+			"containment": 550.0,
 			"spriteIndex": 4,
 			"price": 25,
 			"washable": false,
@@ -4032,11 +4187,11 @@
 		},
 		"training pants": {
 			"name": "training pants",
-			"description": "thin cloth potty training pants that look like big kid undies",
+			"description": "cloth potty training pants that look like big kid undies",
 			"absorbency": 450.0,
-			"containment": 200.0,
+			"containment": 400.0,
 			"spriteIndex": 5,
-			"price": 25,
+			"price": 100,
 			"washable": true,
 			"plural": true,
 			"dryingTime": 600,
@@ -4046,7 +4201,7 @@
 		"Joja diaper": {
 			"name": "Joja diaper",
 			"description": "thin white plastic diaper from JojaMart",
-			"absorbency": 1200.0,
+			"absorbency": 1000.0,
 			"containment": 600.0,
 			"spriteIndex": 6,
 			"price": 50,
@@ -4058,8 +4213,8 @@
 		},
 		"baby print diaper": {
 			"name": "baby print diaper",
-			"description": "soft and crinkly fresh-scented baby print diaper. It's a bit small, but you can fit",
-			"absorbency": 1500.0,
+			"description": "soft and crinkly fresh-scented baby print diaper",
+			"absorbency": 2000.0,
 			"containment": 1000.0,
 			"spriteIndex": 7,
 			"price": 75,
@@ -4072,8 +4227,8 @@
 		"cloth diaper": {
 			"name": "cloth diaper",
 			"description": "thick and soft white cloth diaper",
-			"absorbency": 1000.0,
-			"containment": 800.0,
+			"absorbency": 1800.0,
+			"containment": 1400.0,
 			"spriteIndex": 8,
 			"price": 500,
 			"washable": true,
@@ -4084,11 +4239,11 @@
 		},
 		"space diaper": {
 			"name": "space diaper",
-			"description": "very thick plastic diaper with a stars-and-spaceships print",
-			"absorbency": 2700.0,
-			"containment": 1800.0,
+			"description": "very thick plastic diaper, with a stars-and-spaceships print",
+			"absorbency": 2400.0,
+			"containment": 1400.0,
 			"spriteIndex": 9,
-			"price": 100,
+			"price": 125,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
@@ -4097,11 +4252,11 @@
 		},
 		"pawprint diaper": {
 			"name": "pawprint diaper",
-			"description": "puffy plastic diaper with cute animal prints and fade-when-wet little paws",
-			"absorbency": 2700.0,
-			"containment": 1800.0,
+			"description": "puffy plastic diaper, with cute animal prints and fade-when-wet little paws",
+			"absorbency": 2600.0,
+			"containment": 1200.0,
 			"spriteIndex": 10,
-			"price": 100,
+			"price": 125,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
@@ -4110,11 +4265,11 @@
 		},
 		"heart diaper": {
 			"name": "heart diaper",
-			"description": "very thick and soft pink plastic diaper with a large fade-when-wet heart on the front",
-			"absorbency": 2700.0,
-			"containment": 2400.0,
+			"description": "very thick and soft pink plastic diaper, with a large fade-when-wet heart on the front",
+			"absorbency": 3000.0,
+			"containment": 1600.0,
 			"spriteIndex": 11,
-			"price": 125,
+			"price": 150,
 			"washable": false,
 			"plural": false,
 			"dryingTime": 0,
@@ -4123,11 +4278,11 @@
 		},
 		"lil swabbies": {
 			"name": "lil swabbies",
-			"description": "puffy light-blue diaper sporting a fashionable, sea-faring design",
-			"absorbency": 2800.0,
-			"containment": 1800.0,
+			"description": "puffy light-blue diaper, sporting a fashionable sea-faring design",
+			"absorbency": 2300.0,
+			"containment": 1100.0,
 			"spriteIndex": 12,
-			"price": 100,
+			"price": 150,
 			"washable": false,
 			"plural": false,
 			"removable": false,

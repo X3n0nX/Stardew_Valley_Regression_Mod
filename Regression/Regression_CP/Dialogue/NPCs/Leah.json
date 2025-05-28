@@ -1,0 +1,374 @@
+{
+	"Changes":[
+		{
+			"LogName":"Leah",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Leah",
+			"Entries":{	
+			
+  "Introduction": "Oh, hello. It's nice to meet you.#$e#You picked a good time to move here... The spring is lovely.",
+
+  "AcceptGift_(O)StardropTea": "Oh, wow... I had a sip of this stuff when I was a kid, and I've never forgotten the taste.",
+  "AcceptBirthdayGift_Positive": "Hey, thanks a bunch, @! This makes my birthday feel special.$h",
+  "AcceptGift_(O)169": "Oh! Thank you! This one has an interesting shape...$h",
+  "AcceptGift_(O)430": "Hey, where'd you find that? *sniff*... Mmm... This will be perfect, grated over a fresh pasta. Thank you!$h",
+  "AcceptGift_(O)330": "Ooh, sculpting clay! Thanks, @, I love playing with this stuff!$h",
+  "AcceptGift_(O)200": "Mmm... Back in the city, the veggies never tasted this fresh. I love it!$h",
+  "AcceptGift_(O)196": "$c 0.8#This looks delicious... Thank you! There's nothing quite like a fresh, wild salad.$h#Oh, wow, @! This is exactly what I was craving! How'd you know?$h",
+
+  "FlowerDance_Accept": "You want to dance with me? Yes!$h#$e#I was wondering if you'd ask me...$h",
+  "FlowerDance_Accept_Spouse": "Finally! I was starting to get worried you wanted to dance with someone else!$h",
+  "FlowerDance_Decline": "I'll be honest. I don't want to dance with you.$u",
+
+  "dating_Leah": "I had a feeling you would ask me...$l",
+  "dating_Leah_memory_oneday": "Please don't feel like you have to spend all your time with me now that we're dating... I know you're a busy person!",
+  "married_Elliott": "Elliott's a real romantic... I'm sure your days will be filled with poetry!$h",
+  "married_Shane": "I'm happy that Shane's in such a good place. I've never seen him smile so much!#$e#With his love for chickens, I'm sure he'll fit right in on %farm Farm!$h",
+
+  "divorced": "I've realized I'm happier by myself. So just leave me be.$u",
+  "dumped_Girls": "I don't want to see you for a while...$s",
+  "secondChance_Girls": "You caused a lot of grief with what you did... but I'm ready to put the past behind us.$s",
+  "breakUp": "Ohh... Got it. Hah... I really don't have any luck when it comes to this stuff...$s",
+
+  "Resort_Entering": "Don't tell anyone, but Willy let me steer the boat for a few minutes.$h",
+  "Resort_Leaving": "Well, that was deeply relaxing.",
+  "Resort": "I love the weather in Stardew Valley, but seeing a different climate now and then helps put things into perspective.",
+  "Resort_Shore": "The shape of the waves here is awe inspiring.#$e#I wonder if I could ever capture that sort of formlessness in a sculpture.",
+  "Resort_Chair": "I like the heat as long as I'm keeping perfectly still.$h",
+  "Resort_Wander": "Mmm, I bet the trees around here would make for an interesting medium to work with.#$e#Though Willy probably wouldn't be happy with me if I dragged a bunch of logs onto his ship!$h",
+  "Resort_Wander_2": "I wonder what kind of things you could forage out here.#$e#I think I saw some tasty looking walnuts growing on a bush nearby.",
+  "Resort_Bar": "Have you tried the Piña Colada? I'm on my second one... hehe.",
+
+  "event_sculpt1": "...What?$7#$b#Oh! Yeah, that's absolutely right!$h",
+  "event_sculpt2": "There's nothing wrong with that... I think there's lots of beauty to be found in raw, untouched nature!#$b#But as a human, I'm also interested in how we shape and interpret the world around us... I guess what I'm saying is that I'm interested in 'art'.",
+  "event_sculpt3": "You pig!%fork$a^Oh! You're...? Me too.$6#$b#Get out!$a^That's good to know.$l",
+  "event_parents1": "You're right... I just wouldn't have been happy back there.$u#$b#It was better for both of us... to end an unsustainable relationship while we were still young and flexible.$u",
+  "event_parents2": "That's a little harsh... but, yeah. We had different priorities.$u",
+  "event_parents3": "Oh yeah? Well maybe I'll just leave, then!%fork$a",
+  "event_parents4": "*sigh*...$s#$b#I guess you're right... it was kind of selfish. But can you really blame me for wanting to be happy? Ugh... I don't know...$s",
+  "event_parents5": "*sigh*...$s#$b#Maybe you're right... Humans are selfish creatures. I don't know. $s#$b#I probably shouldn't dwell on it. We all have to make hard choices from time to time.$s",
+
+  "eventSeen_53_memory_oneday": "I sold enough art at that show to get by for another year... that's all I needed!",
+  "eventSeen_54_memory_oneday": "I'm still fuming about the picnic... what a weirdo!$a#$b#Let's never talk about... that person... ever again.$s",
+  "eventSeen_584059_memory_oneday": "If my art continues to sell online like it has, I'll be able to keep making art forever. That's always been my dream.",
+
+  "GreenRain": "Where did all these plants come from? It's a surprise, but I'm not complaining...",
+  "GreenRainFinished": "I guess everyone in town was scared of that strange rain? I had no idea... I just thought it was incredible!$h",
+  "GreenRain_2": "Imagine if this rain lasted all summer... The plants would take over the entire valley!",
+
+  "Beach": "I came for the sound of the ocean. Beautiful, isn't it?",
+
+
+//------------------------SPRING----------------------------
+
+
+  "Mon": "The trees look nice today, don't they?#$q 21/22/211132 Mon_old#So, um... if you don't mind me asking, why did you become a farmer?#$r 21 -5 Mon_21#I want to make tons of money.#$r 22 5 Mon_22#It's more \"real\" than living in the city.#$r 211132 5 Mon_211132#To follow in grandpa's footsteps.#$r 22 5 Mon_22#I wanted to escape my old life.",
+  "Mon_old": "$p 21#So are you making as much money as you hoped?|Spending time in nature is very rewarding.",
+  "Mon_21": "Hmm. That seems kind of shallow, doesn't it?$s",
+  "Mon_22": "That's pretty much the reason I came here, too!$h",
+  "Mon_211132": "That's very sweet to honor your grandfather like that.",
+  "Mon8": "I went for a nature walk today, just before sunrise.#$e#It's very peaceful in those foggy early hours.#$b#Nothing but the crunch of soil under my boots, the rustle of my diaper, and the sounds of the waking world.",
+
+
+  "Tue": "Hello, neighbor.#$e#We both live outside of town. Does that mean something?",
+  "Tue4": "Hi... Oh, you want to talk?#$e#The landscape around here gives me a lot of ideas... The terrain is almost like a sculpture itself.$7#$e#I don't really create art for the money, I just have the urge to make things...#$e#Farming seems like a very rewarding profession. You get to create delicious food for everyone!$h#$e#Ah, s-sorry, you're probably busy...",
+  "Tue8": "%Leah looks a little worn out, but she lights up the moment you approach.#$b#@!! Hi!!!$1#$e#My brain is all mushy today, I can't think of anything to draw.$7#$e#Maybe I'll do a coloring book instead.",
+
+
+  "Wed": "#$1 LeahBug#This morning I accidentally stepped on a bug.$s#$e#Sometimes I think it's impossible to live without destroying nature in some way...$s",
+  "Wed2": "Living out here, you're bound to run into lots of weird-looking bugs.#$b#Some of them are really helpful, though! The dragonflies by the river eat most of the mosquitos around my house!#$e#...I also find that naming them helps a lot with the creepy-crawly factor.#$b#Seeing a house spider is a lot less scary after you've named it 'Jeff'.$1",
+  "Wed6": "I love being around animals. They're so innocent.#$e#Farm animals are wonderful, too!$1#$e#...What's your favorite wild animal, @?$7#$e#I think skunks are the cutest, personally.#$b#...But I don't think I'd ever wanna run across one.$7#$b#My nose is pretty sensitive.$1",
+  "Wed8": "$query PLAYER_NPC_RELATIONSHIP current any married roommate#It must be satisfying to harvest a whole field of crops, huh? You're basically creating food out of nothing!$h|Hi @! I was just thinking about you and your farm.#$e#I was imagining how good it must feel to harvest a big bunch of crops.$h#$e#Wouldn't it be nice to have help, though?$l",
+
+
+  "Thu": "There's actually a lot of wild food in this area, if you know where to look.#$e#I've been having fresh salads almost every day.$h",
+  "Thu6": "Foraging is a specialty of mine. Someday I'll make you a fresh salad.$h",
+
+
+  "Fri": "It's simpler to be friends with the trees. They don't have much to say.",
+  "Fri2": "We wouldn't be able to survive without nature.$2#$b#It's good to remember that.",
+  "Fri4": "Hello, @. It's a nice day, isn't it?#$e#Stop by my cabin if you ever need someone to talk to.$h",
+  "Fri6": "Sometimes, a strange feeling comes over me. My head becomes totally empty... and I feel completely at peace, even blissful.#$e#Hey, now! It has nothing to do with drinking wine!$h",
+  "Fri8": "Do you ever wonder what it's like to be a different person?#$e#Do our thoughts manifest in a similar way, or is it radically different?#$e#Don't mind me, I think about weird things sometimes...$h",
+
+
+  "Sat": "I love to decorate for the different seasons.",
+  "Sat4": "I love decorating. There's something special about putting a bit of your personality into your home!#$e#I wonder what your house looks like.#$b#But maybe it's more fun to keep it a mystery for now.#$e#...Okay, but does your bedroom look like a little baby nursery, or does it look like a normal adult bedroom?$7#$b#No, no, don't tell me!$1",
+  "Sat8": "Mmm... If I didn't have to worry about clients, I would love to do some major redecorations.$3#$b#My cabin is very pretty and cozy, but it's not quite 'me' anymore.$7#$e#If I ever have a bedroom - one that isn't ALSO the living room - I think I'd put a me-sized crib in it...$4",
+
+
+  "Sun": "If you hear any banging from inside my hut, it's probably just me working on one of my sculptures.#$e#*sigh* ...I've been stuck on this piece for a while.$2",
+  "Sun4": "Have you ever tried wood sculpting? It's really satisfying!#$e#...Well, I guess it takes a lot of time and energy...$7#$b#Probably too hard to juggle that while running a farm on your own...$3#$e#Oh! If you find any driftwood, that's always fun to carve! And it's not too hard, either!#$b#I'm always looking for pieces with fun shapes.$1",
+  "Sun8": "Hey there, @.#$b#Haah... I'm so sore from sculpting today. I'm totally spent!$7#$e#I know the muscle relaxers from Harvey's clinic work when I've overdone it this much. But, um...$2#$b#W-Well. Let's say it relaxes a LOT more than just my poor achy back muscles...$6#$e#*blush* It's... a very good thing that I'm wearing full-time now.$4#$e#%Leah heaves a massive sigh.#$b#...What's worse? A couple of yucky sludgy diapers, or having dumb useless arms that feel like they're melting off for a week..?$7#$b#.....Uuuuugh, I hate making responsible decisions...$2",
+
+
+//------------------------SUMMER----------------------------
+
+
+  "summer_Mon": "I found some wild fruits this morning!#$e#Oh, s-sorry, I don't have any left...$s#$e#Um... Keep looking, I'm sure you'll find something!",
+  "summer_Mon6": "Mm... Summer is the season for fresh poppyseed muffins!$1#$b#You wouldn't happen to have a kitchen in your house, would you?#$e#I usually asked to borrow Marnie's in the past, but... she has a nose like a bloodhound...$2#$e#...I-If she caught the smell of baby powder—or worse—on me...? I think I'd die of embarassment.$6",
+  "summer_Mon10": "Hehe. Hiii, @.$4#$b#How's the farm doing?#$e#If you're having trouble juggling everything, I'd be happy to help however I can!#$b#...Even if it'd be a bit of a long walk to my cabin if you needed a change...$7#$b#Oh well. You could also just come say hi whenever!! I like spending time with you!$1#$e#I'll let you get back to work for now, but come visit lots!! OK?$1",
+
+
+  "summer_Tue": "The sound of farm animals is great, isn't it?$1",
+  "summer_Tue4": "I-I'm still adjusting to this whole 'littlespace' thing, but...$3#$b#I won't lie... I've been drawing a lot more than I used to. And it's really good.$4#$b#I'm just scared that my other neighbors might find out...$2#$e#Who knows what they'd think?$3#$b#Or... what they'd tell people...$2#$e#%Leah twists the hem of her shirt anxiously.",
+  "summer_Tue6": "I'm experimenting with so many different art mediums now.#$e#Turns out, finger painting is a lot more fun than normal painting.$1#$e#...And all of the skills, like composition and color theory, still carry over.#$b#So, it looks really pretty too!$1",
+
+
+  "summer_Wed": "*Sigh* ...I just can't get out of this artblock.$2#$b#I just don't know why, but my art has been feeling a little stale lately...$3",
+  "summer_Wed4_1": "Sculpting and painting both take so long. It's kinda hard to stay in my, um... 'creative headspace' for a whole session...$7#$e#...I guess it'll probably get easier with time, though, won't it?",
+  "summer_Wed4_2": "Sculpting and painting both take so long.#$b#At least I can stay in littlespace for long enough to finish a piece most of the time.#$e#Sitting in a yucky diaper isn't great though. Plus, the clean-up takes too long if I don't change right away.$7#$b#It... kinda bothers me. I wish I didn't have to do it all myself...$2#$e#...I guess it'll probably get easier with time, though, won't it?",
+  "summer_Wed8": "%You catch a glimpse of Leah's sketchbook.#$b#%Looks like she's been doing some figure drawings lately. They're really good!#$e#%...Interestingly, the ones on this page all seem to be diapered.#$e#%...Leah catches you looking.#$b#Oh! U-Um, Hi, @. Looking at this?$6#$b#I-I was... originally just doing some rough sketches, to practice poses and proportions...$7#$b#But, um... diapers have a pretty difficult and unique shape, actually!! So!#$b#I-It's just good practice to learn how to draw them! That's all!$4",
+
+
+  "summer_Thu": "I have a pretty good eye for wild forage.#$e#If I get hungry while I'm out drawing in the woods, I can usually find a snack.",
+  "summer_Thu4": "*Smack*... Ugh! Mosquitos are the worst...$5#$e#%Leah carefully wipes her hand on her pants with the faintest of crinkling sounds.#$e#...Did you know that most bugs have a keen sense of smell? It's how they find food.$7#$b#I guess I work up a sweat by hammering on sculptures every morning, so I just have to deal with the consequences...$7",
+  "summer_Thu8": "I love the fireflies that come out at night in the summer. They're so pretty to watch.#$e#Sometimes, they land on me as I'm sitting out on the grass.#$b#I... guess I must smell pretty interesting to them, haha!$1#$e#%Leah is blushing slightly.",
+
+
+  "summer_Fri": "You can use a tapper to harvest syrups and other useful liquids directly from trees.#$e#It's a slow process, but the result can be quite valuable.",
+  "summer_Fri4": "Do you ever walk out into the forest... Pause... And simply enjoy the beauty of nature?#$e#It's easy to forget how incredible this world actually is...",
+  "summer_Fri6": "Hello, @. Do you ever get lonely on that big farm?#$e#Stop by my cabin if you ever need someone to talk to.$h",
+  "summer_Fri8": "Hi, @... Do you get lonely, living on that big farm?#$e#I often used to, living out here. But not as much lately...#$b#So, stop by my cabin if you ever need someone to talk to!$4#$e#...Or a change. *chuckle*$1#$b#Getting all cleaned up can be a bit harder in this weather.$7",
+
+
+  "summer_Sat": "What should I do on such a warm, lazy day? *sigh*#$e#Any ideas?",
+  "summer_Sat6": "%Leah bashfully kicks the ground...#$b#Umm.. Hi, @. Can we... sit together for a moment?$7#$e#%You plop down on the ground, and Leah follows with an audible crinkle.#$b#Thanks, @. It's a lot quieter down here, and that helps me think.$1#$b#...But people usually look at you funny if you're the only one sitting on the ground.$7",
+  "summer_Sat8": "Ugh... Help me, @, I'm melting.$1#$b#You could've probably warned me about how humid and gross these things get when it's THIS hot out...$5#$e#H-Honestly... I can't even tell if I've been going potty in it or not...$7#$b#It, um... kinda all feels the same at this point.$4",
+
+
+  "summer_Sun": "The flowing water keeps my house a little bit cooler in summer.#$e#I can't tolerate heat very well.",
+  "summer_Sun4": "It's nice to live around so much water.#$e#When it gets hot, sometimes I like to splash around in the riverbank.$1#$b#I try to do it when nobody's around to judge me, but sometimes Marnie's kid sees me and comes to play in the water.#$e#It feels weird, being a Little when there's kids around, so I have to go back to 'Big Leah' mode whenever that happens.$7#$b#Maybe I'm just awkward around kids in general.$2",
+  "summer_Sun8": "Maybe I should go for a swim to cool off.#$e#...Pierre still doesn't sell swim diapers, does he?$2#$e#I-I mean, it should be fine! I'm still... kinda continent... m-mostly...$7#$b#I can usually hold it when I'm not sleeping.$7#$b#But... it's really easy to get carried away while playing.$4#$e#I just don't want to make the fishies sick.$2",
+
+
+
+  "summer_1": "You can tell it's summer by the sweet smell of nectar wafting through the air!$h",
+
+
+//------------------------FALL----------------------------
+
+
+  "fall_Mon": "#$c .5#I found some wild mushrooms over the weekend!#$e#I had a huge plate of wild mushrooms and eggs for breakfast today... I'm still full.#$e#Keep your nose to the ground and you'll find some mushrooms yourself... I'm sure of it.",
+  "fall_Mon6": "One of these days I'll have to make you a wild mushroom stir-fry.$h",
+
+
+  "fall_Tue": "I wonder if I could make a collage out of dried leaves?#$e#They're just so colorful... I can't help but think of the potential for art projects.$1#$e#Ah, but I should push through this backlog first...$2",
+  "fall_Tue4": "Have you ever raked up a huge pile of freshly fallen leaves, and then flopped right into it?#$e#Ohhh, I could spend all day in a big, cushy leaf pile...$1",
+  "fall_Tue8": "I was drawing on a log in the woods earlier, and I saw a deer!!!$1#$e#I tried to get a better view so I could sketch it, but my diaper crinkled when I moved, and it ran away!$7#$b#...They're always so loud... Always at the worst times!$3#$e#...At least the only witness was the deer.$7",
+
+
+  "fall_Wed": "It's nice to live by the river...#$e#I get to fall asleep to the soothing sound of water every night.",
+  "fall_Wed4": "Hm. It's... kind of nice to be able to stay in bed when my bladder wakes me up.$7#$e#Living next to the sound of flowing water hasn't made me any more immune to it's effects...#$b#Every week or two, I'd wake up in the dead of night and have to crawl out of my warm comfy bed.#$b#...Not anymore, I guess!$1#$e#I can just wake up, go potty right there, and get right back to sleep!",
+  "fall_Wed8": "Welp... my bladder's broken! *giggle*$1#$b#I was getting tired while sculpting, and took a quick nap. I even kept my ear protection on!#$b#But even without the sound of the river, I must've emptied myself out the moment I fell asleep.$4#$e#It's a little reassuring to know that I *need* to be in diapers now. Helps me feel less self-concious about them...$4",
+
+
+  "fall_Thu": "Um... Hello there.#$b#%You notice Leah has a flower-print bandaid on her thumb.#$b#...Oh, that? Just a whittling accident. Happens sometimes.$2#$b#I'll be okay.",
+  "fall_Thu4": "%You spy Leah sucking on her thumb.#$b#%When she notices you, she hastily takes it out of her mouth, wrapping her shirt around it instead.#$b#Oh! H-Hey, @. Just, um, a whittling mishap!$1#$e#Haha. Yep! C-Clumsy me!$1#$e#%...You decide to just let her have this one.",
+  "fall_Thu8": "Mmm... I'm tired... Worked too hard this morning...$3#$e#%Leah blinks slowly, and drowsily puts her thumb in her mouth for a moment. But then she stops herself, reaching into her bag for something...#$b#%...She pulls out a pacifier, and pops that into her mouth instead.#$e#%...Looks like she's too sleepy to care about being seen by anyone right now.",
+
+
+  "fall_Fri": "Do you have a kitchen in your house?#$e#If you have a kitchen, you can cook all kinds of delicious meals.$h",
+  "fall_Fri6": "The Saloon is pretty nice. Gus always bumps up the jukebox a teeny bit whenever I come in though.#$b#I think he's put two and two together, and is just trying to help me cover up any crinkles.$7#$b#...or, um... other embarassing sounds.$2#$b#*sigh* The barkeep always knows, I guess...",
+  "fall_Fri8": "The Saloon is always packed on Fridays. It's a good thing I don't have to queue for the bathroom anymore.$1#$e#I've noticed that Abigail never heads back there, though...$7#$e#Well, I guess... maybe she just goes at home? It's not a far walk...$7",
+
+
+  "fall_Sat": "Decorations accentuate the feeling of the season. I think it's a worthwhile tradition.",
+  "fall_Sat4": "I got some cinnamon-scented pinecones for my little cabin.#$e#Spirit's Eve may have the best decorations...$7#$b#But when it comes to the whole fall season, those are the winners in my book!$1",
+  "fall_Sat8": "I got some cinnamon-scented pinecones to put in my cabin.#$b#...They cover up the diaper smell.$1",
+
+
+  "fall_Sun": "There's a lot of good places to walk around here.#$e#It feels good to stretch your legs.",
+  "fall_Sun4": "One thing I love about this place is the beautiful waterfalls.#$e#Do you ever spend time watching them? It's soothing...",
+
+  "fall_1": "How quickly the seasons change!#$e#It's shocking.",
+
+
+//------------------------WINTER----------------------------
+
+
+  "winter_Mon": "I love the way everything looks when it's covered with fresh snow.",
+  "winter_Mon8": "Mmph...? ...@!!$1#$b#%Leah takes a candy cane out of her mouth. Her cheeks are all sticky with sugar.#$b#Heehee, oops. There we go. Hi, $NICKNAME$!#$e#I've been keeping one of these in my mouth whenever I gotta meet with any potential clients.$7#$b#...It's no pacifier, but at least it keeps my thumb from drifting there in front of strangers...$1",
+
+
+  "winter_Tue": "It gets pretty cold in my little cabin.$s#$e#I just snuggle up under a huge blanket, and I'm okay.$h",
+  "winter_Tue4": "It's been really chilly in my cottage this winter.#$e#I've been wearing diapers to bed every night just for the extra layer, whether I plan to use them or not.$1",
+  "winter_Tue8": "Do you ever get cold in that farmhouse of yours?#$b#Feel free to stop by my cabin if you want to huddle under some blankies!$1#$e#I like to make a big pillow fort with all my quilts, when I'm down on the floor.#$e#But, umm... if I have tummy troubles while I'm under there, it's pretty bad...$7#$e#Sometimes I have to decide if the cold outside is worse than the smell.$2#$b#And, I have a very sensitive nose!!! So, when the answer is yes, that's REALLY unfair!!$5",
+
+
+  "winter_Wed": "I'm having a hard time finding fresh food to eat.$3#$e#I've been eating a lot of bread...$2 %revealtaste:Leah:(O)216",
+  "winter_Wed6": "*Sigh*... It's hard to get fresh food in the winter.$7#$e#I bet your farm is pretty well stocked with food, huh?#$b#Bread is... filling, I guess. But all that fibre goes right through me...$2",
+
+
+  "winter_Thu": "I saw a snow rabbit early this morning! They're rare, aren't they?",
+  "winter_Thu4": "I saw a snow rabbit early this morning!$1#$e#...Y'know, I used to have a stuffed bunny when I was a kid.#$b#It, um... got tossed out after I moved out for art school.$2#$e#Maybe I should get a new one.",
+  "winter_Thu8": "Hehe. Hi, @.#$e#...I've hidden ${Mr. Hopworthy^Lady Bunnifer}$ under my coat so I can take ${him^her}$ with me today.$4#$b#%Leah carefully opens her jacket to reveal a floppy stuffed bunny doll tucked into the inner pocket.#$e#Shhhh. ${He's^She's}$ undercover.$1#$b#%Leah winks conspiratorially at you.",
+
+
+  "winter_Fri": "Time seems to move slower here.#$e#When I lived in the city, the year went by so fast.",
+  "winter_Fri4": "I get so sluggish in the cold...#$e#Sometimes I feel like a hibernating animal.$7#$b#But unfortunately, unlike a bear, I still need to eat and drink and go to the bathroom.$2#$e#At least I only have to move to a bathroom if I need to go number two...$7",
+  "winter_Fri8": "*Inhale* Ahhh... I love the smell of winter!#$b#No matter where you are, the air smells like crisp snow and fresh pine needles...#$e#Um. Well. A-Almost everywhere. Most of the time. *blush*$4#$e#%Leah glances towards the bulge of your diaper, and then bashfully at her own.",
+
+
+  "winter_Sat": "Oh... Hello. Do you want something?",
+  "winter_Sat2": "Hi, @. Is there, um... something you wanted to talk about?",
+  "winter_Sat6": "I get so much snow in my hair this time of year.#$b#The moment I go someplace warmer, it melts. Then I have icy water dripping down my neck and back...$2#$e#I think maybe 'cold' and 'wet' just shouldn't go together.$7#$e#Well, okay. In the summer it's nice to cool off.#$b#...But otherwise, I stand by what I said!$1",
+
+
+  "winter_Sun": "Do you ever take a whole day off?#$e#It's a refreshing break.",
+  "winter_Sun4": "You should take a whole day off, now and then.#$b#Not only is it good for the soul, but in the long run, you'll actually be more productive!",
+  "winter_Sun8": "I took a break from my carvings this morning to go make some snow angels.#$b#They're a lot more fun to make when you're not freezing your butt off.$1",
+
+			},
+		},
+		{
+			"LogName":"Leah Marriage",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+
+  "Indoor_Day_0": "Why, hello, my beautiful darling dear!#$e#Need a morning change?$1#$b#$y '(...Do you..?)_Yep!_Hehe! I thought so.*::466:change:pawprint diaper:1::_No need. I woke up clean!_Oh! Well, I hadn't checked.*I'm glad! But you might wanna make it to the potty soon if you plan on keeping it that way!*Or you can just go now. Your diaper is a potty too.$1_No, I wanna stay squishy for a little bit!_Hehe. I should've known. Have fun!*I'll be here if you wanna get out of that thing!*...Just, um... try not to leak on the floor.$1",
+  "Indoor_Day_1": "G'morning, @! I've planted these in a little pot out back... [16 18 20 22 90 259 396 402]#$e#I grew that with a whole lot of love and attention... I hope you like it!",
+  "Indoor_Day_2": "I think I want to put a couple new drawings on the freezer...#$e#Oh, but the ones on there are so pretty...$2#$e#Mmmmmmm... Guess I'm gonna go through my portfolio again.$7",
+  "Indoor_Day_3": "Mmm, the fresh greens and veggies here in the valley can't be beat!#$b#Here, I made you a salad too! [196]$1#$e#I know you can sometimes be a picky eater, but the roughage is good for you.#$b#Besides! It's delicious and nutritious!!",
+//---ADD COOLDOWN TRIGGER
+  "Indoor_Day_4": "Good morning, @! I made us some coffee![395]$h#$e#My morning just wouldn't be complete without a hot cup of coffee!$1#$e#%Leah drains down her cup quickly.#$b#%...It's not long until you hear it start draining into her diaper, too.#$e#Hehee...$4",
+  "Indoor_Day_Leah": "*Yawn*... Mmh. Good dreams last night...$4#$b#%Leah's hair is a mess, and she has pillowcase lines all over her face.#$e#You move around so much in your sleep, @.#$b#Which usually means you end up with your diaper smooshed up against me.$1#$e#I was dreaming of lying up on top of the clouds with you, watching the valley from up above.#$e#...It was a very comfy cloud.$4#$b#...Suspiciously squishy, though.$1",
+
+
+  "Indoor_Night_0": "Hey, @... I'll make you a trade offer.$4#$b#You come climb into bed with me and snuggle... and I'll give you a bedtime change.$1#$b#$y 'How about it?_Of course!_Heehee! Good choice, dear.$1*::467:change:pawprint diaper:1::_No deal!_Aww! For shame, $NICKNAME$! You would leave a poor little sculptor cuddle-less?*Well!! Next time I draw you, I'm gonna get your bad side!!$1*...Oh, I'm joking. You don't have a bad side, $NICKNAME$!$1_Yes to snuggles, No to changes!_O-Oh..!*Well, okay...$4*...But if you're gonna re-negotiate, then I should get to as well!$1*You'll be the one doing the sheets in the morning if you leak on them.$1*%(...Deal.)",
+  "Indoor_Night_1": "Something about this time of night always makes me thirsty.#$e#Maybe my body was conspiring to make me a bedwetter all along.$1#$b#...Not like I mind that!$4",
+  "Indoor_Night_2": "It's so much prettier here at night than the harsh glow of the city.#$e#You can't really see the stars in Zuzu...$2#$e#I like curling up in my blankie, and looking out the farmhouse windows at the night sky.$4#$b#Sitting in a soft diaper, watching the stars... it makes me feel all warm and safe.$4",
+  "Indoor_Night_3": "%Leah looks a little drowsy.#$b#%...She has her pacifier in, so instead of words she just makes grabby-hand motion at you for a hug.#$e#%Leah hums contendedly, and melts into your arms.#$b#%...Looks like somebody is just about ready for bedtime.",
+  "Indoor_Night_4": "I saw a wild rabbit today..!#$b#...I just wish I could pet one someday... They look so soft...$2#$e#Well, at least I have lots of stuffies to cuddle with.#$e#...And you! Obviously!#$b#You're a much better hugger than ${Mr. Hopworthy^Lady Bunnifer}$.$1",
+  "Indoor_Night_Leah": "%Leah sits on the floor, sketchbook splayed out in front of her.#$b#%...She seems to be nodding off, her pen-strokes gradually slowing down.#$e#*yawn* ...Mmh. Almost... done... *yawn*$2#$b#%...Aww. Looks like she's been drawing you a bunch on this page!#$b#%Oh. Wow. That one's got a *FULL* diaper. ...Do you really go THAT much?#$e#%Once she sets the pen down, you hoist her up to her feet, and she gives you a sleepy smile.#$b#Missed you today...$4#$b#*sigh* ...Time to go night-night...$4",
+
+
+//---ADD COOLDOWN TRIGGER
+  "Rainy_Day_0": "Mmm... G'morning...$4#$b#%Leah blearily wipes the sleep from her eyes, and yawns.#$e#%You notice that she hasn't changed out of her pajama bottoms, which aren't doing much to hide a very wet diaper underneath.#$b#All that rain made me a VERY leaky baby last night!$1#$b#...I think I'll stay in this one for a bit, if that's okay with you. It's cozy-warm...[TRIGGER]$4",
+  "Rainy_Day_1": "I used to find rain so depressing when I lived in the city.#$b#Everyone always seemed so grumpy about trying to stay dry.$2#$b#But it's a lot of fun to splash around in the puddles!#$e#Today, though... I think I'll just cuddle up in a warm blankie next to the windows and enjoy the weather.$1#$e#It's really pretty out there...$4",
+  "Rainy_Day_2": "Good morning!!! I got up early and did some mushroom hunting.#$b#Here, take one![281 404 420 257]$1#$e#Hunting for mushrooms is like going on a treasure hunt!$1",
+  "Rainy_Day_3": "It's days like this I'm really happy about my heavy-duty boots.$1#$b#Hopping and splashing in the mud is very fun, but I really don't like it when my socks get wet.",
+  "Rainy_Day_4": "The trees have been begging for this rain... I'm happy for them!#$e#Hehe. I get it. I like being soggy sometimes too!$1#$b#But it's especially nice to have a warm, dry diaper on a cold, wet day.$4",
+//---ADD COOLDOWN TRIGGER
+  "Rainy_Day_Leah": "%Leah is all wrapped up in a big puffy blanket, wearing it like a hooded cloak.#$b#Hehe. Hi @.$4#$e#...I'm chilly. And my tummy feels bad...$2#$e#%Leah winces and raises one leg, as if to pass some gas.#$b#%...You hear a loud bubbly noise, and the rapid crinkling sound of a diaper filling out under her blanket.#$b#%She stiffens, quickly pulling her blanket tight around herself.#$b#E-Eep...!!!$6 [TRIGGER]#$e#W-Well, ah... that... s-solves both problems, I guess?!?$6#$e#*groan* ...Ew, ew, ew... It's so icky...$2#$b#B-but... Ugh... I'm definitely gonna have to shower anyways... I g-guess it'd be OK to enjoy the warmth for a bit first...$7#$e#%Leah looks very conflicted about the full diaper around her waist, but she doesn't seem to be in a rush to take it off yet.#$b#%At least the smell is contained, for now.",
+
+
+  "Rainy_Night_0": "How was your day? Did you see any animals out there?#$e#I drew a froggy that came up on our porch.$1",
+  "Rainy_Night_1": "I usually go for salad... but a wet night like this gives me cravings for hot soup.$1",
+  "Rainy_Night_2": "It's going to be relaxing to fall asleep on a night like this...$4#$e#I've missed the soothing sound of flowing water, even if I don't need it to have nighttime accidents anymore!$1",
+  "Rainy_Night_3": "Hmm. Drip... drop...$7#$b#I wonder if the roof is gonna leak. Maybe I should do some repairs when it dries up again...$7#$e#It had better not leak on the bed!$5#$b#...That's your job!$1#$e#...Hehe, no but really, we should probably get plastic sheets.$1",
+  "Rainy_Night_4": "I'm glad you're home... It's a good night to get under the covers and stay warm.$4#$e#I wanna make a pillow fort!!!$1",
+  "Rainy_Night_Leah": "%Leah's hair is soaked, and she has a towel draped around her shoulders.#$b#Heehee... I played in the rain while you were out.#$e#...*sniffle* Wuh-oh... I hope I didn't catch a cold...$6#$e#It's okay. You'd take care of me, wouldn't you?#$b#Hehe. Like I need to ask...$4#$e#Speaking of taking care of each other... Let's give you a bedtime diaper change before I get tucked in.$4#$b#::467:change:pawprint diaper:1::",
+
+
+  "patio_Leah": "Don't look too close, it's a work in progress!$4#$b#%...You're not sure if she means the sculpture or her diaper.",
+  "spouseRoom_Leah": "Aw, shoot, I'm running out of finger-paints again...$7",
+
+
+  "Outdoor_0": "The cool breeze feels nice. It reminds me of living by the river.#$e#Sometimes, I like to just wear my biggest, baggiest shirt, and a diaper, and just sit on the porch letting the wind wash over me.$4#$e#It feels really cozy!$1",
+//---ADD CHECK COOLDOWN
+  "Outdoor_1": "Hello, my darling!$4#$e#Oh, hang on... just give me one moment...#$b#%Leah puts her foot up on a rock, and starts fiddling with the cuffs of her pants...#$b#%...You can tell it's taking her too long. It's hardly a surprise when you finally hear the pittering sound of Leah wetting her diaper.#$b#Oh... I was trying to be subtle...$2#$b#L-Let's just pretend my cover-up worked. I'll get it right next time!$4 [TRIGGER]",
+  "Outdoor_2": "Ah... that smell of fresh dirt. There's nothing quite like it.$1#$e#You can just tell the air is clean here... it feels good in the lungs.",
+  "Outdoor_3": "%Leah sits on the porch, messing with a lump of clay. She doesn't seem to be making anything with it, though.#$e#Rnnghh... Stupid art-block...$5#$b#...'s not fair... *sniffle*...$2#$b#%Leah crosses her arms in frustration, squeezing the clay in her hand.#$e#%You give Leah a gentle hug.#$b#%...Oh, Maybe she needs a change?",
+  "Outdoor_4": "Don't overwork yourself!#$b#Make sure and take a break every now and then, or get something to eat!$1#$e#...You better not be working on an empty tummy, $NICKNAME$.$7#$e#...Here's a granola bar if you get hungry. [403]",
+  "Outdoor_Leah": "%Leah sits criss-cross on the ground, laser-focused on building a tiny farmhouse out of some twigs, pebbles, and mud.#$b#%You lean down and give her a kiss on the top of her head, and she startles with a squeak, accidentally knocking the whole thing down.#$b#...$NICKNAME$!!!$5#$e#%...Leah pouts for a moment, before finally hugging you back.#$e#...If you spook me like that again, I'm gonna make a stinky in my diaper. And you'll have to clean it up!$5#$b#%It almost sounds a like a threat... But knowing Leah, she's probably trying very hard to *not* do that.",
+
+
+  "funLeave_Leah": "I'm going to take a nature walk today. I need to get out of the house!",
+//---ADD CHECK COOLDOWN
+  "funReturn_Leah": "%You notice Leah's diaper is bulging under her jeans as she walks through the door.#$b#Pee-yew! I'm glad I was out of the house when that happened...$7#$b#...Okay!! I'm going straight to the shower now!!! Eugh. Yucky...$5 [TRIGGER]",
+
+
+  "OneKid_3": "It's fun to be a parent. I want to make sure %kid1 grows up to have a love for the outdoors.",
+  "TwoKids_3": "We've got a wonderful farm and a full family. Our new life has really turned out well, hasn't it?",
+
+
+  "Good_0": "Someday, I'll work up the courage to commission Robin to make us a big-sized crib...$4#$b#A-And, I wanna be the one to ask her, too... I'm just... not ready to be that brave yet.$7",
+  "Good_1": "%Leah's hands are all covered in paint. Looks like she's been having a lot of fun.#$b#I painted the beach on of one of our diapers! *grin*$1#$e#...I like putting art onto things that'll get thrown away. It's, um...#$b#...what's the word...$7#$b#Oh!! Fleeting!$6#$b#*giggle* Wow, I really am baby-brained today...$1",
+  "Good_2": "Sometimes it's hard not to believe in destiny... the fact that I decided to move here, and that we found each other.#$b#It could've gone entirely differently at any point.#$e#...Kinda sad to imagine a version of me wearing big girl undies and drawing realism...$1#$b#That Leah sounds so boring.$4",
+  "Good_3": "Wow, you look full of energy today!$l^You look beautiful today.$l",
+  "Good_4": "Have I mentioned lately just how much I love living here with you?$4#$e#...Well, okay, I'd love living ANYWHERE with you. But that's besides the point!$1",
+  "Good_5": "I was just admiring my wedding amulet... I'll cherish this treasure for the rest of my life!$4",
+  "Good_6": "Be careful out there! Sometimes I worry about you falling into a mine shaft...#$e#I've fallen on my butt enough times to know these diapers won't cushion an impact THAT well, used or not!",
+  "Good_7": "%Leah is cuddled up with her stuffed rabbit, working on a jigsaw puzzle.#$e#*whispering* Um... Do you see the last edge piece anywhere, ${Mr. Hopworthy^Lady Bunnifer}$..?$7#$e#%You bend down and grab the piece that fell off the table and got wedged partly under Leah's diaper.#$b#Oh... Th-thanks, $NICKNAME$...$4",
+  "Good_8": "Hey there, @! ...I just did a huge load of laundry.#$b#I need to get new pants soon. My old ones are getting pretty worn out.$1#$e#Maybe I should get a onesie to wear when I'm just around the house. Jeans aren't the best for easy changes.$7",
+  "Good_9": "I made some yummy muffins!!! Here! [651][651][651]$1#$e#...My tummy might be a little unhappy about the wheat flour, but the other kinds don't taste right...$3#$e#It's OK! I'll just stay close to the big-girl potty so I'm not making icky diapers all day.$1#$e#Poppyseed muffins are ABSOLUTELY worth the tummy-grumblies!$1#$b#%Leah takes a massive bite of muffin and hums happily.#$b#%...You try very hard not to laugh at how she's stuffed her cheeks full like a chipmunk.",
+
+
+  "Neutral_0": "I hope you'll still like me when I'm old and gray.",
+  "Neutral_1": "I wonder who lived here before us?",
+  "Neutral_2": "Don't you have anything to do today?#$e#...Me? Oh, I'm TOTALLY busy! Just look at this!$1#$b#%Leah proudly presents a scribbly crayon doodle. It's.... definitely enthusiastic.#$e#%...Judging by the lingering smell in the air, you think you know why she rushed it.",
+  "Neutral_3": "If you go into town, make sure and say hi to everyone for me.",
+  "Neutral_4": "I'll do the laundry tomorrow morning before you get up... that way you won't have any down-time.",
+  "Neutral_5": "Are we doing okay on money, @?#$b#I remember that the diaper budget adds up, even just for one person.",
+  "Neutral_6": "I wonder what everyone in town is doing today?",
+  "Neutral_7": "I don't really feel like doing anything today.",
+  "Neutral_8": "No matter how much I clean, the house keeps getting dirty again.#$e#I guess farms can be kind of dirty.",
+  "Neutral_9": "I wonder if we'll live here our entire lives?",
+
+
+  "Bad_0": "...Do you still love me?$s",
+  "Bad_1": "*sigh*... Maybe we got married too young.$s",
+  "Bad_2": "Are you still happy with me?$s",
+  "Bad_3": "Did I do something wrong? You've been acting different lately.$s",
+  "Bad_4": "Do you ever wonder what else is out there?$s",
+  "Bad_5": "You used to be romantic... what happened?$s",
+  "Bad_6": "We only have one short life to live... is this the best way to do it?$s",
+  "Bad_7": "I used to be your sweetie... now you only seem to put up with me when I make a hot dinner.$s",
+  "Bad_8": "You've been so cold to me lately...$s",
+  "Bad_9": "I wonder if I could've done better.$s",
+
+//------SPRING--------
+
+  "spring_1": "That was some way to ring in the new year last night...$l",
+  "spring_2": "So, what are we planting this season?",
+  "spring_15": "*sigh*... Well, I guess it's time for spring cleaning again.$7#$e#...I'll do the bathroom if you do the bedroom.#$e#Cleaning the shower is gonna be hard, but deep-cleaning our mattress would probably take an act of Yoba...$7#$b#Well, if anyone can do it, it's you!",
+  "spring_23": "The flower dance is tomorrow...#$e#I do like it!#$b#It's just... a little scary, being in front of everyone.$3#$e#M-Maybe I should practice those skirt-lifty moves ahead of time, just so I don't accidentally flash anyone with my diaper...$1#$b#%Leah chuckles nervously.",
+
+//------SUMMER--------
+
+  "summer_1": "Ah, summer... I can smell the spice berries already!$h#$e#%Leah makes a show of sniffing the air.#$b#Hmm..? That's odd. Spice berries smell... different... than I remember.$1",
+  "summer_2": "It's summer... that means the house is full of flies.#$e#Don't worry, I'll take care of them.",
+  "summer_9": "Sorry if I'm wet to the touch... I was sweating all night in the heat.",
+  "summer_20": "Oh, it's the trout derby!#$b#When I lived next to the river, sometimes the contestants would wake me up, just to ask if they could use my bathroom.$5#$e#Honestly!! They should just do what we do... Diapers are much less hassle.",
+
+//-------FALL-------
+
+  "fall_1": "I love fall for the mushroom hunting opportunities. It comes and goes pretty fast.",
+  "fall_2": "I know harvest season is a busy time for you. I'll try and help out as much as I can.",
+  "fall_12": "It's almost time for the Stardew Valley Fair... I'm looking forward to it!#$e#I usually play the spinny-wheel game.#$b#Green is my lucky color!$1#$e#The free burgers smell yummy, but last time I tried them I got a really bad tummyache.#$b#So I'd probably fill my diaper now. And then I'd have to leave before anyone noticed. And walk alllll the way home to change...$7#$b#And that's icky...$2#$e#Oh! I broke the hammer strength game, once! *giggle*$1#$b#...#$b#...I think it was gonna break anyways... I might be strong, but I'm not THAT strong...$7#$b#I",
+  "fall_20": "Have you planned for winter at all? It's good to have a stockpile of hay!",
+
+//-------WINTER--------
+
+  "winter_1": "Winter's here, and that means crystal fruit is in season. It has such a unique flavor, don't you think?",
+  "winter_7": "I'm looking forward to carving ice sculptures tomorrow. I only get to do it once a year, but it's a lot of fun!",
+  "winter_23": "Hmm. Another year older.#$e#...Can I be a big girl and wear pull-ups for today?$7#$e#It's ok, I promise to flunk back out of them after.$1#$b#...We both know I belong in diapers!$1",
+  "winter_28": "Hey, here's to another great year at %farm farm! Let's have some fun tonight! [348]$h#$e#Next year is going to be great, I can feel it!#$e#Oh, right! Here, for tonight...$7#$b#::468:give:pawprint diaper:1::",
+
+
+//5% chance each day.
+
+//---ADD CHECK COOLDOWN
+  "spring_Leah": "Bluh... I'm all sniffly.$2#$b#I opened the windows when I did my morning change and it let all the tree pollen in.$7$#$e#Haah.... Aaaah... AH-CHOO!!$6#$b#%As Leah sneezes, you hear her lose control of her bladder...#$b#...Ohh... dangit. I should've gone in my diaper one last time before I changed...$5 [TRIGGER]#$e#Hnnnn... pollen is so meannn...$2#$b#At least I already went poopy during the night, so that didn't happen now. Soggy diapies are ok for a little while.",
+
+//---ADD CHECK COOLDOWN
+  "summer_Leah": "*whine* It's so hoooooot. I feel all melty. Like a waxwork statue in an oven.$2#$e#%Leah flops against your side, and you offer her some water. She gulps it down quickly.#$b#You hear a satisfied sigh... and then a loud tinkling.#$b#Ohhhh nooooo, @, I melted! *snort*$1 [TRIGGER]#$e#%Leah stops suddenly and pats at her inner thighs, rapidly blooming with wetness.#$b#*groan* ...Leaky baby alert...$6#$b#...I don't wanna smell like pee.$2#$b#I gotta go shower.$3#$b#Bye $NICKNAME$, don't turn into a wax statue while I'm gone!$1",
+
+  "fall_Leah": "%Leah is cuddled up with her stuffed bunny, reading a book with some kind of skeleton-girl on the cover...#$e#Ohhh, I wanna draw so many of these characters...$7#$e#Y'know... It's a shame, the poor main character really could use the sort of comfort and care that comes with wearing these things...$7#$e#Wait... I could draw that! I'm an artist!!$6#$e#...@, stop me, I'm going mad with power! *cackle*$1",
+
+  "winter_Leah": "I wanna make a gingerbread house.#$e#Ginger is really yummy. And it helps with tummyaches!$1#$b#...But it also makes you need to poop... So I probably won't eat very much if we make any.$7#$e#...But I might eat a little.$4#$e#...And you don't usually eat a gingerbread house anyway. It gets stale and gross pretty fast.#$e#I think it's mostly an excuse to make the whole house warm and nice-smelling.$1#$b#So we should DEFINITELY do it! *chuckle*$4",
+
+			},
+		},
+		{
+			"LogName":"Leah GiftTastes",
+			"Action":"EditData",
+			"Target":"Data/NPCGiftTastes",
+			"Entries":{
+	  "Leah": "Oh! This is exactly what I wanted! Thank you!/196 200 348 606 651 426 430/This is a really nice gift! Thank you!/-5 -6 -79 -81 18 402 330 169 406 408 418 86/Hmm... I guess everyone has different tastes./-2 152 330 221 223 229 232 233 241 209 194/This is a pretty terrible gift, isn't it?/305 211 210 206 216/Thank you.//",
+			},
+		},
+	]
+}

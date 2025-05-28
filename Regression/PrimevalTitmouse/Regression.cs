@@ -13,6 +13,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using xTile.Dimensions;
+using System.ComponentModel;
+using StardewValley.GameData.Shops;
 
 namespace PrimevalTitmouse
 {
@@ -34,9 +36,14 @@ namespace PrimevalTitmouse
         public Dictionary<string, string> diag = new Dictionary<string, string>();
         public List<string> sourcelist = new List<string>();
 
-        public static int[] checkCooldown = new int[5];
+
+        public static string[] cooldown_list = {"abigail", "sam", "haley", "vincent", "jas", "sebastian", "shane"};
+        public static int[] cooldown_check = new int[cooldown_list.Length];
 
         const float timeInTick = (1f/43f); //One second realtime ~= 1/43 hours in game
+
+        bool queue; //queue flag for QueueMenu
+        ItemGrabMenu igm;
 
 
 
@@ -328,7 +335,7 @@ namespace PrimevalTitmouse
 
             Animations.AnimateNight(body);
             HandleMorning(sender, e);
-            checkCooldown[0] = 0; checkCooldown[1] = 0; checkCooldown[2] = 0; checkCooldown[3] = 0; checkCooldown[4] = 0;
+            Array.Clear(cooldown_check);
         }
 
         private void HandleMorning(object Sender, DayStartedEventArgs e)
@@ -501,7 +508,8 @@ namespace PrimevalTitmouse
 
 
 
-
+            if (!Game1.dialogueUp && queue)
+                QueueMenu();
 
 
 
@@ -519,6 +527,7 @@ namespace PrimevalTitmouse
                         Game1.currentLocation.lastQuestionKey = null;
                         attemptToSleepMenu.closeDialogue();
                         Animations.AnimateDryingBedding(body);
+                        
                     }
                 }
             }
@@ -688,9 +697,9 @@ namespace PrimevalTitmouse
             lastTimeOfDay = Game1.timeOfDay;
             if(stillSoilCD > 0) stillSoilCD--;
 
-            for (int i = 0; i < checkCooldown.Length; i++)
+            for (int i = 0; i < cooldown_check.Length; i++)
             {
-                if(checkCooldown[i] > 0) checkCooldown[i]--;
+                if(cooldown_check[i] > 0) cooldown_check[i]--;
                 //if(config.Debug)this.Monitor.Log($"Cooldown {i} is {checkCooldown[i]}", LogLevel.Debug);
             }
 
@@ -750,27 +759,71 @@ namespace PrimevalTitmouse
 
                     string id = parsedString[0];
                     string command = parsedString[1];
-                    string item = parsedString[2];
-                    int amount = Int32.Parse(parsedString[3]);
+
+                    List<string> args = new List<string>();
+
+                    for (int i = 2; i < parsedString.Length; i++)
+                    {
+                        args.Add(parsedString[i]);
+                    }
+
+                    args.ToArray();
                     string raw = "";
 
                     diag.TryGetValue(id, out raw);
 
                     this.Monitor.Log("Raw dialogue: " + raw, LogLevel.Debug);
 
-                    string diaper = item;
-
-                    if (command == "change")
-                    {
-                        if (diaper != "") body.ChangeUnderwear(new Underwear(diaper, 0, 0, amount), false);
-                    }
+                    string diaper = args[0];
 
 
-                    if (command == "give")
-                    {
-                        Underwear underwear = new Underwear(diaper, 0, 0, amount);
-                        who.addItemToInventoryBool(underwear);
-                    }
+                switch (command)
+                {
+                    case "change":
+                        Container container = body.underwear;
+                        Underwear underwear = new Underwear(container.name, container.wetness, container.messiness, 1);
+                        if (diaper != "") body.ChangeUnderwear(new Underwear(diaper, 0, 0, Int32.Parse(args[1])), false);
+                        if (!who.addItemToInventoryBool(underwear, false) && container.removable)
+                        {
+                            List<Item> objList = new List<Item>();
+                            objList.Add(underwear);
+                            igm = new ItemGrabMenu(objList);
+                            queue = true;
+                            break;
+                        }
+                        else
+                            who.addItemToInventoryBool(underwear, false);
+                        break;
+                    case "give":
+                        Underwear giveunderwear = new Underwear(diaper, 0, 0, Int32.Parse(args[1]));
+                        if (!who.addItemToInventoryBool(giveunderwear, false))
+                        {
+                            List<Item> objList = new List<Item>();
+                            objList.Add(giveunderwear);
+                            igm = new ItemGrabMenu(objList);
+                            queue = true;
+                            break;
+                        }
+                        else
+                            who.addItemToInventoryBool(giveunderwear, false);
+                        break;
+
+                    case "accident":
+                        body.underwear.AddPee(float.Parse(args[0]));
+                        body.underwear.AddPoop(float.Parse(args[1]));
+                        body.bowelFullness = 0;
+                        body.bladderFullness = 0;
+                        body.HandlePeeOverflow(false);
+                        body.HandlePoopOverflow(false);
+                        break;
+
+                    case "cooldown":
+                        Animations.HandleCooldown(args[0], true);
+                        break;
+
+                        
+
+                }
 
 
 
@@ -793,7 +846,7 @@ namespace PrimevalTitmouse
 
             string path = Regression.help.DirectoryPath.ToString();
             string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
-            DirectoryInfo d = new DirectoryInfo(newPath + "\\Regression Dialogue\\Dialogue\\NPCs\\");
+            DirectoryInfo d = new DirectoryInfo(newPath + "\\Regression_CP\\Dialogue\\NPCs\\");
 
             this.Monitor.Log("Initialize 1", LogLevel.Debug);
 
@@ -820,7 +873,14 @@ namespace PrimevalTitmouse
         }
 
 
-
+        public void QueueMenu()
+        {
+            if (queue)
+            {
+                Game1.activeClickableMenu = igm;
+                queue = false;
+            }
+        }
         public Regression()
         {
             //base.Actor();

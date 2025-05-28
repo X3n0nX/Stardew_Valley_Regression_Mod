@@ -1,0 +1,13 @@
+{
+  "Changes": [
+
+    {
+      "LogName": "Hats",
+      "Action": "EditData",
+      "Target": "Data/Hats",
+      "Entries": {
+        "Regression.C_RedPaci": "Red Pacifier/A big red-shielded pacifier. Great for nursing./true/true//Red Pacifier/0/Regression.C\\hats"
+      }
+    }
+  ]
+}

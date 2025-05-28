@@ -1,0 +1,26 @@
+{
+  "Changes": [
+
+    {
+      "LogName": "Shirts",
+      "Action": "EditData",
+      "Target": "Data/Shirts",
+      "Entries": {
+        "Regression.C_OrangeOnesieTop": {
+          "Name": "Orange Onesie Top",
+          "DisplayName": "Orange Onesie Top",
+          "Description": "An orange onesie for big kids.",
+          "Price": 500,
+          "Texture": "Regression.C/shirts",
+          "SpriteIndex": 1,
+          "DefaultColor": null,
+          "CanBeDyed": false,
+          "IsPrismatic": false,
+          "HasSleeves": true,
+          "CanChooseDuringCharacterCustomization": true,
+          "CustomFields": null
+        }
+      }
+    }
+  ]
+}

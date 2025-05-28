@@ -1,11 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Characters;
 using StardewValley.Menus;
 using StardewValley.TerrainFeatures;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -30,7 +32,7 @@ namespace PrimevalTitmouse
     internal static class Animations
     {
         //<FIXME> Adding Leo here as a quick fix to a softlock issue due to not having ABDL dialogue written
-        private static readonly List<string> NPC_LIST = new List<string> { "Linus", "Krobus", "Dwarf", "Leo" };
+        private static readonly List<string> NPC_LIST = new List<string> { "Leo" };
         public static readonly int poopAnimationTime = 2000; //ms
         public static readonly int peeAnimationTime = 2000; //ms
         //Magic Constants
@@ -41,6 +43,7 @@ namespace PrimevalTitmouse
         public const int LARGE_SPRITE_DIM = 64;
         public const int SMALL_SPRITE_DIM = 16;
         public const int DIAPER_HUD_DIM   = 64;
+
 
 
 
@@ -407,19 +410,26 @@ namespace PrimevalTitmouse
             }
             else
             {
-                switch (npc.Age)
-                {
-                    case 0:
-                        npcType.Add("adult");
-                        break;
-                    case 1:
-                        npcType.Add("teen");
-                        break;
-                    case 2:
-                        npcType.Add("kid");
-                        break;
+                String name = npc.getName().ToLower();
+                
+                if (!Animations.GetData().Villager_Reactions.ContainsKey(name)){
+
+
+                    switch (npc.Age)
+                    {
+                        case 0:
+                            npcType.Add("adult");
+                            break;
+                        case 1:
+                            npcType.Add("teen");
+                            break;
+                        case 2:
+                            npcType.Add("kid");
+                            break;
+                    }
                 }
-                npcType.Add(npc.getName().ToLower());
+                else
+                    npcType.Add(name);
             }
 
             //What did we do? Use to figure out the response.
@@ -510,18 +520,6 @@ namespace PrimevalTitmouse
             }
             else
             {
-                switch (npc.Age)
-                {
-                    case 0:
-                        npcType.Add("adult");
-                        break;
-                    case 1:
-                        npcType.Add("teen");
-                        break;
-                    case 2:
-                        npcType.Add("kid");
-                        break;
-                }
                 npcType.Add(npc.getName().ToLower());
             }
 
@@ -553,16 +551,10 @@ namespace PrimevalTitmouse
 
             if (heartLevelForNpc >= 8)
                 {
-                    var niceRand = Regression.rnd.NextDouble(); //allows a small chance for the nice line to be chosen instead for variety.
-
-                    if (niceRand > 0.3f)
-                        responseKey += "verynice";
-                    else
-                        responseKey += "nice";
-
+                    responseKey += "verynice";
                     friendshipLoss = 0;
                 }
-                else if (heartLevelForNpc >= 6)
+                else if (heartLevelForNpc >= 4)
                 {
                     responseKey += "nice";
                 }
@@ -571,33 +563,8 @@ namespace PrimevalTitmouse
 
             if (!Regression.config.Debug)
             {
-                if (npc.getName() == "Abigail" && Regression.checkCooldown[0] != 0) responseKey = "cooldown_check";
-                if (npc.getName() == "Sam" && Regression.checkCooldown[1] != 0) responseKey = "cooldown_check";
-                if (npc.getName() == "Haley" && Regression.checkCooldown[2] != 0) responseKey = "cooldown_check";
-                if (npc.getName() == "Vincent" && Regression.checkCooldown[3] != 0) responseKey = "cooldown_check";
-                if (npc.getName() == "Jas" && Regression.checkCooldown[4] != 0) responseKey = "cooldown_check";
+                if (HandleCooldown(npc.getName())) responseKey += "cooldown_check";
             }
-
-            switch (npc.getName())
-                {
-                    case "Abigail":
-                        Regression.checkCooldown[0] = 24;
-                        break;
-                    case "Sam":
-                        Regression.checkCooldown[1] = 24;
-                        break;
-                    case "Haley":
-                        Regression.checkCooldown[2] = 24;
-                        break;
-                    case "Vincent":
-                        Regression.checkCooldown[3] = 24;
-                        break;
-                    case "Jas":
-                        Regression.checkCooldown[4] = 24;
-                        break;
-
-
-                }
 
 
 
@@ -615,6 +582,21 @@ namespace PrimevalTitmouse
             {
                 Dictionary<string, string[]> dictionary;
                 string[] strArray;
+                if(!Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary))
+                {
+                    switch (npc.Age)
+                    {
+                        case 0:
+                            npcType.Add("adult");
+                            break;
+                        case 1:
+                            npcType.Add("teen");
+                            break;
+                        case 2:
+                            npcType.Add("kid");
+                            break;
+                    }
+                }
                 if (Animations.GetData().Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
                     stringList3.AddRange((IEnumerable<string>)strArray);
             }
@@ -657,19 +639,27 @@ namespace PrimevalTitmouse
             }
             else
             {
-                switch (npc.Age)
+                String name = npc.getName().ToLower();
+
+                if (!Animations.GetData().Villager_Reactions.ContainsKey(name))
                 {
-                    case 0:
-                        npcType.Add("adult");
-                        break;
-                    case 1:
-                        npcType.Add("teen");
-                        break;
-                    case 2:
-                        npcType.Add("kid");
-                        break;
+
+
+                    switch (npc.Age)
+                    {
+                        case 0:
+                            npcType.Add("adult");
+                            break;
+                        case 1:
+                            npcType.Add("teen");
+                            break;
+                        case 2:
+                            npcType.Add("kid");
+                            break;
+                    }
                 }
-                npcType.Add(npc.getName().ToLower());
+                else
+                    npcType.Add(name);
             }
 
             //What did we do? Use to figure out the response.
@@ -693,21 +683,12 @@ namespace PrimevalTitmouse
 
             if (heartLevelForNpc >= 8)
             {
-                var niceRand = Regression.rnd.NextDouble(); //allows a small chance for the nice line to be chosen instead for variety.
-
-                if (niceRand > 0.3f)
-                    responseKey += "_verynice";
-                else
-                    responseKey += "_nice";
-
-
+                responseKey += "_verynice";
                 friendshipLoss = 0;
             }
-            else if (heartLevelForNpc >= 6)
+            else if (heartLevelForNpc >= 4)
             {
                 responseKey += "_nice";
-
-
             }
             else responseKey += "_mean";
 
@@ -828,23 +809,28 @@ namespace PrimevalTitmouse
             return new Microsoft.Xna.Framework.Rectangle(c.spriteIndex * LARGE_SPRITE_DIM, num + (LARGE_SPRITE_DIM - height), LARGE_SPRITE_DIM, height);
         }
 
-        public static bool IsDiapered(NPC npc)
+        public static bool HandleCooldown(string npc)
         {
-            string name = npc.getName();
-            switch (name)
+            int index = Array.IndexOf(Regression.cooldown_list, npc.ToLower());
+            if (Regression.cooldown_check[index] == 0)
             {
-                case "Sam":
-                    return true;
-                case "Abigail":
-                    return true;
-                case "Vincent":
-                    return true;
-                case "Jas":
-                    return true;
-                default:
-                    return false;
+                Regression.cooldown_check[index] = 24;
+                return true;
             }
-                
+            return false;
+
+        }
+
+        public static bool HandleCooldown(string npc, bool force)
+        {
+            int index = Array.IndexOf(Regression.cooldown_list, npc.ToLower());
+            if (Regression.cooldown_check[index] == 0 || force)
+            {
+                Regression.cooldown_check[index] = 24;
+                return true;
+            }
+            return false;
+
         }
 
         public static void Warn(string msg, Body b = null)

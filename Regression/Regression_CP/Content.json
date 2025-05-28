@@ -1,6 +1,21 @@
 {
-  "Format": "1.19.0",
+  "Format": "2.3.0",
   "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Regression.C/shirts",
+      "FromFile": "Clothing/shirts.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Regression.C/pants",
+      "FromFile": "Clothing/pants.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Regression.C/hats",
+      "FromFile": "Clothing/hats.png"
+    },
     {
       "LogName": "Abigail",
       "Action": "Include",
@@ -170,6 +185,26 @@
       "LogName": "Wizard",
       "Action": "Include",
       "FromFile": "Dialogue/NPCs/Wizard.json"
+    },
+    {
+      "LogName": "Shirts",
+      "Action": "Include",
+      "FromFile": "Clothing/shirts.json"
+    },
+    {
+      "LogName": "Pants",
+      "Action": "Include",
+      "FromFile": "Clothing/pants.json"
+    },
+    {
+      "LogName": "Hats",
+      "Action": "Include",
+      "FromFile": "Clothing/hats.json"
+    },
+    {
+      "LogName": "Shops",
+      "Action": "Include",
+      "FromFile": "Shops/shops.json"
     }
   ]
 }

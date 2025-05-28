@@ -500,10 +500,10 @@ namespace PrimevalTitmouse
             
             if (pants.messiness <= 0.0 || !inUnderwear)
                 return;
-            HandlePoopOverflow();
+            HandlePoopOverflow(true);
         }
 
-        private void HandlePoopOverflow()
+        public void HandlePoopOverflow(bool message)
         {
             if (isSleeping)
                 return;
@@ -522,7 +522,7 @@ namespace PrimevalTitmouse
             };
             if (Game1.player.hasBuff(MESSY_DEBUFF))
                 this.RemoveBuff(MESSY_DEBUFF);
-            else Animations.Write(Regression.t.Poop_Overflow, this, Animations.poopAnimationTime);
+            else if (message) Animations.Write(Regression.t.Poop_Overflow, this, Animations.poopAnimationTime);
             Game1.player.applyBuff(buff);
         }
 
@@ -557,9 +557,10 @@ namespace PrimevalTitmouse
             
             if ((pants.wetness <= 0.0 || !inUnderwear))
                 return;
-            HandlePeeOverflow();
+            HandlePeeOverflow(true);
         }
-        private void HandlePeeOverflow()
+
+        public void HandlePeeOverflow(bool message)
         {
             if (isSleeping)
                 return;
@@ -578,7 +579,7 @@ namespace PrimevalTitmouse
             };
             if (Game1.player.hasBuff(WET_DEBUFF))
                 this.RemoveBuff(WET_DEBUFF);
-            else Animations.Write(Regression.t.Pee_Overflow, this, Animations.peeAnimationTime);
+            else if (message) Animations.Write(Regression.t.Pee_Overflow, this, Animations.peeAnimationTime);
             Game1.player.applyBuff(buff);
         }
 

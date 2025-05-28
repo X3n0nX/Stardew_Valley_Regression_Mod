@@ -1,9 +1,9 @@
 {
-  "Name": "Regression Dialogue",
+  "Name": "RegressionCP",
   "Author": "Various",
   "Version": "1.0.0",
   "Description": "More dialoge for the regression mod",
-  "UniqueID": "Regression_Dialogue",
+  "UniqueID": "Regression.C",
   "UpdateKeys": [],
   "ContentPackFor": {
   "UniqueID": "Pathoschild.ContentPatcher"

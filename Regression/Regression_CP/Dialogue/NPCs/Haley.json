@@ -1,0 +1,319 @@
+{
+	"Changes":[
+		{
+			"LogName":"Haley",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Haley",
+			"Entries":{	
+			
+  "Introduction": "Oh... you're that new farmer boy, aren't you?^Oh... You're that new farmer girl, or whatever. Aren't you?#$e#Huh? Oh... I'm Haley.#$e#Hmm... If it weren't for those horrendous clothes you might actually be cute.^Hmm... If it weren't for those horrendous clothes you might actually be pretty... Actually, never mind.$h",
+
+  "cropMatured_421": "My name means 'field of hay', but I like to imagine it as a meadow full of sunflowers...",
+
+  "AcceptGift_(O)StardropTea": "For me? Ooooh... I can't decide if I should drink it, or use it as shampoo...",
+  "AcceptBirthdayGift_Loved": "*gasp*... You got this for me? Wow, @, this is the best birthday gift ever!$h",
+  "AcceptBirthdayGift_Liked": "Awwwww, you got me a birthday gift? Well, I really like it!$h",
+  "AcceptBirthdayGift_Negative": "Gross! You got me this on my birthday? What's wrong with you!$a",
+  "AcceptGift_(O)88": "$c 0.8#Is that... coconut? I love this!$h#Mmm.... coconuts remind me of warm, sunny days at the beach. When I hold one, I feel like I'm there... even when it's raining.",
+  "AcceptGift_(O)421": "Wow, they're beautiful! These are my absolute favorite.$h",
+
+  "FlowerDance_Accept": "Oh... you want to dance with *me*, do you?$13^Oh? Sure! I'll dance with you!#$b#Hehe... of course. I'd love to be your partner.$h^We'll have a great time!$h#$e#Hmm... I admire your confidence. Most guys are too shy to ask me.^You look so pretty today!$h",
+  "FlowerDance_Accept_Spouse": "*sigh*... My days of being Flower Queen are over... so it's a bittersweet dance for me.$s#$b#But, yes...",
+  "FlowerDance_Decline": "Ew... No.",
+
+  "dating_Haley": "I was waiting for you to ask me that.$l",
+  "dating_Haley_memory_oneday": "You look really handsome today.$l^You look really pretty today.$l",
+  "married_Emily": "Well, I guess this makes you my 'brother-in-law', huh? That's funny to think about.^Hey, I guess we're kind of like sisters now!$h",
+  "divorced_Emily": "Things didn't work out between you and Emily, huh? Well... It happens.#$e#It *is* kind of awkward that you're both still living in this tiny town, though.",
+  "dating_Haley_memory_oneyear": "So, what's the idea here... am I just going to be your 'girlfriend' forever...?$7",
+  "married_Emily_memory_oneweek": "Is Emily settling into the farm life?#$e#You know, I was starting to wonder if Emily would ever get married...",
+
+  "divorced": "I'll be fine on my own...$7#$e#Thanks for the memories.$7#$e#Why are you still clinging to me? Go live your own life.$7",
+  "dumped_Girls": "I've got nothing to say to you!$a",
+  "secondChance_Girls": "Alright, alright... I'm done giving you the cold shoulder. Just promise me you'll never, ever lie to me again.$s",
+  "breakUp": "Agh!$8#$b#Oh... hmph. Beat me to it, huh? Alright...",
+
+  "Resort_Entering": "I saw a dolphin on the way in!",
+  "Resort_Leaving": "There's something about the sun that just makes me feel good.",
+  "Resort_Shore": "It's strange the places life can take you... who knows what other lands are out there?",
+  "Resort_Shore_2": "Wow, look at how the sunlight sparkles on the horizon!$h#$b#I bet the sunsets here would make for an amazing photo.#$e#I have to remember to bring my camera next time.",
+  "Resort_Towel": "Getting the perfect tan is an art form...#$e#It's kind of like toasting a marshmallow... you have to rotate the body just right.$h",
+  "Resort_Towel_2": "Laying out on a tropical beach.#$b#*sigh* I think I've finally found my place in the universe.#$e#But I guess Stardew Valley's not such a bad place either!$h",
+  "Resort_Towel_3": "Emily's friend had this swimsuit shipped to me from all the way out in Zuzu City.#$e#City fashion is on a whole different level, isn't it?$h",
+  "Resort_Chair": "I painted my toenails blue to match the sea. What do you think? *wiggle* *wiggle*$h",
+  "Resort_Bar": "Gus made a cute, fruity drink just for me!$h",
+  "Resort": "This is such a perfect beach. I'd stay here forever if I could!",
+
+  "Event_clean1": "*sigh*...$u",
+  "Event_clean2": "NO!! I'm not going to do it!$a#$b#You guys are both stupid!%fork$a",
+  "Event_clean3": "She should take the 'high road'? What's that supposed to mean?$u#$b#You think I'm being a baby, huh?%fork$a",
+  "Event_jar1": "Great, then you shouldn't have any problem opening this jar for me!$h",
+  "Event_jar2": "Oh... you aren't? Hmmm...$s#$b#Well could you try opening this jar for me anyways?",
+  "Event_darkroom1": "Aw, thanks!$h",
+  "Event_darkroom2": "Oh! I thought you knew.#$b#This room's for developing photos.",
+  "Event_darkroom3": "Is that so...?$s",
+  "Event_darkroom4": "Aw, thanks!$h",
+  "Event_darkroom5": "Oh! I thought you knew.#$b#This room's for developing photos.",
+  "Event_darkroom6": "Is that so...?$s",
+  "Event_beach1": "No, you won't! This bracelet was passed down to me by my great-grandmother!$a",
+  "Event_beach2": "*sigh*$s#$b#...Maybe it'll wash up on another shore. I can't bear to think of it at the bottom of the ocean.$s",
+  "Event_room1": "Him? No!#$b#...Well, I guess I used to like Alex. But not anymore! He's immature.",
+  "Event_room2": "What? That sounds fun, but I wouldn't want to leave Stardew Valley right now...",
+  "Event_room3": "Huh? What's an android?",
+
+  "eventSeen_14": "It was fun taking pictures, but I had to shower for two hours to get the mud out of my hair!$h",
+  "eventSeen_13_memory_oneweek": "%Haley greets you with a smile. You notice that she's wearing her Great-Grandma's bracelet.",
+  "eventSeen_12_memory_oneweek": "Wow, looks like someone's read the latest issue of 'Super Fashion Girl'... muddy boots are totally in right now!$h",
+  "eventSeen_12_memory_twoweeks": "My parents sent another postcard... I guess they're in the middle of a cruise down the Gem Sea Coast.#$e#They said me and Emily could join them at any point, but let's be honest... who wants to go on vacation with their parents?",
+  "eventSeen_11_memory_oneweek": "The other day, Emily baked something called a 'squirrel loaf'...$u#$e#How'd it taste? Um... well, if my tail was a little bushier I probably would've loved it.$h",
+  "eventSeen_11_memory_twoweeks": "Did you see last night's episode of 'Tears'? *sob*... I can't believe Kyle and Amy broke up...$s",
+
+  "GreenRain": "I don't think I've ever set foot in this place. It's actually kind of cozy!$h#$e#Oh, I'm not worried about the rain. I'm sure it'll pass.",
+  "GreenRain_2": "Wake me up when there's a pink rain... Or better yet, a pink cake rain!",
+
+
+//------------------------SPRING----------------------------
+
+  "Mon": "This town is so small. It sucks.$u#$e#I have to drive, like, twenty miles to buy any decent clothes.$s#$e#That's why I usually just order online.#$e#What?",
+  "Mon6": "I used to complain about this town being so small, but I've grown to like it.#$e#If it was much bigger it wouldn't feel like a community.",
+
+  "Tue": "Nice shoes.^Nice makeup.#$b#Are those made out of plastic?^Or wait... Are you even wearing any?#$e#I'm bored.",
+  "Tue2": "I wonder if any nice shells washed up on the beach this morning?#$e#This isn't the best time of year for shells, though.",
+  "Tue8": "I picked up a ton of trash yesterday when I was out taking nature photos.#$e#I hope you're not just leaving used diapers around in the woods...$13#$e#Either that, or someone else is a big baby and they're trying to hide the evidence.",
+
+  "Wed": "The only thing I like about this town is the beach.$u",
+  "Wed4": "I'm glad that the flowers are starting to bloom.#$e#Those pink ones smell so good.$h",
+  "Wed8": "There are only two things I like about this town.#$b#One of them is the beach.#$e#The other one is a secret! *giggle*$h",
+
+  "Thu": "#$1 HaleyClothes#I've decided I am going to organize my clothes today. I'll have to throw out all of last year's styles to make room for the new ones!#$e#*sigh* I could really go for a cupcake right now.#$e#Do you need something?",
+  "Thu6": "I cooked dinner last night. It actually turned out okay!#$e#But I did make a huge mess in the kitchen...",
+
+  "Fri": "%Haley is ignoring you.",
+  "Fri2": "Don't you get tired of running around on that farm all day, or whatever it is you do?#$e#I couldn't stand getting all dirty like that.#$e#You probably get a nice tan, though.",
+  "Fri6": "I need to find some kind of hobby other than shopping.#$e#I've decided I want to expand my horizons.#$e#Maybe I should learn to play the mini-harp?",
+  "Fri10": "@, can we go on a camping trip someday?#$e#The most exotic place I've been is Zuzu city.",
+
+  "Sat": "I'm feeling an urge to go shopping. Ugh! I wish there was a mall here.",
+  "Sat8": "#$1 haleySeagull#Yesterday I found a seagull with her wing caught in a net. I set her free, of course. She looked so helpless, the poor thing.$k$s#$e#You know, I should probably start exercising more... this youthful metabolism won't last forever.",
+
+  "Sun": "My sister is so weird. Sometimes I wonder if we're actually related.$u",
+  "Sun6": "I'm thinking about donating a bunch of clothes... I must have a hundred pairs of shoes.",
+
+
+//------------------------SUMMER----------------------------
+
+
+  "summer_Mon": "I'm going to get such a nice tan this summer.",
+  "summer_Mon6": "I should start reading some books instead of magazines.#$e#It's good to learn things, isn't it?#$e#I only ever look at the pictures.",
+
+  "summer_Tue": "Ew, you're all dirty.",
+  "summer_Tue2": "Do you wear those clothes every day?",
+  "summer_Tue4": "$p 47#Hey I found this new tool to open jars with. So you won't need to help me anymore.$h|There's not a cloud in the sky today.$h",
+  "summer_Tue8": "I guess living in the country isn't so bad.#$e#If I lived in the city I might start to miss all the trees.#$e#@, I think I've been hanging out with you too much.$h",
+
+  "summer_Wed": "Um... Yes?#$e#I didn't hear you, I'm thinking about something else.",
+  "summer_Wed4": "It's so hot today!#$e#I wish I had some ice cream.$s",
+
+  "summer_Thu": "If you stay in the sun a lot it'll make your hair lighter.#$e#It's a good thing to know!",
+  "summer_Thu6": "If you stay in the sun a lot it will make your hair lighter... But you don't want to get sunburnt, either.#$e#I just want a healthy amount of sunlight. Everything in moderation, right?",
+
+  "summer_Fri": "I wonder what Alex is doing today...#$e#Huh? I didn't notice you standing there.",
+  "summer_Fri4": "I spent 3 hours practicing my signature today.#$e#I guess that's pretty silly, huh?",
+  "summer_Fri10": "Oh, hi @!#$e#Do you like kids?$l",
+
+  "summer_Sat": "Farming sounds so boring...#$q 42/43 summer_Sat_old#What do you even do all day?#$r 42 10 summer_Sat_12#Care for plants#$r 42 10 summer_Sat_12#Explore the caves#$r 43 -10 summer_Sat_13#Snoop around in your room#$r 42 10 summer_Sat_12#Dig for treasure",
+"summer_Sat_old": "#$p 43#Hey, you better not be snooping around in my room anymore!$a|But I guess it could get you in pretty good shape.",
+"summer_Sat_12": "Hmm... sounds like a lot of work.",
+"summer_Sat_13": "What? You'd better not be doing that!$a",
+  "summer_Sat6": "It seems like a good day to go swimming.",
+
+  "summer_Sun": "Emily usually cooks dinner... But she makes weird stuff like quinoa.",
+  "summer_Sun6": "#$1 HaleySister#I talked to my sister for a while last night. I actually enjoyed it quite a bit.#$e#You know, Emily's not actually that weird. I guess we have more in common than I used to think.#$e#Don't tell her I said so.",
+
+  "summer_10": "Do you have baby bunnies on your farm? Bunnies are SO cute! <",
+
+
+//------------------------FALL----------------------------
+
+
+  "fall_Mon": "It's gross when all these fallen leaves get slimy.",
+  "fall_Mon6": "$p 48#Did I ever tell you I found another one of my great-grandma's bracelets in the attic?|See this bracelet? It belonged to my great-grandmother.#$e#She was a really interesting lady.",
+  "fall_Mon10": "@, I'm happy to see you today.$h",
+
+  "fall_Tue": "Hmm... Something smells weird...#$e#You've been working on the farm, huh?",
+  "fall_Tue2": "Something smells earthy...#$b#Oh, right. You work on a farm.",
+  "fall_Tue8": "I'm starting to like the smell of dirt. Isn't that weird?#$e#I think it's because you're around all the time.$h",
+
+  "fall_Wed": "Oh, hi. Did you want something?",
+  "fall_Wed4": "If you're ever bored, come say hi.",
+
+  "fall_Thu": "I feel the urge to go shopping. *sigh*",
+  "fall_Thu6": "Shopping just doesn't sound as fun as it used to.#$e#What's happening to me?#$e#Hmm...",
+  "fall_Thu8": "Hi, @!~$11$#$e#Hmm... Wanna go diaper shopping together?$4#$b#I bet I could help you pick out some good prints.$1",
+
+  "fall_Fri": "Is that a grass stain on your knee?#$e#Sorry, I'm allergic to grass.",
+  "fall_Fri4": "You look like you've been doing a lot of hard work.#$b#Why don't you take the rest of the day off?",
+
+  "fall_Sat": "It's too cold to go to the beach anymore.#$q 44 fall_Sat_old#*sigh*...what do you think I should do today?#$r 44 10 fall_Sat_12#Watercolor painting#$r 44 20 fall_Sat_12#Relax and read a magazine#$r 44 -30 fall_Sat_13#Stop being a selfish crybaby",
+  "fall_Sat_old": "I'll probably take a nap later.",
+  "fall_Sat_12": "Hmm... That's a pretty good idea, actually.",
+  "fall_Sat_13": "Get away from me, you stupid jerk.$a",
+
+  "fall_Sun": "I've never been to the forest. It's muddy and I could get a blister on my foot.",
+  "fall_Sun6": "I've never been to the forest, you know.#$e#It might be interesting to explore it some day.",
+
+  "fall_1": "It's fall already?$s",
+
+
+//------------------------WINTER----------------------------
+
+
+  "winter_Mon": "I want to move somewhere warmer.",
+  "winter_Mon8": "I wish it were warmer here in Stardew Valley.#$e#I could move somewhere else, but...",
+
+  "winter_Tue": "Hi. Do you need something from me?#$e#...",
+  "winter_Tue2": "Your name is @, right?#$e#I keep forgetting.",
+  "winter_Tue4": "Hi @.#$e#Is anything exciting happening on your farm?",
+
+  "winter_Wed": "I wish someone would bring me a peppermint coffee.$s#$e#Don't even bother, I know you won't be able to make one.",
+  "winter_Wed6": "I think I'm starting to realize that clothes aren't the most important thing. Right?#$e#I still like clothes, though. I mean, what's wrong with expressing yourself a little?",
+
+  "winter_Thu": "I'm going to start writing a list of all the clothes I need for next spring.",
+  "winter_Thu6": "Maybe I'll donate some of my skirts to a charity this spring.#$e#I mean, I do have over 1,000 skirts.$h#$e#...what?",
+
+  "winter_Fri": "Do you have a pony on your farm?$h#$e#Oh. That's disappointing...$s",
+  "winter_Fri8": "Do you think you'll ever have a pony on your farm?",
+
+  "winter_Sat": "The only good thing about winter is that I get to sleep more.#$e#I like at least 10 hours of sleep every night.",
+  "winter_Sat8": "I'm glad you have less work to do in the winter.#$e#It must be nice to have a break, huh?",
+
+  "winter_Sun": "Will you say hi to Alex for me?#$e#Thanks.",
+  "winter_Sun6": "Um, if you see Alex could you tell him I'm busy today?#$e#Thanks.",
+  "winter_Sun10": "@, you look rugged today. I like it.^@, you look pretty today.#$e#...$h"
+
+  "winter_9": "Hmm. What brand is your shirt?#$e#Oh. Um, never mind.",
+
+			},
+		},
+
+		{
+			"LogName":"Haley Marriage",
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/MarriageDialogueHaley",
+			"Entries":{
+
+  "Indoor_Day_0": "Good morning! Did you sleep well?$h#$e#I think I might break out the old camera today... the lighting is just perfect.",
+  "Indoor_Day_1": "Good morning, dear! Smells good, doesn't it? I made you breakfast! [194 195 210 211 216]#$e#I know you're busy with your work. I'm here to support you in any way I can!",
+  "Indoor_Day_2": "Did you sleep okay? You were snoring a little.$h#$e#I've got some chores to do in here. Have a good day.",
+  "Indoor_Day_3": "I'm glad I've learned to enjoy cleaning! The house gets dirty very easily.$10#$e#It's satisfying to get everything squeaky clean.#$e#Can I have a kiss before you leave?$11",
+  "Indoor_Day_4": "Good morning, dear. Another day of farm chores, huh?#$e#I'll be thinking of you. <$h",
+  "Indoor_Day_Haley": "I always feel happy on a sunny day.$h",
+
+
+  "Indoor_Night_1": "Wow, you look like you did a lot of work today.#$e#Now you should just relax and kick back for the night.$h",
+  "Indoor_Night_2": "I'm glad you're home.#$e#I get kind of scared alone at night.$s#$e#...$h",
+  "Indoor_Night_3": "Are you done with your work for the day? I'm ready to have some fun.$h#$e#But if you're tired I understand.",
+  "Indoor_Night_4": "*phew*! I just finished my chores. Now we can spend some time together.$h#$e#So, tell me about your day.$l#$e#...$h",
+  "Indoor_Night_Haley": "You look like you've been working hard, dear. Let me help you de-stress.$l",
+
+
+  "Rainy_Day_0": "I've changed a lot over the years, but I still prefer sunny weather.",
+  "Rainy_Day_1": "Sometimes I daydream about our retirement... relaxing on the sunny beaches of the Fern Islands!#$e#Do you ever think about the future, @?",
+  "Rainy_Day_2": "Good morning! I got up early and baked something sweet for you! [223 234 211 651 731]#$e#I know you're strong, but you still need to eat well to stay at your best!$h",
+  "Rainy_Day_3": "I can't go outside today... my hair will go limp. Forgive me, dear.$s#$e#I want to look my best for you.",
+  "Rainy_Day_4": "Are you going out in this weather? Just make sure to wipe your boots on the way back in, honey.#$e#I'll just stay here and do some housework.",
+  "Rainy_Day_Haley": "Oh no... If this weather keeps up I'll get so pale.$s",
+
+
+  "Rainy_Night_0": "Oh, I'm glad you're back. It's so cold in here by myself... Are you almost ready to shut off the lights?",
+  "Rainy_Night_1": "I hope it's nice and sunny tomorrow morning. Too much rain can make me moody.$s",
+  "Rainy_Night_2": "I hope Emily isn't too lonely all by herself. I should visit her again soon.$7",
+  "Rainy_Night_3": "Rain is horrible for a photographer. The lighting is awful, and you can't go outside without ruining your equipment!$s",
+  "Rainy_Night_4": "I made a hot meal for you, honey. Lots of spice, just how you like it. Enjoy! [727 231 207 199]$h",
+  "Rainy_Night_5": "I never thought I'd say this, but the country lifestyle really suits me.$h",
+  "Rainy_Night_Haley": "Hi, honey. I'm so glad you're home. I was starting to get kind of lonely.$l",
+
+
+  "patio_Haley": "Say 'goat cheese'!",
+  "spouseRoom_Haley": "#$c .5#Go ahead and start your day, honey. I'm just putting on my make-up.#$e#Have any plans for the day?",
+
+  "Outdoor_0": "I always feel best when I'm outside, breathing fresh air.#$b#Don't get me wrong, your grandpa's old cottage is very nice! But nothing beats this beautiful landscape.",
+  "Outdoor_1": "We've got to make sure the farm is cute! That might be important... right, honey?",
+  "Outdoor_2": "Hi, honey! If I knew more about farm work I'd help you out more. Sorry!#$e#I'll be thinking of you.$h",
+  "Outdoor_3": "$query !SEASON winter#*phew*... Is it a bit warm and muggy out here? ...Or did I just pee again?$1|Brr... Oh my god, it's so chilly, I can see my own breath!$8#$e#...*gasp*!$8#$b#...Hey, @...$13#$b#Check this out.$11#$b#%Haley lifts her winter coat to reveal the bulge of her diaper beneath her pants.#$b#%For a moment, you're not sure what she's trying to show you, until a little cloud of steam suddenly starts to trail from her crotch.#$e#Hehe... That was fun.$4",
+  "Outdoor_4": "Don't overwork yourself, dear.#$e#Make sure and take a break every now and then, or get something to eat.$h",
+  "Outdoor_Haley": "$query !SEASON winter#Looks like a good day to work on my tan, don't you think, sweetheart?|*shudder* Ugh, I was gonna try and get some sunlight, but I'm literally freezing my butt off out here!$12#$b#Brr.. M-Maybe I need another layer of diapers...$12",
+
+
+  "funLeave_Haley": "I'm going to socialize in town for a bit today.",
+  "funReturn_Haley": "It was nice seeing everyone in town. Did you have a good day, dear?",
+
+  "OneKid_0": "Have you spent any time with %kid1 today?",
+  "OneKid_1": "I wonder if %kid1 will grow up to be a farmer like you?",
+  "OneKid_2": "Don't worry, I'll feed %kid1 today. You can just focus on running the farm.",
+  "OneKid_3": "Isn't it strange? I'm not used to being a mommy...",
+
+  "TwoKids_0": "I already gave %kid1 and %kid2 their breakfast. They were hungry!",
+  "TwoKids_1": "We have to make sure and give %kid1 a lot of attention now that we have %kid2. We don't want any jealousy between them.",
+  "TwoKids_2": "Isn't %kid2 a very good-looking baby?",
+  "TwoKids_3": "A big house, two kids, and a beautiful plot of land. I'm not sure what else I could ask for.",
+
+
+  "Good_0": "I felt like I had no direction in life before I met you. Now I have exactly what I want.$l",
+  "Good_1": "You know, I always had a feeling we'd be together some day.$l",
+  "Good_2": "Are you enjoying the married life, @?#$e#I am.$l",
+  "Good_3": "Wow, you look really handsome today!$l^Wow, you look beautiful today.$l",
+  "Good_4": "This place is my home now... I'm happy here.$l",
+  "Good_5": "I was just admiring my wedding amulet... The shell is flawless. It must have cost you a fortune!$l",
+  "Good_6": "Be careful out there! Sometimes I worry about you falling into a mine shaft.",
+  "Good_7": "@? I just want to say that I appreciate all the hard work you do for our household.$h",
+  "Good_8": "Don't worry about me... I know you've got a lot of responsibilities outside of the house. I'm fine in here by myself!$l",
+  "Good_9": "Oh, I'm not bored... I'm just enjoying what we have here.#$e#It's a simple life, but I like it.$h",
+
+  "Neutral_0": "I hope you'll still like me when I'm old and gray.$s",
+  "Neutral_1": "Do you think your grandpa would be proud of the work we've done?",
+  "Neutral_2": "Taking a break? I guess being a farmer is easier than I thought...",
+  "Neutral_3": "If you go into town, make sure and say hi to everyone for me.",
+  "Neutral_4": "I'll do the laundry tomorrow morning before you get up... that way you won't have any down-time.",
+  "Neutral_5": "Are we doing okay on money, @?",
+  "Neutral_6": "I wonder what everyone in town is doing today?",
+  "Neutral_7": "I don't really feel like doing anything today.",
+  "Neutral_8": "No matter how much I clean, the house keeps getting dirty again.#$e#I guess farms can be kind of dirty.",
+  "Neutral_9": "I wonder if we'll live here our entire lives?",
+
+
+//------SPRING--------
+
+  "spring_1": "Now that winter's over, we've got lots of sunny weather to look forward to. I'm excited.",
+  "spring_2": "So, what are we planting this season?",
+
+//------SUMMER--------
+
+  "summer_3": "Sorry if I don't look my best... the air is just so humid that my hair doesn't hold up too well.",
+  "summer_15": "It's summer... that means the house is full of flies and ants... yuck.$s",
+
+//-------FALL-------
+
+  "fall_1": "Fall is kind of sad for me... everything is dying.$5",
+  "fall_2": "I already miss summer...",
+
+//-------WINTER--------
+
+  "winter_2": "For some reason, the snowy weather gives me cravings for pink cake...",
+  "winter_14": "My skin feels so dry in this weather.",
+
+
+//5% chance each day.
+
+  "spring_Haley": "Aren't you glad winter's over, honey? Things seem more hopeful now.",
+
+  "summer_Haley": "I love watching the fireflies on a hot summer's night. It's the closest I'll ever come to visiting the stars.",
+
+  "fall_Haley": "Even though I prefer summer, fall might be the best season to take pictures. Those long, low shadows...",
+
+  "winter_Haley": "I was just thinking about the time you helped me open a jar of pickles. Remember that?$h#$e#We've come a long way since then.$l"
+
+			},
+		},
+	]
+}

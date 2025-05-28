@@ -10,14 +10,11 @@
 	</PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.3" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Assets\hats.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Assets\sprites.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -147,13 +144,148 @@
     <None Update="Regression Dialogue\manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Regression [CP]\assets\shirts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Clothing\hats.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Clothing\hats.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Clothing\pants.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Clothing\pants.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Clothing\shirts.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Clothing\shirts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Content.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Abigail.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Alex.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Caroline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Clint.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Demetrius.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Dwarf.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Elliott.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Emily.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Evelyn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\George.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Gus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Haley.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Harvey.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Jas.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Jodi.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Kent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Krobus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Leah.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Leo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Lewis.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Linus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Marnie.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Maru.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Pam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Penny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Pierre.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Robin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Sam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Sandy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Sebastian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Shane.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\trigger.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Vincent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Willy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Dialogue\NPCs\Wizard.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Regression\en.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Regression_CP\Shops\shops.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="powershell rm -Recurse -Force  '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell New-Item -Path '$(TargetDir)' -Name &quot;Regression Mod.zip&quot; -ItemType &quot;file&quot; -Value &quot;DUMMY&quot; -Force&#xD;&#xA;powershell rm -Force   '$(TargetDir)\Regression Mod.zip'&#xD;&#xA;powershell mkdir '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell mkdir '$(TargetDir)\Regression Mod\Regression'&#xD;&#xA;powershell cp -Recurse -Force '$(TargetDir)\*' '$(TargetDir)\Regression Mod\Regression' -Exclude 'Regression Mod','Regression Dialogue'&#xD;&#xA;powershell cp -Recurse -Force '$(TargetDir)\Regression Dialogue' '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell Compress-Archive '$(TargetDir)\Regression Mod' '$(TargetDir)\Regression Mod.zip' -Force" />
+    <Exec Command="powershell rm -Recurse -Force  '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell New-Item -Path '$(TargetDir)' -Name &quot;Regression Mod.zip&quot; -ItemType &quot;file&quot; -Value &quot;DUMMY&quot; -Force&#xD;&#xA;powershell rm -Force   '$(TargetDir)\Regression Mod.zip'&#xD;&#xA;powershell mkdir '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell mkdir '$(TargetDir)\Regression Mod\Regression'&#xD;&#xA;powershell cp -Recurse -Force '$(TargetDir)\*' '$(TargetDir)\Regression Mod\Regression' -Exclude 'Regression Mod','Regression_CP'&#xD;&#xA;powershell cp -Recurse -Force '$(TargetDir)\Regression_CP' '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell Compress-Archive '$(TargetDir)\Regression Mod' '$(TargetDir)\Regression Mod.zip' -Force" />
   </Target>
 
 </Project>

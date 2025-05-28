@@ -150,6 +150,9 @@
 "Adult_Big": "%Penny giggles sweetly at your comment and pats your head.#$b#Of course you are!$1",
 "Adult_Followup":"#$p 585#I prefer thinking of you as a little kid rather than the big kid you say you are.$4|I'm glad you feel like a little kid!$1#$b#I think I prefer think of you as one.$4",
 
+
+//---If the player is married to Maru, this can be seen the day after Penny's Winter 5th clinic visit.
+"CaughtMaru": "...Oh! @, I was just looking for you.#$b#Has Maru been feeling under the weather recently?$3#$e#Hmm? Oh, I mean... she just... seemed a little uncomfortable and flushed at work yesterday. That's all.$4#$b#%Penny shakes her head and smiles.#$b#Tell her I hope she feels better soon, okay?$1",
 			},
 		},
 

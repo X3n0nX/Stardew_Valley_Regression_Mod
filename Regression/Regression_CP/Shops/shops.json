@@ -1,0 +1,26 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "Entries": {
+        "Regression.C_RedPaci": {
+          "Id": "Regression.C_RedPaci",
+          "ItemId": "Regression.C_RedPaci",
+          "Price": 500
+        },
+        "Regression.C_OrangeOnesie": {
+          "Id": "Regression.C_OrangeOnesie",
+          "ItemId": "Regression.C_OrangeOnesie",
+          "Price": 500
+        },
+        "Regression.C_OrangeOnesieTop": {
+          "Id": "Regression.C_OrangeOnesieTop",
+          "ItemId": "Regression.C_OrangeOnesieTop",
+          "Price": 500
+        }
+      }
+    }
+  ]
+}

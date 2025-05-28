@@ -24,7 +24,7 @@
 
   "Mon": "Maru helps me out in the lab sometimes... She's a good kid.",
   "Mon_inlaw_Maru": "It's hard to do good science without Maru's help...#$b#But her happiness is much more important than my experiment!",
-"Mon8":"I noticed used diapers in the garbage outside... I'd rather not think too hard about how they got there.$5",
+  "Mon8":"I noticed used diapers in the garbage outside... I'd rather not think too hard about how they got there.$5",
 
   "Tue": "This valley has a very vibrant and diverse ecosystem. That's one reason I was excited to move here.",
 
@@ -62,7 +62,7 @@
   "fall_Tue": "We know a lot about nature thanks to science.#$e#But there's always a lot more to learn.",
 
   "fall_Wed6": "Hi @. I'm always glad when you come for a visit.#$e#It's nice to have some company after all this lonely lab-work.",
-"fall_Wed10": "Hi @. I'm always glad when you come for a visit.#$b#It's nice to have some company after all this lonely lab-work.#$e#Depending on the fungi I'm studying, no one would even be able to smell if you had an accident!$1",
+  "fall_Wed10": "Hi @. I'm always glad when you come for a visit.#$b#It's nice to have some company after all this lonely lab-work.#$e#Depending on the fungi I'm studying, no one would even be able to smell if you had an accident!$1",
 
   "fall_Thu": "How's the farming business going? It's corn season, isn't it?#$e#I can imagine it being pretty peaceful, working outdoors with plants all day.",
 
@@ -75,7 +75,7 @@
   "winter_Mon": "I'm taking a break from my research right now.",
 
   "winter_Tue": "Talk to my wife if you want to increase the size of your house.",
-"winter_Tue2":"Robin gets very excited about the Winter.",
+  "winter_Tue2": "Robin gets very excited about the winter.",
 
   "winter_Wed": "Do you have a kitchen in your house yet?#$e#Cooking is kind of like doing lab work.",
 
@@ -90,7 +90,7 @@
   "winter_Sat": "Let's see... if seasonal nitrogen levels could be modeled by a piecewise function...$u#$b#Oh! Sorry. I was analyzing data and I didn't notice you there.#$e#Do you need anything?",
 
   "winter_Sun": "Feel free to harvest as much lumber and stone from this area as you please.",
-"winter_Sun4":"You certainly have a lot of warm cloths.#$b#I wonder if the R-value can be raised as efficiently without all that bulk...$2",
+"winter_Sun4": "You certainly have a lot of warm clothes.#$b#I wonder if the R-value can be raised as efficiently without all that bulk...$2",
 
 
 			},
