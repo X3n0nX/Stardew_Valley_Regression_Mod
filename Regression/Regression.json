@@ -142,14 +142,14 @@
     "{{i18n:Poop.Ground.5}}"
   ],
   "Pee_Toilet": [
-    "18n:Pee.Toilet.1}}",
-    "18n:Pee.Toilet.2}}",
-    "18n:Pee.Toilet.3}}",
-    "18n:Pee.Toilet.4}}",
-    "18n:Pee.Toilet.5}}",
-    "18n:Pee.Toilet.6}}",
-    "18n:Pee.Toilet.7}}",
-    "18n:Pee.Toilet.8}}"
+    "{{i18n:Pee.Toilet.1}}",
+    "{{i18n:Pee.Toilet.2}}",
+    "{{i18n:Pee.Toilet.3}}",
+    "{{i18n:Pee.Toilet.4}}",
+    "{{i18n:Pee.Toilet.5}}",
+    "{{i18n:Pee.Toilet.6}}",
+    "{{i18n:Pee.Toilet.7}}",
+    "{{i18n:Pee.Toilet.8}}"
   ],
   "Poop_Toilet": [
     "{{i18n:Poop.Toilet.1}}",
