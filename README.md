@@ -51,6 +51,7 @@ Follow instructions provided by the individual prerequisite mods and programs.
 - F6: Check State of Pants
 - F7: Check State of Potty Training
 - F8: Check Potty Feeling
+- F9: Activate / Deactivate Debug Mode
 - Left Shift + F1: Pull down pants and attempt to pee.
 - Left Shift + F2: Pull down pants and attempt to poop.
 - Left Shift + Left Click: Drink when near water source or holding watering can.
