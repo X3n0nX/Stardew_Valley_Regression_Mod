@@ -1,0 +1,90 @@
+{
+  //#########################################
+  // Potty Dialogs
+  //#########################################
+  /*
+
+      Pee:      npc pee
+      Poop:     npc poop
+
+      Fail:     npc fail to hold pee / poop  
+      Success:  npc success to hold pee / poop 
+
+      Pre:      message befor animation
+      Post:     message after animation
+
+      Exemple ID:
+
+      Pee.Fail.Pre    -> Message that will be shown, befor start of animation, if the npc faild to hold there pee -> befor there start to wet there underwear
+      Poop.Fail.Post  -> Message that will be shown, after the animation, if the npc faild to hold there poop -> after there mess there underwear
+
+  */
+
+  // Pee Fail
+
+  "Potty_Dialogs.Vincent.Pee.Fail.Pre.1": "Hu?",
+  "Potty_Dialogs.Vincent.Pee.Fail.Pre.2": "Oh.",
+  "Potty_Dialogs.Vincent.Pee.Fail.Pre.3": "...",
+  "Potty_Dialogs.Vincent.Pee.Fail.Pre.4": "Wha?",
+
+  "Potty_Dialogs.Vincent.Pee.Fail.Post.1": "*hehe*",
+  "Potty_Dialogs.Vincent.Pee.Fail.Post.2": "...warm",
+  "Potty_Dialogs.Vincent.Pee.Fail.Post.3": "...nice",
+  "Potty_Dialogs.Vincent.Pee.Fail.Post.4": "mmm!",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Vincent.Poop.Fail.Pre.1": "Nnnn... Nnnf..",
+  "Potty_Dialogs.Vincent.Poop.Fail.Pre.2": "Hmm?",
+  "Potty_Dialogs.Vincent.Poop.Fail.Pre.3": "Tummy ache",
+  "Potty_Dialogs.Vincent.Poop.Fail.Pre.4": "Oww... Hmmnh...",
+
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.2": "hehe...",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.3": "...warm",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.4": "...nice",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.5": "'m done now!",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.6": "'s ok now!",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.7": "finished!",
+  "Potty_Dialogs.Vincent.Poop.Fail.Post.8": "all good now!",
+
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // You change Vincent`s underwear general offer
+
+  "Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Pre": "%You wonder if Vincent might need a change. You quickly check and find $NPC_INSPECT_UNDERWEAR_NAME$.",
+  "Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Underwear_ok": "No changies! Wanna play more!$3",
+
+  // Vincent friendship very nice
+
+  "Villager_Reactions.Vincent.Soiled.Verynice.1": "Mommy told me big kids are supposed to use the potty. #$b#I don't wanna be a big kid either!$1",
+  "Villager_Reactions.Vincent.Soiled.Verynice.2": "%Vincent watches you <wet&mess> yourself and giggles.#$b#Good one!$1",
+  "Villager_Reactions.Vincent.Soiled.Verynice.3": "%You notice Vincent watching as you <wet&mess> yourself.#$b#All better?",
+  "Villager_Reactions.Vincent.Soiled.Verynice.4": "%Vincent watches the whole scene curiously and giggles when you look over. #$b# You <peed&pooped>!$1",
+  "Villager_Reactions.Vincent.Soiled.Verynice.5": "If you want I could ask my Mommy to change you.#$b#No?#$b#That's okay, I like being <wet&messy> too!$1",
+  "Villager_Reactions.Vincent.Soiled.Verynice.6": "$FARMERNAME$'s <wet&messy> and I'm still dry!$1#$b#...#$b#Wait, am i?$2",
+
+  // Vincent friendship nice
+
+  "Villager_Reactions.Vincent.Soiled.Nice.1": "Don't cry, Mommy says it's okay to have accidents sometimes.",
+  "Villager_Reactions.Vincent.Soiled.Nice.2": "Don't worry $FARMERNAME$, I still do that too!",
+  "Villager_Reactions.Vincent.Soiled.Nice.3": "Feel all better?",
+  "Villager_Reactions.Vincent.Soiled.Nice.4": "It smells like you need a diaper change!",
+  "Villager_Reactions.Vincent.Soiled.Nice.5": "I kney it! It does happen to bigs too!",
+
+  // Vincent friendship mean
+
+  "Villager_Reactions.Vincent.Soiled.Mean.1": "%Vincent saw what happened and snickers at you.",
+  "Villager_Reactions.Vincent.Soiled.Mean.2": "Was that an accident?",
+  "Villager_Reactions.Vincent.Soiled.Mean.3": "Ha! Gross!$1",
+  "Villager_Reactions.Vincent.Soiled.Mean.4": "$FARMERNAME$ just <peed&pooped> <himself/herself>!$1",
+  "Villager_Reactions.Vincent.Soiled.Mean.5": "Hah! I just watched you <pee&poop> yourself!$1",
+
+  // Vincent player pee/poop on ground
+
+  "Villager_Reactions.Vincent.Ground.1": "Ewww!$3",
+  "Villager_Reactions.Vincent.Ground.2": "Ewww! Don't <pee&poop> there!$3",
+  "Villager_Reactions.Vincent.Ground.3": "Hey! $FARMERNAME$ did <pee-pee&poope> on the ground!$1"
+}

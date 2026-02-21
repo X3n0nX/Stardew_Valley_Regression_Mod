@@ -1,0 +1,25 @@
+{
+  // Diaperchange to Abigail
+
+  "Abigail.Change_Diaper.Accept_BabyPrint": "Insert Text",
+  "Abigail.Change_Diaper.Accept_BabyPrint_Post": "Abigail seams very angry.",
+
+  "Abigail.Change_Diaper.Accept_Lavender": "Insert Text",
+  "Abigail.Change_Diaper.Accept_Lavender_Post": "Insert Text",
+
+  "Abigail.Change_Diaper.Accept_Joja": "Insert Text",
+  "Abigail.Change_Diaper.Accept_Joja_Post": "Insert Text",
+
+  "Abigail.Change_Diaper.Accept_HeartDiaper": "Insert Text",
+  "Abigail.Change_Diaper.Accept_HeartDiaper_Post": "Insert Text",
+
+  "Abigail.Change_Diaper.Refuse_Pretext": "Insert Text",
+  "Abigail.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
+  "Abigail.Change_Diaper.Refuse_UsedBad": "Insert Text",
+
+  // Diaperchange from Abigail
+
+  "Abigail.Diaper_Change.Accept": "#Leg dich bitte hin!$l#$b#%Abigail wechselt deine Windel, benutzt dabei aber ein wenig zu viel Babypuder",
+  "Abigail.Diaper_Change.Refuse": "Ich hab ja nur gefragt.",
+  "Abigail.Diaper_Change.Followup": "..."
+}

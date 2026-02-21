@@ -1,0 +1,346 @@
+{
+  // ########################################
+  // Underwear still soiled and changeing 
+  // ########################################
+
+  // Underwear still soiled
+
+  "Underwear.Still_Soiled.1": "You feel your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ and blush at the sensation.",
+  "Underwear.Still_Soiled.2": "You feel like a little <boy/girl> knowing that you're still in $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Underwear.Still_Soiled.3": "You blush and smile warmly realizing you're wearing $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Underwear.Still_Soiled.4": "You smell something stinky and your heart flutters as you realize you're still wearing $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Underwear.Still_Soiled.5": "You feel your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ squishing between your legs and smile to yourself.",
+  "Underwear.Still_Soiled.6": "You notice your sagging $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> snug and warm.",
+  "Underwear.Still_Soiled.7": "You notice you're waddling because your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$",
+  "Underwear.Still_Soiled.8": "You consider changing your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$",
+  "Underwear.Still_Soiled.9": "You press your hand into your squishy $INSPECT_UNDERWEAR_NAME_NO_PREFIX$. You feel like a little baby in <it#them>.",
+  "Underwear.Still_Soiled.10": "You feel your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$. <It's#They're> all squishy!",
+
+  // Underwear should be changed
+
+  "Underwear.Should_Change.1": "You feel your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ and realize you should really get changed!",
+  "Underwear.Should_Change.2": "Your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <feel#feels> very heavy. Changie time!",
+  "Underwear.Should_Change.3": "Feeling your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ sagging, you think it's probably time for a diaper change!",
+
+  // ########################################
+  // Changeing
+  // ########################################
+
+  // Underwear cant remove
+
+  "Change.Cant_Remove.1": "You try to pull down your $UNDERWEAR_NAME$, but you can't get it off without ruining it. Maybe you should change into something else? Or you could just use it...",
+
+  // Change underwear by yourself
+
+  "Change.Underwear.Yourself.1": "You change into $INSPECT_UNDERWEAR_NAME$.",
+
+  // Change underwear and pants by yourself
+
+  "Change.Underwear_Pants.Yourself.1": "You change into $PANTS_PREFIX$ clean $PANTS_NAME$ and $INSPECT_UNDERWEAR_NAME$.",
+
+  // Change underwear by Npc
+
+  "Change.Underwear.Npc.1": "You get changed into $INSPECT_UNDERWEAR_NAME$.",
+
+  // Change underwear and pants by yourself
+
+  "Change.Underwear_Pants.Npc.1": "You get changed into $PANTS_PREFIX$ $PANTS_NAME$ and $INSPECT_UNDERWEAR_NAME$.",
+
+  // The underwear you changed is destroyed
+
+  "Change.Underwear.Destroyed.Player.1": "You ruined your $UNDERWEAR_NAME$ when taking <it#them> off. So you throw <it#them> away.",
+  "Change.Underwear.Destroyed.Player.2": "$UNDERWEAR_NAME$ <is#are> ruined, so you throw <it#them> away.",
+
+  // The underwear you changed an npc is destroyed
+
+  "Change.Underwear.Destroyed.Npc.1": "$NPC_NAME$s $NPC_INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> ruined, so you throw <it#them> away.",
+
+  // The underwear, a npc changed you, is destroyed
+
+  "Change.Underwear.Destroyed.By_Npc.1": "Your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ <is#are> ruined and thrown away for you.",
+
+  // You also need to change your pants because they are messy
+
+  "Change.Require.Pants.1": "You don't have another pair of $PANTS_NAME$ here to change into. You probably need to go home first.",
+
+  // You have to be at home to change your pants
+
+  "Change.Require.Home.1": "Dirty pants have to be changed at home.",
+
+  // You have to be at home to change your pants
+
+  "Change.Pants.Yourself.Home.1": "You change yourself into another pair of $PANTS_NAME$.",
+
+  // ##########
+  // Peek Waistband 
+  // ##########
+
+  // Peek inside your waistband to check your underwear
+  // text will be conpleatet by script with
+  // with the state of underwear and its name
+
+  "Peek.Waistband.1": "You peek inside your waistband and see",
+
+  // ########################################
+  // Dialogs for changeing 
+  // ########################################
+
+  // Dialoge for getting change by npc
+
+  "Change.Dialog.Question.1": "Do you want to get your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$ changed like a toddler?",
+  "Change.Dialog.Question.1.Answer_Yes.1": "Nod.",
+  "Change.Dialog.Question.1.Answer_Yes.2": "Please?",
+  "Change.Dialog.Question.1.Answer_No.1": "Noooo!",
+  "Change.Dialog.Question.1.Answer_No.2": "Shake your head.",
+
+  // Dialoge for changing other npc
+
+  "Change_Other.Dialog.Question.1": "Do you help $NPC_NAME$ getting out of $NPC_INSPECT_UNDERWEAR_NAME$?",
+  "Change_Other.Dialog.Question.2": "$NPC_NAME$ has $NPC_INSPECT_UNDERWEAR_NAME$ in $NPC_HIS_HER$ $NPC_PANTS_NAME$. Do you change $NPC_HIM_HER$?",
+
+  "Change_Other.Dialog.Answer_No": "Not now",
+
+
+  // ########################################
+  // what happend over night
+  // ########################################
+
+  // you go to toilett
+
+  "Night.Toilett.1": "You had to <pee&poop> last night and made it $TOILET_TIMES_TOTAL$ to the toilet",
+  "Night.Toilett.2": "You woke up $TOILET_ONCE_TWICE_TOTAL$ to <pee&poop> in the potty like a big <boy/girl> last night",
+  "Night.Toilett.3": "You had to get up $TOILET_TIMES_TOTAL$ to <pee&poop> at night",
+
+  // you sleep the whole night
+
+  "Night.Sleep.1": "You didn't wake up once this night",
+  "Night.Sleep.2": "You slept like a baby",
+  "Night.Sleep.3": "You dreamt of making it to the potty at night",
+  "Night.Sleep.4": "In your dreams you fought the potty monster",
+  "Night.Sleep.5": "Not once you felt the need to get up tonight",
+
+  // you had an accident at night
+
+  "Night.Accident.1": "<but >you <peed&pooped> yourself $ACCIDENT_TIMES_MULTIPLE_TOTAL$ like a toddler",
+  "Night.Accident.2": "you <still ><wet&soiled> yourself $ACCIDENT_TIMES_MULTIPLE_TOTAL$ like the little bed<wetter&pooper> you are",
+
+  // text if you couldn't remove your underwear at night
+
+  "Night.Underwear_Stuck.1": "but you felt protected in your $UNDERWEAR_NAME$",
+  "Night.Underwear_Stuck.2": "but you didn't want to rip off your $UNDERWEAR_NAME$",
+
+  // ########################################
+  // State of your underwear and bed
+  // after you woke up
+  // ########################################
+
+  // state of your underwear after you woke up
+
+  "Woke_Up.Underwear.1": "You wake up in $INSPECT_UNDERWEAR_NAME$.",
+
+  // your bed is wet after you woke up
+
+  "Woke_Up.Bed.Wet.1": "You find that you leaked last night--your bed is all wet!",
+  "Woke_Up.Bed.Wet.2": "Your bed is cold and wet. You must have wet the bed last night!",
+  "Woke_Up.Bed.Wet.3": "You wet your bed like a little <boy/girl> last night!",
+  "Woke_Up.Bed.Wet.4": "You wake up uncomfortable, lying in a puddle of cold pee.",
+  "Woke_Up.Bed.Wet.5": "Your covers are all wet. You need a diaper like a little <boy/girl>!",
+  "Woke_Up.Bed.Wet.6": "Your pajamas are uncomfortable and wet. You realize you wet the bed last night!",
+
+  // your bed is messed after you woke up
+
+  "Woke_Up.Bed.Messed.1": "Starting to cry, you realize that you pooped< and peed> the bed like a baby!",
+  "Woke_Up.Bed.Messed.2": "Somebody needs a diaper! You <wet and >messed your bed last night!",
+  "Woke_Up.Bed.Messed.3": "Your cheeks burn when you discover that your bed is all <wet and >poopy!",
+  "Woke_Up.Bed.Messed.4": "You are humiliated to realize that you pooped< and peed> in your bed while you were sleeping!",
+  "Woke_Up.Bed.Messed.5": "Your <pee and >poop overflowed into your bed last night!",
+  "Woke_Up.Bed.Messed.6": "You realize you must have <wet and >messed your bed last night! Oh no!",
+  "Woke_Up.Bed.Messed.7": "You smell something stinky and realize you <wet and >messed the bed last night!",
+
+  // ########################################
+  // Washing bed and underwear
+  // ########################################
+
+  // wash your bedding
+
+  "Wash.Bedding.1": "You take your <wet&poopy> bedding to the river and wash it, but it was exhausting and your bedding probably won't be dry until $BEDDING_DRYTIME$.",
+
+  // only wash the dirty spots if your bedding is not to mutch messed
+
+  "Wash.Bedding.Spot.1": "You take your <wet&poopy> bedding to the river and rinse the <wet&poopy> part, but it was tiring and your bedding probably won't be dry until $BEDDING_DRYTIME$.",
+
+  // youe washed bedding is still wet; Message will show if you are trying to go sleep and your bedding is still wet
+
+  "Wash.Bedding.Still_Wet.1": "Your bedding won't be dry until $BEDDING_DRYTIME$!",
+
+  // wash your underwear
+
+  "Wash.Underwear.1": "You wash your $UNDERWEAR_NAME$ in the water. <It#They> will be dry tomorrow.",
+
+  // overwash your underwear, there will be destroyed
+
+  "Wash.Underwear.Overwash.1": "You wash your $UNDERWEAR_NAME$ in the water. <It#They> <was#were> too worn out and fell apart!",
+
+  // ########################################
+  // Messages for your pants and underwear
+  // ########################################
+
+  "Look_Pants.1": "You look down and see",
+
+  // your underwear is clean
+
+  "Underwear.Clean": "clean $UNDERWEAR_DESC$",
+
+  // your underwear is drying
+
+  "Underwear.Drying": "drying $UNDERWEAR_DESC$",
+
+  // your underwear is wet
+  // every number stands for a single state depending of wetness
+
+  "Underwear.Wet.1": "slightly damp $UNDERWEAR_DESC$",
+  "Underwear.Wet.2": "somewhat wet $UNDERWEAR_DESC$",
+  "Underwear.Wet.3": "very wet $UNDERWEAR_DESC$",
+  "Underwear.Wet.4": "drenched $UNDERWEAR_DESC$",
+  "Underwear.Wet.5": "dripping wet $UNDERWEAR_DESC$",
+
+  // your underwear is messy
+  // every number stands for a single state depending of messines
+
+  "Underwear.Messy.1": "<and >slightly poopy $UNDERWEAR_DESC$",
+  "Underwear.Messy.2": "<and >somewhat poopy $UNDERWEAR_DESC$",
+  "Underwear.Messy.3": "<and >poopy $UNDERWEAR_DESC$",
+  "Underwear.Messy.4": "$UNDERWEAR_DESC$ filled with poop",
+  "Underwear.Messy.5": "$UNDERWEAR_DESC$ with poop squishing out",
+
+  // ########################################
+  // Types of beds
+  // ########################################
+
+  // bed
+
+  "Bed_Options.Bed.Name": "bed",
+  "Bed_Options.Bed.Description": "cozy bed",
+
+  // ########################################
+  // Types of pants
+  // ########################################
+
+  // blue jeans
+
+  "Pants_Options.Blue_Jeans.Name": "blue jeans",
+  "Pants_Options.Blue_Jeans.Description": "sturdy blue jeans",
+
+  // skirts
+
+  "Pants_Options.Skirt.Name": "skirt",
+  "Pants_Options.Skirt.Description": "simple skirt",
+
+  // toddler pants
+
+  "Pants_Options.Toddler_Pants.Name": "toddler pants",
+  "Pants_Options.Toddler_Pants.Description": "pants for toddler",
+
+  // toddler skirt
+
+  "Pants_Options.Toddler_Skirt.Name": "toddler skirt",
+  "Pants_Options.Toddler_Skirt.Description": "purple toddler skirt",
+
+  // legs
+
+  "Pants_Options.Legs.Name": "legs",
+  "Pants_Options.Legs.Description": "your two legs",
+
+  // ##########
+  // Spezial pants you can get from npc�s if you are messy
+  // ##########
+
+  // stinky pants you get if abigail changes you
+
+  "Pants_Options.Stinky_Pants.Name": "stinky pants",
+  "Pants_Options.Stinky_Pants.Description": "old and stinky pants",
+
+  // sams old pants you get if jodi or sam changes you
+
+  "Pants_Options.Sams_Old_Pants.Name": "sams old pants",
+  "Pants_Options.Sams_Old_Pants.Description": "sams old pants",
+
+  // sams old pants you get if penny changes you
+
+  "Pants_Options.Second_Hand_Pants.Name": "second hand pants",
+  "Pants_Options.Second_Hand_Pants.Description": "second hand pants",
+
+  // self made pants you get if Emily changes you and you are male
+
+  "Pants_Options.Self_Made_Pants.Name": "self made pants",
+  "Pants_Options.Self_Made_Pants.Description": "self made pants",
+
+  // self made skirt you get if Emily changes you and you are female
+
+  "Pants_Options.Self_Made_Skirt.Name": "self made skirt",
+  "Pants_Options.Self_Made_Skirt.Description": "self made skirt",
+
+  // ########################################
+  // Types of underwears
+  // ########################################
+
+  // black thong
+
+  "Underwear_Options.Black_Thong.Name": "black thong",
+  "Underwear_Options.Black_Thong.Description": "lacy black thong, not absorbend or durable",
+
+  // polka dot panties
+
+  "Underwear_Options.Polka_Dot_Panties.Name": "polka dot panties",
+  "Underwear_Options.Polka_Dot_Panties.Description": "simple white panties with pink polka dots",
+
+  // big kid undies
+
+  "Underwear_Options.Big_Kid_Undies.Name": "big kid undies",
+  "Underwear_Options.Big_Kid_Undies.Description": "cotton undies for big kids only",
+
+  // dinosaur undies
+
+  "Underwear_Options.Dinosaur_Undies.Name": "dinosaur undies",
+  "Underwear_Options.Dinosaur_Undies.Description": "dinosaur undies",
+
+  // lavender pullups
+
+  "Underwear_Options.Lavender_Pullups.Name": "lavender pullups",
+  "Underwear_Options.Lavender_Pullups.Description": "thick, soft and snug disposable flowery lavender pullups",
+
+  // training pants
+
+  "Underwear_Options.Training_Pants.Name": "training pants",
+  "Underwear_Options.Training_Pants.Description": "thin cloth potty training pants that look similar to big kid undies",
+
+  // joja diaper
+
+  "Underwear_Options.Joja_Diaper.Name": "joja diaper",
+  "Underwear_Options.Joja_Diaper.Description": "thin white and cheap plastic diaper from JojaMart",
+
+  // baby print diaper
+
+  "Underwear_Options.Baby_Print_Diaper.Name": "baby print diaper",
+  "Underwear_Options.Baby_Print_Diaper.Description": "little soft and crinkly fresh-scented disposable baby print diaper, made for big children. Its a bit small, but you can fit",
+
+  // cloth diaper
+
+  "Underwear_Options.Cloth_Diaper.Name": "cloth diaper",
+  "Underwear_Options.Cloth_Diaper.Description": "thick and soft white cloth diaper",
+
+  // space diaper
+
+  "Underwear_Options.Space_Diaper.Name": "space diaper",
+  "Underwear_Options.Space_Diaper.Description": "very thick and soft blue plastic diaper with spaceship designs",
+
+  // pawprint diaper
+
+  "Underwear_Options.Pawprint_Diaper.Name": "pawprint diaper",
+  "Underwear_Options.Pawprint_Diaper.Description": "puffy plastic diaper with cute animal prints and fade-when-wet little paws",
+
+  // heart diaper
+
+  "Underwear_Options.Heart_Diaper.Name": "heart diaper",
+  "Underwear_Options.Heart_Diaper.Description": "extremly thick and soft pink plastic diaper with a large fade-when-wet heart on the front"
+}

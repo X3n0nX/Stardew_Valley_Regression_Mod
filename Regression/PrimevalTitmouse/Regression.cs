@@ -19,6 +19,7 @@ using StardewValley.Triggers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Metadata.Ecma335;
@@ -41,7 +42,7 @@ namespace PrimevalTitmouse
         public bool shiftHeld;
         public static Data t;
         public static Farmer who;
-        public static string dirtyEventToken = "dirtyEventToken";
+        //public static string dirtyEventToken = "dirtyEventToken";
         public static string generalEventToken = "generalEventToken";
         public static bool SelfIsFurry = false;
         public static bool WorldIsFurry = false;
@@ -198,9 +199,9 @@ namespace PrimevalTitmouse
         }
         public bool DIAPER_USED(string[] query, GameStateQueryContext context)
         {
-            var underwear = body.underwear;
+            Container underwear = body.underwear;
 
-            var targetNpcName = query.Length > 1 ? query[1] : null;
+            string targetNpcName = query.Length > 1 ? query[1] : null;
             if (targetNpcName != null)
             {
                 switch (targetNpcName)
@@ -235,9 +236,9 @@ namespace PrimevalTitmouse
         }
         public bool DIAPER_USED_BAD(string[] query, GameStateQueryContext context)
         {
-            var underwear = body.underwear;
+            Container underwear = body.underwear;
 
-            var targetNpcName = query.Length > 1 ? query[1] : null;
+            string targetNpcName = query.Length > 1 ? query[1] : null;
             if (targetNpcName != null)
             {
                 switch (targetNpcName)
@@ -249,7 +250,7 @@ namespace PrimevalTitmouse
                     default:
                         break;
                 }
-                var npc = NpcBody.ByName(targetNpcName, 20);
+                NpcBody npc = NpcBody.ByName(targetNpcName, 20);
                 if (npc == null) return false;
 
                 underwear = npc.underwear;
@@ -654,11 +655,11 @@ namespace PrimevalTitmouse
                     underwearName = args[2];
                 }
 
-                var newUnderwear = new Underwear(underwearName, 1);
+                Underwear newUnderwear = new Underwear(underwearName, 1);
 
                 Underwear oldUnderwear = new Underwear(body.underwear, 1);
 
-                var dirtyPants = body.HasWetOrMessyDebuff();
+                bool dirtyPants = body.HasWetOrMessyDebuff();
 
                 if (args.Length > 3 && dirtyPants)
                 {
@@ -701,6 +702,46 @@ namespace PrimevalTitmouse
             error = null;
             return true;
         }
+
+        public static void GetChangedByNpc(string npcName, string newUnderwearName, string newPantsName = null)
+        {
+            Underwear newUnderwear = new Underwear(newUnderwearName, 1);
+
+            Underwear oldUnderwear = new Underwear(body.underwear, 1);
+
+            bool dirtyPants = body.HasWetOrMessyDebuff();
+
+            if (newPantsName != null && dirtyPants)
+            {
+                Container oldPants = new Container(body, ContainerSubtype.Pants, body.pants.type);
+                oldPants.ResetToDefault(body.pants);
+
+                Container newPants = new Container(body, ContainerSubtype.Pants, newPantsName);
+
+                body.ChangeUnderwearAndPants(newUnderwear, oldUnderwear, newPants, oldPants, npcName: npcName);
+            }
+            else
+            {
+                body.ChangeUnderwear(newUnderwear, oldUnderwear, npcName: npcName);
+            }
+
+            //body.ChangeUnderwear(newUnderwear, oldUnderwear, npc: npcName);
+            //body.ResetPants();
+
+            //If the underwear returned is not removable, destroy it
+            if (!oldUnderwear.container.washable)
+            {
+                Animations.Warn(Regression.t.Getting_Changed_Destroyed, body, oldUnderwear.container);
+            }
+            //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
+            else if (!who.addItemToInventoryBool(oldUnderwear, false))
+            {
+                List<Item> objList = new List<Item>();
+                objList.Add(oldUnderwear);
+                Game1.activeClickableMenu = new ItemGrabMenu(objList);
+            }
+        }
+
         public bool AddNpcMessage(string[] args, TriggerActionContext context, out string error)
         {
             try
@@ -757,53 +798,66 @@ namespace PrimevalTitmouse
 
                 // The following block makes npc (usually) not talk to you if you wear wet or messy pants... short of the special texts
                 var isFilthy = body.pants.used;
+
                 foreach (var npc in NpcBody.ByRange(10))
                 {
-                    if (npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(dirtyEventToken);
                     if (npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(generalEventToken);
+                    //if (npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(dirtyEventToken);
 
                     if (npc.Age == 2 && !ChildrenAndDiapers) continue;
 
-                    if (isFilthy)
-                    {
-                        string mod = "dirty";
-                        string responseKey = mod + Animations.responseKeyAdditionForState(npc.npc, true);
+                    int heartLevelForNpc = who.getFriendshipHeartLevelForNPC(npc.npc.getName());
 
-                        string randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey, mod).ToArray());
-                        if (randNpcString == "") continue;
-                        string npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
-                        npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
-                        if (npcStatement.Contains("DIAPER_CHANGE"))
-                        {
-                            npcStatement = Strings.ReplaceOptional(npcStatement, body.HasWetOrMessyDebuff());
-                        }
-                        npcStatement = Strings.InsertVariables(npcStatement, npc.npc);
-                        npc.npc.setNewDialogue(new Dialogue(npc.npc, dirtyEventToken, npcStatement), true, true);
+                    string responseKey = Animations.responseKeyAdditionForState(npc.npc);
+                    string randQuestionNpcString = "";
+                    bool veryNice = false;
+
+                    if (responseKey == "check_player")
+                    {
+                        string responseKeyQuestion = "general_question_change";
+                        randQuestionNpcString = Strings.RandString(npc.GetVillagerReactions(responseKeyQuestion).ToArray());
+                        randQuestionNpcString = randQuestionNpcString + "#$b#";
+
+                        veryNice = npc.canGetChangeNpc;
                     }
-                    else if (npc.CurrentDialogue.Count <= 0)
+                    else if(responseKey == "check_npc")
                     {
-                        string mod = "general";
-                        string responseKey = mod + Animations.responseKeyAdditionForState(npc.npc, false);
-
-                        string randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey, mod).ToArray());
-                        if (randNpcString == "") continue;
-                        string npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
-
-                        if (npcStatement.Contains("DIAPER_CHANGE"))
-                        {
-                            npcStatement = Strings.ReplaceOptional(npcStatement, body.HasWetOrMessyDebuff());
-                        }
-                        npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
-                        npcStatement = Strings.InsertVariables(npcStatement, npc.npc);
-
-                        npc.npc.setNewDialogue(new Dialogue(npc.npc, generalEventToken, npcStatement), true, true);
+                        veryNice = npc.canGiveChangeNpc;
                     }
 
+                    string mod = "_mean";
+
+                    if (heartLevelForNpc >= 8 || veryNice || config.FriendshipDebug)
+                    {
+                        mod = "_verynice";
+                    }
+                    else if (heartLevelForNpc >= 6)
+                    {
+                        var niceRand = Regression.rnd.NextDouble(); //allows a small chance for the very_nice line to be chosen instead for variety.
+                        if (niceRand > 0.8f)
+                            mod = "_verynice";
+                        else
+                            mod = "_nice";
+                    }
+                    else if (heartLevelForNpc >= 4)
+                    {
+                        mod = "_nice";
+
+                    }
+                    else mod = "_mean";
+
+                    responseKey = responseKey + mod;
+                    string randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
+                    if (randNpcString == "") continue;
+
+                    //randNpcString = randQuestionNpcString + randNpcString;
+
+                    string npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
+                    npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
+                    npc.npc.setNewDialogue(new Dialogue(npc.npc, generalEventToken, npcStatement), true, true);
                 }
             }
         }
-
-
 
         //Determine if we need to handle time passing (not the same as Game time passing)
         private static bool ShouldTimePass()
@@ -820,7 +874,7 @@ namespace PrimevalTitmouse
             // We ignore keypresses in menues
             if (Game1.activeClickableMenu != null) return;
 
-            bool altDown = e.IsDown(SButton.LeftAlt);
+            bool altDown = e.IsDown(SButton.RightAlt);
             bool shiftDown = e.IsDown(SButton.LeftShift);
 
             //START Keybind-section
@@ -849,7 +903,7 @@ namespace PrimevalTitmouse
 
 
             //Interpret buttons differently if holding Left Alt & Debug is enabled
-            if (e.IsDown(SButton.LeftAlt) && config.Debug)
+            if (altDown && config.Debug)
             {
                 switch (e.Button)
                 {
@@ -915,19 +969,11 @@ namespace PrimevalTitmouse
                     case SButton.F8:
                         Animations.CheckPottyFeeling(body);
                         break;
-                        /*case SButton.F9:
-                            npcAccident(NpcByName("vincent"), IncidentType.PEE);
-                            break;
-                        case SButton.F10:
-                            npcAccident(NpcByName("vincent"), IncidentType.POOP);
-                            break;
-                        case SButton.F11:
-                            npcAccident(NpcByName("jas"), IncidentType.PEE);
-                            break;
-                        case SButton.F12:
-                            npcAccident(NpcByName("jas"), IncidentType.POOP);
-                            break;*/
-
+                    // toggle debug mode
+                    case SButton.F9:
+                        config.Debug = !config.Debug;
+                        Regression.monitor.Log("Debug Mode Changed",LogLevel.Debug);
+                    break;
                 }
             }
         }
@@ -1016,6 +1062,13 @@ namespace PrimevalTitmouse
 
                 }
             }
+            /*
+            //If a dialogue box is open, check if we need to replace commands
+            if (e.NewMenu is DialogueBox dialogueBox)
+            {
+                CheckForDialogueCommands(dialogueBox);               
+            }
+            */
         }
 
         private static void addUnderwearToShop(ShopMenu shop, string type, int amount = 1, float priceMultiplier = 1f)
@@ -1151,7 +1204,10 @@ namespace PrimevalTitmouse
 
                             Container newPants = new Container(body,ContainerSubtype.Pants,oldPants.type);
 
-                            if (!Regression.config.PantsChangeRequiresHome) body.ChangeUnderwearAndPants(activeObject, OldUnderwear, newPants, oldPants);
+                            if (!Regression.config.PantsChangeRequiresHome)
+                            {
+                                body.ChangeUnderwearAndPants(activeObject, OldUnderwear, newPants, oldPants);
+                            }
                             else
                             {
                                 if (body.InPlaceWithPants()) body.ChangeUnderwearAndPants(activeObject, OldUnderwear, newPants, oldPants);
@@ -1773,6 +1829,50 @@ namespace PrimevalTitmouse
                 ExecuteNextAction();
             }
         }
+
+        public void CheckForDialogueCommands(DialogueBox dialogueBox)
+        {
+            string currentDialogue = ReturnCurrentDialogue();
+
+            if (currentDialogue == null) return;
+
+            NPC npc = Game1.currentSpeaker;
+            Dialogue dialogue;
+
+            // Dialoge command $CHANGED_BY_NPC$
+            if (currentDialogue.Contains("$CHANGED_BY_NPC$"))
+            {
+                string newDialogue = Strings.ReplaceChangedByNpc(currentDialogue, body.underwear);
+
+                dialogue = new Dialogue(npc, null, newDialogue);
+
+                npc.CurrentDialogue.Clear();
+                npc.CurrentDialogue.Push(dialogue);
+                Game1.drawDialogue(npc);
+            }
+        }
+
+        public string ReturnCurrentDialogue()
+        {
+            if (Game1.dialogueUp && Game1.currentSpeaker != null)
+            {
+                NPC npc = Game1.currentSpeaker;
+                Dialogue dialogue;
+                npc.CurrentDialogue.TryPeek(out dialogue);
+
+                if (dialogue.currentDialogueIndex > dialogue.dialogues.Count - 1) return null;
+
+
+                if (dialogue.dialogues[dialogue.currentDialogueIndex].Text != null)
+                {
+                    string line = dialogue.dialogues[dialogue.currentDialogueIndex].Text;
+                    return line;
+                }
+            }
+
+            return null;
+        }
+
 
         public Regression()
         {

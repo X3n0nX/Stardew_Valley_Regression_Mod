@@ -1,0 +1,12 @@
+{
+  // Dialogues ABDL Childs Question
+
+  "Dialogue.ABDLChild_Question": "Would you be comfortable seeing ABDL dialogue from Vincent and Jas?",
+  "Dialogue.ABDLChild_Response1": "Yes, I am comfortable with that",
+  "Dialogue.ABDLChild_Response2": "No, I would like to see the original dialogue.",
+
+  "Dialogue.ABDLChild_Yes": "%The more hearts you have with any villager the more diaper related dialogue there will be.",
+  "Dialogue.ABDLChild_No": "%Okay. All the kids' original lines will be unchanged, and they also won't notice you using your pants. The more hearts you have with any other villager the more diaper related dialogue there will be",
+  "Dialogue.ABDLChild_Jas_fallback": "...$u|%The waistband of Jas's pull up faintly peeks out.",
+  "Dialogue.ABDLChild_Vincent_fallback": "What's your name?|%You hear a crinkle with each step Vincent takes."
+}

@@ -110,16 +110,16 @@
   // Bladder and bowel continence states
   // ########################################
 
-  "Bladder_Continence_Green": [ "Bladder.Continence.Green.1}}" ],
-  "Bladder_Continence_Yellow": [ "Bladder.Continence.Yellow.1}}" ],
-  "Bladder_Continence_Orange": [ "Bladder.Continence.Orange.1}}" ],
-  "Bladder_Continence_Red": [ "Bladder.Continence.Red.1}}" ],
-  "Bladder_Continence_Min": [ "Bladder.Continence.Min.1}}" ],
-  "Bowel_Continence_Green": [ "Bowel.Continence.Green.1}}" ],
-  "Bowel_Continence_Yellow": [ "Bowel.Continence.Yellow.1}}" ],
-  "Bowel_Continence_Orange": [ "Bowel.Continence.Orange.1}}" ],
-  "Bowel_Continence_Red": [ "Bowel.Continence.Red.1}}" ],
-  "Bowel_Continence_Min": [ "Bowel.Continence.Min.1}}" ],
+  "Bladder_Continence_Green": [ "{{i18n:Bladder.Continence.Green.1}}" ],
+  "Bladder_Continence_Yellow": [ "{{i18n:Bladder.Continence.Yellow.1}}" ],
+  "Bladder_Continence_Orange": [ "{{i18n:Bladder.Continence.Orange.1}}" ],
+  "Bladder_Continence_Red": [ "{{i18n:Bladder.Continence.Red.1}}" ],
+  "Bladder_Continence_Min": [ "{{i18n:Bladder.Continence.Min.1}}" ],
+  "Bowel_Continence_Green": [ "{{i18n:Bowel.Continence.Green.1}}" ],
+  "Bowel_Continence_Yellow": [ "{{i18n:Bowel.Continence.Yellow.1}}" ],
+  "Bowel_Continence_Orange": [ "{{i18n:Bowel.Continence.Orange.1}}" ],
+  "Bowel_Continence_Red": [ "{{i18n:Bowel.Continence.Red.1}}" ],
+  "Bowel_Continence_Min": [ "{{i18n:Bowel.Continence.Min.1}}" ],
 
   // ########################################
   // Pee and poop messages
@@ -142,14 +142,14 @@
     "{{i18n:Poop.Ground.5}}"
   ],
   "Pee_Toilet": [
-    "18n:Pee.Toilet.1}}",
-    "18n:Pee.Toilet.2}}",
-    "18n:Pee.Toilet.3}}",
-    "18n:Pee.Toilet.4}}",
-    "18n:Pee.Toilet.5}}",
-    "18n:Pee.Toilet.6}}",
-    "18n:Pee.Toilet.7}}",
-    "18n:Pee.Toilet.8}}"
+    "{{18n:Pee.Toilet.1}}",
+    "{{18n:Pee.Toilet.2}}",
+    "{{18n:Pee.Toilet.3}}",
+    "{{18n:Pee.Toilet.4}}",
+    "{{18n:Pee.Toilet.5}}",
+    "{{18n:Pee.Toilet.6}}",
+    "{{18n:Pee.Toilet.7}}",
+    "{{18n:Pee.Toilet.8}}"
   ],
   "Poop_Toilet": [
     "{{i18n:Poop.Toilet.1}}",
@@ -1089,13 +1089,11 @@
   // Changing options for nps`s
   // ########################################
   /*
-      get_change:           (optional) options when player can change npc
+      get_change:           (optional) options when player can change npc with dialoges very nice; if not set, use friendship level > 8
 
-      give_change:          (optional) options when npc can change player
+      give_change:          (optional) options when npc can change player with dialoges very nice; if not set, use friendship level > 8
 
-      give_dirty_change:    (optional) options when npc can change player if there are dirty
-
-      options for "get_change", "give_change" and "give_dirty_change":        
+      options for "get_change" and "give_change":        
   
         min_heart_level:        (optional) minimum heart level of npc.
 
@@ -1105,7 +1103,7 @@
 
         questions_answered:     (optional) the response id´s of questions, that had to be answered, for an offer with a specific heart level
   
-        All single configured options are OR combined. Only on of them has to be true. 
+        All single configured options are OR combined. Only one of them has to be true. 
 
       change_automaticly:   (optional) options for npc´s get automaticly changed
 
@@ -1140,7 +1138,7 @@
       Example 1:
 
         "vincent": {                      options for npc Vincent
-          "get_changed": {                options for Vincent, to change them
+          "get_changed": {                options for Vincent, to change them and get the dialoges for friendship level very nice
             "min_heart_level": 6,         the player needs at minimum 6 hearts to offer Vincent a change
             "min_heart_level_other": {    also the player need a minimum heart level of an other npc
               "jodi": 4                   in this case, the player need at minimum 4 hearts from Jodi, You can add more than one npc
@@ -1174,22 +1172,19 @@
       Example 2:
 
         "sam": {                          options for npc Sam
-          "get_changed": {                options for Sam, to change them
-            "min_heart_level": -1,        in  this case, the minimum heart level dosn´t matter
+          "get_changed": {                options for Sam, to change them and get the dialoges for friendship level very nice
             "questions_answered": {       the player needs to answered questions from sam and get following response id´s that Sam offer a change
               "sam_little_littel": 8,     the player had at minimum a heart level of 8 to sam answered on a question with the response id "sam_little_littel" 
               "sam_little_exited": 8      the player had at minimum a heart level of 8 to sam answered on a question with the response id "sam_little_exited" 
             }
           }
-          "give_change": {                options for Sam, to change the player
-            "min_heart_level": -1,        in  this case, the minimum heart level dosn´t matter
+          "give_change": {                options for Sam, to change the player and get the dialoges for friendship level very nice
             "questions_answered": {       the player needs to answered questions from sam and get following response id´s to offer Sam a change
               "sam_little_littel": 8,     the player had at minimum a heart level of 8 to sam answered on a question with the response id "sam_little_littel" 
               "sam_little_exited": 8      the player had at minimum a heart level of 8 to sam answered on a question with the response id "sam_little_exited" 
             }
           }
           "give_dirty_change":{           options for Sam, to change the player if there underwear is dirty
-            "min_heart_level": -1,        in  this case, the minimum heart level dosn´t matter
             "locations": {                Sam will change the player with a specific heart level on these locations if there are dirty
               "home": 0                   if sam is at there home, and the player has a minimum heart level of 0, sam will offer a change of dirty underwear
             }
@@ -1229,11 +1224,6 @@
     "gus": {
       "give_change": {
         "min_heart_level": 8
-      },
-      "give_dirty_change": {
-        "locations": {
-          "Saloon": 0
-        }
       }
     },
 
@@ -1242,11 +1232,6 @@
     "jodi": {
       "give_change": {
         "min_heart_level": 6
-      },
-      "give_dirty_change": {
-        "locations": {
-          "home": 0
-        }
       }
     },
 
@@ -1335,11 +1320,6 @@
           "sam_little_exited": 8
         }
       },
-      "give_dirty_change": {
-        "locations": {
-          "home": 0
-        }
-      },
       "change_automaticly": {
         "at_home": {
           "npc_in_range": [
@@ -1377,9 +1357,6 @@
         "min_heart_level": 8
       },
       "give_change": {
-        "min_heart_level": 8
-      },
-      "give_dirty_change": {
         "min_heart_level": 8
       },
       "change_automaticly": {
@@ -1422,12 +1399,6 @@
           "hospital": 0
         }
       },
-      "give_dirty_change": {
-        "min_heart_level": 4,
-        "locations": {
-          "hospital": 0
-        }
-      },
       "change_automaticly": {
         "at_home": {
           "wearing_underwear": [
@@ -1456,12 +1427,6 @@
       "give_change": {
         "min_heart_level": 8
       },
-      "give_dirty_change": {
-        "min_heart_level": 8,
-        "locations": {
-          "home": 4
-        }
-      },
       "change_automaticly": {
         "at_home": {
           "wearing_underwear": [
@@ -1488,9 +1453,6 @@
         "min_heart_level": 8
       },
       "give_change": {
-        "min_heart_level": 8
-      },
-      "give_dirty_change": {
         "min_heart_level": 8
       },
       "change_automaticly": {
@@ -1526,9 +1488,6 @@
       "give_change": {
         "min_heart_level": 8
       },
-      "give_dirty_change": {
-        "min_heart_level": 8
-      },
       "change_automaticly": {
         "at_home": {
           "wearing_underwear": [
@@ -1560,13 +1519,6 @@
         }
       },
       "give_change": {
-        "min_heart_level": 6,
-        "questions_answered": {
-          "penny_adult_little": 4,
-          "penny_adult_big": 4
-        }
-      },
-      "give_dirty_change": {
         "min_heart_level": 6,
         "questions_answered": {
           "penny_adult_little": 4,
@@ -1884,13 +1836,27 @@
 
   // ########################################
   /* NPC reactions depending on
-    what you are doing and how is 
-    your relation    
-*/
+     what you are doing and how is 
+     your relation    
+  */
+  /*
+      check_player_verynice:              message show if you talk to npc, there check you underwear and your friendship level is very nice
+      check_player_nice:                  message show if you talk to npc, there there check you underwear and your friendship level is nice
+      check_player_mean:                  message show if you talk to npc, there there check you underwear and your friendship level is mean
+      check_npc_verynice:                 message show if you talk to npc, you check there underwear an and your friendship level is very nice
+      check_npc_nice:                     message show if you talk to npc, you check there underwear an and your friendship level is nice
+      check_npc_mean:                     message show if you talk to npc, you check there underwear an and your friendship level is mean
+      dirty_offer_change_player:          message show if you talk to npc, your underwear is wet/messy and there offer you an underwear change
+      soiled_verynice:                    message show if you talk to npc, you used your underwear near them and your friendship level is very nice
+      soiled_nice:                        message show if you talk to npc, you used your underwear near them and your friendship level is nice
+      soiled_mean:                        message show if you talk to npc, you used your underwear near them and your friendship level is mean
+
+  */
   // ########################################
 
   "Villager_Reactions": {
     "adult": {
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Adult.Soiled.Verynice.1}}",
         "{{i18n:Villager_Reactions.Adult.Soiled.Verynice.2}}",
@@ -1906,6 +1872,7 @@
       "dirty": [
         "{{i18n:Villager_Reactions.Adult.Dirty.1}}"
       ],
+      // You Pee/Poop on the ground near them
       "ground": [
         "{{i18n:Villager_Reactions.Adult.Ground.1}}",
         "{{i18n:Villager_Reactions.Adult.Ground.2}}"
@@ -1986,23 +1953,15 @@
     },
 
     // ########################################
-    // spacific reaction for singel npc´s
-    /*
-      general_offer_change:   message show if you talk to npc and there offer you an underwear change
-      dirty_offer_change:     message show if you talk to npc, your underwear is wet/messy and there offer you an underwear change
-      soiled_verynice:
-      soiled_nice:
-      soiled_mean:
-
-  */
+    // specific reaction for singel npc´s
     // ########################################
 
     // ##########
-    // NPC´s they can change you
+    // NPC´s that can change you
     // ##########
 
     "gus": {
-      "dirty_offer_change_player": [
+      "dirty_offer_change_player_player": [
         "{{i18n:Villager_Reactions.Gus.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"gus\""
       ],
       "soiled_verynice": [
@@ -2031,15 +1990,16 @@
       "general_offer_change_player": [
         "{{i18n:Villager_Reactions.Jodi.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED_BAD#[OnClean: {{i18n:Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Clean}}][OnSlightlyWet: {{i18n:Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Slightly_Wet}}]|$GETTING_CHANGED_DIALOG$ \"jodi\""
       ],
-      "dirty_offer_change": [
-        "$p dirty_change_no# {{i18n:Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_No}}| {{i18n:Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_Yes}}$GETTING_CHANGED_DIALOG$ \"jodi\""
+      "dirty_offer_change_player": [
+        "$p dirty_change_no# {{i18n:Villager_Reactions.Jodi.Change.Dirty_Offer.1.Answer_No}}| {{i18n:Villager_Reactions.Jodi.Change.Dirty_Offer.1.Answer_Yes}}$GETTING_CHANGED_DIALOG$ \"jodi\""
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Jodi.Soiled.Verynice.1}}",
-        "{{i18n:Villager_Reactions.Jodi.Soiled.Verynice.2}}$GETTING_CHANGED_DIALOG$ \"jodi\"",
-        "{{i18n:Villager_Reactions.Jodi.Soiled.Verynice.3}}$GETTING_CHANGED_DIALOG$ \"jodi\"",
+        "{{i18n:Villager_Reactions.Jodi.Soiled.Verynice.2}}#$GETTING_CHANGED_DIALOG$ \"jodi\"",
+        "{{i18n:Villager_Reactions.Jodi.Soiled.Verynice.3}}#$GETTING_CHANGED_DIALOG$ \"jodi\"",
         "{{i18n:Villager_Reactions.Jodi.Soiled.Verynice.4}}",
-        "{{i18n:Villager_Reactions.Jodi.Soiled.Verynice.5}}$GETTING_CHANGED_DIALOG$ \"jodi\""
+        "{{i18n:Villager_Reactions.Jodi.Soiled.Verynice.5}}#$GETTING_CHANGED_DIALOG$ \"jodi\""
       ],
       "soiled_nice": [
         "{{i18n:Villager_Reactions.Jodi.Soiled.Nice.1}}",
@@ -2047,9 +2007,47 @@
       ],
       "soiled_mean": [
         "{{i18n:Villager_Reactions.Jodi.Soiled.Mean.1}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Jodi.Check.Npc.Verynice.1}}",
+        "{{i18n:Villager_Reactions.Jodi.Check.Npc.Verynice.2}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Jodi.Check.Player.Clean.2}}|#$b###{{i18n:Villager_Reactions.Jodi.Check.Player.Used.1}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Npc.Verynice.3}}"
+      ],
+      "check_npc_nice": [
+        "{{i18n:Villager_Reactions.Jodi.Check.Npc.Nice.1}}",
+        "{{i18n:Villager_Reactions.Jodi.Check.Npc.Nice.2}}"
+      ],
+      "check_npc_mean": [
+        "{{i18n:Villager_Reactions.Jodi.Check.Npc.Mean.1}}"
+      ],
+      // General question for a change by npc
+      "general_question_change": [
+        "{{i18n:Villager_Reactions.Jodi.Change.Player.General_Question.1}}",
+        "{{i18n:Villager_Reactions.Jodi.Change.Player.General_Question.2}}"
+      ],
+      // They check you
+      "check_player_verynice": [
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Pre.1}}#$b#{{i18n:Villager_Reactions.Jodi.Check.Player.1}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Jodi.Check.Player.Clean.1}}|#$b###{{i18n:Villager_Reactions.Jodi.Check.Player.Used.2}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Pre.1}}#$b#{{i18n:Villager_Reactions.Jodi.Check.Player.2}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Jodi.Check.Player.Clean.1}}|#$b###{{i18n:Villager_Reactions.Jodi.Check.Player.Used.1}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Pre.1}}#$b#{{i18n:Villager_Reactions.Jodi.Check.Player.3}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Jodi.Check.Player.Clean.2}}|#$b###{{i18n:Villager_Reactions.Jodi.Check.Player.Used.2}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Pre.2}}#$b#{{i18n:Villager_Reactions.Jodi.Check.Player.1}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Jodi.Check.Player.Clean.1}}|#$b###{{i18n:Villager_Reactions.Jodi.Check.Player.Used.2}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Pre.2}}#$b#{{i18n:Villager_Reactions.Jodi.Check.Player.2}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Jodi.Check.Player.Clean.2}}|#$b###{{i18n:Villager_Reactions.Jodi.Check.Player.Used.1}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Pre.2}}#$b#{{i18n:Villager_Reactions.Jodi.Check.Player.3}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Jodi.Check.Player.Clean.2}}|#$b###{{i18n:Villager_Reactions.Jodi.Check.Player.Used.2}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Verynice.1}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Verynice.2}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Verynice.3}}$CHANGED_BY_NPC$ \"jodi\" \"baby print diaper\" \"sams old pants\"#$h"
+      ],
+      "check_player_nice": [
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Pre.2}}#$b#{{i18n:Villager_Reactions.Jodi.Check.Player.3}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Jodi.Check.Player.Clean.1}}|{{i18n:Villager_Reactions.Jodi.Check.Player.Nice.1}}#$b#$action GIVE_UNDERWEAR \"baby print diaper\"#$h"
+      ],
+      "check_player_mean": [
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Mean.1}}",
+        "{{i18n:Villager_Reactions.Jodi.Check.Player.Mean.2}}"
       ]
     },
     "harvey": {
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.1}}",
         "{{i18n:Villager_Reactions.Harvey.Soiled.Verynice.2}}",
@@ -2084,6 +2082,7 @@
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"vincent\"#{{i18n:Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Vincent.Soiled.Verynice.1}}",
         "{{i18n:Villager_Reactions.Vincent.Soiled.Verynice.2}}",
@@ -2116,6 +2115,7 @@
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Jas.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"jas\"#{{i18n:Villager_Reactions.Jas.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Jas.Soiled.Verynice.1}}",
         "{{i18n:Villager_Reactions.Jas.Soiled.Verynice.2}}",
@@ -2142,7 +2142,7 @@
     },
 
     // ##########
-    // NPC´s they can change you and you can change
+    // NPC´s that can change you and you can change
     // ##########
 
     "sam": {
@@ -2152,9 +2152,10 @@
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Sam.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"sam\"#{{i18n:Villager_Reactions.Sam.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ],
-      "dirty_offer_change": [
+      "dirty_offer_change_player": [
         "{{i18n:Villager_Reactions.Sam.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"sam\""
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "#$p child_diaper_no#{{i18n:Villager_Reactions.Sam.Soiled.Verynice.1}}#$GETTING_CHANGED_DIALOG$ \"sam\"",
         "{{i18n:Villager_Reactions.Sam.Soiled.Verynice.2}}$GETTING_CHANGED_DIALOG$ \"sam\"",
@@ -2189,9 +2190,10 @@
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"abigail\"#{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ],
-      "dirty_offer_change": [
+      "dirty_offer_change_player": [
         "$p dirty_change_no#{{i18n:Villager_Reactions.Abigail.Change.Dirty_Offer.No}}|{{i18n:Villager_Reactions.Abigail.Change.Dirty_Offer.Yes}}$GETTING_CHANGED_DIALOG$ \"abigail\""
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Abigail.Soiled.Verynice.1}}#$GETTING_CHANGED_DIALOG$ \"abigail\"",
         "{{i18n:Villager_Reactions.Abigail.Soiled.Verynice.2}}",
@@ -2222,9 +2224,10 @@
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Maru.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"maru\"#{{i18n:Villager_Reactions.Maru.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ],
-      "dirty_offer_change": [
+      "dirty_offer_change_player": [
         "{{i18n:Villager_Reactions.Maru.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"maru\""
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Maru.Soiled.Verynice.1}}$GETTING_CHANGED_DIALOG$ \"maru\""
       ],
@@ -2242,9 +2245,10 @@
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Emily.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"emily\"#{{i18n:Villager_Reactions.Emily.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ],
-      "dirty_offer_change": [
+      "dirty_offer_change_player": [
         "{{i18n:Villager_Reactions.Emily.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"emily\""
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Emily.Soiled.Verynice.1}}"
       ],
@@ -2262,6 +2266,7 @@
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Haley.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"haley\"#{{i18n:Villager_Reactions.Haley.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Haley.Soiled.Verynice.1}}",
         "{{i18n:Villager_Reactions.Haley.Soiled.Verynice.2}}#$b#$GETTING_CHANGED_DIALOG$ \"haley\"",
@@ -2284,18 +2289,92 @@
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Leah.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"leah\"#{{i18n:Villager_Reactions.Leah.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ],
-      "dirty_offer_change": [
+      "dirty_offer_change_player": [
         "{{i18n:Villager_Reactions.Leah.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"leah\""
       ],
+
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
-        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.1}}"
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.1}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.2}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.3}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.4}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.5}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.6}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.7}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.8}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.9}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.10}}"
       ],
-      "soilded_nice": [
-        "{{i18n:Villager_Reactions.Leah.Soiled.Nice.1}}"
+      "soiled_nice": [
+        "{{i18n:Villager_Reactions.Leah.Soiled.Nice.1}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Nice.2}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Nice.3}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Nice.4}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Nice.5}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Nice.6}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Nice.7}}"
       ],
       "soiled_mean": [
-        "{{i18n:Villager_Reactions.Leah.Soiled.Mean.1}}"
+        "{{i18n:Villager_Reactions.Leah.Soiled.Mean.1}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Mean.2}}",
+        "{{i18n:Villager_Reactions.Leah.Soiled.Mean.3}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+
+      ],
+      "check_npc_nice": [
+        "{{i18n:Villager_Reactions.Leah.Check.Npc.Nice.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Npc.Nice.1}}",
+        "{{i18n:Villager_Reactions.Leah.Check.Npc.Nice.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Npc.Nice.2}}",
+        "{{i18n:Villager_Reactions.Leah.Check.Npc.Nice.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Npc.Nice.3}}",
+        "{{i18n:Villager_Reactions.Leah.Check.Npc.Nice.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Npc.Nice.4}}"
+      ],
+      "check_npc_mean": [
+        "{{i18n:Villager_Reactions.Leah.Check.Npc.Mean.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Npc.Mean.1}}",
+        "{{i18n:Villager_Reactions.Leah.Check.Npc.Mean.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Npc.Mean.2}}",
+        "{{i18n:Villager_Reactions.Leah.Check.Npc.Mean.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Npc.Mean.3}}",
+        "{{i18n:Villager_Reactions.Leah.Check.Npc.Mean.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Npc.Mean.4}}"
+      ],
+      // General question for a change by npc
+      "general_question_change": [
+        "{{i18n:Villager_Reactions.Leah.Change.Player.General_Question.1}}",
+        "{{i18n:Villager_Reactions.Leah.Change.Player.General_Question.2}}"
+      ],
+      // They check you
+      "check_player_verynice": [
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1:}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.1}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"#$h",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1:}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.2}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"#$h",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.2}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.3}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"#$h",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.3}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.4}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"#$h",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1:}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.4}}",
+        "$query !DIAPER_USED#{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.5}}"
+      ],
+      "check_player_nice": [
+        "{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Used.1}}$CHANGED_BY_NPC$ \"leah\" \"baby print diaper\"#$h",
+        "{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Used.2}}$CHANGED_BY_NPC$ \"leah\" \"baby print diaper\"#$h",
+        "{{i18n:Villager_Reactions.Leah.Check.Player.Pre.2}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Clean.2}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Used.4}}$CHANGED_BY_NPC$ \"leah\" \"baby print diaper\"#$h",
+        "{{i18n:Villager_Reactions.Leah.Check.Player.Pre.2}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Used.3}}",
+        "{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Used.5}}"
+      ],
+      "check_player_mean": [
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Used.1}}",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Used.2}}"
+      ],
+      // You Pee/Poop on the ground near them
+      "ground": [
+        "{{i18n:Villager_Reactions.Leah.Ground.1}}",
+        "{{i18n:Villager_Reactions.Leah.Ground.2}}",
+        "{{i18n:Villager_Reactions.Leah.Ground.3}}",
+        "{{i18n:Villager_Reactions.Leah.Ground.4}}",
+        "{{i18n:Villager_Reactions.Leah.Ground.5}}"
+      ],
+      "ground_attempt": [
+        "{{i18n:Villager_Reactions.Leah.Ground_Attempt.1}}",
+        "{{i18n:Villager_Reactions.Leah.Ground_Attempt.2}}",
+        "{{i18n:Villager_Reactions.Leah.Ground_Attempt.3}}"
       ]
+
     },
     "penny": {
       "general_offer_change_player": [
@@ -2307,9 +2386,10 @@
       "general_fallback": [
         "{{i18n:Villager_Reactions.Penny.Change.General.Fallback.1}}"
       ],
-      "dirty_offer_change": [
+      "dirty_offer_change_player": [
         "{{i18n:Villager_Reactions.Penny.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"penny\""
       ],
+      // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Penny.Soiled.Verynice.1}}",
         "{{i18n:Villager_Reactions.Penny.Soiled.Verynice.2}}$GETTING_CHANGED_DIALOG$ \"penny\"",
@@ -2334,6 +2414,72 @@
       ]
     }
   },
+
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
+
+  "Villager_Changeing_Dialoges": {
+    "adult_male": {
+      "1": "%He tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1",
+      "2": "%Without another word, he takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1"
+    },
+    "adult_female": {
+      "1": "%She tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1",
+      "2": "%Without another word, she takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1"
+    },
+    "abigail": {
+      "1": "%She gives you a condescending little head-pat when she's done.#$b#Good <boy/girl>.",
+      "2": "%Abigail tapes you up in a soft, puffy fresh diaper."
+    },
+    "jodi": {
+      "1": "{{i18n:Villager_Dialoges.Jodi.Change.Player.1}}",
+      "2": "{{i18n:Villager_Dialoges.Jodi.Change.Player.2}}",
+      "3": "{{i18n:Villager_Dialoges.Jodi.Change.Player.3}}",
+      "4": "{{i18n:Villager_Dialoges.Jodi.Change.Player.4}}"
+    }
+  },
+
+  // ########################################
+  // Villager Gift Dialoges
+  // ########################################
+
+  "Villager_Gift_Dialoges": {
+    "adult_male": {
+      "1": "%He discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1"
+    },
+    "adult_female": {
+      "1": "%She discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1"
+    },
+    "abigail": {
+      "1": "%Abigail hands you a diaper.#$b#...I bet you'll need it more than me, hehehe!$1",
+      "2": "%Abigail slips a pair of clean undies onto you instead of a diaper.#$b#Aw, worried you're gonna make a mess? *smirk*",
+      "3": "Oh, yeah - take a couple spare changes with you...#$b#Just in case you have a bit too much fun on your little adventure.$1"
+    },
+    "demetrius": {
+      "1": "%Demetrius hands you a Joja diaper from a pack under his workbench. Next to the pack is a diaper that's been slashed and gutted."
+    },
+    "jas": {
+      "1": "Here, this should help!$1"
+    },
+    "jodi": {
+      "1": "Yeah, you certainly need a change. Try this on, I think it'll fit just fine.",
+      "2": "Here, try this one. I get these for Vincent, but I think they'll fit you alright."
+    },
+    "leah": {
+      "1": "%Leah pushes a diaper into your hands, trying to hide her increasingly-flushed face from view.#$b#%...It looks like Big Leah might just need a bit more time than Little Leah did. That's okay!"
+    },
+    "marnie": {
+      "1": "*sigh* Here, take this and get cleaned up. you can use my room if you need to.$3"
+    },
+    "sam": {
+      "1": "%Sam gives you a diaper you haven't seen at any store.#$b#You can change in my room if you need privacy."
+    },
+    "vincent": {
+      "1": "%He pulls a diaper he got from Jodi out of his bag.#$b#I have this just in case, but I think you need it right now more."
+    }
+  },
+
 
   // ########################################
   // Messages for your pants and underwear
@@ -3278,6 +3424,14 @@
       "name": "Juice",
       "waterContent": 240,
       "calorieContent": 114
+    },
+    //This is a Tikku addition with the goal of being a laxitive.
+    //As it is, when taken you'll mess immediately which is pretty entertaining.
+    //Item ID is [351] to have a character give you this item to take.
+    "Muscle Remedy": {
+      "name": "Muscle Remedy",
+      "waterContent": 50,
+      "calorieContent": 10000
     }
   },
   // ########################################
@@ -3631,20 +3785,20 @@
   },
   "Underwear_States": {
     "wet": {
-      "text_description": "wet",
-      "text_display_name": "wet"
+      "text_description": "{{i18n:Underwear_States.Wet.Description}}",
+      "text_display_name": "{{i18n:Underwear_States.Wet.DisplayName}}"
     },
     "messy": {
-      "text_description": "messy",
-      "text_display_name": "messy"
+      "text_description": "{{i18n:Underwear_States.Messy.Description}}",
+      "text_display_name": "{{i18n:Underwear_States.Messy.DisplayName}}"
     },
     "wet_and_messy": {
-      "text_description": "wet and messy",
-      "text_display_name": "wet and messy"
+      "text_description": "{{i18n:Underwear_States.Wet_and_Messy.Description}}",
+      "text_display_name": "{{i18n:Underwear_States.Wet_and_Messy.DisplayName}}"
     },
     "drying": {
-      "text_description": "drying",
-      "text_display_name": "drying"
+      "text_description": "{{i18n:Underwear_States.Drying.Description}}",
+      "text_display_name": "{{i18n:Underwear_States.Drying.DisplayName}}"
     }
   },
 

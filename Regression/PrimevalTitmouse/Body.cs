@@ -590,8 +590,7 @@ namespace PrimevalTitmouse
             }
 
             msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null);
-            msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null);
-            msg = Strings.ReplaceInspectUnderwearToken(msg, uwOld.container, npc: npcName != null, old: true);
+            msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null,oldNew: Strings.OldNew.New);
             msg = Strings.ReplaceInspectUnderwearToken(msg, uwOld.container, npc: npcName != null, old: true);
 
             Animations.Say(msg, this);
@@ -614,8 +613,7 @@ namespace PrimevalTitmouse
             }
 
             msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null);
-            msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null);
-            msg = Strings.ReplaceInspectUnderwearToken(msg, uwOld.container, npc: npcName != null, old: true);
+            msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null, oldNew: Strings.OldNew.New);
             msg = Strings.ReplaceInspectUnderwearToken(msg, uwOld.container, npc: npcName != null, old: true);
             msg = Strings.ReplacePantsToken(msg, pantsNew, npc: npcName != null);
             msg = Strings.ReplacePantsToken(msg, pantsOld, npc: npcName != null, true);
@@ -641,7 +639,7 @@ namespace PrimevalTitmouse
                 newPants = GetTypeDefault(myPants == null ? "legs" : Animations.player.Gender == Gender.Female ? "skirt" : "blue jeans", ContainerSubtype.Pants);
             }
 
-            pants.ResetToDefault(newPants);
+            pants.ResetToDefault(newPants,0,0);
 
             if (myPants != null)
             {
@@ -689,8 +687,10 @@ namespace PrimevalTitmouse
         {
             AddWater(requiredWaterPerDay * 0.1f, 0f);
             AddFood(requiredCaloriesPerDay * 0.1f, 0f);
-            AddResource(IncidentType.PEE, maxBladderCapacity * 0.1f);
-            AddResource(IncidentType.POOP, maxBladderCapacity * 0.1f);
+            //AddResource(IncidentType.PEE, maxBladderCapacity * 0.1f);
+            //AddResource(IncidentType.POOP, maxBladderCapacity * 0.1f);
+            AddResource(IncidentType.PEE, maxBladderCapacity * 0.5f);
+            AddResource(IncidentType.POOP, maxBladderCapacity * 0.5f);
         }
 
         public void DrinkWateringCan()

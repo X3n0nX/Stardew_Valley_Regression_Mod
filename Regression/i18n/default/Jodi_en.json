@@ -1,0 +1,90 @@
+{
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Jodi change your underwear general offer
+
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Pre": "You need a change?#$b#%Jodi checks your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Clean": "Look at that! You are completly clean! How did that happen?",
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Slightly_Wet": "You only a little wet. Come back when you had another of your \"accidents\". *wink*",
+
+  // Jodi change your underwear if there are dirty
+
+  "Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_No": "No leaks! $3",
+  "Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_Yes": "Aww, come here @, no crying! This things happen! We can make one of Vincents diapers fit and there are some pants from sam that you could borrow!$1",
+
+  // Jodi friendship very nice
+
+  "Villager_Reactions.Jodi.Soiled.Verynice.1": "%Jodi leans down to put a comforting hand on your back.#$b#You can tell me if you had a little accident $FARMERNAME$. It's nothing to be ashamed of.",
+  "Villager_Reactions.Jodi.Soiled.Verynice.2": "You don't need to rush potty training if you're not ready yet.#$b#You need help?",
+  "Villager_Reactions.Jodi.Soiled.Verynice.3": "It can be hard for little <boys/girls> to remember to go potty sometimes. It's okay.#$b#Need a change?",
+  "Villager_Reactions.Jodi.Soiled.Verynice.4": "Oh goodness!$1",
+  "Villager_Reactions.Jodi.Soiled.Verynice.5": "Awww, you're so cute when you're embarrassed!$1#$b#Comeon, lets get you in some new Diapers!",
+
+  // Jodi friendship nice
+
+  "Villager_Reactions.Jodi.Soiled.Nice.1": "$FARMERNAME$, I  think you might need to go change.",
+  "Villager_Reactions.Jodi.Soiled.Nice.2": "You poor thing! Did you just <wet&mess> yourself?",
+
+  // Jodi friendship mean
+
+  "Villager_Reactions.Jodi.Soiled.Mean.1": "You might need to tap into those supplies I left you$4",
+
+  // you check Jodi's underwear friendship very nice
+
+  "Villager_Reactions.Jodi.Check.Npc.Verynice.1": "You want to check my diaper?#$b#Don't be silly, I'm not the baby.$1",
+  "Villager_Reactions.Jodi.Check.Npc.Verynice.2": "You want to check my diaper? You silly goose.$1#$b#I think it might be YOUR $UNDERWEAR_NAME$ that needs a check.#$b#%Jodi pulls you forward a little and reaches behind you, pulling your waistband back dramatically.",
+  "Villager_Reactions.Jodi.Check.Npc.Verynice.3": "%You imagine Jodi wearing a diaper and it makes you giggle.#$b#Well don't you look like a happy little <boy/girl>.$1#$b#What're you thinkin' about?",
+
+  // you check Jodi's underwear friendship nice
+
+  "Villager_Reactions.Jodi.Check.Npc.Nice.1": "You want to check my diaper?#$b#Don't be silly, I'm not the baby.$1",
+  "Villager_Reactions.Jodi.Check.Npc.Nice.2": "%You imagine Jodi wearing a diaper and it makes you giggle.",
+
+  // you check Jodi's underwear friendship mean
+
+  "Villager_Reactions.Jodi.Check.Npc.Mean.1": "%You try to see if maybe Jodi's wearing a diaper through her pants. It's hard to tell, but you think she probably isn't.",
+
+  // General question change
+
+  "Villager_Reactions.Jodi.Change.Player.General_Question.1": "%You ask Jodi for a underwear change.",
+  "Villager_Reactions.Jodi.Change.Player.General_Question.2": "%You ask Jodi, if they can help you with your underwear.",
+
+  // Jodi check your underwear
+
+  "Villager_Reactions.Jodi.Check.Player.Pre.1": "You need a change?$1",
+  "Villager_Reactions.Jodi.Check.Player.Pre.2": "What's that, you think you need a change? Well, let me see.$1",
+
+  "Villager_Reactions.Jodi.Check.Player.Clean.1": "You silly <boy/girl>, you're as dry as can be!$1",
+  "Villager_Reactions.Jodi.Check.Player.Clean.2": "All clean!$1",
+
+  "Villager_Reactions.Jodi.Check.Player.Used.1": "That's a <wet&messy> Diaper if I've ever seen one!$1#$b#Let me help you out of that little $FARMERNAME$.$1",
+  "Villager_Reactions.Jodi.Check.Player.Used.2": "Hold it right there little <mister/missy>, I have to take care of something.$1",
+
+  "Villager_Reactions.Jodi.Check.Player.1": "%Jodi checks your $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Villager_Reactions.Jodi.Check.Player.2": "%Jodi gives you a quick and efficient underwear check.",
+  "Villager_Reactions.Jodi.Check.Player.3": "%Jodi takes a quick peek in the back of your $UNDERWEAR_NAME$.",
+
+  // Jodi check your underwear friendship very nice
+
+  "Villager_Reactions.Jodi.Check.Player.Verynice.1": "%You tug on Jodi's sleeve and show her your <wet&messy> $UNDERWEAR_NAME$.#$b#Awww, thank you for telling me.$4",
+  "Villager_Reactions.Jodi.Check.Player.Verynice.2": "Sweety, come over here a moment, I think you might be in <wet&dirty> pants.#$b#%Jodi hefts the bottom of your diaper and tsks.#$b#Thought so. Hold still for me please.",
+  "Villager_Reactions.Jodi.Check.Player.Verynice.3": "%Jodi spots you yawning and calls you over for a quick hug. When you settle in her arms, she takes the opportunity to give you a quick check.",
+
+  // Jodi check your underwear friendship nice
+
+  "Villager_Reactions.Jodi.Check.Player.Nice.1": "Well, I can't leave you in a <wet&messy> $UNDERWEAR_NAME$, even if you're not my kid.",
+
+  // Jodi check your underwear friendship mean
+
+  "Villager_Reactions.Jodi.Check.Player.Mean.1": "I gave you plenty of supplies already. There's instructions on the package.$4",
+  "Villager_Reactions.Jodi.Check.Player.Mean.2": "I'm busy taking care of my own kids. I'm sure you can figure it out.$2",
+
+  // Jodi changes your underwear
+
+  "Villager_Dialoges.Jodi.Change.Player.1": "%Jodi smiles warmly at you while she lies you down and cleans you up. She tapes you up nice and snug in a fresh diaper and lifts you to your feet, giving you tight hug.#$b#There we go, all better.$1",
+  "Villager_Dialoges.Jodi.Change.Player.2": "%Jodi lies you down for a change, tickling your tummy between each wipe. She giggles along with every little giggle you make.#$b#All done! Go on and play.$1",
+  "Villager_Dialoges.Jodi.Change.Player.3": "%Jodi hums a soft tune as she sets about the chore of cleaning you up. She lifts you to your feet before you even realize you're all clean and dry.#$b#I think I know a little farmer who needs a nap.$1",
+  "Villager_Dialoges.Jodi.Change.Player.4": "%Without a word she lies you down for a change. She coos softly at you throughout the change, and pulls you right back into the hug when she's done.#$b#There we go, all better.$1"
+}

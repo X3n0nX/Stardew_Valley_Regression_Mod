@@ -407,6 +407,7 @@ namespace PrimevalTitmouse
         public static bool WarnCurrentThreshold(float[] thresholds, string[][] messages, float currentValue, bool greaterAs = false)
         {
             string[] curr = GetCurrentThreshold(thresholds, messages, currentValue, greaterAs);
+
             if (curr != null)
             {
                 Warn(curr);
@@ -564,6 +565,20 @@ namespace PrimevalTitmouse
             return newList;
         }
 
+        public static Gender GetNpcGender(string npcName)
+        {
+            List<NPC> npcs = Utility.getAllCharacters();
+
+            foreach(NPC npc in npcs)
+            {
+                if (npc is Horse || npc is Pet) continue;
+
+                if (npc.Name == npcName) return npc.Gender;
+            }
+
+            return Gender.Undefined;
+        }
+
         public static Dictionary<string, int> FriendshipLossOnAccident(Body b, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
         {
             var list = new Dictionary<string, int>();
@@ -643,10 +658,10 @@ namespace PrimevalTitmouse
                 return "soiled";
             }
         }
-        public static string responseKeyAdditionForState(NPC npc, bool isDirty = false)
+        public static string responseKeyAdditionForState(NPC npc)//, bool isDirty = false)
         {
             var body = new NpcBody(npc);
-
+            /*
             if (!isDirty)
             {
                 if (Regression.rnd.NextBool())
@@ -660,9 +675,20 @@ namespace PrimevalTitmouse
             }
             else if (isDirty && body.canGiveDirtyChangeNpc)
             {
-                return "_offer_change";
+                return "_offer_change_player";
             }
             return "";
+            */
+
+            // randoise if we check npc or npc check player
+            if (Regression.rnd.NextBool())
+            {
+                return "check_npc";
+            }
+            else
+            {
+                return "check_player";
+            }
 
         }
         public static string responseKeyAdditionForIncident(NPC npc, bool inUnderwear, int friendshipLoss)
@@ -690,6 +716,7 @@ namespace PrimevalTitmouse
             }
             return "";
         }
+
         public static bool HandleVillager(Body b, bool mess, bool inUnderwear, bool overflow, bool attempt = false)
         {
             bool someoneNoticed = false;
@@ -740,6 +767,7 @@ namespace PrimevalTitmouse
                 if (stringList3.Count <= 0) continue;
 
                 //Construct and say Statement
+                npcName = npc.Name;
                 string npcStatement = npcName + Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
                 npcStatement = Strings.ReplaceNpcName(npcStatement, npcName);
 
@@ -849,10 +877,13 @@ namespace PrimevalTitmouse
             return new Microsoft.Xna.Framework.Rectangle((int)type * LARGE_SPRITE_DIM, (isFilledPicture ? LARGE_SPRITE_DIM : 0) + topOffset + (LARGE_SPRITE_DIM - height), LARGE_SPRITE_DIM, height - topOffset);
         }
 
+        // write a warning message to players hud
+        // try to get a translation for the message, and insert variables if possible
         public static void Warn(string msg, Body b = null, Container c = null)
-        {   
+        {
             msg = Strings.tryGetI18nText(msg);
             msg = Strings.InsertVariables(msg, b, c);
+
             Regression.QueueAction(() =>
             {
                 Game1.addHUDMessage(new HUDMessage(msg, 2));
@@ -860,6 +891,7 @@ namespace PrimevalTitmouse
 
         }
 
+        // randomize between multiple warnings
         public static void Warn(string[] msgs, Body b = null, Container c = null)
         {
             Warn(Strings.RandString(msgs), b, c);
@@ -879,6 +911,13 @@ namespace PrimevalTitmouse
         public static void Write(string[] msgs, Body b = null, Container c = null, int delay = 0)
         {
             Write(Strings.RandString(msgs), b, c, delay);
+        }
+
+        public enum FriendshipLevel
+        {
+            Mean,
+            Nice,
+            Verynice
         }
     }
 }

@@ -1,0 +1,14 @@
+{
+  // Dialogues for Gus
+
+  "Gus.Dialogue.Saloon4": "Guten Abend. Fühl dich wie zu Hause.#$e#%Gus lehnt sich nah heran, damit niemand anderes ihn hören kann.#$b#Wenn du dich umziehen musst, kannst du mein Zimmer benutzen. Es ist privat.$1",
+  "Gus.Dialogue.Saloon8": "Es muss schön sein, einfach überall hinzugehen. Um ehrlich zu sein, habe ich gerade eine Menge zu tun.#$b#Ich kann nicht einfach weggehen, wenn der Salon voll ist!$1",
+  "Gus.Dialogue.Mon2": "Ja, ich weiß eine Menge über die Leute, die hier leben.#$e#Das ist einer der Vorteile, wenn man Barkeeper ist.$h#$e#Manchmal höre ich zu viel...#$b#%Gus zwinkert und wirft einen Blick auf deine Hose.",
+  "Gus.Dialogue.Sat4": "Bist du ein guter Koch, @?#$e#Wenn du eine Küche und ein paar Rezepte hast, kannst du ein paar nützliche Gerichte kochen.#$e#Allerdings ist es einfacher, sich vorzustellen, wie du gefüttert wirst, als selbst zu kochen!$1",
+
+  // Diaperchange from Gus
+
+  "Gus.Change_Diaper.Accept": "",
+  "Gus.Change_Diaper.Refuse": "",
+  "Gus.Change_Diaper.Followup": "..."
+}

@@ -1,0 +1,93 @@
+{
+  //#########################################
+  // Potty Dialogs
+  //#########################################
+  /*
+
+      Pee:      npc pee
+      Poop:     npc poop
+
+      Fail:     npc fail to hold pee / poop  
+      Success:  npc success to hold pee / poop 
+
+      Pre:      message befor animation
+      Post:     message after animation
+
+      Exemple ID:
+
+      Pee.Fail.Pre    -> Message that will be shown, befor start of animation, if the npc faild to hold there pee -> befor there start to wet there underwear
+      Poop.Fail.Post  -> Message that will be shown, after the animation, if the npc faild to hold there poop -> after there mess there underwear
+
+  */
+
+  // Pee Fail
+
+  "Potty_Dialogs.Sam.Pee.Fail.Pre.1": "...",
+  "Potty_Dialogs.Sam.Pee.Fail.Pre.2": "fff..",
+  "Potty_Dialogs.Sam.Pee.Fail.Pre.3": "...",
+
+  "Potty_Dialogs.Sam.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Sam.Pee.Fail.Post.2": "hu!",
+  "Potty_Dialogs.Sam.Pee.Fail.Post.3": "mmm...",
+  "Potty_Dialogs.Sam.Pee.Fail.Post.4": "no, i'm fine!",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Sam.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Sam.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Sam.Poop.Fail.Post.1": "*cough*",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.2": "*caugh* fff...",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.3": "uuh...",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.4": "nnn...",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.5": "oh, i just was thinking.",
+  "Potty_Dialogs.Sam.Poop.Fail.Post.6": "sorry, what?",
+
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Sam change your underwear general offer
+
+  "Villager_Reactions.Sam.Change.General_Offer.Player.1.Pre": "Wait a second, i know that look!#$b#%Sam checks your diaper",
+  "Villager_Reactions.Sam.Change.General_Offer.Player.1.Underwear_ok": "I guess later than.",
+
+  // You change Sam`s underwear general offer
+
+  "Villager_Reactions.Sam.Change.General_Offer.Npc.1.Pre": "%You put your hand in sams pants. He blushes a lot while you check him.$9",
+  "Villager_Reactions.Sam.Change.General_Offer.Npc.1.Underwear_ok": "He is wearing $NPC_PANTS_NAME$ and $NPC_INSPECT_UNDERWEAR_NAME$.",
+
+  // Sam change your underwear if there are dirty
+
+  "Villager_Reactions.Sam.Change.Dirty_Offer.1": "Oh man. Can't let you catch a cold, mum would kill me.$9#$b#Where are vincents diapers again?$1",
+
+  // Sam friendship very nice
+
+  "Villager_Reactions.Sam.Soiled.Verynice.1": "Oh man, that was pretty hard to miss!$1|Man, you're just like Vincent.$1#$GETTING_CHANGED_DIALOG$",
+  "Villager_Reactions.Sam.Soiled.Verynice.2": "Are you okay buddy?#$b#Do you want some help with that? $GETTING_CHANGED_DIALOG$",
+  "Villager_Reactions.Sam.Soiled.Verynice.3": "It's okay $FARMERNAME$. Accidents are nothing to be ashamed of.",
+  "Villager_Reactions.Sam.Soiled.Verynice.4": "Awwww, look at you go! That must have felt good.$4",
+  "Villager_Reactions.Sam.Soiled.Verynice.5": "Oh man, that was pretty hard to miss!$1",
+  "Villager_Reactions.Sam.Soiled.Verynice.6": "Good one!$1",
+  "Villager_Reactions.Sam.Soiled.Verynice.7": "Man, you're such a little baby sometimes.#$b#%Sam giggles a bit as he pats your squishy bottom.#$b#Need help with that? $GETTING_CHANGED_DIALOG$",
+  "Villager_Reactions.Sam.Soiled.Verynice.8": "Awww, did the little farmer have a little accident?",
+  "Villager_Reactions.Sam.Soiled.Verynice.9": "I bet I could get Mommy to go change you.$3#$b#I'm kidding I'm kidding!$1",
+  "Villager_Reactions.Sam.Soiled.Verynice.10": "Man, it looks like you really need diapers, don't you.",
+  "Villager_Reactions.Sam.Soiled.Verynice.11": "Oh wow, you really <wet&messed> yourself! Can I feel it?#$b#$y 'Yes._*Sam blushes as he presses his hand into your squishy diaper*_No thank you._Okay, I won't.'",
+
+  // Sam friendship nice
+
+  "Villager_Reactions.Sam.Soiled.Nice.1": "You might wanna change. Just incase someone else says something.$7",
+  "Villager_Reactions.Sam.Soiled.Nice.2": "A-are you okay?$8",
+  "Villager_Reactions.Sam.Soiled.Nice.3": "%Sam just blushes a as you <wet&mess> yourself. You take note of how closely he watches the whole scene.",
+  "Villager_Reactions.Sam.Soiled.Nice.4": "Oh man, I'm sorry. That can't feel good.",
+
+  // Sam friendship mean
+
+  "Villager_Reactions.Sam.Soiled.Mean.1": "I'm just..nevermind.$5",
+  "Villager_Reactions.Sam.Soiled.Mean.2": "This is pretty awkward.$2",
+  "Villager_Reactions.Sam.Soiled.Mean.3": "...Oh$2",
+  "Villager_Reactions.Sam.Soiled.Mean.4": "You might want to take care of that...",
+  "Villager_Reactions.Sam.Soiled.Mean.5.Child_Yes": "Great, more potty issues to be witness to. Thanks.$5",
+  "Villager_Reactions.Sam.Soiled.Mean.5.Child_No": "You might want to take care of that..."
+}

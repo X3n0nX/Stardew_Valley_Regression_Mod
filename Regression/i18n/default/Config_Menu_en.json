@@ -1,0 +1,191 @@
+{
+  // ##########
+  // First Page
+  // ##########
+
+  // Cheat Mode
+
+  "Config_Menu.Main.Cheat_Mode.Name": "Cheat Mode",
+  "Config_Menu.Main.Cheat_Mode.Tooltip": "Allowes to spawn items, change potty training and displays debug related messages. (Debug)",
+
+  // Easy Mode
+
+  "Config_Menu.Main.Easy_Mode.Name": "Easy Mode",
+  "Config_Menu.Main.Easy_Mode.Tooltip": "Hunger and Thirst are refilled every morning and the wet beds dried. (Easymode)",
+
+  // Wetting 
+
+  "Config_Menu.Main.Wetting.Name": "Wetting",
+  "Config_Menu.Main.Wetting.Tooltip": "This activates pee and bladder events.",
+
+  // Messing 
+
+  "Config_Menu.Main.Messing.Name": "Messing",
+  "Config_Menu.Main.Messing.Tooltip": "This activates poop and bowel events.",
+
+  // Children and Diapers 
+
+  "Config_Menu.Main.Children_And_Diapers.Name": "Children and Diapers",
+  "Config_Menu.Main.Children_And_Diapers.Tooltip": "Would you be comfortable seeing diaper related dialogue from Vincent and Jas?",
+
+  // Bladder Capacity (mL)
+
+  "Config_Menu.Main.Bladder_Capacity.Name": "Bladder Capacity (mL)",
+  "Config_Menu.Main.Bladder_Capacity.Tooltip": "600 is around 3 potty runs a day. (MaxBladderCapacity)",
+
+  // Bowel Capacity (mL)
+
+  "Config_Menu.Main.Bowel_Capacity.Name": "Bowel Capacity (mL)",
+  "Config_Menu.Main.Bowel_Capacity.Tooltip": "1000 is around 1.5 potty runs a day. (MaxBowelCapacity)",
+
+  // Always notice accidents
+
+  "Config_Menu.Main.Always_Notice_Accidents.Name": "Always notice accidents",
+  "Config_Menu.Main.Always_Notice_Accidents.Tooltip": "Defines if you will notice accidents on low control values. (AlwaysNoticeAccidents)",
+
+  // Pants Change at Home
+
+  "Config_Menu.Main.Pants_Change_At_Home.Name": "Pants Change at Home",
+  "Config_Menu.Main.Pants_Change_At_Home.Tooltip": "Changing your pants (in case you soiled your cloth) requires you to be at home. (Usually on) (PantsChangeRequiresHome)",
+
+  // Underwear Change Causes Exposure
+
+  "Config_Menu.Main.Underwear_Change_Causes_Exposure.Name": "Underwear Change Causes Exposure",
+  "Config_Menu.Main.Underwear_Change_Causes_Exposure.Tooltip": "Changing your underwear, by yourself, requires you to undress, as such exposing yourself. With this option activated you need to change your diapers at home or away from people. (Usually on) (UnderwearChangeCauseExposure)",
+
+  // Menu Point Key Bindings
+
+  "Config_Menu.Main.Key_Bindings_Menu.Name": "Key Bindings",
+
+  // Menu Point Continence
+
+  "Config_Menu.Main.Continence_Menu.Name": "Continence",
+
+  // Menu Point Friendships
+
+  "Config_Menu.Main.Friendships_Menu.Name": "Friendships",
+
+  // Menu Point Save Files
+
+  "Config_Menu.Main.Save_Files_Menu.Name": "Save Files",
+
+  // ##########
+  // Page Key Bindings
+  // ##########
+
+  // Pee Pants
+
+  "Config_Menu.Key_Bindings.Pee_Pants.Name": "Pee Pants",
+  "Config_Menu.Key_Bindings.Pee_Pants.Tooltip": "The key you want to press to just piddle yourself. (KeyPee)",
+
+  // Poop Pants
+
+  "Config_Menu.Key_Bindings.Poop_Pants.Name": "Poop Pants",
+  "Config_Menu.Key_Bindings.Poop_Pants.Tooltip": "The key you want to press to just poop yourself. (KeyPoop)",
+
+  // Pee In Potty
+
+  "Config_Menu.Key_Bindings.Pee_In_Potty.Name": "Pee In Potty",
+  "Config_Menu.Key_Bindings.Pee_In_Potty.Tooltip": "The key you want to press to pee in the potty like a good girl or boy. (KeyPeeInToilet)",
+
+  // Poop In Potty
+
+  "Config_Menu.Key_Bindings.Poop_In_Potty.Name": "Poop In Potty",
+  "Config_Menu.Key_Bindings.Poop_In_Potty.Tooltip": "The key you want to press to poop in the potty like a good girl or boy. (KeyPoopInToilet)",
+
+  // Go In Pants
+
+  "Config_Menu.Key_Bindings.Go_In_Pants.Name": "Go In Pants",
+  "Config_Menu.Key_Bindings.Go_In_Pants.Tooltip": "The key you want to press to pee and poop yourself. (KeyGoInPants)",
+
+  // Go Potty
+
+  "Config_Menu.Key_Bindings.Go_Potty.Name": "Go Potty",
+  "Config_Menu.Key_Bindings.Go_Potty.Tooltip": "The key you want to press to pee and poop in the potty like a good girl or boy. (KeyGoInToilet)",
+
+  // ##########
+  // Page Continence
+  // ##########
+
+  // Nighttime Losses
+
+  "Config_Menu.Continence.Nighttime_Losses.Name": "Nighttime Losses",
+  "Config_Menu.Continence.Nighttime_Losses.Tooltip": "How serious the loss of potty training is at night, compared to daytime. Usually 50 (half). (NighttimeLossMultiplier)",
+
+  // Nighttime Gains
+
+  "Config_Menu.Continence.Nighttime_Gains.Name": "Nighttime Gains",
+  "Config_Menu.Continence.Nighttime_Gains.Tooltip": "How big the gains are if you stay dry/clean at night, compared to daytime. Usually 50 (half). (NighttimeGainMultiplier)",
+
+  // In Diaper on Purpose Modifier
+
+  "Config_Menu.Continence.In_Diaper_on_Purpose_Modifier.Name": "In Underwear on Purpose Modifier",
+  "Config_Menu.Continence.In_Diaper_on_Purpose_Modifier.Tooltip": "How big of a negativ impact has an accident in underwear if it was on purpose?. Usually 50 (half) as much as an actual accident.",
+
+  // Accident Bladder Loss
+
+  "Config_Menu.Continence.Accident_Bladder_Loss.Name": "Accident Bladder Loss",
+  "Config_Menu.Continence.Accident_Bladder_Loss.Tooltip": "2 is a 2% continence loss for $MAX_BLADDER_CAPACITY$mL accidents. (BladderLossContinenceRate)",
+
+  // Accident Bowel Loss
+
+  "Config_Menu.Continence.Accident_Bowel_Loss.Name": "Accident Bowel Loss",
+  "Config_Menu.Continence.Accident_Bowel_Loss.Tooltip": "3 is a 3% continence loss for $MAX_BOWEL_CAPACITY$mL accidents. (BowelLossContinenceRate)",
+
+  // Toilet Bladder Gain
+
+  "Config_Menu.Continence.Toilet_Bladder_Gain.Name": "Toilet Bladder Gain",
+  "Config_Menu.Continence.Toilet_Bladder_Gain.Tooltip": "3 is a 3% continence gain for making it to the toilet with a bladder that is at least half full. (BladderGainContinenceRate)",
+
+  // Toilet Bowel Gain
+
+  "Config_Menu.Continence.Toilet_Bowel_Gain.Name": "Toilet Bowel Gain",
+  "Config_Menu.Continence.Toilet_Bowel_Gain.Tooltip": "3 is a 3% continence gain for making it to the toilet with a bowel that is at least half full. (BowelGainContinenceRate)",
+
+  // Start Bladder Continence
+
+  "Config_Menu.Continence.Start_Bladder_Continence.Name": "Start Bladder Continence",
+  "Config_Menu.Continence.Start_Bladder_Continence.Tooltip": "Defines the starting (new game) bladder continence. Usually 70. Also applies to old saves without this mod activated (StartBladderContinence)",
+
+  // Start Bowel Continence
+
+  "Config_Menu.Continence.Start_Bowel_Continence.Name": "Start Bowel Continence",
+  "Config_Menu.Continence.Start_Bowel_Continence.Tooltip": "Defines the starting (new game) bowel continence. Usually 90. Also applies to old saves without this mod activated (StartBowelContinence)",
+
+  // ##########
+  // Page Friendships
+  // ##########
+
+  // Penalty Peeing
+
+  "Config_Menu.Friendships.Penalty_Peeing.Name": "Penalty Peeing",
+  "Config_Menu.Friendships.Penalty_Peeing.Tooltip": "How peeing in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for pee incidents. (FriendshipPenaltyBladderMultiplier)",
+
+  // Penalty Pooping
+
+  "Config_Menu.Friendships.Penalty_Pooping.Name": "Penalty Pooping",
+  "Config_Menu.Friendships.Penalty_Pooping.Tooltip": "How pooping in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for poop incidents. (FriendshipPenaltyBowelMultiplier)",
+
+  // Friendship Debug
+
+  "Config_Menu.Friendships.Debug.Name": "Friendships Debug",
+  "Config_Menu.Friendships.Debug.Tooltip": "Your friendship level to npc�s for getting changed dosen�t matter.",
+
+  // ##########
+  // Save Files Friendships
+  // ##########
+
+  // Headline
+
+  "Config_Menu.Save_Files.Headline": "Starting at Mod version 1.5.0, save files (json) are no longer required/created. The only use of this functions is to load old save files or manually edit saves.",
+
+  // Read Save Files
+
+  "Config_Menu.Save_Files.Read.Name": "Read Save Files",
+  "Config_Menu.Save_Files.Read.Tooltip": "This will activate reading of the (legacy) save files. This will also delete save files from the last day, if a new one starts.",
+
+  // Write Save Files
+
+  "Config_Menu.Save_Files.Wtite.Name": "Write Save Files",
+  "Config_Menu.Save_Files.Wtite.Tooltip": "This will activate writing of the (legacy) save files. It is recommended to disable this option."
+}

@@ -1,0 +1,13 @@
+{
+  // Dialogues for Sebastian
+
+  "Sebastian.Dialogue.Diaper_Question": "This might be an awkward question...#$b#Do you actually NEED your diapers?",
+  "Sebastian.Dialogue.Diaper_Response1": "... Yeah, I do...",
+  "Sebastian.Dialogue.Diaper_Response2": "Yeah, I need them for my accidents.",
+  "Sebastian.Dialogue.Diaper_Response3": "Nope, I just like them.",
+
+  "Sebastian.Dialogue.Diaper_Yes": "Oh...#$b#Well I hope you're not too embarrassed.#$b#I think it's kind of cute actually.$4",
+  "Sebastian.Dialogue.Diaper_No": "Really?#$b#I thought that might have been the case#$e#Wow$4",
+  "Sebastian.Dialogue.Diaper_Followup": "{Your diapers make you look like such a little boy.$1^Your diapers make you look like such a little girl.$1}$I hope I didn't make you upset when I asked about your diapers.$2"
+
+}

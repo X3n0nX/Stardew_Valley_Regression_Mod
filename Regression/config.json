@@ -31,5 +31,4 @@
   "KeyPoopInToilet": 113, // F2 - If this is set to the same value than KeyPoopInToilet, Shift has to be pressed in addition
   "KeyGoInPants": 0, // Unbound - Pee and Poop in your pants
   "KeyGoInToilet": 0, // Unbound - Pee and Poop in the toilet - If this is set to the same value than KeyGoInPants, Shift has to be pressed in addition
-  "Lang": "en"
 }

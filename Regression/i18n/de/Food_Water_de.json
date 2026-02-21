@@ -1,0 +1,31 @@
+{
+  // ########################################
+  // Food & Water Stats
+  // ########################################
+
+  // Food Low
+  "Food.Low.1": "Du bist hungrig.",
+  "Food.Low.2": "Dein Magen knurrt.",
+  "Food.Low.3": "Du denkst daran, etwas zu essen.",
+  "Food.Low.4": "Du denkst daran, Essen zu finden.",
+  "Food.Low.5": "Du brauchst etwas zu essen.",
+
+  // Food None
+  "Food.None.1": "Du bist am Verhungern!",
+  "Food.None.2": "Alles, woran du denken kannst, ist Essen! Besser iss etwas!",
+  "Food.None.3": "Du bist so hungrig, dass du nicht mehr klar denken kannst!",
+
+  // Water Low
+  "Water.Low.1": "Du wirst ziemlich durstig.",
+  "Water.Low.2": "Du könntest wirklich Wasser gebrauchen.",
+  "Water.Low.3": "Du denkst darüber nach etwas zu trinken.",
+  "Water.Low.4": "Du brauchst etwas zu trinken.",
+
+  // Water None
+  "Water.None.1": "Du bist dehydriert!",
+  "Water.None.2": "Du bist super durstig! Hol dir sofort etwas zu trinken!",
+  "Water.None.3": "Du bist so durstig, dass du nicht mehr klar denken kannst!",
+
+  // Drink Water Source
+  "Drink.Water-Source.1": "Du sch�pfst etwas Wasser in eine Tasse und lässt es deine Kehle hinunter laufen"
+}

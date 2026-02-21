@@ -1,0 +1,248 @@
+{
+  // ########################################
+  // Bladder Stats & Continence
+  // ########################################
+
+  // Bladder Green
+  "Bladder.Green.1": "You don't feel like you need to pee.",
+  "Bladder.Green.2": "You're pretty sure your bladder is mostly empty.",
+
+  // Bladder Yellow
+  "Bladder.Yellow.1": "You need to pee soon.",
+  "Bladder.Yellow.2": "You should find somewhere to pee soon.",
+  "Bladder.Yellow.3": "You feel like you might pee soon.",
+  "Bladder.Yellow.4": "Your bladder is slowly getting full.",
+
+  // Bladder Orange
+  "Bladder.Orange.1": "You really need to pee!",
+  "Bladder.Orange.2": "You're not sure how much longer you can hold your pee!",
+  "Bladder.Orange.3": "If you don't pee soon, you'll have an accident!",
+  "Bladder.Orange.4": "You start crossing your legs trying not to pee yourself!",
+
+  // Bladder Red
+  "Bladder.Red.1": "You can�t hold it anymore! You're about to pee yourself!",
+  "Bladder.Red.2": "You have to pee so badly you start hopping around!",
+
+  // Bladder Leak
+  "Bladder.Leak.1": "You feel a little pee drip in your $UNDERWEAR_NAME$!",
+  "Bladder.Leak.2": "You feel a few drops of pee leak out into your $UNDERWEAR_NAME$!",
+  "Bladder.Leak.3": "While hopping around, trying not to pee yourself, a little escapes into your $UNDERWEAR_NAME$!",
+  "Bladder.Leak.4": "While crossing your legs, you wee your $UNDERWEAR_NAME$ a little!",
+  "Bladder.Leak.5": "Your $UNDERWEAR_NAME$gets a little wet while you try to hold it a little longer!",
+
+  // Bladder Continence Green
+  "Bladder.Continence.Green.1": "You're pretty good at holding your pee.",
+
+  // Bladder Continence Yellow
+  "Bladder.Continence.Yellow.1": "You can mostly hold your pee it. Mostly.",
+
+  // Bladder Continence Orange
+  "Bladder.Continence.Orange.1": "You're pretty bad at holding your pee.",
+
+  // Bladder Continence Red
+  "Bladder.Continence.Red.1": "You're close to being unable to hold your pee.",
+
+  // Bladder Continence Min
+  "Bladder.Continence.Min.1": "You're almost totally unable to hold your pee.",
+
+  // ########################################
+  // Bowel Stats & Continence
+  // ########################################
+
+  // Bowel Green
+  "Bowels.Green.1": "You don't feel like you need to poop.",
+  "Bowels.Green.2": "You're pretty sure you can hold your poop for a while.",
+
+  // Bowel Yellow
+  "Bowels.Yellow.1": "You need to poop.",
+  "Bowels.Yellow.2": "You should find somewhere to poop soon.",
+  "Bowels.Yellow.3": "You feel a rumble in your bowels.",
+  "Bowels.Yellow.4": "It might be time to poop.",
+
+  // Bowels Orange
+  "Bowels.Orange.1": "You really need to poop!",
+  "Bowels.Orange.2": "If you don't find a place to poop soon, you'll mess yourself!",
+  "Bowels.Orange.3": "You're not sure how much longer you can hold your poop!",
+
+  // Bowels Red
+  "Bowels.Red.1": "You can feel the poop starting to push out!",
+  "Bowels.Red.2": "You can�t hold it anymore! You're about to mess yourself!",
+
+  // Bowels Leak
+  "Bowels.Leak.1": "Some poop slowly escapes your control, soiling your $UNDERWEAR_NAME$",
+  "Bowels.Leak.2": "A little poop stains your $UNDERWEAR_NAME$!",
+  "Bowels.Leak.3": "While trying to hold it, you soil your $UNDERWEAR_NAME$ a little!",
+  "Bowels.Leak.4": "While trying your best to hold it, your $UNDERWEAR_NAME$ get a little messy!",
+
+  // Bowel Continence Green
+  "Bowel.Continence.Green.1": "You pretty good at holding your poop.",
+
+  // Bowel Continence Yellow
+  "Bowel.Continence.Yellow.1": "You can hold you poop most of the time.",
+
+  // Bowel Continence Orange
+  "Bowel.Continence.Orange.1": "You're pretty bad at holding your poop.",
+
+  // Bowel Continence Red
+  "Bowel.Continence.Red.1": "You're getting close to being unable to hold your poop.",
+
+  // Bowel Continence Min
+  "Bowel.Continence.Min.1": "You're almost totally unable to hold your poop.",
+
+  // ########################################
+  // Pee and poop messages
+  // ########################################
+
+  // Pee on ground
+
+  "Pee.Ground.1": "You drop your $UNDERWEAR_NAME$ and pee on the ground.",
+  "Pee.Ground.2": "Moving your $UNDERWEAR_NAME$, you take a deep breath and empty your bladder.",
+  "Pee.Ground.3": "Looking around sheepishly, you pull your $UNDERWEAR_NAME$ down and go right where you are!",
+  "Pee.Ground.4": "You slide your $PANTS_NAME$ to your knees</, squat,> and let your pee splatter all over the ground.",
+  "Pee.Ground.5": "You pull down your $PANTS_NAME$ and sprinkle on the ground.",
+  "Pee.Ground.6": "You pull your $PANTS_NAME$ down and go <pee pee/tinkle> on the ground.",
+  "Pee.Ground.7": "You slide your $PANTS_NAME$ down, <spread your legs/squat down>, and empty your bladder.",
+
+  // Try to pee on ground but nothing comes out
+
+  "Pee.Attempt.1": "You pull down your $PANTS_NAME$ and relax your bladder, but nothing comes out.",
+  "Pee.Attempt.2": "You slide your $PANTS_NAME$ down, <spread your legs/squat down>, and try to pee, but you can't.",
+
+  // Pee on toilet
+
+  "Pee.Toilet.1": "Sprinkling into the toilet, you breathe a sigh of relief.",
+  "Pee.Toilet.2": "You pee in the potty like a big <boy/girl>.",
+  "Pee.Toilet.3": "You slide your $PANTS_NAME$ down, <stand in front of the toilet/sit on the toilet>, and pee like a big <boy/girl>.",
+  "Pee.Toilet.4": "You barely make it to the toilet. Any longer and you might have wet yourself!",
+  "Pee.Toilet.5": "You wee in the toilet. Good thing you were able to hold it until then!",
+  "Pee.Toilet.6": "You proudly pee in the toilet. Now you won't need a diaper!",
+  "Pee.Toilet.7": "You tinkle in the toilet. Your Mommy would be proud!",
+  "Pee.Toilet.8": "You undress and go number one in the toilet like a good <boy/girl>.",
+
+  // Try to pee on toilett but nothing comes out
+
+  "Pee.Toilet.Attempt.1": "You try to pee in the potty like a big <boy/girl>, but nothing comes out.",
+  "Pee.Toilet.Attempt.2": "You slide your $PANTS_NAME$ down, <spread your legs/sit on the toilet>, and try to pee, but you can't.",
+
+  // Pee in underwear
+
+  "Pee.Underwear.1": "You relax your bladder and pee gushes into your $UNDERWEAR_NAME$.",
+  "Pee.Underwear.2": "Your bladder tingles as you let go and warmth spreads out into your $UNDERWEAR_NAME$.",
+  "Pee.Underwear.3": "You take a deep breath and release your pee into your $UNDERWEAR_NAME$.",
+  "Pee.Underwear.4": "You glance around a little sheepishly as you deliberately pee your $UNDERWEAR_NAME$ like a little <boy/girl>.",
+
+  // Try to pee in underwear but nothing comes out
+
+  "Pee.Underwear.Attempt.1": "You relax your bladder, but nothing comes out.",
+  "Pee.Underwear.Attempt.2": "You try to pee in your $UNDERWEAR_NAME$, but you can't.",
+
+  // Poop on ground
+
+  "Poop.Ground.1": "You slide your $PANTS_NAME$ down, squat, and empty your bowels.",
+  "Poop.Ground.2": "Looking around nervously, you pull your $PANTS_NAME$ down and go number two right on the ground!",
+  "Poop.Ground.3": "Undressing, you squat and let your poop pile out onto the ground.",
+  "Poop.Ground.4": "You pull down your $PANTS_NAME$ and poop on the ground.",
+  "Poop.Ground.5": "You slide your $PANTS_NAME$ to your knees, squat down, and gently push all your poop out.",
+
+  // Try to poop on ground but nothing comes out
+
+  "Poop.Attempt.1": "You pull down your $PANTS_NAME$ and try to poop, but you can't.",
+  "Poop.Attempt.2": "You slide your $PANTS_NAME$ to your knees, squat down, and strain to poop, but nothing comes out.",
+
+  // Poop on toilet
+
+  "Poop.Toilet.1": "As your poop slides out into the toilet, you start to relax. Whew, that felt good!",
+  "Poop.Toilet.2": "You slide your $PANTS_NAME$ to your knees, sit on the toilet, and poop like a big <boy/girl>.",
+  "Poop.Toilet.3": "You poop in the potty like a big <boy/girl>.",
+  "Poop.Toilet.4": "You poop in the toilet. Maybe now you won't mess yourself today!",
+  "Poop.Toilet.5": "You slide your $PANTS_NAME$ to your knees and poop in the toilet.",
+  "Poop.Toilet.6": "You proudly poop in the toilet. Now you won't need a diaper!",
+  "Poop.Toilet.7": "You poop in the toilet. Your Mommy would be proud!",
+  "Poop.Toilet.8": "You undress and go number two in the toilet like a good <boy/girl>.",
+
+  // Try to poop on toilett but nothing comes out
+
+  "Poop.Toilet.Attempt.1": "You squirm a little as you try to poop in the toilet, but nothing comes out.",
+  "Poop.Toilet.Attempt.2": "You try to poop in the potty like a big <boy/girl>, but you can't.",
+  "Poop.Toilet.Attempt.3": "You slide your $PANTS_NAME$ to your knees, sit on the toilet, and strain to poop, but nothing comes out.",
+
+  // Poop in underwear
+
+  "Poop.Underwear.1": "You squat a little and empty your bowels into your $UNDERWEAR_NAME$.",
+  "Poop.Underwear.2": "You concentrate and push a warm load of poop into your $UNDERWEAR_NAME$.",
+  "Poop.Underwear.3": "You hope nobody notices as you deliberately let a big poop squeeze out into your $UNDERWEAR_NAME$.",
+
+  // Try to poop in underwear but nothing comes out
+
+  "Poop.Underwear.Attempt.1": "You squat a little and strain, but nothing comes out.",
+  "Poop.Underwear.Attempt.2": "You try to mess in your $UNDERWEAR_NAME$, but you can't.",
+
+  // ########################################
+  // Accidents
+  // ########################################
+
+  // Pee Accidents
+
+  "Pee.Accident.1": "You bite your lip and take a sharp breath through your nose as your bladder gives in and you flood your $UNDERWEAR_NAME$.",
+  "Pee.Accident.2": "You're helpless as pee streams into your $UNDERWEAR_NAME$.",
+  "Pee.Accident.3": "You hope no one notices the pee pouring into your $UNDERWEAR_NAME$.",
+  "Pee.Accident.4": "Your thumb finds its way into your mouth as you suddenly feel warmth spreading into your $UNDERWEAR_NAME$!",
+  "Pee.Accident.5": "You hope your $UNDERWEAR_NAME$ doesn't leak as you realize you're wetting yourself.",
+  "Pee.Accident.6": "You stop in your tracks as you start to go <wee/tinkle> in your $UNDERWEAR_NAME$!",
+  "Pee.Accident.7": "You give a sheepish smile as you realize the warmth spreading into your crotch is pee!",
+  "Pee.Accident.8": "You <gasp/squeal> when you realize you're suddenly wetting yourself!",
+  "Pee.Accident.9": "With a faint hiss, warmth floods into your $UNDERWEAR_NAME$!",
+  "Pee.Accident.10": "You press your hands to your crotch, feeling the warmth as the sudden flood of pee comes rushing out.",
+  "Pee.Accident.11": "You're wetting your $UNDERWEAR_NAME$ like a little <boy/girl>!",
+  "Pee.Accident.12": "You give up trying to hold it any longer and your pee gushes out, flooding your $UNDERWEAR_NAME$.",
+  "Pee.Accident.13": "You can't help but relax and let your pee spurt into your $UNDERWEAR_NAME$",
+  "Pee.Accident.14": "Oopsies! You're wetting yourself!",
+  "Pee.Accident.15": "You're wetting your $UNDERWEAR_NAME$! Oh well.",
+  "Pee.Accident.16": "You notice a growing warmth before glancing down and realizing you're peeing in your $UNDERWEAR_NAME$!",
+  "Pee.Accident.17": "Your $UNDERWEAR_NAME$ <sags#sag> as you wet yourself. Your cheeks flush as you realize you're just a little <boy/girl>.",
+
+  // Poop Accidents
+
+  "Poop.Accident.1": "Your knees bend and your body bushes on its own as you find yourself pushing a warm load into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.2": "You realize you're suddenly filling the back of your $UNDERWEAR_NAME$! You heft your seat with a slight blush as your warm, soft muck squishes against you.",
+  "Poop.Accident.3": "You sigh with relief and grin bashfully as the distinctive smell of poop begins to waft from your $UNDERWEAR_NAME$.",
+  "Poop.Accident.4": "You bashfully cover your face as you fill your $UNDERWEAR_NAME$ with warm poop. After you're done, you realize your thumb found it's way into your mouth",
+  "Poop.Accident.5": "With a faint crackling sound, your poop squeezes out into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.6": "You start squirming and push a heavy load of poop into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.7": "You're almost startled as you notice it. You're pooping yourself!",
+  "Poop.Accident.8": "You don't want to hold your poop any more and release it into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.9": "You finally give in, and a heavy load of warm poop pushes into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.10": "You freeze up and look around sheepishly as your poop squishes out into your $UNDERWEAR_NAME$.",
+  "Poop.Accident.11": "You're pooping in your pants!",
+  "Poop.Accident.12": "You feel a warm mass spreading into your $UNDERWEAR_NAME$ and feel like a little <boy/girl>.",
+  "Poop.Accident.13": "You push on the back of your $UNDERWEAR_NAME$ as <it#they> <bulges#bulge>, giggling as it squishes around",
+  "Poop.Accident.14": "Oopsies! Your $UNDERWEAR_NAME$ <is#are> all messy now!",
+  "Poop.Accident.15": "You don't try and stop it any longer! You're messing yourself!",
+  "Poop.Accident.16": "You mess your $UNDERWEAR_NAME$ like a little baby <boy/girl>!",
+  "Poop.Accident.17": "Your $UNDERWEAR_NAME$ <bulges#bulge> as you openly mess yourself.",
+  "Poop.Accident.18": "You give up trying to hold it and sigh in relief as you mess your $UNDERWEAR_NAME$!",
+
+  // ########################################
+  // Pee and poop overflow
+  // You peed / pooped too much and now
+  // its running in your pants
+  // ########################################
+
+  // Pee overflow
+
+  "Pee.Overflow.1": "Your $UNDERWEAR_NAME$ leaked! Your pants are all wet!",
+  "Pee.Overflow.2": "You start crying as you feel pee dribbling down your legs!",
+  "Pee.Overflow.3": "You turn red as you realize your pee is running down your legs!",
+  "Pee.Overflow.4": "You notice a wet spot on your $PANTS_NAME$ and realize your $UNDERWEAR_NAME$ leaked!",
+  "Pee.Overflow.5": "Your $UNDERWEAR_NAME$ couldn't hold the pee and it leaked out into your $PANTS_NAME$!",
+  "Pee.Overflow.6": "Your $UNDERWEAR_NAME$ <is#are> overflowing! You're leaking into your pants.",
+
+  // Poop overflow
+
+  "Poop.Overflow.1": "Your $UNDERWEAR_NAME$ blew out! Your pants are all poopy!",
+  "Poop.Overflow.2": "Turning bright red, you realize your pants are all messy now!",
+  "Poop.Overflow.3": "Your cheeks burn with shame when you discover your poop overflowed out into your $PANTS_NAME$.",
+  "Poop.Overflow.4": "You smell something really stinky and realize your poop overflowed into your $PANTS_NAME$!",
+  "Poop.Overflow.5": "You start crying as you feel a big log of poop squish out past your $UNDERWEAR_NAME$ and smear down your legs!",
+  "Poop.Overflow.6": "Oh no! Your $UNDERWEAR_NAME$ couldn't hold the poop and it came out into your $PANTS_NAME$!"
+}

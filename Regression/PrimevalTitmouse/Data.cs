@@ -79,6 +79,8 @@ namespace PrimevalTitmouse
         public Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, string[]>>>> Villager_Potty_Dialogs;
         public Dictionary<string, NpcChangingOptions> Villager_Changing_Options;
         public Dictionary<string, NpcPottyOptions> Villager_Potty_Options;
+        public Dictionary<string, Dictionary<int, string>> Villager_Changeing_Dialoges;
+        public Dictionary<string, Dictionary<int, string>> Villager_Gift_Dialoges;
         public string[] Wake_Up_Underwear_State;
         public string[] Washing_Bedding;
         public string[] Washing_Underwear;

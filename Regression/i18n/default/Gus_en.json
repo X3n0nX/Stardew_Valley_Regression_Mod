@@ -1,0 +1,33 @@
+{
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Gus change your underwear if there are dirty
+
+  "Villager_Reactions.Gus.Change.Dirty_Offer.1": "Oh dear! Had trouble getting there again? As promissed, i have some reserves lying around, just in case!$1",
+
+  // Gus friendship very nice
+
+  "Villager_Reactions.Gus.Soiled.Verynice.1": "Couldn�t quite make it? That�s okay. Ain�t the worst mess I�ve seen �round here, trust me.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.2": "Looks like that was a relief, hah!$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.3": "Couldn�t hold it any longer, eh?",
+  "Villager_Reactions.Gus.Soiled.Verynice.4": "Hoo boy, that�s gonna be a heck of a change.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.5": "That�s it, let it all on out.",
+  "Villager_Reactions.Gus.Soiled.Verynice.6": "Wow, you were really <satisfied&pushing> with that one.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.7": "Well, at least it feels good to take a load off...#$b#Even if it�s in your pants, yeah?$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.8": "You makin� your own fertilizer there $FARMERNAME$?",
+  "Villager_Reactions.Gus.Soiled.Verynice.9": "You got any clean diapers? I always keep some spare in back for ya, just in case, pal.$1#$b#Well, you and anyone else who happens to need one.",
+
+  // Gus friendship nice
+
+  "Villager_Reactions.Gus.Soiled.Nice.1": "You mind takin' care of that please?#$b#Thanks$1",
+  "Villager_Reactions.Gus.Soiled.Nice.2": "When you gotta go I guess!$1",
+  "Villager_Reactions.Gus.Soiled.Nice.3": "Couldn�t quite make it? That's alright, go get cleaned up. The Saloon will still be here when you get back.",
+  "Villager_Reactions.Gus.Soiled.Nice.4": "I hope that smell�s a dirty diaper and not some rotting food in back�",
+
+  // Gus friendship mean
+
+  "Villager_Reactions.Gus.Soiled.Mean.1": "You mind takin' care of that before it bothers anyone else buddy?$2",
+  "Villager_Reactions.Gus.Soiled.Mean.2": "I have enough to clean up.$3"
+}

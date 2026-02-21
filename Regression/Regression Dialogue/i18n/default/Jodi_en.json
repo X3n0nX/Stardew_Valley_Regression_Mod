@@ -1,0 +1,65 @@
+{
+  // Dialogues for Jodi
+
+  "Jodi.Dialogue.Introduction": "Oh! Is this @? I'm Jodi.#$e#Did you get my little care package? I hope it's enough to get you started.#$e#${Oh don't look so embarrassed, that old farm is very exciting! I wouldn't want our new little farmer caught unprepared when he gets a little distracted.$1^Oh don't look so embarrassed, a new farm is very exciting! I wouldn't want our new little farmer caught unprepared when she gets a little distracted.}$",
+
+  "Jodi.Dialogue.spring_Mon": "There's the little farmer!#$e#How's the town treating you?",
+  "Jodi.Dialogue.spring_Mon6": "There's the little farmer!#$b#%Jodi pulls the back your waist band for a quick check.#$e#You should be okay for now.",
+  "Jodi.Dialogue.spring_Tue4": "#$c .5#Do you have any animals on your farm? Can you tell me what the cow says?#$e#That's right! Cow goes moo!$1|Do you have any animals on your farm? Can you tell me what the chicken says?#$e#That's right! Chicken goes cluck cluck!$1",
+  "Jodi.Dialogue.spring_Wed2": "Would you like to tell me all about your farm?#$e#%Jodi smiles at you while you gush about how pretty your farm is.#$e#What a clever little boy you are.$1^What a clever little girl you are.$1",
+  "Jodi.Dialogue.spring_Wed8": "Would you like to tell me all about your farm?#$e#%Jodi smiles at you while you gush about how pretty your farm is. You barely even notice her hand check to see if your pants are still dry.#$e#What a clever little boy you are.$1^What a clever little girl you are.$1",
+  "Jodi.Dialogue.spring_Thu2": "Sam still sleeps with his old teddy bear, though, he tries to hide it in the morning.#$e#I don't know what to say to make him feel less embarrassed about it.$2",
+  "Jodi.Dialogue.spring_Fri": "How are you doing @? Are you eating enough?#$e#...Do you have enough... supplies?",
+  "Jodi.Dialogue.spring_Fri4": "How are you doing @? Are you eating enough?#$e#I bet you've already run out of the diapers I gave you by now.#$e#I sure hope your farm is making enough money to buy more!$1#$e#",
+  "Jodi.Dialogue.spring_Sat4": "I'm so glad you're trying to improve that old farm.|Vincent fell asleep on my lap yesterday.#$e#It was so precious, I never wanted it to end!$1",
+  "Jodi.Dialogue.spring_Sun6": "Being motherly makes me feel important.#$b#Even if the little ones aren't my own!$1#$e#%Jodi gives you a wink.",
+
+  "Jodi.Dialogue.summer_Mon6": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve and smile up at her.#$e#Awwwww.",
+  "Jodi.Dialogue.summer_Mon10": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve as your thumb finds its way into your mouth without you noticing.#$e#Awwwww. Well aren't you a precious little boy.^Well aren't you a precious little girl.$1",
+  "Jodi.Dialogue.summer_Tue6": "Sam tries really hard to act like a big kid, but he still melts when I pet his hair just like when he was a little boy.|Sometimes I catch Sam watching me change Vincent.#$e#He almost looks jealous.$1",
+  "Jodi.Dialogue.summer_Thu4": "That farm seems like a lot of work for such a little farmer! I guess you're only pretending to be so little.#$e#%Jodi winks at you.",
+  "Jodi.Dialogue.summer_Fri8": "Maintaining a household is difficult work... but somebody has to do it.|Vincent doesn't show any signs of getting out of diapers any time soon.#$e#I guess he'll just be my little boy for a little bit longer.$1",
+  "Jodi.Dialogue.summer_Sat": "%Jodi is humming a soft song to herself while she goes about her business. It's familiar somehow.",
+  "Jodi.Dialogue.summer_Sat10": "%Jodi is humming a soft song to herself while she goes about her business. It's familiar somehow.#$e#%She notices you paying attention and smiles. Without stopping her hum, she pulls you into a hug, letting you feel the comforting hum in her chest.#$e#Looks like someone might need a nap.",
+  "Jodi.Dialogue.summer_Sun6": "Oh no! @! Is that a boo boo on your finger? What happened?$2#$b#%You tell Jodi about hurting your finger on the farm with tears in your eyes while she puts on a bandaid for you. She gives it a kiss for good measure.#$e#There we go, all better. Have fun playing!",
+  "Jodi.Dialogue.summer_Sun10": "Oh no! @! Is that a boo boo on your finger? What happened?$2#$b#%You tell Jodi about hurting your finger on the farm with tears in your eyes while she puts on a bandaid for you.#$b#She gives it a kiss for good measure before patting your bottom to send you away.#$e#There we go, all better. Have fun playing!",
+
+  "Jodi.Dialogue.fall_Mon2": "There's the little farmer!|Sam doesn't think I notice that Vincent's diapers run out faster than they should.#$e#I guess I still have two little boys, don't I!$1",
+  "Jodi.Dialogue.fall_Tue4": "#$c .5#Do you have any animals on your farm? Can you tell me what the dog says?#$b#That's right! Dog says bark!$1|Do you have any animals on your farm? Can you tell me what the cat says?#$e#That's right! Cat says meow!$1",
+  "Jodi.Dialogue.fall_Wed8": "If you ever need help with one of your little accidents, don't be afraid to ask, okay?#$e#You're so cute when you're blushing!$1",
+  "Jodi.Dialogue.fall_Thu2": "Are you hungry?#$b#%Jodi pulls out a granola bar for you and smiles warmly as you take it.[403]#$e#That should hold you over for now.",
+  "Jodi.Dialogue.fall_Fri2": "I bet you've already run out of the diapers I gave you by now.|I guess I'd have less work to do if Vincent was potty trained.#$e#At least boys are easy to clean.",
+  "Jodi.Dialogue.fall_Sat": "There's the little farmer!#$e#How's the town treating you?",
+  "Jodi.Dialogue.fall_Sat8": "There's the little farmer!#$b#%Jodi pulls the back your waist band for a quick check.#$e#You should be okay for now.",
+  "Jodi.Dialogue.fall_Sun6": "Being motherly makes me feel important.#$b#Even if the little ones aren't my own!$1#$e#%Jodi gives you a wink.",
+
+  "Jodi.Dialogue.winter_Mon10": "%Jodi is humming a soft song to herself while she goes about her business. It's familiar somehow.#$e#%She notices you paying attention and smiles. Without stopping her hum, she pulls you into a hug, letting you feel the comforting hum in her chest.#$e#Looks like someone might need a nap.",
+  "Jodi.Dialogue.winter_Tue10": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve as your thumb finds its way into your mouth without you noticing.#$e#Awwwww. Well aren't you a precious little boy.^Well aren't you a precious little girl.$1",
+  "Jodi.Dialogue.winter_Wed6": "Oh no! @! Is that a boo boo on your finger? What happened?$2#$b#%You tell Jodi about hurting your finger on the farm with tears in your eyes while she puts on a bandaid for you. She gives it a kiss for good measure.#$e#There we go, all better. Have fun playing!",
+  "Jodi.Dialogue.winter_Wed10": "Oh no! @! Is that a boo boo on your finger? What happened?$2#$b#%You tell Jodi about hurting your finger on the farm with tears in your eyes while she puts on a bandaid for you.#$b#She gives it a kiss for good measure before patting your bottom to send you away.#$e#There we go, all better. Have fun playing!",
+  "Jodi.Dialogue.winter_Thu4": "Sam tries really hard to act like a big kid, but he still melts when I pet his hair just like when he was a little boy.#$e#It feels nice to know he trusts me enough to let his guard down.#$e#It makes me feel like a good mother.$1",
+  "Jodi.Dialogue.winter_Fri2": "You're a good boy. You know that, right?^You're a good girl. You know that, right?",
+  "Jodi.Dialogue.winter_Sat6": "Maybe I should push Vincent to use the potty more, but I don't want him to feel ashamed about himself.$2#$e#He just looks so carefree playing in his diapers too. I don't want to take that away from him.",
+  "Jodi.Dialogue.winter_Sun6": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve and smile up at her.#$e#Awwwww.",
+  "Jodi.Dialogue.winter_Sun10": "%Jodi sees you standing nearby and holds out her hand. You grab onto her sleeve as your thumb finds its way into your mouth without you noticing.#$e#Awwwww. Well aren't you a precious little boy.^Well aren't you a precious little girl.$1",
+
+  // Dialogues for Jodi Questions
+
+  "Jodi.Dialogue.Show_Pretext": "Oh hi there @!",
+  "Jodi.Dialogue.Show_Question": "Oh, do you want to show me something?",
+  "Jodi.Dialogue.Show_Response1": "Show her the pretty flower you picked.",
+  "Jodi.Dialogue.Show_Response2": "Show her the cool rock you found in the mines.",
+  "Jodi.Dialogue.Show_Response3": "Show her your favorite plushie.",
+  "Jodi.Dialogue.Show_Response4": "Show her your diaper.",
+
+  "Jodi.Dialogue.Show_Nice": "%Jodi holds it delicately, looking at it like it's the most important thing in the world.#$b#This is wonderful! Thank you for showing me.$1#$b#%Jodi gives it back and pats your head affectionately.",
+  "Jodi.Dialogue.Show_Diaper": "%Jodi grins at your proud display.#$b#Well isn't that something!$1#$b#Let's see if it's still clean.#$b#%Jodi presses her hand against your diaper, giving it a thorough check.",
+  "Jodi.Dialogue.Show_Followup": "Well don't you look excited! Did you find even more things to show me?$1|Well don't you look excited! Are you going to show off for me again?$1#$b#%You shamelessly show Jodi your diaper again and she pats it fondly.",
+
+  // Diaperchange from Jodi
+
+  "Jodi.Diaper_Change.Accept": "Comeon, lets get you in a fresh diaper. Just a second... see it stretches! There! Right as rain!$l#$b#%Jodi changes you from $INSPECT_UNDERWEAR_NAME$ into one of Vincents baby print diapers",
+  "Jodi.Diaper_Change.Accept_Debuff": "and some of Sams old pants",
+  "Jodi.Diaper_Change.Refuse": "Well, if you are like Vincent and want to stay in your filthy diapers, suit yourself! Just don't leak on the couch, you hear?",
+  "Jodi.Diaper_Change.Followup": "..."
+}

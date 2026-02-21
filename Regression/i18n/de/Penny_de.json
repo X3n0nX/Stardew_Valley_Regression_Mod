@@ -1,0 +1,85 @@
+{
+  //#########################################
+  // Potty Dialogs
+  //#########################################
+  /*
+
+      Pee:      npc pee
+      Poop:     npc poop
+
+      Fail:     npc fail to hold pee / poop  
+      Success:  npc success to hold pee / poop 
+
+      Pre:      message befor animation
+      Post:     message after animation
+
+      Exemple ID:
+
+      Pee.Fail.Pre    -> Message that will be shown, befor start of animation, if the npc faild to hold there pee -> befor there start to wet there underwear
+      Poop.Fail.Post  -> Message that will be shown, after the animation, if the npc faild to hold there poop -> after there mess there underwear
+
+  */
+
+  // Pee Fail
+
+  "Potty_Dialogs.Penny.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Penny.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Penny.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Penny.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Penny.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Penny.Poop.Fail.Post.1": "*kichert*",
+  "Potty_Dialogs.Penny.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Penny.Poop.Fail.Post.3": "nnnf...",
+
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Penny change your underwear general offer
+
+  "Villager_Reactions.Penny.Change.General_Offer.Player.1.Pre": "Hat mein <kleiner/kleines> <Junge/Mädchen> wieder vergessen auf Töpfchen zu gehen?#$b#%Penny untersucht deine Windel.",
+  "Villager_Reactions.Penny.Change.General_Offer.Player.1.Underwear_ok": "<Guter/Gutes> <Junge/Mädchen>!",
+
+  // You change Penny`s underwear general offer
+
+  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // general fallback
+
+  "Villager_Reactions.Penny.Change.General.Fallback.1.": "%Vieleicht solltest du Penny erst besser Kennenlernen!",
+
+  // Penny change your underwear if there are dirty
+
+  "Villager_Reactions.Penny.Change.Dirty_Offer.1": "Oh du <armer/armes> <kleiner/kleines> <Junge/Mädchen>! Hat da wieder jemand vergessen auf Töpfchen zu gehen? Na komm. Jetz ziehen wir dir erst einmal diese nassen Sachen aus und du bekommst eine schöne warme Windel!$1",
+
+  // Penny friendship very nice
+
+  "Villager_Reactions.Penny.Soiled.Verynice.1": "$FARMERNAME$! Du hast deine $UNDERWEAR_NAME$ <nass&voll> gemacht!$5#$b#Warum hast du mir nicht gesagt, dass du aufs Töpfchen musst?$3#$b#*Seufz* Ist schon gut, wir können es nächstes Mal wieder versuchen.",
+  "Villager_Reactions.Penny.Soiled.Verynice.2": "%Penny beobachtet dich mit einer hochgezogenen Augenbraue#$b#Ist da etwas, was du mir sagen willst @?$3",
+  "Villager_Reactions.Penny.Soiled.Verynice.3": "%Penny wartet, bis du fertig bist, bevor sie an deinem Windelbund zieht.#$b#Sieht aus, als hättest du nichts fürs Töpfchen übrig gelassen <kleiner/kleines> <Junge/Mädchen>.$1",
+  "Villager_Reactions.Penny.Soiled.Verynice.4": "%Du zerrst an Pennys Ärmel, damit sie dir hilft, aufs Töpfchen zu gehen, kurz bevor du in deine  $UNDERWEAR_NAME$ <pinkelst&kackst>.#$b#Oh nein, du warst so nah dran!$3#$b#Ich bin nicht böse, ich weiß, dass du es versuchst. Du wirst den Dreh bald raus haben.",
+  "Villager_Reactions.Penny.Soiled.Verynice.5": "Hattest du einen Unfall in deine $UNDERWEAR_NAME$ $FARMERNAME$?#$b#Du musst es mir sagen, sobald dein Körper sagt, dass du aufs Töpfchen gehen musst, okay?$3",
+  "Villager_Reactions.Penny.Soiled.Verynice.6": "Hattest du einen Unfall in deine $UNDERWEAR_NAME$ $FARMERNAME$?|Du hast das gleiche Töpfchengesicht wie Vincent.$1#$b#Brauchst du auch Hilfe beim wechseln wie er?#$b#%Penny kitzelt dich neckisch am Bauch.",
+  "Villager_Reactions.Penny.Soiled.Verynice.7": "Das habeich gesehen.$3#$b#$y 'War das wirklich ein Unfall?_Uh huh, Ich habe versucht es zu halten._Oh $FARMERNAME$, Ich weiß, es fällt dir schwer. Ich bin sehr stolz auf dich, das du es versucht hast._Ich nicht aufs Tüpchen gehen._$FARMERNAME$, Ich weiß, dass es schwer für dich ist, aber du musst es trotzdem versuchen, okay?$3'",
+  "Villager_Reactions.Penny.Soiled.Verynice.8": "Wir sollten das auf dem Töpfchen machen $FARMERNAME$. Was ist passiert?$3#$b#Es ist ok, ich bin nicht böse. Du gibst dir wirklich Mühe. Es ist also in Ordnung, wenn du trotzdem manchmal Unfälle hast..#$b#<Jungen/Mädchen> sind einfach sauber zu machen!$1",
+
+  // Penny friendship nice
+
+  "Villager_Reactions.Penny.Soiled.Nice.1": "Du solltest vieleicht deine Windel wechseln. Nur für den Fall, dass jemand anderes etwas sagt.",
+  "Villager_Reactions.Penny.Soiled.Nice.2": "B-bist du ok?$3",
+  "Villager_Reactions.Penny.Soiled.Nice.3": "Brauchst du Hilfe, um aufs Töpfchen zu gehen?",
+  "Villager_Reactions.Penny.Soiled.Nice.4": "Entschuldige. Das kann sich nicht gut anfühlen.$3",
+
+  // Penny friendship mean
+
+  "Villager_Reactions.Penny.Soiled.Mean.1": "...$5",
+  "Villager_Reactions.Penny.Soiled.Mean.2": "Uhmm...$2",
+  "Villager_Reactions.Penny.Soiled.Mean.3": "...Oh$2",
+  "Villager_Reactions.Penny.Soiled.Mean.4": "H-hast du...|Du auch?$5"
+}

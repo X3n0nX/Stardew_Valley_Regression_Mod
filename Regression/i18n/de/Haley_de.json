@@ -1,0 +1,74 @@
+{
+  //#########################################
+  // Potty Dialogs
+  //#########################################
+  /*
+
+      Pee:      npc pee
+      Poop:     npc poop
+
+      Fail:     npc fail to hold pee / poop  
+      Success:  npc success to hold pee / poop 
+
+      Pre:      message befor animation
+      Post:     message after animation
+
+      Exemple ID:
+
+      Pee.Fail.Pre    -> Message that will be shown, befor start of animation, if the npc faild to hold there pee -> befor there start to wet there underwear
+      Poop.Fail.Post  -> Message that will be shown, after the animation, if the npc faild to hold there poop -> after there mess there underwear
+
+  */
+
+  // Pee Fail
+
+  "Potty_Dialogs.Haley.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Haley.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Haley.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Haley.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Haley.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Haley.Poop.Fail.Post.1": "*kichert*",
+  "Potty_Dialogs.Haley.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Haley.Poop.Fail.Post.3": "nnnf...",
+
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Haley change your underwear general offer
+
+  "Villager_Reactions.Haley.Change.General_Offer.Player.1.Pre": "Insert Text",
+  "Villager_Reactions.Haley.Change.General_Offer.Player.1.Underwear_ok": "Insert Text",
+
+  // You change Haley`s underwear general offer
+
+  "Villager_Reactions.Haley.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Haley.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // Haley change your underwear if there are dirty
+
+  "Villager_Reactions.Haley.Change.Dirty_Offer.1": "Insert Text",
+
+  // Haley friendship very nice
+
+  "Villager_Reactions.Haley.Soiled.Verynice.1": "$lIch bin wirklich froh, dass du mich für diese ganze Windelsache begeistern konntest!",
+  "Villager_Reactions.Haley.Soiled.Verynice.2": "$hSieht aus als währe deine $UNDERWEAR_NAME$ ein wenig <nass&voll>! Soll ich die wickeln?",
+  "Villager_Reactions.Haley.Soiled.Verynice.3": "$sIch glaube, meine Windel ist langsam voll. Kannst du mir helfen?",
+
+  // Haley friendship nice
+
+  "Villager_Reactions.Haley.Soiled.Nice.1": "$lDeine $UNDERWEAR_NAME$ ist irgendwie süß. Wo bekomme ich die her?",
+  "Villager_Reactions.Haley.Soiled.Nice.2": "$hIch glaube, du läufst etwas aus!",
+
+  // Haley friendship mean
+
+  "Villager_Reactions.Haley.Soiled.Mean.1": "$uWindeln sind NICHT in Mode. Genauso wie sich selbst wie ein Baby <einzupinkeln&einzukacken>!",
+  "Villager_Reactions.Haley.Soiled.Mean.2": "$uWie, eww. Warum sind alle in dieser Stadt so eklig?!",
+  "Villager_Reactions.Haley.Soiled.Mean.3": "$uIch wollte dir eigentlich sagen, dass du deine Klamotten wechseln sollst, weil sie so unstylisch sind, aber es sieht so aus, als müsstest du eher deine Windel wechseln, du großes Baby!"
+
+}

@@ -1,0 +1,82 @@
+{
+  //#########################################
+  // Potty Dialogs
+  //#########################################
+  /*
+
+      Pee:      npc pee
+      Poop:     npc poop
+
+      Fail:     npc fail to hold pee / poop  
+      Success:  npc success to hold pee / poop 
+
+      Pre:      message befor animation
+      Post:     message after animation
+
+      Exemple ID:
+
+      Pee.Fail.Pre    -> Message that will be shown, befor start of animation, if the npc faild to hold there pee -> befor there start to wet there underwear
+      Poop.Fail.Post  -> Message that will be shown, after the animation, if the npc faild to hold there poop -> after there mess there underwear
+
+  */
+
+  // Pee Fail
+
+  "Potty_Dialogs.Abigail.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Abigail.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Abigail.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Abigail.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Abigail.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Abigail.Poop.Fail.Post.1": "*giggles*",
+  "Potty_Dialogs.Abigail.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Abigail.Poop.Fail.Post.3": "nnnf...",
+
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Abigail change your underwear general offer
+
+  "Villager_Reactions.Abigail.Change.General_Offer.Player.1.Pre": "You need a change?",
+  "Villager_Reactions.Abigail.Change.General_Offer.Player.1.Underwear_ok": "Aww...",
+
+  // You change Abigail`s underwear general offer
+
+  "Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // Abigail change your underwear if there are dirty
+
+  "Villager_Reactions.Abigail.Change.Dirty_Offer.No": "Uh, ok! $1",
+  "Villager_Reactions.Abigail.Change.Dirty_Offer.Yes": "You kind of dirty @. I can give a diaper if you need one. Where i got them from? Oh, ah, haha...$l",
+
+  // Abigail friendship very nice
+
+  "Villager_Reactions.Abigail.Soiled.Verynice.1": "Want a change? #$b#I could change you, if you want?$h",
+  "Villager_Reactions.Abigail.Soiled.Verynice.2": "Sometimes I just put on a diaper and sit around playing games all day. #$b#Maybe we could do that together sometime.$h",
+  "Villager_Reactions.Abigail.Soiled.Verynice.3": "I think I'm pretty wet. #$b#Would you mind helping me change?",
+  "Villager_Reactions.Abigail.Soiled.Verynice.4": "Let me help with that! Lay down for me.$h",
+  "Villager_Reactions.Abigail.Soiled.Verynice.5": "Ewww, I think.... I think I pooped myself.$s #$b#...$s #$b#Could you... maybe change me?",
+
+  // Abigail friendship nice
+
+  "Villager_Reactions.Abigail.Soiled.Nice.1": "$lWas that me? ...Oh! Nothing! Haha!",
+  "Villager_Reactions.Abigail.Soiled.Nice.2": "So, do you have a medical condition or something?",
+  "Villager_Reactions.Abigail.Soiled.Nice.3": "You might wanna change. Just incase someone else says something.",
+  "Villager_Reactions.Abigail.Soiled.Nice.4": "$lI might be into trying that diaper thing sometime.",
+  "Villager_Reactions.Abigail.Soiled.Nice.5": "Is changing too much of a chore? Sorry, rude question!",
+  "Villager_Reactions.Abigail.Soiled.Nice.6": "$l*Checks self quickly* Oh! Were you watching?!",
+
+  // Abigail friendship mean
+
+  "Villager_Reactions.Abigail.Soiled.Mean.1": "I'm just..nevermind.",
+  "Villager_Reactions.Abigail.Soiled.Mean.2": "This is pretty awkward.",
+  "Villager_Reactions.Abigail.Soiled.Mean.3": "...Wow. Walking away now.",
+  "Villager_Reactions.Abigail.Soiled.Mean.4": "*Feels own backside quickly* Eww! That's gross! You shouldn't do that in public!",
+  "Villager_Reactions.Abigail.Soiled.Mean.5": "Did you just <pee&poop> your pants? Wow..."
+}

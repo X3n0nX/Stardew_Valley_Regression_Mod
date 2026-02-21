@@ -1,0 +1,193 @@
+{
+  // ########################################
+  // Numeric Translations
+  // ########################################
+
+  "Numeric_Translation.Sigle": "ein",
+  "Numeric_Translation.Plural": "ein paar",
+  "Numeric_Translation.Multiple_Times": "mehrfach",
+  "Numeric_Translation.Once": "einmal",
+  "Numeric_Translation.Twice": "zweimal",
+  "Numeric_Translation.One_Time": "ein Mal",
+  "Numeric_Translation.Two_Times": "zwei Mal",
+  "Numeric_Translation.Three_Times": "drei Mal",
+  "Numeric_Translation.Four_Times": "vier Mal",
+  "Numeric_Translation.Five_Times": "f�nf Mal",
+  "Numeric_Translation.Times": "Mal",
+
+  // ########################################
+  // Gender Texts
+  // ########################################
+
+  "Gender_Text.He": "er",
+  "Gender_Text.His": "sein",
+  "Gender_Text.Him": "ihm",
+  "Gender_Text.She": "sie",
+  "Gender_Text.Her": "ihr",
+  "Gender_Text.They": "they",
+  "Gender_Text.Their": "ihre",
+  "Gender_Text.Them": "them",
+
+  // ########################################
+  // General
+  // ########################################
+
+  "General.EasyMode.On": "Einfacher Modus Ein. Hunger und Durst werden jeden morgen aufgefüllt und die nassen Betten sind trocken.",
+  "General.EasyMode.Off": "Einfacher Modus Aus. Hunger und Durst werden nicht automatisch aufgefüllt und die nassen Betten trocknen langsamer.",
+
+  // ########################################
+  // Jodis Initial Letter
+  // ########################################
+
+  "Jodi.Initial_Letter.1": "${Lieber^Liebe}$ @,Willkommen in der Stadt! Hier ist etwas Gemüse aus dem Garten zur Überbrückung bis du richtig angekommen bist. Dein Großvater hat mir von deinem kleinen Problem erzählt. Deshalb habe ich ein paar zusätzliche Hilfsmittel für dich reingelegt. Besuche Pierre wenn du mehr brauchst!      <, Jodi",
+
+  // ########################################
+  // Debuffs
+  // ########################################
+
+  // Debuff Wet
+  "Debuffs.Wet.Name": "Nass",
+  "Debuffs.Wet.Type": "Verteidigung",
+  "Debuffs.Wet.Description.1": "Deine Hose ist nass!",
+  "Debuffs.Wet.Description.2": "Du hast deine Hose nass gemacht!",
+  "Debuffs.Wet.Description.3": "Du hast dir in die Hose gepinkelt!",
+
+  // Debuff Messy
+  "Debuffs.Messy.Name": "Dreckig",
+  "Debuffs.Messy.Type": "Geschwindigkeit",
+  "Debuffs.Messy.Description.1": "Deine Hose ist schmutzig!",
+  "Debuffs.Messy.Description.2": "Du hast deine Hose schmutzig gemacht!",
+  "Debuffs.Messy.Description.3": "Du hast dir in die Hose gekackt!",
+
+  // ########################################
+  // Passby
+  // you passby a npc with dirty underwear
+  // ########################################
+
+  "Passby.1": "Oh wow, deine Windel ist total nass!",
+
+  // ########################################
+  // NPC reactions
+  // ########################################
+
+  // ##########
+  // Adult
+  // ##########
+
+  // non specific adult friendship very nice
+
+  "Villager_Reactions.Adult.Soiled.Verynice.1": "Aww, brauchst du meine Hilfe um deine <nasse&schmutzige> $UNDERWEAR_NAME$ zu wechseln?",
+  "Villager_Reactions.Adult.Soiled.Verynice.2": "Ich glaube <der/die> kleine $FARMERNAME$ muss gewickelt werden!",
+  "Villager_Reactions.Adult.Soiled.Verynice.3": "Ich kenne <einen/eine> <kleinen/kleine> <Farmer/Farmerin> <der/die> gewickelt werden muss!$1",
+
+  // non specific adult friendship nice
+
+  "Villager_Reactions.Adult.Soiled.Nice.1": "Du armes kleine Ding! Hast du dir selbst <eingepinkelt&eingekackt>?",
+  "Villager_Reactions.Adult.Soiled.Nice.2": "Muss hier jemand gewickelt werden?",
+
+  // non specific adult friendship normal
+
+  "Villager_Reactions.Adult.Soiled.Mean.1": "Du solltest <&wirklich >deine Hose wechseln gehen.",
+
+  // non specific adult if there notice you are messy
+  "Villager_Reactions.Adult.Dirty.1": "Du solltest dich vieleicht erst einmal umziehen gehen.",
+
+  // non specific adult if there notice you pee / poop on ground
+  "Villager_Reactions.Adult.Ground.1": "$FARMERNAME$! Auf dem Land zu leben, macht uns nicht zu Barbaren!$3",
+  "Villager_Reactions.Adult.Ground.2": "Das ist nicht in Ordnung! Benutzt eine Toilette!$3",
+
+  // non specific adult if there notice you pee / poop on ground but nothin comes out
+
+  "Villager_Reactions.Adult.Ground.Attempt.1": "$FARMERNAME$! Was machst du da?$3",
+  "Villager_Reactions.Adult.Ground.Attempt.2": "Ist das... Hast du kein Schamgef�hl!$3",
+
+  // ##########
+  // Teenager
+  // ##########
+
+  // non specific teen friendship very nice
+
+  "Villager_Reactions.Teen.Soiled.Verynice.1": "Du bist so niedlich, wenn du dich sch�mst!$1",
+  "Villager_Reactions.Teen.Soiled.Verynice.2": "Wo ist deine Mami $FARMERNAME$? Ich glaube deine $UNDERWEAR_NAME$ muss gewechselt werden.",
+
+  // non specific teen friendship nice
+
+  "Villager_Reactions.Teen.Soiled.Nice.1": "Hast du dir gerade <eingepinkelt&eingekackt> $FARMERNAME$?",
+  "Villager_Reactions.Teen.Soiled.Nice.2": "Ich wollte dich nur wissen lassen, $FARMERNAME$, du solltest wirklich deine Windel wechseln gehen",
+
+  // non specific teen friendship normal
+
+  "Villager_Reactions.Teen.Soiled.Mean.1": "...$5",
+  "Villager_Reactions.Teen.Soiled.Mean.2": "...Hast du gerade...$2",
+
+  // non specific teen if there notice you are messy
+
+  "Villager_Reactions.Teen.Dirty.1": "Deine Hose ist komplett... <nass&dreckig>....",
+
+  // non specific teen if there notice you pee / poop on ground
+
+  "Villager_Reactions.Teen.Ground.1": "Igitt. Ist das in der Stadt normal?$5",
+  "Villager_Reactions.Teen.Ground.2": "Was... Igitt!$5",
+  "Villager_Reactions.Teen.Ground.3": "Hast du gerade auf den Boden <gepinkelt&gekackt>? Ekelhaft!$5",
+
+  // non specific teen if there notice you pee / poop on ground but nothin comes out
+
+  "Villager_Reactions.Teen.Ground.Attempt.1": "Was... Zieh deine Hose wieder an!$5",
+  "Villager_Reactions.Teen.Ground.Attempt.2": "Hey ${Mann^M�del}, ich kann alles sehen!$5",
+
+  // ##########
+  // Kid
+  // ##########
+
+  // non specific kid general reaction if you talk to them
+  "Villager_Reactions.Kid.General.1": "Nicht jetzt! Ich spiele gerade!",
+  "Villager_Reactions.Kid.General.2": "Spielen?",
+  "Villager_Reactions.Kid.General.3": "... Ja?",
+
+  // non specific kid friendship very nice
+
+  "Villager_Reactions.Kid.Soiled.Verynice.1": "*Kichert* Uh oh!$1",
+
+  // non specific kid friendship nice
+
+  "Villager_Reactions.Kid.Soiled.Nice.1": "*Kichert* Uh oh!$1",
+
+  // non specific kid friendship normal
+
+  "Villager_Reactions.Kid.Soiled.Mean.1": "Oh... ekelhaft...$3",
+  "Villager_Reactions.Kid.Soiled.Mean.2": "Igitt$3",
+  "Villager_Reactions.Kid.Soiled.Mean.3": "...$2",
+  "Villager_Reactions.Kid.Soiled.Mean.4": "Ha ha! Du hast dir in die Hose <gepinkelt/gekackt>!",
+
+  // non specific kid if there notice you are messy
+
+  "Villager_Reactions.Kid.Dirty.1": "<Hosenpisser&Hosenschei�er>!",
+
+  // non specific kid if there notice you pee / poop on ground
+
+  "Villager_Reactions.Kid.Ground.1": "Igitt!$3",
+  "Villager_Reactions.Kid.Ground.2": "Igitt! <Pinkle&Kacke> nicht dort!$3",
+  "Villager_Reactions.Kid.Ground.3": "...$2",
+
+  // non specific kid if there notice you pee / poop on ground but nothin comes out
+
+  "Villager_Reactions.Kid.Ground.Attempt.1": "Igitt!$3",
+  "Villager_Reactions.Kid.Ground.Attempt.2": "Igitt! Ich kann deine $UNDERWEAR_NAME$ sehen!$3",
+
+  // ##########
+  // Animal
+  // ##########
+
+  // animal friendship nice
+
+  "Villager_Reactions.Animal.Soiled.Nice.1": "...",
+  "Villager_Reactions.Animal.Soiled.Nice.2": "???",
+
+  // animal if there notice you pee / poop on ground
+
+  "Villager_Reactions.Animal.Ground.1": "<...&!!!>",
+
+  // animal if there notice you pee / poop on ground but nothin comes out
+
+  "Villager_Reactions.Animal.Ground.Attempt.1": "<...&???>"
+}

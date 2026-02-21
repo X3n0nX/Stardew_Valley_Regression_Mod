@@ -1,0 +1,33 @@
+{
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Jodi change your underwear general offer
+
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Pre": "Musst du gewickelt werden?#$b#%Jodi untersucht deine $INSPECT_UNDERWEAR_NAME_NO_PREFIX$.",
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Clean": "Schau sich das einer an! Du bist ja komplett sauber! Wie ist das denn möglich?",
+  "Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Slightly_Wet": "Du bist nur ein wenig nass. Komm wieder wenn du einen anderen deiner \"Unfälle\" hattest. *zwinker*",
+
+  // Jodi change your underwear if there are dirty
+
+  "Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_No": "Keine Unfälle, super! $3",
+  "Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_Yes": "Ach komm her @, nicht weinen! Diese Dinge passiere! Wir können eine von Vincents Windeln für dich passend machen. Und da sind ein paar Hosen von Jas die du dir leihen kannst!$1",
+
+  // Jodi friendship very nice
+
+  "Villager_Reactions.Jodi.Soiled.Verynice.1": "%Jodi beugt sich hinunter und legt dir beruhigend die Hand auf den Rücken.#$b#Du kannst mir sagen, wenn du einen kleinen Unfall hattest $FARMERNAME$. Das ist nichts, wofür man sich schämen muss.",
+  "Villager_Reactions.Jodi.Soiled.Verynice.2": "Du brauchst das Töpfchentraining nicht zu überstürzen, wenn du noch nicht so weit bist.",
+  "Villager_Reactions.Jodi.Soiled.Verynice.3": "Es kann für kleine <Jungen/Mädchen> manchmal schwer sein, sich daran zu erinnern, aufs Töpfchen zu gehen. Das ist in Ordnung.",
+  "Villager_Reactions.Jodi.Soiled.Verynice.4": "Meine Güte!$1",
+  "Villager_Reactions.Jodi.Soiled.Verynice.5": "Oh, du bist so süß, wenn du dich schämst!$1",
+
+  // Jodi friendship nice
+
+  "Villager_Reactions.Jodi.Soiled.Nice.1": "$FARMERNAME$, Ich glaube du solltest deine $UNDERWEAR_NAME$ wechseln.",
+  "Villager_Reactions.Jodi.Soiled.Nice.2": "Du armes Ding! Hast du dir gerade in die Hose <gepinkelt&gekackt>?",
+
+  // Jodi friendship mean
+
+  "Villager_Reactions.Jodi.Soiled.Mean.1": "Du musst vieleicht auf die Hilfsmittel zurückgreifen, die ich dir geschickt habe$4"
+}

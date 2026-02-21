@@ -1,0 +1,31 @@
+{
+  // ########################################
+  // Food & Water Stats
+  // ########################################
+
+  // Food Low
+  "Food.Low.1": "You're hungry.",
+  "Food.Low.2": "Your stomach rumbles.",
+  "Food.Low.3": "You're thinking about eating food.",
+  "Food.Low.4": "You think about finding food.",
+  "Food.Low.5": "You need some food.",
+
+  // Food None
+  "Food.None.1": "You're starving!",
+  "Food.None.2": "All you can think about is food! Better eat!",
+  "Food.None.3": "You're so hungry you can't think straight!",
+
+  // Water Low
+  "Water.Low.1": "You're getting pretty thirsty.",
+  "Water.Low.2": "You could really use some water.",
+  "Water.Low.3": "You're thinking about getting a drink.",
+  "Water.Low.4": "You need a drink.",
+
+  // Water None
+  "Water.None.1": "You're dehydrated!",
+  "Water.None.2": "You're super thirsty! Get a drink right now!",
+  "Water.None.3": "You're so thirsty you can't think straight!",
+
+  // Drink Water Source
+  "Drink.Water-Source.1": "You scoop up some water in a cup and drain it down."
+}

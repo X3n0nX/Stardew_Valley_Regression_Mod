@@ -1,0 +1,191 @@
+{
+  // ##########
+  // First Page
+  // ##########
+
+  // Cheat Mode
+
+  "Config_Menu.Main.Cheat_Mode.Name": "Cheat Modus",
+  "Config_Menu.Main.Cheat_Mode.Tooltip": "Ermöglicht es Gegenstände zu spawnen, das Töpfchentraining anzupassen und zeigt Debug relevante Mitteilungen an. (Debug)",
+
+  // Easy Mode
+
+  "Config_Menu.Main.Easy_Mode.Name": "Einfacher Modus",
+  "Config_Menu.Main.Easy_Mode.Tooltip": "Hunger und Durst sind jeden morgen aufgefüllt und das Bett ist trocken. (Easymode)",
+
+  // Wetting 
+
+  "Config_Menu.Main.Wetting.Name": "Pinkeln",
+  "Config_Menu.Main.Wetting.Tooltip": "Dies aktiviert die Pinkel und Blasen Events.",
+
+  // Messing 
+
+  "Config_Menu.Main.Messing.Name": "Kacken",
+  "Config_Menu.Main.Messing.Tooltip": "Dies aktiviert die Kack und Darm Events.",
+
+  // Children and Diapers 
+
+  "Config_Menu.Main.Children_And_Diapers.Name": "Kinder und Windeln",
+  "Config_Menu.Main.Children_And_Diapers.Tooltip": "Würdest du dich wohl fühlen, wenn du einen Dialog über Windeln von Vincent oder Jas sehen würdest?",
+
+  // Bladder Capacity (mL)
+
+  "Config_Menu.Main.Bladder_Capacity.Name": "Blasen Kapazität (mL)",
+  "Config_Menu.Main.Bladder_Capacity.Tooltip": "600 entspricht ungef�hr 3 Toiletteng�nge pro Tag. (MaxBladderCapacity)",
+
+  // Bowel Capacity (mL)
+
+  "Config_Menu.Main.Bowel_Capacity.Name": "Darm Kapazität (mL)",
+  "Config_Menu.Main.Bowel_Capacity.Tooltip": "1000 entspricht ungef�hr 1,5 Toiletteng�nge pro Tag. (MaxBowelCapacity)",
+
+  // Always notice accidents
+
+  "Config_Menu.Main.Always_Notice_Accidents.Name": "Unf�lle immer bemerken",
+  "Config_Menu.Main.Always_Notice_Accidents.Tooltip": "Legt fest, ob Unfälle bei niedriger Kontinenz bemerkt werden sollen. (AlwaysNoticeAccidents)",
+
+  // Pants Change at Home
+
+  "Config_Menu.Main.Pants_Change_At_Home.Name": "Wechsle deine Hose zu Hause",
+  "Config_Menu.Main.Pants_Change_At_Home.Tooltip": "Um deine Hose zu wechseln, im falle sie ist dreckig, musst du zun�chst nach Hause gehen. (Normalerweise An). (PantsChangeRequiresHome)",
+
+  // Underwear Change Causes Exposure
+
+  "Config_Menu.Main.Underwear_Change_Causes_Exposure.Name": "Entblößung bei Unterwäschewechsel",
+  "Config_Menu.Main.Underwear_Change_Causes_Exposure.Tooltip": "Für den selbstst�ndigen wechsel deiner Unterw�che ist es nötig, dich auszuziehen und zu Entblößen. Ist diese Option aktiv, musst du deine Windeln zu Hause wechseln oder weit weg von anderen. (Normalerweise An) (UnderwearChangeCauseExposure)",
+
+  // Menu Point Key Bindings
+
+  "Config_Menu.Main.Key_Bindings_Menu.Name": "Tastenbelegung",
+
+  // Menu Point Continence
+
+  "Config_Menu.Main.Continence_Menu.Name": "Kontinent",
+
+  // Menu Point Friendships
+
+  "Config_Menu.Main.Friendships_Menu.Name": "Freundschaften",
+
+  // Menu Point Save Files
+
+  "Config_Menu.Main.Save_Files_Menu.Name": "Speicherstände",
+
+  // ##########
+  // Page Key Bindings
+  // ##########
+
+  // Pee Pants
+
+  "Config_Menu.Key_Bindings.Pee_Pants.Name": "Pinkle in Hose",
+  "Config_Menu.Key_Bindings.Pee_Pants.Tooltip": "Die Taste, die du drücken möchtest, um dir in die Hose zu pinkeln. (KeyPee)",
+
+  // Poop Pants
+
+  "Config_Menu.Key_Bindings.Poop_Pants.Name": "Kacke in Hose",
+  "Config_Menu.Key_Bindings.Poop_Pants.Tooltip": "Die Taste, die du drücken möchtest, um dir in die Hose zu kacken. (KeyPoop)",
+
+  // Pee In Potty
+
+  "Config_Menu.Key_Bindings.Pee_In_Potty.Name": "Pinkle in Toilette",
+  "Config_Menu.Key_Bindings.Pee_In_Potty.Tooltip": "Die Taste, die du drücken möchtest, um in die Toilette zu pinkeln wie ein gutes Mädchen bzw. guter Junge. (KeyPeeInToilet)",
+
+  // Poop In Potty
+
+  "Config_Menu.Key_Bindings.Poop_In_Potty.Name": "Kacke in Toilette",
+  "Config_Menu.Key_Bindings.Poop_In_Potty.Tooltip": "Die Taste, die du drücken möchtest, um in die Toilette zu kacken wie ein gutes Mädchen bzw. guter Junge.(KeyPoopInToilet)",
+
+  // Go In Pants
+
+  "Config_Menu.Key_Bindings.Go_In_Pants.Name": "Pinkle / Kacke in Hose",
+  "Config_Menu.Key_Bindings.Go_In_Pants.Tooltip": "Die Taste, die du drücken möchtest, um dir in die Hose zu pinkeln und zu kacken. (KeyGoInPants)",
+
+  // Go Potty
+
+  "Config_Menu.Key_Bindings.Go_Potty.Name": "Pinkle / Kacke in Toilette",
+  "Config_Menu.Key_Bindings.Go_Potty.Tooltip": "Die Taste, die du drücken möchtest, um in die Toilette zu pinkeln und zu kacken wie ein gutes Mädchen bzw. guter Junge. (KeyGoInToilet)",
+
+  // ##########
+  // Page Continence
+  // ##########
+
+  // Nighttime Losses
+
+  "Config_Menu.Continence.Nighttime_Losses.Name": "Verluste während der Nacht",
+  "Config_Menu.Continence.Nighttime_Losses.Tooltip": "Wie schwerwiegend der Verlust des Töpfchentrainings in der Nacht im Vergleich zum Tag ist. Normalerweise 50 (die Hälfte). (NighttimeLossMultiplier)",
+
+  // Nighttime Gains
+
+  "Config_Menu.Continence.Nighttime_Gains.Name": "Gewinne während der Nacht",
+  "Config_Menu.Continence.Nighttime_Gains.Tooltip": "Wie groß ist der Gewinn, wenn Sie nachts trocken/rein bleiben, im Vergleich zu tagsüber. Normalerweise 50 (die Hälfte). (NighttimeGainMultiplier)",
+
+  // In Diaper on Purpose Modifier
+
+  "Config_Menu.Continence.In_Diaper_on_Purpose_Modifier.Name": "In Underwear on Purpose Modifier",
+  "Config_Menu.Continence.In_Diaper_on_Purpose_Modifier.Tooltip": "How big of a negativ impact has an accident in underwear if it was on purpose?. Usually 50 (half) as much as an actual accident.",
+
+  // Accident Bladder Loss
+
+  "Config_Menu.Continence.Accident_Bladder_Loss.Name": "Unfall Blasen Verlust",
+  "Config_Menu.Continence.Accident_Bladder_Loss.Tooltip": "2 ist ein 2% Kontinenz Verlust der Blase, für einen $MAX_BLADDER_CAPACITY$mL Unfall. (BladderLossContinenceRate)",
+
+  // Accident Bowel Loss
+
+  "Config_Menu.Continence.Accident_Bowel_Loss.Name": "Unfall Darm Verlust",
+  "Config_Menu.Continence.Accident_Bowel_Loss.Tooltip": "3 ist ein 3% Kontinenz Verlust des Darms, für einen $MAX_BOWEL_CAPACITY$mL Unfall. (BowelLossContinenceRate)",
+
+  // Toilet Bladder Gain
+
+  "Config_Menu.Continence.Toilet_Bladder_Gain.Name": "Toilette Blase Erhöhung",
+  "Config_Menu.Continence.Toilet_Bladder_Gain.Tooltip": "3 ist eine 3% Kontinenz Erhöhung der Blase, für das benutzen der Toilette, mit einer Blase, die zu mindestens der hälfte gefüllt ist. (BladderGainContinenceRate)",
+
+  // Toilet Bowel Gain
+
+  "Config_Menu.Continence.Toilet_Bowel_Gain.Name": "Toilette Darm Erhöhung",
+  "Config_Menu.Continence.Toilet_Bowel_Gain.Tooltip": "3 ist eine 3% Kontinenz Erhöhung des Darms, für das benutzen der Toilette, mit einem Darm, der zu mindestens der hälfte gefüllt ist. (BowelGainContinenceRate)",
+
+  // Start Bladder Continence
+
+  "Config_Menu.Continence.Start_Bladder_Continence.Name": "Anfangs Blasen Kontinenz",
+  "Config_Menu.Continence.Start_Bladder_Continence.Tooltip": "Definiert die Anfangs (neues Spiel) Blasen Kontinenz. In der Regel 70. Hat auch Einfluss auf alte Spielst�nde ohne diese Mod. (StartBladderContinence)",
+
+  // Start Bowel Continence
+
+  "Config_Menu.Continence.Start_Bowel_Continence.Name": "Anfangs Stuhl Kontinenz",
+  "Config_Menu.Continence.Start_Bowel_Continence.Tooltip": "Definiert die Anfangs (neues Spiel) Stuhl Kontinenz. In der Regel 90. Hat auch Einfluss auf alte Spielst�nde ohne diese Mod. (StartBowelContinence)",
+
+  // ##########
+  // Page Friendships
+  // ##########
+
+  // Penalty Peeing
+
+  "Config_Menu.Friendships.Penalty_Peeing.Name": "Einfluss Pinkeln",
+  "Config_Menu.Friendships.Penalty_Peeing.Tooltip": "wie Pinkeln in der Öffentlichkeit die Freundschaften beeinflusst. 100 ist normal, 50 bedeutet halber und 200 doppelter Einfluss. 0 deaktiviert den Verlust von Freundschaft bei Pinkel Ereignissen.  (FriendshipPenaltyBladderMultiplier)",
+
+  // Penalty Pooping
+
+  "Config_Menu.Friendships.Penalty_Pooping.Name": "Einfluss Kacken",
+  "Config_Menu.Friendships.Penalty_Pooping.Tooltip": "Wie Kacken in der Öffentlichkeit die Freundschaften beeinflusst. 100 ist normal, 50 bedeutet halber und 200 doppelter Einfluss. 0 deaktiviert den Verlust von Freundschaft bei Kack Ereignissen. (FriendshipPenaltyBowelMultiplier)",
+
+  // Friendship Debug
+
+  "Config_Menu.Friendships.Debug.Name": "Freundschafts Debug",
+  "Config_Menu.Friendships.Debug.Tooltip": "Dein Freundschafts Level zu NPC´s spielt keine Rolle mehr.",
+
+  // ##########
+  // Save Files Friendships
+  // ##########
+
+  // Headline
+
+  "Config_Menu.Save_Files.Headline": "Ab der Mod Version 1.5.0, werden Speicherst�nde (json) nicht l�nger ben�tigt/erstellt. Der einzige nutzen dieser Funktion ist, das laden alter oder bearbeiteter Speicherstände.",
+
+  // Read Save Files
+
+  "Config_Menu.Save_Files.Read.Name": "Speicherstand lesen",
+  "Config_Menu.Save_Files.Read.Tooltip": "Dies aktiviert das lesen von (alten) Speicherst�nden. Zus�tzlich wird immer der Speicherstand des letzten Tages gel�scht, wenn ein neuer Tag startet.",
+
+  // Write Save Files
+
+  "Config_Menu.Save_Files.Wtite.Name": "Speicherstand schreiben",
+  "Config_Menu.Save_Files.Wtite.Tooltip": "Dies aktiviert das schreiben von (alten) Speicherst�nden. Es wird empfolen, diese Einstellung zu deaktivieren."
+}

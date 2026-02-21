@@ -450,7 +450,7 @@ namespace PrimevalTitmouse
         }
         public static Container GetTypeDefault(string type, ContainerSubtype subtype)
         {
-            Container c;
+            Container c = new Container();
             /*
             switch (subtype)
             {

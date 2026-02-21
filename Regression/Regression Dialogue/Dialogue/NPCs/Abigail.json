@@ -1,10 +1,179 @@
 {
-	"Changes":[
-		{
-			"LogName": "Abigail",
-			"Action": "EditData",
-			"Target": "Characters/Dialogue/Abigail",
+  "Changes": [
+    {
+      "LogName": "Abigail",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
       "Entries": {
+        /*
+            Abigail's response Ids:
+              abigail_death_afterlive 
+              abigail_death_ghost 
+
+              abigail_vacation_boring
+              abigail_vacation_wonderfull 
+
+              abigail_hair_newColor
+              abigail_hair_oldColor
+
+              abigail_drawing_good
+              abigail_drawing_same
+        */
+
+        "Introduction": "{{i18n:Abigail.Dialogue.Introduction}}",
+        "Resort_Entering": "{{i18n:Abigail.Dialogue.Resort_Entering}}",
+        "Resort_Leaving": "{{i18n:Abigail.Dialogue.Resort_Leaving}}",
+        "Resort_Leaving_2": "{{i18n:Abigail.Dialogue.Resort_Leaving_2}}",
+        "Resort_Shore": "{{i18n:Abigail.Dialogue.Resort_Shore}}",
+        "Resort_Shore_2": "{{i18n:Abigail.Dialogue.Resort_Shore_2}}",
+        "Resort_Umbrella": "{{i18n:Abigail.Dialogue.Resort_Umbrella}}",
+        "Resort_Umbrella_2": "{{i18n:Abigail.Dialogue.Resort_Umbrella_2}}",
+        "Resort_Umbrella_3": "{{i18n:Abigail.Dialogue.Resort_Umbrella_3}}",
+        "Resort_Wander": "{{i18n:Abigail.Dialogue.Resort_Wander}}",
+        "Resort_Bar": "{{i18n:Abigail.Dialogue.Resort_Bar}}",
+        "Resort": "{{i18n:Abigail.Dialogue.Resort}}",
+        "danceRejection": "{{i18n:Abigail.Dialogue.danceRejection}}",
+        "divorced": "{{i18n:Abigail.Dialogue.divorced}}",
+        "dumped_Girls": "{{i18n:Abigail.Dialogue.dumped_Girls}}",
+        "secondChance_Girls": "{{i18n:Abigail.Dialogue.secondChance_Girls}}",
+        "breakUp": "{{i18n:Abigail.Dialogue.breakUp}}",
+
+        "Event_VideoGame_Yes": "{{i18n:Abigail.Dialogue.Event_VideoGame_Yes}}",
+        "Event_VideoGame_No": "{{i18n:Abigail.Dialogue.Event_VideoGame_No}}",
+        "Event_Grave1": "{{i18n:Abigail.Dialogue.Event_Grave1}}",
+        "Event_Grave2": "{{i18n:Abigail.Dialogue.Event_Grave2}}",
+        "Event_Grave3": "{{i18n:Abigail.Dialogue.Event_Grave3}}",
+        "Event_Grave4": "{{i18n:Abigail.Dialogue.Event_Grave4}}",
+        "Event_Rain_1": "{{i18n:Abigail.Dialogue.Event_Rain_1}}",
+        "Event_Rain_2": "{{i18n:Abigail.Dialogue.Event_Rain_2}}",
+        "Event_Rain_3": "{{i18n:Abigail.Dialogue.Event_Rain_3}}",
+        "Event_Tragic_1": "{{i18n:Abigail.Dialogue.Event_Tragic_1}}",
+        "Event_Tragic_2": "{{i18n:Abigail.Dialogue.Event_Tragic_2}}",
+        "Event_Tragic_3": "{{i18n:Abigail.Dialogue.Event_Tragic_3}}",
+        "Event_Cave2_1": "{{i18n:Abigail.Dialogue.Event_Cave2_1}}",
+        "Event_Cave2_2": "{{i18n:Abigail.Dialogue.Event_Cave2_2}}",
+        "Event_Cave_1": "{{i18n:Abigail.Dialogue.Event_Cave_1}}",
+        "Event_Cave_2": "{{i18n:Abigail.Dialogue.Event_Cave_2}}",
+        "Event_Cave_3": "{{i18n:Abigail.Dialogue.Event_Cave_3}}",
+
+
+
+        "Mon": "{{i18n:Abigail.Dialogue.Mon}}",
+        "Mon2": "{{i18n:Abigail.Dialogue.Mon2}}",
+        "Mon8": "{{i18n:Abigail.Dialogue.Mon8}}",
+        "Tue": "{{i18n:Abigail.Dialogue.Tue}}",
+        "Tue2": "{{i18n:Abigail.Dialogue.Tue2}}",
+        "Tue6": "{{i18n:Abigail.Dialogue.Tue6}}",
+        "Wed": "{{i18n:Abigail.Dialogue.Wed}}",
+        "Wed2": "{{i18n:Abigail.Dialogue.Wed2}}",
+        "Wed6": "{{i18n:Abigail.Dialogue.Wed6}}",
+        "Thu": "{{i18n:Abigail.Dialogue.Thu}}",
+        "Thu4": "{{i18n:Abigail.Dialogue.Thu4}}",
+        "Fri": "{{i18n:Abigail.Dialogue.Fri}}",
+        "Fri2": "{{i18n:Abigail.Dialogue.Fri2}}",
+        "Fri6": "{{i18n:Abigail.Dialogue.Fri6}}",
+        "Sat": "{{i18n:Abigail.Dialogue.Sat}}",
+        "Sat6": "{{i18n:Abigail.Dialogue.Sat6}}",
+        "Sun": "{{i18n:Abigail.Dialogue.Sun}}",
+        "Sun2": "{{i18n:Abigail.Dialogue.Death_Pretext}}#$q abigail_death_afterlive/abigail_death_ghost Death_Followup#{{i18n:Abigail.Dialogue.Death_Question}}#$r abigail_death_afterlive 0 Death_Afterlive#{{i18n:Abigail.Dialogue.Death_Response1}}#$r abigail_death_ghost 40 Death_Ghost#{{i18n:Abigail.Dialogue.Death_Response2}}#$r abigail_death_afterlive 0 Death_Afterlive#{{i18n:Abigail.Dialogue.Death_Response3}}#$r abigail_death_ghost 0 Death_Afterlive#{{i18n:Abigail.Dialogue.Death_Response4}}#$r abigail_death_afterlive 30 Death_Nothing#{{i18n:Abigail.Dialogue.Death_Response5}}",
+        "Sun8": "{{i18n:Abigail.Dialogue.Sun8}}",
+        "4": "{{i18n:Abigail.Dialogue.4}}",
+
+
+        "spring_12": "{{i18n:Abigail.Dialogue.spring_12}}",
+        "spring_23": "{{i18n:Abigail.Dialogue.spring_23}}",
+
+        //--------------
+
+        "summer_Mon": "{{i18n:Abigail.Dialogue.summer_Mon}}",
+        "summer_Mon4": "{{i18n:Abigail.Dialogue.summer_Mon4}}",
+        "summer_Mon6": "{{i18n:Abigail.Dialogue.summer_Mon6}}",
+        "summer_Tue": "{{i18n:Abigail.Dialogue.summer_Tue}}",
+        "summer_Tue8": "{{i18n:Abigail.Dialogue.summer_Tue8}}",
+        "summer_Wed": "{{i18n:Abigail.Dialogue.summer_Wed}}",
+        "summer_Wed4": "{{i18n:Abigail.Dialogue.summer_Wed4}}",
+        "summer_Wed8": "{{i18n:Abigail.Dialogue.summer_Wed8}}",
+        "summer_Thu": "{{i18n:Abigail.Dialogue.summer_Thu}}",
+        "summer_Thu6": "{{i18n:Abigail.Dialogue.summer_Thu6}}",
+        "summer_Thu10": "{{i18n:Abigail.Dialogue.summer_Thu10}}",
+        "summer_Fri": "{{i18n:Abigail.Dialogue.summer_Fri}}",
+        "summer_Fri6": "{{i18n:Abigail.Dialogue.summer_Fri6}}",
+        "summer_Sat": "{{i18n:Abigail.Dialogue.summer_Sat}}",
+        "summer_Sat6": "{{i18n:Abigail.Dialogue.summer_Sat6}}",
+        "summer_Sun": "{{i18n:Abigail.Dialogue.Vacation_Pretext}}#$q abigail_vacation_boring/abigail_vacation_wonderfull Vacation_Followup#{{i18n:Abigail.Dialogue.Vacation_Question}}#$r abigail_vacation_boring 0 Vacation_Boring#{{i18n:Abigail.Dialogue.Vacation_Response1}}#$r abigail_vacation_wonderfull 30 Vacation_Wonderfull#{{i18n:Abigail.Dialogue.Vacation_Response2}}#$r abigail_vacation_wonderfull 30 Vacation_Wonderfull#{{i18n:Abigail.Dialogue.Vacation_Response3}}#$r abigail_vacation_boring 0 Vacation_Boring#{{i18n:Abigail.Dialogue.Vacation_Response4}}",
+        "summer_Sun8": "{{i18n:Abigail.Dialogue.summer_Sun8}}",
+        "summer_1": "{{i18n:Abigail.Dialogue.summer_1}}",
+        "summer_6": "{{i18n:Abigail.Dialogue.summer_6}}",
+        "summer_10": "{{i18n:Abigail.Dialogue.summer_10}}",
+        "summer_27": "{{i18n:Abigail.Dialogue.summer_27}}",
+
+        //---------
+
+        "fall_Mon": "{{i18n:Abigail.Dialogue.fall_Mon}}",
+        "fall_Mon4": "{{i18n:Abigail.Dialogue.fall_Mon4}}",
+        "fall_Mon8": "{{i18n:Abigail.Dialogue.fall_Mon8}}",
+        "fall_Tue": "{{i18n:Abigail.Dialogue.fall_Tue}}",
+        "fall_Tue4": "{{i18n:Abigail.Dialogue.fall_Tue4}}",
+        "fall_Wed": "{{i18n:Abigail.Dialogue.fall_Wed}}",
+        "fall_Wed2": "{{i18n:Abigail.Dialogue.fall_Wed2}}",
+        "fall_Wed6": "{{i18n:Abigail.Dialogue.fall_Wed6}}",
+        "fall_Thu": "{{i18n:Abigail.Dialogue.fall_Thu}}",
+        "fall_Thu6": "{{i18n:Abigail.Dialogue.fall_Thu6}}",
+        "fall_Thu10": "{{i18n:Abigail.Dialogue.fall_Thu10}}",
+        "fall_Fri": "{{i18n:Abigail.Dialogue.fall_Fri}}",
+        "fall_Fri4": "{{i18n:Abigail.Dialogue.fall_Fri4}}",
+        "fall_Fri10": "{{i18n:Abigail.Dialogue.fall_Fri10}}",
+        "fall_Sat": "{{i18n:Abigail.Dialogue.fall_Sat}}",
+        "fall_Sat6": "{{i18n:Abigail.Dialogue.fall_Sat6}}",
+        "fall_Sun": "{{i18n:Abigail.Dialogue.Hair_Pretext}}#$q abigail_hair_newColor/abigail_hair_oldColor Hair_Followup#{{i18n:Abigail.Dialogue.Hair_Question}}#$r abigail_hair_newColor 10 Hair_NewColor#{{i18n:Abigail.Dialogue.Hair_Response1}}#$r abigail_hair_newColor 10 Hair_NewColor#{{i18n:Abigail.Dialogue.Hair_Response2}}#$r abigail_hair_newColor 20 Hair_WildColor#{{i18n:Abigail.Dialogue.Hair_Response3}}#$r abigail_hair_oldColor 0 Hair_OldColor#{{i18n:Abigail.Dialogue.Hair_Response4}}",
+        "fall_Sun6": "{{i18n:Abigail.Dialogue.fall_Sun6}}#$b#$action GIVE_UNDERWEAR \"joja diaper\"",
+        "fall_1": "{{i18n:Abigail.Dialogue.fall_1}}",
+        "fall_26": "{{i18n:Abigail.Dialogue.fall_26}}",
+
+        //--------------
+
+        "winter_Mon": "{{i18n:Abigail.Dialogue.winter_Mon}}",
+        "winter_Mon4": "{{i18n:Abigail.Dialogue.winter_Mon4}}",
+        "winter_Tue": "{{i18n:Abigail.Dialogue.winter_Tue}}",
+        "winter_Tue4": "{{i18n:Abigail.Dialogue.winter_Tue4}}",
+        "winter_Tue8": "{{i18n:Abigail.Dialogue.winter_Tue8}}",
+        "winter_Wed": "{{i18n:Abigail.Dialogue.winter_Wed}}",
+        "winter_Wed2": "{{i18n:Abigail.Dialogue.winter_Wed2}}",
+        "winter_Wed6": "{{i18n:Abigail.Dialogue.winter_Wed6}}",
+        "winter_Thu": "{{i18n:Abigail.Dialogue.winter_Thu}}",
+        "winter_Thu8": "{{i18n:Abigail.Dialogue.winter_Thu8}}",
+        "winter_Fri": "{{i18n:Abigail.Dialogue.winter_Fri}}",
+        "winter_Fri6": "{{i18n:Abigail.Dialogue.winter_Fri6}}",
+        "winter_Sat": "{{i18n:Abigail.Dialogue.winter_Sat}}",
+        "winter_Sat6": "{{i18n:Abigail.Dialogue.winter_Sat6}}",
+        "winter_Sun": "{{i18n:Abigail.Dialogue.Drawing_Pretext}}#$q abigail_drawing_good/abigail_drawing_same Drawing_Followup#{{i18n:Abigail.Dialogue.Drawing_Question}}#$r abigail_drawing_good 20 Drawing_Good#{{i18n:Abigail.Dialogue.Drawing_Response1}}#$r abigail_drawing_same 5 Drawing_Same#{{i18n:Abigail.Dialogue.Drawing_Response2}}#$r abigail_drawing_good -50 Drawing_Bad#{{i18n:Abigail.Dialogue.Drawing_Response3}}",
+        "winter_Sun10": "{{i18n:Abigail.Dialogue.winter_Sun10}}",
+        "winter_1": "{{i18n:Abigail.Dialogue.winter_1}}",
+        "winter_7": "{{i18n:Abigail.Dialogue.winter_7}}",
+        "winter_24": "{{i18n:Abigail.Dialogue.winter_24}}",
+
+        // Dialogues for Abigail Questions
+
+        "Death_Afterlive": "{{i18n:Abigail.Dialogue.Death_Afterlive}}",
+        "Death_Ghost": "{{i18n:Abigail.Dialogue.Death_Ghost}}",
+        "Death_Nothing": "{{i18n:Abigail.Dialogue.Death_Nothing}}",
+        "Death_Followup": "$p abigail_death_afterlive#{{i18n:Abigail.Dialogue.Death_Followup.1}}|{{i18n:Abigail.Dialogue.Death_Followup.2}}",
+
+        "Vacation_Boring": "{{i18n:Abigail.Dialogue.Vacation_Boring}}",
+        "Vacation_Wonderfull": "{{i18n:Abigail.Dialogue.Vacation_Wonderfull}}",
+        "Vacation_Followup": "$p abigail_vacation_boring#{{i18n:Abigail.Dialogue.Vacation_Followup.1}}|{{i18n:Abigail.Dialogue.Vacation_Followup.2}}",
+
+        "Hair_NewColor": "{{i18n:Abigail.Dialogue.Hair_New}}",
+        "Hair_OldColor": "{{i18n:Abigail.Dialogue.Hair_Old}}",
+        "Hair_WildColor": "{{i18n:Abigail.Dialogue.Hair_Wildcolor}}",
+        "Hair_Followup": "$p abigail_hair_newColor#{{i18n:Abigail.Dialogue.Hair_Followup.1}}|{{i18n:Abigail.Dialogue.Hair_Followup.2}}",
+
+        "Drawing_Good": "{{i18n:Abigail.Dialogue.Drawing_Good}}",
+        "Drawing_Same": "{{i18n:Abigail.Dialogue.Drawing_Same}}",
+        "Drawing_Bad": "{{i18n:Abigail.Dialogue.Drawing_Bad}}",
+        "Drawing_Followup": "$p abigail_drawing_good#{{i18n:Abigail.Dialogue.Drawing_Followup.1}}|{{i18n:Abigail.Dialogue.Drawing_Followup.2}}",
+
+        // Diaperchange to Abigail
 
         "Change_Diaper_Accept_BabyPrint": "{{i18n:Abigail.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"abigail\" \"baby print diaper\"#$b#%{{i18n:Abigail.Change_Diaper.Accept_BabyPrint_Post}}",
         "Change_Diaper_Accept_Lavender": "{{i18n:Abigail.Change_Diaper.Accept_Lavender}}#$action CHANGE_DIAPER_OTHERS \"abigail\" \"lavender pullups\"#$b#%{{i18n:Abigail.Change_Diaper.Accept_Lavender_Post}}",
@@ -13,10 +182,153 @@
         "Change_Diaper_Refuse": "{{i18n:Abigail.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Abigail.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Abigail.Change_Diaper.Refuse_UsedBad}}]",
         "Change_Diaper_Followup": "{{i18n:Abigail.Change_Diaper.Followup}}",
 
+        // Diaperchange from Abigail
+
         "Diaper_Change_Accept": "{{i18n:Abigail.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"abigail\" \"joja diaper\" \"stinky pants\"#$h",
         "Diaper_Change_Refuse": "{{i18n:Abigail.Diaper_Change.Refuse}}",
         "Diaper_Change_Followup": "{{i18n:Abigail.Diaper_Change.Followup}}"
       }
-		}
-	]
+    },
+
+    {
+      "LogName": "Abigail Marriage",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueAbigail",
+      "Entries": {
+
+        "Indoor_Day_0": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Day_0}}",
+        "Indoor_Day_1": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Day_1}}#$action GIVE_UNDERWEAR \"space diaper\" \"3\"",
+        "Indoor_Day_2": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Day_2}}",
+        "Indoor_Day_3": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Day_3}}",
+        "Indoor_Day_4": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Day_4}}",
+        //--ADD COOLDOWN TRIGGER TO THIS LINE
+        "Indoor_Day_Abigail": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Day_Abigail}} [TRIGGER]",
+
+
+        "Indoor_Night_0": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Night_0}}",
+        "Indoor_Night_1": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Night_1}}",
+        "Indoor_Night_2": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Night_2}} [199 218 219 727 730]$1",
+        "Indoor_Night_3": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Night_3}}",
+        "Indoor_Night_4": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Night_4}}",
+        //---ADD ACCIDENT TRIGGER TO THIS LINE:
+        "Indoor_Night_Abigail": "{{i18n:Abigail.Dialogue_Marriage.Indoor_Night_Abigail.1}}#$action DIAPER_CHANGE \"abigail\" \"space diaper\"#{{i18n:Abigail.Dialogue_Marriage.Indoor_Night_Abigail.2}}",
+
+
+        "Rainy_Day_0": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Day_0}}",
+        "Rainy_Day_1": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Day_1}}",
+        "Rainy_Day_2": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Day_2}}",
+        //---ADD COOLDOWN TRIGGERS TO THIS LINE:
+        "Rainy_Day_3": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Day_3}} [TRIGGER]",
+        //---ADD COOLDOWN TRIGGER TO THIS LINE
+        "Rainy_Day_4": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Day_2}} [TRIGGER]",
+        "Rainy_Day_Abigail": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Day_Abigail}}",
+
+        "Rainy_Night_0": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Night_0}}",
+        "Rainy_Night_1": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Night_1}}",
+        "Rainy_Night_2": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Night_2}}",
+        //---ADD COOLDOWN TRIGGERS TO THIS LINE:
+        "Rainy_Night_3": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Night_3}}",
+        "Rainy_Night_4": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Night_4}}",
+        "Rainy_Night_Abigail": "{{i18n:Abigail.Dialogue_Marriage.Rainy_Night_Abigail}}",
+
+        "patio_Abigail": "{{i18n:Abigail.Dialogue_Marriage.patio_Abigail}}",
+        "spouseRoom_Abigail": "{{i18n:Abigail.Dialogue_Marriage.spouseRoom_Abigail}}",
+
+        "Outdoor_0": "{{i18n:Abigail.Dialogue_Marriage.Outdoor_0}}",
+        "Outdoor_1": "{{i18n:Abigail.Dialogue_Marriage.Outdoor_1}}",
+        "Outdoor_2": "{{i18n:Abigail.Dialogue_Marriage.Outdoor_2}}",
+        "Outdoor_3": "{{i18n:Abigail.Dialogue_Marriage.Outdoor_3}}",
+        //---ADD COOLDOWN TRIGGERS TO THIS LINE:
+        "Outdoor_4": "{{i18n:Abigail.Dialogue_Marriage.Outdoor_4}} [TRIGGER]",
+        "Outdoor_Abigail": "{{i18n:Abigail.Dialogue_Marriage.Outdoor_Abigail}}",
+
+
+        "funLeave_Abigail": "{{i18n:Abigail.Dialogue_Marriage.funLeave_Abigail}}",
+        "funReturn_Abigail": "{{i18n:Abigail.Dialogue_Marriage.funReturn_Abigail}}",
+
+
+        "OneKid_3": "{{i18n:Abigail.Dialogue_Marriage.OneKid_3}}",
+        "TwoKids_0": "{{i18n:Abigail.Dialogue_Marriage.TwoKids_0}}",
+        "TwoKids_2": "{{i18n:Abigail.Dialogue_Marriage.TwoKids_2}}",
+        "TwoKids_3": "{{i18n:Abigail.Dialogue_Marriage.TwoKids_3}}",
+
+
+        "Good_1": "{{i18n:Abigail.Dialogue_Marriage.Good_1}}",
+        "Good_2": "{{i18n:Abigail.Dialogue_Marriage.Good_2}}",
+        "Good_3": "{{i18n:Abigail.Dialogue_Marriage.Good_3}}",
+        "Good_4": "{{i18n:Abigail.Dialogue_Marriage.Good_4}}",
+        "Good_5": "{{i18n:Abigail.Dialogue_Marriage.Good_5}}",
+        "Good_6": "{{i18n:Abigail.Dialogue_Marriage.Good_6}}",
+        "Good_7": "{{i18n:Abigail.Dialogue_Marriage.Good_7}}",
+
+
+        "Neutral_0": "{{i18n:Abigail.Dialogue_Marriage.Neutral_0}}",
+        "Neutral_1": "{{i18n:Abigail.Dialogue_Marriage.Neutral_1}}",
+        "Neutral_6": "{{i18n:Abigail.Dialogue_Marriage.Neutral_6}}",
+        "Neutral_7": "{{i18n:Abigail.Dialogue_Marriage.Neutral_7}}",
+        "Neutral_8": "{{i18n:Abigail.Dialogue_Marriage.Neutral_8}}",
+        "Neutral_9": "{{i18n:Abigail.Dialogue_Marriage.Neutral_9}}",
+
+        "Bad_7": "{{i18n:Abigail.Dialogue_Marriage.Bad_7}}",
+        "Bad_8": "{{i18n:Abigail.Dialogue_Marriage.Bad_8}}",
+        "Bad_9": "{{i18n:Abigail.Dialogue_Marriage.Bad_9}}",
+
+
+        //------SPRING--------
+
+        "spring_1": "{{i18n:Abigail.Dialogue_Marriage.spring_1}}",
+        "spring_2": "{{i18n:Abigail.Dialogue_Marriage.spring_2}}",
+        "spring_4": "{{i18n:Abigail.Dialogue_Marriage.spring_4}}",
+        "spring_12": "{{i18n:Abigail.Dialogue_Marriage.spring_12}}",
+        "spring_23": "{{i18n:Abigail.Dialogue_Marriage.spring_23}}",
+        "spring_25": "{{i18n:Abigail.Dialogue_Marriage.spring_25}}",
+
+        //------SUMMER--------
+
+        "summer_1": "{{i18n:Abigail.Dialogue_Marriage.summer_1}}",
+        //---ADD COOLDOWN TRIGGERS TO THIS LINE:
+        "summer_4": "{{i18n:Abigail.Dialogue_Marriage.summer_4}}",
+        "summer_7": "{{i18n:Abigail.Dialogue_Marriage.summer_7}}",
+        "summer_12": "{{i18n:Abigail.Dialogue_Marriage.summer_12}}",
+        "summer_18": "{{i18n:Abigail.Dialogue_Marriage.summer_18}}",
+
+        //---ADD COOLDOWN TRIGGER TO THIS LINE:
+        "summer_23": "{{i18n:Abigail.Dialogue_Marriage.summer_23}}",
+        "summer_28": "{{i18n:Abigail.Dialogue_Marriage.summer_28}}",
+
+        //-------FALL-------
+
+        "fall_1": "{{i18n:Abigail.Dialogue_Marriage.fall_1}}",
+        "fall_2": "{{i18n:Abigail.Dialogue_Marriage.fall_2}}",
+        "fall_8": "{{i18n:Abigail.Dialogue_Marriage.fall_8}}",
+        "fall_16": "{{i18n:Abigail.Dialogue_Marriage.fall_16}}",
+        "fall_26": "{{i18n:Abigail.Dialogue_Marriage.fall_26}}",
+        "fall_28": "{{i18n:Abigail.Dialogue_Marriage.fall_28}}#$b#$action GIVE_UNDERWEAR \"space diaper\"",
+
+
+        //-------WINTER--------
+
+        "winter_1": "{{i18n:Abigail.Dialogue_Marriage.winter_1}}",
+        "winter_2": "{{i18n:Abigail.Dialogue_Marriage.winter_2}}",
+        "winter_7": "{{i18n:Abigail.Dialogue_Marriage.winter_7}}",
+        "winter_15": "{{i18n:Abigail.Dialogue_Marriage.winter_15}}#$e#$action GIVE_UNDERWEAR \"space diaper\" \"2\"",
+        "winter_24": "{{i18n:Abigail.Dialogue_Marriage.winter_24}}",
+        "winter_28": "{{i18n:Abigail.Dialogue_Marriage.winter_28}}",
+
+
+        //5% chance each day.
+
+        //---ADD WET ACCIDENT TRIGGER TO THIS LINE:
+        "spring_Abigail": "{{i18n:Abigail.Dialogue_Marriage.spring_Abigail}}",
+
+        //---ADD COOLDOWN TRIGGERS TO THIS LINE:
+        "summer_Abigail": "{{i18n:Abigail.Dialogue_Marriage.summer_Abigail}}",
+
+        "fall_Abigail": "{{i18n:Abigail.Dialogue_Marriage.fall_Abigail}}",
+
+        //---ADD COOLDOWN TRIGGERS TO THIS LINE:
+        "winter_Abigail": "{{i18n:Abigail.Dialogue_Marriage.winter_Abigail}}"
+      }
+    }
+  ]
 }

@@ -1,0 +1,13 @@
+{
+  // Dialogues for Sebastian
+
+  "Sebastian.Dialogue.Diaper_Question": "Das ist vieleicht eine komische Frage...#$b#Brauchst du aktuell deine Windel wirklich?",
+  "Sebastian.Dialogue.Diaper_Response1": "... Ja, das tue ich...",
+  "Sebastian.Dialogue.Diaper_Response2": "Ja, Ich brauche sie f�r meine Unf�lle.",
+  "Sebastian.Dialogue.Diaper_Response3": "Nein, Ich mag sie einfach nur.",
+
+  "Sebastian.Dialogue.Diaper_Yes": "Oh...#$b#Ok, ich hoffe dir ist das jetz nich zu peinlich.#$b#Ich finde es eigentlich ganz niedlich$4",
+  "Sebastian.Dialogue.Diaper_No": "Wirklich?#$b#Ich dachte mir schon das das der Fall ist#$e#Wow$4",
+  "Sebastian.Dialogue.Diaper_Followup": "${In deinen Windeln siehst du aus wie ein kleiner Junge.$1^In deinen Windeln siehst du aus wie ein kleines M�dchen.$1}$Ich hoffe, du bist nicht ver�rgert wenn ich dich nach deinen Windeln frage.$2"
+
+}

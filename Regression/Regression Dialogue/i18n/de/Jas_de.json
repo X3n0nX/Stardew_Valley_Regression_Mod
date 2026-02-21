@@ -1,0 +1,83 @@
+{
+  // Dialogues for Jas
+
+  "Jas.Dialogue.Introduction": "...$u#$b#Hi...$u",
+
+  "Jas.Dialogue.spring_Mon": "Oh...Are you looking for Aunt Marnie?$u|%You notice Jas doing a potty dance before she catches you watching.#$b#%She freezes in place and blushes hard. You can hear a soft hiss.#$e#U-hmmm...$2",
+  "Jas.Dialogue.spring_Mon8": "It's fun to live on a farm.$h|%You notice Jas doing a potty dance before she catches you watching. She stops to smile and wave at you.#$b#%Her eyes suddenly widen and a blush spreads across her cheeks as you hear a soft hiss, but she doesn't seem too concerned.#$e#Hi @!",
+  "Jas.Dialogue.spring_Tue6": "You can play with my dolls if you want to. Just make sure to brush their hair when you're done.|Hi @. Can I show you something?#$b#%Jas holds up a well loved lamb plushie she was playing with.#$b#This is Bethany. She's my favorite!",
+  "Jas.Dialogue.spring_Wed2": "...Hi.$u|Vincent doesn't try to use the potty like I do.$3#$b#He's gross.",
+  "Jas.Dialogue.spring_Wed6": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Vincent told me he likes using his diapers.$3#$e#I do too, but I'm a big girl, so I'm trying to use the potty like I'm supposed to.",
+  "Jas.Dialogue.spring_Wed10": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Vincent told me he likes using his diapers.#$e#I do too, but I'm a big girl, so I'm trying to use the potty like I'm supposed to.$3#$b#It's not very fun. I wish I wasn't supposed to...$2",
+  "Jas.Dialogue.spring_Thu": "I'm not supposed to talk to strangers...$u|%Jas is quietly sucking her thumb until she notices you nearby. She quickly puts her hands at her side and blushes.#$e#?$2",
+  "Jas.Dialogue.spring_Thu4": "Miss Penny is teaching me how to write in cursive.|%Jas is quietly sucking her thumb. She smiles when she notices you nearby and waves with her freehand.",
+  "Jas.Dialogue.spring_Fri2": "Do you like my bow? It would probably look cute on you too!",
+  "Jas.Dialogue.spring_Sat8": "I had an accident at the library yesterday...$3#$b#I told Miss Penny it was Vincent though, so I got away with it.$1#$e#I'm very clever.$4",
+  "Jas.Dialogue.spring_Sun6": "Shane's gone a lot, and Aunt Marnie is busy all the time... so I'm thankful for all my toys.$h#$e#Do you want to play with me? We could play house!",
+  "Jas.Dialogue.spring_12_1": "The egg festival is tomorrow!$1#$e#I don't want to win the egg hunt, I only want to get some chocolate.",
+  "Jas.Dialogue.spring_12_2": "The egg festival is tomorrow!$1#$e#I don't want to win the egg hunt, I only want to get some chocolate.",
+
+  "Jas.Dialogue.summer_Mon8": "It's fun to live on a farm.$h|I'm a big girl, see!$1#$b#%Jas lifts her skirt up high to show off her pull ups. She seems very proud.#$e#Told you.$4",
+  "Jas.Dialogue.summer_Wed4": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Aunt Marnie says I'm a big girl even if I have accidents sometimes.",
+  "Jas.Dialogue.summer_Wed8": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|I'm a big girl and big girls use the potty when they have to go.#$b#It's really hard though, and I still have accidents...$2#$e#Vincent doesn't have to worry about the potty...$3",
+  "Jas.Dialogue.summer_Thu6": "Miss Penny is teaching me how to write in cursive.|Yesterday, Miss Penny walked away to talk to Mr. Gunther and then Vincent pooped his diaper on purpose!#$b#He told me I should do it too, but I didn't because I'm a big girl and I only get poopy on accident now.$4",
+  "Jas.Dialogue.summer_Fri2": "Uhm... @? Do you know where Aunt Marn...!$3#$b#%Jas blushes while suddenly holding very still.#$e#Uhm... N-never mind...$2",
+  "Jas.Dialogue.summer_Fri6": "@? Do you know where Aunt Marn...!$3#$b#%Jas blushes while suddenly holding very still. After a bit she sighs and smiles up at you.#$e#Never mind, I don't have to go anymore.",
+  "Jas.Dialogue.summer_Fri10": "@? Do you know where Aunt Marn...!$3#$b#%Jas blushes as her knees seem to bend on their own. After a bit she sighs and smiles up at you.#$e#Never mind, I don't have to go anymore.#$e#%Jas doesn't seem to mind the smell coming from her pull ups.",
+  "Jas.Dialogue.summer_Sat4": "I didn't make it to the potty yesterday and Aunt Marnie said that pull ups are only for girls who are trying to use the potty.$3#$e#I'm going try real hard today because I am a big girl!",
+  "Jas.Dialogue.summer_Sun6": "Can you keep a secret? Sometimes I go potty in my pull up on purpose when I'm playing.#$b#It's more fun than having to stop playing!$1",
+  "Jas.Dialogue.summer_Sun10": "Can you keep a secret?#$b#%Jas glances around before grunting softly, pushing a mess into her pull ups. She looks up at you with a relieved smile and a deep blush.#$b#Oops!$1",
+  "Jas.Dialogue.summer_3_1": "It's my birthday tomorrow! Aunt Marnie always gets me pink cake. It's my favorite!$1",
+  "Jas.Dialogue.summer_3_2": "It's my birthday tomorrow! Aunt Marnie always gets me pink cake. It's my favorite!$1",
+
+  "Jas.Dialogue.fall_Mon": "Oh...Are you looking for Aunt Marnie?$u|%You notice Jas doing a potty dance before she catches you watching.#$b#%She freezes in place and blushes hard. You can hear a soft hiss.#$e#U-hmmm...$2",
+  "Jas.Dialogue.fall_Mon8": "It's fun to live on a farm.$h|%You notice Jas doing a potty dance before she catches you watching. She stops to smile and wave at you.#$b#%Her eyes suddenly widen and a blush spreads across her cheeks as you hear a soft hiss, but she doesn't seem too concerned.#$e#Hi @!",
+  "Jas.Dialogue.fall_Tue6": "You can play with my dolls if you want to. Just make sure to brush their hair when you're done.|Hi @. Can I show you something?#$b#%Jas holds up a well loved lamb plushie she was playing with.#$b#This is Bethany. She's my favorite!",
+  "Jas.Dialogue.fall_Wed2": "...Hi.$u|Vincent doesn't try to use the potty like I do.$3#$b#He's gross.",
+  "Jas.Dialogue.fall_Wed6": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Vincent told me he likes using his diapers.$3#$e#I do too, but I'm a big girl, so I'm trying to use the potty like I'm supposed to.",
+  "Jas.Dialogue.fall_Wed10": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Vincent told me he likes using his diapers.#$e#I do too, but I'm a big girl, so I'm trying to use the potty like I'm supposed to.$3#$b#It's not very fun. I wish I wasn't supposed to...$2",
+  "Jas.Dialogue.fall_Thu": "I'm not supposed to talk to strangers...$u|%Jas is quietly sucking her thumb until she notices you nearby. She quickly puts her hands at her side and blushes.#$e#?$2",
+  "Jas.Dialogue.fall_Thu4": "Miss Penny is teaching me how to write in cursive.|%Jas is quietly sucking her thumb. She smiles when she notices you nearby and waves with her freehand.",
+  "Jas.Dialogue.fall_Fri2": "Do you like my bow? It would probably look cute on you too!",
+  "Jas.Dialogue.fall_Sat8": "I had an accident at the library yesterday...$3#$b#I told Miss Penny it was Vincent though, so I got away with it.$1#$e#I'm very clever.$4",
+  "Jas.Dialogue.fall_Sun6": "Shane's gone a lot, and Aunt Marnie is busy all the time... so I'm thankful for all my toys.$h#$e#Do you want to play with me? We could play house!",
+  "Jas.Dialogue.fall_15_1": "I'm excited for the fair tomorrow. Last year Shane won me a whole bunch of toys!",
+  "Jas.Dialogue.fall_15_2": "I'm excited for the fair tomorrow. Last year Shane won me a whole bunch of toys!",
+  "Jas.Dialogue.fall_26_1": "I'm going to do the whole maze tomorrow and I'm going going to be scared once!",
+  "Jas.Dialogue.fall_26_2": "I'm going to do the whole maze tomorrow and I'm going going to be scared once!",
+
+  "Jas.Dialogue.winter_Mon8": "It's fun to live on a farm.$h|I'm a big girl, see!$1#$b#%Jas lifts her skirt up high to show off her pull ups. She seems very proud.#$e#Told you.$4",
+  "Jas.Dialogue.winter_Wed4": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|Aunt Marnie says I'm a big girl even if I have accidents sometimes.",
+  "Jas.Dialogue.winter_Wed8": "Aunt Marnie won't let me go out after 6 o'clock. It's not fair!$s|I'm a big girl and big girls use the potty when they have to go.#$b#It's really hard though, and I still have accidents...$2#$e#Vincent doesn't have to worry about the potty...$3",
+  "Jas.Dialogue.winter_Thu6": "Miss Penny is teaching me how to write in cursive.|Yesterday, Miss Penny walked away to talk to Mr. Gunther and then Vincent pooped his diaper on purpose!#$b#He told me I should do it too, but I didn't because I'm a big girl and I only get poopy on accident now.$4",
+  "Jas.Dialogue.winter_Fri2": "Uhm... @? Do you know where Aunt Marn...!$3#$b#%Jas blushes while suddenly holding very still.#$e#Uhm... N-never mind...$2",
+  "Jas.Dialogue.winter_Fri6": "@? Do you know where Aunt Marn...!$3#$b#%Jas blushes while suddenly holding very still. After a bit she sighs and smiles up at you.#$e#Never mind, I don't have to go anymore.",
+  "Jas.Dialogue.winter_Fri10": "@? Do you know where Aunt Marn...!$3#$b#%Jas blushes as her knees seem to bend on their own. After a bit she sighs and smiles up at you.#$e#Never mind, I don't have to go anymore.#$e#%Jas doesn't seem to mind the smell coming from her pull ups.",
+  "Jas.Dialogue.winter_Sat4": "I didn't make it to the potty yesterday and Aunt Marnie said that pull ups are only for girls who are trying to use the potty.$3#$e#I'm going try real hard today because I am a big girl!",
+  "Jas.Dialogue.winter_Sun6": "Can you keep a secret? Sometimes I go potty in my pull up on purpose when I'm playing.#$b#It's more fun than having to stop playing!$1",
+  "Jas.Dialogue.winter_Sun10": "Can you keep a secret?#$b#%Jas glances around before grunting softly, pushing a mess into her pull ups. She looks up at you with a relieved smile and a deep blush.#$b#Oops!$1",
+  "Jas.Dialogue.winter_22_1": "I finally got the perfect gift for my secret friend. I want to tell them what I got so bad!$1#$b#But then it wouldn't be a secret.$4",
+  "Jas.Dialogue.winter_22_2": "I finally got the perfect gift for my secret friend. I want to tell them what I got so bad!$1#$b#But then it wouldn't be a secret.$4",
+
+  // Diaperchange to Jas
+
+  "Jas.Change_Diaper.Accept_BabyPrint": "*Du Kniest dich hin und zeigst Jas eine Windel mit Baby Motiven* Neeiin! Ich bin ein großes Mädchen! Ich kann schon aufs Töpfchen gehen... manchmal! *Sie sieht verärgert aus, aber muss gewickelt werden*$3#$b#%Du wickelst Jas in eine frische Windel mit Baby Motiven während sie ein wenig quengelt.#$b#...$3#$b#Wollte Pullups$2#$b#...$3",
+  "Jas.Change_Diaper.Accept_BabyPrint_Post": "Jas wirkt ein wenig unglücklich, aber wieder gut geschätz.",
+
+  "Jas.Change_Diaper.Accept_Training": "*Du Kniest dich hin und zeigst Jas ein paar Trainings Höschen.* Pullups!$1#$b#%Du ziehst Jas ein frisches Trainings Höschen an.$3#$b#Sag es nicht Tante Marn. Sie sagt, ich soll aufs Töpchen gehen wenn ich nicht wieder Windeln tragen möchte.$3",
+  "Jas.Change_Diaper.Accept_Training_Post": "Jas sieht glücklich aus. Sie wird es wahrscheinlich wieder nicht bis aufs Töpfchen schaffen, aber das ist schon in Ordnung.",
+
+  "Jas.Change_Diaper.Accept_Lavender": "*Du zeigst Jas ein paar Lavender Pullups. Sie sieht erst verwirrt aus, dann erkennt Sie sie aber* Oh, das sind die, die laut meiner Tante sehr teuer sind!$0#$b#%Ohne große Mühe ziehst du ihr die Lavender Pullups an.$3#$b#Yey! Sie sind kuschlig und sehen super süß aus!$4",
+  "Jas.Change_Diaper.Accept_Lavender_Post": "Jas wird sie wahrscheinlich nicht lange trocken halten, aber sie sieht glücklich aus.",
+
+  "Jas.Change_Diaper.Accept_BigKids": "Oh! Unterhosen für wirklich große Kinder! Tante Marn sagt, die bekomme ich wenn meine Pullups trocken bleiben, aber das kann ich jetzt schon!$1#$b#%Du ziehst Jas die Unterhosen für große Kinder an.#$b#Das muss ich Vincent sagen! Er wird sich so freuen! *Sie wirkt aufgeregt*$1",
+  "Jas.Change_Diaper.Accept_BigKids_Post": "Marnie würde sich aufregen wenn Sie Jas in ihren schmutzigen Sachen sieht. Etwas, was wahrscheinlich schon bald eintreten wird...",
+
+  "Jas.Change_Diaper.Accept_Dinos": "Mmm, das sind Dinos! Ich glaube die sind für Jungs. *Jas sieht ein wenig enttäuscht über das Design aus*$2#$b#%Du ziehst Jas die Dinosaurier Unterhosen an.#$b#Ich bin ein richtiges Mädchen!$2#$b#%Jas sieht wirklich sehr enttäuscht aus, aber Schlussendlich ist sie wieder trocken.",
+  "Jas.Change_Diaper.Accept_Dinos_Post": "Du fragst dich ob der Schutz ausreichend ist während Jas davon läuft als hätte sie Frösche in ihrer Unterhose.",
+
+  "Jas.Change_Diaper.Refuse_Pretext": "Ist schon gut, ich bin schon ein großes Mädchen!",
+  "Jas.Change_Diaper.Refuse_SlightlyWet": "was Jas wahrscheinlich nicht ist, aber für den Moment muss sie nicht wirklich gewickelt werden... Noch nicht.",
+  "Jas.Change_Diaper.Refuse_UsedBad": "Du siehst wie Jas in ihrer vollen Windel davonwatschelt. Du jedenfalls, bist da anderer Meinung.",
+  "Jas.Change_Diaper.Followup": "..."
+}

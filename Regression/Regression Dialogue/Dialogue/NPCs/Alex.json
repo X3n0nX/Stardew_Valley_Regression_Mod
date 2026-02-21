@@ -1,0 +1,129 @@
+{
+  "Changes": [
+    {
+      "LogName": "Alex",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Entries": {
+
+        "Introduction": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Entering": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Leaving": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Wander": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Wander_2": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Shore": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Chair": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Towel": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Towel_2": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Towel_3": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort_Bar": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Resort": "{{i18n:Alex.Dialogue.Introduction}}",
+        "danceRejection": "{{i18n:Alex.Dialogue.Introduction}}",
+        "divorced": "{{i18n:Alex.Dialogue.Introduction}}",
+        "dumped_Guys": "{{i18n:Alex.Dialogue.Introduction}}",
+        "secondChance_Guys": "{{i18n:Alex.Dialogue.Introduction}}",
+        "breakUp": "{{i18n:Alex.Dialogue.Introduction}}",
+
+        "Mon": "{{i18n:Alex.Dialogue.Introduction}}",
+        "Tue": "{{i18n:Alex.Dialogue.Introduction}}",
+
+        "Wed": "Looks like a good day to play catch, huh?$u#$e#$q 5/6 Wed_01_old#I'd ask you to throw the ball around, but you don't really seem like the sports type.^If you weren't a girl I'd ask you to play catch.#$r 6 0 Wed_01_02#I'm fine just watching you from a distance.#$r 5 15 Wed_01_01#I want to play catch with you!#$r 5 0 Wed_01_03#(angry) What's that supposed to mean?",
+        "Wed_01_old": "#$p 5#Go long! ...just kidding. Hahaha.|I just wish I had someone to play catch with...$s",
+        "Wed_01_01": "Really? I guess I underestimated you.#$b#My arm's a little sore, but maybe next time.",
+        "Wed_01_02": "Yeah, some people just aren't made for sports.",
+        "Wed_01_03": "Uh... nevermind.",
+
+
+        "Thu": "{{i18n:Alex.Dialogue.Thu}}",
+        "Fri": "{{i18n:Alex.Dialogue.Fri}}",
+        "Sat": "{{i18n:Alex.Dialogue.Sat}}",
+        "Sun": "{{i18n:Alex.Dialogue.Sun}}",
+        "Sun2": "{{i18n:Alex.Dialogue.Sun2}}",
+        "Sun4": "{{i18n:Alex.Dialogue.Sun4}}",
+        "Fri4": "{{i18n:Alex.Dialogue.Fri4}}",
+        "Tue6": "{{i18n:Alex.Dialogue.Tue6}}",
+        "Mon8": "{{i18n:Alex.Dialogue.Mon8}}",
+        "Fri8": "{{i18n:Alex.Dialogue.Fri8}}",
+        "Sat10": "{{i18n:Alex.Dialogue.Sat10}}",
+
+
+        "Event_beach1": "{{i18n:Alex.Dialogue.Event_beach1}}",
+        "Event_beach2": "{{i18n:Alex.Dialogue.Event_beach2}}",
+        "Event_books1": "{{i18n:Alex.Dialogue.Event_books1}}",
+        "Event_books2": "{{i18n:Alex.Dialogue.Event_books2}}",
+        "Event_books3": "{{i18n:Alex.Dialogue.Event_books3}}",
+        "Event_box1": "{{i18n:Alex.Dialogue.Event_box1}}",
+        "Event_box2": "{{i18n:Alex.Dialogue.Event_box2}}",
+        "Event_box3": "{{i18n:Alex.Dialogue.Event_box3}}",
+        "Event_box4": "{{i18n:Alex.Dialogue.Event_box4}}",
+        "Event_parents1": "{{i18n:Alex.Dialogue.Event_parents1}}",
+        "Event_parents2": "{{i18n:Alex.Dialogue.Event_parents2}}",
+        "Event_parents3": "{{i18n:Alex.Dialogue.Event_parents3}}",
+
+
+        "summer_1": "{{i18n:Alex.Dialogue.summer_1}}",
+        "summer_Mon": "{{i18n:Alex.Dialogue.summer_Mon}}",
+        "summer_Tue": "{{i18n:Alex.Dialogue.summer_Tue}}",
+
+        "summer_Wed": "Hey farm guy, I've got a question for you.^Hey Farm girl, I've got a question for you.#$b#$q 52/53 summer_Wed_01_old#Do you think I'll ever turn pro?#$r 52 30 summer_Wed_01_01#You're destined to be a sports legend#$r 52 0 summer_Wed_01_02#Maybe, if you practice a lot#$r 53 -50 summer_Wed_01_03#No, you'll most likely fail and become a salesman",
+        "summer_Wed_01_old": "$p 52#Hey, when I turn pro you can say you were my first \"fan\". Not bad, huh?|Hey, I've been practicing twice as hard so I can turn pro and prove you wrong. You just wait.$a",
+        "summer_Wed_01_01": "Hey, now that's what I'm talking about!$h#$e#You're cooler than I thought.",
+        "summer_Wed_01_02": "Yeah, well I'm so good I'm not going to have to practice all that much.$u",
+        "summer_Wed_01_03": "That's insane. You're just jealous that I'm talented and popular and you're not.$a^That's ridiculous. You're just jealous that I'm way more popular than you'll ever be, freak.$a#$e#Get away from me.$a",
+
+        "summer_Thu": "{{i18n:Alex.Dialogue.summer_Thu}}",
+        "summer_Fri": "{{i18n:Alex.Dialogue.summer_Fri}}",
+        "summer_Sat": "{{i18n:Alex.Dialogue.summer_Sat}}",
+        "summer_Sun": "{{i18n:Alex.Dialogue.summer_Sun}}",
+        "summer_Sun4": "{{i18n:Alex.Dialogue.summer_Sun4}}",
+        "summer_Thu4": "{{i18n:Alex.Dialogue.summer_Thu4}}",
+        "summer_Mon4": "{{i18n:Alex.Dialogue.summer_Mon4}}",
+        "summer_Fri6": "{{i18n:Alex.Dialogue.summer_Fri6}}",
+        "summer_Wed8": "{{i18n:Alex.Dialogue.summer_Wed8}}",
+        "summer_Sat10": "{{i18n:Alex.Dialogue.summer_Sat10}}",
+
+
+        "fall_1": "{{i18n:Alex.Dialogue.fall_1}}",
+        "fall_Mon": "{{i18n:Alex.Dialogue.fall_Mon}}",
+
+        "fall_Wed": "Hey, I want to ask you something.^Hey, can I ask you something?#$e#$q 54/55 fall_Wed_01_old#Do you think the ladies like my haircut?^What do you think about my haircut?#$r 54 30 fall_Wed_01_01#It looks very fashionable.#$r 55 -30 fall_Wed_01_02#It looks like some kind of fungal growth.",
+        "fall_Wed_01_old": "I put too much gel in my hair today. It kind of hurts.#$e#Don't touch it!#$e#...what?",
+        "fall_Wed_01_01": "Yeah, I know. That's why I have it like this.",
+        "fall_Wed_01_02": "Yeah right. You're just jealous that I look so good.",
+
+        "fall_Thu": "{{i18n:Alex.Dialogue.fall_Thu}}",
+        "fall_Fri": "{{i18n:Alex.Dialogue.fall_Fri}}",
+        "fall_Sat": "{{i18n:Alex.Dialogue.fall_Sat}}",
+        "fall_Sun": "{{i18n:Alex.Dialogue.fall_Sun}}",
+        "fall_Thu2": "{{i18n:Alex.Dialogue.fall_Thu2}}",
+        "fall_Fri6": "{{i18n:Alex.Dialogue.fall_Fri6}}",
+        "fall_Mon4": "{{i18n:Alex.Dialogue.fall_Mon4}}",
+        "fall_Wed8": "{{i18n:Alex.Dialogue.fall_Wed8}}",
+        "fall_Thu10": "{{i18n:Alex.Dialogue.fall_Thu10}}",
+
+
+        "winter_1": "{{i18n:Alex.Dialogue.winter_1}}",
+        "winter_Mon": "{{i18n:Alex.Dialogue.winter_Mon}}",
+        "winter_Tue": "{{i18n:Alex.Dialogue.winter_Tue}}",
+        "winter_Tue_inlaw_Haley": "{{i18n:Alex.Dialogue.winter_Tue_inlaw_Haley}}",
+        "winter_Wed": "{{i18n:Alex.Dialogue.winter_Wed}}",
+        "winter_Thu": "{{i18n:Alex.Dialogue.winter_Thu}}",
+        "winter_Fri": "{{i18n:Alex.Dialogue.winter_Fri}}",
+        "winter_Sat": "{{i18n:Alex.Dialogue.winter_Sat}}",
+        "winter_Sun": "{{i18n:Alex.Dialogue.winter_Sun}}",
+        "winter_Fri4": "{{i18n:Alex.Dialogue.winter_Fri4}}",
+        "winter_Sat6": "{{i18n:Alex.Dialogue.winter_Sat6}}",
+        "winter_Tue4": "{{i18n:Alex.Dialogue.winter_Tue4}}",
+        "winter_Tue4_inlaw_Haley": "{{i18n:Alex.Dialogue.winter_Tue4_inlaw_Haley}}",
+        "winter_Wed8": "{{i18n:Alex.Dialogue.winter_Wed8}}",
+        "winter_Thu6": "{{i18n:Alex.Dialogue.winter_Thu6}}",
+        "winter_Thu10": "{{i18n:Alex.Dialogue.winter_Thu10}}"
+
+        // Dialogues for Alex Questions
+
+
+
+      }
+    }
+  ]
+}

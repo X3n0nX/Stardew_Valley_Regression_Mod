@@ -267,8 +267,8 @@ namespace PrimevalTitmouse
                   state.TryGetValue(KEY_DESCRIPTION, out desc) &&
                   state.TryGetValue(KEY_DISPLAY_NAME_DESCRIPTION, out desc_display_name))
                 {
-                    _description = desc;
-                    _display_name_description = desc_display_name;
+                    _description = Strings.tryGetI18nText(desc);
+                    _display_name_description = Strings.tryGetI18nText(desc_display_name);
                 }
                 else
                 {

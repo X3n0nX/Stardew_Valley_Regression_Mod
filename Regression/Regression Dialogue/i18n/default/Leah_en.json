@@ -1,0 +1,25 @@
+{
+  // Diaperchange to Leah
+
+  "Leah.Change_Diaper.Accept_BabyPrint": "Insert Text",
+  "Leah.Change_Diaper.Accept_BabyPrint_Post": "Leah seams very angry.",
+
+  "Leah.Change_Diaper.Accept_Lavender": "Insert Text",
+  "Leah.Change_Diaper.Accept_Lavender_Post": "Insert Text",
+
+  "Leah.Change_Diaper.Accept_PawprintDiaper": "Insert Text",
+  "Leah.Change_Diaper.Accept_PawprintDiaper_Post": "Insert Text",
+
+  "Leah.Change_Diaper.Accept_HeartDiaper": "Insert Text",
+  "Leah.Change_Diaper.Accept_HeartDiaper_Post": "Insert Text",
+
+  "Leah.Change_Diaper.Refuse_Pretext": "Insert Text",
+  "Leah.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
+  "Leah.Change_Diaper.Refuse_UsedBad": "Insert Text",
+
+  // Diaperchange from Leah
+
+  "Leah.Diaper_Change.Accept": "%Leah changes you quick and professional",
+  "Leah.Diaper_Change.Refuse": "I am here if you change your mind.",
+  "Leah.Diaper_Change.Followup": "..."
+}

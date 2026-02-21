@@ -1,0 +1,33 @@
+{
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Gus change your underwear if there are dirty
+
+  "Villager_Reactions.Gus.Change.Dirty_Offer.1": "Oh du <armer/armes> <kleiner/kleines> <Junge/Mädchen>! Hat da wieder jemand vergessen auf Töpfchen zu gehen? Na komm. Jetz ziehen wir dir erst einmal diese nassen Sachen aus und du bekommst eine sch�ne warme Windel!$1",
+
+  // Gus friendship very nice
+
+  "Villager_Reactions.Gus.Soiled.Verynice.1": "Du hast es nicht ganz geschafft? Ist schon okay. Das ist nicht die schlimmste Sauerei, die ich hier gesehen habe, glaub mir.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.2": "Sieht aus, als wäre das eine Erleichterung, hah!$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.3": "Du konntest es nicht länger aushalten, was?",
+  "Villager_Reactions.Gus.Soiled.Verynice.4": "Junge, Junge, das wird ein verdammt anstrengender Windelwechsel.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.5": "So ist es gut, lass alles raus.",
+  "Villager_Reactions.Gus.Soiled.Verynice.6": "Wow, du wirkst ziemlich zufruieden.$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.7": "Wenigstens fühlt es sich gut an, eine Last loszuwerden...#$b#Auch wenn sie in der Hose ist, oder?$1",
+  "Villager_Reactions.Gus.Soiled.Verynice.8": "Machst du deinen eigenen Dünger, $FARMERNAME$?",
+  "Villager_Reactions.Gus.Soiled.Verynice.9": "You got any clean diapers? I always keep some spare in back for ya, just in case, pal.$1#$b#Well, you and anyone else who happens to need one.",
+
+  // Gus friendship nice
+
+  "Villager_Reactions.Gus.Soiled.Nice.1": "Würdest du dich bitte darum kümmern?#$b#Danke",
+  "Villager_Reactions.Gus.Soiled.Nice.2": "Du solltest wirklich gehen, denke ich!$1",
+  "Villager_Reactions.Gus.Soiled.Nice.3": "Sie haben es nicht ganz geschafft? Das ist in Ordnung, geh dich frisch machen. Der Saloon wird noch hier sein, wenn du zurückkommst..",
+  "Villager_Reactions.Gus.Soiled.Nice.4": "Ich hoffe, der Geruch ist eine schmutzige Windel und kein verfaulendes Essen im Hinterzimmer.!",
+
+  // Gus friendship mean
+
+  "Villager_Reactions.Gus.Soiled.Mean.1": "Könntest du dich darum kümmern, bevor es jemand anderen stört, Kumpel?$2",
+  "Villager_Reactions.Gus.Soiled.Mean.2": "Ich habe schon genug sauber zu machen.$3"
+}

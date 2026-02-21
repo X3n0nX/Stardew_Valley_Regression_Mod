@@ -1,0 +1,68 @@
+{
+  //#########################################
+  // Potty Dialogs
+  //#########################################
+  /*
+
+      Pee:      npc pee
+      Poop:     npc poop
+
+      Fail:     npc fail to hold pee / poop  
+      Success:  npc success to hold pee / poop 
+
+      Pre:      message befor animation
+      Post:     message after animation
+
+      Exemple ID:
+
+      Pee.Fail.Pre    -> Message that will be shown, befor start of animation, if the npc faild to hold there pee -> befor there start to wet there underwear
+      Poop.Fail.Post  -> Message that will be shown, after the animation, if the npc faild to hold there poop -> after there mess there underwear
+
+  */
+
+  // Pee Fail
+
+  "Potty_Dialogs.Maru.Pee.Fail.Pre.1": "...",
+
+  "Potty_Dialogs.Maru.Pee.Fail.Post.1": "...",
+  "Potty_Dialogs.Maru.Pee.Fail.Post.2": "hu...",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Maru.Poop.Fail.Pre.1": "uh...",
+  "Potty_Dialogs.Maru.Poop.Fail.Pre.2": "nnn...",
+
+  "Potty_Dialogs.Maru.Poop.Fail.Post.1": "*kichert*",
+  "Potty_Dialogs.Maru.Poop.Fail.Post.2": "uuh...",
+  "Potty_Dialogs.Maru.Poop.Fail.Post.3": "nnnf...",
+
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // Maru change your underwear general offer
+
+  "Villager_Reactions.Maru.Change.General_Offer.Player.1.Pre": "Alles Trocken?",
+  "Villager_Reactions.Maru.Change.General_Offer.Player.1.Underwear_ok": "Hmm... aber komm wieder sollte sich das ändern.",
+
+  // You change Maru`s underwear general offer
+
+  "Villager_Reactions.Maru.Change.General_Offer.Npc.1.Pre": "Insert Text",
+  "Villager_Reactions.Maru.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+
+  // Maru change your underwear if there are dirty
+
+  "Villager_Reactions.Maru.Change.Dirty_Offer.1": "Du wirst dich noch erkälten, oder schlimmeres. Jetzt ziehen wir dir erst einmal diese <nassen&dreckigen> Sachen aus!$1",
+
+  // Maru friendship very nice
+
+  "Villager_Reactions.Maru.Soiled.Verynice.1": "Schon wieder? Wirklich, du kennst den Ablauf...$l",
+
+  // Maru friendship nice
+
+  "Villager_Reactions.Maru.Soiled.Nice.1": "Lass uns das professionell angehen. Leg dich bitte für mich aufs Bett?$0",
+
+  // Maru friendship mean
+
+  "Villager_Reactions.Maru.Soiled.Mean.1": "Inkontinenz, vermute ich?$4"
+}

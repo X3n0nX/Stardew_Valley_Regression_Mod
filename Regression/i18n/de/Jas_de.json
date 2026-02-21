@@ -1,0 +1,118 @@
+{
+  //#########################################
+  // Potty Dialogs
+  //#########################################
+  /*
+
+      Pee:      npc pee
+      Poop:     npc poop
+
+      Fail:     npc fail to hold pee / poop  
+      Success:  npc success to hold pee / poop 
+
+      Pre:      message befor animation
+      Post:     message after animation
+
+      Exemple ID:
+
+      Pee.Fail.Pre    -> Message that will be shown, befor start of animation, if the npc faild to hold there pee -> befor there start to wet there underwear
+      Poop.Fail.Post  -> Message that will be shown, after the animation, if the npc faild to hold there poop -> after there mess there underwear
+
+  */
+
+  // Pee Success
+
+  "Potty_Dialogs.Jas.Pee.Success.Pre.1": "muss ganz dringeng, jetzt!",
+  "Potty_Dialogs.Jas.Pee.Success.Pre.2": "Ich muss auf´s Töpfchen!",
+  "Potty_Dialogs.Jas.Pee.Success.Pre.3": "? oh!",
+  "Potty_Dialogs.Jas.Pee.Success.Pre.4": "pullern!",
+  "Potty_Dialogs.Jas.Pee.Success.Pre.5": "Ich muss Nummer 1",
+
+  "Potty_Dialogs.Jas.Pee.Success.Post.1": "Großes Mädchen!",
+  "Potty_Dialogs.Jas.Pee.Success.Post.2": "Super!",
+  "Potty_Dialogs.Jas.Pee.Success.Post.3": "Groß!",
+  "Potty_Dialogs.Jas.Pee.Success.Post.4": "habs ins Töpfchen gemacht!",
+
+  // Pee Fail
+
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.1": "ich muss...",
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.2": "ich muss..",
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.3": "pullern...",
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.4": "was... oh",
+  "Potty_Dialogs.Jas.Pee.Fail.Pre.5": "ich glaube...",
+
+  "Potty_Dialogs.Jas.Pee.Fail.Post.1": "Uh-Oh...",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.2": "...Uh",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.3": "Ahh...",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.4": "Aber... Ich bin doch ... ein großes Mädchen...",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.5": "Ich... hab nicht...",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.6": "Jetzt muss ich auch nicht mehr gegen",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.7": "... nass",
+  "Potty_Dialogs.Jas.Pee.Fail.Post.8": "Es ist zu spät...",
+
+  // Poop Success
+
+  "Potty_Dialogs.Jas.Poop.Success.Pre.1": "muss ganz dringeng, jetzt!",
+  "Potty_Dialogs.Jas.Poop.Success.Pre.2": "Nummer 2!",
+  "Potty_Dialogs.Jas.Poop.Success.Pre.3": "Hilfe! Schnell!",
+  "Potty_Dialogs.Jas.Poop.Success.Pre.4": "Ich muss ganz dringend!",
+  "Potty_Dialogs.Jas.Poop.Success.Pre.5": "Kann ich... bitte?!",
+
+  "Potty_Dialogs.Jas.Poop.Success.Post.1": "Groß!",
+  "Potty_Dialogs.Jas.Poop.Success.Post.2": "Hab es ins Töpfchen gemacht! Ganz alleine!",
+
+  // Poop Fail
+
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.1": "Nnnummer 2... nnh...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.2": "2, Num.. hnnn...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.3": "Mr... Mrs... nff...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.4": "Aww... ummh...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.5": "muss...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.6": "Nein, ooho, nnnff...",
+  "Potty_Dialogs.Jas.Poop.Fail.Pre.7": "Ich muss...",
+
+  "Potty_Dialogs.Jas.Poop.Fail.Post.1": "Kackie!",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.2": "Aber... Ich bin doch ... ein großer Mädchen...",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.3": "...iiihh...",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.4": "eeek... aww...",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.5": "neein... eklige Hose",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.6": "Ich muss nicht mehr",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.7": "Ich... hab nicht...",
+  "Potty_Dialogs.Jas.Poop.Fail.Post.8": "Das war ich nicht",
+
+  //#########################################
+  // Villager Reactions
+  //#########################################
+
+  // You change Jas`s underwear general offer
+
+  "Villager_Reactions.Jas.Change.General_Offer.Npc.1.Pre": "%Du fragst dich, ob Jas vieleicht gewickelt werden muss. Du prüfst es schnell und findest $NPC_INSPECT_UNDERWEAR_NAME$.",
+  "Villager_Reactions.Jas.Change.General_Offer.Npc.1.Underwear_ok": "Was? Nein.. Gerade bin ich kein großes Mädchen! Siehst du? Sauber!$3",
+
+  // Jas friendship very nice
+
+  "Villager_Reactions.Jas.Soiled.Verynice.1": "Nicht weinen, es ist okay, wenn kleine <Jungen/Mädchen> manchmal Unfälle haben.",
+  "Villager_Reactions.Jas.Soiled.Verynice.2": "Oh nein, hattest Du einen Unfall? Das ist okay, du kannst es das nächste Mal wieder versuchen.",
+  "Villager_Reactions.Jas.Soiled.Verynice.3": "Es ist okay, ich werde niemandem erzählen, dass du einen Unfall hattest $FARMERNAME$",
+  "Villager_Reactions.Jas.Soiled.Verynice.4": "Es ist ok $FARMERNAME$, auch ich hatte einen Unfall.$1",
+  "Villager_Reactions.Jas.Soiled.Verynice.5": "Ich kann dich watscheln sehen!$4",
+  "Villager_Reactions.Jas.Soiled.Verynice.6": "Hattest du einen Unfall? Schon gut, wenn du erst einmal wieder sauber bist, wird es dir besser gehen.",
+
+  // Jas friendship nice
+
+  "Villager_Reactions.Jas.Soiled.Nice.1": "*kichert* Oh oh!$1",
+  "Villager_Reactions.Jas.Soiled.Nice.2": "Du sollst das auf dem Töpfchen machen, weißt du.$4",
+  "Villager_Reactions.Jas.Soiled.Nice.3": "Soll ich Tante Marnie holen? Sie hilft mir immer, wenn ich einen Unfall habe.$3",
+
+  // Jas friendship mean
+
+  "Villager_Reactions.Jas.Soiled.Mean.1": "Oh... widerlich...$3",
+  "Villager_Reactions.Jas.Soiled.Mean.2": "Igitt$3",
+  "Villager_Reactions.Jas.Soiled.Mean.3": "..$2",
+
+  // Jas player pee/poop on ground
+
+  "Villager_Reactions.Jas.Ground.1": "Igitt!$3",
+  "Villager_Reactions.Jas.Ground.2": "Igitt! <Pinkle&Kacke> nicht hier!$3",
+  "Villager_Reactions.Jas.Ground.3": "...$2"
+}

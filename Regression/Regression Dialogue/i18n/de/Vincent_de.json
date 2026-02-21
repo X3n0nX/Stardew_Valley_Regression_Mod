@@ -1,0 +1,53 @@
+{
+  // Dialogues for Vincent
+
+  "Vincent.Dialogue.Introduction": "Oh, ein Fremder!  Mein Name ist Vincent.#$b#Meine Mutti sagt ich soll nicht mit Fremden sprechen... Aber du siehst in Ordnung aus.",
+
+  "Vincent.Dialogue.spring_Mon10": "I wanna be just like my big brother when I grow up!|I think I need my diaper changed, but I'm gonna wait until Mommy checks me.#$e#I don't mind being messy a bit longer!$1",
+  "Vincent.Dialogue.spring_Tue": "*sigh*... Mommy won't let me have any more gummies today.$s|I like it better when Miss Penny reads to us.",
+  "Vincent.Dialogue.spring_Tue10": "Don't tell Mommy... but you're my favorite grown-up.$h|I found a frog and put it in my diaper.#$b#It's a surprise for Mommy!$1#$e#%Vincent looks like he's being tickled.",
+  "Vincent.Dialogue.spring_Wed2": "I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|Mommy told me I can still be her little baby boy if I wasn't ready to grow up yet.#$e#I love my Mommy!$1",
+  "Vincent.Dialogue.spring_Thu": "I'm hungry... where's Mommy?$s|%You notice Vincent's diaper peeking out of his waistband.#$e#Hi @!$1",
+  "Vincent.Dialogue.spring_Thu6": "You're not as boring as most grown-ups!|%You notice Vincent's diaper peeking out of his waistband.#$b#%When he sees you he giggles and pats his crinkly bottom.",
+  "Vincent.Dialogue.spring_Thu10": "You're not as boring as most grown-ups!|%You notice Vincent's diaper peeking out of his waistband.#$b#%When he sees you he giggles and pats his crinkly bottom.#$e#%You just barely notice a squish.",
+  "Vincent.Dialogue.spring_Fri2": "Oh no... Mommy's making lentil soup tonight.$s|Sam says I'm still his cute little baby brother.#$e#%Vincent wiggles in glee.",
+  "Vincent.Dialogue.spring_Fri_inlaw_Sam": "Oh no... Mommy's making lentil soup tonight.$s|How's my brother doing?#$e#Can you tell him he can still borrow my stuffies if he wants?$3#$b#I don't want him to be scared.$2",
+  "Vincent.Dialogue.spring_Sat8": "Miss Penny makes me read a new book every week.$s|Jas pooped in her pull ups at the library yesterday!#$e#She blamed it on me and Ms. Penny believed her.$2#$e#I was pretty messy though.$3",
+  "Vincent.Dialogue.spring_Sun4": "Hi there!|I can tie my own shoes now, but sometimes I ask Mommy to do it for me anyway.#$e#I like how it makes her all smiley!$1",
+  "Vincent.Dialogue.spring_12_1": "The egg hunt is tomorrow! I'm gonna find so many!$1#$e#I'm a good finder.",
+  "Vincent.Dialogue.spring_12_2": "The egg hunt is tomorrow! I'm gonna find so many!$1#$e#I'm a good finder.",
+
+  "Vincent.Dialogue.summer_Mon4": "I wanna be just like my big brother when I grow up!|Jas only pretends to be a big girl.$3",
+  "Vincent.Dialogue.summer_Mon8": "I wanna be just like my big brother when I grow up!|Jas only pretends to be a big girl.$3#$e#Pull ups are basically just diapers anyway.",
+  "Vincent.Dialogue.summer_Tue": "*sigh*... Mommy won't let me have any more gummies today.$s|My teddy bear's name is Squishy.#$e#I like him a lot!$1",
+  "Vincent.Dialogue.summer_Tue_inlaw_Penny": "*sigh*... Mommy won't let me have any more gummies today.$s|Does Miss Penny change your diapers too?#$e#She says I gotta try and use the potty more, but if I do she won't change me anymore.$2",
+  "Vincent.Dialogue.summer_Wed10": "I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|@! I wanna show you something cool!#$e#%Vincent squats down shamelessly, grunting softly while you watch his pants droop.#$e#All done!$1",
+  "Vincent.Dialogue.summer_Thu6": "You're not as boring as most grown-ups!|Mommy wants me to try using the potty, but I don't wanna.$3#$b#It's scary, and I don't wanna be a big kid yet.$2",
+  "Vincent.Dialogue.summer_Fri2": "Ew, it's boiled beet night again...$s|%Vincent is sucking on his thumb and humming happily to himself.#$e#Hi @!$1",
+  "Vincent.Dialogue.summer_Fri10": "I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%Vincent is sucking on his thumb and humming happily to himself.#$e#%You notice him pause for a minute, his free hand resting on his diaper, a faint blush on his cheeks, and a little grin behind his thumb.#$e#Ahhhh.",
+  "Vincent.Dialogue.summer_Sat10": "Don't tell Mommy... but you're my favorite grown-up.$h|I found a frog and put it in my diaper.#$b#It's a surprise for Mommy!$1#$e#%Vincent looks like he's being tickled.",
+  "Vincent.Dialogue.summer_Sun2": "Miss Penny makes me read a new book every week.$s|Sometimes, when I'm bored, I like to play with my old baby toys.",
+
+  "Vincent.Dialogue.fall_Mon4": "I wanna be just like my big brother when I grow up!|Jas keeps bragging about being in pull ups.#$e#I miss when we were in diapers together.$2",
+  "Vincent.Dialogue.fall_Tue10": "*sigh*... Mommy won't let me have any more gummies today.$s|Wanna know a secret?#$e#I don't wanna stop wearing diapers.$3#$e#Mommy says it's okay if I'm not ready yet!$1",
+  "Vincent.Dialogue.fall_Wed": "I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%You notice Vincent's diaper peeking out of his waistband.",
+  "Vincent.Dialogue.fall_Wed6": "I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%You notice Vincent's diaper peeking out of his waistband.#$b#%When he sees you he giggles and pats his crinkly bottom.",
+  "Vincent.Dialogue.fall_Wed10": "I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%You notice Vincent's diaper peeking out of his waistband.#$b#%When he sees you he giggles and pats his crinkly bottom.#$e#%You just barely notice a squish.",
+  "Vincent.Dialogue.fall_Thu10": "You're not as boring as most grown-ups!|I think I need my diaper changed, but I'm gonna wait until Mommy checks me.#$e#I don't mind being messy a bit longer!$1",
+  "Vincent.Dialogue.fall_Fri4": "Oh no... Mommy's making lentil soup tonight.$s|I can tie my own shoes now, but sometimes I ask Mommy to do it for me anyway.#$e#I like how it makes her all smiley!$1",
+  "Vincent.Dialogue.fall_Sat6": "Miss Penny makes me read a new book every week.$s|Mommy told me I can still be her little baby boy if I wasn't ready to grow up yet.#$e#I love my Mommy!$1",
+  "Vincent.Dialogue.fall_Sun4": "Hi there!|Sam says I'm still his cute little baby brother.#$e#%Vincent wiggles in glee.",
+  "Vincent.Dialogue.fall_Sun_inlaw_Sam": "Hi there!|How's my brother doing?#$e#Can you tell him he can still borrow my stuffies if he wants?$3#$b#I don't want him to be scared.$2",
+
+  "Vincent.Dialogue.winter_Mon": "I wanna be just like my big brother when I grow up!|Jas only pretends to be a big girl.",
+  "Vincent.Dialogue.winter_Mon8": "I wanna be just like my big brother when I grow up!|Jas only pretends to be a big girl.$3#$e#Pull ups are basically just diapers anyway.",
+  "Vincent.Dialogue.winter_Tue10": "*sigh*... Mommy won't let me have any more gummies today.$s|%Vincent stares off for a moment and sighs in relief as a faint hiss reaches your ears.#$e#Just warmin' up!$1",
+  "Vincent.Dialogue.winter_Wed2": "I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%Vincent is sucking on his thumb and humming happily to himself.#$e#Hi @!$1",
+  "Vincent.Dialogue.winter_Wed10": "I wanna look for bugs, but Mommy gets mad when I'm all dirty.$u|%Vincent is sucking on his thumb and humming happily to himself.#$e#%You notice him pause for a minute, his free hand resting on his diaper, a faint blush on his cheeks, and a little grin behind his thumb.#$e#Ahhhh",
+  "Vincent.Dialogue.winter_Thu8": "You're not as boring as most grown-ups!|Mommy wants me to try using the potty, but I don't wanna.$3#$b#It's SO cold!$2",
+  "Vincent.Dialogue.winter_Fri": "Oh no... Mommy's making lentil soup tonight.$s|Sam said he'd make a snow man with me today!#$e#We're gonna have hot chocolate after too.",
+  "Vincent.Dialogue.winter_Sat10": "Don't tell Mommy... but you're my favorite grown-up.$h|@! I wanna show you something cool!#$e#%Vincent squats down shamelessly, grunting softly while you watch his pants droop.#$e#All done!$1",
+  "Vincent.Dialogue.winter_Sun": "Miss Penny makes me read a new book every week.$s|My teddy bear's name is Squishy.#$e#I like him a lot!$1",
+  "Vincent.Dialogue.winter_Sun_inlaw_Penny": "Miss Penny makes me read a new book every week.$s|Does Miss Penny change your diapers too?#$e#She says I gotta try and use the potty more, but if I do she won't change me anymore.$2"
+
+}
