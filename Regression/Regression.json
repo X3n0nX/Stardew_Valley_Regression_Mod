@@ -3791,8 +3791,8 @@
       "type": "{{i18n:Debuffs.Messy.Type",
       "description": [
         "{{i18n:Debuffs.Messy.Description.1}}",
-        "{{i18n:Debuffs.Messy.Description.1}}",
-        "{{i18n:Debuffs.Messy.Description.1}}"
+        "{{i18n:Debuffs.Messy.Description.2}}",
+        "{{i18n:Debuffs.Messy.Description.3}}"
       ]
     }
   },
