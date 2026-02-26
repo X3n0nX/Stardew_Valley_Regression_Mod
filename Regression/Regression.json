@@ -142,14 +142,14 @@
     "{{i18n:Poop.Ground.5}}"
   ],
   "Pee_Toilet": [
-    "{{18n:Pee.Toilet.1}}",
-    "{{18n:Pee.Toilet.2}}",
-    "{{18n:Pee.Toilet.3}}",
-    "{{18n:Pee.Toilet.4}}",
-    "{{18n:Pee.Toilet.5}}",
-    "{{18n:Pee.Toilet.6}}",
-    "{{18n:Pee.Toilet.7}}",
-    "{{18n:Pee.Toilet.8}}"
+    "{{i18n:Pee.Toilet.1}}",
+    "{{i18n:Pee.Toilet.2}}",
+    "{{i18n:Pee.Toilet.3}}",
+    "{{i18n:Pee.Toilet.4}}",
+    "{{i18n:Pee.Toilet.5}}",
+    "{{i18n:Pee.Toilet.6}}",
+    "{{i18n:Pee.Toilet.7}}",
+    "{{i18n:Pee.Toilet.8}}"
   ],
   "Poop_Toilet": [
     "{{i18n:Poop.Toilet.1}}",
@@ -2358,8 +2358,8 @@
         "{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Used.5}}"
       ],
       "check_player_mean": [
-        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Used.1}}",
-        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Used.2}}"
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Used.1}}",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Used.2}}"
       ],
       // You Pee/Poop on the ground near them
       "ground": [
