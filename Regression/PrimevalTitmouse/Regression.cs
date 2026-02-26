@@ -1059,7 +1059,23 @@ namespace PrimevalTitmouse
                     {
                         addUnderwearToShop(currentShopMenu, type, 5, 0.75f);
                     }
+                    type = "lil swabbies";
+                    if (allUnderwear.Contains(type))
+                    {
+                        addUnderwearToShop(currentShopMenu, type, 5, 0.8f);
+                    }
 
+                }
+                else if (Game1.currentLocation.Name == "Hospital")
+                {
+                    // The Hospital sells all kind of diapers with a little discount but no regular underware.
+                    foreach (string type in allUnderwear)
+                    {
+                        if (type.Contains("diaper") || type == "lavender pullups" || type == "training pants" || type == "lil swabbies")
+                        {
+                            addUnderwearToShop(currentShopMenu, type, 5, 0.9f);
+                        } 
+                    }                    
                 }
             }
             /*

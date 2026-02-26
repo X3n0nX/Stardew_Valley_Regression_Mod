@@ -341,5 +341,9 @@
   // heart diaper
 
   "Underwear_Options.Heart_Diaper.Name": "Herz Windel",
-  "Underwear_Options.Heart_Diaper.Description": "sehr dicke und weiche rosa Plastikwindel mit einem großen, bei nässe verblassenden, Herz auf der Vorderseite"
+  "Underwear_Options.Heart_Diaper.Description": "sehr dicke und weiche rosa Plastikwindel mit einem großen, bei nässe verblassenden, Herz auf der Vorderseite",
+
+  // lil swabbies
+  "Underwear_Options.Lil_Swabbies.Name": "Matrosen Windel",
+  "Underwear_Options.Lil_Swabbies.Description": "bauschige, hell blaue windel mit modischem Seefahrts Desing"
 }

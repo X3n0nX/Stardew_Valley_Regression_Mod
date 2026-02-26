@@ -3761,6 +3761,19 @@
       "dryingTime": 0,
       "removable": false,
       "durability": 0
+    },
+    "lil swabbies": {
+      "name": "{{i18n:Underwear_Options.Lil_Swabbies.Name}}",
+      "description": "{{i18n:Underwear_Options.Lil_Swabbies.Description}}",
+      "absorbency": 2300.0,
+      "containment": 2000.0,
+      "spriteIndex": 12,
+      "price": 40,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
     }
   },
   "Debuffs": {

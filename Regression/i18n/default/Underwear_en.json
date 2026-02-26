@@ -342,5 +342,9 @@
   // heart diaper
 
   "Underwear_Options.Heart_Diaper.Name": "heart diaper",
-  "Underwear_Options.Heart_Diaper.Description": "extremly thick and soft pink plastic diaper with a large fade-when-wet heart on the front"
+  "Underwear_Options.Heart_Diaper.Description": "extremly thick and soft pink plastic diaper with a large fade-when-wet heart on the front",
+
+  // lil swabbies
+  "Underwear_Options.Lil_Swabbies.Name": "lil swabbies",
+  "Underwear_Options.Lil_Swabbies.Description": "puffy light-blue diaper, sporting a fashionable sea-faring design"
 }
