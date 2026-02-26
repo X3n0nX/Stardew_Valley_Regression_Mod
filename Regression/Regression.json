@@ -2358,8 +2358,8 @@
         "{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Used.5}}"
       ],
       "check_player_mean": [
-        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Used.1}}",
-        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Used.2}}"
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Used.1}}",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Used.2}}"
       ],
       // You Pee/Poop on the ground near them
       "ground": [
