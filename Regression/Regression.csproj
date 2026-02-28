@@ -2,6 +2,9 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
+		<!-- Change these to update the manifest.json versions and zip file name automatically -->
+		<ModVersion>1.6.4</ModVersion>
+		<DialogueVersion>1.1.0</DialogueVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -22,27 +25,6 @@
 		<None Update="Assets\sprites.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-    <None Update="Data\ChangeData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\ConsumablesData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\GeneralData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\PeePoopData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\StatesContinenceData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\TypesData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\VillagerData.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
 		<None Update="config.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
@@ -126,6 +108,9 @@
 		</None>
 		<None Update="Regression Dialogue\i18n\de\Vincent_de.json">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Regression.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
     <None Update="manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -355,10 +340,13 @@
     <None Update="Regression Dialogue\Dialogue\i18n\de\Vincent_de.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Data\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="powershell rm -Recurse -Force  '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell New-Item -Path '$(TargetDir)' -Name &quot;Regression Mod.zip&quot; -ItemType &quot;file&quot; -Value &quot;DUMMY&quot; -Force&#xD;&#xA;powershell rm -Force   '$(TargetDir)\Regression Mod.zip'&#xD;&#xA;powershell mkdir '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell mkdir '$(TargetDir)\Regression Mod\Regression'&#xD;&#xA;powershell cp -Recurse -Force '$(TargetDir)\*' '$(TargetDir)\Regression Mod\Regression' -Exclude 'Regression Mod','Regression Dialogue'&#xD;&#xA;powershell cp -Recurse -Force '$(TargetDir)\Regression Dialogue' '$(TargetDir)\Regression Mod'&#xD;&#xA;powershell Compress-Archive '$(TargetDir)\Regression Mod' '$(TargetDir)\Regression Mod.zip' -Force" />
+		<Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)..\scripts\package.ps1&quot; -TargetDir &quot;$(TargetDir)\&quot; -ProjectDir &quot;$(ProjectDir)\&quot; -ModVersion &quot;$(ModVersion)&quot; -DialogueVersion &quot;$(DialogueVersion)&quot;" />
 	</Target>
 
 </Project>

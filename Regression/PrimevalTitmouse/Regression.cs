@@ -67,15 +67,16 @@ namespace PrimevalTitmouse
             monitor = Monitor;
             config = Helper.ReadConfig<Config>();
 
-            changeData = Helper.Data.ReadJsonFile<ChangeData>("Data/ChangeData.json");
-            consumablesData = Helper.Data.ReadJsonFile<ConsumablesData>("Data/ConsumablesData.json");
-            generalData = Helper.Data.ReadJsonFile<GeneralData>("Data/GeneralData.json");
-            statesContinenceData = Helper.Data.ReadJsonFile<StatesContinenceData>("Data/StatesContinenceData.json");
-            peePoopData = Helper.Data.ReadJsonFile<PeePoopData>("Data/PeePoopData.json");
-            typesData = Helper.Data.ReadJsonFile<TypesData>("Data/TypesData.json");
-            villagerData = Helper.Data.ReadJsonFile<VillagerData>("Data/VillagerData.json");
+            changeData = LoadData<ChangeData>("Data/ChangeData.json");
+            consumablesData = LoadData<ConsumablesData>("Data/ConsumablesData.json");
+            generalData = LoadData<GeneralData>("Data/GeneralData.json");
+            statesContinenceData = LoadData<StatesContinenceData>("Data/StatesContinenceData.json");
+            peePoopData = LoadData<PeePoopData>("Data/PeePoopData.json");
+            typesData = LoadData<TypesData>("Data/TypesData.json");
+            villagerData = LoadData<VillagerData>("Data/VillagerData.json");
 
             h.Events.GameLoop.Saving += new EventHandler<SavingEventArgs>(this.BeforeSave);
+            h.Events.GameLoop.Saved += new EventHandler<SavedEventArgs>(this.AfterSave);
             h.Events.GameLoop.DayStarted += new EventHandler<DayStartedEventArgs>(ReceiveAfterDayStarted);
             h.Events.GameLoop.OneSecondUpdateTicking += new EventHandler<OneSecondUpdateTickingEventArgs>(ReceiveUpdateTick);
             h.Events.GameLoop.TimeChanged += new EventHandler<TimeChangedEventArgs>(ReceiveTimeOfDayChanged);
@@ -325,7 +326,7 @@ namespace PrimevalTitmouse
             if (chestReplacement != null) jsonLoaded[configFile] = true;
 
             int locId = 0;
-            foreach (var location in Game1.locations)
+            foreach (var location in GetAllLocations())
             {
                 foreach (var obj in location.Objects.Values)
                 {
@@ -334,6 +335,10 @@ namespace PrimevalTitmouse
                     {
                         restoreItems(chest.Items, chestReplacement != null && chestReplacement.ContainsKey(id) ? chestReplacement[id] : null);
                     }
+                }
+                foreach (var furn in location.furniture.OfType<StorageFurniture>())
+                {
+                    restoreItems(furn.heldItems, null);
                 }
                 locId++;
             }
@@ -385,11 +390,12 @@ namespace PrimevalTitmouse
             {
                 var item = items[i];
                 // we have to access the type this way, because it's not yet of the correct class
-                if (item?.modData?.ContainsKey(Container.BuildKeyFor("name", Underwear.modDataKey)) == true)
+                if (item?.modData?.ContainsKey(Container.BuildKeyFor("type", Underwear.modDataKey)) == true)
                 {
                     var underwear = new Underwear();
                     underwear.modData.CopyFrom(item.modData);
                     underwear.Stack = item.Stack;
+                    underwear.rebuildFromModData();
                     items[i] = underwear;
                 }
             }
@@ -408,22 +414,37 @@ namespace PrimevalTitmouse
             if (config.WriteSaveFiles)
             {
                 int locId = 0;
-                foreach (var location in Game1.locations)
+                foreach (var location in GetAllLocations())
                 {
                     foreach (var obj in location.Objects.Values)
                     {
                         if (obj is Chest chest)
                         {
                             var id = string.Format("{0}-{1}-{2}", locId, obj.TileLocation.X, obj.TileLocation.Y);
-                            chestReplacements.Add(id, replaceItems(chest.Items));
+                            var replacements = replaceItems(chest.Items);
+                            if (replacements.Count > 0)
+                            {
+                                chestReplacements[id] = replacements;
+                            }
                         }
                     }
 
                     foreach (var furn in location.furniture.OfType<StorageFurniture>())
                     {
-                        Monitor.Log(string.Format("Found storage furniture {0}", furn.DisplayName), LogLevel.Info);
+                        replaceItems(furn.heldItems);
                     }
                     locId++;
+                }
+
+                foreach (var farmer in Game1.getAllFarmers())
+                {
+                    if (farmer != Game1.player) replaceItems(farmer.Items);
+                    
+                    if (farmer.ActiveObject is Underwear)
+                    {
+                        var underwear = farmer.ActiveObject as Underwear;
+                        farmer.ActiveObject = underwear.getReplacement() as StardewValley.Object;
+                    }
                 }
             }
             var invReplacements = config.WriteSaveFiles ? replaceItems(Game1.player.Items) : null;
@@ -448,6 +469,58 @@ namespace PrimevalTitmouse
             {
                 Helper.Data.WriteJsonFile(string.Format("{0}/{1}", Constants.SaveFolderName, configFile), config.WriteSaveFiles ? chestReplacements : null);
                 if (jsonLoaded.ContainsKey(configFile)) jsonLoaded.Remove(configFile);
+            }
+        }
+
+        private void AfterSave(object Sender, SavedEventArgs e)
+        {
+            if (!config.WriteSaveFiles) return;
+
+            foreach (var farmer in Game1.getAllFarmers())
+            {
+                restoreItems(farmer.Items);
+
+                if (farmer.ActiveObject != null)
+                {
+                    var activeList = new List<Item> { farmer.ActiveObject };
+                    restoreItems(activeList);
+                    farmer.ActiveObject = activeList[0] as StardewValley.Object;
+                }
+            }
+
+            foreach (var location in GetAllLocations())
+            {
+                foreach (var furn in location.furniture.OfType<StorageFurniture>())
+                {
+                    restoreItems(furn.heldItems);
+                }
+                foreach (var obj in location.Objects.Values)
+                {
+                    if (obj is Chest chest)
+                    {
+                        restoreItems(chest.Items);
+                    }
+                }
+            }
+        }
+
+        public static IEnumerable<GameLocation> GetAllLocations()
+        {
+            var visited = new HashSet<GameLocation>();
+            var queue = new Queue<GameLocation>(Game1.locations);
+            while (queue.Count > 0)
+            {
+                var loc = queue.Dequeue();
+                if (loc == null || visited.Contains(loc)) continue;
+                visited.Add(loc);
+                yield return loc;
+                if (loc.buildings != null)
+                {
+                    foreach (var b in loc.buildings)
+                    {
+                        if (b.indoors.Value != null) queue.Enqueue(b.indoors.Value);
+                    }
+                }
             }
         }
 
@@ -603,7 +676,8 @@ namespace PrimevalTitmouse
 
 
                 //If the underwear returned is not removable, destroy it
-                if (!oldUnderwear.container.washable)
+                bool returnDiaper = oldUnderwear.container.washable ? config.ReturnUsedCloth : config.ReturnUsedDisposable;
+                if (!returnDiaper)
                 {
                     var msg = Strings.InsertVariables(Strings.RandString(changeData.Change_Other_Destroyed), targetNpc.npc, oldUnderwear.container);
                     Animations.Warn(msg);
@@ -697,7 +771,8 @@ namespace PrimevalTitmouse
                 //body.ResetPants();
 
                 //If the underwear returned is not removable, destroy it
-                if (!oldUnderwear.container.washable)
+                bool returnDiaper = oldUnderwear.container.washable ? config.ReturnUsedCloth : config.ReturnUsedDisposable;
+                if (!returnDiaper)
                 {
                     Animations.Warn(changeData.Getting_Changed_Destroyed, body, oldUnderwear.container);
                 }
@@ -745,7 +820,8 @@ namespace PrimevalTitmouse
             //body.ResetPants();
 
             //If the underwear returned is not removable, destroy it
-            if (!oldUnderwear.container.washable)
+            bool returnDiaper = oldUnderwear.container.washable ? config.ReturnUsedCloth : config.ReturnUsedDisposable;
+            if (!returnDiaper)
             {
                 Animations.Warn(changeData.Getting_Changed_Destroyed, body, oldUnderwear.container);
             }
@@ -1251,7 +1327,8 @@ namespace PrimevalTitmouse
                         //body.ResetPants();
 
                         //If the underwear returned is not removable, destroy it
-                        if (!OldUnderwear.container.washable)
+                        bool returnDiaper = OldUnderwear.container.washable ? config.ReturnUsedCloth : config.ReturnUsedDisposable;
+                        if (!returnDiaper)
                         {
                             Animations.Warn(changeData.Change_Destroyed, body, OldUnderwear.container);
                         }
@@ -1418,6 +1495,22 @@ namespace PrimevalTitmouse
                 tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Main.Underwear_Change_Causes_Exposure.Tooltip}}"),
                 getValue: () => config.UnderwearChangeCauseExposure,
                 setValue: value => config.UnderwearChangeCauseExposure = value
+            );
+            // Return Used Cloth
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Main.Return_Used_Cloth.Name}}") ?? "Return Used Cloth",
+                tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Main.Return_Used_Cloth.Tooltip}}") ?? "Return used cloth diapers to inventory on change",
+                getValue: () => config.ReturnUsedCloth,
+                setValue: value => config.ReturnUsedCloth = value
+            );
+            // Return Used Disposable
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Main.Return_Used_Disposable.Name}}") ?? "Return Used Disposables",
+                tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Main.Return_Used_Disposable.Tooltip}}") ?? "Return used disposable diapers to inventory on change",
+                getValue: () => config.ReturnUsedDisposable,
+                setValue: value => config.ReturnUsedDisposable = value
             );
 
             configMenu.AddPageLink(
@@ -1687,8 +1780,8 @@ namespace PrimevalTitmouse
             {
                 int hours = time / 100;
                 int minutes = time % 100;
-                if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59)
-                    throw new ArgumentException($"Invalid time format: {time}. Expected HHMM with HH=00-23 and MM=00-59.");
+                if (hours < 0 || hours > 99 || minutes < 0 || minutes > 59)
+                    throw new ArgumentException($"Invalid time format: {time}. Expected HHMM with HH=00-99 and MM=00-59.");
                 return hours * 60 + minutes;
             }
 
@@ -1909,6 +2002,15 @@ namespace PrimevalTitmouse
         public Regression()
         {
             //base.Actor();
+        }
+        private T LoadData<T>(string path) where T : class
+        {
+            T data = Helper.Data.ReadJsonFile<T>(path);
+            if (data == null)
+            {
+                Monitor.Log($"Failed to load {path}. This will cause issues with mod functionality.", LogLevel.Error);
+            }
+            return data;
         }
     }
 }
