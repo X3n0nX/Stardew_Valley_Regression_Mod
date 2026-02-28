@@ -141,7 +141,7 @@ namespace PrimevalTitmouse
 
         public StardewValley.Object getReplacement()
         {
-            var saveObj = new StardewValley.Object("685", Stack, false, -1, 0);
+            var saveObj = new StardewValley.Object("428", Stack, false, -1, 0);
             saveObj.modData.CopyFrom(this.modData);
             return saveObj;
         }
@@ -162,6 +162,29 @@ namespace PrimevalTitmouse
                 return 1;
             return base.maximumStackSize();
         }
+
+        public void rebuildFromModData()
+        {
+            var c = this.container;
+            string t = c.type;
+            ContainerSubtype sub = c.subtype;
+            float w = c.wetness;
+            float m = c.messiness;
+            int d = c.durability;
+
+            string dryingTimeStr = "";
+            modData.TryGetValue(Container.BuildKeyFor("dryingTime", modDataKey), out dryingTimeStr);
+
+            Initialize(Container.GetTypeDefault(t, sub), Stack);
+
+            this.container.wetness = w;
+            this.container.messiness = m;
+            this.container.durability = d;
+            if (!string.IsNullOrEmpty(dryingTimeStr)) {
+                this.container.timeWhenDoneDrying = Container.parseDryingDate(dryingTimeStr);
+            }
+        }
+
 
         public void rebuild(Dictionary<string, string> data, object replacement)
         {

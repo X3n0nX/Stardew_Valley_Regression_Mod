@@ -715,6 +715,7 @@ namespace PrimevalTitmouse
             var nearby = NearbyVillager(b, mess, inUnderwear, overflow, attempt);
             foreach (var npc in nearby)
             {
+                if (!npc.IsVillager && !(npc is Horse) && !(npc is Pet)) continue;
                 if (npc.Age == 2 && !Regression.ChildrenAndDiapers) continue;
                 someoneNoticed = true;
 
@@ -757,9 +758,12 @@ namespace PrimevalTitmouse
                 if (stringList3.Count <= 0) continue;
 
                 //Construct and say Statement
-                npcName = npc.Name;
                 string npcStatement = Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
-                npcStatement = Strings.ReplaceNpcName(npcStatement, npcName);
+                if (npc is Horse || npc is Pet)
+                {
+                    npcStatement = npcName + " " + npcStatement;
+                }
+                npcStatement = Strings.ReplaceNpcName(npcStatement, npc.Name);
 
                 Regression.QueueAction(() =>
                 {

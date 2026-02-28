@@ -608,15 +608,28 @@ namespace PrimevalTitmouse
 
         public static string tryGetI18nText(string key)
         {
+            if (key == null) return null;
 
-            string pattern = @"\{\{i18n:(.*?)\}\}"; ;
+            string pattern = @"\{\{i18n:(.*?)\}\}";
             Regex regex = new Regex(pattern);
 
-            return regex.Replace(key, match =>
+            string result = regex.Replace(key, match =>
             {
                 string st = match.Groups[1].Value;
                 return Regression.help.Translation.Get(st);
             });
+
+            // Replace capacity tokens
+            if (Regression.config != null)
+            {
+                result = result.Replace("$MAX_BLADDER_CAPACITY$", Regression.config.MaxBladderCapacity.ToString());
+                result = result.Replace("$MAX_BOWEL_CAPACITY$", Regression.config.MaxBowelCapacity.ToString());
+                // Fallback for @ tokens as reported by user
+                result = result.Replace("@MAX_BLADDER_CAPACITY", Regression.config.MaxBladderCapacity.ToString());
+                result = result.Replace("@MAX_BOWEL_CAPACITY", Regression.config.MaxBowelCapacity.ToString());
+            }
+
+            return result;
         }
 
         public enum OldNew

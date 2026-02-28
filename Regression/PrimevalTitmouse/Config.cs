@@ -27,7 +27,8 @@
         public int StartBowelContinence = 90;
         public bool ReadSaveFiles = true;
         public bool WriteSaveFiles = false;
-
+        public bool ReturnUsedCloth = true;
+        public bool ReturnUsedDisposable = true;
         public int KeyGoInPants = 0;
         public int KeyPee = 112;
         public int KeyPoop = 113;
