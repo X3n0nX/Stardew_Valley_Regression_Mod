@@ -12,7 +12,7 @@ namespace PrimevalTitmouse
     {
       Debuff debuff;
 
-      if (string.IsNullOrEmpty(id) || !Regression.t.Debuffs.TryGetValue(id, out debuff))
+      if (string.IsNullOrEmpty(id) || !Regression.generalData.Debuffs.TryGetValue(id, out debuff))
       {
         this.debuff_id = "Regression.Wet";
         this._name = "Wet";

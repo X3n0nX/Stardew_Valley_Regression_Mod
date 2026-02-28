@@ -5,6 +5,7 @@ using System.Text.Json.Serialization;
 using System.Threading;
 using System.Xml.Serialization;
 using Netcode;
+using PrimevalTitmouse.Data;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Mods;
@@ -19,6 +20,8 @@ namespace PrimevalTitmouse
 
         private string modDataBaseKey; // comes from the parent
         private ModDataDictionary modDataDictionary; // also comes from the parent
+
+        private static TypesData typesData = Regression.typesData;
 
         private void save(string varName, string val)
         {
@@ -274,9 +277,9 @@ namespace PrimevalTitmouse
                 {
                     Container cont;
 
-                    if(Regression.t.Bed_Options.TryGetValue(type,out cont)) _innerContainer = GetTypeDefault(type, ContainerSubtype.Bed);
-                    else if((Regression.t.Pants_Options.TryGetValue(type, out cont))) _innerContainer = GetTypeDefault(type, ContainerSubtype.Pants);
-                    else if ((Regression.t.Underwear_Options.TryGetValue(type, out cont))) _innerContainer = GetTypeDefault(type, ContainerSubtype.Underwear);
+                    if(typesData.Type_Beds.TryGetValue(type,out cont)) _innerContainer = GetTypeDefault(type, ContainerSubtype.Bed);
+                    else if((typesData.Type_Pants.TryGetValue(type, out cont))) _innerContainer = GetTypeDefault(type, ContainerSubtype.Pants);
+                    else if ((typesData.Type_Underwears.TryGetValue(type, out cont))) _innerContainer = GetTypeDefault(type, ContainerSubtype.Underwear);
                     else _innerContainer = GetTypeDefault(type, ContainerSubtype.Underwear);
                 }
 
@@ -451,37 +454,20 @@ namespace PrimevalTitmouse
         public static Container GetTypeDefault(string type, ContainerSubtype subtype)
         {
             Container c = new Container();
-            /*
+
             switch (subtype)
             {
                 case ContainerSubtype.Bed:
-                    if (!Regression.t.Bed_Options.TryGetValue(type, out c))
+                    if (!typesData.Type_Beds.TryGetValue(type, out c))
                         throw new Exception(string.Format("Invalid bed choice: {0}", type));
                     break;
                 case ContainerSubtype.Pants:
-                    if (!Regression.t.Pants_Options.TryGetValue(type, out c))
-                        throw new Exception(string.Format("Invalid pants choice: {0}", type));
-                    break;               
-                case ContainerSubtype.Underwear:
-                default:
-                    if (!Regression.t.Underwear_Options.TryGetValue(type, out c))
-                        throw new Exception(string.Format("Invalid underwear choice: {0}", type));
-                    break;
-            }
-            */
-            switch (subtype)
-            {
-                case ContainerSubtype.Bed:
-                    if (!Regression.t.Bed_Options.TryGetValue(type, out c))
-                        throw new Exception(string.Format("Invalid bed choice: {0}", type));
-                    break;
-                case ContainerSubtype.Pants:
-                    if (!Regression.t.Pants_Options.TryGetValue(type, out c))
+                    if (!typesData.Type_Pants.TryGetValue(type, out c))
                         throw new Exception(string.Format("Invalid pants choice: {0}", type));
                     break;
                 case ContainerSubtype.Underwear:
                 default:
-                    if (!Regression.t.Underwear_Options.TryGetValue(type, out c))
+                    if (!typesData.Type_Underwears.TryGetValue(type, out c))
                         throw new Exception(string.Format("Invalid underwear choice: {0}", type));
                     break;
             }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using PrimevalTitmouse.Data;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Buffs;
@@ -44,23 +45,28 @@ namespace PrimevalTitmouse
         private static float maxBowelCapacity => (requiredCaloriesPerDay * foodToBowelConversion) / 1.4f / 1000f * Regression.config.MaxBowelCapacity; // The last 2 numbers usually end up as / 1200 * 1200 (cancle eachother out) to make configuration easier to understand 
         public static readonly float minBowelContinence = 0.4f; // Also describes capacity as changes are linear
 
+        private static ChangeData changeData = Regression.changeData;
+        private static ConsumablesData consumablesData = Regression.consumablesData;
+        private static PeePoopData peePoopData = Regression.peePoopData;
+        private static StatesContinenceData statesContinenceData = Regression.statesContinenceData;
+
         //Setup Thresholds and messages
         public static readonly float trainingThreshold = 0.5f; // we set a threshold that allowes for potty training, so that should also be the warning level, for the player to understand whats going on
         private static readonly float lastWarningThreshold = 0.8f; // with a minimum continence of 0.3, 0.8 is still warned about, as it would warn up to 0.7, while 0.69 is out of range (means only 1 warning)
         public static readonly float[] WETTING_THRESHOLDS = { trainingThreshold + 0.05f, 0.69f, lastWarningThreshold };
-        public static readonly string[][] WETTING_MESSAGES = { Regression.t.Bladder_Yellow, Regression.t.Bladder_Orange, Regression.t.Bladder_Red };
-        public static readonly string[] WETTING_MESSAGE_GREEN = Regression.t.Bladder_Green;
+        public static readonly string[][] WETTING_MESSAGES = { statesContinenceData.Bladder_Yellow, statesContinenceData.Bladder_Orange, statesContinenceData.Bladder_Red };
+        public static readonly string[] WETTING_MESSAGE_GREEN = statesContinenceData.Bladder_Green;
         public static readonly float[] MESSING_THRESHOLDS = { trainingThreshold + 0.05f, 0.69f, lastWarningThreshold };
-        public static readonly string[][] MESSING_MESSAGES = { Regression.t.Bowels_Yellow, Regression.t.Bowels_Orange, Regression.t.Bowels_Red };
-        public static readonly string[] MESSING_MESSAGE_GREEN = Regression.t.Bowels_Green;
+        public static readonly string[][] MESSING_MESSAGES = { statesContinenceData.Bowels_Yellow, statesContinenceData.Bowels_Orange, statesContinenceData.Bowels_Red };
+        public static readonly string[] MESSING_MESSAGE_GREEN = statesContinenceData.Bowels_Green;
         public static readonly float[] BLADDER_CONTINENCE_THRESHOLDS = { minBladderContinence, 0.55f, 0.65f, 0.8f, 1.0f };
-        public static readonly string[][] BLADDER_CONTINENCE_MESSAGES = { Regression.t.Bladder_Continence_Min, Regression.t.Bladder_Continence_Red, Regression.t.Bladder_Continence_Orange, Regression.t.Bladder_Continence_Yellow, Regression.t.Bladder_Continence_Green };
+        public static readonly string[][] BLADDER_CONTINENCE_MESSAGES = { statesContinenceData.Bladder_Continence_Min, statesContinenceData.Bladder_Continence_Red, statesContinenceData.Bladder_Continence_Orange, statesContinenceData.Bladder_Continence_Yellow, statesContinenceData.Bladder_Continence_Green };
         public static readonly float[] BOWEL_CONTINENCE_THRESHOLDS = { minBowelContinence, 0.55f, 0.65f, 0.8f, 1.0f };
-        public static readonly string[][] BOWEL_CONTINENCE_MESSAGES = { Regression.t.Bowel_Continence_Min, Regression.t.Bowel_Continence_Red, Regression.t.Bowel_Continence_Orange, Regression.t.Bowel_Continence_Yellow, Regression.t.Bowel_Continence_Green };
+        public static readonly string[][] BOWEL_CONTINENCE_MESSAGES = { statesContinenceData.Bowel_Continence_Min, statesContinenceData.Bowel_Continence_Red, statesContinenceData.Bowel_Continence_Orange, statesContinenceData.Bowel_Continence_Yellow, statesContinenceData.Bowel_Continence_Green };
         private static readonly float[] HUNGER_THRESHOLDS = { 0.0f, 0.25f };
-        private static readonly string[][] HUNGER_MESSAGES = { Regression.t.Food_None, Regression.t.Food_Low };
+        private static readonly string[][] HUNGER_MESSAGES = { statesContinenceData.Food_None, statesContinenceData.Food_Low };
         private static readonly float[] THIRST_THRESHOLDS = { 0.0f, 0.25f };
-        private static readonly string[][] THIRST_MESSAGES = { Regression.t.Water_None, Regression.t.Water_Low };
+        private static readonly string[][] THIRST_MESSAGES = { statesContinenceData.Water_None, statesContinenceData.Water_Low };
         private static readonly int wakeUpPenalty = 8;
         private static readonly Debuff MESSY_DEBUFF = new Debuff("Regression.Messy");
         private static readonly Debuff WET_DEBUFF = new Debuff("Regression.Wet");
@@ -580,13 +586,13 @@ namespace PrimevalTitmouse
 
             if (npcName != null)
             {
-                msg = Strings.RandString(Regression.t.Change_Underwear_by_Npc);
+                msg = Strings.RandString(changeData.Change_Underwear_by_Npc);
                 msg = Strings.ReplaceNpcName(msg, npcName);
                 
             }
             else
             {
-                msg = Strings.RandString(Regression.t.Change_Underwear);
+                msg = Strings.RandString(changeData.Change_Underwear);
             }
 
             msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null);
@@ -603,13 +609,13 @@ namespace PrimevalTitmouse
 
             if (npcName != null)
             {
-                msg = Strings.RandString(Regression.t.Change_Underwear_Pants_by_Npc);
+                msg = Strings.RandString(changeData.Change_Underwear_Pants_by_Npc);
                 msg = Strings.ReplaceNpcName(msg, npcName);           
             }
             else
             {
                 ResetPants(newPants: pantsNew,npcName: npcName);
-                msg = Strings.RandString(Regression.t.Change_Underwear_Pants);
+                msg = Strings.RandString(changeData.Change_Underwear_Pants);
             }
 
             msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null);
@@ -1044,7 +1050,7 @@ namespace PrimevalTitmouse
 
         private void _HandlePeeOverflow()
         {
-            Animations.Write(Regression.t.Pee_Overflow, this, null, Animations.peeAnimationTime);
+            Animations.Write(peePoopData.Pee_Overflow, this, null, Animations.peeAnimationTime);
 
             int defenseReduction = -Math.Max(Math.Min((int)(pants.wetness / pants.absorbency * 10.0), 10), 1);
 
@@ -1064,7 +1070,7 @@ namespace PrimevalTitmouse
 
         private void _HandlePoopOverflow()
         {
-            Animations.Write(Regression.t.Poop_Overflow, this, null, Animations.poopAnimationTime);
+            Animations.Write(peePoopData.Poop_Overflow, this, null, Animations.poopAnimationTime);
             float howMessy = pants.messiness / pants.containment;
             int speedReduction = howMessy >= 0.5 ? (howMessy > 1.0 ? -3 : -2) : -1;
             Buff buff = new Buff(id: MESSY_DEBUFF.debuff_id, displayName: MESSY_DEBUFF.name, effects: new BuffEffects()
@@ -1253,7 +1259,7 @@ namespace PrimevalTitmouse
 
             string itemName = item.Name;
             Consumable consumable;
-            if (Animations.Data.Consumables.TryGetValue(itemName, out consumable))
+            if (consumablesData.Consumables.TryGetValue(itemName, out consumable))
             {
                 this.AddWater(consumable.waterContent);
             }

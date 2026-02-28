@@ -27,6 +27,7 @@ using System.Runtime.CompilerServices;
 using System.Xml.Serialization;
 using xTile.Dimensions;
 using static StardewValley.Minigames.TargetGame;
+using PrimevalTitmouse.Data;
 
 namespace PrimevalTitmouse
 {
@@ -40,7 +41,15 @@ namespace PrimevalTitmouse
         public static IModHelper help;
         public static IMonitor monitor;
         public bool shiftHeld;
-        public static Data t;
+
+        public static ChangeData changeData;
+        public static ConsumablesData consumablesData;
+        public static GeneralData generalData;
+        public static PeePoopData peePoopData; 
+        public static StatesContinenceData statesContinenceData;
+        public static TypesData typesData;
+        public static VillagerData villagerData;
+
         public static Farmer who;
         //public static string dirtyEventToken = "dirtyEventToken";
         public static string generalEventToken = "generalEventToken";
@@ -57,8 +66,15 @@ namespace PrimevalTitmouse
 
             monitor = Monitor;
             config = Helper.ReadConfig<Config>();
-            //t = Helper.Data.ReadJsonFile<Data>(string.Format("{0}.json", (object)config.Lang)) ?? Helper.Data.ReadJsonFile<Data>("en.json");
-            t = Helper.Data.ReadJsonFile<Data>("Regression.json");
+
+            changeData = Helper.Data.ReadJsonFile<ChangeData>("Data/ChangeData.json");
+            consumablesData = Helper.Data.ReadJsonFile<ConsumablesData>("Data/ConsumablesData.json");
+            generalData = Helper.Data.ReadJsonFile<GeneralData>("Data/GeneralData.json");
+            statesContinenceData = Helper.Data.ReadJsonFile<StatesContinenceData>("Data/StatesContinenceData.json");
+            peePoopData = Helper.Data.ReadJsonFile<PeePoopData>("Data/PeePoopData.json");
+            typesData = Helper.Data.ReadJsonFile<TypesData>("Data/TypesData.json");
+            villagerData = Helper.Data.ReadJsonFile<VillagerData>("Data/VillagerData.json");
+
             h.Events.GameLoop.Saving += new EventHandler<SavingEventArgs>(this.BeforeSave);
             h.Events.GameLoop.DayStarted += new EventHandler<DayStartedEventArgs>(ReceiveAfterDayStarted);
             h.Events.GameLoop.OneSecondUpdateTicking += new EventHandler<OneSecondUpdateTickingEventArgs>(ReceiveUpdateTick);
@@ -589,7 +605,7 @@ namespace PrimevalTitmouse
                 //If the underwear returned is not removable, destroy it
                 if (!oldUnderwear.container.washable)
                 {
-                    var msg = Strings.InsertVariables(Strings.RandString(Regression.t.Change_Other_Destroyed), targetNpc.npc, oldUnderwear.container);
+                    var msg = Strings.InsertVariables(Strings.RandString(changeData.Change_Other_Destroyed), targetNpc.npc, oldUnderwear.container);
                     Animations.Warn(msg);
                 }
                 else if (!who.addItemToInventoryBool(oldUnderwear, false)) //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
@@ -683,7 +699,7 @@ namespace PrimevalTitmouse
                 //If the underwear returned is not removable, destroy it
                 if (!oldUnderwear.container.washable)
                 {
-                    Animations.Warn(Regression.t.Getting_Changed_Destroyed, body, oldUnderwear.container);
+                    Animations.Warn(changeData.Getting_Changed_Destroyed, body, oldUnderwear.container);
                 }
                 //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
                 else if (!who.addItemToInventoryBool(oldUnderwear, false))
@@ -731,7 +747,7 @@ namespace PrimevalTitmouse
             //If the underwear returned is not removable, destroy it
             if (!oldUnderwear.container.washable)
             {
-                Animations.Warn(Regression.t.Getting_Changed_Destroyed, body, oldUnderwear.container);
+                Animations.Warn(changeData.Getting_Changed_Destroyed, body, oldUnderwear.container);
             }
             //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
             else if (!who.addItemToInventoryBool(oldUnderwear, false))
@@ -928,7 +944,7 @@ namespace PrimevalTitmouse
                         break;
                     case SButton.F8:
                         config.Easymode = !config.Easymode;
-                        Animations.Write(config.Easymode ? Regression.t.EasyMode_On : Regression.t.EasyMode_Off, body);
+                        Animations.Write(config.Easymode ? generalData.EasyMode_On : generalData.EasyMode_Off, body);
                         break;
                     case SButton.S:
                         if (e.IsDown(SButton.LeftShift))
@@ -1146,11 +1162,11 @@ namespace PrimevalTitmouse
                                     if (!Regression.config.PantsChangeRequiresHome || body.InPlaceWithPants())
                                     {
                                         body.ResetPants();
-                                        Animations.Write(Regression.t.Change_At_Home, body);
+                                        Animations.Write(changeData.Change_At_Home, body);
                                     }
                                     else
                                     {
-                                        Animations.Write(Regression.t.Change_Requires_Home, body);
+                                        Animations.Write(changeData.Change_Requires_Home, body);
                                     }
 
                                     return;
@@ -1198,7 +1214,7 @@ namespace PrimevalTitmouse
 
                         if (Regression.config.PantsChangeRequiresHome && body.HasWetOrMessyDebuff() && !body.InPlaceWithPants())
                         {
-                            Animations.Write(Regression.t.Change_Requires_Pants, body);
+                            Animations.Write(changeData.Change_Requires_Pants, body);
                             return;
                         }
 
@@ -1237,7 +1253,7 @@ namespace PrimevalTitmouse
                         //If the underwear returned is not removable, destroy it
                         if (!OldUnderwear.container.washable)
                         {
-                            Animations.Warn(Regression.t.Change_Destroyed, body, OldUnderwear.container);
+                            Animations.Warn(changeData.Change_Destroyed, body, OldUnderwear.container);
                         }
                         //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
                         else if (!who.addItemToInventoryBool(OldUnderwear, false))

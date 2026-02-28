@@ -1,0 +1,346 @@
+{
+
+  // ########################################
+  // Types of beds
+  // ########################################
+
+  "Type_Beds": {
+    "bed": {
+      "name": "{{i18n:Bed_Options.Bed.Name}}",
+      "description": "{{i18n:Bed_Options.Bed.Description}}",
+      "absorbency": 2500.0,
+      "containment": 1000.0,
+      "spriteIndex": -1,
+      "price": 0,
+      "washable": true,
+      "plural": false,
+      "dryingTime": 2400,
+      "removable": false,
+      "durability": -1
+    }
+  },
+
+  // ########################################
+  // Types of pants
+  // ########################################
+
+  "Type_Pants": {
+    "blue jeans": {
+      "name": "{{i18n:Pants_Options.Blue_Jeans.Name}}",
+      "description": "{{i18n:Pants_Options.Blue_Jeans.Description}}",
+      "absorbency": 400.0,
+      "containment": 600.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    "skirt": {
+      "name": "{{i18n:Pants_Options.Skirt.Name}}",
+      "description": "{{i18n:Pants_Options.Skirt.Description}}",
+      "absorbency": 10.0,
+      "containment": 10.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    "toddler pants": {
+      "name": "{{i18n:Pants_Options.Toddler_Pants.Name}}",
+      "description": "{{i18n:Pants_Options.Toddler_Pants.Description}}",
+      "absorbency": 300.0,
+      "containment": 450.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    "toddler skirt": {
+      "name": "{{i18n:Pants_Options.Toddler_Skirt.Name}}",
+      "description": "{{i18n:Pants_Options.Toddler_Skirt.Description}}",
+      "absorbency": 10.0,
+      "containment": 10.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    "legs": {
+      "name": "{{i18n:Pants_Options.Legs.Name}}",
+      "description": "{{i18n:Pants_Options.Legs.Description}}",
+      "absorbency": 10.0,
+      "containment": 10.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": false,
+      "durability": -1
+    },
+
+    // ##########
+    // Spezial pants you can get from npc´s if you are messy
+    // ##########
+
+    // stinky pants you get if Abigail changes you
+    "stinky pants": {
+      "name": "{{i18n:Pants_Options.Stinky_Pants.Name}}",
+      "description": "{{i18n:Pants_Options.Stinky_Pants.Description}}",
+      "absorbency": 400.0,
+      "containment": 600.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    // sams old pants you get if Jodi or sam changes you
+    "sams old pants": {
+      "name": "{{i18n:Pants_Options.Sams_Old_Pants.Name}}",
+      "description": "{{i18n:Pants_Options.Sams_Old_Pants.Description}}",
+      "absorbency": 400.0,
+      "containment": 600.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    // second hand pants you get if Penny changes you
+    "second hand pants": {
+      "name": "{{i18n:Pants_Options.Second_Hand_Pants.Name}}",
+      "description": "{{i18n:Pants_Options.Second_Hand_Pants.Description}}",
+      "absorbency": 400.0,
+      "containment": 600.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    // self made pants you get if Emily changes you and you are male
+    "self made pants": {
+      "name": "{{i18n:Pants_Options.Self_Made_Pants.Name}}",
+      "description": "{{i18n:Pants_Options.Self_Made_Pants.Description}}",
+      "absorbency": 400.0,
+      "containment": 600.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    },
+    // self made skirt you get if Emily changes you and you are female
+    "self made skirt": {
+      "name": "{{i18n:Pants_Options.Self_Made_Skirt.Name}}",
+      "description": "{{i18n:Pants_Options.Self_Made_Skirt.Description}}",
+      "absorbency": 400.0,
+      "containment": 600.0,
+      "spriteIndex": -1,
+      "price": 2000,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": -1
+    }
+  },
+
+  // ########################################
+  // Types of underwears
+  // ########################################
+
+  "Type_Underwears": {
+    "black thong": {
+      "name": "{{i18n:Underwear_Options.Black_Thong.Name}}",
+      "description": "{{i18n:Underwear_Options.Black_Thong.Description}}",
+      "absorbency": 75.0,
+      "containment": 75.0,
+      "spriteIndex": 0,
+      "price": 120,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 300,
+      "removable": true,
+      "durability": 1
+    },
+    "polka dot panties": {
+      "name": "{{i18n:Underwear_Options.Polka_Dot_Panties.Name}}",
+      "description": "{{i18n:Underwear_Options.Polka_Dot_Panties.Description}}",
+      "absorbency": 120.0,
+      "containment": 350.0,
+      "spriteIndex": 1,
+      "price": 50,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 300,
+      "removable": true,
+      "durability": 3
+    },
+    "big kid undies": {
+      "name": "{{i18n:Underwear_Options.Big_Kid_Undies.Name}}",
+      "description": "{{i18n:Underwear_Options.Big_Kid_Undies.Description}}",
+      "absorbency": 120.0,
+      "containment": 350.0,
+      "spriteIndex": 2,
+      "price": 30,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 300,
+      "removable": true,
+      "durability": 4
+    },
+    "dinosaur undies": {
+      "name": "{{i18n:Underwear_Options.Dinosaur_Undies.Name}}",
+      "description": "{{i18n:Underwear_Options.Dinosaur_Undies.Description}}",
+      "absorbency": 400.0,
+      "containment": 600.0,
+      "spriteIndex": 3,
+      "price": 45,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 500,
+      "removable": true,
+      "durability": 8
+    },
+    "lavender pullups": {
+      "name": "{{i18n:Underwear_Options.Lavender_Pullups.Name}}",
+      "description": "{{i18n:Underwear_Options.Lavender_Pullups.Description}}",
+      "absorbency": 1550.0,
+      "containment": 1400.0,
+      "spriteIndex": 4,
+      "price": 20,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": true,
+      "durability": 0
+    },
+    "training pants": {
+      "name": "{{i18n:Underwear_Options.Training_Pants.Name}}",
+      "description": "{{i18n:Underwear_Options.Training_Pants.Description}}",
+      "absorbency": 850.0,
+      "containment": 1400.0,
+      "spriteIndex": 5,
+      "price": 60,
+      "washable": true,
+      "plural": true,
+      "dryingTime": 600,
+      "removable": true,
+      "durability": 6
+    },
+    "joja diaper": {
+      "name": "{{i18n:Underwear_Options.Joja_Diaper.Name}}",
+      "description": "{{i18n:Underwear_Options.Joja_Diaper.Description}}",
+      "absorbency": 1800.0,
+      "containment": 1400.0,
+      "spriteIndex": 6,
+      "price": 15,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "baby print diaper": {
+      "name": "{{i18n:Underwear_Options.Baby_Print_Diaper.Name}}",
+      "description": "{{i18n:Underwear_Options.Baby_Print_Diaper.Description}}",
+      "absorbency": 1500.0,
+      "containment": 1200.0,
+      "spriteIndex": 7,
+      "price": 12,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "cloth diaper": {
+      "name": "{{i18n:Underwear_Options.Cloth_Diaper.Name}}",
+      "description": "{{i18n:Underwear_Options.Cloth_Diaper.Description}}",
+      "absorbency": 1400.0,
+      "containment": 2600.0,
+      "spriteIndex": 8,
+      "price": 60,
+      "washable": true,
+      "plural": false,
+      "dryingTime": 1000,
+      "removable": false, // washable was redefined as the ability to take it off and wash. Removable controls if you can quickly get out of it (pull-up)
+      "durability": 6
+    },
+    "space diaper": {
+      "name": "{{i18n:Underwear_Options.Space_Diaper.Name}}",
+      "description": "{{i18n:Underwear_Options.Space_Diaper.Description}}",
+      "absorbency": 2700.0,
+      "containment": 2800.0,
+      "spriteIndex": 9,
+      "price": 30,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "pawprint diaper": {
+      "name": "{{i18n:Underwear_Options.Pawprint_Diaper.Name}}",
+      "description": "{{i18n:Underwear_Options.Pawprint_Diaper.Description}}",
+      "absorbency": 2700.0,
+      "containment": 2700.0,
+      "spriteIndex": 10,
+      "price": 35,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "heart diaper": {
+      "name": "{{i18n:Underwear_Options.Heart_Diaper.Name}}",
+      "description": "{{i18n:Underwear_Options.Heart_Diaper.Description}}",
+      "absorbency": 3400.0,
+      "containment": 3500.0,
+      "spriteIndex": 11,
+      "price": 50,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    },
+    "lil swabbies": {
+      "name": "{{i18n:Underwear_Options.Lil_Swabbies.Name}}",
+      "description": "{{i18n:Underwear_Options.Lil_Swabbies.Description}}",
+      "absorbency": 2300.0,
+      "containment": 2000.0,
+      "spriteIndex": 12,
+      "price": 40,
+      "washable": false,
+      "plural": false,
+      "dryingTime": 0,
+      "removable": false,
+      "durability": 0
+    }
+  }
+
+}

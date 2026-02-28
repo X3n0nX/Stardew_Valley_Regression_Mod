@@ -12,7 +12,7 @@ namespace PrimevalTitmouse
     private static bool letterShown = false;
     public static IModHelper helper;
     private static readonly string initialRegressionLetterTitle = "jodi_initial_regression";
-    private static string letterContents = Strings.tryGetI18nText(Regression.t.Jodi_Initial_Letter[0]);
+    private static string letterContents = Strings.tryGetI18nText(Regression.generalData.Jodi_Initial_Letter);
     private static List<Item> initialSupplies = new();
 
     public static void CheckMail()

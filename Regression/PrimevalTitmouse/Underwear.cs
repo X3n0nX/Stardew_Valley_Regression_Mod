@@ -240,7 +240,7 @@ namespace PrimevalTitmouse
 
         public class Single_State
         {
-            private readonly Dictionary<string, Dictionary<string, string>> UNDERWEAR_STATES = Regression.t.Underwear_States;
+            private readonly Dictionary<string, Dictionary<string, string>> UNDERWEAR_STATES = Regression.changeData.Underwear_States;
 
             private string _description;
             public string description

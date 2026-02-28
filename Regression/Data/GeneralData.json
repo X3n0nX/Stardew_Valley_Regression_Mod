@@ -1,0 +1,134 @@
+{
+  // ########################################
+  // General
+  // ########################################
+
+  "EasyMode_On": "{{i18n:General.EasyMode.On}}",
+  "EasyMode_Off": "{{i18n:General.EasyMode.Off}}",
+
+  // ########################################
+  // Letter from Jodi you get at the 
+  // start of a new game
+  // ########################################
+
+  "Jodi_Initial_Letter": "{{i18n:Jodi.Initial_Letter.1}}",
+
+  // ########################################
+  // what happend over night
+  // ########################################
+
+  "Night": {
+
+    // you go to toilett
+
+    "Toilet_Night": [
+      "{{i18n:Night.Toilett.1}}",
+      "{{i18n:Night.Toilett.2}}",
+      "{{i18n:Night.Toilett.3}}"
+    ],
+
+    // you sleep the whole night
+
+    "Sleep_All_Night": [
+      "{{i18n:Night.Sleep.1}}",
+      "{{i18n:Night.Sleep.2}}",
+      "{{i18n:Night.Sleep.3}}",
+      "{{i18n:Night.Sleep.4}}"
+    ],
+
+    // you had an accident at night
+
+    "Accident_At_Night": [
+      "{{i18n:Night.Accident.1}}",
+      "{{i18n:Night.Accident.2}}"
+    ],
+
+    // you can´t remove your underwear at night
+
+    "Underwear_Stuck": [
+      "{{i18n:Night.Underwear_Stuck.1}}",
+      "{{i18n:Night.Underwear_Stuck.2}}"
+    ]
+  },
+
+  // ########################################
+  // State of your underwear and bed
+  // after you woke up
+  // ########################################
+
+  // state of your underwear after you woke up
+
+  "Wake_Up_Underwear_State": [
+    "{{i18n:Woke_Up.Underwear.1}}"
+  ],
+
+  "Wet_Bed": [
+    "{{i18n:Woke_Up.Bed.Wet.1}}",
+    "{{i18n:Woke_Up.Bed.Wet.2}}",
+    "{{i18n:Woke_Up.Bed.Wet.3}}",
+    "{{i18n:Woke_Up.Bed.Wet.4}}",
+    "{{i18n:Woke_Up.Bed.Wet.5}}",
+    "{{i18n:Woke_Up.Bed.Wet.6}}"
+  ],
+  "Messed_Bed": [
+    "{{i18n:Woke_Up.Bed.Messed.1}}",
+    "{{i18n:Woke_Up.Bed.Messed.2}}",
+    "{{i18n:Woke_Up.Bed.Messed.3}}",
+    "{{i18n:Woke_Up.Bed.Messed.4}}",
+    "{{i18n:Woke_Up.Bed.Messed.5}}",
+    "{{i18n:Woke_Up.Bed.Messed.6}}",
+    "{{i18n:Woke_Up.Bed.Messed.7}}"
+  ],
+
+  // ########################################
+  // Washing bed and underwear
+  // ########################################
+
+
+  "Washing_Bedding": [
+    "{{i18n:Wash.Bedding.1}}"
+  ],
+  "Spot_Washing_Bedding": [
+    "{{i18n:Wash.Bedding.Spot.1}}"
+  ],
+  "Washing_Underwear": [
+    "{{i18n:Wash.Underwear.1}}"
+  ],
+  "Overwashed_Underwear": [
+    "{{i18n:Wash.Underwear.Overwash.1}}"
+  ],
+  "Bedding_Still_Wet": [
+    "Your bedding won't be dry until $BEDDING_DRYTIME$!"
+  ],
+
+  // ########################################
+  // Debuffs if you have a wet or messed your pants
+  // ########################################
+
+  "Debuffs": {
+    "Regression.Wet": {
+      "name": "{{i18n:Debuffs.Wet.Name}}",
+      "type": "{{i18n:Debuffs.Wet.Type}}",
+      "description": [
+        "{{i18n:Debuffs.Wet.Description.1}}",
+        "{{i18n:Debuffs.Wet.Description.2}}",
+        "{{i18n:Debuffs.Wet.Description.3}}"
+      ]
+    },
+    "Regression.Messy": {
+      "name": "{{i18n:Debuffs.Messy.Name",
+      "type": "{{i18n:Debuffs.Messy.Type",
+      "description": [
+        "{{i18n:Debuffs.Messy.Description.1}}",
+        "{{i18n:Debuffs.Messy.Description.2}}",
+        "{{i18n:Debuffs.Messy.Description.3}}"
+      ]
+    }
+  },
+
+  // message when you passby a npc with dirty underwear
+
+  "Passby": [
+    "{{i18n:Passby.1}}"
+  ]
+}

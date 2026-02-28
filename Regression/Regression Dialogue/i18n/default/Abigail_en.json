@@ -4,6 +4,42 @@
   //########################################
 
   "Abigail.Dialogue.Introduction": "Oh, that's right... I heard someone new was moving onto that old farm.#$e#It's kind of a shame, really. I always enjoyed exploring those overgrown fields by myself.$9",
+
+  "Abigail.Dialogue.AcceptGift_StardropTea": "Wow... the color is so beautiful, like an amethyst. Thanks!",
+  "Abigail.Dialogue.AcceptBirthdayGift_Positive": "Hey, you remembered my birthday... Thanks, @! This is really nice!$h",
+  "Abigail.Dialogue.AcceptBirthdayGift_Negative": "Hey, you remembered my birthday... Thanks, @!$h#$b#Oh, it's, uh... *sniff*... what is it?$s",
+  "Abigail.Dialogue.AcceptGift_BasiliskPaw": "Disgusting... I love it!$h",
+  "Abigail.Dialogue.AcceptGift_SkillBook_4": "Hey, this is my favorite magazine! My Dad won't let me have a subscription, so I have to get it on the black market like this...$h",
+  "Abigail.Dialogue.AcceptGift_Book_Void": "Whoa, that's a creepy looking book... I love it!#$b#*Flip* *flip* *flip*... Ooh... It's full of monsters...$h#$b#I'll have to study this before going into the caves... Thanks!",
+  "Abigail.Dialogue.AcceptGift_109": "Whoa... Where'd you find this? The workmanship is fascinating...#$b#It's a little too rusty to use, but I'll add it to my collection.",
+  "Abigail.Dialogue.AcceptGift_119": "This makes you wonder... Thousands of years ago, there was probably a little purple-haired cavewoman who played this flute, just like me.#$b#...I'll have to wash it before pressing it to my lips, though.$h",
+  "Abigail.Dialogue.AcceptGift_66": "$c 0.5#Wow... it's just my color! Thanks, @!$h#Thank you! This is my favorite stone. It's so pretty.",
+  "Abigail.Dialogue.AcceptGift_279": "Oh, wow... @! Are you sure you want to give this to me? It's so rare!#$b#I'll admit, my mouth is watering already...$h",
+  "Abigail.Dialogue.AcceptGift_351": "$query PLAYER_FRIENDSHIP_POINTS Current Abigail 1000#Hehe... Thanks, @.$4|U-Um... Haha, Th-thanks, I guess? Very... thoughtful of you?$4#$b#%Abigail tucks the bottle in her bag warily and steps away, but you think you see a blush creeping onto her face.#$b#*muttering* ...does ${he^she}$ really know I..? ...What a weird gift...$3",
+
+  //--------------
+
+  "Abigail.Dialogue.FlowerDance_Accept": "Hey, sure. Let's do it. We can be embarrassed together.$h",
+  "Abigail.Dialogue.FlowerDance_Accept_Spouse": "B... But... I wanted to dance with...$s#$b#...Just kidding! Of course I'm dancing with you. I love you.$h#$b#...Just try not to spring a leak, babe. *wink*",
+  "Abigail.Dialogue.FlowerDance_Decline": "That's flattering... but I'm gonna have to say no. Sorry.",
+
+  //--------------
+
+  "Abigail.Dialogue.dating_Abigail": "%Abigail is blushing, but she looks happy.",
+  "Abigail.Dialogue.dating_Abigail_memory_oneday": "...You're cute.$l",
+  "Abigail.Dialogue.dating_Abigail_memory_oneyear": "Uh... @? We've been dating for almost a year. Is this going anywhere?$s",
+  "Abigail.Dialogue.dating_Sebastian_memory_oneday": "I heard you and Sebastian started dating... I didn't realize you guys had a thing...$6",
+  "Abigail.Dialogue.dating_Sam": "Hey, I heard you and Sam got together... He's a really good guy!$h#$e#We've been friends for a long time. You'd better be good to him, or you'll see my bad side!",
+  "Abigail.Dialogue.married_Sebastian": "Congratulations on the marriage. I guess this means Sebastian won't be moving to the city like he always talked about.$6#$b#That'll be nice. I'd be kind of sad if I never saw him again. We've always been good friends.$6",
+  "Abigail.Dialogue.married_Sam": "Haha... I can't believe Sam is a married man, now. Who would've thought?$h#$e#Joking aside, I think he'll make a great father some day.",
+
+  "Abigail.Dialogue.divorced": "What are you doing here? Just leave me alone!$5",
+  "Abigail.Dialogue.dumped_Girls": "Don't talk to me!$5",
+  "Abigail.Dialogue.secondChance_Girls": "*sigh*... I can't stay mad at you anymore, @. Let's just move on with our lives.$2",
+  "Abigail.Dialogue.breakUp": "Oh... I... I understand. You see me as just a friend...$2#$b#I guess we weren't really a good match...$2",
+
+  //--------------
+
   "Abigail.Dialogue.Resort_Entering": "I hope a mermaid visits the beach.",
   "Abigail.Dialogue.Resort_Leaving": "I'm gonna ask Willy if we can take the scenic route back.",
   "Abigail.Dialogue.Resort_Leaving_2": "Maybe we'll see a sea monster on the way back.",
@@ -15,11 +51,8 @@
   "Abigail.Dialogue.Resort_Wander": "An island this big has got to be hiding some buried treasure.#$e#Quick, get me a shovel!#$e#Relax, I'm just kidding.$1",
   "Abigail.Dialogue.Resort_Bar": "Gus made me a dark purple refresher, to match my hair. It tastes great!$1",
   "Abigail.Dialogue.Resort": "Bummer... Willy says we have to stay on the beach...$2#$b#And I brought my sword and everything...$2",
-  "Abigail.Dialogue.danceRejection": "That's flattering... but I'm gonna have to say no. Sorry.",
-  "Abigail.Dialogue.divorced": "What are you doing here? Just leave me alone!$5",
-  "Abigail.Dialogue.dumped_Girls": "Don't talk to me!$5",
-  "Abigail.Dialogue.secondChance_Girls": "*sigh*... I can't stay mad at you anymore, @. Let's just move on with our lives.$2",
-  "Abigail.Dialogue.breakUp": "Oh... I... I understand. You see me as just a friend...$2#$b#I guess we weren't really a good match...$2",
+
+  //--------------
 
   "Abigail.Dialogue.Event_VideoGame_Yes": "Great! I'm sure you'll be able to beat this level with ease.$h",
   "Abigail.Dialogue.Event_VideoGame_No": "Oh? *sigh*... I guess I'll never get past this level, then...$s",
@@ -39,6 +72,24 @@
   "Abigail.Dialogue.Event_Cave_2": "I guess so... *hic*#$b#*sniffle*... M-Maybe I don't have to be a big girl right now...$4",
   "Abigail.Dialogue.Event_Cave_3": "*sniffle* Sh-shut up, dork! *giggle*... *hic*...$4.#$b#%...Abigail playfully knocks your shoulder, and wipes at her tears.",
 
+  //--------------
+
+  "Abigail.Dialogue.mineArea_10_oneday": "I heard you've been exploring the old mines. That sounds like fun!$h#$e#...I'm working up the courage to go there myself...$s",
+  "Abigail.Dialogue.eventSeen_733330_memory_oneday": "Sam and Sebastian asked me to play drums in their band... I've never played drums before, but it's actually pretty fun.#$e#You have to learn how to move your limbs to different rhythms, at the same exact time. I feel like my brain is growing.$h",
+  "Abigail.Dialogue.eventSeen_1_memory_oneweek": "Hey, I finally beat the first level of Journey Of The Prairie King! Watching you play helped a lot.",
+  "Abigail.Dialogue.eventSeen_2_memory_oneday": "Sebastian mentioned that he heard strange music while having dinner the other night...#$e#I didn't tell him it was us! It seemed better to keep it a mystery.$h",
+  "Abigail.Dialogue.eventSeen_3": "The spirits have a mind of their own...$l",
+  "Abigail.Dialogue.cc_Begin": "Don't tell anyone, but I snuck into the old community center last night... I think it's haunted!",
+  "Abigail.Dialogue.wonEggHunt": "Feeling pretty good about the egg hunt, huh? Well, next year you won't be so lucky...$u",
+  "Abigail.Dialogue.wonEggHunt_memory_oneyear": "I'm still mad that you beat me at the egg hunt last year. You'd better start practicing...",
+
+  "Abigail.Dialogue.GreenRain": "I want to go exploring, but I can tell my Mom is kind of worried. I don't want to add to her stress.",
+  "Abigail.Dialogue.GreenRainFinished": "And just like that, everything's back to normal. It's like magic!$h",
+  "Abigail.Dialogue.GreenRain_2": "Have you seen all the crazy trees around town? Everything looks so different... I feel like we're in a fairy world.",
+
+  "Abigail.Dialogue.movieTheater": "Did you hear about the new movie theater in town? I'm excited to check it out!$h",
+
+  //--------------
 
   "Abigail.Dialogue.Mon": "Oh, hey. Taking a break from work?",
   "Abigail.Dialogue.Mon2": "Oh, hi!#$e#Do you ever hang out at the cemetery? It's a peaceful place to spend some time alone.",
@@ -60,6 +111,7 @@
   "Abigail.Dialogue.Sun8": "Sometimes, I have to sneak out of my room in the dead of the night to go wash bedsheets or pants down in the river.#$e#I still havent run across any spooky ghosts, though...$2",
   "Abigail.Dialogue.4": "Oh, hi.",
 
+  //--------------
 
   "Abigail.Dialogue.spring_12": "I'm definitely going to enter the egg hunt tomorrow. Are you?",
   "Abigail.Dialogue.spring_23": "Well, tomorrow is the flower dance. Dancing is alright, but they make me wear this stupid white dress...$2",
@@ -125,7 +177,7 @@
   "Abigail.Dialogue.winter_Fri6": "I'm a little scared of trying to change my hair again...$8#$e#Everyone stares at it when it's like this... That makes it easier for me to keep certain other things secret.",
   "Abigail.Dialogue.winter_Sat": "It's the weekend!#$e#Hmm... Maybe I'll stay up extra late playing video games tonight...",
   "Abigail.Dialogue.winter_Sat6": "I still haven't beaten Journey of the Prairie King yet.#$e#I keep having... distractions... every time I manage to get a good run going.$4",
- "Abigail.Dialogue.winter_1": "Well, fall is over...$2#$e#But I like winter, too!$1",
+  "Abigail.Dialogue.winter_1": "Well, fall is over...$2#$e#But I like winter, too!$1",
   "Abigail.Dialogue.winter_7": "I wanna make a snowgoon tomorrow.",
   "Abigail.Dialogue.winter_24": "I'm going to eat so much cranberry sauce tomorrow.$1",
 

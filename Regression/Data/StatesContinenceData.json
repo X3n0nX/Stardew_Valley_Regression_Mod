@@ -1,0 +1,108 @@
+{
+  // ########################################
+  // Food and water states
+  // ########################################
+
+  "Food_Low": [
+    "{{i18n:Food.Low.1}}",
+    "{{i18n:Food.Low.2}}",
+    "{{i18n:Food.Low.3}}",
+    "{{i18n:Food.Low.4}}",
+    "{{i18n:Food.Low.5}}"
+  ],
+  "Food_None": [
+    "{{i18n:Food.None.1}}",
+    "{{i18n:Food.None.2}}",
+    "{{i18n:Food.None.3}}"
+  ],
+  "Water_Low": [
+    "{{i18n:Water.Low.1}}",
+    "{{i18n:Water.Low.2}}",
+    "{{i18n:Water.Low.3}}",
+    "{{i18n:Water.Low.4}}"
+  ],
+  "Water_None": [
+    "{{i18n:Water.None.1}}",
+    "{{i18n:Water.None.2}}",
+    "{{i18n:Water.None.3}}"
+  ],
+
+  // ########################################
+  // Bladder states
+  // ########################################
+
+  "Bladder_Green": [
+    "{{i18n:Bladder.Green.1}}",
+    "{{i18n:Bladder.Green.2}}"
+  ],
+  "Bladder_Yellow": [
+    "{{i18n:Bladder.Yellow.1}}",
+    "{{i18n:Bladder.Yellow.2}}",
+    "{{i18n:Bladder.Yellow.3}}",
+    "{{i18n:Bladder.Yellow.4}}"
+  ],
+  "Bladder_Orange": [
+    "{{i18n:Bladder.Orange.1}}",
+    "{{i18n:Bladder.Orange.2}}",
+    "{{i18n:Bladder.Orange.3}}",
+    "{{i18n:Bladder.Orange.4}}"
+  ],
+  "Bladder_Red": [
+    "{{i18n:Bladder.Red.1}}",
+    "{{i18n:Bladder.Red.2}}"
+  ],
+  "Bladder_Leak": [
+    "{{i18n:Bladder.Leak.1}}",
+    "{{i18n:Bladder.Leak.2}}",
+    "{{i18n:Bladder.Leak.3}}",
+    "{{i18n:Bladder.Leak.4}}",
+    "{{i18n:Bladder.Leak.5}}"
+  ],
+
+  // ########################################
+  // Bowel states
+  // ########################################
+
+  "Bowels_Green": [
+    "{{i18n:Bowels.Green.1}}",
+    "{{i18n:Bowels.Green.2}}"
+  ],
+  "Bowels_Yellow": [
+    "{{i18n:Bowels.Yellow.1}}",
+    "{{i18n:Bowels.Yellow.2}}",
+    "{{i18n:Bowels.Yellow.3}}",
+    "{{i18n:Bowels.Yellow.4}}"
+  ],
+  "Bowels_Orange": [
+    "{{i18n:Bowels.Orange.1}}",
+    "{{i18n:Bowels.Orange.2}}",
+    "{{i18n:Bowels.Orange.3}}"
+  ],
+  "Bowels_Red": [
+    "{{i18n:Bowels.Red.1}}",
+    "{{i18n:Bowels.Red.2}}"
+  ],
+  "Bowels_Leak": [
+    "{{i18n:Bowels.Leak.1}}",
+    "{{i18n:Bowels.Leak.2}}",
+    "{{i18n:Bowels.Leak.3}}",
+    "{{i18n:Bowels.Leak.4}}"
+  ],
+
+  // ########################################
+  // Bladder and bowel continence states
+  // ########################################
+
+  "Bladder_Continence_Green": [ "{{i18n:Bladder.Continence.Green.1}}" ],
+  "Bladder_Continence_Yellow": [ "{{i18n:Bladder.Continence.Yellow.1}}" ],
+  "Bladder_Continence_Orange": [ "{{i18n:Bladder.Continence.Orange.1}}" ],
+  "Bladder_Continence_Red": [ "{{i18n:Bladder.Continence.Red.1}}" ],
+  "Bladder_Continence_Min": [ "{{i18n:Bladder.Continence.Min.1}}" ],
+
+  "Bowel_Continence_Green": [ "{{i18n:Bowel.Continence.Green.1}}" ],
+  "Bowel_Continence_Yellow": [ "{{i18n:Bowel.Continence.Yellow.1}}" ],
+  "Bowel_Continence_Orange": [ "{{i18n:Bowel.Continence.Orange.1}}" ],
+  "Bowel_Continence_Red": [ "{{i18n:Bowel.Continence.Red.1}}" ],
+  "Bowel_Continence_Min": [ "{{i18n:Bowel.Continence.Min.1}}" ]
+
+}

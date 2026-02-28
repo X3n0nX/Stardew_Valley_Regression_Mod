@@ -15,7 +15,7 @@ namespace PrimevalTitmouse
         {
             NpcPottyOptions options;
 
-            if (string.IsNullOrEmpty(npcName) || !Regression.t.Villager_Potty_Options.TryGetValue(npcName, out options))
+            if (string.IsNullOrEmpty(npcName) || !Regression.villagerData.Villager_Potty_Options.TryGetValue(npcName, out options))
             {
                 Regression.monitor.Log($"Npc Name not found in Villager_Potty_Options: NPC Name {npcName}");
             }

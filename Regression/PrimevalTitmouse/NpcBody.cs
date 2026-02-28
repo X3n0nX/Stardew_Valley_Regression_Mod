@@ -566,7 +566,7 @@ namespace PrimevalTitmouse
         }
         public string[] PottyDialogs(IncidentType type, bool preStage, bool success)
         {
-            var dialogsStorage = Animations.Data.Villager_Potty_Dialogs;
+            var dialogsStorage = Regression.villagerData.Villager_Potty_Dialogs;
             string stageStr = preStage ? "pre" : "post";
             string typeStr = type == IncidentType.PEE ? "pee" : "poop";
             string successStr = success ? "success" : "fail";
@@ -740,7 +740,7 @@ namespace PrimevalTitmouse
             {
                 Dictionary<string, string[]> dictionary;
                 string[] strArray;
-                if (Animations.Data.Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
+                if (Regression.villagerData.Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
                 {
                     stringList3 = new List<string>(); // We could remove this line again, but the general texts are more meant as fallback, they often don't fit well if custom texts are defined
                     stringList3.AddRange((IEnumerable<string>)strArray);

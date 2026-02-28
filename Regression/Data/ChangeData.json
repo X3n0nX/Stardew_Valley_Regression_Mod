@@ -1,0 +1,159 @@
+{
+  // ########################################
+  // Messages for your pants and underwear
+  // ########################################
+
+  "LookPants": "{{i18n:Look_Pants.1}}",
+  "Underwear_Clean": "{{i18n:Underwear.Clean}}",
+  "Underwear_Drying": "{{i18n:Underwear.Drying}}",
+  "Underwear_Wet": [ //Chosen based on diaper wetness, applied after Underwear_Messy. Words in brackets only show if underwear is also messy.
+    "{{i18n:Underwear.Wet.1}}",
+    "{{i18n:Underwear.Wet.2}}",
+    "{{i18n:Underwear.Wet.3}}",
+    "{{i18n:Underwear.Wet.4}}",
+    "{{i18n:Underwear.Wet.5}}"
+  ],
+  "Underwear_Messy": [ //Chosen based on diaper messiness, applied before Underwear_Wet. Words in brackets are only used if underwear is also wet.
+    "{{i18n:Underwear.Messy.1}}",
+    "{{i18n:Underwear.Messy.2}}",
+    "{{i18n:Underwear.Messy.3}}",
+    "{{i18n:Underwear.Messy.4}}",
+    "{{i18n:Underwear.Messy.5}}"
+  ],
+
+  "Underwear_States": {
+    "wet": {
+      "text_description": "{{i18n:Underwear_States.Wet.Description}}",
+      "text_display_name": "{{i18n:Underwear_States.Wet.DisplayName}}"
+    },
+    "messy": {
+      "text_description": "{{i18n:Underwear_States.Messy.Description}}",
+      "text_display_name": "{{i18n:Underwear_States.Messy.DisplayName}}"
+    },
+    "wet_and_messy": {
+      "text_description": "{{i18n:Underwear_States.Wet_and_Messy.Description}}",
+      "text_display_name": "{{i18n:Underwear_States.Wet_and_Messy.DisplayName}}"
+    },
+    "drying": {
+      "text_description": "{{i18n:Underwear_States.Drying.Description}}",
+      "text_display_name": "{{i18n:Underwear_States.Drying.DisplayName}}"
+    }
+  },
+
+  // ########################################
+  // underwear still soiled and changeing 
+  // ########################################
+
+  // Underwear still soiled
+
+  "Still_Soiled": [
+    "{{i18n:Underwear.Still_Soiled.1}}",
+    "{{i18n:Underwear.Still_Soiled.2}}",
+    "{{i18n:Underwear.Still_Soiled.3}}",
+    "{{i18n:Underwear.Still_Soiled.4}}",
+    "{{i18n:Underwear.Still_Soiled.5}}",
+    "{{i18n:Underwear.Still_Soiled.6}}",
+    "{{i18n:Underwear.Still_Soiled.7}}",
+    "{{i18n:Underwear.Still_Soiled.8}}",
+    "{{i18n:Underwear.Still_Soiled.9}}",
+    "{{i18n:Underwear.Still_Soiled.10}}"
+  ],
+
+  // Underwear should be changed
+
+  "Should_Change": [
+    "{{i18n:Underwear.Should_Change.1}}",
+    "{{i18n:Underwear.Should_Change.2}}",
+    "{{i18n:Underwear.Should_Change.3}}"
+  ],
+
+  // ########################################
+  // Changeing
+  // ########################################
+
+  // Underwear cant be removed
+
+  "Cant_Remove": [
+    "{{i18n:Change.Cant_Remove.1}}"
+  ],
+
+  // Changed underwear by yourself
+
+  "Change_Underwear": [
+    "{{i18n:Change.Underwear.Yourself.1}}"
+    //***"You take off your soiled <OLD_UNDERWEAR_DESC> and put on $UNDERWEAR_PREFIX$ clean $UNDERWEAR_NAME$."
+  ],
+
+  // Changed underwear and pants by yourself
+
+  "Change_Underwear_Pants": [
+    "{{i18n:Change.Underwear_Pants.Yourself.1}}"
+  ],
+
+  // Changed underwear by npc
+
+  "Change_Underwear_by_Npc": [
+    "{{i18n:Change.Underwear.Npc.1}}"
+  ],
+
+  // Changed underwear and pants by npc
+
+  "Change_Underwear_Pants_by_Npc": [
+    "{{i18n:Change.Underwear_Pants.Npc.1}}"
+  ],
+
+  // Underwear was destroyed by changing by yourself
+
+  "Change_Destroyed": [
+    "{{i18n:Change.Underwear.Destroyed.Player.1}}",
+    "{{i18n:Change.Underwear.Destroyed.Player.2}}"
+  ],
+
+  // Underwear of npc was destroyed by changing
+
+  "Change_Other_Destroyed": [
+    "{{i18n:Change.Underwear.Destroyed.Npc.1}}"
+  ],
+
+  // Underwear was destroyed by changing by npc
+
+  "Getting_Changed_Destroyed": [
+    "{{i18n:Change.Underwear.Destroyed.By_Npc.1}}"
+  ],
+
+  // You also need to change your pants because they are messy
+
+  "Change_Requires_Pants": "{{i18n:Change.Require.Pants.1}}",
+
+  // You have to be at home to change your pants
+
+  "Change_Requires_Home": "{{i18n:Change.Require.Home.1}}",
+
+  // Changed your pants at home by yourself
+
+  "Change_At_Home": "{{i18n:Change.Pants.Yourself.Home.1}}",
+
+  // Peek inside your waistband to check your underwear
+  // text will be conpleatet by script
+  // with the state of underwear and its name
+
+  "PeekWaistband": "{{i18n:Peek.Waistband.1}}",
+
+  // ########################################
+  // Dialogs for changeing 
+  // ########################################
+
+  // Dialoge for getting change by npc
+
+  "Diaper_Change_Dialog": [
+    "#$q dirty_change_yes_$NPC_NAME$/dirty_change_no_$NPC_NAME$ Diaper_Change_Followup#{{i18n:Change.Dialog.Question.1}}#$r dirty_change_yes_$NPC_NAME$ 1 Diaper_Change_Accept#{{i18n:Change.Dialog.Question.1.Answer_Yes.1}}#$r dirty_change_yes_$NPC_NAME$ 1 Diaper_Change_Accept#{{i18n:Change.Dialog.Question.1.Answer_Yes.2}}#$r dirty_change_no_$NPC_NAME$ -1 Diaper_Change_Refuse#{{i18n:Change.Dialog.Question.1.Answer_No.1}}#$r dirty_change_no_$NPC_NAME$ 0 Diaper_Change_Refuse#{{i18n:Change.Dialog.Question.1.Answer_No.2}}"
+  ],
+
+  // Dialoge for changing other npc
+
+  "Change_Other_Dialog": [
+    "#$q change_other_yes/change_other_no Change_Diaper_Followup#{{i18n:Change_Other.Dialog.Question.1}}",
+    "#$q change_other_yes/change_other_no Change_Diaper_Followup#{{i18n:Change_Other.Dialog.Question.2}}"
+  ]
+
+}

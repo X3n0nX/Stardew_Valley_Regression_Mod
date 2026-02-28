@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using Microsoft.Xna.Framework.Input;
+using PrimevalTitmouse.Data;
 using StardewModdingAPI;
 using StardewValley;
 using System;
@@ -17,7 +18,9 @@ namespace PrimevalTitmouse
     //Lots of Regex functions to handle variability in our strings.
     public static class Strings
     {
-        private static Data t = Regression.t;
+        private static ChangeData changeData = Regression.changeData;
+        private static TypesData typesData = Regression.typesData;
+        private static VillagerData villagerData = Regression.villagerData;
         private static Farmer who = Game1.player;
 
         public static string DescribeUnderwear(Container u, string baseDescription = null, bool noPrefix = false)
@@ -27,31 +30,31 @@ namespace PrimevalTitmouse
             float poopFill = u.messiness / u.containment;
             if ((double)peeFill == 0.0 && (double)poopFill == 0.0)
             {
-                newValue = !u.drying ? Strings.tryGetI18nText(Strings.t.Underwear_Clean).Replace("$UNDERWEAR_DESC$", newValue) :
-                                        Strings.tryGetI18nText(Strings.t.Underwear_Drying).Replace("$UNDERWEAR_DESC$", newValue);
+                newValue = !u.drying ? Strings.tryGetI18nText(Strings.changeData.Underwear_Clean).Replace("$UNDERWEAR_DESC$", newValue) :
+                                        Strings.tryGetI18nText(Strings.changeData.Underwear_Drying).Replace("$UNDERWEAR_DESC$", newValue);
             }
             else
             {
                 if ((double)poopFill > 0.0)
                 {
-                    for (int index = 0; index < Strings.t.Underwear_Messy.Length; ++index)
+                    for (int index = 0; index < Strings.changeData.Underwear_Messy.Length; ++index)
                     {
-                        float num3 = (float)(((double)index + 1.0) / ((double)Strings.t.Underwear_Messy.Length - 1.0));
-                        if (index == Strings.t.Underwear_Messy.Length - 1 || (double)poopFill <= (double)num3)
+                        float num3 = (float)(((double)index + 1.0) / ((double)Strings.changeData.Underwear_Messy.Length - 1.0));
+                        if (index == Strings.changeData.Underwear_Messy.Length - 1 || (double)poopFill <= (double)num3)
                         {
-                            newValue = Strings.ReplaceOptional(Strings.tryGetI18nText(Strings.t.Underwear_Messy[index]).Replace("$UNDERWEAR_DESC$", newValue), (double)peeFill > 0.0);
+                            newValue = Strings.ReplaceOptional(Strings.tryGetI18nText(Strings.changeData.Underwear_Messy[index]).Replace("$UNDERWEAR_DESC$", newValue), (double)peeFill > 0.0);
                             break;
                         }
                     }
                 }
                 if ((double)peeFill > 0.0)
                 {
-                    for (int index = 0; index < Strings.t.Underwear_Wet.Length; ++index)
+                    for (int index = 0; index < Strings.changeData.Underwear_Wet.Length; ++index)
                     {
-                        float num3 = (float)(((double)index + 1.0) / ((double)Strings.t.Underwear_Wet.Length - 1.0));
-                        if (index == Strings.t.Underwear_Wet.Length - 1 || (double)peeFill <= (double)num3)
+                        float num3 = (float)(((double)index + 1.0) / ((double)Strings.changeData.Underwear_Wet.Length - 1.0));
+                        if (index == Strings.changeData.Underwear_Wet.Length - 1 || (double)peeFill <= (double)num3)
                         {
-                            string input = Strings.tryGetI18nText(Strings.t.Underwear_Wet[index]).Replace("$UNDERWEAR_DESC$", newValue);
+                            string input = Strings.tryGetI18nText(Strings.changeData.Underwear_Wet[index]).Replace("$UNDERWEAR_DESC$", newValue);
                             Regex regex = new Regex("<([^>]*)>");
                             newValue = (double)poopFill != 0.0 ? regex.Replace(input, "$1") : regex.Replace(input, "");
                             break;
@@ -73,7 +76,7 @@ namespace PrimevalTitmouse
         }
         public static string npcUnderwearOptions(NPC npc)
         {
-            var modifiers = Animations.Data.Villager_Underwear_Options;
+            var modifiers = villagerData.Villager_Underwear_Options;
             Dictionary<string, Dictionary<string, string>> foundDict = null;
 
             foreach (string key2 in Animations.npcTypeList(npc))
@@ -139,7 +142,7 @@ namespace PrimevalTitmouse
                 c = new NpcBody(b).underwear;
             if (c != null)
             {
-                var changeOtherDialog = RandString(Animations.Data.Change_Other_Dialog);
+                var changeOtherDialog = RandString(changeData.Change_Other_Dialog);
                 changeOtherDialog = ReplaceAndOr(changeOtherDialog, c.wetness > 0, c.messiness > 0);
                 changeOtherDialog += npcUnderwearOptions(b);
                 str = str.Replace("$CHANGE_OTHER_DIALOG$", changeOtherDialog);
@@ -228,10 +231,7 @@ namespace PrimevalTitmouse
 
         public static List<string> ValidUnderwearTypes()
         {
-            List<string> list = Regression.t.Underwear_Options.Keys.ToList<string>();
-            //list.Remove("legs");
-            //list.Remove("blue jeans");
-            //list.Remove("bed");
+            List<string> list = Strings.typesData.Type_Underwears.Keys.ToList<string>();
             return list;
         }
 
@@ -435,7 +435,7 @@ namespace PrimevalTitmouse
 
             if(!str.Contains(token)) return str;
 
-            string gettingChangedDialog = Strings.RandString(Animations.Data.Diaper_Change_Dialog);
+            string gettingChangedDialog = Strings.RandString(changeData.Diaper_Change_Dialog);
             gettingChangedDialog = Strings.ReplaceAndOr(gettingChangedDialog, underwear.wetness > 0, underwear.messiness > 0);
 
             string npcName = "";
@@ -506,10 +506,10 @@ namespace PrimevalTitmouse
                 Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
 
                 // npc has dialogues in "Villager_Changeing_Reactions"
-                if (Animations.Data.Villager_Changeing_Dialoges.TryGetValue(npcName, out changingDialoges))
+                if (villagerData.Villager_Changeing_Dialoges.TryGetValue(npcName, out changingDialoges))
                 {
-                    rndId = Regression.rnd.Next(1, Animations.Data.Villager_Changeing_Dialoges[npcName].Count);
-                    changedByNpc = Animations.Data.Villager_Changeing_Dialoges[npcName][rndId];
+                    rndId = Regression.rnd.Next(1, villagerData.Villager_Changeing_Dialoges[npcName].Count);
+                    changedByNpc = villagerData.Villager_Changeing_Dialoges[npcName][rndId];
                 }
                 else 
                 {
@@ -517,13 +517,13 @@ namespace PrimevalTitmouse
 
                     if (!female)
                     {
-                        rndId = Regression.rnd.Next(1, Animations.Data.Villager_Changeing_Dialoges["adult_male"].Count);
-                        changedByNpc = Animations.Data.Villager_Changeing_Dialoges["adult_male"][rndId];
+                        rndId = Regression.rnd.Next(1, villagerData.Villager_Changeing_Dialoges["adult_male"].Count);
+                        changedByNpc = villagerData.Villager_Changeing_Dialoges["adult_male"][rndId];
                     }
                     else
                     {
-                        rndId = Regression.rnd.Next(1, Animations.Data.Villager_Changeing_Dialoges["adult_female"].Count);
-                        changedByNpc = Animations.Data.Villager_Changeing_Dialoges["adult_female"][rndId];
+                        rndId = Regression.rnd.Next(1, villagerData.Villager_Changeing_Dialoges["adult_female"].Count);
+                        changedByNpc = villagerData.Villager_Changeing_Dialoges["adult_female"][rndId];
                     }
                 }
             }
@@ -532,7 +532,7 @@ namespace PrimevalTitmouse
                 Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
 
                 // npc has dialogues in "Villager_Changeing_Reactions"
-                if (Animations.Data.Villager_Changeing_Dialoges.TryGetValue(npcName, out changingDialoges))
+                if (villagerData.Villager_Changeing_Dialoges.TryGetValue(npcName, out changingDialoges))
                 {
                     if(!changingDialoges.TryGetValue(id,out changedByNpc))
                         throw new Exception($"Id {id} not found in Villager_Changeing_Dialoges for {npcName}");

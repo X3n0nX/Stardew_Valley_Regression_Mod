@@ -16,7 +16,7 @@ namespace PrimevalTitmouse
         {
             NpcChangingOptions options;
 
-            if (string.IsNullOrEmpty(npcName) || !Regression.t.Villager_Changing_Options.TryGetValue(npcName, out options))
+            if (string.IsNullOrEmpty(npcName) || !Regression.villagerData.Villager_Changing_Options.TryGetValue(npcName, out options))
             {
                 Regression.monitor.Log($"Npc Name not found in Villager_Changing_Options: NPC Name {npcName}");
             }
