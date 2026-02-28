@@ -1,0 +1,26 @@
+{
+  "Changes": [
+    {
+      "LogName": "Dwarf",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Dwarf",
+      "Entries": {
+
+        "Introduction": "{{i18n:Clint.Dialogue.Introduction}}",
+
+        "Mon": "{{i18n:Clint.Dialogue.Mon}}",
+        "Tue": "{{i18n:Clint.Dialogue.Tue}}",
+        "Wed": "{{i18n:Clint.Dialogue.Wed}}",
+        "Wed_6": "{{i18n:Clint.Dialogue.Wed_6}}",
+        "Thu_4": "{{i18n:Clint.Dialogue.Thu_4}}",
+        "Fri": "{{i18n:Clint.Dialogue.Fri}}",
+        "Sat_8": "{{i18n:Clint.Dialogue.Sat_8}}",
+        "Sat": "{{i18n:Clint.Dialogue.Sat}}",
+        "Sun": "{{i18n:Clint.Dialogue.Sun}}",
+        "Thu": "{{i18n:Clint.Dialogue.Thu}}",
+        "Fri_2": "{{i18n:Clint.Dialogue.Fri_2}}"
+
+      }
+    }
+  ]
+}

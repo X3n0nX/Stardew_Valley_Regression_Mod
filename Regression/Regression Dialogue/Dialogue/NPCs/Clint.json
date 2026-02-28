@@ -1,0 +1,49 @@
+{
+  "Changes": [
+    {
+      "LogName": "Clint",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Entries": {
+
+        "Introduction": "{{i18n:Clint.Dialogue.Introduction}}",
+
+        "Resort_Entering": "{{i18n:Clint.Dialogue.Resort_Entering}}",
+        "Resort_Leaving": "{{i18n:Clint.Dialogue.Resort_Leaving}}",
+        "Resort_Shore": "{{i18n:Clint.Dialogue.Resort_Shore}}",
+        "Resort_Shore_2": "{{i18n:Clint.Dialogue.Resort_Shore_2}}",
+        "Resort_Chair": "{{i18n:Clint.Dialogue.Resort_Chair}}",
+        "Resort_Bar": "{{i18n:Clint.Dialogue.Resort_Bar}}",
+        "Resort": "{{i18n:Clint.Dialogue.Resort}}",
+
+        "reject_868": "{{i18n:Clint.Dialogue.reject_868}}",
+        "cc_Minecart": "{{i18n:Clint.Dialogue.cc_Minecart}}",
+
+        "Mon": "{{i18n:Clint.Dialogue.Mon}}",
+        "Mon_old": "{{i18n:Clint.Dialogue.Mon_old}}",
+        "Mon_9": "{{i18n:Clint.Dialogue.Mon_9}}",
+        "Mon_clown": "{{i18n:Clint.Dialogue.Mon_clown}}",
+        "Mon_rude": "{{i18n:Clint.Dialogue.Mon_rude}}",
+        "Mon4": "{{i18n:Clint.Dialogue.Mon4}}",
+        "Tue": "{{i18n:Clint.Dialogue.Tue}}",
+        "Wed": "{{i18n:Clint.Dialogue.Wed}}",
+        "Wed6": "{{i18n:Clint.Dialogue.Wed6}}",
+        "Thu": "{{i18n:Clint.Dialogue.Thu}}",
+        "Fri": "{{i18n:Clint.Dialogue.Fri}}",
+        "Sat": "{{i18n:Clint.Dialogue.Sat}}",
+        "Sat6": "{{i18n:Clint.Dialogue.Sat6}}",
+        "Sun": "{{i18n:Clint.Dialogue.Sun}}",
+        "Sun4": "{{i18n:Clint.Dialogue.Sun4}}",
+
+        "event_advice1": "{{i18n:Clint.Dialogue.event_advice1}}",
+        "event_advice2": "{{i18n:Clint.Dialogue.event_advice2}}",
+
+        "summer_Mon4": "{{i18n:Clint.Dialogue.summer_Mon4}}",
+        "summer_Wed6": "{{i18n:Clint.Dialogue.summer_Wed6}}",
+        "summer_Thu": "{{i18n:Clint.Dialogue.summer_Thu}}"
+
+
+      }
+    }
+  ]
+}

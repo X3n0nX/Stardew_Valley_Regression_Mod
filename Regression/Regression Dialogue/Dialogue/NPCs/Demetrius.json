@@ -1,0 +1,76 @@
+{
+  "Changes": [
+    {
+      "LogName": "Demetrius",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Demetrius",
+      "Entries": {
+
+        "Introduction": "{{i18n:Clint.Dialogue.Introduction}}",
+
+        "Resort_Entering": "{{i18n:Clint.Dialogue.Resort_Entering}}",
+        "Resort_Leaving": "{{i18n:Clint.Dialogue.Resort_Leaving}}",
+        "Resort_Shore": "{{i18n:Clint.Dialogue.Resort_Shore}}",
+        "Resort_Chair": "{{i18n:Clint.Dialogue.Resort_Chair}}",
+        "Resort_Bar": "{{i18n:Clint.Dialogue.Resort_Bar}}",
+        "Resort": "{{i18n:Clint.Dialogue.Resort}}",
+
+        "reject_869": "{{i18n:Clint.Dialogue.reject_869}}",
+        "reject_865": "{{i18n:Clint.Dialogue.reject_865}}",
+
+        "pamHouseUpgradeAnonymous": "{{i18n:Clint.Dialogue.pamHouseUpgradeAnonymous}}",
+
+        "Event_tomato1": "{{i18n:Clint.Dialogue.Event_tomato1}}",
+        "Event_tomato2": "{{i18n:Clint.Dialogue.Event_tomato2}}",
+        "Event_Lab_Silence": "{{i18n:Clint.Dialogue.Event_Lab_Silence}}",
+        "Event_Lab_Rat": "{{i18n:Clint.Dialogue.Event_Lab_Rat}}",
+
+        "Mon": "{{i18n:Clint.Dialogue.Mon}}",
+        "Mon_inlaw_Maru": "{{i18n:Clint.Dialogue.Mon_inlaw_Maru}}",
+        "Mon8": "{{i18n:Clint.Dialogue.Mon8}}",
+        "Tue": "{{i18n:Clint.Dialogue.Tue}}",
+        "Wed": "{{i18n:Clint.Dialogue.Wed}}",
+        "Wed6": "{{i18n:Clint.Dialogue.Wed6}}",
+        "Wed10": "{{i18n:Clint.Dialogue.Wed10}}",
+        "Thu": "{{i18n:Clint.Dialogue.Thu}}",
+        "Fri": "{{i18n:Clint.Dialogue.Fri}}",
+        "Fri4": "{{i18n:Clint.Dialogue.Fri4}}",
+        "Sat": "{{i18n:Clint.Dialogue.Sat}}",
+        "Sun": "{{i18n:Clint.Dialogue.Sun}}",
+
+        "summer_Mon": "{{i18n:Clint.Dialogue.summer_Mon}}",
+        "summer_Mon6": "{{i18n:Clint.Dialogue.summer_Mon6}}",
+        "summer_Tue": "{{i18n:Clint.Dialogue.summer_Tue}}",
+        "summer_Tue4": "{{i18n:Clint.Dialogue.summer_Tue4}}",
+        "summer_Thu": "{{i18n:Clint.Dialogue.summer_Thu}}",
+        "summer_Fri": "{{i18n:Clint.Dialogue.summer_Fri}}",
+        "summer_Fri_inlaw_Maru": "{{i18n:Clint.Dialogue.summer_Fri_inlaw_Maru}}",
+        "summer_Sat": "{{i18n:Clint.Dialogue.summer_Sat}}",
+
+        "fall_Mon": "{{i18n:Clint.Dialogue.fall_Mon}}",
+        "fall_Tue": "{{i18n:Clint.Dialogue.fall_Tue}}",
+        "fall_Wed6": "{{i18n:Clint.Dialogue.fall_Wed6}}",
+        "fall_Wed10": "{{i18n:Clint.Dialogue.fall_Wed10}}",
+        "fall_Thu": "{{i18n:Clint.Dialogue.fall_Thu}}",
+        "fall_Fri": "{{i18n:Clint.Dialogue.fall_Fri}}",
+        "fall_Fri_inlaw_Maru": "{{i18n:Clint.Dialogue.fall_Fri_inlaw_Maru}}",
+        "fall_Sat": "{{i18n:Clint.Dialogue.fall_Sat}}",
+
+        "winter_Mon": "{{i18n:Clint.Dialogue.winter_Mon}}",
+        "winter_Tue": "{{i18n:Clint.Dialogue.winter_Tue}}",
+        "winter_Tue2": "{{i18n:Clint.Dialogue.winter_Tue2}}",
+        "winter_Wed": "{{i18n:Clint.Dialogue.winter_Wed}}",
+        "winter_Thu": "{{i18n:Clint.Dialogue.winter_Thu}}",
+        "winter_Thu2": "{{i18n:Clint.Dialogue.winter_Thu2}}",
+        "winter_Thu6": "{{i18n:Clint.Dialogue.winter_Thu6}}",
+        "winter_Thu10": "{{i18n:Clint.Dialogue.winter_Thu10}}",
+        "winter_Fri": "{{i18n:Clint.Dialogue.winter_Fri}}",
+        "winter_Fri4": "{{i18n:Clint.Dialogue.winter_Fri4}}",
+        "winter_Sat": "{{i18n:Clint.Dialogue.winter_Sat}}",
+        "winter_Sun": "{{i18n:Clint.Dialogue.winter_Sun}}",
+        "winter_Sun4": "{{i18n:Clint.Dialogue.winter_Sun4}}"
+
+      }
+    }
+  ]
+}
