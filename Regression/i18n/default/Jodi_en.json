@@ -81,10 +81,19 @@
   "Villager_Reactions.Jodi.Check.Player.Mean.1": "I gave you plenty of supplies already. There's instructions on the package.$4",
   "Villager_Reactions.Jodi.Check.Player.Mean.2": "I'm busy taking care of my own kids. I'm sure you can figure it out.$2",
 
-  // Jodi changes your underwear
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
 
   "Villager_Dialoges.Jodi.Change.Player.1": "%Jodi smiles warmly at you while she lies you down and cleans you up. She tapes you up nice and snug in a fresh diaper and lifts you to your feet, giving you tight hug.#$b#There we go, all better.$1",
   "Villager_Dialoges.Jodi.Change.Player.2": "%Jodi lies you down for a change, tickling your tummy between each wipe. She giggles along with every little giggle you make.#$b#All done! Go on and play.$1",
   "Villager_Dialoges.Jodi.Change.Player.3": "%Jodi hums a soft tune as she sets about the chore of cleaning you up. She lifts you to your feet before you even realize you're all clean and dry.#$b#I think I know a little farmer who needs a nap.$1",
-  "Villager_Dialoges.Jodi.Change.Player.4": "%Without a word she lies you down for a change. She coos softly at you throughout the change, and pulls you right back into the hug when she's done.#$b#There we go, all better.$1"
+  "Villager_Dialoges.Jodi.Change.Player.4": "%Without a word she lies you down for a change. She coos softly at you throughout the change, and pulls you right back into the hug when she's done.#$b#There we go, all better.$1",
+
+  // ########################################
+  // Villager Gift Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Jodi.Gift.Player.1": "Yeah, you certainly need a change. Try this on, I think it'll fit just fine.",
+  "Villager_Dialoges.Jodi.Gift.Player.2": "Here, try this one. I get these for Vincent, but I think they'll fit you alright."
 }

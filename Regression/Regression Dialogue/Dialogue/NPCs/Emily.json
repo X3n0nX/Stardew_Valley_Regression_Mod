@@ -1,10 +1,111 @@
 {
-	"Changes":[
+  "Changes": [
     {
       "LogName": "Emily",
       "Action": "EditData",
       "Target": "Characters/Dialogue/Emily",
       "Entries": {
+
+        "Introduction": "{{i18n:Emily.Dialogue.Introduction}}",
+
+        "Resort_Entering": "{{i18n:Emily.Dialogue.Resort_Entering}}",
+        "Resort_Leaving": "{{i18n:Emily.Dialogue.Resort_Leaving}}",
+        "Resort_Shore": "{{i18n:Emily.Dialogue.Resort_Shore}}",
+        "Resort_Chair": "{{i18n:Emily.Dialogue.Resort_Chair}}",
+        "Resort_Bar": "{{i18n:Emily.Dialogue.Resort_Bar}}",
+        "Resort": "{{i18n:Emily.Dialogue.Resort}}",
+        "Resort_Dance": "{{i18n:Emily.Dialogue.Resort_Dance}}",
+
+        "danceRejection": "{{i18n:Emily.Dialogue.danceRejection}}",
+        "divorced": "{{i18n:Emily.Dialogue.divorced}}",
+        "dumped_Girls": "{{i18n:Emily.Dialogue.dumped_Girls}}",
+        "breakUp": "{{i18n:Emily.Dialogue.breakUp}}",
+        "reject_866": "{{i18n:Emily.Dialogue.reject_866}}",
+        "secondChance_Girls": "{{i18n:Emily.Dialogue.secondChance_Girls}}",
+
+        "event_dance1": "{{i18n:Emily.Dialogue.event_dance1}}",
+        "event_dance2": "{{i18n:Emily.Dialogue.event_dance2}}",
+        "event_dance3": "{{i18n:Emily.Dialogue.event_dance3}}",
+
+        "Mon": "{{i18n:Emily.Dialogue.Mon}}",
+        "Mon2": "{{i18n:Emily.Dialogue.Mon2}}",
+        "Mon4": "{{i18n:Emily.Dialogue.Mon4}}",
+        "Mon6": "{{i18n:Emily.Dialogue.Mon6}}",
+        "Mon6_inlaw_Haley": "{{i18n:Emily.Dialogue.Mon6_inlaw_Haley}}",
+        "Mon8": "{{i18n:Emily.Dialogue.Mon8}}",
+
+        "Tue": "{{i18n:Emily.Dialogue.Tue}}",
+        "Tue4": "{{i18n:Emily.Dialogue.Tue4}}",
+        "Tue6": "{{i18n:Emily.Dialogue.Tue6}}",
+        "Tue8": "{{i18n:Emily.Dialogue.Tue8}}",
+
+        "Wed": "{{i18n:Emily.Dialogue.Wed}}",
+        "Wed4": "{{i18n:Emily.Dialogue.Wed4}}",
+        "Wed6": "{{i18n:Emily.Dialogue.Wed6}}",
+        "Wed8": "{{i18n:Emily.Dialogue.Wed8}}",
+
+        "Thu": "{{i18n:Emily.Dialogue.Thu}}",
+        "Thu4": "{{i18n:Emily.Dialogue.Thu4}}",
+        "Fri": "{{i18n:Emily.Dialogue.Fri}}",
+
+        "Sat": "{{i18n:Emily.Dialogue.Sat}}",
+        "Sat6": "{{i18n:Emily.Dialogue.Sat6}}",
+
+        "Sun": "{{i18n:Emily.Dialogue.Sun}}",
+        "Sun4": "{{i18n:Emily.Dialogue.Sun4}}",
+
+        //--------------
+
+        "summer_Mon": "{{i18n:Emily.Dialogue.summer_Mon}}",
+        "summer_Mon4": "{{i18n:Emily.Dialogue.summer_Mon4}}",
+        "summer_Mon_inlaw_Haley": "{{i18n:Emily.Dialogue.summer_Mon_inlaw_Haley}}",
+        "summer_Tue": "{{i18n:Emily.Dialogue.summer_Tue}}",
+        "summer_Tue6": "{{i18n:Emily.Dialogue.summer_Tue6}}",
+        "summer_Wed": "{{i18n:Emily.Dialogue.summer_Wed}}",
+        "summer_Thu": "{{i18n:Emily.Dialogue.summer_Thu}}",
+        "summer_Fri": "{{i18n:Emily.Dialogue.summer_Fri}}",
+        "summer_Fri6": "{{i18n:Emily.Dialogue.summer_Fri6}}",
+        "summer_Sat": "{{i18n:Emily.Dialogue.summer_Sat}}",
+        "summer_Sun": "{{i18n:Emily.Dialogue.summer_Sun}}",
+        "summer_Sun4": "{{i18n:Emily.Dialogue.summer_Sun4}}",
+        "summer_Sun6": "{{i18n:Emily.Dialogue.summer_Sun6}}",
+        "summer_Sun8": "{{i18n:Emily.Dialogue.summer_Sun8}}",
+
+        //--------------
+
+        "fall_1": "{{i18n:Emily.Dialogue.fall_1}}",
+        "fall_Mon": "{{i18n:Emily.Dialogue.fall_Mon}}",
+        "fall_Mon8": "{{i18n:Emily.Dialogue.fall_Mon8}}",
+        "fall_Tue": "{{i18n:Emily.Dialogue.fall_Tue}}",
+        "fall_Tue4": "{{i18n:Emily.Dialogue.fall_Tue4}}",
+        "fall_Wed": "{{i18n:Emily.Dialogue.fall_Wed}}",
+        "fall_Thu": "{{i18n:Emily.Dialogue.fall_Thu}}",
+        "fall_Thu8": "{{i18n:Emily.Dialogue.fall_Thu8}}",
+        "fall_Fri": "{{i18n:Emily.Dialogue.fall_Fri}}",
+        "fall_Fri6": "{{i18n:Emily.Dialogue.fall_Fri6}}",
+        "fall_Sat": "{{i18n:Emily.Dialogue.fall_Sat}}",
+        "fall_Sat6": "{{i18n:Emily.Dialogue.fall_Sat6}}",
+        "fall_Sun": "{{i18n:Emily.Dialogue.fall_Sun}}",
+        "fall_Sun6": "{{i18n:Emily.Dialogue.fall_Sun6}}",
+        "fall_Sun10": "{{i18n:Emily.Dialogue.fall_Sun10}}",
+
+        //--------------
+
+        "winter_Mon": "{{i18n:Emily.Dialogue.winter_Mon}}",
+        "winter_Mon10": "{{i18n:Emily.Dialogue.winter_Mon10}}",
+        "winter_Tue": "{{i18n:Emily.Dialogue.winter_Tue}}",
+        "winter_Tue2": "{{i18n:Emily.Dialogue.winter_Tue2}}",
+        "winter_Tue4": "{{i18n:Emily.Dialogue.winter_Tue4}}",
+        "winter_Wed": "{{i18n:Emily.Dialogue.winter_Wed}}",
+        "winter_Thu": "{{i18n:Emily.Dialogue.winter_Thu}}",
+        "winter_Fri": "{{i18n:Emily.Dialogue.winter_Fri}}",
+        "winter_Sat": "{{i18n:Emily.Dialogue.winter_Sat}}",
+        "winter_Sun": "{{i18n:Emily.Dialogue.winter_Sun}}",
+        "winter_Sun6": "{{i18n:Emily.Dialogue.winter_Sun6}}",
+        "winter_Sun6_inlaw_Haley": "{{i18n:Emily.Dialogue.winter_Sun6_inlaw_Haley}}",
+
+
+        // Diaperchange to Emily
 
         "Change_Diaper_Accept_BabyPrint": "{{i18n:Emily.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"emily\" \"baby print diaper\"#$b#%{{i18n:Emily.Change_Diaper.Accept_BabyPrint_Post}}",
         "Change_Diaper_Accept_Lavender": "{{i18n:Emily.Change_Diaper.Accept_Lavender}}#$action CHANGE_DIAPER_OTHERS \"emily\" \"lavender pullups\"#$b#%{{i18n:Emily.Change_Diaper.Accept_Lavender_Post}}",
@@ -13,10 +114,96 @@
         "Change_Diaper_Refuse": "{{i18n:Emily.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Emily.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Emily.Change_Diaper.Refuse_UsedBad}}]",
         "Change_Diaper_Followup": "...",
 
+        // Diaperchange from Emily
+
         "Diaper_Change_Accept": "{{i18n:Emily.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"emily\" \"cloth diaper\" \"self made <pants/skirt>\"#$h",
         "Diaper_Change_Refuse": "{{i18n:Emily.Diaper_Change.Refuse}}",
         "Diaper_Change_Followup": "{{i18n:Emily.Diaper_Change.Followup}}"
       }
+    },
+    {
+      "LogName": "Emily Marriage",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueEmily",
+      "Entries": {
+
+        "Indoor_Day_0": "{{i18n:Emily.Dialogue_Marriage.Indoor_Day_0}}",
+        "Indoor_Day_1": "{{i18n:Emily.Dialogue_Marriage.Indoor_Day_1}} [428 440 444 338 207 395 749]",
+        "Indoor_Day_2": "{{i18n:Emily.Dialogue_Marriage.Indoor_Day_2}}",
+        "Indoor_Day_3": "{{i18n:Emily.Dialogue_Marriage.Indoor_Day_3}}",
+        "Indoor_Day_4": "{{i18n:Emily.Dialogue_Marriage.Indoor_Day_4}}",
+
+        "Indoor_Night_0": "{{i18n:Emily.Dialogue_Marriage.Indoor_Night_0}}",
+        "Indoor_Night_1": "{{i18n:Emily.Dialogue_Marriage.Indoor_Night_1}}",
+        "Indoor_Night_2": "{{i18n:Emily.Dialogue_Marriage.Indoor_Night_2}}",
+        "Indoor_Night_3": "{{i18n:Emily.Dialogue_Marriage.Indoor_Night_3}}",
+        "Indoor_Night_4": "{{i18n:Emily.Dialogue_Marriage.Indoor_Night_4}}",
+
+        "Rainy_Day_0": "{{i18n:Emily.Dialogue_Marriage.Rainy_Day_0}}",
+        "Rainy_Day_1": "{{i18n:Emily.Dialogue_Marriage.Rainy_Day_1}}",
+        "Rainy_Day_2": "{{i18n:Emily.Dialogue_Marriage.Rainy_Day_2}} [428 440 444 338 207]",
+        "Rainy_Day_3": "{{i18n:Emily.Dialogue_Marriage.Rainy_Day_3}}",
+        "Rainy_Day_4": "{{i18n:Emily.Dialogue_Marriage.Rainy_Day_4}}",
+
+        "Rainy_Night_0": "{{i18n:Emily.Dialogue_Marriage.Rainy_Night_0}}",
+        "Rainy_Night_1": "{{i18n:Emily.Dialogue_Marriage.Rainy_Night_1}}",
+        "Rainy_Night_2": "{{i18n:Emily.Dialogue_Marriage.Rainy_Night_2}}",
+        "Rainy_Night_3": "{{i18n:Emily.Dialogue_Marriage.Rainy_Night_3}}",
+        "Rainy_Night_4": "{{i18n:Emily.Dialogue_Marriage.Rainy_Night_4}} [232 234 223 220]$h",
+        "Rainy_Night_5": "{{i18n:Emily.Dialogue_Marriage.Rainy_Night_5}}",
+
+
+        "patio_Emily": "{{i18n:Emily.Dialogue_Marriage.patio_Emily}}",
+        "spouseRoom_Emily": "{{i18n:Emily.Dialogue_Marriage.spouseRoom_Emily}}",
+
+        "Outdoor_0": "{{i18n:Emily.Dialogue_Marriage.Outdoor_0}}",
+        "Outdoor_1": "{{i18n:Emily.Dialogue_Marriage.Outdoor_1}}",
+        "Outdoor_2": "{{i18n:Emily.Dialogue_Marriage.Outdoor_2}}",
+        "Outdoor_3": "{{i18n:Emily.Dialogue_Marriage.Outdoor_3}}",
+        "Outdoor_4": "{{i18n:Emily.Dialogue_Marriage.Outdoor_4}}",
+
+        "funLeave_Emily": "{{i18n:Emily.Dialogue_Marriage.funLeave_Emily}}",
+        "funReturn_Emily": "{{i18n:Emily.Dialogue_Marriage.funReturn_Emily}}",
+
+        "OneKid_0": "{{i18n:Emily.Dialogue_Marriage.OneKid_0}}",
+        "OneKid_1": "{{i18n:Emily.Dialogue_Marriage.OneKid_1}}",
+        "OneKid_3": "{{i18n:Emily.Dialogue_Marriage.OneKid_3}}",
+        "TwoKids_1": "{{i18n:Emily.Dialogue_Marriage.TwoKids_1}}",
+        "TwoKids_2": "{{i18n:Emily.Dialogue_Marriage.TwoKids_2}}",
+        "TwoKids_3": "{{i18n:Emily.Dialogue_Marriage.TwoKids_3}}",
+
+        "Good_1": "{{i18n:Emily.Dialogue_Marriage.Good_1}}",
+        "Good_2": "{{i18n:Emily.Dialogue_Marriage.Good_2}}",
+        "Good_3": "{{i18n:Emily.Dialogue_Marriage.Good_3}}",
+        "Good_4": "{{i18n:Emily.Dialogue_Marriage.Good_4}}",
+        "Good_5": "{{i18n:Emily.Dialogue_Marriage.Good_5}}",
+        "Good_6": "{{i18n:Emily.Dialogue_Marriage.Good_6}}",
+
+        "Neutral_0": "{{i18n:Emily.Dialogue_Marriage.Neutral_0}}",
+        "Neutral_8": "{{i18n:Emily.Dialogue_Marriage.Neutral_8}}",
+
+        "spring_1": "{{i18n:Emily.Dialogue_Marriage.spring_1}}",
+        "spring_2": "{{i18n:Emily.Dialogue_Marriage.spring_2}}",
+        "spring_22": "{{i18n:Emily.Dialogue_Marriage.spring_22}}",
+
+        "summer_2": "{{i18n:Emily.Dialogue_Marriage.summer_2}}",
+        "summer_20": "{{i18n:Emily.Dialogue_Marriage.summer_20}}",
+
+        "fall_1": "{{i18n:Emily.Dialogue_Marriage.fall_1}}",
+        "fall_25": "{{i18n:Emily.Dialogue_Marriage.fall_25}}",
+
+        "winter_2": "{{i18n:Emily.Dialogue_Marriage.winter_2}}",
+        "winter_5": "{{i18n:Emily.Dialogue_Marriage.winter_5}}",
+        "winter_15": "{{i18n:Emily.Dialogue_Marriage.winter_15}}",
+
+        //5% chance each day.
+
+        "spring_Emily": "I'm feeling excited for a new year of farming, @!$h",
+        "fall_Emily": "I drank a super-food smoothie this morning and I feel aaah-mazing!$h",
+        "summer_Emily": "Phew! It's hot but it feels great, doesn't it?#$e#Maybe we'll see some wild parrots today.",
+        "winter_Emily": "Whoops, my hair is frozen solid again.$s"
+
+      }
     }
-	]
+  ]
 }

@@ -86,5 +86,11 @@
 
   "Villager_Reactions.Vincent.Ground.1": "Ewww!$3",
   "Villager_Reactions.Vincent.Ground.2": "Ewww! Don't <pee&poop> there!$3",
-  "Villager_Reactions.Vincent.Ground.3": "Hey! $FARMERNAME$ did <pee-pee&poope> on the ground!$1"
+  "Villager_Reactions.Vincent.Ground.3": "Hey! $FARMERNAME$ did <pee-pee&poope> on the ground!$1",
+
+  // ########################################
+  // Villager Gift Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Vincent.Gift.Player.1": "%He pulls a diaper he got from Jodi out of his bag.#$b#I have this just in case, but I think you need it right now more."
 }

@@ -78,5 +78,20 @@
   "Villager_Reactions.Abigail.Soiled.Mean.2": "This is pretty awkward.",
   "Villager_Reactions.Abigail.Soiled.Mean.3": "...Wow. Walking away now.",
   "Villager_Reactions.Abigail.Soiled.Mean.4": "*Feels own backside quickly* Eww! That's gross! You shouldn't do that in public!",
-  "Villager_Reactions.Abigail.Soiled.Mean.5": "Did you just <pee&poop> your pants? Wow..."
+  "Villager_Reactions.Abigail.Soiled.Mean.5": "Did you just <pee&poop> your pants? Wow...",
+
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Abigail.Change.Player.1": "%She gives you a condescending little head-pat when she's done.#$b#Good <boy/girl>.",
+  "Villager_Dialoges.Abigail.Change.Player.2": "%Abigail tapes you up in a soft, puffy fresh diaper.",
+
+  // ########################################
+  // Villager Gift Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Abigail.Gift.Player.1": "%Abigail hands you a diaper.#$b#...I bet you'll need it more than me, hehehe!$1",
+  "Villager_Dialoges.Abigail.Gift.Player.2": "%Abigail slips a pair of clean undies onto you instead of a diaper.#$b#Aw, worried you're gonna make a mess? *smirk*",
+  "Villager_Dialoges.Abigail.Gift.Player.3": "Oh, yeah - take a couple spare changes with you...#$b#Just in case you have a bit too much fun on your little adventure.$1"
 }

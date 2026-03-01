@@ -114,5 +114,11 @@
 
   "Villager_Reactions.Jas.Ground.1": "Ewww!$3",
   "Villager_Reactions.Jas.Ground.2": "Ewww! Don't <pee&poop> there!$3",
-  "Villager_Reactions.Jas.Ground.3": "...$3"
+  "Villager_Reactions.Jas.Ground.3": "...$3",
+
+  // ########################################
+  // Villager Gift Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Jas.Gift.Player.1": "Here, this should help!$1"
 }

@@ -101,7 +101,7 @@ namespace PrimevalTitmouse
 
             // This is about you changing others diapers, parameter 2 and 3 optional
             // Example: $action CHANGE_DIAPER_OTHERS jas
-            // Example: $action CHANGE_DIAPER_OTHERS vincent "baby print diaper" "toddler pants"
+            // Example: $action CHANGE_DIAPER_OTHERS vincent \"baby print diaper\" \"toddler pants\"
             TriggerActionManager.RegisterAction("CHANGE_DIAPER_OTHERS", this.StartChangeOthers);
 
             // This is about the player having accidents, but can also be pointed at npc.
@@ -110,7 +110,7 @@ namespace PrimevalTitmouse
             TriggerActionManager.RegisterAction("DIAPER_ACCIDENT", this.StartAccident);
 
             // This is adds a dialog. Parameter 3 is optional, containing a key. If there is a message with this key already present, the message will be replaced
-            // Example: $action ADD_DIALOG jodi "Did you change vincent into training pants? You should know better by now!#$b#%Jodi seams to be upset with you" "change_vincent_wrong"
+            // Example: $action ADD_DIALOG jodi \"Did you change vincent into training pants? You should know better by now!#$b#%Jodi seams to be upset with you\" "change_vincent_wrong"
             TriggerActionManager.RegisterAction("ADD_DIALOG", this.AddNpcMessage);
 
             // This adds underwear to the players inventory, usually as a gift from an npc
@@ -450,7 +450,9 @@ namespace PrimevalTitmouse
                 if (jsonLoaded.ContainsKey(configFile)) jsonLoaded.Remove(configFile);
             }
         }
-
+        // action from dialog 
+        // parameter 1: type of accident, pee or poop
+        // parameter 2: target of the accident, player or an npc name
         public bool StartAccident(string[] args, TriggerActionContext context, out string error)
         {
 
@@ -539,20 +541,13 @@ namespace PrimevalTitmouse
             return null;
         }
 
-        /*
-        public static bool MakeUnderwearActive(string underwearName, bool clean = true)
-        {
-            if (who.ActiveObject != null) return false;
-            var found = GetUnderwearFromInventory(underwearName, clean);
-            if(found == null) return false;
-            who.ActiveObject = found;
-            return true;
-        }*/
         public static bool HasUnderwear(string underwearName, bool clean = true)
         {
             return GetUnderwearFromInventory(underwearName, clean) != null;
         }
-
+        // action from dialog 
+        // parameter 1: name of npc you wanne change
+        // parameter 2: type of underwear you wanne change the npc into
         public bool StartChangeOthers(string[] args, TriggerActionContext context, out string error)
         {
             try
@@ -624,6 +619,8 @@ namespace PrimevalTitmouse
             error = null;
             return true;
         }
+        // action from dialog 
+        // parameter 1: type of underwear
         public bool GiveUnderwear(string[] args, TriggerActionContext context, out string error)
         {
             try
@@ -656,7 +653,7 @@ namespace PrimevalTitmouse
             return true;
         }
         // action from dialog 
-        // parameter 1: name of npc
+        // parameter 1: name of npc that change you
         // parameter 2: type of underwear the npc change you
         // parameter 3: (optional) name of pants the npc change you if yours are messy
         public bool StartChange(string[] args, TriggerActionContext context, out string error)

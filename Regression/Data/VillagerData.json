@@ -1482,6 +1482,8 @@
     // NPC´s that can change you
     // ##########
 
+    // Gus
+
     "gus": {
       "dirty_offer_change_player_player": [
         "{{i18n:Villager_Reactions.Gus.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"gus\""
@@ -1508,6 +1510,9 @@
         "{{i18n:Villager_Reactions.Gus.Soiled.Mean.2}}"
       ]
     },
+
+    // Jodi
+
     "jodi": {
       "general_offer_change_player": [
         "{{i18n:Villager_Reactions.Jodi.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED_BAD#[OnClean: {{i18n:Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Clean}}][OnSlightlyWet: {{i18n:Villager_Reactions.Jodi.Change.General_Offer.Player.1.Underwear_Slightly_Wet}}]|$GETTING_CHANGED_DIALOG$ \"jodi\""
@@ -1568,6 +1573,9 @@
         "{{i18n:Villager_Reactions.Jodi.Check.Player.Mean.2}}"
       ]
     },
+
+    // Harvey
+
     "harvey": {
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
@@ -1599,6 +1607,8 @@
     // ##########
     // NPC´s you can change
     // ##########
+
+    // Vincent
 
     "vincent": {
       "general_offer_change_npc": [
@@ -1633,6 +1643,9 @@
         "{{i18n:Villager_Reactions.Vincent.Ground.3}}"
       ]
     },
+
+    // Jas
+
     "jas": {
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Jas.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"jas\"#{{i18n:Villager_Reactions.Jas.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
@@ -1666,6 +1679,8 @@
     // ##########
     // NPC´s that can change you and you can change
     // ##########
+
+    // Sam
 
     "sam": {
       "general_offer_change_player": [
@@ -1705,6 +1720,9 @@
         "#$p child_diaper_no#{{i18n:Villager_Reactions.Sam.Soiled.Mean.5.Child_No}}|{{i18n:Villager_Reactions.Sam.Soiled.Mean.5.Child_Yes}}"
       ]
     },
+
+    // Abigail
+
     "abigail": {
       "general_offer_change_player": [
         "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{Villager_Reactions.Abigail.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"abigail\""
@@ -1739,6 +1757,9 @@
         "{{i18n:Villager_Reactions.Abigail.Soiled.Mean.5}}"
       ]
     },
+
+    // Maru
+
     "maru": {
       "general_offer_change_player": [
         "{{i18n:Villager_Reactions.Maru.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Maru.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"maru\""
@@ -1760,6 +1781,9 @@
         "{{i18n:Villager_Reactions.Maru.Soiled.Mean.1}}"
       ]
     },
+
+    // Emily
+
     "emily": {
       "general_offer_change_player": [
         "{{i18n:Villager_Reactions.Emily.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Emily.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"emily\""
@@ -1781,6 +1805,9 @@
         "{{i18n:Villager_Reactions.Emily.Soiled.Mean.1}}"
       ]
     },
+
+    // Haley
+
     "haley": {
       "general_offer_change_player": [
         "{{i18n:Villager_Reactions.Haley.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Haley.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"haley\""
@@ -1804,6 +1831,9 @@
         "{{i18n:Villager_Reactions.Haley.Soiled.Mean.3}}"
       ]
     },
+
+    // Leah
+
     "leah": {
       "general_offer_change_player": [
         "{{i18n:Villager_Reactions.Leah.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"leah\""
@@ -1898,6 +1928,9 @@
       ]
 
     },
+
+    // Penny
+
     "penny": {
       "general_offer_change_player": [
         "{{i18n:Villager_Reactions.Penny.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Penny.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"penny\""
@@ -1943,16 +1976,16 @@
 
   "Villager_Changeing_Dialoges": {
     "adult_male": {
-      "1": "%He tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1",
-      "2": "%Without another word, he takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1"
+      "1": "{{i18n:Villager_Dialoges.adult_male.Change.Player.1}}",
+      "2": "{{i18n:Villager_Dialoges.adult_male.Change.Player.2}}"
     },
     "adult_female": {
-      "1": "%She tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1",
-      "2": "%Without another word, she takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1"
+      "1": "{{i18n:Villager_Dialoges.adult_female.Change.Player.1}}",
+      "2": "{{i18n:Villager_Dialoges.adult_female.Change.Player.2}}"
     },
     "abigail": {
-      "1": "%She gives you a condescending little head-pat when she's done.#$b#Good <boy/girl>.",
-      "2": "%Abigail tapes you up in a soft, puffy fresh diaper."
+      "1": "{{i18n:Villager_Dialoges.Abigail.Change.Player.1}}",
+      "2": "{{i18n:Villager_Dialoges.Abigail.Change.Player.2}}"
     },
     "jodi": {
       "1": "{{i18n:Villager_Dialoges.Jodi.Change.Player.1}}",
@@ -1968,39 +2001,37 @@
 
   "Villager_Gift_Dialoges": {
     "adult_male": {
-      "1": "%He discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1"
+      "1": "{{i18n:Villager_Dialoges.adult_male.Gift.Player.1}}"
     },
     "adult_female": {
-      "1": "%She discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1"
+      "1": "{{i18n:Villager_Dialoges.adult_female.Gift.Player.1}}"
     },
     "abigail": {
-      "1": "%Abigail hands you a diaper.#$b#...I bet you'll need it more than me, hehehe!$1",
-      "2": "%Abigail slips a pair of clean undies onto you instead of a diaper.#$b#Aw, worried you're gonna make a mess? *smirk*",
-      "3": "Oh, yeah - take a couple spare changes with you...#$b#Just in case you have a bit too much fun on your little adventure.$1"
+      "1": "{{i18n:Villager_Dialoges.Abigail.Gift.Player.1}}",
+      "2": "{{i18n:Villager_Dialoges.Abigail.Gift.Player.2}}",
+      "3": "{{i18n:Villager_Dialoges.Abigail.Gift.Player.3}}"
     },
     "demetrius": {
-      "1": "%Demetrius hands you a Joja diaper from a pack under his workbench. Next to the pack is a diaper that's been slashed and gutted."
+      "1": "{{i18n:Villager_Dialoges.Demetrius.Gift.Player.1}}"
     },
     "jas": {
-      "1": "Here, this should help!$1"
+      "1": "{{i18n:Villager_Dialoges.Jas.Gift.Player.1}}"
     },
     "jodi": {
-      "1": "Yeah, you certainly need a change. Try this on, I think it'll fit just fine.",
-      "2": "Here, try this one. I get these for Vincent, but I think they'll fit you alright."
+      "1": "{{i18n:Villager_Dialoges.Jodi.Gift.Player.1}}",
+      "2": "{{i18n:Villager_Dialoges.Jodi.Gift.Player.2}}"
     },
     "leah": {
-      "1": "%Leah pushes a diaper into your hands, trying to hide her increasingly-flushed face from view.#$b#%...It looks like Big Leah might just need a bit more time than Little Leah did. That's okay!"
+      "1": "{{i18n:Villager_Dialoges.Leah.Gift.Player.1}}"
     },
     "marnie": {
-      "1": "*sigh* Here, take this and get cleaned up. you can use my room if you need to.$3"
+      "1": "{{i18n:Villager_Dialoges.Marnie.Gift.Player.1}}"
     },
     "sam": {
-      "1": "%Sam gives you a diaper you haven't seen at any store.#$b#You can change in my room if you need privacy."
+      "1": "{{i18n:Villager_Dialoges.Sam.Gift.Player.1}}"
     },
     "vincent": {
-      "1": "%He pulls a diaper he got from Jodi out of his bag.#$b#I have this just in case, but I think you need it right now more."
+      "1": "{{i18n:Villager_Dialoges.Vincent.Gift.Player.1}}"
     }
   }
-
-
 }
