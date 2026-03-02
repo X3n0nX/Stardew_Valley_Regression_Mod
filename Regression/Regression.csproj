@@ -16,6 +16,7 @@
 		<PackageReference Include="Lib.Harmony" Version="2.3.6" />
 		<PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
 		<PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+		<PackageReference Include="Stardew.Modding.GameReference" Version="1.6.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -345,8 +346,12 @@
     </None>
 	</ItemGroup>
 
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
 		<Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)..\scripts\package.ps1&quot; -TargetDir &quot;$(TargetDir)\&quot; -ProjectDir &quot;$(ProjectDir)\&quot; -ModVersion &quot;$(ModVersion)&quot; -DialogueVersion &quot;$(DialogueVersion)&quot;" />
+	</Target>
+
+	<Target Name="PostBuildLinux" AfterTargets="PostBuildEvent" Condition="'$(OS)' != 'Windows_NT'">
+		<Exec Command="pwsh -ExecutionPolicy Bypass -File &quot;$(ProjectDir)..\scripts\package.ps1&quot; -TargetDir &quot;$(TargetDir)/&quot; -ProjectDir &quot;$(ProjectDir)/&quot; -ModVersion &quot;$(ModVersion)&quot; -DialogueVersion &quot;$(DialogueVersion)&quot;" />
 	</Target>
 
 </Project>

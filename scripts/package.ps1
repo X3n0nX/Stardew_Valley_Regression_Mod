@@ -8,8 +8,8 @@ param (
 $ErrorActionPreference = "Stop"
 
 $StagingDir = Join-Path $TargetDir "Staging"
-$CoreStaging = Join-Path $StagingDir "Regression\Core"
-$DialogueStaging = Join-Path $StagingDir "Regression\Dialogue"
+$CoreStaging = "$StagingDir/Regression/Core"
+$DialogueStaging = "$StagingDir/Regression/Dialogue"
 $ZipName = "Regression Mod v$ModVersion.zip"
 $ZipPath = Join-Path $TargetDir $ZipName
 
@@ -55,25 +55,23 @@ if (-not (Test-Path $ReleasesDir)) { New-Item -ItemType Directory -Force $Releas
 Write-Host "Copying ZIP to $ReleasesDir"
 Copy-Item -Path $ZipPath -Destination $ReleasesDir -Force
 
-# 7. Deploy unzipped folder to local game folder
+# 7. Deploy unzipped folder to local game folder (Skip if folder doesn't exist)
 $GameModsDir = "D:\SteamLibrary\steamapps\common\Stardew Valley\Mods"
 $DeployDir = Join-Path $GameModsDir "Regression"
 
 if (Test-Path $GameModsDir) {
-    Write-Host "Deploying folder to game mods directory..."
+    Write-Host "Local game folder found. Deploying..."
     try {
         if (Test-Path $DeployDir) { Remove-Item -Recurse -Force $DeployDir -ErrorAction Stop }
-        # Copy the staged folder, not the zip
         Copy-Item -Path (Join-Path $StagingDir "Regression") -Destination $GameModsDir -Recurse -Force -ErrorAction Stop
         Write-Host "Deployment successful!"
     }
     catch {
-        Write-Warning "Could not deploy to game folder (files might be in use). Skipping deployment."
-        Write-Warning "Error: $($_.Exception.Message)"
+        Write-Warning "Could not deploy to local game folder. Skipping."
     }
 }
 else {
-    Write-Host "Game folder not found, skipping local deployment."
+    Write-Host "Local game folder not found (Expected on Build Server). Skipping deployment."
 }
 
 Write-Host "Packaging complete!"
