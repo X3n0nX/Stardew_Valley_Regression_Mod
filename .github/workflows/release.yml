@@ -17,10 +17,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 6.0.x
+      - name: Add build environment
+        uses: Pathoschild/SMAPI-ModBuildWorkflow/add-build-environment@v0
 
       # 1. Bump version and push tag
       - name: Bump version and push tag
@@ -34,7 +32,7 @@ jobs:
           RELEASE_BRANCHES: main,storage-fix
 
       - name: Build
-        run: dotnet build Regression/Regression.csproj -c Release /p:ModVersion=${{ steps.tag_version.outputs.new_tag }} /p:DialogueVersion=${{ steps.tag_version.outputs.new_tag }} /p:IgnoreModBuildCheck=true
+        run: dotnet build Regression/Regression.csproj -c Release /p:ModVersion=${{ steps.tag_version.outputs.new_tag }} /p:DialogueVersion=${{ steps.tag_version.outputs.new_tag }}
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
