@@ -1,4 +1,13 @@
-*/bin/*
-*/obj/*
-/.vs
-Releases
+# .NET/Visual Studio
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Stardew Modding / Releases
+Releases/
+staging/
+
