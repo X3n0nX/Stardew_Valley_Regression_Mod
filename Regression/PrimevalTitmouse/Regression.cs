@@ -840,7 +840,7 @@ namespace PrimevalTitmouse
 
                     string mod = "_mean";
 
-                    if (heartLevelForNpc >= 8 || veryNice || config.FriendshipDebug)
+                    if (heartLevelForNpc >= 8 || veryNice || config.FriendshipDebugVeryNice)
                     {
                         mod = "_verynice";
                     }
@@ -852,7 +852,7 @@ namespace PrimevalTitmouse
                         else
                             mod = "_nice";
                     }
-                    else if (heartLevelForNpc >= 4)
+                    else if (heartLevelForNpc >= 4 || (config.FriendshipDebugNice && !config.FriendshipDebugVeryNice))
                     {
                         mod = "_nice";
 
@@ -863,7 +863,7 @@ namespace PrimevalTitmouse
                     string randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
                     if (randNpcString == "") continue;
 
-                    //randNpcString = randQuestionNpcString + randNpcString;
+                    randNpcString = randQuestionNpcString + randNpcString;
 
                     string npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
                     npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
@@ -1601,10 +1601,17 @@ namespace PrimevalTitmouse
             );
             configMenu.AddBoolOption(
                 mod: this.ModManifest,
-                name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Friendships.Debug.Name}}"),
-                tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Friendships.Debug.Tooltip}}"),
-                getValue: () => config.FriendshipDebug,
-                setValue: value => config.FriendshipDebug = value
+                name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Friendships.Nice.Debug.Name}}"),
+                tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Friendships.Nice.Debug.Tooltip}}"),
+                getValue: () => config.FriendshipDebugNice,
+                setValue: value => config.FriendshipDebugNice = value
+            );
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Friendships.VeryNice.Debug.Name}}"),
+                tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Friendships.VeryNice.Debug.Tooltip}}"),
+                getValue: () => config.FriendshipDebugVeryNice,
+                setValue: value => config.FriendshipDebugVeryNice = value
             );
 
             // All the options related to save files

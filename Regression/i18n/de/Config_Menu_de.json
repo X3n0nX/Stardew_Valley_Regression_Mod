@@ -31,27 +31,27 @@
   // Bladder Capacity (mL)
 
   "Config_Menu.Main.Bladder_Capacity.Name": "Blasen Kapazität (mL)",
-  "Config_Menu.Main.Bladder_Capacity.Tooltip": "600 entspricht ungef�hr 3 Toiletteng�nge pro Tag. (MaxBladderCapacity)",
+  "Config_Menu.Main.Bladder_Capacity.Tooltip": "600 entspricht ungefähr 3 Toilettengänge pro Tag. (MaxBladderCapacity)",
 
   // Bowel Capacity (mL)
 
   "Config_Menu.Main.Bowel_Capacity.Name": "Darm Kapazität (mL)",
-  "Config_Menu.Main.Bowel_Capacity.Tooltip": "1000 entspricht ungef�hr 1,5 Toiletteng�nge pro Tag. (MaxBowelCapacity)",
+  "Config_Menu.Main.Bowel_Capacity.Tooltip": "1000 entspricht ungefähr 1,5 Toilettengänge pro Tag. (MaxBowelCapacity)",
 
   // Always notice accidents
 
-  "Config_Menu.Main.Always_Notice_Accidents.Name": "Unf�lle immer bemerken",
+  "Config_Menu.Main.Always_Notice_Accidents.Name": "Unfälle immer bemerken",
   "Config_Menu.Main.Always_Notice_Accidents.Tooltip": "Legt fest, ob Unfälle bei niedriger Kontinenz bemerkt werden sollen. (AlwaysNoticeAccidents)",
 
   // Pants Change at Home
 
   "Config_Menu.Main.Pants_Change_At_Home.Name": "Wechsle deine Hose zu Hause",
-  "Config_Menu.Main.Pants_Change_At_Home.Tooltip": "Um deine Hose zu wechseln, im falle sie ist dreckig, musst du zun�chst nach Hause gehen. (Normalerweise An). (PantsChangeRequiresHome)",
+  "Config_Menu.Main.Pants_Change_At_Home.Tooltip": "Um deine Hose zu wechseln, im falle sie ist dreckig, musst du zunächst nach Hause gehen. (Normalerweise An). (PantsChangeRequiresHome)",
 
   // Underwear Change Causes Exposure
 
   "Config_Menu.Main.Underwear_Change_Causes_Exposure.Name": "Entblößung bei Unterwäschewechsel",
-  "Config_Menu.Main.Underwear_Change_Causes_Exposure.Tooltip": "Für den selbstst�ndigen wechsel deiner Unterw�che ist es nötig, dich auszuziehen und zu Entblößen. Ist diese Option aktiv, musst du deine Windeln zu Hause wechseln oder weit weg von anderen. (Normalerweise An) (UnderwearChangeCauseExposure)",
+  "Config_Menu.Main.Underwear_Change_Causes_Exposure.Tooltip": "Für den selbstständigen wechsel deiner Unterwäche ist es nötig, dich auszuziehen und zu Entblößen. Ist diese Option aktiv, musst du deine Windeln zu Hause wechseln oder weit weg von anderen. (Normalerweise An) (UnderwearChangeCauseExposure)",
 
   // Menu Point Key Bindings
 
@@ -145,12 +145,12 @@
   // Start Bladder Continence
 
   "Config_Menu.Continence.Start_Bladder_Continence.Name": "Anfangs Blasen Kontinenz",
-  "Config_Menu.Continence.Start_Bladder_Continence.Tooltip": "Definiert die Anfangs (neues Spiel) Blasen Kontinenz. In der Regel 70. Hat auch Einfluss auf alte Spielst�nde ohne diese Mod. (StartBladderContinence)",
+  "Config_Menu.Continence.Start_Bladder_Continence.Tooltip": "Definiert die Anfangs (neues Spiel) Blasen Kontinenz. In der Regel 70. Hat auch Einfluss auf alte Spielstände ohne diese Mod. (StartBladderContinence)",
 
   // Start Bowel Continence
 
   "Config_Menu.Continence.Start_Bowel_Continence.Name": "Anfangs Stuhl Kontinenz",
-  "Config_Menu.Continence.Start_Bowel_Continence.Tooltip": "Definiert die Anfangs (neues Spiel) Stuhl Kontinenz. In der Regel 90. Hat auch Einfluss auf alte Spielst�nde ohne diese Mod. (StartBowelContinence)",
+  "Config_Menu.Continence.Start_Bowel_Continence.Tooltip": "Definiert die Anfangs (neues Spiel) Stuhl Kontinenz. In der Regel 90. Hat auch Einfluss auf alte Spielstände ohne diese Mod. (StartBowelContinence)",
 
   // ##########
   // Page Friendships
@@ -166,10 +166,15 @@
   "Config_Menu.Friendships.Penalty_Pooping.Name": "Einfluss Kacken",
   "Config_Menu.Friendships.Penalty_Pooping.Tooltip": "Wie Kacken in der Öffentlichkeit die Freundschaften beeinflusst. 100 ist normal, 50 bedeutet halber und 200 doppelter Einfluss. 0 deaktiviert den Verlust von Freundschaft bei Kack Ereignissen. (FriendshipPenaltyBowelMultiplier)",
 
-  // Friendship Debug
+  // Friendship Debug Very Nice
 
-  "Config_Menu.Friendships.Debug.Name": "Freundschafts Debug",
+  "Config_Menu.Friendships.Debug.Name": "Freundschafts Debug Modus sehr vertraut",
   "Config_Menu.Friendships.Debug.Tooltip": "Dein Freundschafts Level zu NPC´s spielt keine Rolle mehr.",
+
+  // Friendship Debug Nice
+
+  "Config_Menu.Friendships.Nice.Debug.Name": "Freundschafts Debug Modus sehr vertraut",
+  "Config_Menu.Friendships.Nice.Debug.Tooltip": "Dein Freundschafts Level zu NPC´s, für Windelwechseldialoge ist, als hättest du 4 Herzen.",
 
   // ##########
   // Save Files Friendships
@@ -177,15 +182,15 @@
 
   // Headline
 
-  "Config_Menu.Save_Files.Headline": "Ab der Mod Version 1.5.0, werden Speicherst�nde (json) nicht l�nger ben�tigt/erstellt. Der einzige nutzen dieser Funktion ist, das laden alter oder bearbeiteter Speicherstände.",
+  "Config_Menu.Save_Files.Headline": "Ab der Mod Version 1.5.0, werden Speicherstände (json) nicht länger benötigt/erstellt. Der einzige nutzen dieser Funktion ist, das laden alter oder bearbeiteter Speicherstände.",
 
   // Read Save Files
 
   "Config_Menu.Save_Files.Read.Name": "Speicherstand lesen",
-  "Config_Menu.Save_Files.Read.Tooltip": "Dies aktiviert das lesen von (alten) Speicherst�nden. Zus�tzlich wird immer der Speicherstand des letzten Tages gel�scht, wenn ein neuer Tag startet.",
+  "Config_Menu.Save_Files.Read.Tooltip": "Dies aktiviert das lesen von (alten) Speicherständen. Zusätzlich wird immer der Speicherstand des letzten Tages gelöscht, wenn ein neuer Tag startet.",
 
   // Write Save Files
 
   "Config_Menu.Save_Files.Wtite.Name": "Speicherstand schreiben",
-  "Config_Menu.Save_Files.Wtite.Tooltip": "Dies aktiviert das schreiben von (alten) Speicherst�nden. Es wird empfolen, diese Einstellung zu deaktivieren."
+  "Config_Menu.Save_Files.Wtite.Tooltip": "Dies aktiviert das schreiben von (alten) Speicherständen. Es wird empfolen, diese Einstellung zu deaktivieren."
 }

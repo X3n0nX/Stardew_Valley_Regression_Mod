@@ -247,7 +247,10 @@ namespace PrimevalTitmouse
                     if (counter > 0) optionQuestionsAnswered = true;
                 }
 
-                if (optionMinHeartLevel || optionMinHeartLevelOther || optionLocations || optionQuestionsAnswered || Regression.config.FriendshipDebug) return true;
+                if (optionMinHeartLevel || optionMinHeartLevelOther || 
+                    optionLocations || optionQuestionsAnswered || 
+                    Regression.config.FriendshipDebugNice ||
+                    Regression.config.FriendshipDebugVeryNice) return true;
             }
 
             return false;
@@ -547,7 +550,7 @@ namespace PrimevalTitmouse
                 }
                 else questionAnswered = true;
 
-                if (minHeartLevel || questionAnswered || Regression.config.FriendshipDebug)
+                if (minHeartLevel || questionAnswered || Regression.config.FriendshipDebugNice || Regression.config.FriendshipDebugVeryNice)
                 {
                     switch (incidentType)
                     {

@@ -108,7 +108,7 @@ namespace PrimevalTitmouse
                 c = b.underwear;
             if (c != null)
             {
-                str = ReplaceGetChangeDialog(str, c);
+                str = ReplaceGetChangeDialog(str, c);       // replace the $GETTING_CHANGED_DIALOG$ token with the corresponding dialogue
 
                 str = ReplaceConditionalOptional(str, "OnSlightlyWet", c.used && !c.used_bad);
                 str = ReplaceConditionalOptional(str, "OnClean", !c.used);
@@ -193,9 +193,9 @@ namespace PrimevalTitmouse
             Regex regex = new Regex("<([^>" + splitChar + "]*)" + splitChar + "([^>]*)>");
             if (first && !second)
                 return regex.Replace(str, "$1");
-            if (!first & second)
+            if (!first && second)
                 return regex.Replace(str, "$2");
-            if (first & second)
+            if (first && second)
                 return regex.Replace(str, "$1 and $2");
             return regex.Replace(str, "");
         }
@@ -454,11 +454,11 @@ namespace PrimevalTitmouse
             return str;
         }
 
-        // format string: $NPC_NAME$ \"npcName\" \"underwearName\" \"pantsName\" \"id\"
+        // format string: $CHANGED_BY_NPC$ \"npcName\" \"underwearName\" \"pantsName\" \"id\"
         // parameter 1: name of the npc who changes you
         // parameter 2: name of new underwear the npc will change the player
         // parameter 3: (optional) name of the pants the npc will change the player if there are dirty
-        // parameter 4: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file Regression.json
+        // parameter 4: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file ChangeData.json
         //              if free try to randomize the id
         //              if no insert in "Villager_Changeing_Reactions" use gender specific dialogue
         public static string ReplaceChangedByNpc(string str, Container underwear)

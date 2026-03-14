@@ -11,7 +11,8 @@
         public bool Messing = true;
         public int FriendshipPenaltyBladderMultiplier = 100;
         public int FriendshipPenaltyBowelMultiplier = 200;
-        public bool FriendshipDebug = false;
+        public bool FriendshipDebugVeryNice = false;
+        public bool FriendshipDebugNice = false;
         public bool NoHungerAndThirst = false;
         public int NighttimeLossMultiplier = 50;
         public int NighttimeGainMultiplier = 50;

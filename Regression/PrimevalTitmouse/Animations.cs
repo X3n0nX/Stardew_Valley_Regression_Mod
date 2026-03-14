@@ -570,12 +570,14 @@ namespace PrimevalTitmouse
             }
             return newList;
         }
-
+        
         public static Gender GetNpcGender(string npcName)
         {
             List<NPC> npcs = Utility.getAllCharacters();
 
-            foreach(NPC npc in npcs)
+            npcName = npcName.FirstCharToUpper();
+
+            foreach (NPC npc in npcs)
             {
                 if (npc is Horse || npc is Pet) continue;
 
@@ -667,24 +669,6 @@ namespace PrimevalTitmouse
         public static string responseKeyAdditionForState(NPC npc)//, bool isDirty = false)
         {
             var body = new NpcBody(npc);
-            /*
-            if (!isDirty)
-            {
-                if (Regression.rnd.NextBool())
-                {
-                    if (body.canGetChangeNpc) return "_offer_change_player";
-                }
-                else
-                {
-                    if (body.canGiveChangeNpc) return "_offer_change_npc";
-                }  
-            }
-            else if (isDirty && body.canGiveDirtyChangeNpc)
-            {
-                return "_offer_change_player";
-            }
-            return "";
-            */
 
             // randoise if we check npc or npc check player
             if (Regression.rnd.NextBool())
@@ -774,7 +758,7 @@ namespace PrimevalTitmouse
 
                 //Construct and say Statement
                 npcName = npc.Name;
-                string npcStatement = npcName + Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
+                string npcStatement = Strings.InsertVariables(Strings.ReplaceAndOr(Strings.RandString(stringList3.ToArray()), !mess, mess, "&"), b, (Container)null);
                 npcStatement = Strings.ReplaceNpcName(npcStatement, npcName);
 
                 Regression.QueueAction(() =>

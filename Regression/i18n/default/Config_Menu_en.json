@@ -166,10 +166,15 @@
   "Config_Menu.Friendships.Penalty_Pooping.Name": "Penalty Pooping",
   "Config_Menu.Friendships.Penalty_Pooping.Tooltip": "How pooping in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for poop incidents. (FriendshipPenaltyBowelMultiplier)",
 
-  // Friendship Debug
+  // Friendship Debug Very Nice
 
-  "Config_Menu.Friendships.Debug.Name": "Friendships Debug",
-  "Config_Menu.Friendships.Debug.Tooltip": "Your friendship level to npc�s for getting changed dosen�t matter.",
+  "Config_Menu.Friendships.VeryNice.Debug.Name": "Friendships Debug Mode Very Nice",
+  "Config_Menu.Friendships.VeryNice.Debug.Tooltip": "Your friendship level to npc´s for getting changed dosen´t matter.",
+
+  // Friendship Debug Nice
+
+  "Config_Menu.Friendships.Nice.Debug.Name": "Friendships Debug Nice",
+  "Config_Menu.Friendships.Nice.Debug.Tooltip": "Your friendship level to npc´s for getting changed are like you have 4 hearts.",
 
   // ##########
   // Save Files Friendships
