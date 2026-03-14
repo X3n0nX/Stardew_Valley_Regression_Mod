@@ -938,6 +938,9 @@ namespace PrimevalTitmouse
 
                     responseKey = responseKey + mod;
                     string randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
+
+                    Debug.WriteLine(randNpcString);
+
                     if (randNpcString == "") continue;
 
                     randNpcString = randQuestionNpcString + randNpcString;

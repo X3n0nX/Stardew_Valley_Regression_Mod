@@ -1,7 +1,7 @@
 ﻿{
   "Name": "Regression",
   "Author": "Various",
-  "Version": "1.6.5",
+  "Version": "1.6.6",
   "Description": "Diaper Wetting Mod",
   "UniqueID": "Zippity21.Regression",
   "EntryDll": "Regression.dll",

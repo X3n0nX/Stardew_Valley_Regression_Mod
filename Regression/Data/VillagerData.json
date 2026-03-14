@@ -179,7 +179,7 @@
       },
       "poop": {
         "pre": {
-          "success:": [
+          "success": [
             // vincent never success. All will go in his underwear
           ],
           "fail": [
@@ -1725,7 +1725,7 @@
 
     "abigail": {
       "general_offer_change_player": [
-        "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{Villager_Reactions.Abigail.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"abigail\""
+        "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"abigail\""
       ],
       "general_offer_change_npc": [
         "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"abigail\"#{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
@@ -1774,7 +1774,7 @@
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Maru.Soiled.Verynice.1}}$GETTING_CHANGED_DIALOG$ \"maru\""
       ],
-      "soilded_nice": [
+      "soiled_nice": [
         "{{i18n:Villager_Reactions.Maru.Soiled.Nice.1}}$GETTING_CHANGED_DIALOG$ \"maru\""
       ],
       "soiled_mean": [
@@ -1798,7 +1798,7 @@
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Emily.Soiled.Verynice.1}}"
       ],
-      "soilded_nice": [
+      "soiled_nice": [
         "{{i18n:Villager_Reactions.Emily.Soiled.Nice.1}}"
       ],
       "soiled_mean": [
@@ -1895,12 +1895,12 @@
       ],
       // They check you
       "check_player_verynice": [
-        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1:}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.1}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"##$h",
-        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1:}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.2}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"##$h",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.1}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"##$h",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.2}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"##$h",
         "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.2}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.3}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"##$h",
         "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.2}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.4}}$CHANGED_BY_NPC$ \"leah\" \"pawprint diaper\"##$h",
-        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1:}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.4}}",
-        "$query !DIAPER_USED#{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.5}}"
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1}}#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.4}}",
+        "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Verynice.Used.5}}"
       ],
       "check_player_nice": [
         "{{i18n:Villager_Reactions.Leah.Check.Player.Pre.1}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Clean.1}}|#$b###{{i18n:Villager_Reactions.Leah.Check.Player.Nice.Used.1}}$CHANGED_BY_NPC$ \"leah\" \"baby print diaper\"##$h",
