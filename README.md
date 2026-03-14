@@ -38,8 +38,8 @@ Follow instructions provided by the individual prerequisite mods and programs.
 > This should produce a folder "Regression Mod" which should contain two other folders (among other things), "Regression" and "Regression Dialogue".
 - Stardew Valley
   - Mods
-    - Regression Mod
-      - Regression
+    - Regression
+      - Core
       - Regression Dialogue  
 
 ## Controls (Changed compared to original mod)
