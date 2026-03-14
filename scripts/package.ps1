@@ -66,6 +66,7 @@ Write-Host "Copying ZIP to $ReleasesDir"
 Copy-Item -Path $ZipPath -Destination $ReleasesDir -Force
 
 # 7. Deploy unzipped folder to local game folder (Skip if folder doesn't exist)
+$GameModsDir = "D:\SteamLibrary\steamapps\common\Stardew Valley\Mods"
 $DeployDir = Join-Path $GameModsDir "Regression"
 
 if (Test-Path $GameModsDir) {

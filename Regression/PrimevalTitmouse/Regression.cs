@@ -524,6 +524,26 @@ namespace PrimevalTitmouse
             }
         }
 
+        public static IEnumerable<GameLocation> GetAllLocations()
+        {
+            var visited = new HashSet<GameLocation>();
+            var queue = new Queue<GameLocation>(Game1.locations);
+            while (queue.Count > 0)
+            {
+                var loc = queue.Dequeue();
+                if (loc == null || visited.Contains(loc)) continue;
+                visited.Add(loc);
+                yield return loc;
+                if (loc.buildings != null)
+                {
+                    foreach (var b in loc.buildings)
+                    {
+                        if (b.indoors.Value != null) queue.Enqueue(b.indoors.Value);
+                    }
+                }
+            }
+        }
+
         // action from dialog 
         // parameter 1: type of accident, pee or poop
         // parameter 2: target of the accident, player or an npc name

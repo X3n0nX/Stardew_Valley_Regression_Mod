@@ -13,40 +13,39 @@ jobs:
       contents: write
     
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-    - name: Install .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
+      - name: Add build environment
+        uses: Pathoschild/SMAPI-ModBuildWorkflow/add-build-environment@v0
 
-    # 1. Calculate Version
-    - name: Bump version and push tag
-      id: tag_version
-      uses: anothrNick/github-tag-action@1.64.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        WITH_V: false
-        DEFAULT_BUMP: patch
+      # 1. Bump version and push tag
+      - name: Bump version and push tag
+        id: tag_version
+        uses: anothrNick/github-tag-action@1.64.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: false
+          DEFAULT_BUMP: patch
+          # If 1.6.5 exists, it will try 1.6.6 etc
+          RELEASE_BRANCHES: main,storage-fix
 
     # 2. Build (This triggers package.ps1 via PostBuild)
-    - name: Build
-      run: dotnet build Regression/Regression.csproj -c Release /p:ModVersion=${{ steps.tag_version.outputs.new_tag }} /p:DialogueVersion=${{ steps.tag_version.outputs.new_tag }}
+      - name: Build
+        run: dotnet build Regression/Regression.csproj -c Release /p:ModVersion=${{ steps.tag_version.outputs.new_tag }} /p:DialogueVersion=${{ steps.tag_version.outputs.new_tag }}
 
     # 3. Create Release
-    - name: Create Release
+      - name: Create Release
       id: create_release
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: ${{ steps.tag_version.outputs.new_tag }}
-        name: Release ${{ steps.tag_version.outputs.new_tag }}
-        body: |
-          ## Changes in this version
-          ${{ steps.tag_version.outputs.changelog }}
-        files: |
-          Regression/bin/Release/net6.0/*.zip
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: |
+            ## Changes in this version
+            ${{ steps.tag_version.outputs.changelog }}
+          files: |
+            Releases/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
