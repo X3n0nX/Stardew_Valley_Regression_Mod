@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<!-- Change these to update the manifest.json versions and zip file name automatically -->
-		<ModVersion>1.6.6</ModVersion>
+		<ModVersion>1.6.7</ModVersion>
 		<DialogueVersion>1.1.0</DialogueVersion>
     <!-- Change these to your game path to update the mod automatically in the mod direction -->
     <GameModsDir>E:\Steam\SteamApps\common\Stardew Valley\Mods</GameModsDir>
