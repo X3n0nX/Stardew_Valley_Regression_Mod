@@ -13,8 +13,8 @@ Placeholder				| used for
 
 Placeholder					| used for
 --------------------------- | ---------
-'#$UNDERWEAR_NAME$'			| will be replaced with the name of the underwear you actual weared
-'#$UNDERWEAR_LONGDESC$'		| will be replaced with the description of the underwear you actual weared
+'$UNDERWEAR_NAME$'			| will be replaced with the name of the underwear you actual weared
+'$UNDERWEAR_LONGDESC$'		| will be replaced with the description of the underwear you actual weared
 '$PANTS_NAME$'				| will be replaced with the name of the pants you actual weared
 
 ### Npc´s
