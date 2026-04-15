@@ -1,19 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-using Netcode;
 using StardewModdingAPI;
 using StardewValley;
-using StardewValley.Network;
-using StardewValley.Tools;
-using StardewValley.Locations;
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using xTile.Dimensions;
-using System.Data.Common;
+
 
 namespace PrimevalTitmouse
 {
@@ -133,28 +123,50 @@ namespace PrimevalTitmouse
             Regression.monitor.Log($"{npc.Name} got changed and is now wearing {underwear.name} and {pants.name}", LogLevel.Debug);
         }
 
-        // can npc get changed by player
-        public bool canGetChangeNpc
+        // can npc get changed by player with dialogue very nice
+        public bool canGetChangedByPlayerVeryNice
         {
             get
             {
                 // special for Vincent and Jas if the option "Children in Diapers" is deactivated
                 if (!Regression.ChildrenAndDiapers && (npc.Name.ToLower() == "vincent" || npc.Name.ToLower() == "jas")) return false;
 
-                return CheckSingleChangingOption(ChangingOptions.get_changed);
+                return CheckSingleChangingOption(ChangingOptions.get_changed_verynice);
             }
         }
 
-        // can npc give the player a change
-        public bool canGiveChangeNpc
+        // can npc get changed by player with dialogue nice
+        public bool canGetChangedByPlayerNice
         {
             get
             {
-                return CheckSingleChangingOption(ChangingOptions.give_change);
-            }
-        }       
+                // special for Vincent and Jas if the option "Children in Diapers" is deactivated
+                if (!Regression.ChildrenAndDiapers && (npc.Name.ToLower() == "vincent" || npc.Name.ToLower() == "jas")) return false;
 
-        public bool canGiveDirtyChangeNpc
+                return CheckSingleChangingOption(ChangingOptions.get_changed_nice);
+            }
+        }
+
+        // can npc give the player a change with dialogue very nice
+        public bool canGivePlayerChangeVeryNice
+        {
+            get
+            {
+                return CheckSingleChangingOption(ChangingOptions.give_change_verynice);
+            }
+        }
+
+        // can npc give the player a change with dialogue nice
+        public bool canGivePlayerChangeNice
+        {
+            get
+            {
+                return CheckSingleChangingOption(ChangingOptions.give_change_nice);
+            }
+        }
+
+        // can npc give the player a change when they messed there pants
+        public bool canGivePlayerChangeDirty
         {
             get
             {

@@ -1,32 +1,18 @@
 ﻿using GenericModConfigMenu;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Regression;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
-using StardewValley.BellsAndWhistles;
 using StardewValley.Delegates;
-using StardewValley.GameData.Characters;
 using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Objects;
-using StardewValley.Quests;
-using StardewValley.SaveSerialization;
-using StardewValley.TerrainFeatures;
 using StardewValley.Tools;
 using StardewValley.Triggers;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.CompilerServices;
-using System.Xml.Serialization;
-using xTile.Dimensions;
-using static StardewValley.Minigames.TargetGame;
 using PrimevalTitmouse.Data;
 
 namespace PrimevalTitmouse
@@ -128,6 +114,11 @@ namespace PrimevalTitmouse
             WorldIsFurry = Helper.ModRegistry.IsLoaded("sion9000.AnthroCharactersContinued");
             SelfIsFurry = Helper.ModRegistry.IsLoaded("krystedez.FurryFarmer");
         }
+
+        /// <summary>
+        /// Handler for the "emote" console command.
+        /// Usage: set_emote <npcName> <enoteId>
+        /// </summary>
         private void SetEmoteCommand(string command, string[] args)
         {
             if (args.Length < 2)
@@ -178,10 +169,6 @@ namespace PrimevalTitmouse
 
             TriggerDebugDialog(npcName, message);
         }
-        /// <summary>
-        /// Handler for the "dialog" console command.
-        /// Usage: trigger_dialog <npcName> <message>
-        /// </summary>
 
         /// <summary>
         /// Triggers a dialog for the specified NPC with the given message.
@@ -887,7 +874,7 @@ namespace PrimevalTitmouse
 
 
                 // The following block makes npc (usually) not talk to you if you wear wet or messy pants... short of the special texts
-                var isFilthy = body.pants.used;
+                var hasMessyPants = body.pants.used;
 
                 foreach (var npc in NpcBody.ByRange(10))
                 {
@@ -900,50 +887,91 @@ namespace PrimevalTitmouse
 
                     string responseKey = Animations.responseKeyAdditionForState(npc.npc);
                     string randQuestionNpcString = "";
-                    bool veryNice = false;
+                    string randNpcString = "";
+                    bool hasOptionVeryNice = false;
+                    bool hasOptionNice = false;
+                    bool optionVeryNice = false;
+                    bool optionNice = false;
+                    bool hasOptionDirty = false;
+                    bool dirtyChange = false;
 
-                    if (responseKey == "check_player")
+                    if (!hasMessyPants)
                     {
-                        string responseKeyQuestion = "general_question_change";
-                        randQuestionNpcString = Strings.RandString(npc.GetVillagerReactions(responseKeyQuestion).ToArray());
-                        randQuestionNpcString = randQuestionNpcString + "#$b#";
+                        if (responseKey == "check_player" || hasMessyPants)
+                        {
+                            string responseKeyQuestion = "general_question_change";
+                            randQuestionNpcString = Strings.RandString(npc.GetVillagerReactions(responseKeyQuestion).ToArray());
+                            randQuestionNpcString = randQuestionNpcString + "#$b#";
 
-                        veryNice = npc.canGetChangeNpc;
-                    }
-                    else if(responseKey == "check_npc")
-                    {
-                        veryNice = npc.canGiveChangeNpc;
-                    }
+                            hasOptionVeryNice = npc.ChangingOptions.hasOptionGiveChangeVeryNice;
+                            hasOptionNice = npc.ChangingOptions.hasOptionGiveChangeNice;
 
-                    string mod = "_mean";
+                            if (hasOptionVeryNice) optionVeryNice = npc.canGivePlayerChangeVeryNice;
+                            if (hasOptionNice) optionNice = npc.canGivePlayerChangeNice;
 
-                    if (heartLevelForNpc >= 8 || veryNice || config.FriendshipDebugVeryNice)
-                    {
-                        mod = "_verynice";
-                    }
-                    else if (heartLevelForNpc >= 6)
-                    {
-                        var niceRand = Regression.rnd.NextDouble(); //allows a small chance for the very_nice line to be chosen instead for variety.
-                        if (niceRand > 0.8f)
-                            mod = "_verynice";
+                            if (hasMessyPants)
+                            {
+                                hasOptionDirty = npc.ChangingOptions.hasOptionGiveDirtyChange;
+                                if (hasOptionDirty) dirtyChange = npc.canGivePlayerChangeDirty;
+                            }
+                        }
+                        else if (responseKey == "check_npc")
+                        {
+                            hasOptionVeryNice = npc.ChangingOptions.hasOptionGetChangeVeryNice;
+                            hasOptionNice = npc.ChangingOptions.hasOptionGetChangeNice;
+
+                            if (hasOptionVeryNice) optionVeryNice = npc.canGetChangedByPlayerVeryNice;
+                            if (hasOptionNice) optionNice = npc.canGetChangedByPlayerNice;
+                        }
+
+                        // get dialoge based on change options and friendship
+                        // check if we have no messy pants or we have messy pants but no option for change dirty were found
+                        if (hasMessyPants && !hasOptionDirty || !hasMessyPants)
+                        {
+
+                            // get modificator for dialoge 
+                            string mod = "_mean";
+
+                            if (hasOptionVeryNice && optionVeryNice ||
+                                !hasOptionVeryNice && heartLevelForNpc >= 8 ||
+                                config.FriendshipDebugVeryNice)
+                            {
+                                mod = "_verynice";
+                            }
+                            else if (!hasOptionVeryNice && heartLevelForNpc >= 6)
+                            {
+                                var niceRand = rnd.NextDouble(); //allows a small chance for the very_nice line to be chosen instead for variety.
+                                if (niceRand > 0.8f)
+                                    mod = "_verynice";
+                                else
+                                    mod = "_nice";
+                            }
+                            else if (hasOptionNice && optionNice ||
+                                !hasOptionNice && heartLevelForNpc >= 4 ||
+                                config.FriendshipDebugNice && !config.FriendshipDebugVeryNice)
+                            {
+                                mod = "_nice";
+                            }
+
+                            responseKey = responseKey + mod;
+                            randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
+
+                            if (randNpcString == "") continue;
+
+                            randNpcString = randQuestionNpcString + randNpcString;
+                        }
                         else
-                            mod = "_nice";
+                        {
+                            responseKey = "check_player_dirty";
+
+                            if (dirtyChange)
+                            {
+                                randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
+                            }
+
+                            if (randNpcString == "") continue;
+                        }
                     }
-                    else if (heartLevelForNpc >= 4 || (config.FriendshipDebugNice && !config.FriendshipDebugVeryNice))
-                    {
-                        mod = "_nice";
-
-                    }
-                    else mod = "_mean";
-
-                    responseKey = responseKey + mod;
-                    string randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
-
-                    Debug.WriteLine(randNpcString);
-
-                    if (randNpcString == "") continue;
-
-                    randNpcString = randQuestionNpcString + randNpcString;
 
                     string npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
                     npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);

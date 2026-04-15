@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using PrimevalTitmouse;
-using StardewValley;
-using StardewValley.GameData.Characters;
+
 
 namespace PrimevalTitmouse
 {
@@ -22,10 +16,12 @@ namespace PrimevalTitmouse
             }
             else
             {
-                this._get_changed = options.get_changed;
-                this._give_change = options.give_change;
-                this._give_dirty_change = options.give_dirty_change;
-                this._change_automaticly = options.change_automaticly;
+                _get_changed_verynice = options.get_changed_verynice;
+                _get_changed_nice = options.get_changed_nice;
+                _give_change_verynice = options.give_change_verynice;
+                _give_change_nice = options.give_change_nice;
+                _give_dirty_change = options.give_dirty_change;
+                _change_automaticly = options.change_automaticly;
             }
         }
 
@@ -33,9 +29,9 @@ namespace PrimevalTitmouse
         {
             get
             {
-                if(hasOptionGetChange) return true;
+                if (hasOptionGetChange) return true;
                 if (hasOptionGiveChange) return true;
-                if(hasOptionGiveDirtyChange) return true;
+                if (hasOptionGiveDirtyChange) return true;
                 if (hasOptionChangeAutomaticly) return true;
                 return false;
             }
@@ -45,7 +41,25 @@ namespace PrimevalTitmouse
         {
             get
             {
-                if (get_changed != null && get_changed.hasOptions) return true;
+                if (hasOptionGetChangeVeryNice || hasOptionGetChangeNice) return true;
+                return false;
+            }
+        }
+
+        public bool hasOptionGetChangeVeryNice
+        {
+            get
+            {
+                if (get_changed_verynice != null && get_changed_verynice.hasOptions) return true;
+                return false;
+            }
+        }
+
+        public bool hasOptionGetChangeNice
+        {
+            get
+            {
+                if (get_changed_nice != null && get_changed_nice.hasOptions) return true;
                 return false;
             }
         }
@@ -54,7 +68,25 @@ namespace PrimevalTitmouse
         {
             get
             {
-                if (give_change != null && give_change.hasOptions) return true;
+                if (hasOptionGiveChangeVeryNice || hasOptionGiveChangeNice) return true;
+                return false;
+            }
+        }
+
+        public bool hasOptionGiveChangeVeryNice
+        {
+            get
+            {
+                if (give_change_verynice != null && give_change_verynice.hasOptions) return true;
+                return false;
+            }
+        }
+
+        public bool hasOptionGiveChangeNice
+        {
+            get
+            {
+                if (give_change_nice != null && give_change_nice.hasOptions) return true;
                 return false;
             }
         }
@@ -77,25 +109,45 @@ namespace PrimevalTitmouse
             }
         }
 
-        // Parameters for player can give change to npc
+        // Parameters for player can give change to npc with dialoge for very nice
         #nullable enable
-        private SingleNpcChangingOption? _get_changed;
-        
-        public SingleNpcChangingOption? get_changed
+        private SingleNpcChangingOption? _get_changed_verynice;
+
+        public SingleNpcChangingOption? get_changed_verynice
 
         {
-            get => _get_changed;
-            set => _get_changed = value;
+            get => _get_changed_verynice;
+            set => _get_changed_verynice = value;
         }
 
-        // Parameters for getting changed by npc
-        private SingleNpcChangingOption? _give_change;
+        // Parameters for player can give change to npc with dialoge for nice
+        private SingleNpcChangingOption? _get_changed_nice;
 
-        public SingleNpcChangingOption? give_change
+        public SingleNpcChangingOption? get_changed_nice
 
         {
-            get => _give_change;
-            set => _give_change = value;
+            get => _get_changed_nice;
+            set => _get_changed_nice = value;
+        }
+
+        // Parameters for getting changed by npc with dialoge for very nice
+        private SingleNpcChangingOption? _give_change_verynice;
+
+        public SingleNpcChangingOption? give_change_verynice
+
+        {
+            get => _give_change_verynice;
+            set => _give_change_verynice = value;
+        }
+
+        // Parameters for getting changed by npc with dialoge for nice
+        private SingleNpcChangingOption? _give_change_nice;
+
+        public SingleNpcChangingOption? give_change_nice
+
+        {
+            get => _give_change_nice;
+            set => _give_change_nice = value;
         }
 
         // Parameters for getting changed by npc if players underwear is messy
