@@ -7,5 +7,13 @@
   "EntryDll": "Regression.dll",
   "MinimumApiVersion": "4.1.0",
   "UpdateKeys": [ "GitHub:X3n0nX/Stardew_Valley_Regression_Mod" ],
-  "Dependencies": []
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
 }
