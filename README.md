@@ -42,7 +42,9 @@ Follow instructions provided by the individual prerequisite mods and programs.
       - Core
       - Regression Dialogue  
 
-## Controls (Changed compared to original mod)
+## Controls 
+(All key bindings can be changed with the exception of "Shift" and "Alt" Keys)
+
 ### Typical
 - F1: Attempt to Pee in Pants
 - F2: Attempt to Poop Pants
@@ -61,18 +63,23 @@ Follow instructions provided by the individual prerequisite mods and programs.
   - Bathhouse Locker-room
 
 ### In Debug
-- Left Alt + F1: Make more thirsty and hungry
-- Left Alt + F2: Make less thirsty and hungry. Make Bladder and Bowels fuller.
-- Left Alt + F3: Open a menu with all valid underwear types. ( + some wine ;) )
-- Left Alt + F4: (Reserved by Windows to force quit)
-- Left Alt + F5: Fast forward time a bit (do not hold down. Wait for fast forward to finish before pressing again.)
-- Left Alt + F6: Toggle Wetting Option
-- Left Alt + F7: Toggle Messing Option
-- Left Alt + F8: Toggle Easy Mode Option
-- Left Alt + W: Increase Bladder Continence
-- Left Alt + Left Shift + W: Increase Bowel Continence
-- Left Alt + S: Decrease Bladder Incontinence
-- Left Alt + Left Shift + S: Decrease Bowel Continence
+- Right Alt + F1: Make more thirsty and hungry
+- Right Alt + F2: Make less thirsty and hungry. Make Bladder and Bowels fuller.
+- Right Alt + F3: Open a menu with all valid underwear types. ( + some wine ;) )
+- Right Alt + F4: (Reserved by Windows to force quit)
+- Right Alt + F5: Fast forward time a bit (do not hold down. Wait for fast forward to finish before pressing again.)
+- Right Alt + F6: Toggle Wetting Option
+- Right Alt + F7: Toggle Messing Option
+- Right Alt + F8: Toggle Easy Mode Option
+- Right Alt + W: Increase Bladder Continence
+- Right Alt + S: Decrease Bladder Incontinence
+- Right Alt + E: Increase Bowel Continence
+- Right Alt + D: Decrease Bladder Incontinence
+
+### Change Controls
+You have two options to change the key bindings.
+1.  Highly recommended: With the Mod "Generic Mod Config Menu".
+2.  If you dont have installed the "Generic Mod Config Menu", go to the config.json under the "core" directory of the mod befor you launch the game.
 
 ## Basic Mechanics
 You now get hungry and thirsty over time, and from doing work. Getting too hungry or thirsty gives you de-buffs. Of course, you can alleviate your hunger by eating food, and slake your thirst by drinking beverages (including water from a water source, your watering can, or things like wine, coffee, etc.).
