@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - storage-fix
+    tags:
+      - '*'
   workflow_dispatch:
 
 jobs:
@@ -20,8 +22,9 @@ jobs:
       - name: Add build environment
         uses: Pathoschild/SMAPI-ModBuildWorkflow/add-build-environment@v0
 
-      # 1. Bump version and push tag
+      # 1. Bump version and push tag (only on branch push, not tag push)
       - name: Bump version and push tag
+        if: github.ref_type != 'tag'
         id: tag_version
         uses: anothrNick/github-tag-action@1.64.0
         env:
@@ -30,19 +33,30 @@ jobs:
           DEFAULT_BUMP: patch
           RELEASE_BRANCHES: main,storage-fix
 
-      # 2. Build mod (triggers package.ps1 post-build step)
-      - name: Build
-        run: dotnet build Regression/Regression.csproj -c Release /p:ModVersion=${{ steps.tag_version.outputs.new_tag }} /p:DialogueVersion=${{ steps.tag_version.outputs.new_tag }}
+      # 2. Determine final version (use the pushed tag or the newly bumped tag)
+      - name: Determine Version
+        id: get_version
+        run: |
+          if [ "${{ github.ref_type }}" = "tag" ]; then
+            echo "version=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${{ steps.tag_version.outputs.new_tag }}" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
 
-      # 3. Create Release on GitHub
+      # 3. Build mod with the correct version properties
+      - name: Build
+        run: dotnet build Regression/Regression.csproj -c Release /p:ModVersion=${{ steps.get_version.outputs.version }} /p:DialogueVersion=${{ steps.get_version.outputs.version }}
+
+      # 4. Create Release on GitHub
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.tag_version.outputs.new_tag }}
-          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          tag_name: ${{ steps.get_version.outputs.version }}
+          name: Release ${{ steps.get_version.outputs.version }}
           body: |
             ## Changes in this version
-            ${{ steps.tag_version.outputs.changelog }}
+            ${{ github.ref_type == 'tag' && 'Manual tag release' || steps.tag_version.outputs.changelog }}
           files: |
             Releases/*.zip
         env:
