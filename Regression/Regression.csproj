@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -64,8 +64,12 @@
     </None>  
 	</ItemGroup>
 
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
 		<Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)..\scripts\package.ps1&quot; -TargetDir &quot;$(TargetDir.TrimEnd('\'))&quot; -ProjectDir &quot;$(ProjectDir.TrimEnd('\'))&quot; -GameModsDir &quot;$(GameModsDir)&quot; -SevenZipDir &quot;$(SevenZipDir)&quot; -ModVersion &quot;$(ModVersion)&quot; -DialogueVersion &quot;$(DialogueVersion)&quot;" />
+	</Target>
+
+	<Target Name="PostBuildLinux" AfterTargets="PostBuildEvent" Condition="'$(OS)' != 'Windows_NT'">
+		<Exec Command="pwsh -ExecutionPolicy Bypass -File &quot;$(ProjectDir)../scripts/package.ps1&quot; -TargetDir &quot;$(TargetDir.TrimEnd('/'))&quot; -ProjectDir &quot;$(ProjectDir.TrimEnd('/'))&quot; -GameModsDir &quot;$(GameModsDir)&quot; -SevenZipDir &quot;$(SevenZipDir)&quot; -ModVersion &quot;$(ModVersion)&quot; -DialogueVersion &quot;$(DialogueVersion)&quot;" />
 	</Target>
 
 </Project>
