@@ -5,10 +5,12 @@
 		<!-- Change these to update the manifest.json versions and zip file name automatically -->
 		<ModVersion>1.6.8</ModVersion>
 		<DialogueVersion>1.1.0</DialogueVersion>
-    <!-- Change these to your game path to update the mod automatically in the mod direction -->
-    <GameModsDir>E:\Steam\SteamApps\common\Stardew Valley\Mods</GameModsDir>
-    <!-- Path for 7z installation -->
-    <SevenZipDir>C:\Program Files\7-Zip\7z.exe</SevenZipDir>
+		<!-- Change these to your game path to update the mod automatically in the mod direction -->
+		<GameModsDir Condition="'$(OS)' == 'Windows_NT'">E:\Steam\SteamApps\common\Stardew Valley\Mods</GameModsDir>
+		<GameModsDir Condition="'$(OS)' != 'Windows_NT'">/home/runner/.stardew_mods</GameModsDir>
+		<!-- Path for 7z installation -->
+		<SevenZipDir Condition="'$(OS)' == 'Windows_NT'">C:\Program Files\7-Zip\7z.exe</SevenZipDir>
+		<SevenZipDir Condition="'$(OS)' != 'Windows_NT'">/usr/bin/7z</SevenZipDir>
 	</PropertyGroup>
 
 	<PropertyGroup>

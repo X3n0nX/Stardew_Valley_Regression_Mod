@@ -79,8 +79,6 @@ Write-Host "Copying ZIP to $ReleasesDir"
 Copy-Item -Path $ZipPath -Destination $ReleasesDir -Force
 
 # 7. Deploy unzipped folder to local game folder (Skip if folder doesn't exist)
-$DeployDir = Join-Path $GameModsDir "Regression"
-
 $GameModsDirExists = $false
 try {
     # Using System.IO.Directory::Exists avoids "Drive not found" errors on build servers (e.g. missing D: or E: drive)
@@ -93,6 +91,7 @@ catch {
 }
 
 if ($GameModsDirExists) {
+    $DeployDir = Join-Path $GameModsDir "Regression"
     Write-Host "Local game folder found. Deploying..."
     try {
         if (Test-Path $DeployDir) { Remove-Item -Recurse -Force $DeployDir -ErrorAction Stop }
