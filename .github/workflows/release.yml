@@ -50,13 +50,11 @@ jobs:
 
       # 4. Create Release on GitHub
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.get_version.outputs.version }}
           name: Release ${{ steps.get_version.outputs.version }}
-          body: |
-            ## Changes in this version
-            ${{ github.ref_type == 'tag' && 'Manual tag release' || steps.tag_version.outputs.changelog }}
+          generate_release_notes: true
           files: |
             Releases/*.zip
         env:
