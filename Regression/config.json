@@ -25,10 +25,26 @@
   "StartBowelContinence": 90, // A value (in percent) between 0 and 100, defines the starting (new game) bowel continence. Usually 90.
   "ReadSaveFiles": true, // This will activate reading of the (legacy) save files. This will also delete save files from the last day, if a new one starts.
   "WriteSaveFiles": false, // This will activate writing of the (legacy) save files. It is recommended to disable this option.
-  "KeyPee": 112, // F1 - Key for peeing in underwear
-  "KeyPeeInToilet": 112, // F1 - If this is set to the same value than KeyPee, Shift has to be pressed in addition
-  "KeyPoop": 113, // F2 - Key for peeing in underwear
-  "KeyPoopInToilet": 113, // F2 - If this is set to the same value than KeyPoopInToilet, Shift has to be pressed in addition
+  "KeyPee": "F1", // F1 - Key for peeing in underwear
+  "KeyPeeInToilet": "F1", // F1 - If this is set to the same value than KeyPee, Shift has to be pressed in addition
+  "KeyPoop": "F2", // F2 - Key for peeing in underwear
+  "KeyPoopInToilet": "F2", // F2 - If this is set to the same value than KeyPoopInToilet, Shift has to be pressed in addition
   "KeyGoInPants": 0, // Unbound - Pee and Poop in your pants
   "KeyGoInToilet": 0, // Unbound - Pee and Poop in the toilet - If this is set to the same value than KeyGoInPants, Shift has to be pressed in addition
+  "KeyCheckUnderwear": "F5", // F5- Key to check the state of your underwear
+  "KeyCheckPants": "F6", // F6 - Key to check the state of your pants
+  "KeyCheckPottyTraining": "F7", // F7 - Key to check the state of your potty training
+  "KeyCheckPottyFeeling": "F8", // F8 - Key to check the state of your potty feeling
+  "KeyToggleDebug": "F9", // F9 - Key to toggle debug mode
+  "KeyDebugDecrease": "F1", // F1 - Key, in combination with right alt key to decrease food, water, bladder fullness and bowel fullness in debug mode
+  "KeyDebugIncrease": "F2", // F2 - Key, in combination with right alt key to increase food, water, bladder fullness and bowel fullness in debug mode
+  "KeyDebugGiveUnderwear": "F3", // F3 - Key, in combination with right alt key to give underwear in debug mode
+  "KeyDebugFastForward": "F5", // F5 - Key, in combination with right alt key to fast forward time in debug mode
+  "KeyDebugToggleWetting": "F6", // F6 - Key, in combination with right alt key to toggle wetting option in debug mode
+  "KeyDebugToggleMessing": "F7", // F7 - Key, in combination with right alt key to toggle messing option in debug mode
+  "KeyDebugToggleEasymode": "F8", // F8 - Key, in combination with right alt key to toggle easymode option in debug mode
+  "KeyDebugIncreaseBladderContinence": "W", // W - Key, in combination with right alt key to increase bladder continence in debug mode
+  "KeyDebugDecreaseBladderContinence": "S", // S - Key, in combination with right alt key to decrease bladder continence in debug mode
+  "KeyDebugIncreaseBowelContinence": "E", // E - Key, in combination with right alt key to increase bowel continence in debug mode
+  "KeyDebugDecreaseBowelContinence": "D" // D - Key, in combination with right alt key to decrease bowel continence in debug mode
 }

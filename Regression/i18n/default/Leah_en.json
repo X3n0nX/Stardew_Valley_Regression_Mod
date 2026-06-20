@@ -93,7 +93,7 @@
 
   "Villager_Reactions.Leah.Check.Npc.Verynice.Pre.1": "%You check Leah's underwear.",
 
-  "Villager_Reactions.Leah.Check.Npc.Verynice.1": null,
+  "Villager_Reactions.Leah.Check.Npc.Verynice.1": "",
 
   // you check Leah's underwear friendship nice
 
@@ -165,9 +165,18 @@
   "Villager_Reactions.Leah.Ground_Attempt.2": "%Leah looks a little uncomfortable, but doesn't say anything.",
   "Villager_Reactions.Leah.Ground_Attempt.3": "Um... Why did you take your pants off, $NICKNAME$? Can't you find a potty in time?$7#$b#It doesn't look like you're going yet, so... I think you probably can!$1",
 
-  // Leah changes your underwear
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
+
   "Villager_Dialoges.Leah.Change.Player.1": "%Leah quickly wipes your <front&butt> down with a wet wipe, and puts you into a fresh $NEW_UNDERWEAR_NAME$ with a heaping helping of baby powder.#$b#%When you're all wrapped up, she gives it a playful pat, making a big cloud puff out.#$b#*giggle* All done!!$1",
   "Villager_Dialoges.Leah.Change.Player.2": "%Leah lies you down and takes your soiled diaper off, taping it into a ball before quickly swaddling you up into a nice, fresh $NEW_UNDERWEAR_NAME$.#$b#%Once she's all done, she takes the old one and gives it a final squish before enthusiastically slam-dunking it into the trash.#$b#That was fun!$1",
   "Villager_Dialoges.Leah.Change.Player.3": "%Leah takes you aside and pulls a changing mat, baby powder, and a diaper out of her bag.#$b#%She meticulously goes through the steps of a diaper change, but frets with lining up the tape positions perfectly for a long, LONG time. You have to help her out.#$b#S-Sorry, I get a little bit too caught up in the details, haha...$1#$b#Um, so... do you feel better now?$4",
-  "Villager_Dialoges.Leah.Change.Player.4": "%Leah changes you into a $NEW_UNDERWEAR_NAME$... but she tries to look VERY stern while she does it.#$b#%...You actually feel embarassed with Little Leah judging you like this... She seems to sense your shame, and puffs up with pride, but then she relaxes a little.#$b#And, um... It's okay if you still go potty in your little-kid undies...$7#$b#But you gotta TRY to make it to the potty first!! Ok? Pretty please, $FARMERNAME$?$1"
+  "Villager_Dialoges.Leah.Change.Player.4": "%Leah changes you into a $NEW_UNDERWEAR_NAME$... but she tries to look VERY stern while she does it.#$b#%...You actually feel embarassed with Little Leah judging you like this... She seems to sense your shame, and puffs up with pride, but then she relaxes a little.#$b#And, um... It's okay if you still go potty in your little-kid undies...$7#$b#But you gotta TRY to make it to the potty first!! Ok? Pretty please, $FARMERNAME$?$1",
+
+  // ########################################
+  // Villager Gift Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Leah.Gift.Player.1": "%Leah pushes a diaper into your hands, trying to hide her increasingly-flushed face from view.#$b#%...It looks like Big Leah might just need a bit more time than Little Leah did. That's okay!"
 }

@@ -6,7 +6,7 @@
   "UniqueID": "Regression_Dialogue",
   "UpdateKeys": [],
   "ContentPackFor": {
-  "UniqueID": "Pathoschild.ContentPatcher"
+    "UniqueID": "Pathoschild.ContentPatcher"
 	},
 	"Dependencies": [
    {

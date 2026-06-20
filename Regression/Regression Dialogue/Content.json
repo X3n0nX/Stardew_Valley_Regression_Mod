@@ -7,6 +7,36 @@
       "FromFile": "Dialogue/NPCs/Abigail.json"
     },
     {
+      "LogName": "Alex",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Alex.json"
+    },
+    {
+      "LogName": "Caroline",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Caroline.json"
+    },
+    {
+      "LogName": "Clint",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Clint.json"
+    },
+    {
+      "LogName": "Demetrius",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Demetrius.json"
+    },
+    {
+      "LogName": "Dwarf",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Dwarf.json"
+    },
+    {
+      "LogName": "Elliott",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Elliott.json"
+    },
+    {
       "LogName": "Emily",
       "Action": "Include",
       "FromFile": "Dialogue/NPCs/Emily.json"

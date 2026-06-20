@@ -1,7 +1,7 @@
 ﻿using StardewValley;
 using System.Collections.Generic;
 
-namespace Regression
+namespace RegressionMod
 {
     internal static class TimeMagic
     {

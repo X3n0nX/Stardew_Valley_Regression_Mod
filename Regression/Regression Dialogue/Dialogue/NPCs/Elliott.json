@@ -1,0 +1,94 @@
+{
+  "Changes": [
+    {
+      "LogName": "Elliott",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Entries": {
+
+        "Introduction": "{{i18n:Elliott.Dialogue.Introduction}}",
+
+        "Resort_Entering": "{{i18n:Elliott.Dialogue.Resort_Entering}}",
+        "Resort_Leaving": "{{i18n:Elliott.Dialogue.Resort_Leaving}}",
+        "Resort_Leaving_2": "{{i18n:Elliott.Dialogue.Resort_Leaving_2}}",
+        "Resort_Chair": "{{i18n:Elliott.Dialogue.Resort_Chair}}",
+        "Resort_Bar": "{{i18n:Elliott.Dialogue.Resort_Bar}}",
+        "Resort_Wander": "{{i18n:Elliott.Dialogue.Resort_Wander}}",
+        "Resort": "{{i18n:Elliott.Dialogue.Resort}}",
+        "Resort_2": "{{i18n:Elliott.Dialogue.Resort_2}}",
+
+        "danceRejection": "{{i18n:Elliott.Dialogue.danceRejection}}",
+        "divorced": "{{i18n:Elliott.Dialogue.divorced}}",
+        "dumped_Guys": "{{i18n:Elliott.Dialogue.dumped_Guys}}",
+        "secondChance_Guys": "{{i18n:Elliott.Dialogue.secondChance_Guys}}",
+        "breakUp": "{{i18n:Elliott.Dialogue.breakUp}}",
+
+        "Mon": "{{i18n:Elliott.Dialogue.Mon}}",
+        "Mon4": "{{i18n:Elliott.Dialogue.Mon4}}",
+        "Tue": "{{i18n:Elliott.Dialogue.Tue}}",
+        "Tue6": "{{i18n:Elliott.Dialogue.Tue6}}",
+        "Wed": "{{i18n:Elliott.Dialogue.Wed}}",
+        "Wed8": "{{i18n:Elliott.Dialogue.Wed8}}",
+        "Thu2": "{{i18n:Elliott.Dialogue.Thu2}}",
+        "Thu4": "{{i18n:Elliott.Dialogue.Thu4}}",
+        "Thu6": "{{i18n:Elliott.Dialogue.Thu6}}",
+        "Thu8": "{{i18n:Elliott.Dialogue.Thu8}}",
+        "Thu": "{{i18n:Elliott.Dialogue.Thu}}",
+        "Fri": "{{i18n:Elliott.Dialogue.Fri}}",
+        "Fri4": "{{i18n:Elliott.Dialogue.Fri4}}",
+        "Fri8": "{{i18n:Elliott.Dialogue.Fri8}}",
+        "Sat": "{{i18n:Elliott.Dialogue.Sat}}",
+        "Sat4": "{{i18n:Elliott.Dialogue.Sat4}}",
+        "Sat6": "{{i18n:Elliott.Dialogue.Sat6}}",
+        "Sun": "{{i18n:Elliott.Dialogue.Sun}}",
+        "Sun6": "{{i18n:Elliott.Dialogue.Sun6}}",
+
+        "event_idea1": "{{i18n:Elliott.Dialogue.event_idea1}}",
+        "event_idea2": "{{i18n:Elliott.Dialogue.event_idea2}}",
+        "event_idea3": "{{i18n:Elliott.Dialogue.event_idea3}}",
+        "event_boat1": "{{i18n:Elliott.Dialogue.event_boat1}}",
+        "event_boat2": "{{i18n:Elliott.Dialogue.event_boat2}}",
+        "event_toast1": "{{i18n:Elliott.Dialogue.event_toast1}}",
+        "event_toast2": "{{i18n:Elliott.Dialogue.event_toast2}}",
+        "event_toast3": "{{i18n:Elliott.Dialogue.event_toast3}}",
+        "event_toast4": "{{i18n:Elliott.Dialogue.event_toast4}}",
+
+        "summer_Mon": "{{i18n:Elliott.Dialogue.summer_Mon}}",
+        "summer_Mon4": "{{i18n:Elliott.Dialogue.summer_Mon4}}",
+        "summer_Mon6": "{{i18n:Elliott.Dialogue.summer_Mon6}}",
+        "summer_Tue": "{{i18n:Elliott.Dialogue.summer_Tue}}",
+        "summer_Tue6": "{{i18n:Elliott.Dialogue.summer_Tue6}}",
+        "summer_Wed": "{{i18n:Elliott.Dialogue.summer_Wed}}",
+        "summer_Thu": "{{i18n:Elliott.Dialogue.summer_Thu}}",
+        "summer_Fri": "{{i18n:Elliott.Dialogue.summer_Fri}}",
+        "summer_Sat": "{{i18n:Elliott.Dialogue.summer_Sat}}",
+        "summer_Sun": "{{i18n:Elliott.Dialogue.summer_Sun}}",
+        "summer_Sun4": "{{i18n:Elliott.Dialogue.summer_Sun4}}",
+
+        "fall_Mon": "{{i18n:Elliott.Dialogue.fall_Mon}}",
+        "fall_Mon4": "{{i18n:Elliott.Dialogue.fall_Mon4}}",
+        "fall_Tue": "{{i18n:Elliott.Dialogue.fall_Tue}}",
+        "fall_Tue8": "{{i18n:Elliott.Dialogue.fall_Tue8}}",
+        "fall_Wed8": "{{i18n:Elliott.Dialogue.fall_Wed8}}",
+        "fall_Thu": "{{i18n:Elliott.Dialogue.fall_Thu}}",
+        "fall_Fri4": "{{i18n:Elliott.Dialogue.fall_Fri4}}",
+        "fall_Fri": "{{i18n:Elliott.Dialogue.fall_Fri}}",
+        "fall_Fri10": "{{i18n:Elliott.Dialogue.fall_Fri10}}",
+        "fall_Sat": "{{i18n:Elliott.Dialogue.fall_Sat}}",
+        "fall_Sun": "{{i18n:Elliott.Dialogue.fall_Sun}}",
+
+        "winter_Mon": "{{i18n:Elliott.Dialogue.winter_Mon}}",
+        "winter_Mon4": "{{i18n:Elliott.Dialogue.winter_Mon4}}",
+        "winter_Tue": "{{i18n:Elliott.Dialogue.winter_Tue}}",
+        "winter_Tue10": "{{i18n:Elliott.Dialogue.winter_Tue10}}",
+        "-winter_Wed": "{{i18n:Elliott.Dialogue.winter_Wed}}",
+        "winter_Thu": "{{i18n:Elliott.Dialogue.winter_Thu}}",
+        "winter_Thu6": "{{i18n:Elliott.Dialogue.winter_Thu6}}",
+        "winter_Fri": "{{i18n:Elliott.Dialogue.winter_Fri}}",
+        "winter_Sat": "{{i18n:Elliott.Dialogue.winter_Sat}}",
+        "winter_Sun": "{{i18n:Elliott.Dialogue.winter_Sun}}"
+
+      }
+    }
+  ]
+}

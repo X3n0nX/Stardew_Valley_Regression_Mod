@@ -53,6 +53,16 @@
   "Config_Menu.Main.Underwear_Change_Causes_Exposure.Name": "Underwear Change Causes Exposure",
   "Config_Menu.Main.Underwear_Change_Causes_Exposure.Tooltip": "Changing your underwear, by yourself, requires you to undress, as such exposing yourself. With this option activated you need to change your diapers at home or away from people. (Usually on) (UnderwearChangeCauseExposure)",
 
+  // Return Used Cloth
+
+  "Config_Menu.Main.Return_Used_Cloth.Name": "Return Used Cloth",
+  "Config_Menu.Main.Return_Used_Cloth.Tooltip": "Return used cloth diapers to inventory on change instead of destroying them.",
+
+  // Return Used Disposable
+
+  "Config_Menu.Main.Return_Used_Disposable.Name": "Return Used Disposables",
+  "Config_Menu.Main.Return_Used_Disposable.Tooltip": "Return used disposable diapers to inventory on change (as 'used' items) instead of destroying them.",
+
   // Menu Point Key Bindings
 
   "Config_Menu.Main.Key_Bindings_Menu.Name": "Key Bindings",
@@ -102,6 +112,93 @@
 
   "Config_Menu.Key_Bindings.Go_Potty.Name": "Go Potty",
   "Config_Menu.Key_Bindings.Go_Potty.Tooltip": "The key you want to press to pee and poop in the potty like a good girl or boy. (KeyGoInToilet)",
+
+  // Check Underwear
+
+  "Config_Menu.Key_Bindings.Check_Underwear.Name": "Check Underwear",
+  "Config_Menu.Key_Bindings.Check_Underwear.Tooltip": "The key you want to press to check the state of your underwear. (KeyCheckUnderwear)",
+
+  // Check Pants
+
+  "Config_Menu.Key_Bindings.Check_Pants.Name": "Check Pants",
+  "Config_Menu.Key_Bindings.Check_Pants.Tooltip": "The key you want to press to to check the state of your pants. (KeyCheckPants)",
+
+  // Check Potty Training
+
+  "Config_Menu.Key_Bindings.Check_Potty_Training.Name": "Check Potty Training",
+  "Config_Menu.Key_Bindings.Check_Potty_Training.Tooltip": "The key you want to press to check if you can hold your bladder, bowel like a good girl or boy. (KeyCheckPottyTraining)",
+
+  // Check Potty Feeling
+
+  "Config_Menu.Key_Bindings.Check_Potty_Feeling.Name": "Check Potty Feeling",
+  "Config_Menu.Key_Bindings.Check_Potty_Feeling.Tooltip": "The key you want to press to check if you need to go to toilet. (KeyCheckPottyFeeling)",
+
+  // Toggle Debug
+
+  "Config_Menu.Key_Bindings.Toggle_Debug.Name": "Toggle Debug Mode",
+  "Config_Menu.Key_Bindings.Toggle_Debug.Tooltip": "The key you want to press to toggle the debug mode. (KeyToggleDebug)",
+
+  // Menu Point Debug Keys
+
+  "Config_Menu.Main.Key_Bindings_Debug_Menu.Name": "Key Bindings Debug",
+
+  // ##########
+  // Page Key Bindings Debug
+  // ##########
+
+  // Increase Everything
+
+  "Config_Menu.Key_Bindings.Debug.Increase.Name": "Increase Everything",
+  "Config_Menu.Key_Bindings.Debug.Increase.Tooltip": "The key you want to press, in combination with right alt key, to increase food, water, bladder- and bowel fullness in debug mode. (KeyDebugIncrease)",
+
+  // Decrease Everything
+
+  "Config_Menu.Key_Bindings.Debug.Decrease.Name": "Decrease Everything",
+  "Config_Menu.Key_Bindings.Debug.Decrease.Tooltip": "The key you want to press, in combination with right alt key, to decrease food, water, bladder- and bowel fullness in debug mode. (KeyDebugDecrease)",
+
+  // Give Underwear
+
+  "Config_Menu.Key_Bindings.Debug.Give_Underwear.Name": "Give Underwear",
+  "Config_Menu.Key_Bindings.Debug.Give_Underwear.Tooltip": "The key you want to press, in combination with right alt key, to open an menu with all kind of underwears in debug mode. (KeyDebugGiveUnderwear)",
+
+  // Fast Forward
+
+  "Config_Menu.Key_Bindings.Debug.Fast_Forward.Name": "Fast Forward",
+  "Config_Menu.Key_Bindings.Debug.Fast_Forward.Tooltip": "The key you want to press, in combination with right alt key, to speed up the game time for a while in debug mode. (KeyDebugFastForward)",
+
+  // Toggle Wetting
+
+  "Config_Menu.Key_Bindings.Debug.Toggle_Wetting.Name": "Toggle Wetting",
+  "Config_Menu.Key_Bindings.Debug.Toggle_Wetting.Tooltip": "The key you want to press, in combination with right alt key, to toggle the wetting option in debug mode. (KeyDebugToggleWetting)",
+
+  // Toggle Messing
+
+  "Config_Menu.Key_Bindings.Debug.Toggle_Messing.Name": "Toggle Messing",
+  "Config_Menu.Key_Bindings.Debug.Toggle_Messing.Tooltip": "The key you want to press, in combination with right alt key, to toggle the messing option in debug mode. (KeyDebugToggleMessing)",
+
+  // Toggle Easy Mode
+
+  "Config_Menu.Key_Bindings.Debug.Toggle_Easy_Mode.Name": "Toggle Easy Mode",
+  "Config_Menu.Key_Bindings.Debug.Toggle_Easy_Mode.Tooltip": "The key you want to press, in combination with right alt key, to toggle the easy mode in debug mode. (KeyDebugToggleEasymode)",
+
+  // Increase Bladder Continence
+
+  "Config_Menu.Key_Bindings.Debug.Increase_Bladder_Continence.Name": "Increase Bladder Continence",
+  "Config_Menu.Key_Bindings.Debug.Increase_Bladder_Continence.Tooltip": "The key you want to press, in combination with right alt key, to increase bladder continence in debug mode. (KeyDebugIncreaseBladderContinence)",
+
+  // Decrease Bladder Continence
+
+  "Config_Menu.Key_Bindings.Debug.Decrease_Bladder_Continence.Name": "Decrease Bladder Continence",
+  "Config_Menu.Key_Bindings.Debug.Decrease_Bladder_Continence.Tooltip": "The key you want to press, in combination with right alt key, to decrease bladder continence in debug mode. (KeyDebugDecreaseBladderContinence)",
+
+  // Increase Bowel Continence
+
+  "Config_Menu.Key_Bindings.Debug.Increase_Bowel_Continence.Name": "Increase Bowel Continence",
+  "Config_Menu.Key_Bindings.Debug.Increase_Bowel_Continence.Tooltip": "The key you want to press, in combination with right alt key, to increase bowel continence in debug mode. (KeyDebugIncreaseBowelContinence)",
+
+  // Decrease Bowel Continence
+  "Config_Menu.Key_Bindings.Debug.Decrease_Bowel_Continence.Name": "Decrease Bowel Continence",
+  "Config_Menu.Key_Bindings.Debug.Decrease_Bowel_Continence.Tooltip": "The key you want to press, in combination with right alt key, to decrease bowel continence in debug mode. (KeyDebugDecreaseBowelContinence)",
 
   // ##########
   // Page Continence
@@ -166,10 +263,15 @@
   "Config_Menu.Friendships.Penalty_Pooping.Name": "Penalty Pooping",
   "Config_Menu.Friendships.Penalty_Pooping.Tooltip": "How pooping in public impacts friendships. 100 is normal, 50 would be half, 200 double the impact. 0 deactivates loss of frienship for poop incidents. (FriendshipPenaltyBowelMultiplier)",
 
-  // Friendship Debug
+  // Friendship Debug Very Nice
 
-  "Config_Menu.Friendships.Debug.Name": "Friendships Debug",
-  "Config_Menu.Friendships.Debug.Tooltip": "Your friendship level to npc�s for getting changed dosen�t matter.",
+  "Config_Menu.Friendships.VeryNice.Debug.Name": "Friendships Debug Mode Very Nice",
+  "Config_Menu.Friendships.VeryNice.Debug.Tooltip": "Your friendship level to npc´s for getting changed dosen´t matter.",
+
+  // Friendship Debug Nice
+
+  "Config_Menu.Friendships.Nice.Debug.Name": "Friendships Debug Nice",
+  "Config_Menu.Friendships.Nice.Debug.Tooltip": "Your friendship level to npc´s for getting changed are like you have 4 hearts.",
 
   // ##########
   // Save Files Friendships
@@ -186,6 +288,6 @@
 
   // Write Save Files
 
-  "Config_Menu.Save_Files.Wtite.Name": "Write Save Files",
-  "Config_Menu.Save_Files.Wtite.Tooltip": "This will activate writing of the (legacy) save files. It is recommended to disable this option."
+  "Config_Menu.Save_Files.Write.Name": "Write Save Files",
+  "Config_Menu.Save_Files.Write.Tooltip": "This will activate writing of the (legacy) save files. It is recommended to disable this option."
 }

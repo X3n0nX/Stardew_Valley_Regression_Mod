@@ -89,5 +89,11 @@
   "Villager_Reactions.Sam.Soiled.Mean.3": "...Oh$2",
   "Villager_Reactions.Sam.Soiled.Mean.4": "You might want to take care of that...",
   "Villager_Reactions.Sam.Soiled.Mean.5.Child_Yes": "Great, more potty issues to be witness to. Thanks.$5",
-  "Villager_Reactions.Sam.Soiled.Mean.5.Child_No": "You might want to take care of that..."
+  "Villager_Reactions.Sam.Soiled.Mean.5.Child_No": "You might want to take care of that...",
+
+  // ########################################
+  // Villager Gift Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Sam.Gift.Player.1": "%Sam gives you a diaper you haven't seen at any store.#$b#You can change in my room if you need privacy."
 }

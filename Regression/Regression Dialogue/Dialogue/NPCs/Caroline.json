@@ -1,0 +1,55 @@
+{
+  "Changes": [
+    {
+      "LogName": "Caroline",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "Entries": {
+
+        "Introduction": "{{i18n:Caroline.Dialogue.Introduction}}",
+
+        "Resort_Entering": "{{i18n:Caroline.Dialogue.Resort_Entering}}",
+        "Resort_Leaving": "{{i18n:Caroline.Dialogue.Resort_Leaving}}",
+        "Resort_Shore": "{{i18n:Caroline.Dialogue.Resort_Shore}}",
+        "Resort_Chair": "{{i18n:Caroline.Dialogue.Resort_Chair}}",
+        "Resort_Bar": "{{i18n:Caroline.Dialogue.Resort_Bar}}",
+        "Resort": "{{i18n:Caroline.Dialogue.Resort}}",
+
+        "Mon": "{{i18n:Caroline.Dialogue.Mon}}",
+        "Mon_inlaw_Abigail": "{{i18n:Caroline.Dialogue.Mon_inlaw_Abigail}}",
+        "Mon8": "{{i18n:Caroline.Dialogue.Mon8}}",
+        "Tue": "{{i18n:Caroline.Dialogue.Tue}}",
+        "Wed": "{{i18n:Caroline.Dialogue.Wed}}",
+        "Thu": "{{i18n:Caroline.Dialogue.Thu}}",
+        "Fri": "{{i18n:Caroline.Dialogue.Fri}}",
+        "Sat": "{{i18n:Caroline.Dialogue.Sat}}",
+        "Sat_inlaw_Abigail": "{{i18n:Caroline.Dialogue.Sat_inlaw_Abigail}}",
+        "Sat2": "{{i18n:Caroline.Dialogue.Sat2}}",
+        "Sat4": "{{i18n:Caroline.Dialogue.Sat4}}",
+        "Sat6": "{{i18n:Caroline.Dialogue.Sat6}}",
+        "Sun": "{{i18n:Caroline.Dialogue.Sun}}",
+        "Wed6": "{{i18n:Caroline.Dialogue.Wed6}}",
+
+        "summer_Mon": "{{i18n:Caroline.Dialogue.summer_Mon}}",
+        "summer_Tue": "{{i18n:Caroline.Dialogue.summer_Tue}}",
+        "summer_Wed": "{{i18n:Caroline.Dialogue.summer_Wed}}",
+        "summer_Sat": "{{i18n:Caroline.Dialogue.summer_Sat}}",
+        "summer_Sat_inlaw_Abigail": "{{i18n:Caroline.Dialogue.summer_Sat_inlaw_Abigail}}",
+        "summer_Sun": "{{i18n:Caroline.Dialogue.summer_Sun}}",
+        "summer_Wed6": "{{i18n:Caroline.Dialogue.summer_Wed6}}",
+
+        "fall_Mon": "{{i18n:Caroline.Dialogue.fall_Mon}}",
+        "fall_Mon_inlaw_Abigail": "{{i18n:Caroline.Dialogue.fall_Mon_inlaw_Abigail}}",
+        "fall_Tue": "{{i18n:Caroline.Dialogue.fall_Tue}}",
+        "fall_Sat": "{{i18n:Caroline.Dialogue.fall_Sat}}",
+        "fall_Wed6": "{{i18n:Caroline.Dialogue.fall_Wed6}}",
+
+        "winter_Tue": "{{i18n:Caroline.Dialogue.winter_Tue}}",
+        "winter_Fri": "{{i18n:Caroline.Dialogue.winter_Fri}}",
+        "winter_Sat": "{{i18n:Caroline.Dialogue.winter_Sat}}",
+        "winter_Wed6": "{{i18n:Caroline.Dialogue.winter_Wed6}}"
+
+      }
+    }
+  ]
+}
