@@ -1,5 +1,5 @@
 {
-  "Format": "2.0.0",
+  "Format": "2.9.0",
   "Changes": [
     {
       "LogName": "Abigail",
@@ -93,6 +93,196 @@
       "LogName": "Vincent",
       "Action": "Include",
       "FromFile": "Dialogue/NPCs/Vincent.json"
+    },
+
+    {
+      "LogName": "Custom farmhouse tier 0",
+      "Action": "Load",
+      "Target": "Maps/FarmHouse",
+      "FromFile": "Assets/CustomFarmhouse.tmx",
+      "Priority": "Exclusive"
+    },
+    {
+      "LogName": "Custom farmhouse tier 1",
+      "Action": "Load",
+      "Target": "Maps/FarmHouse1",
+      "FromFile": "Assets/CustomFarmhouse1.tmx",
+      "Priority": "Exclusive"
+    },
+    {
+      "LogName": "Custom farmhouse tier 1 marriage",
+      "Action": "Load",
+      "Target": "Maps/FarmHouse1_marriage",
+      "FromFile": "Assets/CustomFarmhouse1_Marriage.tmx",
+      "Priority": "Exclusive"
+    },
+    {
+      "LogName": "Load tier 2 bathroom map patch",
+      "Action": "Load",
+      "Target": "Maps/Regression_Dialogue_CustomFarmhouse2_Bathroom_Add",
+      "FromFile": "Assets/CustomFarmhouse2_Bathroom_Add.tmx"
+    },
+    {
+      "LogName": "Load tier 2 nursery map patch",
+      "Action": "Load",
+      "Target": "Maps/Regression_Dialogue_CustomFarmhouse2_Nursery_Add",
+      "FromFile": "Assets/CustomFarmhouse2_Nursery_Add.tmx"
+    },
+    {
+      "LogName": "Enable tier 2 bathroom by default and nursery after Robin renovation",
+      "Action": "EditMap",
+      "Target": "Maps/FarmHouse2, Maps/FarmHouse2_marriage",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "MapProperties", "AdditionalRenovations" ],
+          "Value": "Regression_Dialogue_BathroomToggle Regression_Dialogue_NurseryInstalled Regression_Dialogue_CustomFarmhouse2_Nursery_Add Regression_Dialogue_CustomFarmhouse2_Bathroom_Add 0 0 8 10",
+          "Delimiter": ","
+        }
+      ]
+    },
+
+    {
+      "LogName": "Localization strings for Robin nursery and bathroom swaps",
+      "Action": "EditData",
+      "Target": "Strings/Locations",
+      "Entries": {
+        "Regression_Dialogue_Renovation_BathroomToNursery_First": "Swap Bathroom for Nursery/50000g/Which part of your home should I renovate?",
+        "Regression_Dialogue_Renovation_BathroomToNursery_Free": "Swap Bathroom for Nursery/Free/Which part of your home should I renovate?",
+        "Regression_Dialogue_Renovation_NurseryToBathroom_Free": "Swap Nursery for Bathroom/Free/Which part of your home should I renovate?"
+      }
+    },
+    {
+      "LogName": "Add Robin renovation for bathroom to nursery swap",
+      "Action": "EditData",
+      "Target": "Data/HomeRenovations",
+      "Entries": {
+        "Regression_Dialogue_BathroomToNursery_First": {
+          "TextStrings": "Strings\\Locations:Regression_Dialogue_Renovation_BathroomToNursery_First",
+          "AnimationType": "build",
+          "CheckForObstructions": false,
+          "Price": 50000,
+          "RoomId": "Nursery",
+          "Requirements": [
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurseryInstalled",
+              "Value": "0"
+            },
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurserySwapUnlocked",
+              "Value": "0"
+            }
+          ],
+          "RenovateActions": [
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurseryInstalled",
+              "Value": "1"
+            },
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurserySwapUnlocked",
+              "Value": "1"
+            }
+          ],
+          "RectGroups": [
+            {
+              "Rects": [
+                {
+                  "X": 0,
+                  "Y": 0,
+                  "Width": 19,
+                  "Height": 19
+                }
+              ]
+            }
+          ],
+          "SpecialRect": null,
+          "CustomFields": null
+        },
+        "Regression_Dialogue_BathroomToNursery_Free": {
+          "TextStrings": "Strings\\Locations:Regression_Dialogue_Renovation_BathroomToNursery_Free",
+          "AnimationType": "build",
+          "CheckForObstructions": false,
+          "Price": 0,
+          "RoomId": null,
+          "Requirements": [
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurseryInstalled",
+              "Value": "0"
+            },
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurserySwapUnlocked",
+              "Value": "1"
+            }
+          ],
+          "RenovateActions": [
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurseryInstalled",
+              "Value": "1"
+            }
+          ],
+          "RectGroups": [
+            {
+              "Rects": [
+                {
+                  "X": 0,
+                  "Y": 0,
+                  "Width": 19,
+                  "Height": 19
+                }
+              ]
+            }
+          ],
+          "SpecialRect": null,
+          "CustomFields": null
+        },
+        "Regression_Dialogue_NurseryToBathroom_Free": {
+          "TextStrings": "Strings\\Locations:Regression_Dialogue_Renovation_NurseryToBathroom_Free",
+          "AnimationType": "build",
+          "CheckForObstructions": false,
+          "Price": 0,
+          "RoomId": null,
+          "Requirements": [
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurseryInstalled",
+              "Value": "1"
+            }
+          ],
+          "RenovateActions": [
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurseryInstalled",
+              "Value": "0"
+            },
+            {
+              "Type": "Mail",
+              "Key": "Regression_Dialogue_NurserySwapUnlocked",
+              "Value": "1"
+            }
+          ],
+          "RectGroups": [
+            {
+              "Rects": [
+                {
+                  "X": 8,
+                  "Y": 8,
+                  "Width": 8,
+                  "Height": 10
+                }
+              ]
+            }
+          ],
+          "SpecialRect": null,
+          "CustomFields": null
+        }
+      }
     }
   ]
 }

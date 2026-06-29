@@ -3,6 +3,9 @@ using StardewValley;
 using System;
 using System.Collections.Generic;
 using StardewValley.Locations;
+using StardewModdingAPI;
+using System.Linq;
+using System.Threading;
 
 
 namespace RegressionMod
@@ -15,6 +18,7 @@ namespace RegressionMod
             if (Game1.currentLocation is SeedShop)
             {
                 addUnderwearsToSeedShop(shopMenu);
+                addToiletsToSeedShop(shopMenu);
             }
             else if (Game1.currentLocation is JojaMart)
             {
@@ -26,6 +30,7 @@ namespace RegressionMod
             }
         }
 
+        #region Underwear
 
         private static void addUnderwearsToSeedShop(ShopMenu shopMenu)
         {
@@ -105,5 +110,39 @@ namespace RegressionMod
             shop.forSale.Add(underwear);
             shop.itemPriceAndStock.Add(underwear, new ItemStockInformation((int)Math.Ceiling((float)underwear.container.price * (float)amount * priceMultiplier), StardewValley.Menus.ShopMenu.infiniteStock));
         }
+
+        #endregion
+
+        #region Furniture
+
+        private static void addToiletsToSeedShop(ShopMenu shopMenu)
+        {
+            foreach (var toiletVariant in HousingConstants.ToiletVariants)
+            {
+                try
+                {
+                    string qualifiedId = $"(F){toiletVariant.Id}";
+                    bool alreadyListed = shopMenu.forSale.Any(item => item != null && item.QualifiedItemId == qualifiedId);
+                    if (alreadyListed)
+                        continue;
+
+                    Item toilet = ItemRegistry.Create(qualifiedId);
+                    if (toilet == null)
+                    {
+                        Regression.monitor.Log($"Toilet item '{qualifiedId}' could not be created (null result).", LogLevel.Warn);
+                        continue;
+                    }
+
+                    shopMenu.forSale.Add(toilet);
+                    shopMenu.itemPriceAndStock[toilet] = new ItemStockInformation(100, 99);
+                }
+                catch (Exception ex)
+                {
+                    Regression.monitor.Log($"Failed adding toilet '{toiletVariant.Id}' to Pierre: {ex.Message}", LogLevel.Warn);
+                }
+            }
+        }
+
+        #endregion
     }
 }
