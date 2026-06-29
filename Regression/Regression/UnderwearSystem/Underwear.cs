@@ -61,7 +61,7 @@ namespace RegressionMod
             {
                 if (_container == null)
                 {
-                    _container = new Container(this, "dinosaur undies");
+                    _container = new Container(this, UnderwearConstants.DinosaurUndies);
                 }
                 return _container;
             }

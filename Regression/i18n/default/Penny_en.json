@@ -47,8 +47,8 @@
 
   // You change Penny`s underwear general offer
 
-  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Pre": "Insert Text",
-  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Pre": "Insert Text Offer change Penny",
+  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text Underwear ok offer change Penny",
 
   // general fallback
 

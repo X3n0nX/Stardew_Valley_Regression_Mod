@@ -47,8 +47,8 @@
 
   // You change Emily`s underwear general offer
 
-  "Villager_Reactions.Emily.Change.General_Offer.Npc.1.Pre": "Insert Text",
-  "Villager_Reactions.Emily.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+  "Villager_Reactions.Emily.Change.General_Offer.Npc.1.Pre": "Insert Text Offer change Emily",
+  "Villager_Reactions.Emily.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text Underwear ok offer change Emily",
 
   // Emily change your underwear if there are dirty
 

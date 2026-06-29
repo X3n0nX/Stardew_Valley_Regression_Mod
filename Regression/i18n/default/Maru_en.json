@@ -47,8 +47,8 @@
 
   // You change Maru`s underwear general offer
 
-  "Villager_Reactions.Maru.Change.General_Offer.Npc.1.Pre": "Insert Text",
-  "Villager_Reactions.Maru.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text",
+  "Villager_Reactions.Maru.Change.General_Offer.Npc.1.Pre": "Insert Text Offer change Maru",
+  "Villager_Reactions.Maru.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text Underwear ok offer change Maru",
 
   // Maru change your underwear if there are dirty
 

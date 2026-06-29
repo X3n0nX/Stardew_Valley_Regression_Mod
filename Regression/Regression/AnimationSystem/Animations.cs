@@ -307,7 +307,7 @@ namespace RegressionMod
         {
             if (c.MarkedForDestroy())
             {
-                Dialoges.Write(Strings.InsertVariables(generalData.Overwashed_Underwear[0], (Body)null, c), (Body)null);
+                Dialoges.Write(Strings.InsertVariables(Strings.RandString(generalData.Overwashed_Underwear), (Body)null, c), (Body)null);
                 Game1.player.reduceActiveItemByOne();
             }
             else

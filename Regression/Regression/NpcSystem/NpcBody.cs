@@ -13,54 +13,7 @@ namespace RegressionMod
         {
             this.npc = npc;
         }
-
-        public static NpcBody ByName(string name, int range = 20)
-        {
-            name = name.ToLower();
-            foreach (NPC npc in range <= 0 ? Utility.getAllCharacters() : NpcHelper.NearbyVillager(range))
-            {
-                if (npc.Name.ToLower() == name)
-                {
-                    return new NpcBody(npc);
-                }
-            }
-            return null;
-        }
-        public static List<NpcBody> ByRange(int range = 10)
-        {
-            List<NpcBody> list = new List<NpcBody>();
-            foreach (NPC npc in Utility.GetNpcsWithinDistance(((Character)Animations.player).Tile, range, (GameLocation)Game1.currentLocation))
-            {
-                list.Add(new NpcBody(npc));
-            }
-            return list;
-        }
-        public static bool NpcInRange(Vector2 actualPosition,GameLocation location, string name, int range = 10)
-        {
-            name = name.ToLower();
-            foreach (NPC npc in Utility.GetNpcsWithinDistance(actualPosition, range, location))
-            {
-                if(npc.Name == name) return true;
-            }
-
-            return false;
-        }
-        public static bool NpcInRange(NPC npcRequester, string name, int range = 10)
-        {
-            name = name.ToLower();
-            foreach (NPC npc in Utility.GetNpcsWithinDistance(npcRequester.Tile, range, npcRequester.currentLocation))
-            {
-                if (npc.Name == name) return true;
-            }
-
-            return false;
-        }
-        public static bool NpcAtLocation(NPC npcRequester, string location)
-        {
-            location = location.ToLower();
-            if(npcRequester.currentLocation.Name.ToLower() == location) return true;
-            return false;
-        }
+        
         // a very simplified accident mechanic that assumes that the npc has an accident.
         public void accident(IncidentType type, float accidentSize)
         {
@@ -362,7 +315,7 @@ namespace RegressionMod
                         {
                             foreach(string otherNpc in changeAutomaticly.AtHomeNpcs)
                             {
-                                if(NpcInRange(npc,otherNpc)) 
+                                if(NpcHelper.NpcInRange(npc,otherNpc)) 
                                 { 
                                     npcInRange = true;
                                     break;
@@ -405,7 +358,7 @@ namespace RegressionMod
                         {
                             foreach (string otherNpc in changeAutomaticly.OutsideNpcs)
                             {
-                                if (NpcInRange(npc, otherNpc)) 
+                                if (NpcHelper.NpcInRange(npc, otherNpc)) 
                                 { 
                                     npcInRange = true;
                                     break;
@@ -437,7 +390,7 @@ namespace RegressionMod
                         {
                             foreach (string location in changeAutomaticly.OutsideLocation)
                             {
-                                if(NpcAtLocation(npc,location)) 
+                                if(NpcHelper.NpcAtLocation(npc,location)) 
                                 {
                                     atLocation = true;
                                     break;

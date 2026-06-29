@@ -744,23 +744,29 @@
     // Gus
 
     "gus": {
-      "give_change": {
+      "give_change_verynice": {
         "min_heart_level": 8
+      },
+      "give_dirty_change": {
+        "min_heart_level": 6
       }
     },
 
     // Jodi
 
     "jodi": {
-      "give_change": {
+      "give_change_verynice": {
         "min_heart_level": 6
+      },
+      "give_dirty_change": {
+        "min_heart_level": 4
       }
     },
 
     // Vincent
 
     "vincent": {
-      "get_changed": {
+      "get_changed_verynice": {
         "min_heart_level": 6,
         "min_heart_level_other": {
           "jodi": 4
@@ -794,7 +800,7 @@
     // Jas
 
     "jas": {
-      "get_changed": {
+      "get_changed_verynice": {
         "min_heart_level": 6,
         "min_heart_level_other": {
           "marnie": 4
@@ -830,17 +836,20 @@
     // Sam
 
     "sam": {
-      "get_changed": {
+      "get_changed_verynice": {
         "questions_answered": {
           "sam_little_littel": 8,
           "sam_little_exited": 8
         }
       },
-      "give_change": {
+      "give_change_verynice": {
         "questions_answered": {
           "sam_little_littel": 8,
           "sam_little_exited": 8
         }
+      },
+      "give_dirty_change": {
+        "min_heart_level": 6
       },
       "change_automaticly": {
         "at_home": {
@@ -875,11 +884,14 @@
     // Abigail
 
     "abigail": {
-      "get_changed": {
+      "get_changed_verynice": {
         "min_heart_level": 8
       },
-      "give_change": {
+      "give_change_verynice": {
         "min_heart_level": 8
+      },
+      "give_dirty_change": {
+        "min_heart_level": 4
       },
       "change_automaticly": {
         "at_home": {
@@ -912,14 +924,17 @@
     // Maru
 
     "maru": {
-      "get_changed": {
+      "get_changed_verynice": {
         "min_heart_level": 4
       },
-      "give_change": {
+      "give_change_verynice": {
         "min_heart_level": 4,
         "locations": {
           "hospital": 0
         }
+      },
+      "give_dirty_change": {
+        "min_heart_level": 2
       },
       "change_automaticly": {
         "at_home": {
@@ -943,11 +958,14 @@
     // Emily
 
     "emily": {
-      "get_changed": {
+      "get_changed_verynice": {
         "min_heart_level": 8
       },
-      "give_change": {
+      "give_change_verynice": {
         "min_heart_level": 8
+      },
+      "give_dirty_change": {
+        "min_heart_level": 4
       },
       "change_automaticly": {
         "at_home": {
@@ -971,11 +989,14 @@
     // Haley
 
     "haley": {
-      "get_changed": {
+      "get_changed_verynice": {
         "min_heart_level": 8
       },
-      "give_change": {
+      "give_change_verynice": {
         "min_heart_level": 8
+      },
+      "give_dirty_change": {
+        "min_heart_level": 4
       },
       "change_automaticly": {
         "at_home": {
@@ -1004,11 +1025,14 @@
     // Leah
 
     "leah": {
-      "get_changed": {
+      "get_changed_verynice": {
         "min_heart_level": 8
       },
-      "give_change": {
+      "give_change_verynice": {
         "min_heart_level": 8
+      },
+      "give_dirty_change": {
+        "min_heart_level": 4
       },
       "change_automaticly": {
         "at_home": {
@@ -1032,7 +1056,7 @@
     // Penny
 
     "penny": {
-      "get_changed": {
+      "get_changed_verynice": {
         "min_heart_level": 6,
         "questions_answered": {
           "penny_adult_little": 4,
@@ -1040,12 +1064,21 @@
           "penny_potty_trouble": 4
         }
       },
-      "give_change": {
+      "get_changed_nice": {
+        "min_heart_level": 4
+      },
+      "give_change_verynice": {
         "min_heart_level": 6,
         "questions_answered": {
           "penny_adult_little": 4,
           "penny_adult_big": 4
         }
+      },
+      "give_change_nice": {
+        "min_heart_level": 4
+      },
+      "give_dirty_change": {
+        "min_heart_level": 4
       },
       "change_automaticly": {
         "at_home": {
@@ -1611,9 +1644,6 @@
     // Vincent
 
     "vincent": {
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"vincent\"#{{i18n:Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Vincent.Soiled.Verynice.1}}",
@@ -1641,15 +1671,16 @@
         "{{i18n:Villager_Reactions.Vincent.Ground.1}}",
         "{{i18n:Villager_Reactions.Vincent.Ground.2}}",
         "{{i18n:Villager_Reactions.Vincent.Ground.3}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"vincent\"#{{i18n:Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ]
     },
 
     // Jas
 
     "jas": {
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Jas.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"jas\"#{{i18n:Villager_Reactions.Jas.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Jas.Soiled.Verynice.1}}",
@@ -1673,6 +1704,10 @@
         "{{i18n:Villager_Reactions.Jas.Ground.1}}",
         "{{i18n:Villager_Reactions.Jas.Ground.2}}",
         "{{i18n:Villager_Reactions.Jas.Ground.3}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Jas.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"jas\"#{{i18n:Villager_Reactions.Jas.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
       ]
     },
 
@@ -1683,15 +1718,6 @@
     // Sam
 
     "sam": {
-      "general_offer_change_player": [
-        "{{i18n:Villager_Reactions.Sam.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Sam.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"sam\""
-      ],
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Sam.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"sam\"#{{i18n:Villager_Reactions.Sam.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
-      "dirty_offer_change_player": [
-        "{{i18n:Villager_Reactions.Sam.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"sam\""
-      ],
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "#$p child_diaper_no#{{i18n:Villager_Reactions.Sam.Soiled.Verynice.1}}#$GETTING_CHANGED_DIALOG$ \"sam\"",
@@ -1718,21 +1744,23 @@
         "{{i18n:Villager_Reactions.Sam.Soiled.Mean.3}}",
         "{{i18n:Villager_Reactions.Sam.Soiled.Mean.4}}",
         "#$p child_diaper_no#{{i18n:Villager_Reactions.Sam.Soiled.Mean.5.Child_No}}|{{i18n:Villager_Reactions.Sam.Soiled.Mean.5.Child_Yes}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Sam.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"sam\"#{{i18n:Villager_Reactions.Sam.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
+      ],
+      // They check you
+      "check_player_verynice": [
+        "{{i18n:Villager_Reactions.Sam.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Sam.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"sam\""
+      ],
+      "check_player_dirty": [
+        "{{i18n:Villager_Reactions.Sam.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"sam\""
       ]
     },
 
     // Abigail
 
     "abigail": {
-      "general_offer_change_player": [
-        "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"abigail\""
-      ],
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"abigail\"#{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
-      "dirty_offer_change_player": [
-        "$p dirty_change_no#{{i18n:Villager_Reactions.Abigail.Change.Dirty_Offer.No}}|{{i18n:Villager_Reactions.Abigail.Change.Dirty_Offer.Yes}}$GETTING_CHANGED_DIALOG$ \"abigail\""
-      ],
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Abigail.Soiled.Verynice.1}}#$GETTING_CHANGED_DIALOG$ \"abigail\"",
@@ -1755,21 +1783,23 @@
         "{{i18n:Villager_Reactions.Abigail.Soiled.Mean.3}}",
         "{{i18n:Villager_Reactions.Abigail.Soiled.Mean.4}}",
         "{{i18n:Villager_Reactions.Abigail.Soiled.Mean.5}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"abigail\"#{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
+      ],
+      // They check you
+      "check_player_verynice": [
+        "{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Abigail.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"abigail\""
+      ],
+      "check_player_dirty": [
+        "$p dirty_change_no#{{i18n:Villager_Reactions.Abigail.Change.Dirty_Offer.No}}|{{i18n:Villager_Reactions.Abigail.Change.Dirty_Offer.Yes}}$GETTING_CHANGED_DIALOG$ \"abigail\""
       ]
     },
 
     // Maru
 
     "maru": {
-      "general_offer_change_player": [
-        "{{i18n:Villager_Reactions.Maru.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Maru.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"maru\""
-      ],
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Maru.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"maru\"#{{i18n:Villager_Reactions.Maru.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
-      "dirty_offer_change_player": [
-        "{{i18n:Villager_Reactions.Maru.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"maru\""
-      ],
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Maru.Soiled.Verynice.1}}$GETTING_CHANGED_DIALOG$ \"maru\""
@@ -1779,21 +1809,23 @@
       ],
       "soiled_mean": [
         "{{i18n:Villager_Reactions.Maru.Soiled.Mean.1}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Maru.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"maru\"#{{i18n:Villager_Reactions.Maru.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
+      ],
+      // They check you
+      "check_player_verynice": [
+        "{{i18n:Villager_Reactions.Maru.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Maru.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"maru\""
+      ],
+      "check_player_dirty": [
+        "{{i18n:Villager_Reactions.Maru.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"maru\""
       ]
     },
 
     // Emily
 
     "emily": {
-      "general_offer_change_player": [
-        "{{i18n:Villager_Reactions.Emily.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Emily.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"emily\""
-      ],
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Emily.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"emily\"#{{i18n:Villager_Reactions.Emily.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
-      "dirty_offer_change_player": [
-        "{{i18n:Villager_Reactions.Emily.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"emily\""
-      ],
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Emily.Soiled.Verynice.1}}"
@@ -1803,18 +1835,23 @@
       ],
       "soiled_mean": [
         "{{i18n:Villager_Reactions.Emily.Soiled.Mean.1}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Emily.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"emily\"#{{i18n:Villager_Reactions.Emily.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
+      ],
+      // They check you
+      "check_player_verynice": [
+        "{{i18n:Villager_Reactions.Emily.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Emily.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"emily\""
+      ],
+      "check_player_dirty": [
+        "{{i18n:Villager_Reactions.Emily.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"emily\""
       ]
     },
 
     // Haley
 
     "haley": {
-      "general_offer_change_player": [
-        "{{i18n:Villager_Reactions.Haley.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Haley.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"haley\""
-      ],
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Haley.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"haley\"#{{i18n:Villager_Reactions.Haley.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Haley.Soiled.Verynice.1}}",
@@ -1829,22 +1866,20 @@
         "{{i18n:Villager_Reactions.Haley.Soiled.Mean.1}}",
         "{{i18n:Villager_Reactions.Haley.Soiled.Mean.2}}",
         "{{i18n:Villager_Reactions.Haley.Soiled.Mean.3}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Haley.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"haley\"#{{i18n:Villager_Reactions.Haley.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
+      ],
+      // They check you
+      "check_player_verynice": [
+        "{{i18n:Villager_Reactions.Haley.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Haley.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"haley\""
       ]
     },
 
     // Leah
 
     "leah": {
-      "general_offer_change_player": [
-        "{{i18n:Villager_Reactions.Leah.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"leah\""
-      ],
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Leah.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"leah\"#{{i18n:Villager_Reactions.Leah.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
-      "dirty_offer_change_player": [
-        "{{i18n:Villager_Reactions.Leah.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"leah\""
-      ],
-
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Leah.Soiled.Verynice.1}}",
@@ -1913,6 +1948,9 @@
         "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Clean.1}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Used.1}}",
         "$query !DIAPER_USED#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Clean.2}}|#$b#{{i18n:Villager_Reactions.Leah.Check.Player.Mean.Used.2}}"
       ],
+      "check_player_dirty": [
+        "{{i18n:Villager_Reactions.Leah.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"leah\""
+      ],
       // You Pee/Poop on the ground near them
       "ground": [
         "{{i18n:Villager_Reactions.Leah.Ground.1}}",
@@ -1932,18 +1970,6 @@
     // Penny
 
     "penny": {
-      "general_offer_change_player": [
-        "{{i18n:Villager_Reactions.Penny.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Penny.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"penny\""
-      ],
-      "general_offer_change_npc": [
-        "{{i18n:Villager_Reactions.Penny.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
-      ],
-      "general_fallback": [
-        "{{i18n:Villager_Reactions.Penny.Change.General.Fallback.1}}"
-      ],
-      "dirty_offer_change_player": [
-        "{{i18n:Villager_Reactions.Penny.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"penny\""
-      ],
       // You Pee/Poop in your underwear near them
       "soiled_verynice": [
         "{{i18n:Villager_Reactions.Penny.Soiled.Verynice.1}}",
@@ -1966,6 +1992,17 @@
         "{{i18n:Villager_Reactions.Penny.Soiled.Mean.1}}",
         "{{i18n:Villager_Reactions.Penny.Soiled.Mean.1}}",
         "#$p child_diaper_no#{{i18n:Villager_Reactions.Penny.Soiled.Mean.1}}"
+      ],
+      // You check them
+      "check_npc_verynice": [
+        "{{i18n:Villager_Reactions.Penny.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
+      ],
+      // They check you
+      "check_player_verynice": [
+        "{{i18n:Villager_Reactions.Penny.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Penny.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"penny\""
+      ],
+      "check_player_dirty": [
+        "{{i18n:Villager_Reactions.Penny.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"penny\""
       ]
     }
   },

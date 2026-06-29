@@ -120,8 +120,8 @@
 
   // Leah check your underwear
 
-  "Villager_Reactions.Leah.Check.Player.Pre.1:": "%Leah peeks at your $UNDERWEAR_NAME$.",
-  "Villager_Reactions.Leah.Check.Player.Pre.2:": "Ooh! What are you wearing? Is it one of mine? Lemme see!!$1",
+  "Villager_Reactions.Leah.Check.Player.Pre.1": "%Leah peeks at your $UNDERWEAR_NAME$.",
+  "Villager_Reactions.Leah.Check.Player.Pre.2": "Ooh! What are you wearing? Is it one of mine? Lemme see!!$1",
 
   // Leah check your underwear friendship very nice
 

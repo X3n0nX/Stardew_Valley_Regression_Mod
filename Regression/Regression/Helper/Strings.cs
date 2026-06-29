@@ -12,7 +12,6 @@ namespace RegressionMod
     public static class Strings
     {
         private static ChangeData changeData = Regression.changeData;
-        private static TypesData typesData = Regression.typesData;
         private static VillagerData villagerData = Regression.villagerData;
         private static Farmer who = Game1.player;
 
@@ -85,7 +84,7 @@ namespace RegressionMod
             var list = new List<string>();
             foreach (string key in foundDict.Keys)
             {
-                if (!Regression.HasUnderwear(key)) continue;
+                if (!UnderwearHelper.HasUnderwear(key)) continue;
                 var entry = foundDict[key];
                 // #$r change_other_yes 2 Change_Diaper_Accept#Yes
                 list.Add($"#$r change_other_yes {entry["friendship"]} {entry["dialog_key"]} {(entry.TryGetValue("observerfriendship", out string val) ? val : "")}#{key.FirstCharToUpper()}");
@@ -220,13 +219,7 @@ namespace RegressionMod
         public static string ReplaceOr(string str, bool first, string splitChar = "/")
         {
             return new Regex("<([^>" + splitChar + "]*)" + splitChar + "([^>]*)>").Replace(str, first ? "$1" : "$2");
-        }
-
-        public static List<string> ValidUnderwearTypes()
-        {
-            List<string> list = typesData.Type_Underwears.Keys.ToList();
-            return list;
-        }
+        }               
 
         #region Replace Tokens
         public static string ReplaceFarmername(string str)
@@ -436,7 +429,7 @@ namespace RegressionMod
 
             str = GetParameters(str, token,out parameters);
 
-            if (parameters.Length > 1)
+            if (parameters.Length >= 1)
             {
                 npcName = parameters[0];
             }

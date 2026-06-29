@@ -1,10 +1,7 @@
-﻿using StardewValley.Characters;
+﻿using Microsoft.Xna.Framework;
+using StardewValley.Characters;
 using StardewValley;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RegressionMod
 {
@@ -38,7 +35,7 @@ namespace RegressionMod
 
         public static List<NPC> NearbyVillager(int radius)
         {
-            var list = Utility.GetNpcsWithinDistance(((Character)_player).Tile, radius, (GameLocation)Game1.currentLocation);
+            var list = Utility.GetNpcsWithinDistance(_player.Tile, radius, Game1.currentLocation);
 
             var newList = new List<NPC>();
             foreach (var npcEntry in list)
@@ -89,6 +86,54 @@ namespace RegressionMod
                 npcType.Add(npc.getName().ToLower());
             }
             return npcType;
+        }
+
+        public static NpcBody GetNpcByName(string name, int range = 20)
+        {
+            name = name.ToLower();
+            foreach (NPC npc in range <= 0 ? Utility.getAllCharacters() : NpcHelper.NearbyVillager(range))
+            {
+                if (npc.Name.ToLower() == name)
+                {
+                    return new NpcBody(npc);
+                }
+            }
+            return null;
+        }
+        public static List<NpcBody> GetNpcsByRange(int range = 10)
+        {
+            List<NpcBody> list = new List<NpcBody>();
+            foreach (NPC npc in Utility.GetNpcsWithinDistance(_player.Tile, range, Game1.currentLocation))
+            {
+                list.Add(new NpcBody(npc));
+            }
+            return list;
+        }
+        public static bool NpcInRange(Vector2 actualPosition, GameLocation location, string name, int range = 10)
+        {
+            name = name.ToLower();
+            foreach (NPC npc in Utility.GetNpcsWithinDistance(actualPosition, range, location))
+            {
+                if (npc.Name == name) return true;
+            }
+
+            return false;
+        }
+        public static bool NpcInRange(NPC npcRequester, string name, int range = 10)
+        {
+            name = name.ToLower();
+            foreach (NPC npc in Utility.GetNpcsWithinDistance(npcRequester.Tile, range, npcRequester.currentLocation))
+            {
+                if (npc.Name == name) return true;
+            }
+
+            return false;
+        }
+        public static bool NpcAtLocation(NPC npcRequester, string location)
+        {
+            location = location.ToLower();
+            if (npcRequester.currentLocation.Name.ToLower() == location) return true;
+            return false;
         }
     }
 }

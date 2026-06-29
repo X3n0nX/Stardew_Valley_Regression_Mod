@@ -75,32 +75,8 @@ namespace RegressionMod
 
             h.ConsoleCommands.Add("dialog", "Triggers a debug dialog. Usage: dialog <npcName> <message>", TriggerDialogCommand);
             h.ConsoleCommands.Add("emote", "Sets an NPC's emote. Usage: set_emote <NPCName> <EmoteID>", SetEmoteCommand);
-            // A multi action manager, as the game only allowes one action to be triggered
-            // Example: $action ACTIONS CHANGE_DIAPER_OTHERS vincent \"baby print diaper\" ADD_DIALOG \"Thank you so much! Here!\" \"change_vincent\" GIVE_UNDERWEAR \"baby print diaper\"
-            TriggerActionManager.RegisterAction("ACTIONS", this.ActionManager);
 
-            // This is about you getting your diapers changed by someone
-            // Example: $action DIAPER_CHANGE \"baby print diaper\" \"sams pants\"
-            TriggerActionManager.RegisterAction("DIAPER_CHANGE", this.StartChange);
-
-            // This is about you changing others diapers, parameter 2 and 3 optional
-            // Example: $action CHANGE_DIAPER_OTHERS jas
-            // Example: $action CHANGE_DIAPER_OTHERS vincent \"baby print diaper\" \"toddler pants\"
-            TriggerActionManager.RegisterAction("CHANGE_DIAPER_OTHERS", this.StartChangeOthers);
-
-            // This is about the player having accidents, but can also be pointed at npc.
-            // Example: $action DIAPER_ACCIDENT player pee
-            // Example: $action DIAPER_ACCIDENT vincent poop
-            TriggerActionManager.RegisterAction("DIAPER_ACCIDENT", this.StartAccident);
-
-            // This is adds a dialog. Parameter 3 is optional, containing a key. If there is a message with this key already present, the message will be replaced
-            // Example: $action ADD_DIALOG jodi \"Did you change vincent into training pants? You should know better by now!#$b#%Jodi seams to be upset with you\" "change_vincent_wrong"
-            TriggerActionManager.RegisterAction("ADD_DIALOG", this.AddNpcMessage);
-
-            // This adds underwear to the players inventory, usually as a gift from an npc
-            // Example: $action GIVE_UNDERWEAR "training pants"
-            TriggerActionManager.RegisterAction("GIVE_UNDERWEAR", this.GiveUnderwear);
-
+            ActionManager.RegisterActions();
 
             GameStateQueryDelegate queryDelegate = (GameStateQueryDelegate)Delegate.CreateDelegate(typeof(GameStateQueryDelegate), this, "DIAPER_USED");
             GameStateQuery.Register("DIAPER_USED", queryDelegate);
@@ -215,7 +191,7 @@ namespace RegressionMod
                         break;
                 }
 
-                var npc = NpcBody.ByName(targetNpcName, 20);
+                var npc = NpcHelper.GetNpcByName(targetNpcName, 20);
                 if (npc == null) return false;
 
                 underwear = npc.underwear;
@@ -251,7 +227,7 @@ namespace RegressionMod
                     default:
                         break;
                 }
-                NpcBody npc = NpcBody.ByName(targetNpcName, 20);
+                NpcBody npc = NpcHelper.GetNpcByName(targetNpcName, 20);
                 if (npc == null) return false;
 
                 underwear = npc.underwear;
@@ -274,7 +250,7 @@ namespace RegressionMod
         private void DebugGiveUnderwear()
         {
             List<Item> objList = new List<Item>();
-            foreach (string validUnderwearType in Strings.ValidUnderwearTypes())
+            foreach (string validUnderwearType in UnderwearHelper.ValidUnderwearTypes())
                 objList.Add(new Underwear(validUnderwearType, 20));
             objList.Add(new StardewValley.Object(GameConstants.ItemIdSpringOnion, 99, false, -1, 0));
             objList.Add(new StardewValley.Object(GameConstants.ItemIdWine, 99, false, -1, 0));
@@ -506,276 +482,7 @@ namespace RegressionMod
                     }
                 }
             }
-        }
-
-        // action from dialog 
-        // parameter 1: type of accident, pee or poop
-        // parameter 2: target of the accident, player or an npc name
-        public bool StartAccident(string[] args, TriggerActionContext context, out string error)
-        {
-
-            error = null;
-
-            if (args.Length < 2)
-            {
-                error = "Parameter 1, type, should be given!";
-                return false;
-            }
-            var typeStr = args[1];
-            IncidentType type = IncidentType.PEE;
-            switch (typeStr)
-            {
-                case "pee":
-                    type = IncidentType.PEE;
-                    break;
-                case "poop":
-                    type = IncidentType.POOP;
-                    break;
-                default:
-                    error = $"Parameter 1, type '{type}' is unknown!";
-                    return false;
-            }
-
-            if (args.Length < 3)
-            {
-                error = "Parameter 2, target, be 'player' or an npc name";
-                return false;
-            }
-            var target = args.Length < 3 ? "player" : args[2];
-            target = target.ToLower();
-
-
-            if (target == "player" || target == "farmer" || target == "self")
-            {
-                body.Accident(type);
-            }
-            else
-            {
-                var targetNpc = NpcBody.ByName(target, 20);
-                if (targetNpc == null)
-                {
-                    error = $"Parameter 2, '{target}' not found in local npc list in 20 range";
-                    return false;
-                }
-                targetNpc.accidentFromFullness(type);
-            }
-            return true;
-        }
-        public static Underwear GetUnderwearFromInventory(string underwearName, bool clean = true)
-        {
-            if (who != null)
-            {
-                if (who.ActiveObject != null)
-                {
-                    if (who.ActiveObject is Underwear)
-                    {
-                        var container = ((Underwear)who.ActiveObject).container;
-                        if (container.name.ToLower() == underwearName.ToLower())
-                        {
-                            if (!clean || !container.used)
-                            {
-                                return (Underwear)who.ActiveObject;
-                            }
-
-                        }
-                    }
-                    return null;
-                }
-                foreach (var item in who.Items)
-                {
-                    if (item is Underwear)
-                    {
-                        var underwearFromInventory = item as Underwear;
-                        if (underwearFromInventory.container.name.ToLower() == underwearName.ToLower())
-                        {
-                            if (!clean || !underwearFromInventory.container.used)
-                            {
-                                return underwearFromInventory;
-                            }
-                        }
-                    }
-                }
-            }
-            return null;
-        }
-
-        public static bool HasUnderwear(string underwearName, bool clean = true)
-        {
-            return GetUnderwearFromInventory(underwearName, clean) != null;
-        }
-
-        // action from dialog 
-        // parameter 1: name of npc you wanne change
-        // parameter 2: type of underwear you wanne change the npc into
-        public bool StartChangeOthers(string[] args, TriggerActionContext context, out string error)
-        {
-            try
-            {
-                if (args.Length < 2)
-                {
-                    error = "Parameter 1, target, has to be the name of an npc";
-                    return false;
-                }
-                var target = args[1];
-                target = target.ToLower();
-                var targetNpc = NpcBody.ByName(target, 20);
-                if (targetNpc == null)
-                {
-                    error = $"Parameter 1, '{target}' not found in local npc list in 20 range";
-                    return false;
-                }
-
-                string underwearName = args.Length > 2 ? args[2] : null;
-                var newUnderwear = GetUnderwearFromInventory(underwearName);
-                if (newUnderwear == null)
-                {
-                    error = $"Parameter 2, '{underwearName}' not found in inventory";
-                    return false;
-                }
-
-                var currentUnderwear = targetNpc.underwear;
-                // We create a new, untethered container first, of the same type.
-                Underwear oldUnderwear = new Underwear(currentUnderwear.type, 1);
-                // We "reset" that new container to the same informations (including wet or dirty), so making a copy of it.
-                oldUnderwear.container.ResetToDefault(currentUnderwear);
-
-
-                if (who.ActiveItem == newUnderwear)
-                {
-                    who.reduceActiveItemByOne();
-                }
-                else
-                {
-                    newUnderwear.Stack -= 1;
-                    if (newUnderwear.Stack < 1)
-                    {
-                        who.removeItemFromInventory(newUnderwear);
-                    }
-                }
-
-                targetNpc.change(underwearName, args.Length > 3 ? args[3] : null);
-
-
-                //If the underwear returned is not removable, destroy it
-                bool returnDiaper = oldUnderwear.container.washable ? config.ReturnUsedCloth : config.ReturnUsedDisposable;
-                if (!returnDiaper)
-                {
-                    var msg = Strings.InsertVariables(Strings.RandString(changeData.Change_Other_Destroyed), targetNpc.npc, oldUnderwear.container);
-                    Dialoges.Warn(msg);
-                }
-                else if (!who.addItemToInventoryBool(oldUnderwear, false)) //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
-                {
-                    List<Item> objList = new List<Item>();
-                    objList.Add(oldUnderwear);
-                    Game1.activeClickableMenu = new ItemGrabMenu(objList);
-                }
-            }
-            catch (Exception e)
-            {
-                error = e.Message;
-                return false;
-            }
-
-            error = null;
-            return true;
-        }
-        // action from dialog 
-        // parameter 1: type of underwear
-        public bool GiveUnderwear(string[] args, TriggerActionContext context, out string error)
-        {
-            try
-            {
-                if (args.Length < 2)
-                {
-                    error = $"Parameter 1, needs to be a valid name of a type of underwear";
-                    return false;
-                }
-
-                var amount = args.Length > 2 ? int.Parse(args[2]) : 1;
-
-                var underwear = new Underwear(args[1], 1);
-
-                //Put into the inventory, but pull up the management window if it can't fit
-                if (!who.addItemToInventoryBool(underwear, false))
-                {
-                    List<Item> objList = new List<Item>();
-                    objList.Add(underwear);
-                    Game1.activeClickableMenu = new ItemGrabMenu(objList);
-                }
-            }
-            catch (Exception e)
-            {
-                error = e.Message;
-                return false;
-            }
-
-            error = null;
-            return true;
-        }
-        // action from dialog 
-        // parameter 1: name of npc that change you
-        // parameter 2: type of underwear the npc change you
-        // parameter 3: (optional) name of pants the npc change you if yours are messy
-        public bool StartChange(string[] args, TriggerActionContext context, out string error)
-        {
-            try
-            {
-                string npcName = "sam";
-                string underwearName = who.Gender == Gender.Female ? "polka dot panties" : "big kid undies";
-                if (args.Length > 2)
-                {
-                    npcName = args[1];
-                    underwearName = args[2];
-                }
-
-                Underwear newUnderwear = new Underwear(underwearName, 1);
-
-                Underwear oldUnderwear = new Underwear(body.underwear, 1);
-
-                bool dirtyPants = body.HasWetOrMessyDebuff();
-
-                if (args.Length > 3 && dirtyPants)
-                {
-                    Container oldPants = new Container(body, ContainerSubtype.Pants, body.pants.type);
-                    oldPants.ResetToDefault(body.pants);
-
-                    string newPantsName = Strings.ReplaceOr(args[3],who.Gender != Gender.Female);
-
-                    Container newPants = new Container(body,ContainerSubtype.Pants, newPantsName);
-
-                    body.ChangeUnderwearAndPants(newUnderwear, oldUnderwear, newPants,oldPants, npcName: npcName);
-                }
-                else
-                {
-                    body.ChangeUnderwear(newUnderwear, oldUnderwear, npcName: npcName);
-                }
-
-                //body.ChangeUnderwear(newUnderwear, oldUnderwear, npc: npcName);
-                //body.ResetPants();
-
-                //If the underwear returned is not removable, destroy it
-                bool returnDiaper = oldUnderwear.container.washable ? config.ReturnUsedCloth : config.ReturnUsedDisposable;
-                if (!returnDiaper)
-                {
-                    Dialoges.Warn(changeData.Getting_Changed_Destroyed, body, oldUnderwear.container);
-                }
-                //Otherwise put the old underwear into the inventory, but pull up the management window if it can't fit
-                else if (!who.addItemToInventoryBool(oldUnderwear, false))
-                {
-                    List<Item> objList = new List<Item>();
-                    objList.Add(oldUnderwear);
-                    Game1.activeClickableMenu = new ItemGrabMenu(objList);
-                }
-            }
-            catch (Exception e)
-            {
-                error = e.Message;
-                return false;
-            }
-
-            error = null;
-            return true;
-        }
+        }                
 
         public static void GetChangedByNpc(string npcName, string newUnderwearName, string newPantsName = null)
         {
@@ -815,48 +522,8 @@ namespace RegressionMod
                 objList.Add(oldUnderwear);
                 Game1.activeClickableMenu = new ItemGrabMenu(objList);
             }
-        }
+        }               
 
-        public bool AddNpcMessage(string[] args, TriggerActionContext context, out string error)
-        {
-            try
-            {
-                if (args.Length < 2)
-                {
-                    error = "Parameter 1, target, has to be the name of an npc";
-                    return false;
-                }
-                var target = args[1];
-                target = target.ToLower();
-                var targetNpc = NpcBody.ByName(target, -1);
-                if (targetNpc == null)
-                {
-                    error = $"Parameter 1, '{target}' not found in global npc list";
-                    return false;
-                }
-                if (args.Length < 3)
-                {
-                    error = "Parameter 2, message, has to be a message that is added as dialog to that npc";
-                    return false;
-                }
-                string eventToken = null;
-                if (args.Length > 3)
-                {
-                    eventToken = args[3];
-                    if (targetNpc.CurrentDialogue.Count > 0) targetNpc.RemoveDialogue(eventToken);
-                }
-                var msg = args[2].Replace("___", "#").Replace("$_", "$");
-                targetNpc.npc.setNewDialogue(new Dialogue(targetNpc.npc, eventToken, msg), true, false);
-            }
-            catch (Exception e)
-            {
-                error = e.Message;
-                return false;
-            }
-
-            error = null;
-            return true;
-        }
         private void ReceiveUpdateTick(object sender, OneSecondUpdateTickingEventArgs e)
         {
 
@@ -874,7 +541,7 @@ namespace RegressionMod
                 // The following block makes npc (usually) not talk to you if you wear wet or messy pants... short of the special texts
                 var hasMessyPants = body.pants.used;
 
-                foreach (var npc in NpcBody.ByRange(10))
+                foreach (var npc in NpcHelper.GetNpcsByRange(10))
                 {
                     if (npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(generalEventToken);
                     //if (npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(dirtyEventToken);
@@ -893,82 +560,79 @@ namespace RegressionMod
                     bool hasOptionDirty = false;
                     bool dirtyChange = false;
 
-                    if (!hasMessyPants)
+                    if (responseKey == "check_player" || hasMessyPants)
                     {
-                        if (responseKey == "check_player" || hasMessyPants)
+                        string responseKeyQuestion = "general_question_change";
+                        randQuestionNpcString = Strings.RandString(npc.GetVillagerReactions(responseKeyQuestion).ToArray());
+                        randQuestionNpcString = randQuestionNpcString + "#$b#";
+
+                        hasOptionVeryNice = npc.ChangingOptions.hasOptionGiveChangeVeryNice;
+                        hasOptionNice = npc.ChangingOptions.hasOptionGiveChangeNice;
+
+                        optionVeryNice = hasOptionVeryNice ? npc.canGivePlayerChangeVeryNice : false;
+                        optionNice = hasOptionNice ? npc.canGivePlayerChangeNice : false;
+
+                        if (hasMessyPants)
                         {
-                            string responseKeyQuestion = "general_question_change";
-                            randQuestionNpcString = Strings.RandString(npc.GetVillagerReactions(responseKeyQuestion).ToArray());
-                            randQuestionNpcString = randQuestionNpcString + "#$b#";
-
-                            hasOptionVeryNice = npc.ChangingOptions.hasOptionGiveChangeVeryNice;
-                            hasOptionNice = npc.ChangingOptions.hasOptionGiveChangeNice;
-
-                            optionVeryNice = hasOptionVeryNice ? npc.canGivePlayerChangeVeryNice : false;
-                            optionNice = hasOptionNice ? npc.canGivePlayerChangeNice : false;
-
-                            if (hasMessyPants)
-                            {
-                                hasOptionDirty = npc.ChangingOptions.hasOptionGiveDirtyChange;
-                                dirtyChange = hasOptionDirty ? npc.canGivePlayerChangeDirty : false;
-                            }
+                            hasOptionDirty = npc.ChangingOptions.hasOptionGiveDirtyChange;
+                            dirtyChange = hasOptionDirty ? npc.canGivePlayerChangeDirty : false;
                         }
-                        else if (responseKey == "check_npc")
-                        {
-                            hasOptionVeryNice = npc.ChangingOptions.hasOptionGetChangeVeryNice;
-                            hasOptionNice = npc.ChangingOptions.hasOptionGetChangeNice;
+                    }
+                    else if (responseKey == "check_npc")
+                    {
+                        hasOptionVeryNice = npc.ChangingOptions.hasOptionGetChangeVeryNice;
+                        hasOptionNice = npc.ChangingOptions.hasOptionGetChangeNice;
 
-                            optionVeryNice = hasOptionVeryNice ? npc.canGetChangedByPlayerVeryNice : false;
-                            optionNice = hasOptionNice ? npc.canGetChangedByPlayerNice : false;
+                        optionVeryNice = hasOptionVeryNice ? npc.canGetChangedByPlayerVeryNice : false;
+                        optionNice = hasOptionNice ? npc.canGetChangedByPlayerNice : false;
+                    }
+
+                    // get dialoge based on change options and friendship
+                    // check if we have no messy pants or we have messy pants but no option for change dirty were found
+                    if (hasMessyPants && !hasOptionDirty || !hasMessyPants)
+                    {
+
+                        // get modificator for dialoge 
+                        string mod = "_mean";
+
+                        if (hasOptionVeryNice && optionVeryNice ||
+                            !hasOptionVeryNice && heartLevelForNpc >= 8 ||
+                            config.FriendshipDebugVeryNice)
+                        {
+                            mod = "_verynice";
                         }
-
-                        // get dialoge based on change options and friendship
-                        // check if we have no messy pants or we have messy pants but no option for change dirty were found
-                        if (hasMessyPants && !hasOptionDirty || !hasMessyPants)
+                        else if (!hasOptionVeryNice && heartLevelForNpc >= 6)
                         {
-
-                            // get modificator for dialoge 
-                            string mod = "_mean";
-
-                            if (hasOptionVeryNice && optionVeryNice ||
-                                !hasOptionVeryNice && heartLevelForNpc >= 8 ||
-                                config.FriendshipDebugVeryNice)
-                            {
+                            var niceRand = rnd.NextDouble(); //allows a small chance for the very_nice line to be chosen instead for variety.
+                            if (niceRand > 0.8f)
                                 mod = "_verynice";
-                            }
-                            else if (!hasOptionVeryNice && heartLevelForNpc >= 6)
-                            {
-                                var niceRand = rnd.NextDouble(); //allows a small chance for the very_nice line to be chosen instead for variety.
-                                if (niceRand > 0.8f)
-                                    mod = "_verynice";
-                                else
-                                    mod = "_nice";
-                            }
-                            else if (hasOptionNice && optionNice ||
-                                !hasOptionNice && heartLevelForNpc >= 4 ||
-                                config.FriendshipDebugNice && !config.FriendshipDebugVeryNice)
-                            {
+                            else
                                 mod = "_nice";
-                            }
-
-                            responseKey = responseKey + mod;
-                            randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
-
-                            if (randNpcString == "") continue;
-
-                            randNpcString = randQuestionNpcString + randNpcString;
                         }
-                        else
+                        else if (hasOptionNice && optionNice ||
+                            !hasOptionNice && heartLevelForNpc >= 4 ||
+                            config.FriendshipDebugNice && !config.FriendshipDebugVeryNice)
                         {
-                            responseKey = "check_player_dirty";
-
-                            if (dirtyChange)
-                            {
-                                randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
-                            }
-
-                            if (randNpcString == "") continue;
+                            mod = "_nice";
                         }
+
+                        responseKey = responseKey + mod;
+                        randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
+
+                        if (randNpcString == "") continue;
+
+                        randNpcString = randQuestionNpcString + randNpcString;
+                    }
+                    else
+                    {
+                        responseKey = "check_player_dirty";
+
+                        if (dirtyChange)
+                        {
+                            randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
+                        }
+
+                        if (randNpcString == "") continue;
                     }
 
                     string npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
@@ -1089,77 +753,8 @@ namespace RegressionMod
             //If we're trying to shop, handle the underwear inventory
             else if ((currentShopMenu = e.NewMenu as ShopMenu) != null)
             {
-                //Default to all underwear being available
-                List<string> allUnderwear = Strings.ValidUnderwearTypes();
-                if (Game1.currentLocation is SeedShop)
-                {
-                    foreach (string type in allUnderwear)
-                    {
-                        //The seed shop does not sell the Joja diaper
-                        if (type == UnderwearConstants.JojaDiaper) continue;
-                        //The seed shop does not sell every diaper and underwear as single items
-                        addUnderwearToShop(currentShopMenu, type);
-                    }
-                }
-                else if (Game1.currentLocation is JojaMart)
-                {
-                    // Joja shop sells big brands now, "pampers" and "dry nites". You probably also find normal undies and simple cloth diapers there.
-                    // As such uses packages and has slightly lower prices (bulk)
-                    // This makes sense and mirrors the advantages and disadvantages of large chains in rual areas
-                    var type = UnderwearConstants.JojaDiaper;
-                    if (allUnderwear.Contains(type))
-                    {
-                        addUnderwearToShop(currentShopMenu, type, 10, 0.8f);
-                        addUnderwearToShop(currentShopMenu, type, 40, 0.7f);
-                    }
-                    type = UnderwearConstants.BabyPrintDiaper;
-                    if (allUnderwear.Contains(type))
-                    {
-                        addUnderwearToShop(currentShopMenu, type, 20, 0.8f);
-                        addUnderwearToShop(currentShopMenu, type, 60, 0.7f);
-                    }
-                    type = UnderwearConstants.LavenderPullups;
-                    if (allUnderwear.Contains(type))
-                    {
-                        addUnderwearToShop(currentShopMenu, type, 10, 0.8f);
-                        addUnderwearToShop(currentShopMenu, type, 40, 0.7f);
-                    }
-                    type = UnderwearConstants.BigKidUndies;
-                    if (allUnderwear.Contains(type))
-                    {
-                        addUnderwearToShop(currentShopMenu, type, 3, 0.8f);
-                    }
-                    type = UnderwearConstants.ClothDiaper;
-                    if (allUnderwear.Contains(type))
-                    {
-                        addUnderwearToShop(currentShopMenu, type, 5, 0.75f);
-                    }
-                    type = UnderwearConstants.LilSwabbies;
-                    if (allUnderwear.Contains(type))
-                    {
-                        addUnderwearToShop(currentShopMenu, type, 5, 0.8f);
-                    }
-
-                }
-                else if (Game1.currentLocation.Name == "Hospital")
-                {
-                    // The Hospital sells all kind of diapers with a little discount but no regular underware.
-                    foreach (string type in allUnderwear)
-                    {
-                        if (type.Contains("diaper") || type == UnderwearConstants.LavenderPullups || type == UnderwearConstants.TrainingPants || type == UnderwearConstants.LilSwabbies)
-                        {
-                            addUnderwearToShop(currentShopMenu, type, 5, 0.9f);
-                        } 
-                    }                    
-                }
+                ShopManager.AddItemsToShops(currentShopMenu);             
             }
-        }
-
-        private static void addUnderwearToShop(ShopMenu shop, string type, int amount = 1, float priceMultiplier = 1f)
-        {
-            var underwear = new Underwear(type, amount);
-            shop.forSale.Add(underwear);
-            shop.itemPriceAndStock.Add(underwear, new ItemStockInformation((int)Math.Ceiling((float)underwear.container.price * (float)amount * priceMultiplier), StardewValley.Menus.ShopMenu.infiniteStock));
         }
 
         //Check if we are at a natural water source
@@ -1181,7 +776,7 @@ namespace RegressionMod
             int y = (int)toolLocation.Y;
             Vector2 vector2 = new Vector2((float)(x / Game1.tileSize), y / Game1.tileSize);
             return currentLocation.IsBuildableLocation() && currentLocation.getBuildingAt(vector2) != null && (currentLocation.getBuildingAt(vector2).buildingType.Value.Equals("Well") && currentLocation.getBuildingAt(vector2).daysOfConstructionLeft.Value <= 0);
-
+        
         }
 
         //Handle Mouse Clicks/Movement
@@ -1469,64 +1064,7 @@ namespace RegressionMod
                 if (Game1.player.dialogueQuestionsAnswered.Contains(yes)) Game1.player.dialogueQuestionsAnswered.Remove(yes);
                 if (Game1.player.dialogueQuestionsAnswered.Contains(no)) Game1.player.dialogueQuestionsAnswered.Remove(no);
             }
-        }
-
-        private delegate bool ActionHandler(string[] args, TriggerActionContext context, out string error);
-        public bool ActionManager(string[] args, TriggerActionContext context, out string error)
-        {
-            error = null;
-
-            // Remove the first arg "ACTION_MANAGER"
-            args = args.Skip(1).ToArray();
-
-            // Dictionary of known actions
-            var actionHandlers = new Dictionary<string, ActionHandler>()
-            {
-                { "DIAPER_CHANGE", StartChange },
-                { "CHANGE_DIAPER_OTHERS", StartChangeOthers },
-                { "DIAPER_ACCIDENT",  StartAccident},
-                { "ADD_DIALOG",  AddNpcMessage},
-                { "GIVE_UNDERWEAR",  GiveUnderwear}
-                // Add more actions here
-            };
-
-            int index = 0;
-            while (index < args.Length)
-            {
-                string actionName = args[index];
-                if (!actionHandlers.ContainsKey(actionName))
-                {
-                    /*error = $"Unknown action: {actionName}";
-                    return false;*/
-                    // we will just assume that its not an action but a parameter from another function
-                }
-
-                // Find the next action in the list or the end of the array
-                int nextActionIndex = args.Length;
-                for (int i = index + 1; i < args.Length; i++)
-                {
-                    if (actionHandlers.ContainsKey(args[i]))
-                    {
-                        nextActionIndex = i;
-                        break;
-                    }
-                }
-
-                // Extract arguments for this action (including the action name itself)
-                string[] actionArgs = args.Skip(index).Take(nextActionIndex - index).ToArray();
-
-                // Execute the action
-                if (!actionHandlers[actionName](actionArgs, context, out error))
-                {
-                    return false;
-                }
-
-                // Move to the next action
-                index = nextActionIndex;
-            }
-
-            return true;
-        }
+        }        
 
         private static Queue<(Action action, int delay)> actionQueue = new Queue<(Action, int)>();
         private static bool isExecutingAction = false;
