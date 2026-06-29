@@ -4,8 +4,10 @@ using StardewValley;
 using StardewValley.Buffs;
 using StardewValley.GameData.Characters;
 using StardewValley.Locations;
+using StardewValley.Objects;
 using StardewValley.Tools;
 using System;
+using System.Reflection;
 using System.Text.Json.Serialization;
 
 namespace RegressionMod
@@ -731,8 +733,31 @@ namespace RegressionMod
 
         public bool InToilet(bool inUnderwear)
         {
-            return !inUnderwear && (Game1.currentLocation is FarmHouse || Game1.currentLocation is IslandFarmHouse || Game1.currentLocation.Name == "BathHouse_MensLocker" || Game1.currentLocation.Name == "BathHouse_WomensLocker");
+            //return !inUnderwear && (Game1.currentLocation is FarmHouse || Game1.currentLocation is IslandFarmHouse || Game1.currentLocation.Name == "BathHouse_MensLocker" || Game1.currentLocation.Name == "BathHouse_WomensLocker");
+            return !inUnderwear && IsOnToiletSeat();
         }
+
+        private bool IsOnToiletSeat()
+        {
+            Farmer player = Game1.player;
+            if (player == null)
+                return false;
+
+            object sittingFurnitureRef = typeof(Farmer).GetField("sittingFurniture", BindingFlags.Public | BindingFlags.Instance)?.GetValue(player)
+                ?? typeof(Farmer).GetProperty("sittingFurniture", BindingFlags.Public | BindingFlags.Instance)?.GetValue(player);
+            object furnitureValue = sittingFurnitureRef?.GetType().GetProperty("Value", BindingFlags.Public | BindingFlags.Instance)?.GetValue(sittingFurnitureRef)
+                ?? sittingFurnitureRef;
+
+            if (furnitureValue is Furniture furniture)
+            {
+                string itemId = furniture.ItemId ?? string.Empty;
+                if (Toilets.IsToiletFurnitureId(itemId))
+                    return true;
+            }
+
+            return false;
+        }
+
         public bool InPlaceWithPants()
         {
             return Game1.currentLocation is FarmHouse;
