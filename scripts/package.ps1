@@ -49,15 +49,28 @@ if (Test-Path $DialogueManifest) {
 
 # 5. Create Cross-Platform ZIP using 7z
 # Using 7z ensures forward slashes and standard compression that works everywhere
-Write-Host "Creating cross-platform ZIP with 7z: $ZipPath"
+Write-Host "Creating cross-platform ZIP..."
 $StagingSource = Join-Path $StagingDir "Regression\*"
-# -tzip: create zip file
-# -mx9: ultra compression
-# -y: assume yes on all queries
-if (-not (Test-Path $SevenZipDir)) {
-    throw "7-Zip not found. Please install 7-Zip."
+
+$7zPath = $SevenZipDir
+if (-not $7zPath -or -not (Test-Path $7zPath)) {
+    # Try to find 7z or 7za in system PATH
+    $resolved7z = Get-Command 7z, 7za -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($resolved7z) {
+        $7zPath = $resolved7z.Source
+        Write-Host "Found 7z in PATH: $7zPath"
+    }
 }
-& $SevenZipDir a -tzip "$ZipPath" "$StagingSource" -mx9 -y | Out-Null
+
+if ($7zPath -and (Test-Path $7zPath)) {
+    Write-Host "Creating cross-platform ZIP with 7z: $ZipPath"
+    & $7zPath a -tzip "$ZipPath" "$StagingSource" -mx9 -y | Out-Null
+}
+else {
+    # Fallback to Compress-Archive if 7z is not available
+    Write-Host "7z not found. Falling back to Compress-Archive..."
+    Compress-Archive -Path $StagingSource -DestinationPath $ZipPath -Force
+}
 
 # 6. Copy ZIP to Releases folder up top
 $ReleasesDir = Join-Path $ProjectDir "..\Releases"
@@ -66,9 +79,19 @@ Write-Host "Copying ZIP to $ReleasesDir"
 Copy-Item -Path $ZipPath -Destination $ReleasesDir -Force
 
 # 7. Deploy unzipped folder to local game folder (Skip if folder doesn't exist)
-$DeployDir = Join-Path $GameModsDir "Regression"
+$GameModsDirExists = $false
+try {
+    # Using System.IO.Directory::Exists avoids "Drive not found" errors on build servers (e.g. missing D: or E: drive)
+    if ([System.IO.Directory]::Exists($GameModsDir)) {
+        $GameModsDirExists = $true
+    }
+}
+catch {
+    # Catch any exceptions to prevent build failures
+}
 
-if (Test-Path $GameModsDir) {
+if ($GameModsDirExists) {
+    $DeployDir = Join-Path $GameModsDir "Regression"
     Write-Host "Local game folder found. Deploying..."
     try {
         if (Test-Path $DeployDir) { Remove-Item -Recurse -Force $DeployDir -ErrorAction Stop }

@@ -1,4 +1,4 @@
-﻿{
+{
   "Name": "Regression",
   "Author": "Various",
   "Version": "1.6.8",
@@ -6,7 +6,7 @@
   "UniqueID": "Zippity21.Regression",
   "EntryDll": "Regression.dll",
   "MinimumApiVersion": "4.1.0",
-  "UpdateKeys": [ "GitHub:X3n0nX/Stardew_Valley_Regression_Mod" ],
+  "UpdateKeys": [ "GitHub:WolfWare-Dev/Stardew_Valley_Regression_Mod" ],
   "Dependencies": [
     {
       "UniqueID": "Pathoschild.ContentPatcher"
