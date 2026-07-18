@@ -33,6 +33,7 @@ namespace RegressionMod
         public bool WriteSaveFiles = false;
         public bool ReturnUsedCloth = true;
         public bool ReturnUsedDisposable = true;
+        public bool HideUnderwearStatusIcon = false;
 
         #region Keys
 

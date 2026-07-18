@@ -63,6 +63,11 @@
   "Config_Menu.Main.Return_Used_Disposable.Name": "Return Used Disposables",
   "Config_Menu.Main.Return_Used_Disposable.Tooltip": "Return used disposable diapers to inventory on change (as 'used' items) instead of destroying them.",
 
+  // Hide Underwear and Status Icon
+
+  "Config_Menu.Main.Hide_Underwear_and_Status_Icon.Name": "Hide Underwear and Status Icon",
+  "Config_Menu.Main.Hide_Underwear_and_Status_Icon.Tooltip": "Hides the icons for the currently weared underwear and the current status.",
+
   // Menu Point Key Bindings
 
   "Config_Menu.Main.Key_Bindings_Menu.Name": "Key Bindings",

@@ -55,7 +55,7 @@ namespace RegressionMod
                     StatusBars.DrawStatusBar(x1, y1, percentage, new Color(byte.MaxValue, 225, 56));
                 }
             }
-            if (!config.Wetting && !config.Messing)
+            if ((!config.Wetting && !config.Messing) || config.HideUnderwearStatusIcon)
                 return;
             int y3 = (Game1.player.questLog).Count == 0 ? 250 : 310;
             var x3 = Game1.graphics.GraphicsDevice.Viewport.TitleSafeArea.Right - 94;
