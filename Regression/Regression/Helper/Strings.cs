@@ -155,7 +155,7 @@ namespace RegressionMod
                 var pants = new NpcBody(b).pants;
                 if (pants != null)
                 {
-                    str = ReplaceNpcName(str, b.Name.FirstCharToUpper());
+                    str = ReplaceNpcName(str, b.Name.ToLower());
                     str = ReplacePantsToken(str, pants, true);
                     str = ReplaceGenderTextNpc(str, b.Gender);
                 }
@@ -177,7 +177,6 @@ namespace RegressionMod
         {
             if (msgs == null || msgs.Length == 0) return "";
             return tryGetI18nText(msgs[Regression.rnd.Next(msgs.Length)]);
-            //return msgs[Regression.rnd.Next(msgs.Length)];
         }
 
         public static string ReplaceAndOr(string str, bool first, bool second, string splitChar = "&")
@@ -231,7 +230,7 @@ namespace RegressionMod
         public static string ReplaceNpcName(string str, string npcName)
         {
             string token = "$NPC_NAME$";
-            return str.Replace(token, npcName.FirstCharToUpper());
+            return str.Replace(token, npcName.ToLower());
         }
 
         #region Replace Token Underwear
@@ -434,6 +433,11 @@ namespace RegressionMod
                 npcName = parameters[0];
             }
             else throw new Exception($"Wrong Count of Parameters set for Token {token}");
+
+            if (Game1.player.dialogueQuestionsAnswered.Contains("dirty_change_yes" + "_" + npcName.ToLower()))
+                Game1.player.dialogueQuestionsAnswered.Remove("dirty_change_yes" + "_" + npcName.ToLower());
+            if (Game1.player.dialogueQuestionsAnswered.Contains("dirty_change_no" + "_" + npcName.ToLower()))
+                Game1.player.dialogueQuestionsAnswered.Remove("dirty_change_no" + "_" + npcName.ToLower());
 
             str = str.Replace(token, "#$b#" + gettingChangedDialog);
 

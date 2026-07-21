@@ -636,7 +636,7 @@ namespace RegressionMod
                         if (randNpcString == "") continue;
                     }
 
-                    string npcStatement = Strings.ReplaceAndOr(randNpcString, body.pants.wetness > 0, body.pants.messiness > 0);
+                    string npcStatement = Strings.ReplaceAndOr(randNpcString, body.underwear.wetness > 0, body.underwear.messiness > 0);
                     npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
                     npc.npc.setNewDialogue(new Dialogue(npc.npc, generalEventToken, npcStatement), true, true);
                 }
@@ -1046,12 +1046,6 @@ namespace RegressionMod
                 Animations.AnimateShouldChange(body);
 
             // Reset all dialogue answers for changing
-            if (Game1.player.dialogueQuestionsAnswered.Contains("change_other_yes"))
-                Game1.player.dialogueQuestionsAnswered.Remove("change_other_yes");
-            if (Game1.player.dialogueQuestionsAnswered.Contains("change_other_no"))
-                Game1.player.dialogueQuestionsAnswered.Remove("change_other_no");
-
-
             ResetAllNpcChangeAnswers();
         }
 

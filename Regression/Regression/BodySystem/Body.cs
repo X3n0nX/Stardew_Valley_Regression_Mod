@@ -217,7 +217,7 @@ namespace RegressionMod
             {
                 if (_bed == null)
                 {
-                    _bed = new Container(this, ContainerSubtype.Bed, "bed");
+                    _bed = new Container(this, ContainerSubtype.Bed, ContainerConstants.Bed);
                 }
                 return _bed;
             }
@@ -230,7 +230,7 @@ namespace RegressionMod
             {
                 if (_pants == null)
                 {
-                    _pants = new Container(this, ContainerSubtype.Pants, "blue jeans");
+                    _pants = new Container(this, ContainerSubtype.Pants, ContainerConstants.BlueJeans);
                 }
                 return _pants;
             }
@@ -451,11 +451,6 @@ namespace RegressionMod
             }
             else
             {
-                //If we have no room left, or randomly based on our current continence level warn about how badly we need to pee
-                /*if ((newFullness <= 0.0 ? 1.0 : bladderContinence / (4f * newFullness)) > Regression.rnd.NextDouble())
-                {
-                    Warn(1-oldFullness, 1-newFullness, WETTING_THRESHOLDS, WETTING_MESSAGES, false);
-                }*/
                 float newFullnessPercent = fullness / capacity;
                 // No randomness in this. We get warned later and it is more urgent immediatly, giving less time, but reliable.
                 if (newFullnessPercent > (1 - GetContinence(type)))
@@ -613,12 +608,13 @@ namespace RegressionMod
 
             if (npcName != null)
             {
+                ResetPants(newPants: pantsNew, npcName: npcName);
                 msg = Strings.RandString(changeData.Change_Underwear_Pants_by_Npc);
                 msg = Strings.ReplaceNpcName(msg, npcName);           
             }
             else
             {
-                ResetPants(newPants: pantsNew,npcName: npcName);
+                ResetPants(newPants: pantsNew);
                 msg = Strings.RandString(changeData.Change_Underwear_Pants);
             }
 
@@ -651,11 +647,13 @@ namespace RegressionMod
 
             pants.ResetToDefault(newPants,0,0);
 
+            /*
             if (myPants != null)
             {
                 pants.displayName = myPants.displayName.ToLower();
                 pants.description = myPants.displayName.ToLower();
             }
+            */
 
             if (npcName != null) CleanPantsByNpc(npcName);
             else CleanPants();
@@ -773,7 +771,7 @@ namespace RegressionMod
             float capacity = underwear.GetCapacity(type);
             float used = underwear.GetUsed(type);
 
-            if (!underwear.removable) return false; // If we don't have pants or training pants, there is no point
+            //if (!underwear.removable) return false; // If we don't have pants or training pants, there is no point
             if (used > 350) return false; // If the underwear is already heavily used, we stop trying
             if (used > GetCapacity(type) / 3) return false; // If its more than 1/3 our bladder/bowel size already, we stop trying
             if ((vsAmount + used) > capacity) return false; // If the underwear would be more than full, there is no point
@@ -805,8 +803,6 @@ namespace RegressionMod
             ChangeContinence(type, CalculateContinenceLossOrGain(type, false, true, amount / GetMaxCapacity(type)));
             AddAccidentFromFullness(type, amount);
             return true;
-            //AddMess(amountToLose);
-            //_ = this.pants.AddPoop(this.underwear.AddPoop(bowelFullness));
         }
         public void ChangeFullness(IncidentType type, float amount)
         {

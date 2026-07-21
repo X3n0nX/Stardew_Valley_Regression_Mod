@@ -132,7 +132,7 @@ namespace RegressionMod
 
                     string newPantsName = Strings.ReplaceOr(args[3], _who.Gender != Gender.Female);
 
-                    Container newPants = new Container(_body, ContainerSubtype.Pants, newPantsName);
+                    Container newPants = new Container(_body, ContainerSubtype.Pants, newPantsName, true);
 
                     _body.ChangeUnderwearAndPants(newUnderwear, oldUnderwear, newPants, oldPants, npcName: npcName);
                 }

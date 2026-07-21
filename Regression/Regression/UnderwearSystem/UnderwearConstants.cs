@@ -10,7 +10,7 @@ namespace RegressionMod
 {
     public class UnderwearConstants
     {
-        #region Underwear Names
+        #region Underwear Types
 
         public const string BlackThong = "black thong";
         public const string PolkaDotPanties = "polka dot panties";

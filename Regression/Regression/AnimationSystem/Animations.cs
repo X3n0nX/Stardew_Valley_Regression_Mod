@@ -138,6 +138,7 @@ namespace RegressionMod
             if (b.underwear.removable || inUnderwear)
                 Game1.playSound("wateringCan");
 
+            // check if we notice the accident.
             if (b.isSleeping || !voluntary && !Regression.config.AlwaysNoticeAccidents && (double)b.bladderContinence + 0.200000002980232 <= Regression.rnd.NextDouble())
                 return;
 
@@ -484,12 +485,12 @@ namespace RegressionMod
                 {
                     int heartLevelForNpc = player.getFriendshipHeartLevelForNPC(npc.getName());
                     //If we have a really high relationship with the NPC, they're very nice about our accident
-                    if (heartLevelForNpc >= 8)
+                    if (heartLevelForNpc >= 8 || Regression.config.FriendshipDebugVeryNice)
                     {
                         return "_verynice";
                     }
                     //Otherwise they'll be mean or nice depending on how much friendship we're losing
-                    if (friendshipLoss < 0) return "_nice";
+                    if (friendshipLoss < 0 || (Regression.config.FriendshipDebugNice && !Regression.config.FriendshipDebugVeryNice)) return "_nice";
                     return "_mean";
                 }
             }

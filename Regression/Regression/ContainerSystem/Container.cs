@@ -1,6 +1,8 @@
 ﻿using System;
+using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Mods;
+using static StardewValley.Objects.BedFurniture;
 
 namespace RegressionMod
 {
@@ -30,25 +32,39 @@ namespace RegressionMod
             modDataBaseKey = Underwear.modDataKey;
             modDataDictionary = underwear.modData;
         }
-        public Container(Body body, ContainerSubtype subtype, string fallbackType)
+        public Container(Body body, ContainerSubtype subtype, string fallbackType, bool updateToFallback = false)
         {
             modDataBaseKey = BodyConstants.ModDataPrefix + "/" + GetStringSubtype(subtype);
             modDataDictionary = Game1.player.modData;
-            if (name == "")
+
+            if(updateToFallback)
             {
-                // Regression.monitor.Log($"{modDataBaseKey} for body had no name, so fallback {fallbackType} was used");
                 ResetToDefault(fallbackType, subtype);
             }
+            else
+            {
+                if (name == "")
+                {
+                    ResetToDefault(fallbackType, subtype);
+                }
+            }
         }
-        public Container(NPC npc, ContainerSubtype subtype, string fallbackType)
+        public Container(NPC npc, ContainerSubtype subtype, string fallbackType, bool updateToFallback = false)
         {
             Regression.monitor.Log($"Container: {npc.Name}  {subtype.ToString()}");
             modDataBaseKey = "NPC/" + GetStringSubtype(subtype);
             modDataDictionary = npc.modData;
-            if (name == "")
+
+            if (updateToFallback)
             {
-                //Regression.monitor.Log($"{modDataBaseKey} for {npc.Name} had no name, so fallback {fallbackType} was used");
                 ResetToDefault(fallbackType, subtype);
+            }
+            else
+            {
+                if (name == "")
+                {
+                    ResetToDefault(fallbackType, subtype);
+                }
             }
         }
 
@@ -452,16 +468,25 @@ namespace RegressionMod
             {
                 case ContainerSubtype.Bed:
                     if (!typesData.Type_Beds.TryGetValue(type, out c))
-                        throw new Exception(string.Format("Invalid bed choice: {0}", type));
+                    {
+                        Regression.monitor.Log(string.Format("Invalid bed choice: {0}. Use default type.", type), LogLevel.Error);
+                        typesData.Type_Beds.TryGetValue(ContainerConstants.Bed, out c);
+                    }
                     break;
                 case ContainerSubtype.Pants:
                     if (!typesData.Type_Pants.TryGetValue(type, out c))
-                        throw new Exception(string.Format("Invalid pants choice: {0}", type));
-                    break;
+                    {
+                        Regression.monitor.Log(string.Format("Invalid pants choice: {0}. Use default type.", type), LogLevel.Error);
+                        typesData.Type_Pants.TryGetValue(ContainerConstants.BlueJeans, out c);
+                    }
+                break;
                 case ContainerSubtype.Underwear:
                 default:
                     if (!typesData.Type_Underwears.TryGetValue(type, out c))
-                        throw new Exception(string.Format("Invalid underwear choice: {0}", type));
+                    {
+                        Regression.monitor.Log(string.Format("Invalid underwear choice: {0}. Use default type.", type),LogLevel.Error);
+                        typesData.Type_Underwears.TryGetValue(UnderwearConstants.DinosaurUndies, out c);
+                    }
                     break;
             }
 
@@ -472,6 +497,7 @@ namespace RegressionMod
 
             return c;
         }
+
         public static string GetStringSubtype(ContainerSubtype subtype)
         {
             switch (subtype)
