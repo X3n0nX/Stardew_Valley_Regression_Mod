@@ -1,5 +1,7 @@
 {
+  //########################################
   // Diaperchange to Leah
+  //########################################
 
   "Leah.Change_Diaper.Accept_BabyPrint": "Insert Text",
   "Leah.Change_Diaper.Accept_BabyPrint_Post": "Leah seams very angry.",
@@ -17,9 +19,11 @@
   "Leah.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
   "Leah.Change_Diaper.Refuse_UsedBad": "Insert Text",
 
+  //########################################
   // Diaperchange from Leah
+  //########################################
 
-  "Leah.Diaper_Change.Accept": "%Leah changes you quick and professional",
-  "Leah.Diaper_Change.Refuse": "I am here if you change your mind.",
+  "Leah.Diaper_Change.Accept": "Placeholder accept changed by leah",
+  "Leah.Diaper_Change.Refuse": "Placeholder refuse changed by leah.",
   "Leah.Diaper_Change.Followup": "..."
 }

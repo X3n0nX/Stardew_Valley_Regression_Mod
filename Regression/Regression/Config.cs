@@ -35,15 +35,15 @@ namespace RegressionMod
         public bool ReturnUsedDisposable = true;
         public bool HideUnderwearStatusIcon = false;
 
-        #region Keys
-
-        public SButton KeyGoInPants = 0;
+        #region Keys              
 
         /// <summary> Key to pee in underwear.</summary>
         public SButton KeyPee = SButton.F1;
 
         /// <summary> Key to poop in underwear.</summary>
         public SButton KeyPoop = SButton.F2;
+
+        public SButton KeyGoInPants = 0;
         public SButton KeyGoInToilet = 0;
 
         /// <summary> 

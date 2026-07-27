@@ -1,5 +1,7 @@
 {
+  //########################################
   // Diaperchange to Maru
+  //########################################
 
   "Maru.Change_Diaper.Accept_BabyPrint": "Insert Text",
   "Maru.Change_Diaper.Accept_BabyPrint_Post": "Maru seams very angry.",
@@ -17,9 +19,11 @@
   "Maru.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
   "Maru.Change_Diaper.Refuse_UsedBad": "Insert Text",
 
+  //########################################
   // Diaperchange from Maru
+  //########################################
 
-  "Maru.Diaper_Change.Accept": "%Maru changes you quick and professional",
-  "Maru.Diaper_Change.Refuse": "I am here if you change your mind.",
+  "Maru.Diaper_Change.Accept": "Placeholder accept changed by maru",
+  "Maru.Diaper_Change.Refuse": "Placeholder refuse changed by maru.",
   "Maru.Diaper_Change.Followup": "..."
 }

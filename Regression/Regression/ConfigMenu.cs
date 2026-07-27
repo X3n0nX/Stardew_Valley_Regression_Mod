@@ -170,7 +170,7 @@ namespace RegressionMod
                 mod: modManifest,
                 name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Key_Bindings.Pee_In_Potty.Name}}"),
                 tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Key_Bindings.Pee_In_Potty.Tooltip}}"),
-                getValue: () => (SButton)config.KeyPoopInToilet,
+                getValue: () => (SButton)config.KeyPeeInToilet,
                 setValue: value => config.KeyPeeInToilet = value
             );
             // Poop In Potty

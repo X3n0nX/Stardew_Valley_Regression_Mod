@@ -1,0 +1,29 @@
+{
+  //########################################
+  // Diaperchange to Haley
+  //########################################
+
+  "Haley.Change_Diaper.Accept_BabyPrint": "Insert Text",
+  "Haley.Change_Diaper.Accept_BabyPrint_Post": "Haley seams very angry.",
+
+  "Haley.Change_Diaper.Accept_Lavender": "Insert Text",
+  "Haley.Change_Diaper.Accept_Lavender_Post": "Insert Text",
+
+  "Haley.Change_Diaper.Accept_PawprintDiaper": "Insert Text",
+  "Haley.Change_Diaper.Accept_PawprintDiaper_Post": "Insert Text",
+
+  "Haley.Change_Diaper.Accept_HeartDiaper": "Insert Text",
+  "Haley.Change_Diaper.Accept_HeartDiaper_Post": "Insert Text",
+
+  "Haley.Change_Diaper.Refuse_Pretext": "Insert Text",
+  "Haley.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
+  "Haley.Change_Diaper.Refuse_UsedBad": "Insert Text",
+
+  //########################################
+  // Diaperchange from Haley
+  //########################################
+
+  "Haley.Diaper_Change.Accept": "Placeholder accept changed by haley",
+  "Haley.Diaper_Change.Refuse": "Placeholder refuse changed by haley.",
+  "Haley.Diaper_Change.Followup": "..."
+}

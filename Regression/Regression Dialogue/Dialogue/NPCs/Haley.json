@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "LogName": "Haley",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Entries": {
+
+        "Diaper_Change_Accept": "{{i18n:Haley.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"haley\" \"heart diaper\"#$h",
+        "Diaper_Change_Refuse": "{{i18n:Haley.Diaper_Change.Refuse}}",
+        "Diaper_Change_Followup": "{{i18n:Haley.Diaper_Change.Followup}}"
+      }
+    }
+}
