@@ -15,7 +15,7 @@
         "Diaper_Change_Accept": "{{i18n:Gus.Change_Diaper.Accept}}#$action DIAPER_CHANGE \"gus\" \"cloth diaper\"#$h",
         "Diaper_Change_Refuse": "{{i18n:Gus.Change_Diaper.Refuse}}",
         "Diaper_Change_Followup": "{{i18n:Gus.Change_Diaper.Followup}}"
-      },
-		},
+      }
+		}
 	]
 }

@@ -47,6 +47,11 @@
       "FromFile": "Dialogue/NPCs/Gus.json"
     },
     {
+      "LogName": "Haley",
+      "Action": "Include",
+      "FromFile": "Dialogue/NPCs/Haley.json"
+    },
+    {
       "LogName": "Harvey",
       "Action": "Include",
       "FromFile": "Dialogue/NPCs/Harvey.json"

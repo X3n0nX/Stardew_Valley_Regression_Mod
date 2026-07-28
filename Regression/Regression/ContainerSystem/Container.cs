@@ -51,7 +51,7 @@ namespace RegressionMod
         }
         public Container(NPC npc, ContainerSubtype subtype, string fallbackType, bool updateToFallback = false)
         {
-            Regression.monitor.Log($"Container: {npc.Name}  {subtype.ToString()}");
+            //Regression.monitor.Log($"Container: {npc.Name}  {subtype.ToString()}");
             modDataBaseKey = "NPC/" + GetStringSubtype(subtype);
             modDataDictionary = npc.modData;
 

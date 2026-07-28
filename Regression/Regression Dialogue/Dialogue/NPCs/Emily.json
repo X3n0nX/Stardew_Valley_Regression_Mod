@@ -105,7 +105,9 @@
         "winter_Sun6_inlaw_Haley": "{{i18n:Emily.Dialogue.winter_Sun6_inlaw_Haley}}",
 
 
+        //########################################
         // Diaperchange to Emily
+        //########################################
 
         "Change_Diaper_Accept_BabyPrint": "{{i18n:Emily.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"emily\" \"baby print diaper\"#$b#%{{i18n:Emily.Change_Diaper.Accept_BabyPrint_Post}}",
         "Change_Diaper_Accept_Lavender": "{{i18n:Emily.Change_Diaper.Accept_Lavender}}#$action CHANGE_DIAPER_OTHERS \"emily\" \"lavender pullups\"#$b#%{{i18n:Emily.Change_Diaper.Accept_Lavender_Post}}",
@@ -114,7 +116,9 @@
         "Change_Diaper_Refuse": "{{i18n:Emily.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Emily.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Emily.Change_Diaper.Refuse_UsedBad}}]",
         "Change_Diaper_Followup": "...",
 
+        //########################################
         // Diaperchange from Emily
+        //########################################
 
         "Diaper_Change_Accept": "{{i18n:Emily.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"emily\" \"cloth diaper\" \"self made <pants/skirt>\"#$h",
         "Diaper_Change_Refuse": "{{i18n:Emily.Diaper_Change.Refuse}}",

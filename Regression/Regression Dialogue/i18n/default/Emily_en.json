@@ -182,7 +182,9 @@
   "Emily.Dialogue_Marriage.winter_Emily": "Whoops, my hair is frozen solid again.$s",
 
 
+  //########################################
   // Diaperchange to Emily
+  //########################################
 
   "Emily.Change_Diaper.Accept_BabyPrint": "",
   "Emily.Change_Diaper.Accept_BabyPrint_Post": "",
@@ -201,9 +203,11 @@
   "Emily.Change_Diaper.Refuse_UsedBadt": "",
   "Emily.Change_Diaper.Followup": "...",
 
+  //########################################
   // Diaperchange from Emily
+  //########################################
 
-  "Emily.Diaper_Change.Accept": "",
-  "Emily.Diaper_Change.Refuse": "",
+  "Emily.Diaper_Change.Accept": "Placeholder accept changed by emily.",
+  "Emily.Diaper_Change.Refuse": "Placeholder refuse changed by emily.",
   "Emily.Diaper_Change.Followup": ""
 }

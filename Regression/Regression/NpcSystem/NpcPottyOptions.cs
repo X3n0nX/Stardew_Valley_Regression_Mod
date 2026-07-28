@@ -11,7 +11,7 @@ namespace RegressionMod
 
             if (string.IsNullOrEmpty(npcName) || !Regression.villagerData.Villager_Potty_Options.TryGetValue(npcName, out options))
             {
-                Regression.monitor.Log($"Npc Name not found in Villager_Potty_Options: NPC Name {npcName}");
+                //Regression.monitor.Log($"Npc Name not found in Villager_Potty_Options: NPC Name {npcName}");
             }
             else
             {

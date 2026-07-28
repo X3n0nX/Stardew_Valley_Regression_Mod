@@ -23,7 +23,7 @@
   // Diaperchange from Haley
   //########################################
 
-  "Haley.Diaper_Change.Accept": "Placeholder accept changed by haley",
+  "Haley.Diaper_Change.Accept": "Placeholder accept changed by haley.",
   "Haley.Diaper_Change.Refuse": "Placeholder refuse changed by haley.",
   "Haley.Diaper_Change.Followup": "..."
 }
