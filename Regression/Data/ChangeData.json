@@ -81,7 +81,6 @@
 
   "Change_Underwear": [
     "{{i18n:Change.Underwear.Yourself.1}}"
-    //***"You take off your soiled <OLD_UNDERWEAR_DESC> and put on $UNDERWEAR_PREFIX$ clean $UNDERWEAR_NAME$."
   ],
 
   // Changed underwear and pants by yourself

@@ -564,7 +564,7 @@ namespace RegressionMod
             SetContinence(type, previousContinence + percent);
 
             //Change of bladder capacity is no longer nessesary. Handled by getter.
-            Regression.monitor.Log(string.Format("{0} continence changed by {1} to {2}, {0} capacity now {3}", type == IncidentType.POOP ? "Bowel" : "Bladder", GetContinence(type) - previousContinence, GetContinence(type), GetCapacity(type)), LogLevel.Debug);
+            if (Regression.config.Debug) Regression.monitor.Log(string.Format("{0} continence changed by {1} to {2}, {0} capacity now {3}", type == IncidentType.POOP ? "Bowel" : "Bladder", GetContinence(type) - previousContinence, GetContinence(type), GetCapacity(type)), LogLevel.Debug);
 
             //Warn that we may be losing control
             if (type == IncidentType.POOP)

@@ -43,30 +43,94 @@
   "Villager_Reactions.Haley.Change.General_Offer.Player.1.Pre": "Insert Text Offer get change Heley",
   "Villager_Reactions.Haley.Change.General_Offer.Player.1.Underwear_ok": "Insert Text Underwear ok offer get change Haley",
 
-  // You change Haley`s underwear general offer
-
-  "Villager_Reactions.Haley.Change.General_Offer.Npc.1.Pre": "Insert Text Offer change Haley",
-  "Villager_Reactions.Haley.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text Underwear ok offer change Haley",
-
   // Haley change your underwear if there are dirty
 
-  "Villager_Reactions.Haley.Change.Dirty_Offer.1": "Insert Text Offer get dirty change Haley",
+  "Villager_Reactions.Haley.Change.Dirty_Offer.1": "%Haley can't help but whine a little as she finds you <wet&messy>.#$b#Ugh... I really didn't want to get my hands dirty today...$2#$b#But, I can't let you just walk around stinking up the place... Come on, lets get this over with.$7",
 
   // Haley friendship very nice
 
   "Villager_Reactions.Haley.Soiled.Verynice.1": "$lI'm really glad you've gotten me into this whole diaper thing!",
   "Villager_Reactions.Haley.Soiled.Verynice.2": "$hLooks like <that#those> $UNDERWEAR_NAME$ <is#are> a little <wet&messy> now!",
   "Villager_Reactions.Haley.Soiled.Verynice.3": "$sI think my diaper's starting to sag. Can you give me a hand?",
+  "Villager_Reactions.Haley.Soiled.Verynice.4": "%Haley notices your face starting to scrunch up and gasps excitedly and reaches into her purse to grab her camera.#$b#Oh! Oh! Hold on, this is perfect! Say juuust like that... and...$11#$b#%There is a bright flash and the sound of Haleys camera going off. She squeals happily.#$b#Eee! Thats perfect! I love your potty face, now I can see it any time I want$13",
 
   // Haley friendship nice
 
   "Villager_Reactions.Haley.Soiled.Nice.1": "$l<That#Those> $UNDERWEAR_NAME$ <is#are> kind of cute. Where can I get <one#some>?",
   "Villager_Reactions.Haley.Soiled.Nice.2": "$hI think you might be leaking a little!",
+  "Villager_Reactions.Haley.Soiled.Nice.3": "%Haley makes an uncomfortable face as you make no effort to hide what you're doing.#$b#Really , right near me? Ugh... you're so gross some times.$2",
 
   // Haley friendship mean
 
   "Villager_Reactions.Haley.Soiled.Mean.1": "$uDiapers are NOT in fashion, and neither is <peeing&pooping> your pants like a baby!",
   "Villager_Reactions.Haley.Soiled.Mean.2": "$uLike, eww. Why is everyone in this town so gross?!",
-  "Villager_Reactions.Haley.Soiled.Mean.3": "$uI was gonna tell you to change your clothes because of how unstylish they are, but it looks like you need your diaper changed more, you big baby!"
+  "Villager_Reactions.Haley.Soiled.Mean.3": "$uI was gonna tell you to change your clothes because of how unstylish they are, but it looks like you need your diaper changed more, you big baby!",
+  "Villager_Reactions.Haley.Soiled.Mean.4": "%Haley notices what you're doing and grimaces with disguest.#$b#Oh my god... you're not... oh my GOSH you ARE! Thats so gross! Get away you big baby! Ew!$12",
 
+  // you check Haley's underwear
+
+  "Villager_Reactions.Haley.Check.Npc.Clean.1": "%Haley smirks and curtsies gracefully, somewhat exposing her clean padding as she says proudly.#$b#What, did you expect a proper lady such as myself to need a change?$1",
+  "Villager_Reactions.Haley.Check.Npc.Clean.2": "%Haley struts proudly as you find her dry and clean.#$b#Sorry to disappoint you , but unlike you I usually make it to the toilet.$3",
+
+  // you check Haley's underwear friendship very nice
+
+  "Villager_Reactions.Haley.Check.Npc.Verynice.Pre.1": "%You give Haley a pat on her padded bottom and ask if she needs a change.",
+
+  "Villager_Reactions.Haley.Check.Npc.Verynice.Used.1": "%Haley flashes a radiant smile at you as she says.#$b#You really don't mind? You truly are my knight in padded armor.$11",
+
+  // you check Haley's underwear friendship nice
+
+  "Villager_Reactions.Haley.Check.Npc.Nice.Pre.1": "%You try to see if Haley needs a change.",
+  "Villager_Reactions.Haley.Check.Npc.Nice.Pre.2": "%You ask Haley if she'd like a change.",
+
+  "Villager_Reactions.Haley.Check.Npc.Nice.1": "%She rolls her eyes at you and smirks slightly.#$b#I bet you're only asking because you want to see me naked, huh?#$b#Thanks, but I can handle myself.",
+
+  "Villager_Reactions.Haley.Check.Npc.Nice.Used.1": "%Haley rolls her eyes at you for a moment before pausing.#$b#%Haley sighs and relents as she says.#$b#Fiiine.... I guess you can help change me...$2#$b#But only because I don't want to touch my <wet&messy> diaper, because, like... ew, you know?",
+
+  // you check Haley's underwear friendship mean
+
+  "Villager_Reactions.Haley.Check.Npc.Mean.1": "%You wonder if Haley might wear diapers.#$b#%Haley notices you staring at her crotch and looks angry.#$b#My eyes are up here you perv!$5",
+  "Villager_Reactions.Haley.Check.Npc.Mean.2": "%You ask Haley if she needs a change.#$b#%Haley rolls her eyes and scoffs at you.#$b#What? Eww! As if i'd EVER be caught dead wearing diapers like some kind of loser baby. Get away from me weirdo.$5",
+
+  // General question change
+
+  "Villager_Reactions.Haley.Change.Player.General_Question.1": "%You shyly ask Haley if she might be able to help you get changed.",
+  "Villager_Reactions.Haley.Change.Player.General_Question.2": "%You build up the courage to ask Haley for a change.",
+  "Villager_Reactions.Haley.Change.Player.General_Question.3": "%You sheepishly try to ask Haley for a change.",
+  "Villager_Reactions.Haley.Change.Player.General_Question.4": "%You waddle up to Haley and ask for a change with pleading eyes.",
+
+  // Haley check your underwear
+
+  "Villager_Reactions.Haley.Check.Player.Pre.1": "",
+
+  // Haley check your underwear friendship very nice
+
+  "Villager_Reactions.Haley.Check.Player.Verynice.Clean.1": "%Haley looks disappoint as she finds your clean and huffs.#$b#Thats a shame... as gross as changes are, I just bought these cute pink diapers I thought would look great on you.$2#$b#Come on, push something out so I can see how they look on you!$1#$b#%Haley pats your bottom playfully.",
+
+  "Villager_Reactions.Haley.Check.Player.Verynice.Used.1": "%Haley claps her hands together excitedly as she finds you <wet&messy> and squeals happily.#$b#Eee..! I was hoping you'd need a change! Come on, come on! I've been dying to make you try on these cute diapers i've found!$3",
+  "Villager_Reactions.Haley.Check.Player.Verynice.Used.2": "Haley looks uncomfortable for a moment before bursting out into laughter and agreeing.$1#$b#All right! All right! Ugh, you know I can say no to you when you do your pleading puppy dog look...$11#$b#Come on lets get you into something clean and crinkly.$13",
+
+  // Haley check your underwear friendship nice
+
+  "Villager_Reactions.Haley.Check.Player.Nice.Clean.1": "%Haley checks your diaper and sighs with relief as she finds them clean.#$b#Phew... I really didn't feel like getting my hands dirty today.$0",
+
+  "Villager_Reactions.Haley.Check.Player.Nice.1": "%Haley purses her lips and rolls her eyes.#$b#Really? You can find anyone else to change your <wet&poopy> diaper...?$2#$b#Look, I may like you, but I still think thats like, totally gross and stuff...$0#$b#Try to find someone else, or you know, just change yourself?$0",
+
+  "Villager_Reactions.Haley.Check.Player.Nice.Used.1": "%Haley can't help but whine a little as she finds you <wet&messy>.#$b#Ugh... I really didn't want to get my hands dirty today...$2#$b#But, I can't let you just walk around stinking up the place... Come on, lets get this over with.$7",
+
+  // Haley check your underwear friendship mean
+
+  "Villager_Reactions.Haley.Check.Player.Mean.1": "%Haley gives you a disgusted look and shoos you away as she scowls at you.#$b#What?!? Eww! Get away from me you weirdo, go find your mommy and ask her!$5",
+  "Villager_Reactions.Haley.Check.Player.Mean.2": "%Haley has a dumfounded look on her face before she laughs and mocks you.#$b#Oh my god, your serious aren't you?$12#$b#You actually wear diapers?!? Hahaha!$1#$b#Get away from me you lame little diaper baby, go find your mommy or daddy to change you.$3",
+
+  // You Pee/Poop on the ground near Haley
+
+  "Villager_Reactions.Haley.Ground.1": "%Haley notices what you're doing and gags loudly before letting out a high pitched shriek#$b#EW! EEWWWW!! THATS SO GROSS OH MY GOD!$12",
+
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Haley.Change.Player.1": "%Haley takes you someplace private and helps clean you up while she whines about it slightly.#$b#But soon enough, you're clean again. Haley smirks at you as she says with a playful tease.#$b#You own me one, brat.$3",
+  "Villager_Dialoges.Haley.Change.Player.2": "%Haley helps you lay down and pulls down your and quickly goes about cleaning you up before putting you in a thick pink heart diaper.#$b#%She admires the cute diaper on you and coos.#$b#Awww! You look so freaking cute with that diaper! Seems my fashion sense works for diapers as well.$11#$b#%She realizes what she just said and catches you smirking at her and playfully rolls her eyes at you as she says with a playful mock snarky tone.#$b#Oh shut up...$1"
 }

@@ -11,6 +11,7 @@ using StardewValley.Triggers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 
 namespace RegressionMod
 {
@@ -596,23 +597,24 @@ namespace RegressionMod
                         // get modificator for dialoge 
                         string mod = "_mean";
 
-                        if (hasOptionVeryNice && optionVeryNice ||
-                            !hasOptionVeryNice && heartLevelForNpc >= 8 ||
+                        if ((hasOptionVeryNice && optionVeryNice) ||
+                            (!hasOptionVeryNice && heartLevelForNpc >= 8) ||
                             config.FriendshipDebugVeryNice)
                         {
                             mod = "_verynice";
                         }
-                        else if (!hasOptionVeryNice && heartLevelForNpc >= 6)
+                        else if (!hasOptionVeryNice && heartLevelForNpc >= 6 && 
+                            !config.FriendshipDebugNice && !config.FriendshipDebugVeryNice)
                         {
                             var niceRand = rnd.NextDouble(); //allows a small chance for the very_nice line to be chosen instead for variety.
-                            if (niceRand > 0.8f)
+                            if (niceRand <= 0.1f)
                                 mod = "_verynice";
                             else
                                 mod = "_nice";
                         }
-                        else if (hasOptionNice && optionNice ||
-                            !hasOptionNice && heartLevelForNpc >= 4 ||
-                            config.FriendshipDebugNice && !config.FriendshipDebugVeryNice)
+                        else if ((hasOptionNice && optionNice) ||
+                            (!hasOptionNice && heartLevelForNpc >= 4) ||
+                            (config.FriendshipDebugNice && !config.FriendshipDebugVeryNice))
                         {
                             mod = "_nice";
                         }
@@ -638,7 +640,26 @@ namespace RegressionMod
 
                     string npcStatement = Strings.ReplaceAndOr(randNpcString, body.underwear.wetness > 0, body.underwear.messiness > 0);
                     npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
+
+                    // checking for query token in the dialoge and adding # for the answer options
+                    // this is nessesary because the game will not show the dialoge correctly if the query is used in the dialoge
+                    string token = "$query";
+
+                    if (npcStatement.Contains(token))
+                    {
+                        int i = npcStatement.IndexOf(token);
+                        string[] arr = npcStatement.Split(token)[1]?.Split('|');
+
+                        // get index of '|' Separator to insert '#'
+                        i = i + arr[0].Length + token.Length + 1;
+
+                        int amount = npcStatement.Split("#$b#").Length - 1;
+
+                        npcStatement = npcStatement.Insert(i, new string('#', amount * 2));
+                    }
+
                     npc.npc.setNewDialogue(new Dialogue(npc.npc, generalEventToken, npcStatement), true, true);
+                    var dia = npc.npc.CurrentDialogue;
                 }
             }
         }

@@ -139,6 +139,8 @@ namespace RegressionMod
                 changeOtherDialog += npcUnderwearOptions(b);
                 str = str.Replace("$CHANGE_OTHER_DIALOG$", changeOtherDialog);
 
+                str = ReplaceAndOr(str, c.wetness > 0, c.messiness > 0);
+
                 str = ReplaceConditionalOptional(str, "NpcOnSlightlyWet", c.used && !c.used_bad);
                 str = ReplaceConditionalOptional(str, "NpcOnUsedBad", c.used && c.used_bad);
                 str = ReplaceConditionalOptional(str, "NpcOnClean", !c.used);

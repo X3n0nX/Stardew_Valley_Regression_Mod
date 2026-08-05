@@ -26,7 +26,9 @@ namespace RegressionMod
                     npc.doEmote(28, false);
                     Game1.playSound("wateringCan");
                 }
-                Regression.monitor.Log($"{npc.Name} piddled themselfs", LogLevel.Debug);
+                if (Regression.config.Debug) Regression.monitor.Log($"{npc.Name} piddled themselfs", LogLevel.Debug);
+
+
             }
             else
             {
@@ -38,7 +40,7 @@ namespace RegressionMod
                     npc.doEmote(12, false);
                     Animations.AnimateMessingEnd(npc);
                 }
-                Regression.monitor.Log($"{npc.Name} pooped themselfs", LogLevel.Debug);
+                if (Regression.config.Debug) Regression.monitor.Log($"{npc.Name} pooped themselfs", LogLevel.Debug);
             }
         }
         public void accidentFromFullness(IncidentType type)
@@ -71,7 +73,7 @@ namespace RegressionMod
 
             var pants = this.pants;
             pants.ResetToDefault(pants, 0, 0);
-            Regression.monitor.Log($"{npc.Name} got changed and is now wearing {underwear.name} and {pants.name}", LogLevel.Debug);
+            if (Regression.config.Debug) Regression.monitor.Log($"{npc.Name} got changed and is now wearing {underwear.name} and {pants.name}", LogLevel.Debug);
         }
 
         // can npc get changed by player with dialogue very nice
@@ -211,9 +213,7 @@ namespace RegressionMod
                 }
 
                 if (optionMinHeartLevel || optionMinHeartLevelOther || 
-                    optionLocations || optionQuestionsAnswered || 
-                    Regression.config.FriendshipDebugNice ||
-                    Regression.config.FriendshipDebugVeryNice) return true;
+                    optionLocations || optionQuestionsAnswered) return true;
             }
 
             return false;

@@ -3,27 +3,24 @@
   // Diaperchange to Haley
   //########################################
 
-  "Haley.Change_Diaper.Accept_BabyPrint": "Insert Text",
+  "Haley.Change_Diaper.Accept_BabyPrint": "Insert Text Baby Print",
   "Haley.Change_Diaper.Accept_BabyPrint_Post": "Haley seams very angry.",
 
-  "Haley.Change_Diaper.Accept_Lavender": "Insert Text",
-  "Haley.Change_Diaper.Accept_Lavender_Post": "Insert Text",
+  "Haley.Change_Diaper.Accept_Lavender": "Insert Text Lavender",
+  "Haley.Change_Diaper.Accept_Lavender_Post": "Insert Text Lavender Post",
 
-  "Haley.Change_Diaper.Accept_PawprintDiaper": "Insert Text",
-  "Haley.Change_Diaper.Accept_PawprintDiaper_Post": "Insert Text",
+  "Haley.Change_Diaper.Accept_HeartDiaper": "Insert Text Heart Diaper",
+  "Haley.Change_Diaper.Accept_HeartDiaper_Post": "Insert Text Heart Diaper Post",
 
-  "Haley.Change_Diaper.Accept_HeartDiaper": "Insert Text",
-  "Haley.Change_Diaper.Accept_HeartDiaper_Post": "Insert Text",
-
-  "Haley.Change_Diaper.Refuse_Pretext": "Insert Text",
-  "Haley.Change_Diaper.Refuse_SlightlyWet": "Insert Text",
-  "Haley.Change_Diaper.Refuse_UsedBad": "Insert Text",
+  "Haley.Change_Diaper.Refuse_Pretext": "Insert Text Refuse Pre",
+  "Haley.Change_Diaper.Refuse_SlightlyWet": "Insert Text Refuse Slightly Wet",
+  "Haley.Change_Diaper.Refuse_UsedBad": "Insert Text Refuse Used Bad",
 
   //########################################
   // Diaperchange from Haley
   //########################################
 
-  "Haley.Diaper_Change.Accept": "Placeholder accept changed by haley.",
-  "Haley.Diaper_Change.Refuse": "Placeholder refuse changed by haley.",
+  "Haley.Diaper_Change.Accept": "%Haley changes you with a bit of an uncomfortable look on her face, but despite her discomfort she actually does a good job and admires her handy work#$b#There, try to make it to the potty next time, okay dork? As cute as your butt is I still think changing is a little icky...$1",
+  "Haley.Diaper_Change.Refuse": "%Haley rolls her eyes at you and scoffs.#$b#Really? You actually want to stay in your <wet&messy> diaper? Well don't come crying to me when you get a rash$3",
   "Haley.Diaper_Change.Followup": "..."
 }
