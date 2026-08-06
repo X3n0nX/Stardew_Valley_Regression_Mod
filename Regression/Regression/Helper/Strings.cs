@@ -1,5 +1,6 @@
 ﻿using StardewModdingAPI;
 using StardewValley;
+using StardewValley.GameData.Characters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,8 +23,8 @@ namespace RegressionMod
             float poopFill = u.messiness / u.containment;
             if ((double)peeFill == 0.0 && (double)poopFill == 0.0)
             {
-                newValue = !u.drying ? tryGetI18nText(changeData.Underwear_Clean).Replace("$UNDERWEAR_DESC$", newValue) :
-                                        tryGetI18nText(changeData.Underwear_Drying).Replace("$UNDERWEAR_DESC$", newValue);
+                newValue = !u.drying ? tryGetI18nText(changeData.Underwear_Clean).Replace(StringConstants.Token.UnderwearDesc, newValue) :
+                                        tryGetI18nText(changeData.Underwear_Drying).Replace(StringConstants.Token.UnderwearDesc, newValue);
             }
             else
             {
@@ -34,7 +35,7 @@ namespace RegressionMod
                         float num3 = (float)((index + 1.0) / (changeData.Underwear_Messy.Length - 1.0));
                         if (index == changeData.Underwear_Messy.Length - 1 || (double)poopFill <= (double)num3)
                         {
-                            newValue = ReplaceOptional(tryGetI18nText(changeData.Underwear_Messy[index]).Replace("$UNDERWEAR_DESC$", newValue), (double)peeFill > 0.0);
+                            newValue = ReplaceOptional(tryGetI18nText(changeData.Underwear_Messy[index]).Replace(StringConstants.Token.UnderwearDesc, newValue), (double)peeFill > 0.0);
                             break;
                         }
                     }
@@ -46,7 +47,7 @@ namespace RegressionMod
                         float num3 = (float)((index + 1.0) / (changeData.Underwear_Wet.Length - 1.0));
                         if (index == changeData.Underwear_Wet.Length - 1 || (double)peeFill <= (double)num3)
                         {
-                            string input = tryGetI18nText(changeData.Underwear_Wet[index]).Replace("$UNDERWEAR_DESC$", newValue);
+                            string input = tryGetI18nText(changeData.Underwear_Wet[index]).Replace(StringConstants.Token.UnderwearDesc, newValue);
                             Regex regex = new Regex("<([^>]*)>");
                             newValue = (double)poopFill != 0.0 ? regex.Replace(input, "$1") : regex.Replace(input, "");
                             break;
@@ -106,6 +107,9 @@ namespace RegressionMod
                 str = ReplaceConditionalOptional(str, "OnClean", !c.used);
 
                 str = ReplaceChangedByNpc(str, c);
+                str = ReplaceGetChangeDialogAccept(str, c);
+                str = ReplaceGetChangeDialogRefuse(str, c);
+                str = ReplaceChangedByNpc(str, c);
                 str = ReplaceUnderwearToken(str,c);
                 str = ReplaceUnderwearToken(str, c,oldNew: OldNew.New);
                 str = ReplaceInspectUnderwearToken(str, c);
@@ -137,7 +141,7 @@ namespace RegressionMod
                 var changeOtherDialog = RandString(changeData.Change_Other_Dialog);
                 changeOtherDialog = ReplaceAndOr(changeOtherDialog, c.wetness > 0, c.messiness > 0);
                 changeOtherDialog += npcUnderwearOptions(b);
-                str = str.Replace("$CHANGE_OTHER_DIALOG$", changeOtherDialog);
+                str = str.Replace(StringConstants.Token.ChangeOutherDialog, changeOtherDialog);
 
                 str = ReplaceAndOr(str, c.wetness > 0, c.messiness > 0);
 
@@ -225,13 +229,13 @@ namespace RegressionMod
         #region Replace Tokens
         public static string ReplaceFarmername(string str)
         {
-            string token = "$FARMERNAME$";
+            string token = StringConstants.Token.Farmername;
             return str.Replace(token, who.Name);
         }
 
         public static string ReplaceNpcName(string str, string npcName)
         {
-            string token = "$NPC_NAME$";
+            string token = StringConstants.Token.NpcName;
             return str.Replace(token, npcName.ToLower());
         }
 
@@ -418,7 +422,7 @@ namespace RegressionMod
         // format string: $GETTING_CHANGED_DIALOG$ \"npcName\"
         private static string ReplaceGetChangeDialog(string str, Container underwear)
         {
-            string token = "$GETTING_CHANGED_DIALOG$";
+            string token = StringConstants.Token.GettingChangedDialog;
 
             if(!str.Contains(token)) return str;
 
@@ -441,6 +445,8 @@ namespace RegressionMod
             if (Game1.player.dialogueQuestionsAnswered.Contains("dirty_change_no" + "_" + npcName.ToLower()))
                 Game1.player.dialogueQuestionsAnswered.Remove("dirty_change_no" + "_" + npcName.ToLower());
 
+            gettingChangedDialog = ReplaceNpcName(gettingChangedDialog, npcName.ToLower());
+
             str = str.Replace(token, "#$b#" + gettingChangedDialog);
 
             return str;
@@ -450,12 +456,12 @@ namespace RegressionMod
         // parameter 1: name of the npc who changes you
         // parameter 2: name of new underwear the npc will change the player
         // parameter 3: (optional) name of the pants the npc will change the player if there are dirty
-        // parameter 4: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file ChangeData.json
+        // parameter 4: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file VillagerData.json
         //              if free try to randomize the id
         //              if no insert in "Villager_Changeing_Reactions" use gender specific dialogue
         public static string ReplaceChangedByNpc(string str, Container underwear)
         {
-            string token = "$CHANGED_BY_NPC$";
+            string token = StringConstants.Token.ChangedByNpc;
 
             if (!str.Contains(token)) return str;
 
@@ -470,7 +476,7 @@ namespace RegressionMod
 
             if (parameters.Length >= 2)
             {
-                npcName = parameters[0];
+                npcName = parameters[0].ToLower();
                 underwearName = parameters[1];
 
                 if (parameters.Length >= 3)
@@ -484,52 +490,15 @@ namespace RegressionMod
                     if(parameters.Length >= 4)
                     {
                         if (!int.TryParse(parameters[3], out id)) 
-                            throw new Exception("Parameter for id is not an int for Token $CHANGED_BY_NPC$");
+                            throw new Exception("Parameter for id is not an int for Token: " + token);
                     }
                 }
+
+                if(!NpcHelper.IsValidNpc(npcName)) throw new Exception($"Parameter for npcName is not an valid npc: {npcName}");
             }
             else throw new Exception($"Wrong Count of Parameters set for Token {token}");
 
-            string changedByNpc = "";
-            int rndId = 0;
-
-            if (id == -1)
-            {
-                Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
-
-                // npc has dialogues in "Villager_Changeing_Reactions"
-                if (villagerData.Villager_Changeing_Dialoges.TryGetValue(npcName, out changingDialoges))
-                {
-                    rndId = Regression.rnd.Next(1, villagerData.Villager_Changeing_Dialoges[npcName].Count);
-                    changedByNpc = villagerData.Villager_Changeing_Dialoges[npcName][rndId];
-                }
-                else 
-                {
-                    bool female = NpcHelper.GetNpcGender(npcName) == Gender.Female ? true : false;
-
-                    if (!female)
-                    {
-                        rndId = Regression.rnd.Next(1, villagerData.Villager_Changeing_Dialoges["adult_male"].Count);
-                        changedByNpc = villagerData.Villager_Changeing_Dialoges["adult_male"][rndId];
-                    }
-                    else
-                    {
-                        rndId = Regression.rnd.Next(1, villagerData.Villager_Changeing_Dialoges["adult_female"].Count);
-                        changedByNpc = villagerData.Villager_Changeing_Dialoges["adult_female"][rndId];
-                    }
-                }
-            }
-            else
-            {
-                Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
-
-                // npc has dialogues in "Villager_Changeing_Reactions"
-                if (villagerData.Villager_Changeing_Dialoges.TryGetValue(npcName, out changingDialoges))
-                {
-                    if(!changingDialoges.TryGetValue(id,out changedByNpc))
-                        throw new Exception($"Id {id} not found in Villager_Changeing_Dialoges for {npcName}");
-                }
-            }
+            string changedByNpc = GetVilagerChangingDialogByKey(npcName, "change", id);
 
             changedByNpc = tryGetI18nText(changedByNpc);
 
@@ -548,6 +517,169 @@ namespace RegressionMod
             str = str.Replace(token, changedByNpc);
 
             return str;
+        }
+
+        // format string: $GET_CHANGE_ACCEPT_DIALOG$ \"npcName\" \"id\"
+        // parameter 1: name of the npc which changing offer you accept
+        // parameter 2: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file VillagerData.json
+        //              if free try to randomize the id
+        //              if no insert in "Villager_Changeing_Reactions" use gender specific dialogue
+        public static string ReplaceGetChangeDialogAccept(string str, Container underwear)
+        {
+            string token = StringConstants.Token.GetChangeAcceptDialog;
+
+            if (!str.Contains(token)) return str;
+
+            string npcName = "";
+            int id = -1;
+
+            string[] parameters;
+
+            str = GetParameters(str, token, out parameters);
+
+            if (parameters.Length >= 1)
+            {
+                npcName = parameters[0];
+
+                if (parameters.Length >= 2)
+                {
+                    if (!int.TryParse(parameters[1], out id))
+                    {
+                        id = -1;
+                        throw new Exception("Parameter for id is not an int for Token " + token);
+                    }
+                }
+
+                if (!NpcHelper.IsValidNpc(npcName)) throw new Exception($"Parameter for npcName is not an valid npc: {npcName}");
+            }
+            else throw new Exception($"Wrong Count of Parameters set for Token {token}");
+
+            string acceptChangingByNpc = GetVilagerChangingDialogByKey(npcName, "accept", id);
+
+            acceptChangingByNpc = tryGetI18nText(acceptChangingByNpc);
+
+            acceptChangingByNpc = ReplaceAndOr(acceptChangingByNpc, underwear.wetness > 0, underwear.messiness > 0);
+
+            acceptChangingByNpc = "#$b#" + acceptChangingByNpc;
+
+            str = str.Replace(token, acceptChangingByNpc);
+
+            return str;
+        }
+
+        // format string: $GET_CHANGE_REFUSE_DIALOG$ \"npcName\" \"id\"
+        // parameter 1: name of the npc which changing offer you refuse
+        // parameter 2: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file VillagerData.json
+        //              if free try to randomize the id
+        //              if no insert in "Villager_Changeing_Reactions" use gender specific dialogue
+        public static string ReplaceGetChangeDialogRefuse(string str, Container underwear)
+        {
+            string token = StringConstants.Token.GetChangeRefuseDialog;
+
+            if (!str.Contains(token)) return str;
+
+            string npcName = "";
+            int id = -1;
+
+            string[] parameters;
+
+            str = GetParameters(str, token, out parameters);
+
+            if (parameters.Length >= 1)
+            {
+                npcName = parameters[0];
+
+                if (parameters.Length >= 2)
+                {
+                    if (!int.TryParse(parameters[1], out id))
+                    {
+                        id = -1;
+                        throw new Exception("Parameter for id is not an int for Token " + token);
+                    }
+                }
+
+                if (!NpcHelper.IsValidNpc(npcName)) throw new Exception($"Parameter for npcName is not an valid npc: {npcName}");
+            }
+            else throw new Exception($"Wrong Count of Parameters set for Token {token}");
+
+            string acceptChangingByNpc = GetVilagerChangingDialogByKey(npcName, "refuse", id);
+
+            acceptChangingByNpc = tryGetI18nText(acceptChangingByNpc);
+
+            acceptChangingByNpc = ReplaceAndOr(acceptChangingByNpc, underwear.wetness > 0, underwear.messiness > 0);
+
+            acceptChangingByNpc = "#$b#" + acceptChangingByNpc;
+
+            str = str.Replace(token, acceptChangingByNpc);
+
+            return str;
+        }
+
+        public static string GetVilagerChangingDialogByKey(string npcName, string key = "change", int id = -1)
+        {
+            Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
+
+            changingDialoges = villagerData.Villager_Changeing_Dialoges[npcName]?[key];
+
+            if(changingDialoges != null)
+            {
+                if (id < 1)
+                {
+                    int rndId = 0;
+
+                    rndId = Regression.rnd.Next(1, changingDialoges.Count);
+                    return changingDialoges[rndId];
+                }
+                else
+                {
+                    string str = "";
+
+                    if (!changingDialoges.TryGetValue(id, out str))
+                        throw new Exception($"Id {id} not found in Villager_Changeing_Dialoge for {npcName} and key {key}");
+
+                    return str;
+                }
+            }
+            else
+            {
+                bool isFemale = NpcHelper.GetNpcGender(npcName) == Gender.Female ? true : false;
+
+                return GetGenderChangingDialog(isFemale, key);
+            }
+        }
+
+        public static string GetGenderChangingDialog(bool isFemale, string key = "change")
+        {
+            Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
+
+            int rndId = 0;
+
+            if (!isFemale)
+            {
+                string keyGender = "adult_male";
+
+                changingDialoges = villagerData.Villager_Changeing_Dialoges[keyGender]?[key];
+
+                if (changingDialoges != null)
+                {
+                    rndId = Regression.rnd.Next(1, changingDialoges.Count);
+                    return changingDialoges[rndId];
+                }
+                else throw new Exception($"Key {keyGender} or Key {key} not found in Villager_Changeing_Dialoges");
+            }
+            else
+            {
+                string keyGender = "adult_female";
+
+                changingDialoges = villagerData.Villager_Changeing_Dialoges[keyGender]?[key];
+
+                if (changingDialoges != null)
+                {
+                    rndId = Regression.rnd.Next(1, changingDialoges.Count);
+                    return changingDialoges[rndId];
+                }
+                else throw new Exception($"Key {keyGender} or Key {key} not found in Villager_Changeing_Dialoges");
+            }
         }
 
         public static string GetParameters(string str,string token, out string[] parameters)

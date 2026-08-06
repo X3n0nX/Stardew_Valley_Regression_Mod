@@ -45,6 +45,22 @@ namespace RegressionMod
             return newList;
         }
 
+        public static bool IsValidNpc(string npcName)
+        {
+            List<NPC> npcs = Utility.getAllCharacters();
+
+            npcName = npcName.FirstCharToUpper();
+
+            foreach (NPC npc in npcs)
+            {
+                if (npc is Horse || npc is Pet) continue;
+
+                if (npc.Name == npcName) return true;
+            }
+
+            return false;
+        }
+
         public static Gender GetNpcGender(string npcName)
         {
             List<NPC> npcs = Utility.getAllCharacters();

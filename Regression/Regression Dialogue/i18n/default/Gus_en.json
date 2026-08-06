@@ -8,7 +8,5 @@
 
   // Diaperchange from Gus
 
-  "Gus.Change_Diaper.Accept": "",
-  "Gus.Change_Diaper.Refuse": "",
   "Gus.Change_Diaper.Followup": "..."
 }

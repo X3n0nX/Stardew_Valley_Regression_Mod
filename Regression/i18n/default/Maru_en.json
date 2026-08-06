@@ -54,15 +54,23 @@
 
   "Villager_Reactions.Maru.Change.Dirty_Offer.1": "You will catch a cold, or worse. Let's get the <soggy&dirty> cloth off!$1",
 
-  // Maru friendship very nice
+  // You Pee/Poop in your underwear near Maru friendship very nice
 
   "Villager_Reactions.Maru.Soiled.Verynice.1": "Again? Sure, you know the drill...$l",
 
-  // Maru friendship nice
+  // You Pee/Poop in your underwear near Maru friendship nice
 
   "Villager_Reactions.Maru.Soiled.Nice.1": "Lets be professional about this. Lie down on the bed for me please?$0",
 
-  // Maru friendship mean
+  // You Pee/Poop in your underwear near Maru friendship mean
 
-  "Villager_Reactions.Maru.Soiled.Mean.1": "Incontinence i guess?$4"
+  "Villager_Reactions.Maru.Soiled.Mean.1": "Incontinence i guess?$4",
+
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Maru.Change.Player.Accept.1": "Placeholder accept changed by maru.",
+
+  "Villager_Dialoges.Maru.Change.Player.Refuse.1": "Placeholder refuse changed by maru."
 }

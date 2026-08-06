@@ -23,7 +23,5 @@
   // Diaperchange from Maru
   //########################################
 
-  "Maru.Diaper_Change.Accept": "Placeholder accept changed by maru",
-  "Maru.Diaper_Change.Refuse": "Placeholder refuse changed by maru.",
   "Maru.Diaper_Change.Followup": "..."
 }

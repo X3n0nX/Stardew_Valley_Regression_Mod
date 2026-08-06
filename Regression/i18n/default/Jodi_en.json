@@ -14,7 +14,7 @@
   "Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_No": "No leaks! $3",
   "Villager_Reactions.Sam.Change.Dirty_Offer.1.Answer_Yes": "Aww, come here @, no crying! This things happen! We can make one of Vincents diapers fit and there are some pants from sam that you could borrow!$1",
 
-  // Jodi friendship very nice
+  // You Pee/Poop in your underwear near Jodi friendship very nice
 
   "Villager_Reactions.Jodi.Soiled.Verynice.1": "%Jodi leans down to put a comforting hand on your back.#$b#You can tell me if you had a little accident $FARMERNAME$. It's nothing to be ashamed of.",
   "Villager_Reactions.Jodi.Soiled.Verynice.2": "You don't need to rush potty training if you're not ready yet.#$b#You need help?",
@@ -22,12 +22,12 @@
   "Villager_Reactions.Jodi.Soiled.Verynice.4": "Oh goodness!$1",
   "Villager_Reactions.Jodi.Soiled.Verynice.5": "Awww, you're so cute when you're embarrassed!$1#$b#Comeon, lets get you in some new Diapers!",
 
-  // Jodi friendship nice
+  // You Pee/Poop in your underwear near Jodi friendship nice
 
   "Villager_Reactions.Jodi.Soiled.Nice.1": "$FARMERNAME$, I  think you might need to go change.",
   "Villager_Reactions.Jodi.Soiled.Nice.2": "You poor thing! Did you just <wet&mess> yourself?",
 
-  // Jodi friendship mean
+  // You Pee/Poop in your underwear near Jodi friendship mean
 
   "Villager_Reactions.Jodi.Soiled.Mean.1": "You might need to tap into those supplies I left you$4",
 
@@ -84,6 +84,12 @@
   // ########################################
   // Villager Changeing Dialoges
   // ########################################
+
+  "Villager_Dialoges.Jodi.Change.Player.Accept.1": "Comeon, lets get you in a fresh diaper. Just a second... see it stretches! There! Right as rain!$l#$b#%Jodi changes you from $INSPECT_UNDERWEAR_NAME$ into one of Vincents baby print diapers",
+
+  "Villager_Dialoges.Jodi.Change.Player.Accept.Debuff.1": "and some of Sams old pants",
+
+  "Villager_Dialoges.Jodi.Change.Player.Refuse.1": "Well, if you are like Vincent and want to stay in your filthy diapers, suit yourself! Just don't leak on the couch, you hear?",
 
   "Villager_Dialoges.Jodi.Change.Player.1": "%Jodi smiles warmly at you while she lies you down and cleans you up. She tapes you up nice and snug in a fresh diaper and lifts you to your feet, giving you tight hug.#$b#There we go, all better.$1",
   "Villager_Dialoges.Jodi.Change.Player.2": "%Jodi lies you down for a change, tickling your tummy between each wipe. She giggles along with every little giggle you make.#$b#All done! Go on and play.$1",

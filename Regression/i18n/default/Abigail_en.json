@@ -55,7 +55,7 @@
   "Villager_Reactions.Abigail.Change.Dirty_Offer.No": "Uh, ok! $1",
   "Villager_Reactions.Abigail.Change.Dirty_Offer.Yes": "You kind of dirty @. I can give a diaper if you need one. Where i got them from? Oh, ah, haha...$l",
 
-  // Abigail friendship very nice
+  // You Pee/Poop in your underwear near Abigail friendship very nice
 
   "Villager_Reactions.Abigail.Soiled.Verynice.1": "Want a change? #$b#I could change you, if you want?$h",
   "Villager_Reactions.Abigail.Soiled.Verynice.2": "Sometimes I just put on a diaper and sit around playing games all day. #$b#Maybe we could do that together sometime.$h",
@@ -63,7 +63,7 @@
   "Villager_Reactions.Abigail.Soiled.Verynice.4": "Let me help with that! Lay down for me.$h",
   "Villager_Reactions.Abigail.Soiled.Verynice.5": "Ewww, I think.... I think I pooped myself.$s #$b#...$s #$b#Could you... maybe change me?",
 
-  // Abigail friendship nice
+  // You Pee/Poop in your underwear near Abigail friendship nice
 
   "Villager_Reactions.Abigail.Soiled.Nice.1": "$lWas that me? ...Oh! Nothing! Haha!",
   "Villager_Reactions.Abigail.Soiled.Nice.2": "So, do you have a medical condition or something?",
@@ -72,7 +72,7 @@
   "Villager_Reactions.Abigail.Soiled.Nice.5": "Is changing too much of a chore? Sorry, rude question!",
   "Villager_Reactions.Abigail.Soiled.Nice.6": "$l*Checks self quickly* Oh! Were you watching?!",
 
-  // Abigail friendship mean
+  // You Pee/Poop in your underwear near Abigail friendship mean
 
   "Villager_Reactions.Abigail.Soiled.Mean.1": "I'm just..nevermind.",
   "Villager_Reactions.Abigail.Soiled.Mean.2": "This is pretty awkward.",
@@ -83,6 +83,10 @@
   // ########################################
   // Villager Changeing Dialoges
   // ########################################
+
+  "Villager_Dialoges.Abigail.Change.Player.Accept.1": "Just lie down for me!$l#$b#%Abigail changes your diaper, using way to much baby powder.",
+
+  "Villager_Dialoges.Abigail.Change.Player.Refuse.1": "I was just asking.",
 
   "Villager_Dialoges.Abigail.Change.Player.1": "%She gives you a condescending little head-pat when she's done.#$b#Good <boy/girl>.",
   "Villager_Dialoges.Abigail.Change.Player.2": "%Abigail tapes you up in a soft, puffy fresh diaper.",

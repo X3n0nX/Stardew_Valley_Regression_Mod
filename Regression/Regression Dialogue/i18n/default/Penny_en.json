@@ -164,7 +164,5 @@
   // Diaperchange from Penny
   //########################################
 
-  "Penny.Diaper_Change.Accept": "Lets get that butt cleaned up!$l#$b#%Penny changes your diaper and smiles at you.",
-  "Penny.Diaper_Change.Refuse": "Do you want to play the big kid today? I can see it sagging from here!",
   "Penny.Diaper_Change.Followup": "..."
 }

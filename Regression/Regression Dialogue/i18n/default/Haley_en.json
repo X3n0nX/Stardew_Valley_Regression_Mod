@@ -20,7 +20,5 @@
   // Diaperchange from Haley
   //########################################
 
-  "Haley.Diaper_Change.Accept": "%Haley changes you with a bit of an uncomfortable look on her face, but despite her discomfort she actually does a good job and admires her handy work#$b#There, try to make it to the potty next time, okay dork? As cute as your butt is I still think changing is a little icky...$1",
-  "Haley.Diaper_Change.Refuse": "%Haley rolls her eyes at you and scoffs.#$b#Really? You actually want to stay in your <wet&messy> diaper? Well don't come crying to me when you get a rash$3",
   "Haley.Diaper_Change.Followup": "..."
 }

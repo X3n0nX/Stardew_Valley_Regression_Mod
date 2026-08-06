@@ -89,7 +89,7 @@
   "Villager_Reactions.Jas.Change.General_Offer.Npc.1.Pre": "%You wonder if Jas might need a change. You quickly check and find $NPC_INSPECT_UNDERWEAR_NAME$.",
   "Villager_Reactions.Jas.Change.General_Offer.Npc.1.Underwear_ok": "Wha? No, 'm a big girl now! See? Clean!$3",
 
-  // Jas friendship very nice
+  // You Pee/Poop in your underwear near Jas friendship very nice
 
   "Villager_Reactions.Jas.Soiled.Verynice.1": "Don't cry, it's okay for little <boy/girl>s to have accidents sometimes.",
   "Villager_Reactions.Jas.Soiled.Verynice.2": "Oh no, did you have an accident? That's okay, you can try again next time.",
@@ -98,13 +98,13 @@
   "Villager_Reactions.Jas.Soiled.Verynice.5": "I can see you waddling!$4",
   "Villager_Reactions.Jas.Soiled.Verynice.6": "Did you have an accident? It's okay, once you're all clean you'll feel all better.",
 
-  // Jas friendship nice
+  // You Pee/Poop in your underwear near Jas friendship nice
 
   "Villager_Reactions.Jas.Soiled.Nice.1": "*Giggles* Uh oh!$1",
   "Villager_Reactions.Jas.Soiled.Nice.2": "You're supposed to do that on the potty you know.$4",
   "Villager_Reactions.Jas.Soiled.Nice.3": "Do you need me to get Aunt Marnie? She always helps me when I have an accident.$3",
 
-  // Jas friendship mean
+  // You Pee/Poop in your underwear near Jas friendship mean
 
   "Villager_Reactions.Jas.Soiled.Mean.1": "Oh... gross...$3",
   "Villager_Reactions.Jas.Soiled.Mean.2": "Ewww$3",

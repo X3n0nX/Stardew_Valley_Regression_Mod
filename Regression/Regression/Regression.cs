@@ -658,8 +658,9 @@ namespace RegressionMod
                         npcStatement = npcStatement.Insert(i, new string('#', amount * 2));
                     }
 
+                    npcStatement = "$GETTING_CHANGED_DIALOG$ \"jodi\"";
+
                     npc.npc.setNewDialogue(new Dialogue(npc.npc, generalEventToken, npcStatement), true, true);
-                    var dia = npc.npc.CurrentDialogue;
                 }
             }
         }

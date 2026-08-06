@@ -58,7 +58,7 @@
 
   "Villager_Reactions.Penny.Change.Dirty_Offer.1": "Oh you poor little <boy/girl>! Didn't someone not remember the potty again? Lets get you out of your wet cloth and in a warm diaper!$1",
 
-  // Penny friendship very nice
+  // You Pee/Poop in your underwear near Penny friendship very nice
 
   "Villager_Reactions.Penny.Soiled.Verynice.1": "$FARMERNAME$! You're <wetting&messing> your $UNDERWEAR_NAME$!$5#$b#Why didn't you tell me you needed the potty?$3#$b#*Sigh* It's okay, we can try again next time.",
   "Villager_Reactions.Penny.Soiled.Verynice.2": "%Penny watches you with an eyebrow raised.#$b#Is there something you want to tell me @?$3",
@@ -69,17 +69,25 @@
   "Villager_Reactions.Penny.Soiled.Verynice.7": "I saw that.$3#$b#$y 'Was that REALLY an accident?_Uh huh, I tried to hold it._Oh $FARMERNAME$, I know it's hard for you. I'm very proud of you for trying._I didn't wanna use the potty._$FARMERNAME$, I know it's hard for you, but you still have to try, okay?$3'",
   "Villager_Reactions.Penny.Soiled.Verynice.8": "We're supposed to do that on the potty $FARMERNAME$. What happened?$3#$b#It's okay, I'm not angry. You're trying really hard. It's okay if you still have accidents sometimes.#$b#<Boys/Girls> are easy to clean!$1",
 
-  // Penny friendship nice
+  // You Pee/Poop in your underwear near Penny friendship nice
 
   "Villager_Reactions.Penny.Soiled.Nice.1": "You might wanna change. Just incase someone else says something.",
   "Villager_Reactions.Penny.Soiled.Nice.2": "A-are you okay?$3",
   "Villager_Reactions.Penny.Soiled.Nice.3": "Do you need help making it to the potty?",
   "Villager_Reactions.Penny.Soiled.Nice.4": "I'm sorry. That can't feel good.$3",
 
-  // Penny friendship mean
+  // You Pee/Poop in your underwear near Penny friendship mean
 
   "Villager_Reactions.Penny.Soiled.Mean.1": "...$5",
   "Villager_Reactions.Penny.Soiled.Mean.2": "Uhmm...$2",
   "Villager_Reactions.Penny.Soiled.Mean.3": "...Oh$2",
-  "Villager_Reactions.Penny.Soiled.Mean.4": "D-did you...|You too?$5"
+  "Villager_Reactions.Penny.Soiled.Mean.4": "D-did you...|You too?$5",
+
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Penny.Change.Player.Accept.1": "Lets get that butt cleaned up!$l#$b#%Penny changes your diaper and smiles at you.",
+
+  "Villager_Dialoges.Penny.Change.Player.Refuse.1": "Do you want to play the big kid today? I can see it sagging from here!"
 }

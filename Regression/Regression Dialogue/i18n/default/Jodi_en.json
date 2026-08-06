@@ -58,8 +58,5 @@
 
   // Diaperchange from Jodi
 
-  "Jodi.Change_Diaper.Accept": "Comeon, lets get you in a fresh diaper. Just a second... see it stretches! There! Right as rain!$l#$b#%Jodi changes you from $INSPECT_UNDERWEAR_NAME$ into one of Vincents baby print diapers",
-  "Jodi.Change_Diaper.Accept_Debuff": "and some of Sams old pants",
-  "Jodi.Change_Diaper.Refuse": "Well, if you are like Vincent and want to stay in your filthy diapers, suit yourself! Just don't leak on the couch, you hear?",
   "Jodi.Change_Diaper.Followup": "..."
 }

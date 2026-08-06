@@ -57,7 +57,7 @@
   "Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Pre": "%You wonder if Vincent might need a change. You quickly check and find $NPC_INSPECT_UNDERWEAR_NAME$.",
   "Villager_Reactions.Vincent.Change.General_Offer.Npc.1.Underwear_ok": "No changies! Wanna play more!$3",
 
-  // Vincent friendship very nice
+  // You Pee/Poop in your underwear near Vincent friendship very nice
 
   "Villager_Reactions.Vincent.Soiled.Verynice.1": "Mommy told me big kids are supposed to use the potty. #$b#I don't wanna be a big kid either!$1",
   "Villager_Reactions.Vincent.Soiled.Verynice.2": "%Vincent watches you <wet&mess> yourself and giggles.#$b#Good one!$1",
@@ -66,7 +66,7 @@
   "Villager_Reactions.Vincent.Soiled.Verynice.5": "If you want I could ask my Mommy to change you.#$b#No?#$b#That's okay, I like being <wet&messy> too!$1",
   "Villager_Reactions.Vincent.Soiled.Verynice.6": "$FARMERNAME$'s <wet&messy> and I'm still dry!$1#$b#...#$b#Wait, am i?$2",
 
-  // Vincent friendship nice
+  // You Pee/Poop in your underwear near Vincent friendship nice
 
   "Villager_Reactions.Vincent.Soiled.Nice.1": "Don't cry, Mommy says it's okay to have accidents sometimes.",
   "Villager_Reactions.Vincent.Soiled.Nice.2": "Don't worry $FARMERNAME$, I still do that too!",
@@ -74,7 +74,7 @@
   "Villager_Reactions.Vincent.Soiled.Nice.4": "It smells like you need a diaper change!",
   "Villager_Reactions.Vincent.Soiled.Nice.5": "I kney it! It does happen to bigs too!",
 
-  // Vincent friendship mean
+  // You Pee/Poop in your underwear near Vincent friendship mean
 
   "Villager_Reactions.Vincent.Soiled.Mean.1": "%Vincent saw what happened and snickers at you.",
   "Villager_Reactions.Vincent.Soiled.Mean.2": "Was that an accident?",

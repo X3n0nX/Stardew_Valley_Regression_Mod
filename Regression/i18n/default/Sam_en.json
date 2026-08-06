@@ -61,7 +61,7 @@
 
   "Villager_Reactions.Sam.Change.Dirty_Offer.1": "Oh man. Can't let you catch a cold, mum would kill me.$9#$b#Where are vincents diapers again?$1",
 
-  // Sam friendship very nice
+  // You Pee/Poop in your underwear near Sam friendship very nice
 
   "Villager_Reactions.Sam.Soiled.Verynice.1": "Oh man, that was pretty hard to miss!$1|Man, you're just like Vincent.$1#$GETTING_CHANGED_DIALOG$",
   "Villager_Reactions.Sam.Soiled.Verynice.2": "Are you okay buddy?#$b#Do you want some help with that? $GETTING_CHANGED_DIALOG$",
@@ -75,14 +75,14 @@
   "Villager_Reactions.Sam.Soiled.Verynice.10": "Man, it looks like you really need diapers, don't you.",
   "Villager_Reactions.Sam.Soiled.Verynice.11": "Oh wow, you really <wet&messed> yourself! Can I feel it?#$b#$y 'Yes._*Sam blushes as he presses his hand into your squishy diaper*_No thank you._Okay, I won't.'",
 
-  // Sam friendship nice
+  // You Pee/Poop in your underwear near Sam friendship nice
 
   "Villager_Reactions.Sam.Soiled.Nice.1": "You might wanna change. Just incase someone else says something.$7",
   "Villager_Reactions.Sam.Soiled.Nice.2": "A-are you okay?$8",
   "Villager_Reactions.Sam.Soiled.Nice.3": "%Sam just blushes a as you <wet&mess> yourself. You take note of how closely he watches the whole scene.",
   "Villager_Reactions.Sam.Soiled.Nice.4": "Oh man, I'm sorry. That can't feel good.",
 
-  // Sam friendship mean
+  // You Pee/Poop in your underwear near Sam friendship mean
 
   "Villager_Reactions.Sam.Soiled.Mean.1": "I'm just..nevermind.$5",
   "Villager_Reactions.Sam.Soiled.Mean.2": "This is pretty awkward.$2",
@@ -90,6 +90,14 @@
   "Villager_Reactions.Sam.Soiled.Mean.4": "You might want to take care of that...",
   "Villager_Reactions.Sam.Soiled.Mean.5.Child_Yes": "Great, more potty issues to be witness to. Thanks.$5",
   "Villager_Reactions.Sam.Soiled.Mean.5.Child_No": "You might want to take care of that...",
+
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Sam.Change.Player.Accept.1": "Ah, hold still. Don't worry, i have to change Vincent all the time when i babysit!$l#$b#%Sam changes your diaper, like he does for Vincent.",
+
+  "Villager_Dialoges.Sam.Change.Player.Refuse.1": "Do you want to play the big kid today? I can see it sagging from here!",
 
   // ########################################
   // Villager Gift Dialoges

@@ -7,7 +7,7 @@
 
   "Villager_Reactions.Gus.Change.Dirty_Offer.1": "Oh dear! Had trouble getting there again? As promissed, i have some reserves lying around, just in case!$1",
 
-  // Gus friendship very nice
+  // You Pee/Poop in your underwear near Gus friendship very nice
 
   "Villager_Reactions.Gus.Soiled.Verynice.1": "Couldn�t quite make it? That�s okay. Ain�t the worst mess I�ve seen �round here, trust me.$1",
   "Villager_Reactions.Gus.Soiled.Verynice.2": "Looks like that was a relief, hah!$1",
@@ -19,15 +19,23 @@
   "Villager_Reactions.Gus.Soiled.Verynice.8": "You makin� your own fertilizer there $FARMERNAME$?",
   "Villager_Reactions.Gus.Soiled.Verynice.9": "You got any clean diapers? I always keep some spare in back for ya, just in case, pal.$1#$b#Well, you and anyone else who happens to need one.",
 
-  // Gus friendship nice
+  // You Pee/Poop in your underwear near Gus friendship nice
 
   "Villager_Reactions.Gus.Soiled.Nice.1": "You mind takin' care of that please?#$b#Thanks$1",
   "Villager_Reactions.Gus.Soiled.Nice.2": "When you gotta go I guess!$1",
   "Villager_Reactions.Gus.Soiled.Nice.3": "Couldn�t quite make it? That's alright, go get cleaned up. The Saloon will still be here when you get back.",
   "Villager_Reactions.Gus.Soiled.Nice.4": "I hope that smell�s a dirty diaper and not some rotting food in back�",
 
-  // Gus friendship mean
+  // You Pee/Poop in your underwear near Gus friendship mean
 
   "Villager_Reactions.Gus.Soiled.Mean.1": "You mind takin' care of that before it bothers anyone else buddy?$2",
-  "Villager_Reactions.Gus.Soiled.Mean.2": "I have enough to clean up.$3"
+  "Villager_Reactions.Gus.Soiled.Mean.2": "I have enough to clean up.$3",
+
+  // ########################################
+  // Villager Changeing Dialoges
+  // ########################################
+
+  "Villager_Dialoges.Gus.Change.Player.Accept.1": "Placeholder accept changed by gus.",
+
+  "Villager_Dialoges.Gus.Change.Player.Refuse.1": "Placeholder refuse changed by gus."
 }

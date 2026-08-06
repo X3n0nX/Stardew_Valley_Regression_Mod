@@ -61,8 +61,8 @@
         "Show_Diaper": "{{i18n:Jodi.Dialogue.Show_Diaper}}",
         "Show_Followup": "#$p jodi_show_nice#{{i18n:Jodi.Dialogue.Show_Followup}}",
 
-        "Diaper_Change_Accept": "{{i18n:Jodi.Change_Diaper.Accept}}[OnDebuffed: {{i18n:Jodi.Change_Diaper.Accept_Debuff}}]#$action DIAPER_CHANGE \"jodi\" \"baby print diaper\" \"sams old pants\"#$h",
-        "Diaper_Change_Refuse": "{{i18n:Jodi.Change_Diaper.Refuse}}",
+        "Diaper_Change_Accept": "$GET_CHANGE_ACCEPT_DIALOG$ \"jodi\"",
+        "Diaper_Change_Refuse": "$GET_CHANGE_REFUSE_DIALOG$ \"jodi\"",
         "Diaper_Change_Followup": "{{i18n:Jodi.Change_Diaper.Followup}}"
       }
 		}

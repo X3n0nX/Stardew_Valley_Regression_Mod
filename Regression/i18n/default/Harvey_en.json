@@ -3,7 +3,7 @@
   // Villager Reactions
   //#########################################
 
-  // Harvey friendship very nice
+  // You Pee/Poop in your underwear near Harvey friendship very nice
 
   "Villager_Reactions.Harvey.Soiled.Verynice.1": "%Harvey raises an eyebrow at you before silently moving to check your $UNDERWEAR_NAME$.#$b#It is my expert medical opinion that this diaper is <wet&messy>.$3#$b#%He gives your bottom a gentle pat.",
   "Villager_Reactions.Harvey.Soiled.Verynice.2": "%Harvey chuckles and pats your bottom#$b#Goodness.$1",
@@ -14,7 +14,7 @@
   "Villager_Reactions.Harvey.Soiled.Verynice.7": "%Harvey puts a firm hand on your shoulder#$b#Do you want to tell me what just happened or do you want me to check?",
   "Villager_Reactions.Harvey.Soiled.Verynice.8": "Either your symptoms are getting worse or you're enjoying yourself.$1#$b#$y 'Well, which is it?_Y-yes..._Awwww. Thank you for telling the truth little <boy/girl>._No!_Well then. I guess that means you're going to need an exam soon, aren't you.$3'",
 
-  // Harvey friendship nice
+  // You Pee/Poop in your underwear near Harvey friendship nice
 
   "Villager_Reactions.Harvey.Soiled.Nice.1": "Hey, you might have something you need to take care of.$4",
   "Villager_Reactions.Harvey.Soiled.Nice.2": "Are you feeling okay? Did you eat something that didn't agree with you?$8",
@@ -22,7 +22,7 @@
   "Villager_Reactions.Harvey.Soiled.Nice.4": "%Harvey doesn't speak up, but he gives you a little wink to let you know he saw what happened.",
   "Villager_Reactions.Harvey.Soiled.Nice.5": "I have supplies from Joja in my office...#$b#You might be better off going to Pierre's.$2",
 
-  // Harvey friendship mean
+  // You Pee/Poop in your underwear near Harvey friendship mean
 
   "Villager_Reactions.Harvey.Soiled.Mean.1": "Oh. That's certainly a symptom...$8",
   "Villager_Reactions.Harvey.Soiled.Mean.2": "My office is supposed to be sterile...$5",

@@ -54,7 +54,7 @@
 
   "Villager_Reactions.Leah.Change.Dirty_Offer.1": "Insert Text Offer get dirty change Leah",
 
-  // Leah friendship very nice
+  // You Pee/Poop in your underwear near Leah friendship very nice
 
   "Villager_Reactions.Leah.Soiled.Verynice.1": "%Leah giggles childishly at the noisy <hissing&crackle> in your $UNDERWEAR_NAME$.",
   "Villager_Reactions.Leah.Soiled.Verynice.2": "It's OK, $FARMERNAME$! I got distracted earlier and did that too.$1",
@@ -67,7 +67,7 @@
   "Villager_Reactions.Leah.Soiled.Verynice.9": "Ah! Hang on, can you hold that face, @?$7#$b#...Oh, nevermind, there it went.$2",
   "Villager_Reactions.Leah.Soiled.Verynice.10": "Hm. Cute.$1",
 
-  // Leah friendship nice
+  // You Pee/Poop in your underwear near Leah friendship nice
 
   "Villager_Reactions.Leah.Soiled.Nice.1": "Uh-oh! $FARMERNAME$! You're <peeing&pooping> in your big <boy/girl> $PANTS_NAME$ again! *giggle*$1",
   "Villager_Reactions.Leah.Soiled.Nice.2": "Heehee, you had an accident, $FARMERNAME$!#$b#I don't <mind&like> making <soggies&stinkies> in my diaper, 'cuz <I can just keep drawing! *giggle*$1&it means I have to stop. Especially if I gotta take a bath...$2>",
@@ -77,7 +77,7 @@
   "Villager_Reactions.Leah.Soiled.Nice.6": "Uh... @? Y-You're... supposed to go to the bathroom for that... I think...",
   "Villager_Reactions.Leah.Soiled.Nice.7": "%You notice Leah shyly sneaking glances as you go potty in your $UNDERWEAR_NAME$.#$b#%...She quickly buries her face into her sketchbook when you wave at her.",
 
-  // Leah friendship mean
+  // You Pee/Poop in your underwear near Leah friendship mean
 
   "Villager_Reactions.Leah.Soiled.Mean.1": "Uh... @..?$6",
   "Villager_Reactions.Leah.Soiled.Mean.2": "...Did you just...$6",
@@ -157,17 +157,21 @@
 
   "Villager_Reactions.Leah.Ground.1": "*cough* *cough* Ugh... Don't do that here, please!$6",
   "Villager_Reactions.Leah.Ground.2": "H-Hey! Um! You're... supposed to, um...$5#$b#...<*cough*&*gag*> N-Nevermind... too late...$2",
-  "Villager_Reactions.Leah.Ground.3": "Eww, thats yucky, $NICKNAME$!$2",
-  "Villager_Reactions.Leah.Ground.4": "%Leah looks a little confused as you make a big <puddle&pile> on the ground.#$b#Umm, why'd you do that, $NICKNAME$? ...Don't you usually go in your $PANTS_NAME$ when you can't make it?$7",
-  "Villager_Reactions.Leah.Ground.5": "%Leah crosses her arms and pouts.#$b#$NICKNAME$, come onnnn! You're supposed to do that on the big <boy/girl> potty!! What would your mommy say about you going <tinkle&dookie> on the ground?$5",
+  "Villager_Reactions.Leah.Ground.3": "Eww, thats yucky, $FARMERNAME$!$2",
+  "Villager_Reactions.Leah.Ground.4": "%Leah looks a little confused as you make a big <puddle&pile> on the ground.#$b#Umm, why'd you do that, $FARMERNAME$? ...Don't you usually go in your $PANTS_NAME$ when you can't make it?$7",
+  "Villager_Reactions.Leah.Ground.5": "%Leah crosses her arms and pouts.#$b#$FARMERNAME$, come onnnn! You're supposed to do that on the big <boy/girl> potty!! What would your mommy say about you going <tinkle&dookie> on the ground?$5",
 
   "Villager_Reactions.Leah.Ground_Attempt.1": "H-Hey! Stop!$5#$b#...o-oh, gosh, I didn't mean to yell, sorry...$6",
   "Villager_Reactions.Leah.Ground_Attempt.2": "%Leah looks a little uncomfortable, but doesn't say anything.",
-  "Villager_Reactions.Leah.Ground_Attempt.3": "Um... Why did you take your pants off, $NICKNAME$? Can't you find a potty in time?$7#$b#It doesn't look like you're going yet, so... I think you probably can!$1",
+  "Villager_Reactions.Leah.Ground_Attempt.3": "Um... Why did you take your pants off, $FARMERNAME$? Can't you find a potty in time?$7#$b#It doesn't look like you're going yet, so... I think you probably can!$1",
 
   // ########################################
   // Villager Changeing Dialoges
   // ########################################
+
+  "Villager_Dialoges.Leah.Change.Player.Accept.1": "Placeholder accept changed by leah.",
+
+  "Villager_Dialoges.Leah.Change.Player.Refuse.1": "Placeholder refuse changed by leah.",
 
   "Villager_Dialoges.Leah.Change.Player.1": "%Leah quickly wipes your <front&butt> down with a wet wipe, and puts you into a fresh $NEW_UNDERWEAR_NAME$ with a heaping helping of baby powder.#$b#%When you're all wrapped up, she gives it a playful pat, making a big cloud puff out.#$b#*giggle* All done!!$1",
   "Villager_Dialoges.Leah.Change.Player.2": "%Leah lies you down and takes your soiled diaper off, taping it into a ball before quickly swaddling you up into a nice, fresh $NEW_UNDERWEAR_NAME$.#$b#%Once she's all done, she takes the old one and gives it a final squish before enthusiastically slam-dunking it into the trash.#$b#That was fun!$1",
