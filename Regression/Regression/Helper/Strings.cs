@@ -14,6 +14,7 @@ namespace RegressionMod
     {
         private static ChangeData changeData = Regression.changeData;
         private static VillagerData villagerData = Regression.villagerData;
+        private static VilagerDialogData villagerDialogData = Regression.villagerDialogData;
         private static Farmer who = Game1.player;
 
         public static string DescribeUnderwear(Container u, string baseDescription = null, bool noPrefix = false)
@@ -619,7 +620,7 @@ namespace RegressionMod
         {
             Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
 
-            changingDialoges = villagerData.Villager_Changeing_Dialoges[npcName]?[key];
+            changingDialoges = villagerDialogData.Villager_Changeing_Dialoges[npcName]?[key];
 
             if(changingDialoges != null)
             {
@@ -658,7 +659,7 @@ namespace RegressionMod
             {
                 string keyGender = "adult_male";
 
-                changingDialoges = villagerData.Villager_Changeing_Dialoges[keyGender]?[key];
+                changingDialoges = villagerDialogData.Villager_Changeing_Dialoges[keyGender]?[key];
 
                 if (changingDialoges != null)
                 {
@@ -671,7 +672,7 @@ namespace RegressionMod
             {
                 string keyGender = "adult_female";
 
-                changingDialoges = villagerData.Villager_Changeing_Dialoges[keyGender]?[key];
+                changingDialoges = villagerDialogData.Villager_Changeing_Dialoges[keyGender]?[key];
 
                 if (changingDialoges != null)
                 {

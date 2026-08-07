@@ -82,12 +82,74 @@
   "Villager_Reactions.Penny.Soiled.Mean.2": "Uhmm...$2",
   "Villager_Reactions.Penny.Soiled.Mean.3": "...Oh$2",
   "Villager_Reactions.Penny.Soiled.Mean.4": "D-did you...|You too?$5",
+  "Villager_Reactions.Penny.Soiled.Mean.5": "Penny notices your very intentional \"accident\" and sighs deeply before saying with an unimpressed tone.#$b#And I though Vincent was bad about not going in his pants instead of the potty...$0",
+
+  // you check Penny's underwear
+
+  "Villager_Reactions.Penny.Check.Npc.Clean.1": "%Penny gives you a playfully smug look as you find her completely clean.#$b#Did you really think i'd need help with my pants like Vincent or Jas?$0#$b#Of course im clean, I am responsible, unlike someone else I know.$1#$b#%Penny smirks and winks at you with a knowing look.",
+  "Villager_Reactions.Penny.Check.Npc.Clean.2": "%Penny almost looks giddy as you find her clean and with a slightly childish voice she asks.#$b#I'm clean? I'm clean! See, i'm a big girl!$1#$b#%She then snaps back to reality and blushes furiously and clears her throat before whispering shyly.#$b#I mean, of course I am... Uhh... Please don't tell anyone else I acted like that...$0",
+
+  // you check Penny's underwear friendship very nice
+
+  "Villager_Reactions.Penny.Check.Npc.Verynice.1": "",
+
+  // you check Penny's underwear friendship nice
+
+
+  // you check Penny's underwear friendship mean
+
+  "Villager_Reactions.Penny.Check.Npc.Mean.1": "%You curiously wonder if Penny is also padded like her students and try to lift up the back of her skirt...#$b#Excuse me young lady/man, what do you think you're doing?!?$12#$b#%Penny swats your hand away and fixes her skirt as she scolds you like a little kid#$b#Thats very naughty $FARMERNAME$, I expect better from you.",
+  "Villager_Reactions.Penny.Check.Npc.Mean.2": "%You ask Penny if she might need a change. Penny blushes and shakes her head quickly.#$b#N-no! Of course not! What makes you think I'd need a change?!? I'm an adult perfectly capable of handling my own bathroom need.$12#$b#%Penny nervously tugs down her skirt after turning away from you.",
+
+  // General question change
+
+  "Villager_Reactions.Penny.Change.Player.General_Question.1": "%You quietly try to ask Penny for a change with an embarrassed look on your face.",
+  "Villager_Reactions.Penny.Change.Player.General_Question.2": "%You gently tug on Pennys arm and whisper to her to ask her for a change.",
+  "Villager_Reactions.Penny.Change.Player.General_Question.3": "%You waddle up to Penny and bashfully ask if she could help change you.",
+  "Villager_Reactions.Penny.Change.Player.General_Question.4": "%You waddle up to Penny with a bashful look and ask for help changing.",
+  "Villager_Reactions.Penny.Change.Player.General_Question.5": "%You slowly approach Penny to ask for a change, but before you can even speak a single word...",
+
+  // Penny check your underwear
+
+  // Penny check your underwear friendship very nice
+
+  "Villager_Reactions.Penny.Check.Player.Verynice.Clean.1": "%Penny gasps playfully and claps her hands together for you as she puts on her preschool teacher voice.#$b#Woah, i'm impressed! Good job $FARMERNAME$, I'm so proud of you! I'll make sure to put a gold star on your chart.$1",
+  "Villager_Reactions.Penny.Check.Player.Verynice.Clean.2": "%After finding your $UNDERWEAR_NAME$ clean, Penny ruffles your hair and pinches your cheek gently as she coos at you.#$b#Goodness, i'm almost shocked! I can't tell if i'm happy or disappointed you're not a 24/7 potty pants like Vincent. Less diapers to change for me....$0#$b#But that also means I can't treat you like a helpless and adorable baby... You know you make a cute baby, right?$1#$b#%Penny grins playfully at you before returning to what she was doing.",
+
+  "Villager_Reactions.Penny.Check.Player.Verynice.1": "%Penny smiles at you as she asks in her preschool teacher voice as if she was speaking to Vincent.#$b#Aww, $FARMERNAME$ Did you have an accident again? Come here, let Miss Penny see.#$b#Penny slips a hand down your $PANTS_NAME$ and gives you a thorough check and nods her head as she says with a smile.",
+
+  "Villager_Reactions.Penny.Check.Player.Verynice.Used.1": "%Penny thoroughly checks your <wet&messy> diaper and smiles a bit.#$b#Uhh ooooh, someone didn't quite make it, did <he/she>? Its okay, don't be sad, Miss Penny is here to make it aaall better for you, okay baby?$1#$b#Now how about you follow Miss Penny so she can get you into something clean, alright honey?$1",
+
+  // Penny check your underwear friendship nice
+
+  "Villager_Reactions.Penny.Check.Player.Nice.Clean.1": "%After finding your $UNDERWEAR_NAME$ clean, Penny ruffles your hair and pinches your cheek gently as she coos at you.#$b#Goodness, i'm almost shocked! I can't tell if i'm happy or disappointed you're not a 24/7 potty pants like Vincent. Less diapers to change for me....$0",
+
+  "Villager_Reactions.Penny.Check.Player.Nice.1": "%Penny sighs a bit before giggling and asking playfully.#$b#$FARMERNAME$ I thought you were a big <boy/girl>? I think you can take care of yourself honey",
+  "Villager_Reactions.Penny.Check.Player.Nice.2": "%Penny looks unsure for a moment, but a smile slowly curls on her lips as she gives you a warm look.#$b#Awww.... You... You really want my help? Do I really feel that comfortable and trust worthy to you?$0#$b#Well... I guess I wouldn't mind... I change so many diapers when teaching that its really not much different if I change you too...$1",
+
+  "Villager_Reactions.Penny.Check.Player.Nice.Used.1": "%Penny shakes her head slightly with a slight smile as she says.#$b#Yup, thats about what I expected. Come on honey, lets get you cleaned up.$0#$b#I don't want to make you sad, but i'll have to put a <rain&storm> cloud on your chart.$0",
+
+  // Penny check your underwear friendship mean
+
+  "Villager_Reactions.Penny.Check.Player.Mean.1": "%Penny looks you up and down for a moment as you request a change and shakes her head.#$b#Sorry $FARMERNAME$ I only help actual kids with their underwear. You look big enough to take care of yourself.$3",
+  "Villager_Reactions.Penny.Check.Player.Mean.2": "%Penny at first looks unimpressed and annoyed, but when she sees you're serious she gets a sympathetic look for a moment before coming to her senses and letting you down gently.#$b#$FARMERNAME$, no... I hardly even know you. If you really, REALLY need help changing, I think Harvey's Clinic would be better.$3",
+
+  // You Pee/Poop on the ground near Penny
+
+  "Villager_Reactions.Penny.Ground.1": "%Penny's eyes go wide and she gasps before yelling at you.#$b#Absolutely NOT young <man/woman>! We do NOT do that!$12#$b#If you can't make it to the potty like an adult, then you need diapers, simple as that!$0",
 
   // ########################################
   // Villager Changeing Dialoges
   // ########################################
 
   "Villager_Dialoges.Penny.Change.Player.Accept.1": "Lets get that butt cleaned up!$l#$b#%Penny changes your diaper and smiles at you.",
+  "Villager_Dialoges.Penny.Change.Player.Accept.2": "%Penny smiles warmly at you as you accept her offer and ruffles your hair as she says sweetly.#$b#Good choice honey, its best to let an adult help you when you make uh-ohs.$1#$b#Come on, lay down for Miss Penny.$1",
+  "Villager_Dialoges.Penny.Change.Player.Accept.3": "%Penny leads you to a quiet spot before pulling out an extra thick $NEW_UNDERWEAR_NAME$ and other changing supplies.#$b#Alright honey, I know these diapers might be a little thick... But I think you really need the extra protection.$1#$b#Don't worry, no one will even be able to notice$1#$b#",
 
-  "Villager_Dialoges.Penny.Change.Player.Refuse.1": "Do you want to play the big kid today? I can see it sagging from here!"
+  "Villager_Dialoges.Penny.Change.Player.Refuse.1": "Do you want to play the big kid today? I can see it sagging from here!",
+  "Villager_Dialoges.Penny.Change.Player.Refuse.2": "%Penny gives you a suspicious look for a moment before relenting.#$b#Okay... But if you won't let me change you, you need to change yourself.$0#$b#I'd hate to see my special <boy/girl> get a nasty rash$0",
+  "Villager_Dialoges.Penny.Change.Player.Refuse.3": "%Penny rolls her eyes, sighs, and shakes her head.#$b#Despite being older, you really do act more like Vicent... Mabye even younger.$0#$b#%Penny lets you go but holds onto your shoulder for a moment longer as she warns.#$b#But if you leak <mister/missy>, don't be surprised when I treat you like a fussy baby.$5",
+
+  "Villager_Dialoges.Penny.Change.Player.1": "%Penny goes about changing you swiftly with a practiced rhythmed as if shes done this 1000s of times. In no time at all, you're clean again.#$b#All done!$1",
+  "Villager_Dialoges.Penny.Change.Player.2": "%Penny goes about cleaning you up with gentle motions. Soon you are all clean again, smelling of baby powder, and have a noticeable waddle.#$b#%Penny can't help her heart flutter as she watches you waddle and pats your fresh crinkly bottom as she coos to you#$b#Such a cute little <boy/girl>, run along now and go play, come back when you need another change, okay?$1"
 }

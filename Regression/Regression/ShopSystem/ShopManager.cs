@@ -18,15 +18,20 @@ namespace RegressionMod
             if (Game1.currentLocation is SeedShop)
             {
                 addUnderwearsToSeedShop(shopMenu);
-                addToiletsToSeedShop(shopMenu);
+                
             }
             else if (Game1.currentLocation is JojaMart)
             {
                 addUnderwearsToJojaShop(shopMenu);
             }
-            else if (Game1.currentLocation.Name == "Hospital")
+            else if (Game1.currentLocation.Name == ShopConstants.HospitalShopName)
             {
                 addUnderwearsToHospital(shopMenu);
+            }
+            else if (Game1.currentLocation.Name == ShopConstants.RobinsShopName)
+            {
+                addToiletsToRobinsShop(shopMenu);
+
             }
         }
 
@@ -115,7 +120,7 @@ namespace RegressionMod
 
         #region Furniture
 
-        private static void addToiletsToSeedShop(ShopMenu shopMenu)
+        private static void addToiletsToRobinsShop(ShopMenu shopMenu)
         {
             foreach (var toiletVariant in HousingConstants.ToiletVariants)
             {

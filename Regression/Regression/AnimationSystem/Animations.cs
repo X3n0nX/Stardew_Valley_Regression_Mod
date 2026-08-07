@@ -39,7 +39,8 @@ namespace RegressionMod
         private static GeneralData generalData = Regression.generalData;
         private static PeePoopData peePoopData = Regression.peePoopData;
         private static StatesContinenceData statesContinenceData = Regression.statesContinenceData;
-        private static VillagerData villagerData = Regression.villagerData; 
+        private static VillagerData villagerData = Regression.villagerData;
+        private static VilagerDialogData villagerDialogData = Regression.villagerDialogData;
         public static Farmer player = Game1.player;
 
         public static float ZoomScale()
@@ -537,7 +538,7 @@ namespace RegressionMod
                 {
                     Dictionary<string, string[]> dictionary;
                     string[] strArray;
-                    if (villagerData.Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
+                    if (villagerDialogData.Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
                     {
                         stringList3 = new List<string>(); // We could remove this line again, but the general texts are more meant as fallback, they often don't fit well if custom texts are defined
                         stringList3.AddRange((IEnumerable<string>)strArray);

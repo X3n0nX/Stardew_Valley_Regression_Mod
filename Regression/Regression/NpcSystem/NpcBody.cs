@@ -532,7 +532,7 @@ namespace RegressionMod
         }
         public string[] PottyDialogs(IncidentType type, bool preStage, bool success)
         {
-            var dialogsStorage = Regression.villagerData.Villager_Potty_Dialogs;
+            var dialogsStorage = Regression.villagerDialogData.Villager_Potty_Dialogs;
             string stageStr = preStage ? "pre" : "post";
             string typeStr = type == IncidentType.PEE ? "pee" : "poop";
             string successStr = success ? "success" : "fail";
@@ -706,7 +706,7 @@ namespace RegressionMod
             {
                 Dictionary<string, string[]> dictionary;
                 string[] strArray;
-                if (Regression.villagerData.Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
+                if (Regression.villagerDialogData.Villager_Reactions.TryGetValue(key2, out dictionary) && dictionary.TryGetValue(responseKey, out strArray))
                 {
                     stringList3 = new List<string>(); // We could remove this line again, but the general texts are more meant as fallback, they often don't fit well if custom texts are defined
                     stringList3.AddRange((IEnumerable<string>)strArray);

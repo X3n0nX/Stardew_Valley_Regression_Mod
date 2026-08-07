@@ -33,6 +33,7 @@ namespace RegressionMod
         public static StatesContinenceData statesContinenceData;
         public static TypesData typesData;
         public static VillagerData villagerData;
+        public static VilagerDialogData villagerDialogData;
 
         public static Farmer who;
         //public static string dirtyEventToken = "dirtyEventToken";
@@ -58,6 +59,7 @@ namespace RegressionMod
             peePoopData = LoadData<PeePoopData>("Data/PeePoopData.json");
             typesData = LoadData<TypesData>("Data/TypesData.json");
             villagerData = LoadData<VillagerData>("Data/VillagerData.json");
+            villagerDialogData = LoadData<VilagerDialogData>("Data/VilagerDialogData.json");
 
             h.Events.GameLoop.Saving += new EventHandler<SavingEventArgs>(this.BeforeSave);
             h.Events.GameLoop.Saved += new EventHandler<SavedEventArgs>(this.AfterSave);
@@ -658,8 +660,6 @@ namespace RegressionMod
                         npcStatement = npcStatement.Insert(i, new string('#', amount * 2));
                     }
 
-                    npcStatement = "$GETTING_CHANGED_DIALOG$ \"jodi\"";
-
                     npc.npc.setNewDialogue(new Dialogue(npc.npc, generalEventToken, npcStatement), true, true);
                 }
             }
@@ -815,13 +815,13 @@ namespace RegressionMod
             if (e.Button == SButton.MouseLeft)
             {
                 //If we try to take or put down pants, this should only work if you are allowed to change them.
-                var men = Game1.activeClickableMenu as StardewValley.Menus.GameMenu;
+                var men = Game1.activeClickableMenu as GameMenu;
                 if (men != null)
                 {
-                    var inventory = men.pages[men.currentTab] as StardewValley.Menus.InventoryPage;
+                    var inventory = men.pages[men.currentTab] as InventoryPage;
                     if (inventory != null)
                     {
-                        var clothing = inventory.hoveredItem as StardewValley.Objects.Clothing;
+                        var clothing = inventory.hoveredItem as Clothing;
                         if (clothing != null)
                         {
                             if (clothing.clothesType.Value == Clothing.ClothesType.PANTS)
@@ -829,7 +829,7 @@ namespace RegressionMod
                                 if (body.HasWetOrMessyDebuff())
                                 {
                                     Game1.activeClickableMenu = null;
-                                    if (!Regression.config.PantsChangeRequiresHome || body.InPlaceWithPants())
+                                    if (!config.PantsChangeRequiresHome || body.InPlaceWithPants())
                                     {
                                         body.ResetPants();
                                         Dialoges.Write(changeData.Change_At_Home, body);
@@ -848,7 +848,11 @@ namespace RegressionMod
                 }
 
                 //If Left click is already being interpreted by another event (or we otherwise wouldn't process such an event. Ignore it.
-                if ((Game1.dialogueUp || Game1.currentMinigame != null || (Game1.eventUp || Game1.activeClickableMenu != null) || Game1.fadeToBlack) || (who.isRidingHorse() || !who.canMove || (Game1.player.isEating || who.canOnlyWalk) || who.FarmerSprite.pauseForSingleAnimation))
+                if ((Game1.dialogueUp || Game1.currentMinigame != null || 
+                    (Game1.eventUp || Game1.activeClickableMenu != null) || 
+                    Game1.fadeToBlack) || (who.isRidingHorse() || 
+                    !who.canMove || (Game1.player.isEating || 
+                    who.canOnlyWalk) || who.FarmerSprite.pauseForSingleAnimation))
                     return;
 
                 // This block tries to figure out if the clicked point was in the toolbar. Because if it was, we assume the intent was not to use the selected item.

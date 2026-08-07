@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RegressionMod
 {
-    static class StringConstants
+    public class StringConstants
     {
-        public static class Token
+        public class Token
         {
             public const string Farmername = "$FARMERNAME$";
 

@@ -1,6 +1,4 @@
 ﻿
-using StardewValley.Tools;
-
 namespace RegressionMod
 {
     public class ContainerConstants

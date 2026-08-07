@@ -23,7 +23,7 @@
         "Sun8": "{{i18n:Sam.Dialogue.Sun8}}",
 
         "spring_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}#$q sam_job_ready/sam_job_pretend Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r sam_job_ready 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r sam_job_pretend 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
-        "spring_Mon8": "#$p 102#{{i18n:Sam.Dialogue.spring_Mon8}}",
+        "spring_Mon8": "#$p child_diaper_no#{{i18n:Sam.Dialogue.spring_Mon8}}",
         "spring_Tue4": "{{i18n:Sam.Dialogue.spring_Tue4}}",
         "spring_Thu6": "{{i18n:Sam.Dialogue.Diaper_Pretext}}#$q sam_diaper_nice/sam_diaper_join Diapers_Followup#{{i18n:Sam.Dialogue.Diaper_Question}}#$r sam_diaper_nice 0 Diapers_Nice#{{i18n:Sam.Dialogue.Diaper_Response1}}#$r sam_diaper_join 0 Diapers_Join#{{i18n:Sam.Dialogue.Diaper_Response2}}",
         "spring_Sun8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q sam_little_littel/sam_little_exited Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r sam_little_littel 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r sam_little_exited 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r sam_little_littel 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r sam_little_exited 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
@@ -35,7 +35,7 @@
         "summer_Sun8": "{{i18n:Sam.Dialogue.Little_Pretext}}#$q sam_little_littel/sam_little_exited Little_Followup#{{i18n:Sam.Dialogue.Little_Question}}#$r sam_little_littel 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response1}}#$r sam_little_exited 0 Little_Little#{{i18n:Sam.Dialogue.Little_Response2}}#$r sam_little_littel 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response3}}#$r sam_little_exited 0 Little_Excited#{{i18n:Sam.Dialogue.Little_Response4}}",
 
         "fall_Mon2": "{{i18n:Sam.Dialogue.Job_Pretext}}#$q sam_job_ready/sam_job_pretend Job_Followup#{{i18n:Sam.Dialogue.Job_Question}}#$r sam_job_ready 0 Job_Ready#{{i18n:Sam.Dialogue.Job_Response1}}#$r sam_job_pretend 0 Job_Pretend#{{i18n:Sam.Dialogue.Job_Response2}}",
-        "fall_Mon8": "#$p 102#{{i18n:Sam.Dialogue.fall_Mon8}}",
+        "fall_Mon8": "#$p child_diaper_no#{{i18n:Sam.Dialogue.fall_Mon8}}",
         "fall_Tue4": "{{i18n:Sam.Dialogue.fall_Tue4}}",
         "fall_Thu6_1": "{{i18n:Sam.Dialogue.fall_Thu6_1}}",
         "fall_Thu6": "{{i18n:Sam.Dialogue.fall_Thu6}}",
@@ -70,8 +70,8 @@
         "Change_Diaper_Accept_Joja": "{{i18n:Sam.Change_Diaper.Accept_Joja}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"joja diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_Joja_Post}}",
         "Change_Diaper_Accept_HeartDiaper": "{{i18n:Sam.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"heart diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_HeartDiaper_Post}}",
 
-        "Diaper_Change_Accept": "#{{i18n:Sam.Diaper_Change.Accept}}#$action DIAPER_CHANGE \"sam\" \"baby print diaper\" \"sams old pants\"#$h",
-        "Diaper_Change_Refuse": "{{i18n:Sam.Diaper_Change.Refuse}}",
+        "Diaper_Change_Accept": "#$GET_CHANGE_ACCEPT_DIALOG$ \"sam\"",
+        "Diaper_Change_Refuse": "$GET_CHANGE_REFUSE_DIALOG$ \"sam\"",
         "Diaper_Change_Followup": "{{i18n:Sam.Diaper_Change.Followup}}"
       }
 		},
@@ -93,7 +93,7 @@
         "Rainy_Night_0": "{{i18n:Sam.Dialogue_Marriage.Rainy_Night_0}}",
         "Rainy_Night_1": "{{i18n:Sam.Dialogue_Marriage.Rainy_Night_1}}",
         "Rainy_Night_2": "{{i18n:Sam.Dialogue_Marriage.Rainy_Night_2}}",
-        "Rainy_Night_3": "#$p 102#{{i18n:Sam.Dialogue_Marriage.Rainy_Night_3}}",
+        "Rainy_Night_3": "#$p child_diaper_no#{{i18n:Sam.Dialogue_Marriage.Rainy_Night_3}}",
         "Rainy_Night_4": "{{i18n:Sam.Dialogue_Marriage.Rainy_Night_4}}",
 
         "Indoor_Day_0": "{{i18n:Sam.Dialogue_Marriage.Indoor_Day_0}}",
@@ -105,7 +105,7 @@
         "Indoor_Night_0": "{{i18n:Sam.Dialogue_Marriage.Indoor_Night_0}}",
         "Indoor_Night_1": "{{i18n:Sam.Dialogue_Marriage.Indoor_Night_1}}",
         "Indoor_Night_2": "{{i18n:Sam.Dialogue_Marriage.Indoor_Night_2}}",
-        "Indoor_Night_3": "#$p 102#{{i18n:Sam.Dialogue_Marriage.Indoor_Night_3}}",
+        "Indoor_Night_3": "#$p child_diaper_no#{{i18n:Sam.Dialogue_Marriage.Indoor_Night_3}}",
         "Indoor_Night_4": "{{i18n:Sam.Dialogue_Marriage.Indoor_Night_4}}",
 
         "Outdoor_0": "{{i18n:Sam.Dialogue_Marriage.Outdoor_0}}",
@@ -131,7 +131,7 @@
         "Good_6": "{{i18n:Sam.Dialogue_Marriage.Good_6}}",
 
         "funLeave_Sam": "{{i18n:Sam.Dialogue_Marriage.funLeave}}",
-        "funReturn_Sam": "#$p 102#{{i18n:Sam.Dialogue_Marriage.funReturn}}",
+        "funReturn_Sam": "#$p child_diaper_no#{{i18n:Sam.Dialogue_Marriage.funReturn}}",
 
         "spring_1": "{{i18n:Sam.Dialogue_Marriage.spring_1}}",
         "spring_12": "{{i18n:Sam.Dialogue_Marriage.spring_12}}",
